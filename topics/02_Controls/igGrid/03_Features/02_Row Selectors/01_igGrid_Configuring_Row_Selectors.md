@@ -1,0 +1,306 @@
+﻿<!--
+|metadata|
+{
+    "fileName": "iggrid-configuring-row-selectors",
+    "controlName": "igGrid",
+    "tags": ["Getting Started","Grids","Selection"]
+}
+|metadata|
+-->
+
+# Configuring Row Selectors (igGrid)
+
+
+
+## Topic Overview
+
+### Purpose
+This topic discusses how to configure row selection in the igGrid.
+
+### In this topic
+This topic contains the following sections:
+
+-   [**RowSelectors Configuration Overview**](#overview)
+-   [**Enabling Multiple Rows Selection**](#multiple-row-selection)
+    -   [Preview](#multiple-preview)
+    -   [Code](#multiple-code)
+-   [**Adding Selection Checkboxes**](#adding-selection-checkboxes)
+    -   [Preview](#checkboxes-preview)
+    -   [Property settings for enabling checkboxes](#checkboxes-enabling)
+    -   [Code](#checkboxes-code)
+-   [**Enabling Row Numbering**](#row-numbering)
+    -   [Preview](#row-numbering-preview)
+    -   [Property settings for enabling row numbering](#row-numbering-enabling)
+    -   [Code](#row-numbering-code)
+-   [**Canceling the Check Box State Changing Event**](#cancel-checkbox)
+    -   [Steps](#cancel-checkbox-steps)
+-   [**Related Topics**](#topics)
+
+### Required Background 
+
+The table below lists the required background you need for fully understanding the information in this topic.
+
+- Topics
+	- You need to first read the [Enabling Row Selectors](igGrid-Enabling-Row-Selectors.html) topic.
+- External Resources 
+	- You need to first read the following articles:
+	- [jQuery bind() API](http://api.jquery.com/bind/)
+	- j[Query delegate() API](http://api.jquery.com/delegate/)
+
+
+## <a id="overview"></a> RowSelectors Configuration Overview 
+
+The `rowSelectors` widget of the `igGrid`™ control exposes a lot of configurable options. The table below lists the configurable screen elements and behaviors manageable through the widget. For some of the behaviors/features, detailed explanations and examples are provided in the blocks following the chart.
+
+
+Configurable behavior / feature | Configuration details | Configuration properties
+---|---|---
+Multiple rows selection | By default, the RowSelectors widget has row numbering enabled. | –
+Selection checkboxes | Determines whether the row selectors column should contain checkboxes | [enableCheckBoxes](%%jQueryApiUrl%%/ui.iggridrowselectors#options:enableCheckBoxes)
+Row numbering | The row selectors column can contain row numbers if a property is enabled. | [enableRowNumbering](%%jQueryApiUrl%%/ui.iggridrowselectors#options:enableRowNumbering)
+Canceling the check box state changing event | Hook to `checkBoxStateChanging` event and cancel it on some condition. | –
+Row numbering seed | The seed is added to the default numbering. | [rowNumberingSeed](%%jQueryApiUrl%%/ui.iggridrowselectors#options:rowNumberingSeed)
+Width of the row selectors column. | The width of row selectors column is configurable by setting a property. | [rowSelectorColumnWidth](%%jQueryApiUrl%%/ui.iggridrowselectors#options:rowSelectorColumnWidth)
+Configurable events | For information about these events, refer to their listing in the property reference section: [igGridRowSelectors Events](igGrid-RowSelectors-Events.html) | 
+Require Selection | Requires the selection feature to be enabled. If selection is not enabled, an exception is thrown | [requireSelection](%%jQueryApiUrl%%/ui.iggridrowselectors#options:requireSelection)
+
+
+## <a id="multiple-row-selection"></a> Enabling Multiple Rows Selection
+
+Selecting cells or rows with RowSelectors requires initializing the Selection feature for the grid. RowSelectors do not initialize the Selection feature automatically and expects you to enable it if needed. Without the Selection feature, RowSelectors can still be used, for example, for their row numbering functionality. In the example below, multiple-selection is enabled. Red arrows show row selectors column.
+
+### <a id="multiple-preview"></a> Preview 
+In the picture below, RowSelectors and multiple Selection features are enabled.
+
+![](images/RowSelectors_Configure_Pic1.png)
+
+### <a id="multiple-code"></a> Code 
+**In HTML:**
+
+```html
+<script type="text/javascript">
+$(function () {
+    $("#grid").igGrid({
+              autoGenerateColumns: true,
+              dataSource: source,
+              features: [
+                {
+                    name: 'RowSelectors'
+                },
+                {
+                    name: 'Selection',
+					mode: "cell",
+                    multipleSelection: true
+                }
+            ]
+     });    });
+</script>
+```
+
+**In ASPX:**
+
+```csharp
+<%= Html.Infragistics().Grid(Model)
+    .AutoGenerateColumns(true)
+    .Features(feature =>        {       
+        feature.Selection().MultipleSelection(true);
+        feature.RowSelectors();
+    })
+	.DataBind()
+	.Render()
+%>
+```
+
+## <a id="adding-selection-checkboxes"></a> Adding Selection Checkboxes 
+
+Selection checkboxes are added by setting the `enableCheckBoxes` property to true. It is recommended, if enabling the checkboxes feature, to use multiple-selection so the user won’t need to hold Ctrl key when selecting multiple rows.
+
+> **Note:** Enabling checkboxes forces `igGridSelection` to use "row" selection mode
+
+### <a id="checkboxes-preview"></a> Preview 
+
+In the picture below demonstrates a grid with both checkboxes and paging enabled.
+
+![](images/RowSelectors_Configure_Pic2.png)
+
+### <a id="checkboxes-enabling"></a> Property settings for enabling checkboxes 
+
+The table below maps the desired configurations to property settings. The properties are accessed through the igGridRowSelectors options.
+
+Property | Setting
+---|---
+[enableCheckBoxes](%%jQueryApiUrl%%/ui.iggridrowselectors#options:enableCheckBoxes) | “true”
+
+### <a id="checkboxes-code"></a> Code 
+
+**In HTML:**
+
+```html
+<script type="text/javascript">
+    $(function () {
+        $("#grid").igGrid({
+              autoGenerateColumns: true,
+              dataSource: source,
+              features: [
+                {
+                    name: 'RowSelectors', 
+                    enableCheckBoxes: true
+                },
+                {
+                    name: 'Selection',
+                    multipleSelection: true
+                }
+              ]
+        });
+    });
+</script>
+```
+
+**In ASPX:**
+
+```csharp
+<%= Html.Infragistics().Grid(Model)
+    .AutoGenerateColumns(true)
+    .Features(feature =>         { 
+        feature.Selection().MultipleSelection(true);
+        feature.RowSelectors().EnableCheckBoxes(true);
+     })
+	.DataBind()
+	.Render()
+    %>
+```
+
+## <a id="row-numbering"></a> Enabling Row Numbering 
+
+The row selector column in the grid can be used to display the sequential numbers of the rows. This is managed through the `rowNumbering` option of the `rowSelectors` widget.
+
+### <a id="row-numbering-preview"></a> Preview 
+
+In the picture demonstrates a grid with, `rowNumbering` enabled.
+
+![](images/RowSelectors_Configure_Pic3.png)
+
+### <a id="row-numbering-enabling"></a> Property settings for enabling row numbering 
+
+The table below maps the desired configurations to property settings. The properties are accessed through the `igGridRowSelectors` options.
+
+Property | Setting
+---|---
+enableRowNumbering | “true”
+
+### <a id="row-numbering-code"></a> Code 
+
+**In Javascript:**
+
+```js
+<script type="text/javascript">
+ $ (function () {
+  $("#grid").igGrid({
+         autoGenerateColumns: true,
+         dataSource: source,
+             features: [
+                {
+                    name: 'RowSelectors', 
+                    enableRowNumbering: true
+                }
+            ]
+    });
+ });
+</script>
+```
+ 
+
+**In C#:**
+
+```csharp
+<%= Html.Infragistics().Grid(Model)
+    .AutoGenerateColumns(true)
+    .Features(feature =>        {
+		feature.Selection().MultipleSelection(true);
+        feature.RowSelectors().EnableRowNumbering(true);
+    })
+	.DataBind()
+	.Render()
+%>
+```
+
+## <a id="cancel-checkbox"></a> Canceling the Check Box State Changing Event 
+
+By handling the `checkBoxStateChanging` event, a checkbox selection can be canceled.
+
+Following is a conceptual overview of the process:
+
+1.  Handling the `checkBoxStateChanging` event
+2.  Canceling the event
+
+### <a id="cancel-checkbox-steps"></a> Steps 
+1.  Handle the `checkBoxStateChanging` event.
+    1.  Define a function that will be called when the `checkBoxStateChanging` event fires.
+
+        **In Javascript:**
+
+		```js
+        <script type="text/javascript">        
+            function gridcheckboxStateChanging (evt, ui) {
+         
+            };   
+        </script>
+		```
+
+    2.  Set the handler to the `rowSelectorClicked` event of the `igGrid`.
+
+		Once you have a handler defined, it needs to be set as the handler for the gridcheckboxStateChanging event.
+		
+		In jQuery, this can be done when the widget is instantiated.
+		
+		In ASP.NET MVC, the event should be attached using the jQuery delegate() or bind() API. The type for this event is ‘iggridrowselectorscheckboxstatechanging'. 
+		
+		**In Javascript:**
+		
+		```js
+		$(function () {
+		  $("#grid1").igGrid({
+		       autoGenerateColumns: true,
+		       dataSource: adventureWorks,
+		       responseDataKey: 'Records',
+		       features: [
+	                {
+	                     name: 'RowSelectors',
+	                     enableCheckBoxes: true,
+	                     checkBoxStateChanging: "gridcheckboxStateChanging"
+	                },
+	                {
+	                     name: 'Selection'
+	                }
+		       ]
+		  });
+		});
+		```
+
+2. Cancel the event.
+
+	Cancel the event by returning false.
+	
+	**In Javascript:**
+	
+	```js
+	<script type="text/javascript">        
+	    function gridcheckboxStateChanging (evt, ui) {
+	       if (conditionNotMet)
+	          return false;
+	     };   
+	</script>
+	```
+
+##  <a id="topics"></a> Related Topics 
+
+Following are some other topics you may find useful.
+
+-   [Enabling Row Selectors](igGrid-Enabling-Row-Selectors.html)
+-   [Row Selectors Events](igGrid-RowSelectors-Events.html)
+
+ 
+
+ 
+
+

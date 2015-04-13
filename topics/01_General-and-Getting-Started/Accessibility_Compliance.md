@@ -1,0 +1,1159 @@
+﻿<!--
+|metadata|
+{
+    "fileName": "accessibility-compliance",
+    "controlName": [],
+    "tags": []
+}
+|metadata|
+-->
+
+# Accessibility Compliance
+
+[Section 508](http://www.section508.gov/) of the Rehabilitation Act was amended in 1998 by Congress to require all Federal agencies to make their electronic and information technology accessible to people with disabilities. Since then, Section 508 compliance has not only been a requirement in government agencies, but it's also important when providing software solutions and designing Web pages.
+
+Section 1194.22 of the Section 508 law specifically targets Web-based intranet and internet information and systems, and contains a set of 16 rules to follow. In order to enable you to keep your Web applications and Web sites compatible with these rules with minimal effort on your part, Infragistics has taken steps to ensure that the Ignite UI™ controls and components are compliant with the relevant accessibility rules.
+
+The matrix below provides a high-level outline of the accessibility support provided by our visual controls (and related components). To learn more about an individual control/component's accessibility compliance, click the name of the control/component. 
+
+<table class="table table-striped">
+    <tbody>
+        <tr>
+            <th rowspan="2">
+Control/Component
+            </th>
+
+            <th colspan="16">
+Section 508 Compliance
+            </th>
+
+</tr>        <tr>
+            <th>
+[(a)](#compliance_info)
+            </th>
+            <th>
+[(b)](#compliance_info)
+            </th>
+            <th>
+[(c)](#compliance_info)
+            </th>
+            <th>
+[(d)](#compliance_info)
+            </th>
+            <th>
+[(e)](#compliance_info)
+            </th>
+            <th>
+[(f)](#compliance_info)
+            </th>
+            <th>
+[(g)](#compliance_info)
+            </th>
+            <th>
+[(h)](#compliance_info)
+            </th>
+            <th>
+[(i)](#compliance_info)
+            </th>
+            <th>
+[(j)](#compliance_info)
+            </th>
+            <th>
+[(k)](#compliance_info)
+            </th>
+            <th>
+[(l)](#compliance_info)
+            </th>
+            <th>
+[(m)](#compliance_info)
+            </th>
+            <th>
+[(n)](#compliance_info)
+            </th>
+            <th>
+[(o)](#compliance_info)
+            </th>
+            <th>
+[(p)](#compliance_info)
+            </th>
+
+</tr>
+        <tr>
+            <td>
+[igCombo](igCombo-Accessibility-Compliance.html)
+            </td>            
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+        </tr>
+        <tr>
+            <td>
+[igCurrencyEditor](igCurrencyEditor-igCurrencyEditor-Accessibility-Compliance.html)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igDateEditor](igDateEditor-Accessibility-Compliance.html)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igHierarchicalGrid](igHierarchicalGrid-Accessibility-Compliance.html)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igMaskEditor](igMaskEditor-Accessibility-Compliance.html)
+            </td>
+
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igNumericEditor](igNumericEditor-Accessibility-Compliance.html)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igPercentEditor](igPercentEditor-Accessibility-Compliance.html)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igTextEditor](igTextEditor-Accessibility-Compliance.html)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igHtmlEditor](igHtmlEditor-Accessibility-Compliance.html)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igTree](igTree-Accessibility-Compliance.html)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igDatePicker](igDatePicker-Accessibility-Compliance.html)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igUpload](igUpload-Accessibility-Compliance.html)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+        </tr>
+        <tr>
+            <td>
+[igUpload](igUpload-Accessibility-Compliance.html)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igRating](igRating-Accessibility-Compliance.html)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igVideoPlayer](igVideoPlayer-Accessibility-Compliance.html)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igBulletGraph](igBulletGraph-Accessibility-Compliance.html)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igLinearGauge](igLinearGauge-Accessibility-Compliance.html)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igRadialGauge](igRadialGauge.html)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igDataChart](igDataChart-Accessibility-Compliance.html)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igPieChart](igPieChart-Accessibility.html)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igDoughnutChart](igDoughnutChart-Accessibility-Compliance.html)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igFunnelChart](igFunnelChart-Accessibility-Compliance.html)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igSparkline](igSparkline-Accessibility-Compliance.html)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igMap](igMap-Accessibility-Compliance.html)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igDialog](igDialog-Accessibility-Compliance.html)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igPivotDataSelector](igPivotDataSelector-Accessibility-Compliance.html)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igPivotGrid](igPivotGrid-Accessibility-Compliance.html)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igPivotView](igPivotView-Accessibility-Compliance.html)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igSplitter](igSplitter-Accessibility-Compliance.html)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igQRCodeBarcode](igQRCodeBarcode-Accessibility-Compliance.html)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igLayoutManager](igLayoutManager-Accessibility-Compliance.html)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igTileManager](igTileManager-Accessibility-Compliance.html)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igZoombar](igZoombar-Accessibility-Compliance.html)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igPopover](igPopover-Accessibility-Compliance.html)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/redX.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+Legend | 
+-------|-----
+![](../images/images/greenCheck.png) | The control/component is completely accessible in this particular area.
+'white space' | this particular rule does not apply to the control.
+![](../images/images/redX.png) | The control/component is not entirely accessible unless you perform some sort of action.
+
+## <a id="compliance_info"></a> Compliance Information
+
+ - **a** - A text equivalent for every non-text element shall be provided (e.g., via "alt", "longdesc", or in element content).
+
+ - **b** - Equivalent alternatives for any multimedia presentation shall be synchronized with the presentation.
+
+ - **c** - Web pages shall be designed so that all information conveyed with color is also available without color, for example from context or markup.
+
+ - **d** - Documents shall be organized so they are readable without requiring an associated style sheet.
+
+ - **e** - Redundant text links shall be provided for each active region of a server-side image map.
+
+ - **f** - Client-side image maps shall be provided instead of server-side image maps except where the regions cannot be defined with an available geometric shape.
+
+ - **g** - Row and column headers shall be identified for data tables.
+
+ - **h** - Markup shall be used to associate data cells and header cells for data tables that have two or more logical levels of row or column headers.
+
+ - **i** - Frames shall be titled with text that facilitates frame identification and navigation.
+
+ - **j** - Pages shall be designed to avoid causing the screen to flicker with a frequency greater than 2 Hz and lower than 55 Hz.
+
+ - **k** - A text-only page, with equivalent information or functionality, shall be provided to make a web site comply with the provisions of this part, when compliance cannot be accomplished in any other way. The content of the text-only page shall be updated whenever the primary page changes.
+
+ - **l** - When pages utilize scripting languages to display content, or to create interface elements, the information provided by the script shall be identified with functional text that can be read by assistive technology.
+
+ - **m** - When a web page requires that an applet, plug-in or other application be present on the client system to interpret page content, the page must provide a link to a plug-in or applet that complies with §1194.21(a) through l.
+ 
+ - **n** - When electronic forms are designed to be completed on-line, the form shall allow people using assistive technology to access the information, field elements, and functionality required for completion and submission of the form, including all directions and cues.
+
+ - **o** - A method shall be provided that permits users to skip repetitive navigation links.
+
+ - **p** - When a timed response is required, the user shall be alerted and given sufficient time to indicate more time is required.

@@ -1,0 +1,297 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Help Documentation Tool</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/fonts/FontAwesome.otf">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/fonts/fontawesome-webfont.eot">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/fonts/fontawesome-webfont.svg">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/fonts/fontawesome-webfont.ttf">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/fonts/fontawesome-webfont.woff">
+        <style>
+            .text-muted {
+                color:#999;
+            }
+            
+            #open-link {
+                display: block;
+                margin-top:6px;
+                margin-left: -18px;
+            }
+            
+            h2 {
+                margin-top:1.25em;
+            }
+            
+            h2 small a {
+                font-size: 0.65em;
+                margin-top: -12px;
+            }
+            
+            textarea {
+                margin-top:10px;
+            }
+        </style>
+    </head>
+    <body class="container">
+        
+        <h1>Help Documentation Cleanup Tool</h1>
+        
+        <nav>
+            <a href="https://markdownpad.com/" target="_blank"  class="btn btn-default btn-xs btn-info" title="Download MarkdownPad">MarkdownPad</a>
+            <a href="http://jbt.github.io/markdown-editor/" target="_blank"  class="btn btn-default btn-xs btn-info" title="GitHub-flavored markdown online editor">Online Editor</a>
+            <a href="http://markdowntutorial.com/" class="btn btn-default btn-xs" target="_blank">Tutorial</a>
+            <a href="https://help.github.com/articles/markdown-basics" class="btn btn-default btn-xs" target="_blank">Syntax</a>
+            <a href="https://help.github.com/articles/github-flavored-markdown" class="btn btn-default btn-xs" target="_blank"><i class="fa fa-github-alt"></i> GitHub Syntax</a>
+        </nav>
+        
+        <div class="row">
+            <div class="col-sm-9">
+                <h2>Existing Topic <small class="small text-muted">- Paste in the Markdown file name to open published version in new tab.</small></h2>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <input id="filename-text" data-autoclear="true" type="text" class="form-control" placeholder="markdown file name" />
+                    </div>
+                    <div class="col-sm-2"><a href="#" id="open-link" target="_blank"><i class="fa fa-external-link"></i> Open</a></div>
+                </div>
+
+                <h2>In-Document Links <small class="small text-muted">- Generate named anchor markup for inner-document links.</small></h2>
+                <div class="row">
+                    <div class="col-sm-10">
+                        <textarea id="anchors-text" class="form-control" rows="10" placeholder="paste in the in-document table of contents and tab off"></textarea>
+                        <div id="anchors-container"></div>
+                    </div>
+                </div>
+
+                <h2>Tables <small class="small text-muted">- Cleanup and transform to markdown where possible [BETA].</small></h2>
+                <div class="row">
+                    <label>
+                      <input type="checkbox" id="keepItalics"> Keep italics
+                    </label>
+                    <select id="style">
+                        <option value="table-striped">striped</option>
+                        <option value="table-bordered">bordered</option>
+                        <option value="" selected>clean style</option>
+                    </select>
+                    <label>
+                      <input type="checkbox" id="api"> Append to #options
+                    </label>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <textarea id="table-text" class="form-control" rows="5" placeholder="paste in the old doc html table and tab off"></textarea>
+                    </div>
+                    <div class="col-sm-6">
+                        <textarea id="table-result" rows="5" class="form-control" ></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <h2>Checklist <small><a href="#" id="clear-all-link" class="btn btn-default btn-xs">clear all</a></small></h2>
+                <div class=" well well-sm">
+                    <div class="checkbox"><label><input type="checkbox"> Verify heading order/structure</label></div>
+                    <div class="checkbox"><label><input type="checkbox"> Preview in MarkdownPad</label></div>
+                    <div class="checkbox"><label><input type="checkbox"> Verify with <a href="http://jbt.github.io/markdown-editor/" target="_blank">Online preview</a></label></div>
+                </div>
+            </div>
+        </div>
+        
+        <hr />
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="beautify-html.js"></script>
+        <script>
+
+            (function () {
+                
+                'use strict';
+                
+                var 
+                    FILE_NAME_TOKEN = '|FILE_NAME|',
+                    urlPattern = 'http://help.infragistics.com/doc/jQuery/?page=' + FILE_NAME_TOKEN + '.html';
+                
+                var 
+                    $filenameText = $('#filename-text'),
+                    $openLink = $('#open-link'),
+                    $clearAllLink = $('#clear-all-link'),
+                    $anchorsText = $('#anchors-text'),
+                    $anchorsContainer = $('#anchors-container'),
+                    $tableText = $('#table-text'),
+                    $tableResult = $('#table-result')
+
+                ;
+                
+                $filenameText.blur(function(e){
+                    var fileName = this.value.replace('.md', '');
+                    fileName = fileName.length > 0 ? fileName : '#';
+                    
+                    if(!isNaN(parseInt(fileName[0])) ){
+                        var parts = fileName.split('_');
+                        if(!isNaN(parts[0])){
+                            parts.shift();
+                            fileName = parts.join('_');
+                        }
+                    }
+                    
+                    if(fileName[0] === '~'){
+                        fileName = fileName.substring(1);
+                    }
+                    
+                    $openLink.attr('href', urlPattern.replace(FILE_NAME_TOKEN, fileName));
+                });
+                
+                $openLink.click(function(e){
+                    if(this.href[this.href.length - 1] === '#'){
+                        e.stopPropagation();
+                        return false;
+                    }
+                });
+                
+                $('input[data-autoclear="true"]').focus(function(e){
+                    this.value = '';
+                });
+
+                $('input').on('focus', '[data-role="selectable"]', function (e) {
+                    e.stopPropagation();
+                    this.select();
+                    return false;
+                });
+                
+                $clearAllLink.click(function(e){
+                    e.stopPropagation();
+                    $('input[type="checkbox"]').attr('checked', false);
+                    return false;
+                });
+                
+                $anchorsText.blur(function(e){
+                    
+                    var ids = this.value.split('#'),
+                        markup;
+                    
+                    $anchorsText.val($anchorsText.val().replace(/\*/g,''));
+                    
+                    $anchorsContainer.html('');
+                    
+                    ids.shift();
+                    
+                    ids.forEach(function(id, index){
+                        id = id.substring(0, id.indexOf(')'));
+                        markup = '&lt;a id=&quot;' + id + '&quot;&gt;&lt;/a&gt;';
+                        $anchorsContainer.append('<input type="text" id="anchor-' + index + '" data-role="selectable" class="form-control" value="|VALUE|" />'.replace('|VALUE|', markup));
+                    });
+                    
+                    $('#anchor-0').focus().select();
+                
+                });
+
+                $tableText.blur(function(e){
+                    var  markup = html_beautify(this.value.replace("&nbsp;",""));
+                    var result = cleanTable(markup);
+                    $tableResult.val(result).focus().select();
+                }); 
+
+                var cleanTable = function(html, isChild){
+                    var  markup = $(html);
+                    if (!markup.length) return;
+
+                    markup.find("a, img").each(function(i, e) {  
+                        
+                        var $e = $(e),
+                            opening = $e.is('img') ? "![" : "[",
+                            href = $e.attr("href") || $e.attr("src") || "";
+
+                        // sanitize links: 
+                        href = href.replace(/\(/g, "%28").replace(/\)/g, "%29"); 
+
+                        // fix and transform internal links: 
+                        if (/^.*\.html(?:#.*)?$/.test(href) && href.indexOf("Infragistics.Web.Mvc") === -1) { 
+                            href = href.replace(/_/g, '-').replace(/(?:%20|\s)/g, '-'); 
+                        }
+
+                        if ($("#api")[0].checked && /#(options|events|methods)$/.test(href)) {
+                            href += ":" + e.innerText;
+                        };
+
+                        e.outerHTML = opening + e.innerText + "](" + href + ")";
+                    });
+
+                    markup.find("span.ig-bold, b").each(function(i, e) {  
+                        // bold spans
+                        e.outerHTML = "**" + e.innerText + "**";
+                    });
+
+                    if ($("#keepItalics")[0].checked) {
+                        markup.find("span.ig-italic, i").each(function(i, e) {  
+                            // italic spans
+                            e.outerHTML = "*" + e.innerText + "*";
+                        });
+                    };
+                  
+                    markup.find("span.ig-code-in-text").each(function(i, e) {  
+                        // code spans
+                        e.outerHTML = "`" + e.innerText + "`";
+                    });
+
+                    if(!isChild && !markup.find("table, ul, ol, .ig-note, td[rowspan], td[colspan], th[rowspan], th[colspan]").length){
+                        // markdown!
+                        var res = "";
+                        var headers = $.map( markup.find("th"), function(e) { return e.innerText.trim(); });
+                        res += headers.join(" | ") + "\r\n";
+                        res += new Array(headers.length+ 1).join("---|");
+                        res = res.substring(0, res.length-1) + "\r\n";
+
+                        markup.find("tr").each(function(i, e) {
+                            var cells = $.map($(e).children("td"), function(e) { return e.innerText.trim().replace(/\s*[\r\n]+\s*/g, " "); });
+                            if(cells.length) res += cells.join(" | ") + "\r\n";
+                        });
+                        return res;
+                    }
+
+                    markup.find("td, th").each(function(i, e) {  
+                        // clean CONTENT, move on separate line: 
+                        var $e = $(e); 
+                        var depth = $e.parentsUntil("table").length + 1;
+                        var elems;
+                        if ((elems  = $e.children("table, ul, ol, .ig-note")).length) {
+                            // keep lists
+                            elems.filter("ul, ol").find("li:not(:has(ul))").each(function(i, e) {
+                                var $e = $(e), depth = $e.parentsUntil("table").length + 1;
+                                $e.text("\r\n" +$e.text().trim() + "\r\n" + new Array(depth+1).join("\t"));
+                            });
+                            elems.filter(".ig-note").each(function(i, e) {  
+                                // fix notes
+                                 e.outerHTML = "<blockquote>" + e.innerText + "</blockquote>";
+                            });
+                            elems.filter("table").each(function(i, e) {  
+                                $(e).replaceWith(cleanTable(e.outerHTML, true));
+                            });
+                            $e.children("p, div").each(function(i, e) {  
+                                 e.outerHTML = e.innerText;
+                            });
+                        }
+                        else{
+                            $e.text("\r\n" +$e.text().trim() + "\r\n" + new Array(depth+1).join("\t"));  
+                        }
+                    });
+                    
+                    //final cleanups:
+                    markup[0].innerHTML =  markup[0].innerHTML.replace("``", "");
+
+
+                    // rebuild the base html:
+                    var t = $("<table>");
+                    t.addClass("table");
+                    t.addClass($("#style option:selected").val());
+                    t.append("\r\n\t<thead>\r\n\t</thead>").find("thead").prepend(markup.find("th").first().closest("tr")).prepend("\r\n\t\t");
+                    t.append("\r\n\t" + markup.find("tbody")[0].outerHTML + "\r\n");
+
+                    return t[0].outerHTML;
+                    
+                }
+            }());
+
+        </script>
+    </body>
+</html>

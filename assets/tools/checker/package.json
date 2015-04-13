@@ -1,0 +1,14 @@
+{
+  "name": "ig-links-checker",
+  "version": "0.0.1",
+  "description": "Ignite UI docs links checker",
+  "main": "gruntfile.js",
+  "dependencies": {
+    "grunt": "~0.4.5"
+  },
+  "author": "Infragistics",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
