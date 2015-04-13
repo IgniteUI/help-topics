@@ -192,8 +192,8 @@ When the vertical column rendering mode is turned on, the responsive grid suppor
 -   [Sorting](igGrid-Sorting.html)
 -   [Hiding](igGrid-Column-Hiding.html)
 
--   [Selection](igGrid-Selection.html) feature works through the UI, but the event arguments, selectedCells / selectedRows properties and API will return erroneous results
--   [GroupBy](igGrid-GroupBy.html), [RowSelectors](igGrid-Row-Selectors.html), [Summaries](igGrid-Column-Summaries.html), [Virtualization](igGrid-Virtualization-Overview.html) features and [Hierarchical](igHierarchicalGrid-igHierarchicalGrid.html) mode are not supported when vertically rendering the grid
+-   [Selection](igGrid-Selection.html) feature works through the UI but only if Selection uses indexes for row identifiers. For best results no [primaryKey](%%jQueryApiUrl%%/ui.iggrid#options:primaryKey) should be specified and selection persistence should be disabled. Event arguments, selectedCells / selectedRows properties and API will return erroneous result regardless.
+-   [GroupBy](igGrid-GroupBy.html), [RowSelectors](igGrid-Row-Selectors.html), [Summaries](igGrid-Column-Summaries.html), [Updating](igGrid-Updating.html), [Virtualization](igGrid-Virtualization-Overview.html) features and [Hierarchical](igHierarchicalGrid-igHierarchicalGrid.html) mode are not supported when vertically rendering the grid
 
 
 

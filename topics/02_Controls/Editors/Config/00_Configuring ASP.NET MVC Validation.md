@@ -169,7 +169,6 @@ The following steps demonstrate how to configure data annotation validation for 
 	    }
 	}
 	```
-
 3. Create the View
 
 	Create a strongly-typed View named Create and use the Person class as the Model.
@@ -391,7 +390,6 @@ The following steps demonstrate how to configure data annotation validation for 
 	    }
 	}
 	```
-
 6. Run the sample.
 
 	You can see that the validators fire and also prevent the form from submitting. Also the length validator on the Name field prevents the user from typing more than 50 characters. Additionally, the numeric editor will change values to the closest valid value upon losing focus by default.

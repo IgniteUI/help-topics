@@ -117,6 +117,14 @@ Description
 						</tr>
 						<tr>
 							<td>
+*infragistics.templating.js*
+							</td>
+							<td>
+The Infragistics Templating Engine
+							</td>
+						</tr>
+						<tr>
+							<td>
 *infragistics.util.js*
 							</td>
 							<td>

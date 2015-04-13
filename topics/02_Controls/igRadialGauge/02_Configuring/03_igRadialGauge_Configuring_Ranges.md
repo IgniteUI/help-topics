@@ -88,11 +88,11 @@ Property| Value
 
 Following is the code that implements this example
 
- **In JavaScript:** 
- 
+ **In JavaScript:**  
+
 ```js 
 $("#gauge").igRadialGauge({
-	width: "400px", 
+	width: "400px",
 	height: "400px",
 	ranges: [{
 		name: "range1",
@@ -101,7 +101,7 @@ $("#gauge").igRadialGauge({
 		endValue: 100,
 		outerStartExtent:  0.55,
 		outerEndExtent: 0.65
-	}]
+	}]                                      
 });                                                                  
 ```
 

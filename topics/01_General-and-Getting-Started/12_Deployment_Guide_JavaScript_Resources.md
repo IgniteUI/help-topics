@@ -294,7 +294,7 @@ The JavaScript files are also available in a hosted environment on the Infragist
 **In HTML:**
 
 ```html
-<script src="http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/js/infragistics.loader.js">
+<script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.loader.js">
 </script>
 ```
 

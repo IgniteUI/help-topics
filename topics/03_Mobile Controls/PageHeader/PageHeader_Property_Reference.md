@@ -26,15 +26,15 @@ Property | Type | Description | Values(**Default Value**)
 ---|---|---|---
 [ID](Infragistics.Web.Mvc.Mobile~Infragistics.Web.Mvc.Mobile.PageHeaderWrapper~ID.html) | string | Gets/Sets the PageHeader ID | “**PageContentID**”
 [Theme](Infragistics.Web.Mvc.Mobile~Infragistics.Web.Mvc.Mobile.PageHeaderWrapper~Theme.html) | string | Gets/Sets the PageHeader theme. | **“a”** “b” “c” “d” “e”
-[FixedOptions](Infragistics.Web.Mvc.Mobile~Infragistics.Web.Mvc.Mobile.PageHeaderWrapper~FixedOptions.html) | Action<[FixedToolBarOptionsWrapper](Infragistics.Web.Mvc.Mobile~Infragistics.Web.Mvc.Mobile.FixedToolBarOptionsWrapper.html)> | Set of methods that allow you to position and configure the header. For more information please review the table below, that describes the methods of the [Fixed Options](#_Fixed_Options) class. | option => { option.DisablePageZoom(true).Fixed(true); }
+[FixedOptions](Infragistics.Web.Mvc.Mobile~Infragistics.Web.Mvc.Mobile.PageHeaderWrapper~FixedOptions.html) | Action<[FixedToolBarOptionsWrapper](Infragistics.Web.Mvc.Mobile~Infragistics.Web.Mvc.Mobile.FixedToolBarOptionsWrapper.html)> | Set of methods that allow you to position and configure the header. For more information please review the table below, that describes the methods of the [Fixed Options](#fixed-options) class. | option => { option .DisablePageZoom(true) .Fixed(true); }
 [HtmlAttributes](Infragistics.Web.Mvc.Mobile~Infragistics.Web.Mvc.Mobile.PageHeaderWrapper~HtmlAttributes.html) | IDictionary<string,object> | Set additional HTML attributes. | new Dictionary<string, object>() { {"disabled", "disabled"} }
 
-## Fixed Options MVC Wrapper (Property) Reference
+## <a id="fixed-options">Fixed Options MVC Wrapper (Property) Reference
 ### Introduction
 
 This topic provides reference information about the properties of the *Fixed Options* *MVC Wrapper*.
 
-#### PageHeader (property) reference chart
+### PageHeader (property) reference chart
 
 The following table explains the methods of the Fixed Options MVC wrapper and lists the default and recommended values.
 

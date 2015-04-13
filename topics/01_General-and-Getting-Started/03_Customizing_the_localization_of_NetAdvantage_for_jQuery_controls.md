@@ -243,7 +243,7 @@ The following steps demonstrate how to localize x control.
 
 The following topics provide additional information related to this topic.
 
-- [Deployment Guide](Deployment-Guide.html): This topic describes how to deploy Ignite UI controls.
+- [General and Getting Started](Getting-Started.html): This topic describes how to deploy Ignite UI controls.
 
 - [JavaScript Files in Ignite UI](Deployment-Guide-JavaScript-Files.html) : This topic lists all JavaScript files in Ignite UI.
 

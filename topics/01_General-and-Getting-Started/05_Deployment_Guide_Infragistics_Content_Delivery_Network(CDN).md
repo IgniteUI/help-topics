@@ -77,13 +77,13 @@ The following code snippet demonstrates how to reference trial JavaScript and st
 **In HTML:**
 
 ```html
-<link href="http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/css/themes/infragistics/infragistics.theme.css"rel="stylesheet" type="text/css" />
-<link href="http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/css/structure/infragistics.css" rel="stylesheet" type="text/css" />
+<link href="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/css/themes/infragistics/infragistics.theme.css"rel="stylesheet" type="text/css" />
+<link href="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/css/structure/infragistics.css" rel="stylesheet" type="text/css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js" type="text/javascript"></script>
-<script src="http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/js/infragistics.core.js" type="text/javascript"></script>
-<script src="http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/js/infragistics.lob.js" type="text/javascript"></script>
-<script src="http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/js/infragistics.dv.js" type="text/javascript"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.core.js" type="text/javascript"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.lob.js" type="text/javascript"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.dv.js" type="text/javascript"></script>
 ```
 
 ###<a id="cdn-hosted-js-css-loader"></a> Referencing CDN-hosted JavaScript and CSS files with the Loader
@@ -93,15 +93,15 @@ The following code snippet demonstrates how to reference JavaScript and style fi
 **In HTML:**
 
 ```html
-<script src="http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/js/infragistics.loader.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.loader.js"></script>
 ```
 
 **In Javascript:**
 
 ```js
 $.ig.loader({
-            scriptPath: "http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/js/",
-            cssPath: "http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/css/"
+            scriptPath: "http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/",
+            cssPath: "http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/css/"
         });
 ```
 
@@ -110,7 +110,7 @@ $.ig.loader({
 ##<a id="mvc-enable-cdn"></a>Enabling CDN Support for ASP.NET MVC
 
 
-###<a id="mvc-enable-cdn-summary"></a> Enabling CDN support for ASP.NET MVC summary
+###<a id="mvc-enable-cdn-summary"></a>Enabling CDN support for ASP.NET MVC summary
 
 The following blocks demonstrate referencing resources for ASP.NET MVC either manually or using the Infragistics Loader. The examples cover referencing minified JavaScript files and the ASP.NET MVC Wrapper.
 
@@ -128,12 +128,12 @@ The following code snippet demonstrates how to statically reference minified Jav
 <!DOCTYPE html>
 <html>
 <head runat="server">
-<link href="http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/css/themes/infragistics/infragistics.theme.css” rel="stylesheet" type="text/css" />
-<link href="http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/css/structure/infragistics.css" rel="stylesheet" type="text/css" />
+<link href="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/css/themes/infragistics/infragistics.theme.css” rel="stylesheet" type="text/css" />
+<link href="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/css/structure/infragistics.css" rel="stylesheet" type="text/css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"  type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js type="text/javascript"></script>
-<script src="http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/js/infragistics.core.js"type="text/javascript"></script>
-<script src="http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/js/infragistics.lob.js"type="text/javascript"></script><script src="http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/js/infragistics.dv.js"type="text/javascript"></script></head>
+<script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.core.js"type="text/javascript"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.lob.js"type="text/javascript"></script><script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.dv.js"type="text/javascript"></script></head>
 ```
 
 ###<a id="js-loader-cdn"></a> Referencing CDN-hosted JavaScript and CSS files with the Loader
@@ -143,11 +143,11 @@ The following code snippet demonstrates how to reference JavaScript and style fi
 **In ASPX:**
 
 ```csharp
-<script src="http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/js/infragistics.loader.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.loader.js"></script>
     <%= Html.Infragistics()
         .Loader()
-        .ScriptPath("http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/js/")
-        .CssPath("http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/css/")
+        .ScriptPath("http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/")
+        .CssPath("http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/css/")
         .Render()
     %>
 ```
@@ -165,14 +165,14 @@ Infragistics provides CDN support via a third party CDN web service provider. Th
 **Non-secure**
 
 ```
-http://cdn-na.infragistics.com/jquery
+http://cdn-na.infragistics.com/igniteui
 ```
 
 **Secure**
 
 
 ```
-https://secure-cdn-na.infragistics.com/jquery
+https://secure-cdn-na.infragistics.com/igniteui
 ```
 
 

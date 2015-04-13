@@ -26,7 +26,7 @@ This topic contains the following sections:
 -   [Enabling Page](#enabling-page)
 -   [Related Content](#related-content)
 
-## <a id="enabling-page"></a> Enabling Page
+## <a id="enabling-page"></a>Enabling Page
 
 This procedure will guide you through adding a Page in a view page in MVC solution using the MVC Wrappers. You can add multiple instances of a Page wrapper to one MVC View, but only one of them can be active. The sample below is a demonstration of this action:
 
@@ -121,7 +121,6 @@ The following topics provide additional information related to this topic:
 The following samples provide additional information related to this topic:
 
 - [Basic Usage](%%SamplesUrl%%/mobile-page/basic-usage): This sample demonstrates how to use the Page ASP.NET MVC helper to define the HTML DIV element with the data role of type Page.
-
 
 
 

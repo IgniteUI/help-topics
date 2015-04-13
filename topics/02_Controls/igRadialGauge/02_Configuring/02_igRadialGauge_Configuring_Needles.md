@@ -1,4 +1,4 @@
-﻿ <!--
+﻿<!--
 |metadata|
 {
     "fileName": "igradialgauge-configuring-needles",
@@ -331,19 +331,16 @@ Following is the code that implements this example
 
  **In JavaScript:**
 
-```js 
+```js
 $("#gauge").igRadialGauge({
 	width: "400px",
 	height: "400px",
 	value: 60,
 	endExtent: 0.5,
 	needleShape: "rectangle",
-	needlePivotShape: "circleWithHole"
+	needlePivotShape: "circleWithHole"                                  
 });                                                                  
 ```
-
-
-
 
 ## <a id="related-content"></a>Related Content
 ### Topics

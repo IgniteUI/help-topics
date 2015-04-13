@@ -83,8 +83,7 @@ The following table lists the configurable aspects of adding a custom button to 
 	<tbody>
 		<tr>
 			<td>Add button to custom toolbar</td>
-			<td>In order to define a button in a custom toolbar, add an object literal
-with the properties on the right to the items array of the customToolbars option.</td>
+			<td>In order to define a button in a custom toolbar, add an object literal with the properties on the right to the items array of the customToolbars option.</td>
 			<td><ul><li> `name` – this property defines the name of the button.</li><li>`type` – this property must be set to “button”</li><li>`scope` – this property should be set to this</li><li>`handler` – this is the name of the function which will be fired when
     the button is clicked</li><li>`props` – object literal with nested objects. Each nested object can
     have two properties: value and action</li></ul></td>
@@ -253,27 +252,28 @@ The following steps demonstrate how to add a button to a custom toolbar.
 	-	<*valueToBePassedToTheActionHandler \*> is the value passed to the action handler.
 
 	**In JavaScript:**
+
 	```js
-		items: [{
-		    name: "appendSignature",
-				type: "button",
-			handler: appendSignature,
-			scope: this,
-			props: {
-		    	isImage: {
-		        	value: false,
-		        	action: '_isSelectedAction'
-		    	},
-		    	imageButtonTooltip: {
-		        	value: "Insert signature",
-		        	action: '_tooltipAction'
-		    	},
-		    	imageButtonIcon: {
-		        	value: "ui-icon-contact",
-		        	action: '_buttonIconAction'
-		    	}
-			}
-		}]
+	items: [{
+    	name: "appendSignature",
+		type: "button",
+		handler: appendSignature,
+		scope: this,
+		props: {
+	    	isImage: {
+	        	value: false,
+	        	action: '_isSelectedAction'
+	    	},
+	    	imageButtonTooltip: {
+	        	value: "Insert signature",
+	        	action: '_tooltipAction'
+	    	},
+	    	imageButtonIcon: {
+	        	value: "ui-icon-contact",
+	        	action: '_buttonIconAction'
+	    	}
+		}	        
+	}]
 	```
 
 6. <a id="define-the-click-handler"></a>Define the button click handler

@@ -20,14 +20,7 @@ This topic contains the information needed to enable the `Link` using the Infrag
 
 The following topics are prerequisites to understanding this topic:
 
-Topic
-
-Purpose
-
-[Link Overview](Link-Overview.html)
-
-This topic introduces MVC `Link` control wrapper and its main functionalities.
-
+- [Link Overview](Link-Overview.html): This topic introduces MVC `Link` control wrapper and its main functionalities.
 
 
 ### In this topic

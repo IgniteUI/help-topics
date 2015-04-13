@@ -190,8 +190,8 @@ The following steps demonstrate how to develop ASP.NET MVC application with the 
 	```csharp
 	<%= Html.Infragistics()
 	        .Loader()
-	        .ScriptPath(“http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/mobile/js/”)
-	        .CssPath(“http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/mobile/css/”)
+	        .ScriptPath(“http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/mobile/js/”)
+	        .CssPath(“http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/mobile/css/”)
 	        .Render() %>
 	```
 

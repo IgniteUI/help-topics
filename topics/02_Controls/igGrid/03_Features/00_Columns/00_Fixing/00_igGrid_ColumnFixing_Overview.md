@@ -49,6 +49,7 @@ This topic contains the following sections:
     -   [Updating feature](#updating-feature)
     -   [Multi-Column Headers feature](#multi-column-headers)
     -   [Row Selectors feature](#row-selectors)
+    -   [Virtualization](#virtualization)
 -   [**Keyboard Interactions**](#keyboard-interaction) 
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
@@ -70,11 +71,9 @@ The Fixed Columns area can be either on the left (default) or the right. The fol
 
 ![](images/igGrid_ColumnFixing_Overview_1.png)
 
-Column Fixing feature requires the grid to have its width defined.
+Column Fixing feature requires the grid and its columns (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option) to have their width defined in pixels units.
 
-Column Fixing is applied individually per column but affects the look of the entire grid.
-
-> **By default, Column Fixing is disabled.**
+>**Note:** Only widths in pixel units is supported.
 
 Fixed and Non-Fixed Columns areas in the `igGrid`™ control are implemented as a two separate table DOM elements. This requires all grid DOM manipulation methods to be duplicated for the Fixed Columns area. Usually, the Fixed Column area APIs are prefixed with the word fixed.
 
@@ -266,6 +265,7 @@ The `igGrid` Column Fixing feature is integrated with the following `igGrid` fea
 -   [Sorting](igGrid-Sorting.html)
 -   [Summaries](igGrid-Column-Summaries.html)
 -   [Tooltips](igGrid-Tooltips.html)
+-   [Virtualization](igGrid-Virtualization.html)(Fixed and Continuous Virtualization are supported.)
 -   [](igGrid-Updating.html)[Updating](igGrid-Updating.html)
 
 ### <a id="non-supported-features"></a> Non-supported features summary
@@ -276,7 +276,6 @@ The column fixing functionality is not supported with the following `igGrid` fea
 -   [GroupBy](igGrid-GroupBy.html)
 -   [Hiding](igGrid-Column-Hiding.html)
 -   [Responsive Web Design (RWD) Mode](igGrid-Responsive-Web-Design-Mode-LandingPage.html)
--   [Virtualization](igGrid-Virtualization.html)
 -   [Unbound Columns](igGrid-UnboundColumns-Landing-Page.html) 
 
 When an unsupported feature is enabled with Column Fixing, an exception is thrown.
@@ -301,7 +300,11 @@ The `fixNondataColumns` option is ignored when the Fixed Columns and Non-Fixed C
 
 ![](images/igGrid_ColumnFixing_Overview_10.png)
 
+### <a id="virtualization"></a> Virtualization
 
+The `igGrid` feature Column Fixing is integrated with the igGrid [Virtualization](igGrid-Virtualization.html) feature (both Fixed Virtualization as well as Continues Virtualization). When the Virtualization is enabled it will be applied on all of the columns – the fixed and the non-fixed ones and the scroll position between the two areas of the Grid will synchronize.
+
+>**Note:** Pay attention that column virtualization is not supported.
 
 ## <a id="keyboard-interaction"></a> Keyboard Interactions
 

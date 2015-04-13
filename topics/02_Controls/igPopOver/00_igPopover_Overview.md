@@ -193,7 +193,7 @@ The `igPopover` control is functional with its defaults settings, but if you wan
 
 The following table explains briefly the configurable aspects of the `igPopover` control and maps them to the properties that configure them. The aspects about which further details are available in this help as code examples, are highlighted in green in the table.
 
-<table class="table">
+<table class="table table-bordered">
 	<thead>
 		<tr>
             <th width="70" colspan="2">

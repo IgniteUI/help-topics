@@ -102,7 +102,7 @@ Following is a conceptual overview of the process:
 
 ### Steps
 
-1. Prepare the Markets page. <a id="prepare-markets-page"></a>
+1. Prepare the Markets page.<a id="prepare-markets-page"></a>
 
 	1. Add the local data source on the page.Open the *Markets.html* file for editing and inside the HEAD tag, add the following script containing the data:
 		
@@ -159,7 +159,7 @@ Following is a conceptual overview of the process:
 
 	3. Save the HTML file.
 
-2. Prepare the Home page. <a id="prepare-home-page"></a>
+2. Prepare the Home page.<a id="prepare-home-page"></a>
 
 	1. Add the data source of the destination page.Open the *Home.html* file for editing and inside the HEAD tag, add the following script containing the data:
 	
@@ -215,7 +215,7 @@ Following is a conceptual overview of the process:
 	
 	3. Save the HTML file.
 
-3. Verify the result. <a id="verify-results"></a>
+3. Verify the result.<a id="verify-results"></a>
 
 	Open the Home.html file in your browser and click any of the two link buttons. If you have implemented the code correctly, you will be taken directly to the respective child layout of the `igListView` on the Markets.html page.
 

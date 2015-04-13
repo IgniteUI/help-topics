@@ -1,0 +1,1144 @@
+﻿<!--
+|metadata|
+{
+    "fileName": "feature-compatibility-matrix(iggrid)",
+    "controlName": ["igGrid"],
+    "tags": ["Grids"]
+}
+|metadata|
+-->
+# Feature Compatibility Matrix (igGrid)
+
+
+The following table shows the compatibility between `igGrid` features when enabled at the same time. The details on limitations between features can be found in the Known Issues and Limitations (`igGrid`) topic.
+
+<div class="document-table-container">
+<table class="table">
+	<thead>
+		<tr>
+            <th>
+Feature
+			</th>
+            <th>
+igGrid Framework (Virtualization, Unbound Columns)
+			</th>
+            <th>
+Column Moving
+			</th>
+            <th>
+Filtering
+			</th>
+            <th>
+Group By
+			</th>
+            <th>
+Hiding
+			</th>
+            <th>
+Cell Merging
+			</th>
+            <th>
+Append Rows on Demand
+			</th>
+            <th>
+Multi-Column Headers
+			</th>
+            <th>
+Paging
+			</th>
+            <th>
+Responsive
+			</th>
+            <th>
+Resizing
+			</th>
+            <th>
+Row Selectors
+			</th>
+            <th>
+Selection
+			</th>
+            <th>
+Sorting
+			</th>
+            <th>
+Summaries
+			</th>
+            <th>
+Column Fixing
+			</th>
+            <th>
+Tooltips
+			</th>
+            <th>
+Updating
+			</th>
+        </tr>
+	</thead>
+	<tbody>
+        <tr>
+            <td>
+igGrid Framework (Virtualization, Unbound Columns)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/plannedFix.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+        </tr>
+        <tr>
+            <td>
+Column Moving
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/plannedFix.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/plannedFix.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+        </tr>
+        <tr>
+            <td>
+Filtering
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+        </tr>
+        <tr>
+            <td>
+Group By
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/negative.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/negative.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+        </tr>
+        <tr>
+            <td>
+Hiding
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+        </tr>
+        <tr>
+            <td>
+Cell Merging
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+        </tr>
+        <tr>
+            <td>
+Append Rows on Demand
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/negative.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/negative.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+        </tr>
+        <tr>
+            <td>
+Multi-Column Headers
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+        </tr>
+        <tr>
+            <td>
+Paging
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/negative.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+        </tr>
+        <tr>
+            <td>
+Responsive
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/negative.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+        </tr>
+        <tr>
+            <td>
+Resizing
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+        </tr>
+        <tr>
+            <td>
+Row Selectors
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+        </tr>
+        <tr>
+            <td>
+Selection
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+        </tr>
+        <tr>
+            <td>
+Sorting
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+        </tr>
+        <tr>
+            <td>
+Summaries
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+        </tr>
+        <tr>
+            <td>
+Column Fixing
+			</td>
+            <td>
+![](../../../images/images/plannedFix.png)
+			</td>
+            <td>
+![](../../../images/images/negative.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/negative.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/negative.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+        </tr>
+        <tr>
+            <td>
+Tooltips
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+        </tr>
+        <tr>
+            <td>
+Updating
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+            <td>
+![](../../../images/images/positive.png)
+			</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+

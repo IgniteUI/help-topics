@@ -440,7 +440,6 @@ Following is a conceptual overview of the process:
 	    ```
      
 	2.  **Set the handler to the *summariesCalculating* event of the igGrid.**
-	3.  
 	
 		Once you have a handler defined, it needs to be set as the handler for the `summariesCalculating event`. In jQuery, this can be done when the widget is instantiated.
 		

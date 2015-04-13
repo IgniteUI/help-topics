@@ -100,7 +100,7 @@ jQuery UI
             </td>
 
             <td>
-Add script references to both libraries in the `<head>`  section of your page.
+Add script references to both libraries in the `<head>` section of your page.
 			</td>
         </tr>
 
@@ -137,7 +137,8 @@ igSplitter JavaScript resources
 
                 <ul>
                     <li>
-(Recommended)  [Use the Infragistics® Loader](Using-Infragistics-Loader.html) (igLoader™). You only need to include a script reference to igLoader on your page.
+(Recommended)  [Use the Infragistics® Loader](Using-Infragistics-Loader.html) (igLoader™). You only need to include a script reference to
+                        igLoader on your page.
 					</li>
 
                     <li>
@@ -277,13 +278,14 @@ The following steps demonstrate how to add a basic `igSplitter` control to a web
 
 1. Add references to required resources.
 
-	1. Organize the required files.
+	1. Organize the required files.	
 	
 		A. Add the jQuery, jQueryUI, and Modernizr JavaScript resources to a folder named Scripts in the directory where your web page resides.
 
 		B. Add the Ignite UI CSS files to a folder named Content/ig (For details, see the [Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html) topic).
 
-		C. Add the Ignite UI JavaScript files to a folder named Scripts/ig in your web site or application (For details, see the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) topics).
+		C. Add the Ignite UI JavaScript files to a folder named Scripts/ig 
+		in your web site or application (For details, see the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) topics).
 
 	2. Add the references to the required JavaScript libraries.
 	
@@ -384,13 +386,13 @@ The following steps demonstrate how to add a basic `igSplitter` control to an AS
 1. Add references to required resources.
 
 	1. Organize the required files.
-
+	
 		 A. Add the jQuery, jQueryUI, and Modernizr JavaScript resources to a folder named Scripts in the directory where   your web page resides.
 
-		 B. Add the Ignite UI CSS files to a folder named Content/ig (For details, see the [Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html) topic).  
+		 B. Add the Ignite UI CSS files to a folder named Content/ig (For details, see the [Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html) topic).
 
-		 C. Add the Ignite UI JavaScript files to a folder named Scripts/ig
-		in your web site or application (For details, see the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) topics).
+		 C. Add the Ignite UI JavaScript files to a folder named Scripts/ig in your web site or application (For details, see the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+		topics).
 
 	2. Add the references to the required JavaScript libraries.Add references to the jQuery, jQuery UI and Modernizr libraries to the `<head>` section of your page:
 	
@@ -448,6 +450,8 @@ The following steps demonstrate how to add a basic `igSplitter` control to an AS
 		    .Render()
 		)
 		```
+		
+		
 		 In most cases, you might want to specify the size of the instance. The following code configures the `igSplitter` container to be 400 x 600 pixels (width x height).
 		
 		```

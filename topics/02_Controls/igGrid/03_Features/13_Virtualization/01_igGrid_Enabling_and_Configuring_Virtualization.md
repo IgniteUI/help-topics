@@ -38,7 +38,7 @@ This topic contains the following sections:
 
 Virtualization is enabled by setting the [`virtualization`](%%jQueryApiUrl%%/ui.iggrid#options:virtualization) property to true. The type of Virtualization is specified though setting the [`virtualizationMode`](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) property to fixed or continuous.
 
-Enabling virtualization without specifying its type sets it to Continuous (the default Virtualization type).
+Enabling virtualization without specifying its type sets it to Fixed (the default Virtualization type).
 
 The virtualization feature cannot function without having height defined in the grid.
 
@@ -215,6 +215,8 @@ $("#grid1").igGrid({
 ## <a id="continuous"></a> Enabling and Configuring Continuous Virtualization
 
 Continuous Virtualization is enabled by setting the virtualization option of the igGrid control to true and virtualization mode to continuous. The height of the grid is configurable.
+> **Note:** Column virtualization is not supported with continuous virtualization.
+
 
 ### <a id="continuous-property-settings"></a> Property settings
 

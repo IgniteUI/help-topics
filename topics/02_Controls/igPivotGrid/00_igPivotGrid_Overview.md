@@ -136,15 +136,20 @@ The `igPivotGrid` has different layouts based on how the row and column headers 
 
 -   **Standard** – when a member in the rows is expanded, its child members are displayed on its right; for an expanded column member, its child members are displayed below their parent member
 -   **Compact** – when a member in the rows is expanded, its child members are displayed above or below their respective parent member and are only just indented to the right (and not on the right of it); for an expanded column member, its child members are displayed on the right or on the left of their parent member (and not below it)
+-   **Tree** (only applicable to rows) – when a member in the rows is expanded, its child members are displayed above or below their respective parent member and are only just indented to the right (and not on the right of it); Additionally all hierarchies in the rows are displayed in a tree-like structure. When multiple hierarchies are added, the members of each hierarchy are listed above or below each of the members of the previous hierarchy.
 
 By default, the compact layout is enabled for the rows and disabled for the columns.
 
-The following pictures compare the Standard and Compact layouts of the `igPivotGrid`.
+The following pictures compare the Standard, Compact and Tree layouts of the `igPivotGrid`.
 
-Standard layout|Compact layout
----|---
-![](images/igPivotGrid_Overview_8.png)|![](images/igPivotGrid_Overview_9.png)
+#### Standard layout
+![](images/igPivotGrid_Overview_8.png)
 
+#### Compact layout
+![](images/igPivotGrid_Overview_9.png)
+
+#### Tree layout
+![](images/igPivotGrid_Overview_11.png)
 
 
 ### Supported data sources

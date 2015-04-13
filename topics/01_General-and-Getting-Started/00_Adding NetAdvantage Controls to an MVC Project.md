@@ -108,15 +108,15 @@ The JavaScript files are also available in a hosted environment on the Infragist
 **In ASPX:**
 
 ```csharp
-<script src="http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/js/infragistics.loader.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.loader.js"></script>
 ```
 
 **In ASPX:**
 
 ```csharp
 <%= Html.Infragistics().Loader()
-    .ScriptPath(“http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/js/”)
-    .CssPath(“http://cdn-na.infragistics.com/jquery/%%ProductVersionCondensed%%/latest/css/”)
+    .ScriptPath(“http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/”)
+    .CssPath(“http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/css/”)
 	.Render() %>
 ```
 

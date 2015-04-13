@@ -119,11 +119,11 @@ The `igPivotGrid` exposes a standard UI interface for presenting hierarchical da
 
 The following pictures compare the expanded and collapsed states of the members of the hierarchy used for the rows.
 
-#### Expanded state 
+#### Expanded state
 
-![](../igPivotGrid/images/igPivotGrid_Overview_3.png) 
+![](../igPivotGrid/images/igPivotGrid_Overview_3.png)
 
-#### Collapsed state
+####Collapsed state
 
 ![](../igPivotGrid/images/igPivotGrid_Overview_4.png)
 
@@ -160,18 +160,22 @@ The `igPivotGrid` has different layouts based on how the row and column headers 
 
 -   Standard – when a member in the rows is expanded, its child members are displayed on its right; for an expanded column member, its child members are displayed below their parent member
 -   Compact – when a member in the rows is expanded, its child members are displayed above or below their respective parent member and are only just indented to the right (and not on the right of it); for an expanded column member, its child members are displayed on the right or on the left of their parent member (and not below it)
+-   Tree (only applicable to rows) – when a member in the rows is expanded, its child members are displayed above or below their respective parent member and are only just indented to the right (and not on the right of it); Additionally all hierarchies in the rows are displayed in a tree-like structure. When multiple hierarhies are added, the members of each hierarchy are listed above or below each of the members of the previous hierarchy.
 
 By default, the compact layout is enabled for the rows and disabled for the columns.
 
-The following pictures compare the Standard and Compact layouts of the `igPivotGrid`.
+The following pictures compare the Standard, Compact and Tree layouts of the `igPivotGrid`.
 
-#### Standard layout 
-
+#### Standard layout
 ![](../igPivotGrid/images/igPivotGrid_Overview_8.png)
 
 #### Compact layout
-
 ![](../igPivotGrid/images/igPivotGrid_Overview_9.png)
+
+#### Tree layout
+![](../igPivotGrid/images/igPivotGrid_Overview_11.png)
+
+
 
 #### Supported data sources
 
@@ -216,6 +220,8 @@ In `igPivotDataSelector`, the user can control the refresh mode through the Defe
 
 ![](../igPivotDataSelector/images/igPivotDataSelector_Overview_5.png)
 
+
+
 ### <a id="igSplitter-features"></a>igSplitter features
 
 The following table summarizes the main features of the `igPivotDataSelector` control.
@@ -228,7 +234,7 @@ The pictures below compare the expanded and collapsed states of the left panel.
 
 #### Expanded left panel 
 
-![](../igSplitter/images/igSplitter_Overview_7.png) 
+![](../igSplitter/images/igSplitter_Overview_7.png)
 
 #### Collapsed right panel
 
@@ -263,9 +269,9 @@ The following table summarizes the features that are specific to the `igPivotVie
 
 By default, the relative position of the panels to each other is the pivot grid on the left and the selector on the right. You can swap the pivot grid and the selector using the [dataSelectorPanel](%%jQueryApiUrl%%/ui.igPivotView#options:dataSelectorPanel) properties of the `igPivotView`.
 
-#### Right 
+#### Right
 
-![](images/igPivotView_Overview_2.png)
+![](images/igPivotView_Overview_2.png) 
 
 #### Left
 

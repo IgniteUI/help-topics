@@ -23,7 +23,7 @@ This topic contains the following sections:
 -   [Drag-and-Drop modes](#drag-drop-modes)
 -   [Enabling the Drag-and-Drop Feature](#enable-drag-drop-feature)
 -   [Configuring the Drag-and-Drop Feature](#config-drag-drop-features)
--   [Related Content](#related-topics)        
+-   [Related Content](#related-topics)          
 
 
 

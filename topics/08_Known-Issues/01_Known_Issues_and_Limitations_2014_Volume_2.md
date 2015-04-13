@@ -1,35 +1,39 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "known-issues-and-limitations-2014-volume-1",
+    "fileName": "known-issues-and-limitations-2014-volume-2",
     "controlName": "",
     "tags": ["Breaking Changes","Known Issues"]
 }
 |metadata|
 -->
 
-# Known Issues and Limitations in 2014 Volume 1
+# Known Issues and Limitations in 2014 Volume 2
 
 ## Topic Overview
 
 ### Purpose
 
-This summarizes the known issues and limitations of the Ignite UI™ 2014 Volume 1 release. Information about previous releases can be found [here](Known-Issues-Revision-History.html).
+This summarizes the known issues and limitations of the Ignite UI™ 2014 Volume 2 release. Information about previous releases can be found [here](Known-Issues-Revision-History.html).
 
 ### In this topic
 
 This topic contains the following sections:
 
 -   [**Known Issues and Limitations Summary**](#summary)
+    -   [Legend](#legend)
+    -   [General Known Issues](#general-known-issues)
     -   [Editors Common Known Issues](#editors)
     -   [igBulletGraph](#bullet-graph)
     -   [igCombo](#combo)
     -   [igDataChart](#data-chart)
     -   [igDialog](#dialog)
+	-   [igUpload](#upload)
     -   [igGrid – General](#grid)
     -   [igGrid – Data Binding](#grid-data-binding)
     -   [igGrid – Unbound Columns](#grid-unbound-columns)
     -   [igGrid – Virtualization](#grid-virtualization)
+	-   [igGrid – Responsive Web Design Mode](#grid-responsive)
     -   [igGridColumnFixing](#grid-column-fixing)
     -   [igGridColumnMoving](#grid-column-moving)
     -   [igGrid - Multi-Column Headers](#grid-multi-column-headers)
@@ -42,6 +46,7 @@ This topic contains the following sections:
     -   [igGridSummaries](#grid-summaries)
     -   [igGridTooltips](#grid-tooltips)
     -   [igGridUpdating](#grid-updating)
+	-   [Feature Chooser](#feature-chooser)
     -   [igHierarchicalGrid](#hierarchical-grid)
     -   [igHierarchicalGrid GroupBy](#hierarchical-grid-grouping)
     -   [igHierarchicalGrid RowSelectors](#hierarchical-grid-row-selectors)
@@ -65,13 +70,120 @@ This topic contains the following sections:
 
 ## <a id="summary"></a> Known Issues and Limitations Summary
 
-The following table summarizes the known issues and limitations of the Ignite UI 2014 Volume 1 release. Detailed explanations of known issues and the possible workarounds are provided in the known issues topics for each control.
+The following table summarizes the known issues and limitations of the Ignite UI 2014 Volume 2 release. Detailed explanations of known issues and the possible workarounds are provided in the known issues topics for each control.
+<a id="legend"></a>
 
 Legend | 
 -------|--------
 ![](../images/images/positive.png) | Workaround available
 ![](../images/images/negative.png) | No known workaround
 ![](../images/images/plannedFix.png) | Fix planned
+
+###<a id="general-known-issues"></a> General Known Issue
+<table class="table table-bordered">
+	<thead>
+		<tr>
+            <th>
+Issue
+			</th>
+
+            <th>
+Description
+			</th>
+
+            <th>
+Status
+			</th>
+        </tr>
+	</thead>
+	<tbody>
+        
+
+        <tr>
+            <td>
+On Internet Explorer 7 and 8 Array.prototype is extended with some helper functions
+			</td>
+
+            <td>
+                On Internet Explorer 7 and 8 Array.prototype is extended with the following functions (by the infragistics.util.js file):
+
+                <ul>
+                    <li>
+add
+					</li>
+
+                    <li>
+indexOf
+					</li>
+
+                    <li>
+copy
+					</li>
+
+                    <li>
+contains
+					</li>
+
+                    <li>
+insert
+					</li>
+
+                    <li>
+removeAt
+					</li>
+
+                    <li>
+removeItem
+					</li>
+
+                    <li>
+getEnumerator
+					</li>
+
+                    <li>
+count
+					</li>
+
+                    <li>
+item
+					</li>
+
+                    <li>
+getLength
+					</li>
+
+                    <li>
+clear
+					</li>
+
+                    <li>
+resize
+					</li>
+
+                    <li>
+filter
+					</li>
+
+                    <li>
+insertRange
+					</li>
+
+                    <li>
+insertRange1
+					</li>
+
+                    <li>
+clone
+					</li>
+                </ul>This affects iteration over an array with a for…in loop, as those functions also will be iterated.
+            </td>
+
+            <td>
+![](../images/images/negative.png)
+			</td>
+        </tr>
+    </tbody>
+</table>
 
 ### <a id="editors"></a> [Editors Common Known Issues](igCurrencyEditor-igEditor-Known-Issues.html)
 
@@ -304,7 +416,7 @@ Specific referencing requirements for the date picker
 			</td>
 
             <td>
-If an editor has a type set to either *datepicker* or `igDatePicker`™, then it is dependent on jquery-datepicker and requires reference to either jquery.ui.datepicker.js or to combined library such as jqueryui/1.8.7/jquery-ui.js.
+If an editor has a type set to either *datepicker* or `igDatePicker`™, then it is dependent on jquery-datepicker and requires reference to either `jquery.ui.datepicker.js` or to combined library such as `jqueryui/1.8.7/jquery-ui.js`.
 			</td>
 
             <td>
@@ -360,7 +472,7 @@ Specific referencing requirements for the numeric and date editors
 			</td>
 
             <td>
-Numeric and Date editors depend on $.ig._regional, therefore, that object should be available in a reference to ig.util.js or to a combined ig-js file.
+Numeric and Date editors depend on `$.ig._regional`, therefore, that object should be available in a reference to `ig.util.js` or to a combined `ig-js` file.
 			</td>
 
             <td>
@@ -553,18 +665,30 @@ Monolith shadows do not allow for the blur effect to be applied to them
 
             <td>
 When the [`useSingleShadow`](%%jQueryApiUrl%%/ui.igDataChart#options:useSingleShadow) property of the series is set to “true”, the [`shadowBlur`](%%jQueryApiUrl%%/ui.igDataChart#options:shadowBlur) setting is disregarded and no blur is applied to the shadow. This is a deliberate limitation due to a [Google® Chrome™ bug](https://code.google.com/p/chromium/issues/detail?id=100703) and extended to all major browsers thus ensuring consistent behavior across all of them. This behavior is subject to change once the aforementioned Chrome issue is resolved.
-
                 
-**Workaround:**
-                <blockquote>
+
+>**Workaround:**
 If you need to apply blur to the shadow, use the Compound type of shadow (`useSingleShadow = “true”`).
-                </blockquote>
+                
             </td>
 
             <td>
 ![](../images/images/positive.png)
 			</td>
         </tr>
+	<tr>
+		<td>
+		    <p>Line series sometimes appear as filled shapes in Chromium browsers</p>
+		</td>
+		
+		<td>
+		    <p>This is caused by a <a href="https://code.google.com/p/chromium/issues/detail?id=412640" target="_blank">canvas rendering issue in Chromium</a> (affecting browsers such as Google® Chrome™ and Opera).</p>
+		</td>
+		
+		<td>
+		    <p><img alt="" src="../images/images/negative.png"></p>
+		</td>
+	</tr>
     </tbody>
 </table>
 
@@ -577,6 +701,14 @@ Issue | Description | Status
 ------|-------------|-------
 Controls sized incorrectly when inside an `igDialog` and their width/ height is relative | Controls inside an `igDialog`™ do not have correct dimensions if their width/height is relative. This is because any embedded controls are instantiated before rendering `igDialog` so their dimensions cannot be calculated correctly. | ![](../images/images/positive.png)
 
+
+ Go up to [Known Issues and Limitations Summary](#summary)
+ 
+#### <a id="upload"></a> [igUpload](igUpload-Known-Issues.html)
+
+Issue | Description | Status
+------|-------------|-------
+Uploading of large files (50kb and above) fails when PipelineMode is Classic and Trace is enabled | This is a third party issue and has been logged to Microsoft, for further reference you can check the state of the issue [here](https://connect.microsoft.com/VisualStudio/feedback/details/1008381/readentitybody-returns-0-bytes-in-iis-7-5-when-pipelinemode-is-classic-and-trace-is-enabled). | ![](../images/images/positive.png)
 
  Go up to [Known Issues and Limitations Summary](#summary)
 
@@ -601,6 +733,8 @@ Checkbox rendering not compatible with templates (row and column) | When using t
 Setting attributes to table rows with a row template not possible | In both `igGrid` and `igHierarchicalGrid`, setting attributes to table rows cannot be done possible using a row template. | ![](../images/images/positive.png)
 Events not triggered | By design, events only trigger on user interaction. Events do not trigger when the public API is used. | ![](../images/images/negative.png)
 KnockoutJS observable array functions’ limitations | The use of `unshift`, `reverse` and `sort` observable array functions results in incorrect visual appearance of the grid. | ![](../images/images/positive.png)
+The id attribute is mandatory for the DOM control placeholder| The id attribute should be set on the DOM element on which the grid is initialized. Grid use jQuery ID selector internally for faster selection.| ![](../images/images/negative.png)
+Column keys which contain spaces are not supported|Column keys are used for generating some DOM elements IDs. Having spaces in an HTML id attribute is not allowed according to the <a href="http://www.w3.org/TR/html5/dom.html#the-id-attribute" target="_blank">HTML 5 specification</a>.| ![](../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
@@ -647,7 +781,7 @@ The Sorting, Filtering, and Group By features do not work with unbound columns. 
         </tr>
         <tr>
             <td>
-The grid SetUnboundValues([Column key], [Dictionary of values] ) method overload of the grid MVC helpers requires a primary key
+The grid SetUnboundValues([Column key], [Dictionary of values]) method overload of the grid MVC helpers requires a primary key
 			</td>
             <td>
 Using the `SetUnboundValues([Column key], [Dictionary of values])` method overload requires setting a primary key.
@@ -771,15 +905,44 @@ If the feature persistence is enabled (by default) and an unbound column is grou
 
 Issue | Description | Status
 ---|---|---
-Fixed headers always enabled (limitation) | When virtualization is enabled, there is a limitation in the form of the [`fixedHeaders`](%%jQueryApiUrl%%/ui.iggrid#options:fixedHeaders) option being unchangeable and always set to *true*. | ![](../images/images/negative.png)
-Grid height settings limitation | The height of the `igGrid` must always be exactly divisible by the average row height. (The remainder of the division must be 0.) | ![](../images/images/negative.png)
-Rows’ height settings limitation | In an `igGrid` with only a few data rows, all `igGrid` rows receive expanded height. This is because the sum of the rows’ heights has to match the grid’s height. | ![](../images/images/negative.png)
-Columns visible width settings limitation | The columns visible width must be equal to the *igGrid’s* width (for horizontal virtualization) | ![](../images/images/negative.png)
+Fixed headers always enabled (limitation) | When virtualization is enabled, there is a limitation in the form of the [fixedHeaders](%%jQueryApiUrl%%/ui.iggrid#options:fixedHeaders) option being unchangeable and always set to true. | ![](../images/images/negative.png)
+Grid height settings limitation | The height of the igGrid must always be exactly divisible by the average row height. (The remainder of the division must be 0.) | ![](../images/images/negative.png)
+Rows’ height settings limitation | In an igGrid with only a few data rows, all igGrid rows receive expanded height. This is because the sum of the rows’ heights has to match the grid’s height. | ![](../images/images/negative.png)
+Columns visible width settings limitation | The columns visible width must be equal to the igGrid’s width (for horizontal virtualization) | ![](../images/images/negative.png)
 Keyboard navigation not supported for horizontal virtualization (limitation) | Keyboard navigation is not supported for horizontal virtualization. | ![](../images/images/negative.png)
-Limitation to applying cell classes | Applying a specific cell class to every cell that is in a sorted column is not supported, i.e. [`applySortedColumnCss`](%%jQueryApiUrl%%/ui.iggridsorting#options:applySortedColumnCss) is automatically set to *false*. | ![](../images/images/negative.png)
+Limitation to applying cell classes | Applying a specific cell class to every cell that is in a sorted column is not supported, i.e. [applySortedColumnCss](%%jQueryApiUrl%%/ui.iggridsorting#options:applySortedColumnCss) is automatically set to false. | ![](../images/images/negative.png)
+When virtualization is enabled the autofitLastColumn is not effective | When virtualization is enabled the [autofitLastColumn](%%jQueryApiUrl%%/ui.iggrid#options:autofitLastColumn) has no effect, which will result in columns expanding to take up the whole grid width when the sum of the columns widths is less than the width of the grid (it will act as autofitLastColumn = true). | ![](../images/images/negative.png)
+Column virtualization will not work when grid width is defined in percentage units | When grid width is defined in percentage units and column virtualization is enabled ([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) horizontal scrollbar will not render. | ![](../images/images/negative.png)
+Fixed virtualization is not supported with RWD Mode | Fixed virtualization depends on the row's height being constant. If the row's height changes the fixed virtualization will not work as expected. RWD Mode changes the row's height as it adopts to the screen size so fixed virtualization will not work as expected with it. | ![](../images/images/positive.png)
+Column virtualization is not supported with continuous virtualization | Column virtualization is supported only with fixed virtualization. When column virtualization is enabled([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) then the virtualization mode must be set to "fixed"([virtualizationMode](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) = "fixed"). | ![](../images/images/negative.png)
+
+### <a id="grid-responsive"></a> [igGrid – Responsive Web Design Mode](igGrid-Known-Issues.html)
+<table class="table table-striped">
+	<thead>
+		<tr>
+            <th>
+Issue
+			</th>
+
+            <th>
+Description
+			</th>
+
+            <th>
+Status
+			</th>
+        </tr>
+	</thead>
+	<tbody>   
+        <tr>
+        <td>RWD mode is not supported in IE8</td>
+        <td>RWD is unable to determine the mode in IE8. This feature is mainly targeted at mobile compatibility so it is not supported under IE8.</td>
+        <td>![](../images/images/negative.png)</td>
+        </tr>     
+    </tbody>
+</table>
 
 Go up to [Known Issues and Limitations Summary](#summary)
-
 
 ### <a id="grid-column-fixing"></a> [igGridColumnFixing](igGrid-Known-Issues.html)
 
@@ -789,57 +952,102 @@ Go up to [Known Issues and Limitations Summary](#summary)
             <th>
 Issue
 			</th>
+
             <th>
 Description
 			</th>
+
             <th>
 Status
 			</th>
         </tr>
 	</thead>
 	<tbody>
+        
+
         <tr>
             <td>
-Column fixing not supported for some `igGrid` features
+Column fixing not supported for some igGrid features
 			</td>
+
             <td>
-The Column Fixing feature of `igGrid` does not work with the following features:
+                The Column Fixing feature of igGrid does not work with the following features:
+
                 <ul>
                     <li>
 Column Moving
 					</li>
+
                     <li>
 Grouping (aka. Group By)
 					</li>
+
                     <li>
 (Responsive Web Design (RWD) Mode (aka. Responsive)
 					</li>
+
                     <li>
 Knockout library (KnockoutJS) integration
 					</li>
-                    <li>
-Virtualization
-					</li>
+
                     <li>
 Unbound Columns
 					</li>
                 </ul>
-Integration of Column Fixing with these features will be implemented in a future volume release.
+
+                Integration of Column Fixing with these features will be implemented in a future volume release.
             </td>
+
             <td>
 ![](../images/images/negative.png)
-![](../images/images/plannedFix.png)
+                
+
+                
+                    ![](../images/images/plannedFix.png)
 			</td>
         </tr>
+
         <tr>
             <td>
 Misalignment of fixed and unfixed parts of the rows in IE9+
 			</td>
+
             <td>
-In Internet Explorer 9 or higher, if you fix a column in an `igGrid` and scroll down to the middle of the grid, you will see misalignment between the fixed and unfixed parts of the rows. This issue is caused by the IE9 engine.
+In Internet Explorer 9 or higher, if you fix a column in an igGrid and scroll down to the middle of the grid, you will see misalignment between the fixed and unfixed parts of the rows. This issue is caused
+                    by the IE9 engine.
 			</td>
+
             <td>
 ![](../images/images/positive.png)
+			</td>
+        </tr>
+
+        <tr>
+            <td>
+Grid and its columns widths are mandatory and should be defined in pixels units
+			</td>
+
+            <td>
+Grid and its columns (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option) widths are mandatory
+                    and should be defined in pixels units.
+			</td>
+
+            <td>
+![](../images/images/negative.png)
+			</td>
+        </tr>
+
+        <tr>
+            <td>
+The grid scrolls to the top, when a column is unfixed and continuous virtualization is enabled
+			</td>
+
+            <td>
+When you have continuous virtualization enabled and you unfix a column, the grid scrolls to the top.
+			</td>
+
+            <td>
+![](../images/images/negative.png)
 			</td>
         </tr>
     </tbody>
@@ -892,7 +1100,7 @@ Exception thrown when the Group By feature defines column settings together with
 Values in a column grouped but not displayed correctly | When [`autoGenerateColumns`](%%jQueryApiUrl%%/ui.iggrid#options:autoGenerateColumns) is set to *true* and a column is set to be grouped at initialization, the values in the column are grouped but not displayed correctly. | ![](../images/images/positive.png)
 The `groupedColumnsChanged` event input argument `ui.groupedColumns` may be empty | The `ui.groupedColumns` input argument of the [`groupedColumnsChanged`](%%jQueryApiUrl%%/ui.iggridgroupby#events:groupedColumnsChanged) event may be empty when a column has been grouped by dragging it into the Group By area. | ![](../images/images/positive.png)
 Tapping the `igTree` inside the Group By modal dialog not working properly | Tapping the drop-down inside the Group By modal dialog may lead to some layout problems on Android 4.0. The issue appears when the tree is shown partially, having a vertical or horizontal scroll. | ![](../images/images/positive.png)
-Limitation when using GroupBy feature and continuous virtualization | When `igGrid`’s continuous virtualization is in use and the Group By feature is enabled, scrolling vertically causes collapsed group(s) to expand. | ![](../images/images/negative.png)
+Limitation when using GroupBy feature and continuous virtualization | When `igGrid`’s continuous virtualization is in use and the Group By feature is enabled, scrolling vertically causes the groups to revert to their initial state (expanded or collapsed depending on the [`initialExpand`](%%jQueryApiUrl%%/ui.iggridgroupby#options:initialExpand) option). | ![](../images/images/negative.png)
 Grouping not working with fixed virtualization | The GroupBy feature of the `igGrid` doesn’t work with fixed virtualization. | ![](../images/images/negative.png)
 Hiding a column shrinks the grid in Firefox | When the GroupBy feature is enabled and `igGrid` doesn’t have column widths defined, hiding a column shrinks the grid in Firefox browser. | ![](../images/images/positive.png)
 
@@ -904,7 +1112,7 @@ Go up to [Known Issues and Limitations Summary](#summary)
 Issue | Description | Status
 ---|---|---
 Paging events not firing at run-time | The `igGrid` Paging events only fire when the UI is triggers a paging operation. They do not fire when paging options are set at run-time. | ![](../images/images/positive.png)
-Persistence is not working for remote Sorting and Filtering when page size is changed | Changing page size with remote Paging does not persist remote Sorting and Filtering | ![](../images/images/plannedFix.png)
+
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
@@ -913,10 +1121,11 @@ Go up to [Known Issues and Limitations Summary](#summary)
 
 Issue | Description | Status
 ---|---|---
-Resizing not working with some jQuery versions | `igGrid` Resizing does not support jQuery versions 1.8.0 ? 1.8.5. | ![](../images/images/positive.png)
-Resizing not working with virtualization | The column resizing feature does not work when either virtualization or column virtualization is enabled. | ![](../images/images/positive.png)
+Resizing not working with some jQuery versions | `igGrid` Resizing does not support jQuery versions 1.8.0 ÷ 1.8.5. | ![](../images/images/positive.png)
+Resizing not working with fixed virtualization |The column resizing feature does not work when fixed virtualization is enabled.| ![](../images/images/positive.png)
 Columns not resizing correctly, when column widths are not set (in Firefox) | Due to a bug in Firefox, the `igGrid` columns cannot be resized correctly when the column widths are not set. | ![](../images/images/negative.png)
 Columns not resizing correctly when column widths are set relatively (in Firefox) | Due to a bug in Firefox, the `igGrid` columns cannot be resized correctly when the column widths are set relatively (in percentages). | ![](../images/images/positive.png)
+Resizing a column occurs at an accelerated speed when the grid is scrolled to the far right.|The resizing speed is accelerated when the grid is scrolled to the far right and a column is resized by dragging from its right edge to the left. This specific behavior is caused by the browser’s layout engine.|![](../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
@@ -967,7 +1176,6 @@ Go up to [Known Issues and Limitations Summary](#summary)
 
 Issue | Description | Status
 ---|---|---
-Deleting a row with auto commit enabled no longer causes the grid's zebra row styles to be re-rendered | Deleting a row when the [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) option is enabled will no longer cause the grid’s zebra row styles to be re-rendered. This is because the logic of deleting a row has changed to prevent data re-rendering. This change was made for performance reasons. | ![](../images/images/positive.png)
 Adding a new row with Updating and Virtualization enabled requires immediate committing | Adding a new row is not supported when the Updating and Virtualization features are enabled while [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) is disabled. Virtualization is not aware of the newly added row when `autoCommit` is *false*. | ![](../images/images/positive.png)
 Excel Navigation mode supported only for Cell Edit and Row Edit modes. | When [excelNavigationMode](%%jQueryApiUrl%%/ui.iggridupdating#options:excelNavigationMode) is enabled, navigating with the arrows is only possible with *"cell"* or *"row"* [`editMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:editMode). Other Edit modes (*“rowedittemplate”*, *none*, *null*) are not supported with [`excelNavigationMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:excelNavigationMode). | ![](../images/images/negative.png)
 Adding and updating a virtual grid doesn’t work if it is grouped | When using GroupBy and Updating in a virtual grid, updating or adding rows will not work when the grid is grouped. If you ungroup you will see the newly added record at the bottom of the grid records. | ![](../images/images/negative.png)
@@ -977,22 +1185,31 @@ Column template including `<td>` tag attributes is ignored when updating rows | 
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
+### <a id="feature-chooser"></a>[Feature Chooser](igGrid-Known-Issues.html#feature-chooser)
+
+Issue | Description | Status
+------|-------------|-------
+If any of the features or their options are changed after initialization the changes won't be reflected in the Feature Chooser.|The feature chooser is rendered only once on initialization and won't be affected if any of the features are modified after this.|![](../images/images/negative.png)
+
+Go up to [Known Issues and Limitations Summary](#summary)
 
 ### <a id="hierarchical-grid"></a> [igHierarchicalGrid](igHierarchicalGrid-Known-Issues.html#general)
 
 Issue | Description | Status
 ---|---|---
 Screen taps misinterpreted on Android 4.* devices | On Android 4.*-powered touch devices tapping on the drop-down in the Group By modal dialog in a hierarchical grid will often act on the grid cell behind the modal dialog. | ![](../images/images/positive.png)
-Rendering issues in the hierarchical grid when features are referenced in a particular order | The `igHierarchicalGrid`’s child layouts may have rendering issues if the Row Selectors feature is added after the Group By feature to the feature list. | ![](../images/images/positive.png)
-The `<div>` element of child layout cannot be selected with the jQuery ID selector | `igHierarchicalGrid` uses primary key value of the parent layout to create child layout `<div>` element with unique `id` attribute. When the primary key values contain invalid characters the DIV element cannot be selected with the [jQuery ID selector](http://api.jquery.com/id-selector/). | ![](../images/images/negative.png) ![](../images/images/plannedFix.png)
-Self-reference not working in MVC | If you want to bind an `igHierarchicalGrid` to self-referencing data, the MVC pattern will not allow you to do this because of limitation in serializing. | ![](../images/images/negative.png)
+Rendering issues in the hierarchical grid when features are referenced in a particular order | The igHierarchicalGrid’s child layouts may have rendering issues if the Row Selectors feature is added after the Group By feature to the feature list. | ![](../images/images/positive.png)
+Limitation for the primary key values | igHierarchicalGrid uses primary key value of the parent layout to create child layout <div> element with unique id attribute (according to the [HTML5 specification](http://www.w3.org/TR/html5/dom.html#the-id-attribute) [space characters](http://www.w3.org/TR/html5/infrastructure.html#space-character)must not be used in the id attribute value). When the primary key values contain invalid characters the DIV element cannot be selected with the [jQuery ID selector](http://api.jquery.com/id-selector/).As a result features on the child grid may not work as expected. Example: Opening filter dropdown on child grid causes an exception. | ![](../images/images/negative.png)
+Self-reference not working in MVC | If you want to bind an igHierarchicalGrid to self-referencing data, the MVC pattern will not allow you to do this because of limitation in serializing. | ![](../images/images/negative.png)
 Load-on-Demand not working with chaining | It is not possible to enable Load-on-Demand in the View page of your MVC project. | ![](../images/images/positive.png)
 Load-on-Demand without primary keys for the layouts throws an exception | If you enable the Load-on-Demand feature and do not define primary keys for all child layouts, an exception will be thrown. | ![](../images/images/positive.png)
-Some child layout columns are hidden or cut out | When an `igHierarchicalGrid` has no width defined and the child layout has width that exceeds the width grid, some of the child’s columns will be cut or hidden. | ![](../images/images/positive.png)
-Defining a feature more than once not possible | **In JavaScript:** <br /> In both `igGrid` and `igHierarchicalGrid`, defining a feature more than once throws an error. <br /> **In MVC:** <br /> In both `igGrid` and `igHierarchicalGrid`, defining a feature more than once in the MVC Wrapper, causes only the last definition to be taken into account. | ![](../images/images/negative.png)
+Some child layout columns are hidden or cut out | When an igHierarchicalGrid has no width defined and the child layout has width that exceeds the width grid, some of the child’s columns will be cut or hidden. | ![](../images/images/positive.png)
+Defining a feature more than once not possible | **In JavaScript:** In both igGrid and igHierarchicalGrid, defining a feature more than once throws an error.**In MVC:** In both igGrid and igHierarchicalGrid, defining a feature more than once in the MVC Wrapper, causes only the last definition to be taken into account. | ![](../images/images/negative.png)
 Client-side binding to XML | Binding to XML is supported only for recursive schemas. | ![](../images/images/negative.png) ![](../images/images/plannedFix.png)
-When Load-on-Demand is false persistence is not working for the child layouts | When Load-on-Demand is false remote Filtering, Sorting or GroupBy are not persisted for the child layout. | ![](../images/images/positive.png)
-
+When Load-on-Demand is false persistence is not working for the child layouts | When Load-on-Demand is false remote Filtering, Sorting or GroupBy are not persisted for the child layout. The persist option is automatically set to false for those features in this scenario. | ![](../images/images/negative.png)
+The id attribute is mandatory for the DOM control placeholder | The id attribute should be set on the DOM element on which the grid is initialized. Grid use jQuery ID selector internally for faster selection. | ![](../images/images/negative.png)
+Column keys which contain spaces are not supported | Column keys are used for generating some DOM elements IDs. Having spaces in an HTML id attribute is not allowed according to the [HTML 5 specification](http://www.w3.org/TR/html5/dom.html#the-id-attribute). | ![](../images/images/negative.png)
+Using virtualization with initialExpandDepth is not supported|Currently when virtualization is enabled all rows are fetched as collapsed. Setting initialExpandDepth will have no effect.| ![](../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
@@ -1123,7 +1340,7 @@ Issue | Description | Status
 `igDataChart` Radial Series not supported | `igZoombar`™ supports only horizontal zooming while Radial Series zooming makes sense only when done on both axes. Because of this, zooming Radial Series with `igZoombar` does not work properly. | ![](../images/images/negative.png)
 `igZoombar` thumbnail not rendered when used with `igDataChart` | `igZoombar` creates its thumbnail by using the options of the `igDataChart` control (which is referenced in `igZoombar`‘s [`target`](%%jQueryApiUrl%%/ui.igzoombar#options:target) option). `igZoombar` trims off some of these options in an attempt to remove the clutter from the thumbnail. This can make the new option set invalid. | ![](../images/images/positive.png)
 The clone and the target widget of `igZoombar` doesn’t synchronize automatically | Changing the widget being zoomed by the `igZoombar` control does not update the clone automatically. | ![](../images/images/positive.png)
-
+`igZoombar` does not work  with igDataCharts with Stacked Series.| The `igZoombar` creates a clone of the original `igDataChart` that it targets. By default the `igZoombar` infers the clone‘s options from the original chart object (refer to the [`clone`](%%jQueryApiUrl%%/ui.igzoombar#options:clone) option of the `igZoombar`). In the case of the stacked series, which have a more complex structure, the original chart modifies the series that the user provides internally. Due to this the `igZoombar` cannot obtain the original series and cannot recreate the clone automatically.| ![](../images/images/positive.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
@@ -1139,9 +1356,58 @@ Namespace conflict | Using the NetAdvantage® for ASP.NET and Ignite UI document
 
 ### <a id="templating-engine"></a> Infragistics Templating Engine
 
-Issue | Description | Status
----|---|---
-Infragistics Templating limitations | Nested `{{each}}` templates are not supported. | ![](../images/images/negative.png)
+<table class="table table-striped">
+	<thead>
+		<tr>
+            <th>
+Issue
+			</th>
+
+            <th>
+Description
+			</th>
+
+            <th>
+Status
+			</th>
+        </tr>
+	</thead>
+	<tbody>
+        
+
+        <tr>
+            <td>
+Infragistics Templating limitations
+			</td>
+
+            <td>
+Nested `{{each}}` templates are not supported.
+			</td>
+
+            <td>
+![](../images/images/negative.png)
+			</td>
+        </tr>
+
+        <tr>
+            <td>
+Characters different from A-Z, a-z, 0-9, "_" are not substituted/recognized.
+			</td>
+
+            <td>
+                Substitution expressions cannot contain written signs different from alphanumeric characters, numeric characters and underscore.
+
+                
+
+>**Workaround:** If you need to use characters different from the allowed ones you can customize the following `$.ig.regExp` options `$.ig.regExp.sub:/\$\{(([\w\$]+(\.|\s)?[\w\$]*)+)\}/`which matches any substitution element in the template that is to be encoded before rendering or the `$.ig.regExp.nonEncodeSub: /\{\{html\s+([\w\$]+(\.|\s)?[\w\$]*)+\}\}/` option, that matches any substitution element in the template                     that is to be rendered as it is. **For example** if you need to use a dash "-" change the expression like this: `$.ig.regExp.sub:/\$\{(([\w\$-]+(\.|\s)?[\w\$-]*)+)\}/` and accordingly `$.ig.regExp.nonEncodeSub: /\{\{html\s+([\w\$-]+(\.|\s)?[\w\$-]*)+\}\}/`.
+            </td>
+
+            <td>
+![](../images/images/positive.png)
+			</td>
+        </tr>
+    </tbody>
+</table>
 
 
 Go up to [Known Issues and Limitations Summary](#summary)

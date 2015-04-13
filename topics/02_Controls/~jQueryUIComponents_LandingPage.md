@@ -13,7 +13,7 @@
 
 
 -   [Touch Support for Ignite UI Controls](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html)
--   [Deployment Guide](Deployment-Guide.html)
+-   [Getting Started](Getting-Started.html)
 -   [Using Events in Ignite UI](Using-Events-in-NetAdvantage-for-jQuery.html)
 -   [igBulletGraph](igBulletGraph.html)
 -   [igCombo](igCombo-igCombo.html)
@@ -40,6 +40,7 @@
 -   [igSparkline](igSparkline-Landing.html)
 -   [igSplitter](igSplitter.html)
 -   [igTree](igTree-igTree.html)
+-   [igTreeGrid](igTreeGrid-Landing-Page.html)
 -   [igTileManager](igTileManager-Landing-Page.html)
 -   [igUpload](igUpload-igUpload.html)
 -   [igVideoPlayer](VideoPlayer.html)

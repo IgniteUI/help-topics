@@ -644,7 +644,6 @@ The picture below shows the World map with countries drawn in different colors b
 	```
 
 
-
 ##<a id="related-content"></a>Related Content
 
 ### <a id="topics"></a>Topics

@@ -22,7 +22,7 @@ The following topics are prerequisites to understanding this topic:
 
 - [**igDialog Overview**](igDialog-Overview.html): The topic introduces the user to the `igDialog` control’s main features.
 
-- [**Adding igDialog**](Adding-igDialog.html): This topic demonstrates how to add the `igDialog` control to a web page.
+- [**Adding *igDialog***](Adding-igDialog.html): This topic demonstrates how to add the `igDialog` control to a web page.
 
 
 

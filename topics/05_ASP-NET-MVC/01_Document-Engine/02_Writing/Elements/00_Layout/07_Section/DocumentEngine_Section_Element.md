@@ -41,7 +41,7 @@ The following code will define a [Report](Infragistics.Web.Mvc.Documents.Reports
 	```
 
 2.  **Add a Header element to the Section.**
-
+	
 	**In C#:**
 	
 	```csharp

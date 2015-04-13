@@ -11,13 +11,11 @@
 # What's New in 2014 Volume 1
 
 ## Topic Overview
-### Purpose
 
 This topic presents the controls and the new and enhanced features for the Ignite UI™ 2014 Volume 1 release.
 
 
 ## What’s New Summary
-### What’s new summary chart
 
 The following table summarizes what’s new in 2014 Volume 1. Additional details follow the summary table.
 

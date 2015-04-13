@@ -78,7 +78,7 @@ Property| Setting
 ---|---
 expand|node
 
-**In HTML and ASPX:**
+**In JavaScript:**
 
 ```js
 $("#tree").igTree("expand", node);

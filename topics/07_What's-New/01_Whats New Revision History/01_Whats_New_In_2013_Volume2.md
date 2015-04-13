@@ -117,7 +117,7 @@ The series can now appear with animation effect when the chart is initially load
 			</td>
 
             <td>
-Hover interactions  enable you to  display annotations over the series of the chart. These  annotations are implemented through configurable hover interaction layers that are dependent on the cursor position.
+Hover interactions  enable you to  display annotations over the series of the chart. These  annotations are implemented through configurable hover                     interaction layers  that are dependent on the cursor position.
 			</td>
         </tr>
 

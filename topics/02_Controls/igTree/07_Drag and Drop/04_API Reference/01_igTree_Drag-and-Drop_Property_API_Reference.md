@@ -152,8 +152,10 @@ String
 			</td>
 
             <td>
-Hint markup upon “Copy to”. This hint appears during dragging when the copied node is about to be dropped over the currently highlighted node (the node over which the mouse pointer is hovering at the moment). In this case, the copied node will become a child node of the target (highlighted) node.
-This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+Hint markup upon “Copy to”. This hint appears during dragging when the copied node is about to be dropped over the currently highlighted node (the node over which the mouse pointer is hovering at the moment). In this case, the copied node
+                    will become a child node of the target (highlighted) node.
+
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
 			</td>
 
             <td>
@@ -191,9 +193,9 @@ Function
             <td>
 Provides an entry point for custom drop validation. The custom validation must have a Boolean return value. It makes the drop point not valid if false is returned.
 
-Custom drop validation function is overridden by the internal tree validation, so you can invalidate a drop-and-drop action only at the drop point.
+                Custom drop validation function is overridden by the internal tree validation, so you can invalidate a drop-and-drop action only at the drop point.
 
-This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
 			</td>
 
             <td>
@@ -265,9 +267,9 @@ String
 					</li>
                 </ul>
 
-Each of them sets the respective Drag-and-Drop mode.
+                Each of them sets the respective Drag-and-Drop mode.
 
-This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
             </td>
 
             <td>
@@ -285,9 +287,10 @@ Float
 			</td>
 
             <td>
-Opacity/transparency level of the dragged node and the hint while dragging. The range of valid values is between 0 and 1 with 1 meaning the hint is fully opaque and 0 meaning the hint is fully transparent.
+Opacity/transparency level of the dragged node and the hint while dragging. The range of valid values is between 0 and 1 with 1 meaning the hint is
+                    fully opaque and 0 meaning the hint is fully transparent.
 
-This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
 			</td>
 
             <td>
@@ -307,7 +310,7 @@ Number
             <td>
 Time to elapse (in milliseconds) after a `mousedown` event after which dragging will be allowed. The purpose of this option is to prevent unwanted drags when clicking on an element.
 
-This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
 			</td>
 
             <td>
@@ -327,7 +330,7 @@ Number
             <td>
 Time to elapse (in milliseconds) after a `mousedown` event after which the node will expand after hovering it during drag.
 
-This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
 			</td>
 
             <td>
@@ -355,7 +358,7 @@ String
 					</li>
 
                     <li>
-`<function>;`
+    `<function>;`
 					</li>
                 </ul>
 

@@ -12,7 +12,7 @@
 
 
 
--   [Deployment Guide](Deployment-Guide-Mobile.html)
+-   [Getting started](mobile-getting-started.html)
 -   [Button](Button.html)
 -   [CheckBox](CheckBox.html)
 -   [CheckBoxGroup](CheckBoxGroup.html)

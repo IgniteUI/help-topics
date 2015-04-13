@@ -34,7 +34,7 @@ This topic contains the following sections:
     -   [igGridColumnMoving](#grid-column-moving)
     -   [igGrid - Multi-Column Headers](#grid-multi-column-headers)
     -   [igGridFiltering](#grid-filtering)
-    -   [igGridGroupBy](#grid-grouping)  
+    -   [igGridGroupBy](#grid-grouping)   
     -   [igGridHiding](#grid-hiding)
     -   [igGridPaging](#grid-paging)
     -   [igGridResizing](#grid-resizing)
@@ -598,6 +598,8 @@ Checkbox rendering not compatible with templates (row and column) | When using t
 Setting attributes to table rows with a row template not possible | In both `igGrid` and `igHierarchicalGrid`, setting attributes to table rows cannot be done possible using a row template. | ![](../../images/images/positive.png)
 Events not triggered | By design, events only trigger on user interaction. Events do not trigger when the public API is used. | ![](../../images/images/negative.png)
 KnockoutJS observable array functions’ limitations | The use of `unshift`, `reverse` and `sort` observable array functions results in incorrect visual appearance of the grid. | ![](../../images/images/positive.png)
+The id attribute is mandatory for the DOM control placeholder|The id attribute should be set on the DOM element on which the grid is initialized. Grid use jQuery ID selector internally for faster selection.|![](../../images/images/negative.png)
+Column keys which contain spaces are not supported|Column keys are used for generating some DOM elements IDs. Having spaces in an HTML id attribute is not allowed according to the [HTML 5 specification](http://www.w3.org/TR/html5/dom.html#the-id-attribute).|![](../../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
@@ -644,7 +646,7 @@ The Sorting, Filtering, and Group By features do not work with unbound columns. 
         </tr>
         <tr>
             <td>
-The grid SetUnboundValues([Column key], [Dictionary of values] ) method overload of the grid MVC helpers requires a primary key
+The grid SetUnboundValues([Column key], [Dictionary of values]) method overload of the grid MVC helpers requires a primary key
 			</td>
             <td>
 Using the `SetUnboundValues([Column key], [Dictionary of values])` method overload requires setting a primary key.
@@ -746,6 +748,8 @@ Rows’ height settings limitation | In an `igGrid` with only a few data rows, a
 Columns visible width settings limitation | The columns visible width must be equal to the *igGrid’s* width (for horizontal virtualization) | ![](../../images/images/negative.png)
 Keyboard navigation not supported for horizontal virtualization (limitation) | Keyboard navigation is not supported for horizontal virtualization. | ![](../../images/images/negative.png)
 Limitation to applying cell classes | Applying a specific cell class to every cell that is in a sorted column is not supported, i.e. [`applySortedColumnCss`](%%jQueryApiUrl%%/ui.iggridsorting#options:applySortedColumnCss) is automatically set to *false*. | ![](../../images/images/negative.png)
+When virtualization is enabled the autofitLastColumn is not effective | When virtualization is enabled the [autofitLastColumn](%%jQueryApiUrl%%/ui.iggrid#options:autofitLastColumn) has no effect, which will result in columns expanding to take up the whole grid width when the sum of the columns widths is less than the width of the grid (it will act as autofitLastColumn = true).|![](../../images/images/negative.png)
+Column virtualization will not work when grid width is defined in percentage units|When grid width is defined in percentage units and column virtualization is enabled ([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) horizontal scrollbar will not render.|![](../../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
@@ -813,6 +817,17 @@ In Internet Explorer 9 or higher, if you fix a column in an `igGrid` and scroll 
 ![](../../images/images/positive.png)
 			</td>
         </tr>
+        <tr>
+            <td>
+Grid and its columns widths are mandatory and should be defined in pixels units
+			</td>
+            <td>
+Grid and its columns (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option) widths are mandatory and should be defined in pixels units.
+			</td>
+            <td>
+![](../../images/images/negative.png)
+			</td>
+        </tr>
     </tbody>
 </table>
 
@@ -845,7 +860,7 @@ Go up to [Known Issues and Limitations Summary](#summary)
 
 Issue | Description | Status
 ------|-------------|-------
-Advanced filtering not working with OR filtering expressions | The oData protocol does not support OR filtering expressions, therefore, advanced filtering can be used with AND filtering expressions only. | ![](../../images/images/negative.png)
+Simple Filtering does not work with column virtualization| Filtering mode = "simple" does not work with column virtualization ([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) | ![](../../images/images/positive.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
@@ -950,7 +965,6 @@ Go up to [Known Issues and Limitations Summary](#summary)
 
 Issue | Description | Status
 ---|---|---
-Deleting a row with auto commit enabled no longer causes the grid's zebra row styles to be re-rendered | Deleting a row when the [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) option is enabled will no longer cause the grid’s zebra row styles to be re-rendered. This is because the logic of deleting a row has changed to prevent data re-rendering. This change was made for performance reasons. | ![](../../images/images/positive.png)
 Adding a new row with Updating and Virtualization enabled requires immediate committing | Adding a new row is not supported when the Updating and Virtualization features are enabled while [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) is disabled. Virtualization is not aware of the newly added row when autoCommit is *false*. | ![](../../images/images/positive.png)
 ExcelNavigationMode works only with “cell” and "row" edit mode. | When [`excelNavigationMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:excelNavigationMode) is enabled, navigating with the arrows is only possible with "cell" and "row" [`editMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:editMode) . Also when editMode = "row", the navigation won't work in "Add new row". Other editModes (“rowedittemplate”, none, null ) are not supported with [`excelNavigationMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:excelNavigationMode). | ![](../../images/images/negative.png)
 Adding and updating a virtual grid doesn’t work if it is grouped | When using GroupBy and Updating in a virtual grid, updating or adding rows will not work when the grid is grouped. If you ungroup you will see the newly added record at the bottom of the grid records. | ![](../../images/images/negative.png)
@@ -973,7 +987,8 @@ Load-on-Demand without primary keys for the layouts throws an exception | If you
 Some child layout columns are hidden or cut out | When an `igHierarchicalGrid` has no width defined and the child layout has width that exceeds the width grid, some of the child’s columns will be cut or hidden. | ![](../../images/images/positive.png)
 Setting attributes to table rows with a row template not possible | In both `igGrid`™ and `igHierarchicalGrid`, setting attributes to table rows cannot be done possible using a row template. | ![](../../images/images/negative.png)
 Defining a feature more than once not possible | **In JavaScript:** <br /> In both `igGrid` and `igHierarchicalGrid`, defining a feature more than once throws an error. <br /> **In MVC:** <br /> In both `igGrid` and `igHierarchicalGrid`, defining a feature more than once in the MVC Wrapper, causes only the last definition to be taken into account. | ![](../../images/images/negative.png)
-
+The id attribute is mandatory for the DOM control placeholder | The id attribute should be set on the DOM element on which the grid is initialized. Grid use jQuery ID selector internally for faster selection. |![](../../images/images/negative.png)
+Column keys which contain spaces are not supported|Column keys are used for generating some DOM elements IDs. Having spaces in an HTML id attribute is not allowed according to the [HTML 5 specification](http://www.w3.org/TR/html5/dom.html#the-id-attribute).|![](../../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
@@ -1112,10 +1127,64 @@ Namespace conflict | Using the NetAdvantage® for ASP.NET and Ignite UI document
 
 ### <a id="templating-engine"></a> Infragistics Templating Engine
 
-Issue | Description | Status
----|---|---
-Infragistics Templating limitations | Nested `{{each}}` templates are not supported. | ![](../../images/images/negative.png)
+<table class="table table-bordered">
+	<thead>
+		<tr>
+            <th>
+Issue
+			</th>
 
+            <th>
+Description
+			</th>
+
+            <th>
+Status
+			</th>
+        </tr>
+	</thead>
+	<tbody>
+        
+
+        <tr>
+            <td>
+Infragistics Templating limitations
+			</td>
+
+            <td>
+Nested `{{each}}` templates are not supported.
+			</td>
+
+            <td>
+![](../../images/images/negative.png)
+			</td>
+        </tr>
+
+        <tr>
+            <td>
+Characters different from A-Z, a-z, 0-9, "_" are not substituted/recognized.
+			</td>
+
+            <td>
+                Substitution expressions cannot contain written signs different from alphanumeric characters, numeric characters and underscore.
+
+                Workaround
+
+                <blockquote>
+                    If you need to use characters different from the allowed ones you can customize the following $.ig.regExp options `$.ig.regExp.sub:/\$\{(([\w\$]+(\.|\s)?[\w\$]*)+)\}/`which matches any substitution
+                    element in the template that is to be encoded before rendering or the `$.ig.regExp.nonEncodeSub: /\{\{html\s+([\w\$]+(\.|\s)?[\w\$]*)+\}\}/` option, that matches any substitution element in the template
+                    that is to be rendered as it is.
+                    
+For example if you need to use a dash "-" change the expression like this: `$.ig.regExp.sub:/\$\{(([\w\$-]+(\.|\s)?[\w\$-]*)+)\}/` and accordingly `$.ig.regExp.nonEncodeSub: /\{\{html\s+([\w\$-]+(\.|\s)?[\w\$-]*)+\}\}/`.
+                </blockquote>
+            </td>
+
+            <td>
+![](../../images/images/positive.png)
+			</td>
+        </tr>
+    </tbody>
+</table>
 
 Go up to [Known Issues and Limitations Summary](#summary)
 

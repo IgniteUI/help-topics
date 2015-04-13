@@ -254,9 +254,9 @@ Property| Value
 
 Following is the code that implements this example.
 
- **In JavaScript:**
-  
-```js 
+ **In JavaScript:**  
+
+```js
 $("#gauge").igRadialGauge({
 	width: "400px",
 	height: "400px",

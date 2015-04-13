@@ -106,7 +106,7 @@ $("#gauge").igRadialGauge({
 	backingInnerExtent: 0.2,
 	backingOversweep: 4,
 	backingSrokeThickness:5
-});
+});                                                                  
 ```
 
 

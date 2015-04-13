@@ -89,19 +89,16 @@ labelExtent |0.44
 
 The following is the code for implementing this example
 
- **In JavaScript:** 
-                                                                                                                                    
-```js
+ **In JavaScript:**   
+                                                                                                                                  
+```js 
 $("#gauge").igRadialGauge({
 	width: "400px",
 	height: "400px",
 	labelExtent: 0.44,
-	labelInterval: 15
-});
+	labelInterval: 15 
+});                                                                  
 ```
-
-
-
 
 ## <a id="related-content"></a>Related Content
 ### Topics

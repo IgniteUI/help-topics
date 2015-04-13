@@ -20,13 +20,7 @@ This topic contains the information and references needed to configure the `Link
 
 The following topics are prerequisites to understanding this topic:
 
-Topic
-
-Purpose
-
-[*Link* Overview](Link-Overview.html)
-
-This topic introduces the MVC `Link` control wrapper and its main functionalities.
+- [*Link* Overview](Link-Overview.html): This topic introduces the MVC `Link` control wrapper and its main functionalities.
 
 
 

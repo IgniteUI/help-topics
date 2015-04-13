@@ -39,15 +39,17 @@ Issue | Description | Status
 ---|---|---
 [Screen taps misinterpreted on Android 4.* devices](#android-taps) | On Android 4.*-powered touch devices tapping on the drop-down in the Group By modal dialog in a hierarchical grid will often act on the grid cell behind the modal dialog. | ![](../../images/images/positive.png)
 [Rendering issues in the hierarchical grid when features are referenced in a particular order](#feature-order) | The `igHierarchicalGrid`’s child layouts may have rendering issues if the Row Selectors feature is added after the Group By feature to the feature list. | ![](../../images/images/positive.png)
-[The `<div>` element of child layout cannot be selected with the jQuery ID selector](#limitation-primary-key) | `igHierarchicalGrid` uses primary key value of the parent layout to create child layout `<div>` element with unique `id` attribute. When the primary key values contain invalid characters the DIV element cannot be selected with the [jQuery ID selector](http://api.jquery.com/id-selector/). | ![](../../images/images/plannedFix.png)
+[Limitation for the primary key values](#limitation-primary-key) | `igHierarchicalGrid` uses primary key value of the parent layout to create child layout `<div>` element with unique `id` attribute (according to the [HTML5 specification](http://www.w3.org/TR/html5/dom.html#the-id-attribute) [space characters](http://www.w3.org/TR/html5/infrastructure.html#space-character)must not be used in the id attribute value). When the primary key values contain invalid characters the DIV element cannot be selected with the [jQuery ID selector](http://api.jquery.com/id-selector/).As a result features on the child grid may not work as expected. Example: Opening filter dropdown on child grid causes an exception. | ![](../../images/images/negative.png)
 Self-reference not working in MVC | If you want to bind an `igHierarchicalGrid` to self-referencing data, the MVC pattern will not allow you to do this because of limitation in serializing. | ![](../../images/images/negative.png)
 [Load-on-Demand not working with chaining](#load-on-demand-chaining) | It is not possible to enable Load-on-Demand in the View page of your MVC project. | ![](../../images/images/positive.png)
 [Load-on-Demand without primary keys for the layouts throws an exception](#load-on-demand-primary) | If you enable the Load-on-Demand feature and do not define primary keys for all child layouts, an exception will be thrown. | ![](../../images/images/positive.png)
 [Some child layout columns are hidden or cut out](#hidden-child-columns) | When an `igHierarchicalGrid` has no width defined and the child layout has width that exceeds the width grid, some of the child’s columns will be cut or hidden. | ![](../../images/images/positive.png)
 Defining a feature more than once not possible | **In JavaScript:** In both `igGrid` and `igHierarchicalGrid`, defining a feature more than once throws an error. **In MVC:** In both `igGrid` and `igHierarchicalGrid`, defining a feature more than once in the MVC Wrapper, causes only the last definition to be taken into account. | ![](../../images/images/negative.png)
 Client-side binding to XML | Binding to XML is supported only for recursive schemas. | ![](../../images/images/plannedFix.png)
-[When Load-on-Demand is false persistence is not working for the child layouts](#child-persistence) | When Load-on-Demand is false remote Filtering, Sorting or GroupBy are not persisted for the child layout. | ![](../../images/images/positive.png)
-
+When Load-on-Demand is false persistence is not working for the child layouts | When Load-on-Demand is false remote Filtering, Sorting or GroupBy are not persisted for the child layout. The persist option is automatically set to false for those features in this scenario. | ![](../../images/images/negative.png)
+The id attribute is mandatory for the DOM control placeholder | The id attribute should be set on the DOM element on which the grid is initialized. Grid use jQuery ID selector internally for faster selection. | ![](../../images/images/negative.png)
+Column keys which contain spaces are not supported | Column keys are used for generating some DOM elements IDs. Having spaces in an HTML id attribute is not allowed according to the [HTML 5 specification](http://www.w3.org/TR/html5/dom.html#the-id-attribute). | ![](../../images/images/negative.png)
+Using virtualization with initialExpandDepth is not supported|Currently when virtualization is enabled all rows are fetched as collapsed. Setting initialExpandDepth will have no effect.| ![](../../images/images/negative.png)
 
 
 #### [igHierarchicalGrid GroupBy](#grouping)
@@ -138,7 +140,7 @@ Row Selectors works on only one layout at a time | The Row Selectors’ feature 
 		    </tr>
               <tr id="hidden-child-columns">
 	             <td>
-		            Some childlayout columns are hidden or cut out
+		            Some child layout columns are hidden or cut out
 			    </td>
 			    <td>
 					When an igHierarchicalGrid has no width defined and the child layout has width that exceeds the width of the grid, some of the child’s columns will be cut out or hidden.
@@ -147,17 +149,7 @@ Row Selectors works on only one layout at a time | The Row Selectors’ feature 
 					It’s always a good practice to set width to the igHierarchicalGrid. This would allow for a horizontal scroll bar to appear if the child layout is wider than the grid width.
 			    </td>
 		    </tr>
-          	<tr id="child-persistence">
-		    	<td>
-		            When Load-on-Demand is `false` persistence is not working for the child layouts
-		    	</td>
-				<td>
-					Load-on-Demand persistence is disabled and is not working for the child layouts
-				</td>
-		    <td>
-				Set persist to `false` on the child layout features.
-		    </td>
-	    </tr>
+
     </tbody>         
 </table>
 

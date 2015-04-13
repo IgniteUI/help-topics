@@ -69,7 +69,7 @@ Property | Setting
 [fadeTimespan](%%jQueryApiUrl%%/ui.iggridtooltips#options:fadeTimespan) | 150
 [cursorLeftOffset](%%jQueryApiUrl%%/ui.iggridtooltips#options:cursorLeftOffset) | 10
 [cursorTopOffset](%%jQueryApiUrl%%/ui.iggridtooltips#options:cursorTopOffset) | 15
-
+[style](%%jQueryApiUrl%%/ui.iggridtooltips#options:style) | "tooltip"
 
 ### <a id="default-code"></a> Code example 
 To enable the tooltips with their default settings, just set the name property to “Tooltips”.

@@ -186,7 +186,7 @@ Modernizr library (Optional)
             </td>
 
             <td>
-Add a script reference to the library in the `<head>`  section of your page.
+Add a script reference to the library in the `<head>` section of your page.
 			</td>
         </tr>
 

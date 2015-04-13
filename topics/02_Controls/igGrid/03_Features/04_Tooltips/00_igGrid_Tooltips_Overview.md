@@ -168,13 +168,19 @@ hidden  <br />
 Appearance
 			</td>
             <td>
-Customizable appearance (when changing the jQuery UI CSS Framework classes).
+Configures how the tooltips are styled and positioned. There are two modes: "tooltip" and "popover".
+                <br />
+The "tooltip" style will position the tooltip according to the mouse cursor (it will display next to the mouse cursor). The tooltip content will be rendered as plain text.
+                <br />
+The "popover" style initializes an instance of the igPopover control. It will position the tooltip according to the target TD element with an arrow pointing to it. The tooltip content will be rendered as HTML.
+                <br />
+Appearance can be customized additionally by changing the jQuery UI CSS Framework classes.
 			</td>
             <td>
--
+[style](%%jQueryApiUrl%%/ui.iggridtooltips#options:style)
 			</td>
             <td>
--
+[Style](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridTooltips~Style.html)
 			</td>
         </tr>
     </tbody>

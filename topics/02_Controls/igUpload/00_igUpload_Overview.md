@@ -345,7 +345,3 @@ Configures the MIME types which can be uploaded. Multiple MIME types can be list
 -   [igUpload Client-side events](igUpload-Using-Client-Side-Events.html)
 
  
-
- 
-
-

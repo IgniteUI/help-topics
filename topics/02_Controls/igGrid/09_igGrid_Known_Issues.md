@@ -50,6 +50,8 @@ Defining a feature more than once not possible | **In JavaScript:** <br /> In bo
 [Checkbox rendering not compatible with templates (row and column)](#checkbox-template) | When using templating and the `renderCheckboxes` option is set to true, the Boolean columns do not render checkboxes because it is not possible to examine if the Boolean column has a template defined. | ![](../../images/images/positive.png)
 Events not triggered | By design, events only trigger on user interaction. Events do not trigger when the public API is used. | ![](../../images/images/negative.png)
 [KnockoutJS observable array functions’ limitations](#knockout-observable-array) | The use of `unshift`, `reverse` and `sort` observable array functions results in incorrect visual appearance of the grid. | ![](../../images/images/positive.png)
+The id attribute is mandatory for the DOM control placeholder|The id attribute should be set on the DOM element on which the grid is initialized. Grid use jQuery ID selector internally for faster selection.|![](../../images/images/negative.png)
+Column keys which contain spaces are not supported|Column keys are used for generating some DOM elements IDs. Having spaces in an HTML id attribute is not allowed according to the [HTML 5 specification](http://www.w3.org/TR/html5/dom.html#the-id-attribute).|![](../../images/images/negative.png)
 
 
 
@@ -133,7 +135,7 @@ The [`LoadTransaction()`](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridModel~Lo
 </table>
 
 
-### igGrid – Virtualization
+## [igGrid – Virtualization](#virtualization)
 
 Issue | Description | Status
 ------|-------------|-------
@@ -143,8 +145,15 @@ Rows’ height settings limitation | In an `igGrid` with only a few data rows, a
 Columns visible width settings limitation | The columns visible width must be equal to the `igGrid`’s width (for horizontal virtualization) | ![](../../images/images/negative.png)
 Keyboard navigation not supported for horizontal virtualization (limitation) | Keyboard navigation is not supported for horizontal virtualization. | ![](../../images/images/negative.png)
 Limitation to applying cell classes | Applying a specific cell class to every cell that is in a sorted column is not supported, i.e. [`applySortedColumnCss`](%%jQueryApiUrl%%/ui.iggridsorting#options:applySortedColumnCss) is automatically set to false. | ![](../../images/images/negative.png)
+When virtualization is enabled the autofitLastColumn is not effective|When virtualization is enabled the [autofitLastColumn](%%jQueryApiUrl%%/ui.iggrid#options:autofitLastColumn) has no effect, which will result in columns expanding to take up the whole grid width when the sum of the columns widths is less than the width of the grid (it will act as autofitLastColumn = true).|![](../../images/images/negative.png)
+Column virtualization will not work when grid width is defined in percentage units|When grid width is defined in percentage units and column virtualization is enabled ([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) horizontal scrollbar will not render.|![](../../images/images/negative.png)
+[Fixed virtualization is not supported with RWD Mode](#fixed-virtualization)|Fixed virtualization depends on the row's height being constant. If the row's height changes the fixed virtualization will not work as expected. RWD Mode changes the row's height as it adopts to the screen size so fixed virtualization will not work as expected with it.|![](../../images/images/positive.png)
+Column virtualization is not supported with continuous virtualization | Column virtualization is supported only with fixed virtualization. When column virtualization is enabled([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) then the virtualization mode must be set to "fixed"([virtualizationMode](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) = "fixed"). | ![](../../images/images/negative.png)
 
-
+## igGrid – Responsive Web Design Mode
+Issue | Description | Status
+---|---|---
+RWD mode is not supported in IE8|RWD is unable to determine the mode in IE8. This feature is mainly targeted at mobile compatibility so it is not supported under IE8.|![](../../images/images/negative.png)
 
 ## [igGridColumnFixing](#column-fixing)
 
@@ -183,9 +192,6 @@ The Column Fixing feature of `igGrid` does not work with the following features:
 **Knockout library** (KnockoutJS) integration
 					</li>
                     <li>
-**Virtualization**
-					</li>
-                    <li>
 **Unbound Columns**
 					</li>
                 </ul>
@@ -205,6 +211,17 @@ In Internet Explorer 9 or higher, if you fix a column in an `igGrid` and scroll 
 			</td>
             <td>
 ![](../../images/images/positive.png)
+			</td>
+        </tr>
+        <tr>
+            <td>
+Grid and its columns widths are mandatory and should be defined in pixels units
+			</td>
+            <td>
+Grid and its columns (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option) widths are mandatory and should be defined in pixels units.
+			</td>
+            <td>
+![](../../images/images/negative.png)
 			</td>
         </tr>
     </tbody>
@@ -231,7 +248,7 @@ Multi-column headers feature is not supported with [`columnVirtualization`](%%jQ
 ## igGridFiltering
 Issue | Description | Status
 ------|-------------|-------
-Advanced filtering not working with "OR" filtering expressions | The oData protocol does not support "OR" filtering expressions, therefore, advanced filtering can be used with AND filtering expressions only. | ![](../../images/images/negative.png)
+[Simple Filtering does not work with column virtualization](#simple-filtering)| Filtering mode = "simple" does not work with column virtualization ([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) | ![](../../images/images/positive.png)
 
 
 
@@ -252,7 +269,7 @@ Row count for a group stays unchanged when the grid is filtered | When Filtering
 [Values in a column grouped but not displayed correctly](#groupby-incorrect-values) | When [`autoGenerateColumns`](%%jQueryApiUrl%%/ui.iggrid#options:autoGenerateColumns) is set to true and a column is set to be grouped at initialization, the values in the column are grouped but not displayed correctly. | ![](../../images/images/positive.png)
 [The *groupedColumnsChanged* event input argument *ui.groupedColumns* may be empty](#groupedColumnsChanged) | The `ui.groupedColumns` input argument of the [`groupedColumnsChanged`](%%jQueryApiUrl%%/ui.iggridgroupby#events:groupedColumnsChanged) event may be empty when a column has been grouped by dragging it into the Group By area. | ![](../../images/images/positive.png)
 [Tapping the igTree inside the Group By modal dialog not working properly](#groupby-dialog-tree) | Tapping the drop-down inside the Group By modal dialog may lead to some layout problems on Android 4.0. The issue appears when the tree is shown partially, having a vertical or horizontal scroll. | ![](../../images/images/positive.png)
-Limitation when using GroupBy feature and continuous virtualization | When `igGrid`’s continuous virtualization is in use and the Group By feature is enabled, scrolling vertically causes collapsed group(s) to expand. | ![](../../images/images/negative.png)
+Limitation when using GroupBy feature and continuous virtualization | When `igGrid`’s continuous virtualization is in use and the Group By feature is enabled, scrolling vertically causes the groups to revert to their initial state (expanded or collapsed depending on the [`initialExpand`](%%jQueryApiUrl%%/ui.iggridgroupby#options:initialExpand) option). | ![](../../images/images/negative.png)
 Grouping not working with fixed virtualization | The GroupBy feature of the `igGrid` doesn’t work with fixed virtualization. | ![](../../images/images/negative.png)
 [Hiding a column shrinks the grid in Firefox](#groupby-hide-firefox) | When the GroupBy feature is enabled and `igGrid` doesn’t have column widths defined, hiding a column shrinks the grid in Firefox browser. | ![](../../images/images/positive.png)
 
@@ -263,7 +280,7 @@ Grouping not working with fixed virtualization | The GroupBy feature of the `igG
 Issue | Description | Status
 ------|-------------|-------
 [Paging events not firing at run-time](#paging-events) | The `igGrid` Paging events only fire when the UI is triggers a paging operation. They do not fire when paging options are set at run-time. | ![](../../images/images/positive.png)
-Persistence is not working for remote Sorting and Filtering when page size is changed | Changing page size with remote Paging does not persist remote Sorting and Filtering | ![](../../images/images/plannedFix.png)
+
 
 
 
@@ -272,9 +289,10 @@ Persistence is not working for remote Sorting and Filtering when page size is ch
 Issue | Description | Status
 ------|-------------|-------
 [Resizing not working with some jQuery versions](#resizing-jquery-versions) | `igGrid` Resizing does not support jQuery versions 1.8.0 ÷1.8.5. | ![](../../images/images/positive.png)
-[Resizing not working with virtualization](#resizing-virtualization) | The column resizing feature does not work when either virtualization or column virtualization is enabled. | ![](../../images/images/positive.png)
+[Resizing not working with fixed virtualization](#resizing-virtualization) |The column resizing feature does not work when fixed virtualization is enabled.| ![](../../images/images/positive.png)
 [Columns not resizing correctly, when column widths are not set (in Firefox)](#resizing-column-width-firefox) | Due to a bug in Firefox®, the `igGrid` columns cannot be resized correctly when the column widths are not set. | ![](../../images/images/negative.png)
 [Columns not resizing correctly when column widths are set relatively (in Firefox)](#resizing-column-relative-firefox) | Due to a bug in Firefox, the `igGrid` columns cannot be resized correctly when the column widths are set relatively (in percentages). | ![](../../images/images/positive.png)
+Resizing a column occurs at an accelerated speed when the grid is scrolled to the far right.|The resizing speed is accelerated when the grid is scrolled to the far right and a column is resized by dragging from its right edge to the left. This specific behavior is caused by the browser’s layout engine.|![](../../images/images/negative.png)
 
 
 
@@ -296,6 +314,7 @@ Issue | Description | Status
 [Cell selection in iOS does not work properly](#selection-cell-ios) | In iOS, when wanting to scroll the `igGrid`, the user should first tap on a cell and then swipe in the desired direction. There is a difference when scrolling the `igGrid` under iOS and Android due to the way jQuery Mobile handles the events. | ![](../../images/images/negative.png)
 Selection works only with visible rows when virtualization is enabled | This limitation is due to the fact that invisible rows/cells do not exist in the DOM tree when virtualization is enabled. | ![](../../images/images/negative.png)
 [Incorrect selection when selecting row/cell with continuous virtualization enabled](#selection-continuous-virtualization) | When selecting row/cell of the `igGrid` while continuous virtualization is enabled, the grid scrolls down and a different row/cell is selected due to a bug in jQuery version 1.6.4. This problem appears only in this version of the jQuery library. | ![](../../images/images/positive.png)
+Incorrect cell selection when selecting with mouse dragging and persistence is enabled|Selecting with mouse dragging when persistence is enabled and there are rows which cells are duplicated (the rows are visually the same) will select only the cells from the first row.|![](../../images/images/positive.png)
 
 
 
@@ -320,13 +339,17 @@ Issue | Description | Status
 
 Issue | Description | Status
 ------|-------------|-------
-[Deleting a row with auto commit enabled no longer causes the grid's zebra row styles to be re-rendered](#updating-row-style) | Deleting a row when the [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) option is enabled will no longer cause the grid’s zebra row styles to be re-rendered. This is because the logic of deleting a row has changed to prevent data re-rendering. This change was made for performance reasons. | ![](../../images/images/positive.png)
 [Adding a new row with Updating and Virtualization enabled requires immediate committing](#updating-add-virtualization) | Adding a new row is not supported when the Updating and Virtualization features are enabled while [autoCommit](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) is disabled. Virtualization is not aware of the newly added row when `autoCommit` is false. | ![](../../images/images/positive.png)
 Excel Navigation mode supported only for Cell Edit and Row Edit modes. | When [`excelNavigationMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:excelNavigationMode) is enabled, navigating with the arrows is only possible with "cell" or "row" [`editMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:editMode). Other Edit modes (*“rowedittemplate”*, *none*, *null*) are not supported with  `excelNavigationMode`. | ![](../../images/images/negative.png)
 Adding and updating a virtual grid doesn’t work if it is grouped | When using `GroupBy` and `Updating` in a virtual grid, updating or adding rows will not work when the grid is grouped. If you ungroup you will see the newly added record at the bottom of the grid records. | ![](../../images/images/negative.png)
 `rowEditDialogMaxHeight` property renamed to [`rowEditDialogContentHeight`](%%jQueryApiUrl%%/ui.iggridupdating#options:rowEditDialogContentHeight) | This property is related to the Row Edit Template ([`editMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:editMode)=“rowedittemplate”). It is used to set the height of the row edit dialog content. <br /> This is a breaking change from the previous versions’ functionality. | ![](../../images/images/negative.png)
 [Column template including `<td>` tag attributes](igGrid-Known-Issues.html#updating-tempalte-attributes) is ignored when updating rows | When updating rows, the `igGrid` correctly changes only the content of the `<td>` tags so that styles and/or attributes applied internally to the `<td>` elements are not lost. | ![](../../images/images/positive.png)
 
+## <a id="feature-chooser"></a>Feature Chooser
+
+Issue | Description | Status
+------|-------------|-------
+If any of the features or their options are changed after initialization the changes won't be reflected in the Feature Chooser.|The feature chooser is rendered only once on initialization and won't be affected if any of the features are modified after this.|![](../../images/images/negative.png)
 
 ## <a id="grid-general"></a> igGrid – General
 
@@ -430,16 +453,32 @@ The grid’s horizontal scrollbar is not visible on Mac OS when its **Show scrol
 
 > **Workaround** 
 > 
-> Use the rendered event to apply overflow-x auto to the horizontal scrollbar.
+> The scrollbar's classes can be overriden in order for the scrollbar to be visible. The following is an example on how they can be overriden.
 
-**In JavaScript:**
+**In CSS:**
 
-```js
-rendered: function (e, args) {
-     var grid = args.owner,
-      $scrollContainer = grid.scrollContainer();
-     $scrollContainer.css('overflow-x', 'auto');
-     $("#" + grid.id() + "_hscroller_container").hide();
+```css
+::-webkit-scrollbar {
+    width:16px;
+}
+::-webkit-scrollbar-track {
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    background:rgba(0,0,0,0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    background:rgba(0,0,0,0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:rgba(0,0,0,0.4);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background:rgba(0,0,0,0.05);
 }
 ```
 
@@ -569,6 +608,25 @@ Sorting, Filtering, and GroupBy do not persist their state when they are applied
 ​2. After a `dataBound` event (for example, `dataRendered` event), apply the column settings/expressions through the API methods of the features.
 
 
+## <a id="virtualization"></a> igGridVirtualization
+
+### <a id="fixed-virtualization"></a> Fixed virtualization is not supported with RWD Mode
+
+Fixed virtualization depends on the row's height being constant. If the row's height changes the fixed virtualization will not work as expected. RWD Mode changes the row's height as it adopts to the screen size so fixed virtualization will not work as expected with it.
+
+>**Workaround 1**: Use continuous virtualization. It works in scenarios where the height of the rows are dynamically resized.
+
+>**Workaround 2**: Apply styles for the cells that would ensure that the height of the rows is not changed when dynamically resizing. For example apply “white-space:nowrap” to the cell in order to ensure that the text length does not affect the height of the row.
+
+**In HTML:**
+```html
+<style> 
+.ui-iggrid-record > tr > td
+{ 
+  white-space:nowrap; 
+} 
+</style> 
+```
 
 ## <a id="column-fixing"></a> igGridColumnFixing
 
@@ -610,6 +668,10 @@ When the Column Moving feature is used with a jQuery UI version lower than 1.8.6
 > 
 > Use jQuery version 1.8.6 or higher.
 
+## igGridFiltering
+### <a id="simple-filtering"></a> Simple Filtering does not work with column virtualization
+
+>**Workaround**: Use advanced Filtering ([mode](%%jQueryApiUrl%%/ui.iggridfiltering#options:mode) = "advanced") with column virtualization
 
 
 ## <a id="groupby"></a> igGridGroupBy
@@ -730,13 +792,13 @@ The `igGrid` Paging events only fire when the UI triggers a paging operation. Th
 > 
 > Use versions of jQuery UI different from 1.8.0 - 1.8.5.
 
-### <a id="resizing-virtualization"></a> Resizing not working with virtualization
+### <a id="resizing-virtualization"></a> Resizing not working with fixed virtualization
 
-The column resizing feature does not work when either virtualization or column virtualization is enabled.
+The column resizing feature does not work when fixed virtualization is enabled.
 
 > **Workaround** 
 > 
-> Use the Column Resizing and the Virtualization features separately.
+> Resizing doesn't work with fixed virtualization, but works with continuous virtualization.
 
 ### <a id="resizing-column-width-firefox"></a> Columns not resizing correctly, when column widths are not set (in Firefox)
 
@@ -752,7 +814,7 @@ Before resizing the table, the height of the grid table container needs to be re
 
 ## <a id="row-selectors"></a> igGridRowSelectors
 
-### <a id="row-selectors-selection"></a> The *igGridRowSelectors* widget requires the Selection feature enabled
+### <a id="row-selectors-selection"></a> The igGridRowSelectors widget requires the Selection feature enabled
 
 The
 [`requireSelection`](%%jQueryApiUrl%%/ui.iggridrowselectors#options:requireSelection)
@@ -793,6 +855,12 @@ version of the jQuery library.
 > Use version of the jQuery library different from 1.6.4.
 
 
+### Incorrect cell selection when selecting with mouse dragging and persistence is enabled
+
+Selecting with mouse dragging when persistence is enabled and there are rows which cells are duplicated (the rows are visually the same) will select only the cells from the first row.
+
+>**Workaround**: Set persistence to false.
+
 
 ## <a id="summaries"></a> igGridSummaries
 
@@ -832,60 +900,6 @@ These issues occur when both of the following conditions are met:
 
 
 ## <a id="updating"></a> igGridUpdating
-
-### <a id="updating-row-style"></a> Deleting a row with auto commit enabled no longer causes the grid's zebra row styles to be re-rendered
-
-Deleting a row when the [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) option is enabled no longer causes the grid’s zebra row styles to be re-rendered. This is because the logic of deleting a row has changed to prevent data re-rendering. This change was made for performance reasons.
-
-The suggested workarounds are listed below.
-
-> **Workaround 1** 
-> 
-> Handle the `rowDeleted` event in order to re-render the grid manually as shown in the code snippet that follows.
-
-**In JavaScript:**
-
-```js
-$("#grid1").igGrid({
-    features : [
-        {
-            name : "Updating",
-            rowDeleted: function(evt, ui)
-               { 
-                   $("#grid1").igGrid("dataBind");      
-               }
-        }
-    ]
-});
-```
-
-> **Workaround 2** 
-> 
-> Handle the `rowDeleted` event and manually re-apply the correct CSS classes to the grid records as shown in the code below. Note this might cause performance slowdown depending on the number of records that have to be re-painted.
-
-**In JavaScript:**
-
-```js
-$("#grid1").igGrid({
-    features : [
-        {
-            name : "Updating",
-            rowDeleted: function(evt, ui)
-               { 
-                   $("#grid1").igGrid("allRows").each(function(index) { 
-                     var id = $(this).attr("data-id"); 
-                     if (id % 2) {
-                        $(this).addClass(“ui-ig-altrecord ui-iggrid-altrecord”);
-                     } 
-                     else{ 
-                        $(this).addClass(“ui-ig-record ui-iggrid-record”);
-                     }
-                  });
-               }
-        }
-    ]
-});
-```
 
 ### <a id="updating-add-virtualization"></a> Adding a new row with Updating and Virtualization enabled requires immediate committing
 

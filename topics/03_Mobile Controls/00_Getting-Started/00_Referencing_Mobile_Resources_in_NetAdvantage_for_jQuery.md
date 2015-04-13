@@ -336,6 +336,7 @@ The English language localization files are embedded in jQuery mobile JavaScript
 ### Code example: referencing localization resources using the Loader
 
 **In Javascript:**
+
 Code example: referencing localization resources using the Loader
 The following code example demonstrates how to include localization resources using the Infragistics Loader. The `igListView` widget localization is controlled by the `igLoader` locale option.
 
@@ -347,6 +348,7 @@ $.ig.loader({
     locale: 'ja'
 });
 //Continue loading the igListView widget
+
 ```
 For a complete example and further details about the Infragistics Loader, see the Using Infragistics Loader topic.
 

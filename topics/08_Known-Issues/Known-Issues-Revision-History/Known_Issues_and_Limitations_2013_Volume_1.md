@@ -200,7 +200,7 @@ Rendering may fail if the base element is a TD.
         </tr>
 
         <tr>
-            <td rowspan="32">
+            <td rowspan="31">
 [igGrid](#igGrid)™
 			</td>
 
@@ -403,20 +403,6 @@ It is not possible to set any type of an attribute (i.e. class) on a tr
 
         <tr>
             <td>
-[Deleting a row when autoCommit = TRUE will no longer cause the grid's zebra row styles to be re-rendered](#deleting-row)
-			</td>
-
-            <td>
-The logic of deleting a row has changed to prevent data re-rendering. This change was made for performance reasons.
-			</td>
-
-            <td>
-![](../../images/images/positive.png)
-			</td>
-        </tr>
-
-        <tr>
-            <td>
 [igGrid Resizing does not work with older jQuery versions](#resizing-does-not-work-older-jquery-version)
 			</td>
 
@@ -519,7 +505,7 @@ Remote sorting, filtering and grouping are not supported for unbound columns. Th
 
         <tr>
             <td>
-[The grid SetUnboundValues([Column key], [Dictionary of values] ) method overload of grid MVC helpers requires a primary key](#grid-method-overload)
+[The grid SetUnboundValues([Column key], [Dictionary of values]) method overload of grid MVC helpers requires a primary key](#grid-method-overload)
 			</td>
 
             <td>
@@ -1197,59 +1183,6 @@ rendered: function (event, ui) {
 }
 ```
 
-###<a id="deleting-row"></a> Deleting a row when autoCommit = TRUE will no longer cause the grid's zebra row styles to be re-rendered
-
-### The logic of deleting a row has changed to prevent data re-rendering. This change was made for performance reasons.
-
-The suggested workarounds are listed below.
-
-Workaround 1
-
-You can handle the `rowDeleted` event in order to re-render the grid manually.
-
-**In JavaScript:**
-
-```js
-$("#grid1").igGrid({
-    features : [
-        {
-            name : "Updating",
-            rowDeleted: function(evt, ui)
-               { 
-                   $("#grid1").igGrid("dataBind");      
-               }
-        }
-    ]
-});
-```
-
-Workaround 2
-
-You can handle the `rowDeleted` event and manually re-apply the correct CSS classes to the grid records. However, this might cause a performance hit depending on the number of records that have to be repainted.
-
-**In JavaScript:**
-
-```js
-$("#grid1").igGrid({
-    features : [
-        {
-            name : "Updating",
-            rowDeleted: function(evt, ui)
-               { 
-                   $("#grid1").igGrid("allRows").each(function(index) { 
-                     var id = $(this).attr("data-id"); 
-                     if (id % 2) {
-                        $(this).addClass(“ui-ig-altrecord ui-iggrid-altrecord”);
-                     } 
-                     else{ 
-                        $(this).addClass(“ui-ig-record ui-iggrid-record”);
-                     }
-                  });
-               }
-        }
-    ]
-});
-```
 
 ### <a id="column-moving-not-working-ie9"></a>Column Moving not working in Internet Explorer 9
 
@@ -1285,7 +1218,7 @@ Use local configuration for sorting, filtering and grouping features when unboun
 
 Using the `SetUnboundValues([Column key], [Dictionary of values])` method overload requires setting a primary key. This overload has parameters for column key and dictionary of primary key and unbound value pairs. The primary key in the dictionary points to the primary key of a row in the grid and the unbound value is the value which will be set in the unbound column with key equal to the column key.
 
-Use the method overload `SetUnboundValues ([Column key], [List of values])` if there is no primary key defined.
+Use the method overload `SetUnboundValues([Column key], [Dictionary of values])` if there is no primary key defined.
 
 ### <a id="cannot-use-grid-helper-in-view"></a>Cannot use the grid helper in the view when the data source is remote and MergeUnboundColumns is set to true
 

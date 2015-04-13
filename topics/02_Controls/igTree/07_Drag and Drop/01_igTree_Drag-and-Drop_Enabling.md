@@ -22,11 +22,11 @@ This topic contains the following sections:
 -   [Introduction](#introduction)
 -   [Enabling the Drag-and-Drop Feature Summary](#feature-summary)
 -   [Enabling Drag-and-Drop Within an igTree Control](#drag-drop-within-tree)
-    -   [Overview](#within-tree-overview)
+-   -   [Overview](#within-tree-overview)
     -   [Property settings](#within-tree-settings)
     -   [Code Example](#within-tree-code-example)
 -   [Enabling Drag-and-Drop Between Different igTree Controls](#between-different-trees)
-    -   [Overview](#between-trees-overview)
+-   -   [Overview](#between-trees-overview)
     -   [Property settings](#between-trees-settings)
     -   [Code Example](#between-trees-code-example)
 -   [Related Content](#related-content)
@@ -183,20 +183,20 @@ The following snippets demonstrate the settings in Example block implemented in 
 
  **In JavaScript:** 
 
-```js
-$("#firstTree").igTree({ 
+```js 
+$("#firstTree").igTree({                                                      
 	dragAndDrop: true,
-	dragAndDropSettings: {
-		allowDrop: true
-	}
+	dragAndDropSettings: {                                                       
+		allowDrop: true                                                      
+	}                                                                     
 }); 
 
 
-$("#secondTree").igTree({
+$("#secondTree").igTree({                                                     
 	dragAndDrop: true,
-	dragAndDropSettings: {
-		allowDrop: true
-	} 
+	dragAndDropSettings: {                                                      
+		allowDrop: true                                                       
+	}                                                                   
 });                                                       
 ```
 
@@ -212,7 +212,7 @@ $("#secondTree").igTree({
 		settings.AllowDrop(true);
 	})
 	.DataBind()
-	.Render())  
+	.Render())
                                                                        
 @(Html.Infragistics()
 	.Tree()

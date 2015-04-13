@@ -169,7 +169,7 @@ The following table displays the supported map (series) types.
 			<td>
 				Visualizes open paths on a map like roads, rivers or daily supply routes based on shape data provided by shape (SHP )files or a custom shape data source.
 
-				<img alt="" src="images/Overview_(igMap)_4.png" width="319" height="230"><br>Related Topics:
+				<img alt="" src="images/Overview_(igMap)_4.png" width="319" height="230"><br><br>Related Topics:
 
 				<ul>
 					<li><a class="ig-topic-link" href="igMap-Configuring-Geographic-Polyline-Series.html">Configuring Geographic Polyline Series</a></li>

@@ -205,7 +205,17 @@ Listing 5: Programatically sorting a column
 $('#grid1').igGridSorting('sortColumn', 'ProductID', 'asc');
 ```
 
-Listing 6: Retrieving the `columnSettings` object
+The applied sorting expressions can be retrieved from the data source of the grid. In order to get them programmatically, you can use the following:
+
+Listing 6: Retrieving the applied sorting expressions
+
+**In Javascript:**
+
+```js
+var expressions = $('#grid1').data('igGrid').dataSource.settings.sorting.expressions;
+```
+
+Listing 7: Retrieving the `columnSettings` object
 
 
 **In Javascript:**
@@ -217,9 +227,9 @@ var settings = sorting.options.columnSettings;
 
 ## <a id="client-side-events"></a> Client-Side events
 
-You can bind to client-side events to the Sorting feature in two ways, which are described in Listing 7 and Listing 8, respectively.
+You can bind to client-side events to the Sorting feature in two ways, which are described in Listing 8 and Listing 9, respectively.
 
-Listing 7: Binding to client-side events from anywhere in your application
+Listing 8: Binding to client-side events from anywhere in your application
 
 **In Javascript:**
 
@@ -227,9 +237,9 @@ Listing 7: Binding to client-side events from anywhere in your application
 $("#grid1").bind("iggridsortingcolumnsorted", handler);
 ```
 
-> **Note:** If you would like to bind using the approach described in Listing 7, you must use the jQuery delegate() method instead of bind if sorting is not yet instantiated.
+> **Note:** If you would like to bind using the approach described in Listing 8, you must use the jQuery delegate() method instead of bind if sorting is not yet instantiated.
 
-Listing 8: Binding to client-side events by specifying the event name as an option when you initialize the sorting feature (case sensitive)
+Listing 9: Binding to client-side events by specifying the event name as an option when you initialize the sorting feature (case sensitive)
 
 
 **In Javascript:**
