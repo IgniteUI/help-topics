@@ -244,7 +244,7 @@ Following is a conceptual overview of the process:
 
     To cancel the event, return false.
 
-    **In HTML and ASPX:**
+    **In HTML and JavaScript:**
 
     ```html
     <script type="text/javascript">

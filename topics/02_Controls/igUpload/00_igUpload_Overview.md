@@ -153,7 +153,7 @@ This sample demonstrates a basic upload scenario in Single Mode, which will star
 	>**Note:** If you are using igUpload in a MVC project, you will need to ignore the URL of the HTTP handler in the *Global.asax* file:
 	
 	**In Global.asax:**
-	```
+	```csharp
 	    protected static void RegisterRoutes(RouteCollection routes)
 	    {
 	        routes.IgnoreRoute("IGUploadStatusHandler.ashx");
@@ -343,5 +343,6 @@ Configures the MIME types which can be uploaded. Multiple MIME types can be list
 -   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
 -   [igUpload HTTP Handler and Module](igUpload-Using-HTTP-Handler-and-Modules.html)
 -   [igUpload Client-side events](igUpload-Using-Client-Side-Events.html)
+-   [igUpload Server-side events in ASP.NET MVC ](igUpload-Using-Server-Side-Events.html)
 
  

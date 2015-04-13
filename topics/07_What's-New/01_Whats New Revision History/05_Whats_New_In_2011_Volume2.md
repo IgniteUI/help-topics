@@ -118,7 +118,7 @@ The Ignite UI 2011 Volume 2 release now includes the ability of the `igGrid` MVC
 
 **MVC Model:**
 
-```
+```csharp
 class Customer
     {
         [DisplayName("First Name")]

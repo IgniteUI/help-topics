@@ -489,7 +489,7 @@ Go up to [Known Issues and Limitations Summary](#summary)
 Issue | Description | Status
 ---|---|---
 Multiple selection and custom values cannot be used together | `AllowCustomValue = true` is together with either with `multiSelection = “on”` or `multiSelection = “onWithCheckBoxes”` is not supported. | ![](../../images/images/positive.png)
-Using the key of the parent combo for cascading combos prevents filtering the child combo | For the workaround, see the [Binding Cascading igCombo Controls to a Cascading Data Sources](igCombo-Binding-Cascading-igCombo-Controls-to-Cascading-Data-Sources.html) topic. | ![](../../images/images/positive.png)
+Using the key of the parent combo for cascading combos prevents filtering the child combo | For the workaround, see the Binding Cascading igCombo Controls to a Cascading Data Sources topic. | ![](../../images/images/positive.png)
 Load-on-demand not supported for cascading `igCombo` child | Configuring a cascading child `igCombo`™ to have load-on-demand enabled together with defining its parent combo key is not supported. | ![](../../images/images/negative.png)
 
 

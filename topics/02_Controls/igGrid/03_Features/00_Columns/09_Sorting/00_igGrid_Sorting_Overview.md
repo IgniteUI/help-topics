@@ -473,12 +473,12 @@ sortIndicatorDescending | Same as sortIndicatorAscending but when descending | u
 
 ## <a id="related-content"></a> Related Content
 
-### <a id="topics"></a> Topics
+### <a id="samples"></a> Samples
 
 -   [Local Sorting](%%SamplesUrl%%/grid/sorting-local)
 -   [Remote Sorting](%%SamplesUrl%%/grid/sorting-remote)
 
-### <a id="samples"></a> Samples
+### <a id="topics"></a> Topics
 
 -   [igGrid Overview](igGrid-Overview.html)
 

@@ -173,6 +173,72 @@ Section 508 Compliance
         </tr>
         <tr>
             <td>
+[igGrid](igGrid-Accessibility-Compliance.html)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+[igTreeGrid](igTreeGrid-Accessibility-Compliance.html)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+![](../images/images/greenCheck.png)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
 [igHierarchicalGrid](igHierarchicalGrid-Accessibility-Compliance.html)
             </td>
             <td>
@@ -199,7 +265,7 @@ Section 508 Compliance
             <td></td>
             <td></td>
             <td>
-![](../images/images/redX.png)
+![](../images/images/greenCheck.png)
             </td>
             <td></td>
             <td></td>

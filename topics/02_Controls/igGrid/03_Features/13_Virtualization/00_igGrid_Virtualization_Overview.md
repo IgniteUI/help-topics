@@ -69,6 +69,8 @@ The picture on the left demonstrates a grid with 1,000 records loaded at on the 
 
 ![](images/igGrid_Virtualization_Overview_2.png)
 
+> **Note**: Continuous virtualization enjoys the widest support among controls in Ignite UI and should be your first choice when selecting a virtualization mode. You may find fixed virtualization necessary when attempting to implement column virtualization, but otherwise continuous virtualization is recommended.
+
 **Related Topics:**
 
 -   [Enabling and Configuring Virtualization](igGrid-Enabling-and-Configuring-Virtualization.html)

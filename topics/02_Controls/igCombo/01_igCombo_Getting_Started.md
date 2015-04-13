@@ -60,7 +60,6 @@ Following is a conceptual overview of the process:
 1.  Instantiating the `igCombo`
 2.  Binding to data
 3.  (Optional) Configuring the width
-4.  (Optional) Enabling auto-complete
 
 ###Steps
 
@@ -73,7 +72,7 @@ Following is a conceptual overview of the process:
 	**In HTML:**
 	
 	```html
-	<select id="comboTarget"></select>
+	<div id="comboTarget"></div>
 	```
 	
 	Instantiate the `igCombo`. In jQuery, you can use the document ready JavaScript event to instantiate the combo. In ASP.NET MVC, use the ASP.NET MVC helper to bind to an `IQueryable` datasource.
@@ -151,7 +150,7 @@ Following is a conceptual overview of the process:
 	
 	**c. Configure the text and value fields.**
 	
-	Set the `textKey` and `valueKey` options of the `igCombo`. In this simple example, the `textKey` and `valueKey` are both set to the same object value of ‘Name’. However, the `textKey` and `valueKey` could be set as two different fields. For instance, the `valueKey` could point to an ID field for each color object.The `textKey` determines which field is used to display the text which represents the bound items in the dropdown list.
+	Set the `textKey` and `valueKey` options of the `igCombo`. In this simple example, the `textKey` and `valueKey` are both set to the same object value of ‘Name’. However, the `textKey` and `valueKey` could be set as two different fields. The `valueKey` has to be unique value in order to select items properly. For instance, the `valueKey` could point to an ID field for each color object. The `textKey` determines which field is used to display the text which represents the bound items in the dropdown list.
 	
 	>**Note:** The “key” properties designate which properties on the data source of the combo are used as the selected value and selected text of the combo.
 	
@@ -193,20 +192,6 @@ Following is a conceptual overview of the process:
 
     ```csharp
     Width("200px")
-    ```
-
-4.  **(Optional) Enable auto-complete.** Use the autoComplete option to enable auto-complete in the `igCombo`
-
-    **In HTML:**
-
-    ```html
-    autoComplete: true
-    ```
-
-    **In ASPX:**
-
-    ```csharp
-    AutoComplete(true)
     ```
 
 ##Code Examples
@@ -264,14 +249,6 @@ The code below demonstrates how to create and configure the `igCombo` control us
 			<td>Width</td>
 			<td>200px</td>
 		</tr>
-		<tr>
-			<td>AutoComplete</td>
-			<td>true</td>
-		</tr>
-		<tr>
-			<td>AutoComplete</td>
-			<td>On</td>
-		</tr>
 	</tbody>
 </table>
 
@@ -280,6 +257,7 @@ The code below demonstrates how to create and configure the `igCombo` control us
 
 
 **In HTML:**
+
 
 ```html
 <script type="text/javascript">
@@ -296,8 +274,7 @@ The code below demonstrates how to create and configure the `igCombo` control us
             dataSource: colors,
             textKey: "Name",
             valueKey: "Name",
-            width: "200px",
-            autoComplete: true
+            width: "200px"
         });
     });
 </script>
@@ -332,10 +309,6 @@ The code below demonstrates how to create and configure the `igCombo` control us
 			<td>Width</td>
 			<td>300px</td>
 		</tr>
-		<tr>
-			<td>AutoComplete</td>
-			<td>On</td>
-		</tr>
 	</tbody>
 </table>
 
@@ -350,8 +323,7 @@ The code below demonstrates how to create and configure the `igCombo` control us
     DataSource(this.Model as IQueryable<System.Drawing.Color>).
     ValueKey("Name").
     TextKey("Name").
-    Width("300px").
-    AutoComplete(true).   
+    Width("300px").   
     Render()
 %>
 ```

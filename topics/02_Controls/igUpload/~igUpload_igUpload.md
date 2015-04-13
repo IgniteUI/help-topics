@@ -17,6 +17,7 @@ Click on the links below to find information on how to get `igUpload` quickly up
     -   [Configuring igUpload](igUpload-Configuring-igUpload.html)
     -   [Using the HTTP Handler and Module (igUpload)](igUpload-Using-HTTP-Handler-and-Modules.html)
     -   [Using Client-Side Events (igUpload)](igUpload-Using-Client-Side-Events.html) 
+    -   [Using Server-Side Events in ASP.NET MVC (igUpload)](igUpload-Using-Server-Side-Events.html) 
     -   [Saving Files as Stream (igUpload)](igUpload-Saving-Files-as-Stream.html)
 -   [Styling igUpload](igUpload-Styling-and-Theming.html)
 -   [Accessibility Compliance (igUpload)](igUpload-Accessibility-Compliance.html)

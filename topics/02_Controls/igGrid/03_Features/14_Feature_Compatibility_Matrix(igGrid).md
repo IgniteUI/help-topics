@@ -185,7 +185,7 @@ Column Moving
 ![](../../../images/images/positive.png)
 			</td>
             <td>
-![](../../../images/images/plannedFix.png)
+![](../../../images/images/positive.png)
 			</td>
             <td>
 ![](../../../images/images/positive.png)
@@ -969,7 +969,7 @@ Column Fixing
 ![](../../../images/images/plannedFix.png)
 			</td>
             <td>
-![](../../../images/images/negative.png)
+![](../../../images/images/positive.png)
 			</td>
             <td>
 ![](../../../images/images/positive.png)

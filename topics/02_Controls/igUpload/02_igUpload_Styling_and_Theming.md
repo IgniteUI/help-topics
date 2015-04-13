@@ -161,7 +161,7 @@ The `fileExtensionIcons` property accepts an an array of objects that maps to ea
 
 **Listing 1: Overriding default file extension icons**
 
-**In JavaSript:**
+**In JavaScript:**
 
 ```js
 fileExtensionIcons: [

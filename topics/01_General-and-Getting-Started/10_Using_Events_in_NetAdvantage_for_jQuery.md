@@ -189,7 +189,7 @@ In the following examples there are separate sections each for the bind and unbi
 
  Next, the existing grid instance is updated to include an event handler for the `columnHiding` event which points to a separate function that implements the handler.
  
- **In JavaScript:**
+ **In Javascript:**
 
 	```js
 	$("#grid1").live("iggridhidingcolumnhiding", gridColumnHiding);

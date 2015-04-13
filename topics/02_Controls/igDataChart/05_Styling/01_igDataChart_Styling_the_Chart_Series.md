@@ -150,7 +150,7 @@ The color of the shadow. If a semi-transparent color is specified, a semi-transp
             </td>
         </tr>
         <tr>
-            <td> <a id="blur"></a>
+            <td><a id="blur"></a>
 Blur
             </td>
             <td>

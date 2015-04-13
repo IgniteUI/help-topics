@@ -1009,7 +1009,7 @@ Nested `{{each}}` templates are not supported.
 ## <a id="igCombo"></a>igCombo
 ### <a id="cascading-combos"></a>Using a parentComboKey for cascading igCombos does not allow for filtering the child igCombo
 
-If you require filtering on child `igCombos`, use the `cascadingDataSources` approach as opposed to the `parentComboKey`. For more details, see the [Binding Cascading igCombo Controls to a Cascading Data Sources](igCombo-Binding-Cascading-igCombo-Controls-to-Cascading-Data-Sources.html) topic.
+If you require filtering on child `igCombos`, use the `cascadingDataSources` approach as opposed to the `parentComboKey`. For more details, see the Binding Cascading igCombo Controls to a Cascading Data Sources topic.
 
 ### <a id="enabling-load-on-demand"></a>Load-on-demand not supported for cascading igCombo child
 

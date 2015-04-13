@@ -62,7 +62,7 @@ In Internet Explorer, PRE element borders stay visible even after PRE elements g
 Hyperlinks cannot be opened in Internet Explorer.|Right clicking on a link in IE won't list options to open it. Also "CTRL + click" won't open it.|![](../../images/images/negative.png)
 In Internet Explorer 6-10 the undo/redo functionality is not consistent.|The undo/redo functionality is achieved through the native browser implementation. In IE the undo/redo buffer is reset when elements are inserted or deleted programmatically. Features like "Dom path toolbar" depend on such functionality, that's why some actions reset the undo/redo buffer.|![](../../images/images/negative.png)
 In Internet Explorer tables added through the view source mode should not have new lines in them.|New lines in the table elements causes exceptions when using IE selection and range api.|![](../../images/images/negative.png)
-In Internet Explorer only one style selection can be made at a time.|IE should update its selection to execute properly commands This causes lost of the last chosen command when selecting multiple commands at once.|![](../../images/images/negative.png)
+Internet Explorer multiple dropdown style selection | In Internet Explorer when a range is collapsed(no selection), selecting multiple styles from the editor dropdowns will not persist the previously selected styles. | ![](../../images/images/negative.png)
 
 
 

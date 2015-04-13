@@ -10,497 +10,378 @@
 
 # Adding Required Resources Automatically with the Infragistics Loader
 
-## Topic Overview
+## Introduction
+Applications are often built to load all the JavaScript and CSS files during the initial page load, but in some contexts loading all resources up front may not be the best option for the application. In order to either defer script loading, provide asynchronous loading functionality or both, script loaders are used to  take on the responsibility of loading JavaScript and CSS files on to the page.
 
-### Purpose
+The Infragistics Loader is a component that asynchronously loads JavaScript and CSS files. Once the component is initialized and the requested files are loaded, a callback is run that allows you to run code that is dependent upon the loaded resources. The loader is flexible as it provides a number of different options for initialization and features support for custom regions and locales.
 
-This topic explains how to manage the required resources in Ignite UI™ using the *Infragistics*® *Loader*.
+To use the loader on a page you need to add reference to the `infragistics.loader.js` file. For instance:
 
-#### In this topic
-
-This topic contains the following sections:
-
--   [Infragistics Loader Overview](#overview)
--   [Initialization of Infragistics Loader](#initialization)
--   [Loading resources with Infragistics Loader](#loading)
--   [Referencing localization resources using the Infragistics Loader](#referencing)
--   [Regional settings using Infragistics Loader](#regional)
--   [Related Content](#related)
-
-#### <a id="overview"></a> Infragistics Loader Overview
-
-The Infragistics loader is used to load scripts and styles modules. It is introduced in Volume 2012.2.
-
-When using the combined JavaScript files, you include all minified and combined scripts for an entire group of controls. If you want to add the resources needed for separate controls you can use Infragistics loader for the purpose.
-
-You should specify the CssPath and ScriptPath: Script and CSS path relative to the page that instantiates the loader and add the loader in jQuery with a Path:
-
-```
-{IG Resources root}/js/infragistics.loader.js
+```html
+<script type="text/javascript" src="http://localhost/igniteui/infragistics.loader.js"></script>
 ```
 
-to your application:
+## In this Topic
+- [Initialization](#initialization)
+- [Resource Expressions](#resource-expressions)
+- [Working with MVC Helpers](#working-with-mvc-helpers)
+- [Localization](#localization)
+- [Regional Settings](#regional-settings)
+- [Related Content](#related-content)
 
-> **Note:** If you initialize a control through MVC Wrappers, all dependent resources are loaded automatically.
 
-**In ASPX:**
+## <a id="initialization"></a> Initialization
+Depending on the needs of your page you may want to initialize the loader in different ways. At a high level, the available options include changing when files are loaded, controlling whether or not to separate initialization from the load notification and defining which files to load.
 
-```csharp
-<script src="{IG Resources root}/js/infragistics.loader.js"></script>
-    <%= Html.Infragistics()
-        .Loader()
-        .ScriptPath("{IG Resources root}/js/")
-        .CssPath("{IG Resources root}/css/")
-        .Render()    %>
-```
+### Immediate Load and Notification
+If you want to immediately load resources and handle the load notification all at once, then you can implement the `ready` function during the initialization step. The following code demonstrates how to load the resources for the igGrid:
 
-### <a id="initialization"></a>Initialization of Infragistics Loader
-
-There are the following basic ways to initialize Infragistics Loader:
-
-1.  **Load resources on demand with separate initialization**
-
-	If resources are specified during loader instantiation, the files start loading right away. If not, it is necessary to defer instantiating widgets to the loader’s callback to ensure that all JavaScript files are available.
-	
-	**In JavaScript:**
-	
-	```js
-	$.ig.loader({
-	    scriptPath: '{IG Resources root}/js/',
-	    cssPath: '{IG Resources root}/css/'
-	});  
-	// separate initializations                   
-	$.ig.loader('igGrid.Paging.Updating', 
-	     function () {
-	     // Create a couple of igGrids 
-	        $("#grid1").igGrid({
-	            virtualization: false,
-	            autoGenerateColumns: true,
-	            jQueryTemplating: false,
-	```
-
-2.  **Initialize and use the ready option which takes a function that is to be called when all resources are loaded.**
-
-	**In JavaScript:**
-	
-	```js
-	$.ig.loader({       
-	  scriptPath: '{IG Resources root}/js/',
-	  cssPath: '{IG Resources root}/css/',
-	  resources: 'igGrid.*,igTree',
-	  ready: function () { 
-	    // THIS FUNCTION WILL BE CALLED WHEN ALL RESOURCES ARE LOADED
-	  } 
-	});  
-	```
-
-3.  **Initializing Infragistics loader separately.**
-
-	**In JavaScript:**
-	
-	```js
-	$.ig.loader({
-	    scriptPath: '{IG Resources root}/js/',
-	    cssPath: '{IG Resources root}/css/',
-	    resources: 'igGrid.Sorting.Filtering'
-	});
-                 
-	$.ig.loader(function () {
-	    // Create a couple of igGrids 
-	    $("#grid1").igGrid({
-	        virtualization: false,
-	        autoGenerateColumns: true,        
-	        . . .
-		});
-	});
-	```
-
-4.  **Initializing using chained methods.**
-
-	**In JavaScript:**
-	
-	```js
-	$.ig.loader().load('igGrid.*', function () {}).load('igTree', function() {});
-	```
-
-#### <a id="loading"></a>Loading resources with Infragistics Loader
-
-The main ways to load resources are listed below.
-
-1.  Load single resource.
-
-	As shown in the code below, you must provide the path to required CSS and JavaScript files and declare which resources the loader will fetch for the page. This code snippet loads the igGrid control with the Sorting feature.
-	
-	> **Note**: If you initialize a control through MVC Wrappers, all dependent resources are loaded automatically.
-	
-	**In JavaScript:**
-	
-	```js
-	<script type="text/javascript">
-	    $.ig.loader({
-	        scriptPath: "{IG Resources root}/js/",
-	        cssPath: "{IG Resources root}/css/",
-	        resources: "igGrid.Sorting"
-	    });
-	    $.ig.loader(function () {
-	        $("#grid1").igGrid({
-	            autoGenerateColumns: false,
-	            columns: [. . .],
-	            dataSource: adventureWorks,
-	            features: [{
-					name: "Sorting",
-	                type: "local",
-	                mode: "multiple"
-	            }]
-	        });
-	    });
-	</script> 
-	```
-
-2.  Load multiple resources.
-
-	Comma separated list of resources to load.
-	
-	For example: `igTree,igVideoPlayer,igGrid.Paging`.
-	
-	**In JavaScript:**
-	
-	```js
-	$.ig.loader({
-	    scriptPath: '{IG Resources root}/js/',
-	    cssPath: '{IG Resources root}/css/',
-	    resources: 'igGrid,igTree'
-	});
-	```
-	
-	Modular widgets, such as igGrid, allow linking features with a `.` (dot).
-	
-	If you want to load `categorychart` and `radialchart` scripts, include the code snippet below.
-	
-	![](images/Using_Infragistics_Loader_1.png)
-	
-	**In JavaScript:**
-	
-	```js
-	$.ig.loader({
-	    scriptPath: "{IG Resources root}/js/",
-	    cssPath: "{IG Resources root}/css/",
-	    resources: "igDataChart.Category.Radial"
-	});
-	```
-
-3.  Load all resources.
-
-	To load all modules of a widget use `*`. Ex: `igGrid.*`. Thus you can load all the scripts related with the control.
-	
-	**In JavaScript:**
-	
-	```js
-	$.ig.loader({
-	    scriptPath: '{IG Resources root}/js/',
-	    cssPath: '{IG Resources root}/css/',
-	    resources: 'igHierarchicalGrid.*'
-	});
-	```
-
-4.  Loading external resources
-
-	To load external resources you should specify relative path to the `js` files, separated by comma:
-	
-	**In JavaScript:**
-	
-	```js
-	$.ig.loader({
-	    scriptPath: '{IG Resources root}/js/',
-	    cssPath: '{IG Resources root}/css/',
-	    resources: "igGrid.*, 
-	        extensions/infragistics.datasource.knockoutjs.js, 
-	        extensions/infragistics.ui.grid.knockout-extensions.js"
-	});
-	```
-
-### <a id="referencing"></a>Referencing Resources Using the Infragistics Loader
-
-Localization of the widgets is controlled by the locale option.
-
-In the products the following locales are currently supported:
-
-1.  English(en)
-2.  Japanese(ja)
-3.  Bulgarian(bg)
-4.  Russian(ru)
-5.  German (de)
-6.  Spanish (es)
-7.  French (fr)
-
-In the English version of the product en resources are merged with the widget code. In Japanese version `ja` resources are merged with the widget code. When these locales are set, then the files are not requested by the loader in each respective version.
-
-The loader can also automatically detect the language of the browser’s UI and switch to this locale. It is controlled by the `autoDetectLocale` option, which is set to `false` by default. If `autoDetectLocale` is set and locale is set, the locale option takes precedence.
-
-### <a id="regional"></a>Regional settings using Infragistics Loader
-
-Regional settings are supported by such controls as editors. The loader automatically loads regional settings inferring it from locale option or from auto detection of the browser UI.
-
-To force the loader to load some other regional setting, the regional option needs to be used.
-
-These settings are compliant with the standard for regional settings and can be either 2 characters, or 5 characters long. All regional files can be found in folder
-
-```
-{IG Resources root}/js/modules/i18n/regional/
-```
-
-**In JavaScript:**
-
-```js
+```javascript
 $.ig.loader({
-    scriptPath: '{IG Resources root}/js/',
-    cssPath: '{IG Resources root}/css/',
-    resources: 'igHierarchicalGrid.*',
-    locale: “bg”,
-    regional :”en-GB”
+    scriptPath: 'http://localhost/igniteui/js/',
+    cssPath: 'http://localhost/igniteui/css/',
+    resources: 'igGrid',
+    ready: function () {
+        console.log('igGrid resources are loaded');
+    }
 });
 ```
 
-> **Note:** When the jQuery UI date picker widget is configured to be used with the Infragistics editors, it is necessary to do separate setting for the datepicker’s regional settings.
+Notice how the `scriptPath` and `cssPath` point to the root location on the server where the JavaScript and CSS exist. The `resource` member takes an expression that tells the loader what to load and the `ready` function is run once all the requested files are loaded.
 
- **jquery-ui-i18n.min.js** **must be referenced on the page.**
+### Immediate Load and Separate Notification
+Sometimes you may want to immediately load files, but handle the load notification in a separate place in your code. This next code block demonstrates how to separate the load action from the notification.
 
-Regional setting needs to be specified:
+```javascript
+$.ig.loader({
+    scriptPath: 'http://localhost/igniteui/js/',
+    cssPath: 'http://localhost/igniteui/css/',
+    resources: 'igGrid'
+});
 
+$.ig.loader(function () {
+    console.log('igGrid resources are loaded');
+});
 ```
+
+Here, the resources for the igGrid are still immediately loaded, but you have a finer-grained control over where you are handling the notification when the files are loaded.
+
+### Load on Demand
+When you define resources up front as an option while initializing the loader, all files are immediately downloaded. An alternative to this approach, however, is to load scripts on demand. Loading on demand can help boost the performance of your pages by deferring the file loading until the moment they are needed on the page. The following code demonstrates how to initialize the loader without immediately loading any files.
+
+```javascript
+$.ig.loader({
+    scriptPath: 'http://localhost/igniteui/js/',
+    cssPath: 'http://localhost/igniteui/css/',
+});
+```
+
+With the loader initialized you can then load files on demand.
+
+```javascript
+$.ig.loader('igGrid', function () {
+    console.log('igGrid resources are loaded');
+});
+```
+
+One way you might want to use this approach is only load resources when a specific button is clicked on the page:
+
+```javascript
+$('#show-grid-button').click(function (e) {
+    $.ig.loader('igGrid', function () {
+        console.log('Loaded igGrid resources');
+    });
+});
+```
+
+### Chaining
+Another option available it to chain the calls to the load method by passing in different resource expressions.
+
+```javascript
+$.ig.loader({
+        scriptPath: 'http://localhost/igniteui/js/',
+        cssPath: 'http://localhost/igniteui/css/',
+    })
+    .load('igGrid',
+        function () {
+            console.log('igGrid resources are loaded')
+        })
+    .load('igTree',
+        function () {
+            console.log('igTree resources are loaded')
+        });
+```
+
+This approach gives you the option to centralize your code, but still have individual notifications as the resources for separate controls are loaded.
+
+## <a id="resource-expressions"></a> Resource Expressions
+The examples shown so far in this tutorial demonstrate a very simple resource expression that loads the core igGrid or igTree resources, but there are a number of ways to construct the resource expression in order to control the files loaded on the page. Depending on how the resource expression is formatted you can load the minimum files for a control, specific features of a control, all the files used by a control, multiple controls at once or an arbitrary list of files.
+
+This section reviews the different ways you can format your expression to produce different results. Keep in mind that each of these approaches may be used together and are not mutually exclusive.
+
+### Loading Features
+Certain controls like igGrid, igHierarchicalGrid, igTreeGrid or igDataChart are modular and support "features" which represent code that may need to be downloaded separately from the control's core files. The dot (`.`) in a resource expression tells the loader to include features associated to the root control. For instance, if you want to load the igGrid on to your page, but also include the grid's Sorting feature, then you would use a resource expression like this:
+
+```javascript
+igGrid.Sorting
+```
+
+This expression tells the loader to load the core igGrid files as well as the files required to support the Sorting feature. You can use the dot more than once express all the features you want load. If you want to load Sorting, Filtering and Paging then you would use a resource expression like this:
+
+```javascript
+igGrid.Sorting.Filtering.Paging
+```
+
+Here is the above resource expression in context:
+
+```javascript
+$.ig.loader({
+    scriptPath: 'http://localhost/igniteui/js/',
+    cssPath: 'http://localhost/igniteui/css/',
+    resources: 'igGrid.Sorting.Filtering.Paging',
+    ready: function () {
+        console.log('Loaded igGrid resources');
+    }
+});
+```
+
+For more information on features and the literals values available for modular controls read the [section on Resource Expression Feature Literals](#resource-expression-feature-literals)
+
+### Loading Multiple Resources
+The comma (`,`) in an expression allows you to load resources for more than one control at a time. For instance if you wanted to load resources for the grid, tree and combo all at one time then your expression would look like this:
+
+```javascript
+$.ig.loader({
+    scriptPath: 'http://localhost/igniteui/js/',
+    cssPath: 'http://localhost/igniteui/css/',
+    resources: 'igGrid,igTree,igCombo',
+    ready: function () {
+        console.log('Loaded resources for igGrid, igTree and igCombo');
+    }
+});
+```
+
+> **Note:** You must *not* include spaces before or after commas in the expression.
+
+### Loading All Resources/Features
+The star (`*`) in an expression introduces a wildcard that tells the loader to load all the files for a control. This means that every file used for any possible feature of the control is loaded. You would use a wildcard expression like this:
+
+```javascript
+$.ig.loader({
+    scriptPath: 'http://localhost/igniteui/js/',
+    cssPath: 'http://localhost/igniteui/css/',
+    resources: 'igGrid.*',
+    ready: function () {
+        console.log('Loaded igGrid resources');
+    }
+});
+```
+
+> **Note**: *Take care in using wildcards in resource expressions*. This can contribute to page bloat as you may be forcing the page to download unnecessary files for features that are not used.
+
+### Explicitly Loading Resources
+In some instances you may want to use the loader to load custom or external files in conjunction with Ignite UI resources. To explicitly load resources you simply need to add the path to the resource into the resource expression. The example below loads a custom JavaScript file with the igGrid core resources.
+
+```javascript
+$.ig.loader({
+    scriptPath: 'http://localhost/igniteui/js/',
+    cssPath: 'http://localhost/igniteui/css/',
+    resources: 'igGrid,../../custom.js',
+    ready: function () {
+        console.log('Loaded resources for igGrid and custom.js');
+    }
+});
+```
+
+The loader uses the locations defined in `scriptPath` and `cssPath` as the starting paths for resolving resource URLs. As shown here, if your custom resource is in a location outside the folders as referenced by `scriptPath` and `cssPath` the path can be resolved to the correct URL if you provide a relative path.
+
+### <a id="resource-expression-feature-literals"></a> Resource Expression Feature Literals
+Often when building a resource expression all you need to use is the name of the control. For controls that include modular features you need to know the literals used to reference the features. The following lists the different controls and the literal names that map to their respective features.
+
+#### igDataChart
+- Category
+- Financial
+- Polar
+- Radial
+- RangeCategory
+- Scatter
+
+For instance:
+
+```javascript
+$.ig.loader({
+    scriptPath: 'http://localhost/igniteui/js/',
+    cssPath: 'http://localhost/igniteui/css/',
+    resources: 'igDataChart.RangeCategory.Scatter'
+});
+```
+
+#### igGrid
+- AppendRowsOnDemand
+- CellMerging
+- ColumnMoving
+- ColumnFixing
+- Filtering
+- GroupBy
+- Hiding
+- Paging
+- Resizing
+- Responsive
+- RowSelectors
+- Selection
+- Sorting
+- Summaries
+- MultiColumnHeaders
+- Tooltips
+- Updating
+
+For instance:
+
+```javascript
+$.ig.loader({
+    scriptPath: 'http://localhost/igniteui/js/',
+    cssPath: 'http://localhost/igniteui/css/',
+    resources: 'igGrid.Sorting.Filtering.Paging'
+});
+```
+
+#### igHierarchicalGrid
+- ColumnMoving
+- Filtering
+- GroupBy
+- Hiding
+- CellMerging
+- Paging
+- Resizing
+- Responsive
+- RowSelectors
+- Selection
+- Sorting
+- Summaries
+- MultiColumnHeaders
+- Tooltips
+- Updating
+
+For instance:
+
+```javascript
+$.ig.loader({
+    scriptPath: 'http://localhost/igniteui/js/',
+    cssPath: 'http://localhost/igniteui/css/',
+    resources: 'igHierarchicalGrid.ColumnMoving.RowSelectors.MultiColumnHeaders'
+});
+```
+
+#### igTreeGrid
+- Filtering
+- Hiding
+- Paging
+- Selection
+- Sorting
+- MultiColumnHeaders
+- ColumnFixing
+- Tooltips
+- Updating
+
+For instance:
+
+```javascript
+$.ig.loader({
+    scriptPath: 'http://localhost/igniteui/js/',
+    cssPath: 'http://localhost/igniteui/css/',
+    resources: 'igTreeGrid.Paging.Sorting.Filtering'
+});
+```
+
+## <a id="working-with-mvc-helpers"></a> Working with MVC Helpers
+If you initialize a control through MVC helpers, all dependent resources are loaded automatically.
+
+The following demonstrates how to use the loader with the ASP.NET MVC helpers:
+
+```html
+<script src="http://localhost/igniteui/js/infragistics.loader.js"></script>
+
+<%= Html.Infragistics()
+    .Loader()
+    .ScriptPath("http://localhost/igniteui/js/")
+    .CssPath("http://localhost/igniteui/css/")
+    .Render()    %>
+```
+
+## <a id="localization"></a> Localization
+Localization of the widgets is controlled by the locale option. The following locales are currently supported in Ignite UI:
+
+- English(en)
+- Japanese(ja)
+- Bulgarian(bg)
+- Russian(ru)
+- Spanish(es)
+- French(fr)
+- German(de)
+
+The English and Japanese versions of Ignite UI have their respective resources merged with the product code.
+
+The loader can also detect the browser's language setting and automatically switch to this locale. This behavior is controlled by the `autoDetectLocale` option, which is set to `false` by default. If `autoDetectLocale` is set and `locale` is set, the `locale` option takes precedence.
+
+## <a id="regional-settings"></a> Regional Settings
+Regional settings are relevant to some Ignite UI controls like editors where numeric and currency values are formatted differently depending on the region. The loader automatically loads regional settings by inferring it from the locale or from auto-detecting is from the browser.
+
+To force the loader to load a custom regional setting, you need to configure the `regional` option of the loader.
+
+> **Note**: The regional settings follow the standard for regional settings and can be either 2 characters, or 5 characters long.
+
+All regional files can be found in folder:
+
+```javascript
+{Ignite UI resources root}/js/modules/i18n/regional/
+```
+
+The following code loads the hierarchical grid with the Updating feature enabled (which uses the Ignite UI editor controls) for the Bulgarian locale using Great Britain English.
+
+```javascript
+$.ig.loader({
+    scriptPath: 'http://localhost/igniteui/js/',
+    cssPath: 'http://localhost/igniteui/css/',
+    resources: 'igHierarchicalGrid.Updating',
+    locale: 'bg',
+    regional : 'en-GB'
+});
+```
+
+### Special Considerations for the jQuery UI Date Picker
+When the jQuery UI date picker widget is configured to use the Ignite UI editors, you need to include a reference to `jquery-ui-i18n.min.js` on the page and the regional setting needs to be specified. For instance:
+
+```javascript
 $.datepicker.setDefaults($.datepicker.regional['ru']);
 ```
 
-When setting regional settings for editors the following file must be referenced on the page:
+### Special Considerations for Ignite UI Editors
+When setting regional settings for editors, the following file must be referenced on the page:
 
-```
+```javascript
 infragistics.ui.regional-i18n.js
 ```
 
-Accepted values for regional option are the ending of the files in the regional folder. They are the same as the standard ones supported by jQuery:
+Accepted values for regional option are the ending of the files in the regional folder. They are the same as the standard values supported by jQuery:
 
-- af (South Africa)
-- ar (Arabic)
-- az (Azerbaijan, Latin)
-- bg (Bulgaria)
-- bs (Bosnia)
-- ca (Catalan)
-- cs (Czech)
-- da (Denmark)
-- de (Germany)
-- el (Greece)
-- en-GB (English, United Kingdom)
-- es (Spain)
-- et (Estonia)
-- fa (Farsi, Iran)
-- fi (Finland)
-- fo (Faroe)
-- fr-CH (French, Switzerland)
-- fr (France)
-- he (Hebrew, Israel)
-- hr (Croatia)
-- hu (Hungary)
-- hy (Armenia)
-- id (Indonesia)
-- is (Iceland)
-- it (Italy)
-- ja (Japan)
-- ko (Korea)
-- lt (Lithuania)
-- lv (Latvia)
-- ms (Malaysia)
-- nl (Dutch, Netherlands)
-- no (Norway)
-- pl (Poland)
-- pt-BR (Brazil)
-- ro (Romania)
-- ru (Russia)
-- sk (Slovakia)
-- sl (Slovenia)
-- sq (Albania)
-- sr (Cyrillic, Serbia)
-- sr-SR (Latin, Serbia)
-- sv (Sweden)
-- ta (Tamil, India)
-- th (Thailand)
-- tr (Turkey)
-- uk (Ukraine)
-- vi (Vietnam)
-- zh-CN (PRC, China)
-- zh-HK (Hong Kong SAR PRC, China)
-- zh-TW (Taiwan, China)
+Region  | Region | Region | Region |
+--- | --- | --- | --- |
+af (South Africa)	            | fa (Farsi, Iran)            | ko (Korea)	            | sr (Cyrillic, Serbia)
+ar (Arabic)	                    | fi (Finland)                | lt (Lithuania)	        | sr-SR (Latin, Serbia)
+az (Azerbaijan, Latin)          | fo (Faroe)	              | lv (Latvia)	            | sv (Sweden)
+bg (Bulgaria)	                | fr-CH (French, Switzerland) | ms (Malaysia)	        | ta (Tamil, India)
+bs (Bosnia)	                    | fr (France)	              | nl (Dutch, Netherlands)	| th (Thailand)
+ca (Catalan)	                | he (Hebrew, Israel)	      | no (Norway)	            | tr (Turkey)
+cs (Czech)	                    | hr (Croatia)	              | pl (Poland)	            | uk (Ukraine)
+da (Denmark)	                | hu (Hungary)	              | pt-BR (Brazil)	        | vi (Vietnam)
+de (Germany)	                | hy (Armenia)	              | ro (Romania)	        | zh-CN (PRC, China)
+el (Greece)	                    | id (Indonesia)	          | ru (Russia)	            | zh-HK (Hong Kong SAR PRC, China)
+en-GB (English, United Kingdom) | is (Iceland)	              | sk (Slovakia)	        | zh-TW (Taiwan, China)
+es (Spain)				        | it (Italy)	              | sl (Slovenia)           |
+et (Estonia)	                | ja (Japan)  				  | sq (Albania)
 
-## Infragistics Loader Resources Reference
-
-#### Infragistics Loader Resources Reference Chart
-
-The following table lists Infragistics Loader valid resource strings.
-
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<th>Module</th>
-			<th>Infragistics Loader Resource Strings</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>igCombo</td>
-			<td>igCombo</td>
-		</tr>
-		<tr>
-			<td>igDataSource</td>
-			<td>igDataSource</td>
-		</tr>
-		<tr>
-			<td>igDataChart</td>
-			<td>
-				igDataChart
-				
-				<h4>Features</h4>
-				<p>Features can be chained together in one string with a period `.` separating each feature, e.g. `igDataChart.Category.Financial`.</p>
-				<p>To include all the features use:</p>
-
-				<ul>
-					igDataChart.\*
-					<ul>
-						<li>Category</li>
-						<li>Financial</li>
-						<li>Polar</li>
-						<li>Radial</li>
-						<li>RangeCategory</li>
-						<li>Scatter</li>
-					</ul>
-				</ul>
-			</td>
-		</tr>
-		<tr>
-			<td>igDialog</td>
-			<td>igDialog</td>
-		</tr>
-		<tr>
-			<td>igEditors</td>
-			<td>igEditors</td>
-		</tr>
-		<tr>
-			<td>igGrid</td>
-			<td>igGrid
-
-			<h4>Features:</h4>
-			<p>Features can be chained together in one string with a period `.` separating each feature, e.g. `igGrid.Paging.Sorting`.</p>
-			<p>To include all the features use `igGrid.*`.</p>
-
-			<ul>
-				<li>igGrid.\*
-					<ul>
-						<li> ColumnMoving </li>
-						<li> FeatureChooser </li>
-						<li> Filtering </li>
-						<li> GroupBy </li>
-						<li> Hiding </li>
-						<li> MergedCells </li>
-						<li> Paging </li>
-						<li> Resizing </li>
-						<li> RowSelectors </li>
-						<li> Selection </li>
-						<li> Sorting </li>
-						<li> Summaries </li>
-						<li> MultiColumnHeaders </li>
-						<li> Tooltips </li>
-						<li> Updating </li>
-					</ul>
-				</li>
-			</ul>
-
-			</td>
-		</tr>
-		<tr>
-			<td>igHierarchicalGrid</td>
-			<td>igHierarchicalGrid
-
-				<h4>Features:</h4>
-				<p>Features can be chained together in one string with a period `.` separating each feature, e.g. `igHierarchicalGrid.Paging.Sorting`.</p>
-				
-				<p>To include all the features use `igHierarchicalGrid.*`.</p>
-				
-				<ul>
-					<li>igHierarchicalGrid.\*
-						<ul>
-							<li>ColumnMoving</li>
-							<li>FeatureChooser</li>
-							<li>Filtering</li>
-							<li>GroupBy</li>
-							<li>Hiding</li>
-							<li>MergedCells</li>
-							<li>Paging</li>
-							<li>Resizing</li>
-							<li>RowSelectors</li>
-							<li>Selection</li>
-							<li>Sorting</li>
-							<li>Summaries</li>
-							<li>MultiColumnHeaders</li>
-							<li>Tooltips</li>
-							<li>Updating</li>
-						</ul>
-					</li>
-				</ul>
-
-			</td>
-		</tr>
-		<tr>
-			<td>igHtmlEditor</td>
-			<td>igHtmlEditor</td>
-		</tr>
-		<tr>
-			<td>igMap</td>
-			<td>igMap</td>
-		</tr>
-		<tr>
-			<td>igOlapDataSource</td>
-			<td>igOlapDataSource</td>
-		</tr>
-		<tr>
-			<td>igPieChart</td>
-			<td>igPieChart</td>
-		</tr>
-		<tr>
-			<td>igPivotGrid</td>
-			<td>igPivotGrid</td>
-		</tr>
-		<tr>
-			<td>igRating</td>
-			<td>igRating</td>
-		</tr>
-		<tr>
-			<td>igReportViewer</td>
-			<td>igReportViewer</td>
-		</tr>
-		<tr>
-			<td>igTemplating</td>
-			<td>igTemplating</td>
-		</tr>
-		<tr>
-			<td>igTree</td>
-			<td>igTree</td>
-		</tr>
-		<tr>
-			<td>igUpload</td>
-			<td>igUpload</td>
-		</tr>
-		<tr>
-			<td>igVideoPlayer</td>
-			<td>igVideoPlayer</td>
-		</tr>
-	</tbody>
-</table>
-
-## <a id="related"></a> Related Content
-
-### Topics
-
-The following topics provide additional information related to this topic.
-
-- [JavaScript Files in Ignite UI](Deployment-Guide-JavaScript-Files.html): This topic is a reference to the JavaScript files required to work with the controls included in Ignite UI™.
-- [Infragistics Content Delivery Network (CDN) for Ignite  UI](Deployment-Guide-Infragistics-Content-Delivery-Network%28CDN%29.html): Instructions on using Infragistics Content Delivery Network (CDN) in Ignite UI.
-- [Adding Required Resources Manually](Adding-the-Required-Resources-for-NetAdvantage-for-jQuery.html): This topic explains the new organization of JavaScript resources in Ignite UI™
-- [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html): This topic explains how to manage the required resources to work with the Ignite UI within a Web application.
+## <a id="related-content"></a> Related Content
+- [JavaScript Files in Ignite UI](deployment-guide-javascript-files.html)
+- [Infragistics Content Delivery Network (CDN) for Ignite UI](deployment-guide-infragistics-content-delivery-network%28cdn%29.html)
+- [Adding Required Resources Manually](adding-the-required-resources-for-netadvantage-for-jquery.html)
+- [Using JavaScript Resources in Ignite UI](deployment-guide-javascript-resources.html)

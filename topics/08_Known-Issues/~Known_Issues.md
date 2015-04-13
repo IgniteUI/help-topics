@@ -19,7 +19,7 @@ The topics in this group provide information about the Known Issues and Limitati
 
 Detailed information regarding known issues and limitations is covered in the following topics:
 
-- [Known Issues 2014.2](Known-Issues-and-Limitations-2014-Volume-2.html): This topic contains a list of Known Issues and Limitations of the 2014 Volume 2 release of the Ignite UI™ library.
+- [Known Issues 2015.1](Known-Issues-and-Limitations-2015-Volume-1.html): This topic contains a list of Known Issues and Limitations of the 2015 Volume 1 release of the Ignite UI™ library.
 
 - [Known Issues Revision History](Known-Issues-Revision-History.html): This topic provides links to the Known Issues and Limitations documents for earlier versions of the Ignite UI™ library.
 

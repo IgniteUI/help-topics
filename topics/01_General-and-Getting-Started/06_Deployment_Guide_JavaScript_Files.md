@@ -40,7 +40,7 @@ The names of the JavaScript files containing the combined scripts are:
 
 The files are found in the js folder (the root folder for the JavaScript files in the Ignite UI program installation path).
 
-There is also a combined script version of the localization resources in Bulgarian, Russian, Japanese, German, Spanish and French language. File names are `infragistics-bg.js`, `infragistics-ja.js`, `infragistics-de.js`, `infragistics-es.js` and `infragistics-fr.js` and they resides in the `../js/i18n` folder.
+There is also a combined script version of the localization resources in Bulgarian, Russian, Japanese, German, Spanish and French language. File names are `infragistics-bg.js`, `infragistics-ja.js`, `infragistics-ru.js`, `infragistics-de.js`, `infragistics-es.js` and `infragistics-fr.js` and they resides in the `../js/i18n` folder.
 
 **Minified JavaScript files**
 
@@ -96,6 +96,7 @@ To navigate to the required JavaScript files listing for the particular control,
 -   [igTemplating](#igTemplating)
 -   [igTileManager](#igTileManager)
 -   [igTree](#igTree)
+-   [igTreeGrid](#igTreeGrid)
 -   [igUpload](#igUpload)
 -   [igVideoPlayer](#igVideoPlayer)
 -   [igZoombar](#igZoombar)
@@ -371,7 +372,7 @@ JavaScript files in the page code.
 			    <br>infragistics.ui.grid.columnmoving.js
 			    <br>infragistics.ui.grid.columnfixing.js
 				<br>infragistics.ui.grid.responsive.js
-			    <br>infragistics.ui.grid.loadondemand.js
+			    <br>infragistics.ui.grid.appendrowsondemand.js
 			</td>
 		</tr>
 	</tbody>
@@ -1009,6 +1010,64 @@ JavaScript files in the page code.
 			<td>Scripts</td>
 			<td>infragistics.ui.tree-en.js
     			<br>infragistics.ui.tree.js</td>
+		</tr>
+	</tbody>
+</table>
+
+
+>**Note:** Localization scripts must be referenced before the actual
+JavaScript files in the page code.
+
+#### <a id="igTreeGrid"></a>igTreeGrid 
+<table class="table">
+	<thead>
+		<tr>
+			<th>Script Type</th>
+			<th>Script File Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Dependency Scripts</td>
+			<td>
+			    infragistics.util.js
+			    <br>infragistics.datasource-en.js
+			    <br>infragistics.dataSource.js
+			    <br>infragistics.templating-en.js
+			    <br>infragistics.templating.js
+			    <br>infragistics.ui.shared.js
+			    <br>infragistics.ui.scroll.js
+				<br>infragistics.ui.grid-en.js
+				<br>infragistics.ui.grid.framework.js
+			</td>
+		</tr>
+		<tr>
+			<td>Scripts</td>
+			<td>
+				infragistics.ui.treegrid-en.js
+			    <br>infragistics.ui.treegrid.js
+			
+				<h5>Features:</h5>
+			    infragistics.ui.grid.featurechooser.js
+			    <br>infragistics.ui.grid.filtering.js
+				<br>infragistics.ui.treegrid.filtering.js
+			    <br>infragistics.ui.grid.hiding.js
+				<br>infragistics.ui.treegrid.hiding.js
+			    <br>infragistics.ui.grid.paging.js
+				<br>infragistics.ui.treegrid.paging.js
+			    <br>infragistics.ui.grid.selection.js
+				<br>infragistics.ui.treegrid.selection.js
+			    <br>infragistics.ui.grid.sorting.js
+				<br>infragistics.ui.treegrid.sorting.js
+			    <br>infragistics.ui.grid.tooltips.js
+				<br>infragistics.ui.treegrid.tooltips.js
+			    <br>infragistics.ui.grid.updating.js
+				<br>infragistics.ui.treegrid.updating.js
+			    <br>infragistics.ui.grid.multicolumnheaders.js
+				<br>infragistics.ui.treegrid.multicolumnheaders.js
+			    <br>infragistics.ui.grid.columnfixing.js
+				<br>infragistics.ui.treegrid.columnfixing.js
+			</td>
 		</tr>
 	</tbody>
 </table>

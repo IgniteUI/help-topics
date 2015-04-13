@@ -431,7 +431,7 @@ Following is a conceptual overview of the process:
 
         Define a function that will be called when the `summariesCalculating` event fires.
 
-	    **In HTML and ASPX:**
+	    **In HTML and JavaScript:**
 
 	    ```html
 	    <script type="text/javascript"> 
@@ -463,14 +463,14 @@ Following is a conceptual overview of the process:
 	    });
 	    ```
 	
-		**In JavaScript:**
+		**In JavaScript**
 	    ```js
 	    $("#grid1").live("iggridsummariessummariescalculating ", gridSummariesCalculating);
 	    ```
 
 2.  **Cancel the event by returning false**
 
-	**In HTML and ASPX:**
+	**In HTML and JavaScript:**
 	
 	```html
 	<script type="text/javascript">       

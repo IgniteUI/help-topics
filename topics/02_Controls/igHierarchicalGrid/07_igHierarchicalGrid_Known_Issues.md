@@ -62,15 +62,20 @@ Issue | Description | Status
 [Limitation of remote grouping from different child layouts](#different-child-layouts) | When Load-on-Demand is disabled grouping columns from different child layouts with remote group by will invoke the parent's `DataSourceUrl` instead of the `DataSourceUrl` of the child. | ![](../../images/images/positive.png)
 
 
-#### igHierarchicalGrid RowSelectors
+### igHierarchicalGrid RowSelectors
 
 Issue | Description | Status
 ---|---|---
 Row Selectors works on only one layout at a time | The Row Selectors’ feature checkboxes selected in one layout become deselected when user checks the checkboxes in another layout. | ![](../../images/images/negative.png)
 
+### igHierarchicalGrid Tooltips
+
+Issue | Description | Status
+---|---|---
+Tooltips are not shown for child layout when options for Tooltips are different in child and root options definition | This is no longer supported as all Tooltips instances in an hierarchical grid will use the same DOM elements (to reduce DOM complexity).  | ![](../../images/images/negative.png)
 
 
-## <a id="general"></a> igHierarchicalGrid
+### <a id="general"></a> igHierarchicalGrid
 
 <table class="table table-striped">
 	<thead>

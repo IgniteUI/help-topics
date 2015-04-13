@@ -52,8 +52,7 @@ Events not triggered | By design, events only trigger on user interaction. Event
 [KnockoutJS observable array functions’ limitations](#knockout-observable-array) | The use of `unshift`, `reverse` and `sort` observable array functions results in incorrect visual appearance of the grid. | ![](../../images/images/positive.png)
 The id attribute is mandatory for the DOM control placeholder|The id attribute should be set on the DOM element on which the grid is initialized. Grid use jQuery ID selector internally for faster selection.|![](../../images/images/negative.png)
 Column keys which contain spaces are not supported|Column keys are used for generating some DOM elements IDs. Having spaces in an HTML id attribute is not allowed according to the [HTML 5 specification](http://www.w3.org/TR/html5/dom.html#the-id-attribute).|![](../../images/images/negative.png)
-
-
+The contextMenu event is renamed to cellRightClick|The event is renamed to be more self-explanatory.|![](../../images/images/negative.png)
 
 ## [igGrid – Data Binding](#data-binding)
 
@@ -180,9 +179,6 @@ Column fixing not supported for some `igGrid` features
 The Column Fixing feature of `igGrid` does not work with the following features:
                 <ul>
                     <li>
-**Column Moving**
-					</li>
-                    <li>
 **Grouping** (aka. Group By)
 					</li>
                     <li>
@@ -199,7 +195,6 @@ Integration of Column Fixing with these features will be implemented in a future
             </td>
             <td>
 ![](../../images/images/negative.png)
-![](../../images/images/plannedFix.png)
 			</td>
         </tr>
         <tr>
