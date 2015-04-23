@@ -1,7 +1,7 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "igcombo-mitgrating-to-the-new-combo",
+    "fileName": "igcombo-migrating-to-the-new-combo",
     "controlName": ["igCombo"],
     "tags": ["Migration"]
 }
@@ -62,7 +62,7 @@ clearSelectionOnBlur|Used to preserve selected items on blur when the text input
 valueKeyType textKeyType|Used to specify the data type behind the value/text data|These options are not supported. The type of value and text fields from the data source will be used.
 parentCombo cascadingDataSources parentComboKey|Used to setup cascading functionality|These options are not supported. Internal cascading functionality is no longer supported. It can be achieved through changing related combo data sources on current combo's selection changed event. [See sample](%%SamplesUrl%%/combo/cascading-combos)
 
-*We tried hard to ensure behavioral parity between the old and new combo, but some things we could not complete for 15.1. If these behaviors are crucial to your solution, and you want to upgrade to 15.1, please contact us. We can provide a 15.1 build of the current combo to customers who cannot yet use the new combo. 
+*We tried hard to ensure behavioral parity between the old and new combo, but some things we could not complete for 15.1. If these behaviors are crucial to your solution, and you want to upgrade to 15.1, please contact us.
 
 <a name='new_options'></a>
 ### New options
