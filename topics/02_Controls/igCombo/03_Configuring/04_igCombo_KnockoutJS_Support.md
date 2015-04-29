@@ -96,10 +96,11 @@ The following table maps the configuration tasks of the `igCombo` control relate
 			<td><ul><li> [text](%%jQueryApiUrl%%/ui.igcombo)</li></ul></td>
 		</tr>
 		<tr>
-			<td>Binding the View-Model object’s field to the value of the igCombo control</td>
+			<td>Binding the View-Model object’s field to the selectedItems of the igCombo control
+</td>
 			<td>Optional</td>
-			<td>Configuring the value property as observable, enables the data exchange between the combo value and the View-Model.</td>
-			<td><ul><li>value</li></ul><br>**Note:** The value property is not available for the igCombo, but only for its Knockout extension.</td>
+			<td>Configuring the selectedItems property as observable, enables the data exchange between the combo selected elements and the View-Model.</td>
+			<td><ul><li> [selectedItems](%%jQueryApiUrl%%/ui.igcombo)</li></ul><br></td>
 		</tr>
 		<tr>
 			<td>Specifying data source for the drop-down list of the combo box</td>
@@ -176,8 +177,11 @@ function ViewModel(actorsList) {
     this.actorsList = actorsList;
     //  The array of actor objects to be bound to the drop down list
     this.actors = ko.observableArray(self.actorsList);
+    //  The array of selected actors
+    this.selectedItems = ko.observableArray([{ index: 1 }]);
     //  The name of the currently selected actor.
-    this.actorName = ko.observable(self.actors()[0].name);    this.isVisible = true;
+    this.actorName = ko.observable(self.actors()[0].name);    
+    this.isVisible = true;
 }
 ```
 
@@ -208,6 +212,7 @@ The following code demonstrates how to declare the binding properties for `igCom
 <span id="comboActors" data-bind="igCombo: { 
         text: actorName,
         dataSource: actors,
+        selectedItems: selectedItems,
         textKey: 'name',
         valueKey: 'id',
         allowCustomValue: true,
