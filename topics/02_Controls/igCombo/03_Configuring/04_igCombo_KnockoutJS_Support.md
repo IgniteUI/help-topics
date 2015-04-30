@@ -92,7 +92,7 @@ The following table maps the configuration tasks of the `igCombo` control relate
 		<tr>
 			<td>Binding the View-Model object’s field to the text of the igCombo control</td>
 			<td>Required</td>
-			<td>When binding to data using Knockout, the minimum requirement is to configure the text or value property. This enables the data exchange between the combo text and the View-Model.</td>
+			<td>When binding to data using Knockout, the minimum requirement is to configure the text property. This enables the data exchange between the combo text and the View-Model.</td>
 			<td><ul><li> [text](%%jQueryApiUrl%%/ui.igcombo)</li></ul></td>
 		</tr>
 		<tr>
