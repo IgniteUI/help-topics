@@ -78,7 +78,16 @@ The mode option accepts two value values: advanced or simple. When the simple fi
 -   It is very important to set the correct column types when filtering is used. If they are not configured properly, some unexpected errors and behaviors may occur, for example when setting a numeric column to be of type “string”, or the reverse.
 -   Filtering can also be case sensitive, which can be turned on by setting the `caseSensitive` option to true. This options works only for local filtering.
 
-You can get the current list of expression objects from the UI by calling the `_generateExpressions` function on the filtering widget object.
+You can get the current list of expression objects from the `dataFiltering` event arguments.
+
+**In JavaScript:**
+
+```js
+$(document).delegate("#grid1", "iggridfilteringdatafiltering", function (evt, ui) {
+	var expressions = ui.expressions;
+}
+```
+
 
 ![](images/igGrid_Filtering_01.png)
 
@@ -335,7 +344,7 @@ Event which is raised after data is filtered and rendered in the grid
 Same as dataFiltering
 
                 <blockquote>
-**Note:** The expressions array can be obtained by calling the _generateExpressions() method on the widget object.
+**Note:** The expressions array can be obtained from the `dataFiltering` event arguments: ui.expressions.
 				</blockquote>
 			</td>
         </tr>
