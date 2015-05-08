@@ -192,7 +192,6 @@ The following code demonstrates how to declare the binding properties for `igCom
 ```html
 <span id="comboActors" data-bind="igCombo: { 
         dataSource: actors,
-        selectedItems: selectedItems,
         textKey: 'name',
         valueKey: 'id',
         selectedItems: selectedActor
