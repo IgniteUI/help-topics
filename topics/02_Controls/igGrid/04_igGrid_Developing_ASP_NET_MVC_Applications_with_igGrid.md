@@ -1,4 +1,4 @@
-﻿﻿<!--
+﻿<!--
 |metadata|
 {
     "fileName": "iggrid-developing-asp-net-mvc-applications-with-iggrid",
