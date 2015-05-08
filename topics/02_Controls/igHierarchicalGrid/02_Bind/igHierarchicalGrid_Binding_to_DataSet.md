@@ -169,7 +169,11 @@ In other words, iteration is done through the DataTables’ DataRelations, not t
 
 ### Filtering, GroupBy and Sorting features can be only Local type, Summaries feature is not supported
 
-LINQ expressions used internally by the Filtering, Sorting, and Grouping features don’t work with `DataTable`s or `DataSet`s. Remote Sorting and Filtering can be implemented by manually handling the request and processing the data of the `DataSet` before returning it as a `JsonResult`.
+LINQ expressions used internally by the Filtering, Sorting and Grouping features don’t work with `DataTable`s or `DataSet`s.
+
+Due to this initially setting a grouped column via the ColumnSettings option, even when the GroupBy’s Type option is set to Local, is not supported since the GridModel will try to sort the data before sending it to the client. 
+
+Remote Sorting and Filtering can be implemented by manually handling the request and processing the data of the `DataSet` before returning it as a `JsonResult`.
 
 In addition, the Summaries feature is unsupported when using a `DataSet` as the grid’s data source.
 
