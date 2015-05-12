@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 |metadata|
 {
     "fileName": "igcombo-overview",
@@ -373,7 +373,73 @@ In most cases, you will use the `dataSource` or `dataSourceUrl` options of the `
 
 ##<a id="template-use-and-selection"></a>Template Use and Selection
 
-The `igCombo` control allows the use of custom templates for the rendering of items. Item templates are repeated for each item within the `igCombo` control which allows each choice to have multiple pieces of information shown in a customized layout.You can set custom HTML to the `itemTemplate` option and each bound item uses the template to display its data. Images and custom layouts can be displayed for each item.
+###Introduction
+
+
+There are several places where a template can be used to customize the layout of the `igCombo` control. A header and/or footer can appended to the top and/or bottom of the dropdown list respectively to provide greater context to the user’s choices. In addition, an item template can be defined which allows each choice to have multiple pieces of information shown in a customized layout.
+
+###Template use chart
+
+The table bellows lists the `igCombo` templates and their possible uses.
+
+<table class="table">
+    <tbody>
+        <tr>
+            <th>Template</th>
+
+            <th>Use with igCombo</th>
+        </tr>
+
+        <tr>
+            <td>Header</td>
+
+            <td>By setting the headerTemplate option, you can define custom HTML which displays at the top of the dropdown list.</td>
+        </tr>
+
+        <tr>
+            <td>Footer</td>
+
+            <td>Setting the footerTemplate option appends custom HTML at the bottom of the dropdown list. If the list is large enough to require a scrollbar, the footer template is always shown below the scrollable area.</td>
+        </tr>
+
+        <tr>
+            <td>Item</td>
+
+            <td>You can set custom HTML to the itemTemplate option and each bound item uses the template to display its data. Images and custom layouts can be displayed for each item.</td>
+        </tr>
+    </tbody>
+</table>
+
+###Template selection chart
+
+The table below maps some of your possible needs to the appropriate templates.
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>If you need to</th>
+			<th>Then use this template:</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Display a header at the top of the dropdown list</td>
+			<td>headerTemplate</td>
+		</tr>
+		<tr>
+			<td>Display a footer at the bottom of the dropdown list</td>
+			<td>footerTemplate</td>
+		</tr>
+		<tr>
+			<td>Display an image or icon for each item choice</td>
+			<td>itemTemplate</td>
+		</tr>
+		<tr>
+			<td>Show multiple pieces of information for each item in a custom layout</td>
+			<td>itemTemplate</td>
+		</tr>
+	</tbody>
+</table>
 
 
 ##<a id=""></a>Related Topics
