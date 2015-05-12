@@ -44,8 +44,9 @@ This topic contains the following sections:
 -   [Introduction](#introduction)
 -   [Enabling Load-on-Demand](#enabling-loadOnDemand)
 -   [Configuring Load-on-Demand](#configuring-LoadOnDemand)
--   [Code Example: Load-on-Demand](#code-example-load)
+-   [Code Example: Load-on-Demand, Paging and Header and Footer Templates](#code-example-load)
    -   [Description](#description)
+   -   [Footer template variables](#footer-template)
     -   [Code](#code)
 -   [Related Content](#related-content)
     -   [Topics](#topics)
@@ -110,11 +111,21 @@ The following table lists the configurable aspects of the `igCombo` control rega
 			<td>Sets the page size of the drop-down list</td>
 			<td>[loadOnDemandSettings.pageSize](%%jQueryApiUrl%%/ui.igcombo#options:loadOnDemandSettings.pageSize)</td>
 		</tr>
+		<tr>
+			<td>Drop-down list header</td>
+			<td>Sets the heading label of the drop-down list through a header template</td>
+			<td>[headerTemplate](%%jQueryApiUrl%%/ui.igcombo#options:headerTemplate)</td>
+		</tr>
+		<tr>
+			<td>Drop-down list footer</td>
+			<td>Sets the heading label of the drop-down list through a header template</td>
+			<td>[footerTemplate](%%jQueryApiUrl%%/ui.igcombo#options:footerTemplate)</td>
+		</tr>
 	</tbody>
 </table>
 
 
-##<a id="code-example-load"></a>Code Example: Load-on-Demand
+##<a id="code-example-load"></a>Code Example: Load-on-Demand, Paging and Header and Footer Templates
 
 
 ###<a id="description"></a> Description
@@ -122,6 +133,45 @@ The following table lists the configurable aspects of the `igCombo` control rega
 This example demonstrates how to configure the Load-on-Demand feature for a remote OData data source with a specific page size.
 
 The code instantiates an `igCombo` control over an already created HTML input tag with id equal to “combo”. On initialization the code sets page size of 25 items for the drop-down list (pageSize: 25). The `responseDataKey`, `responseTotalRecCountKey` and `dataSource` options are assigned values that direct the combo to load the drop-down list by making a query to the specified URL and use d.results.Results and d.results.Count members of the returned JSON object.
+
+The `headerTemplate` option is assigned a string that represents an HTML code and is rendered at the top of the drop-down list. This is usually single tag possibly formatted with a `CSS` class as in the example (class=”boxed”) but may be a more complex HTML code.
+
+The `footerTemplate` option is assigned a string that represents an HTML code and allows some predefined variables to be substituted at run-time, i.e. it acts like a template. The string assigned to that option is processed to substitute variables and rendered at the bottom of the drop-down list.
+
+###<a id="footer-template"></a> Footer template variables
+
+The following table lists the available footer template variables.
+<table class="table">
+	<thead>
+		<tr>
+			<th>Description</th>
+			<th>Short Name</th>
+			<th>Alternative ASP.NET MVC Helper Syntax</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Number of records in igCombo (view of dataSource)</td>
+			<td>{0}</td>
+			<td>ComboModel.RECORDS_VIEW</td>
+		</tr>
+		<tr>
+			<td>Number of records in dataSource</td>
+			<td>{1}</td>
+			<td>ComboModel.RECORDS_DATA</td>
+		</tr>
+		<tr>
+			<td>Number of (filtered) records on server</td>
+			<td>{2}</td>
+			<td>ComboModel.RECORDS_SERVER</td>
+		</tr>
+		<tr>
+			<td>Number of all records on server</td>
+			<td>{3}</td>
+			<td>ComboModel.RECORDS_SERVER_TOTAL</td>
+		</tr>
+	</tbody>
+</table>
 
 ###<a id="code"></a> Code
 
@@ -137,7 +187,9 @@ $("#combo").igCombo({
 	responseTotalRecCountKey : "d.results.Count",
     dataSource: 'http://igniteui.com/api/products?&callback=?',
     textKey: "ProductName",
-    valueKey: "ID"
+    valueKey: "ID",
+	headerTemplate: '<div class="boxed">Available Products</div>',
+    footerTemplate: '<div class="boxed">Product Count: {0} of {3}</div>'
 });
 ```
 
@@ -147,12 +199,14 @@ $("#combo").igCombo({
 <%=
     Html.Infragistics().Combo()
         .ID("combo")
-        .DataSource("http://odata.netflix.com/Catalog/Titles?$format=json&$callback=?")
-        .ResponseDataKey("d.results")
+        .DataSource("http://igniteui.com/api/products?&callback=?")
+        .ResponseDataKey("d.results.Results")
 		.ResponseTotalRecCountKey("d.results.Count")
         .TextKey("ProductName")
         .ValueKey("ID")
         .LoadOnDemandSettings(load => load.Enabled(true).PageSize(25))
+		.HeaderTemplate("<div class='boxed'>Available Movies</div>")
+        .FooterTemplate("<div class='boxed'>Movie Count: {0} of {3}</div>")
         .Render()
 %>
 ```
