@@ -24,6 +24,8 @@ The `igTreeGrid` extends the [`igGrid`](igGrid-Overview.html "igGrid Overview") 
 	- [Paging](#paging)
 	- [Filtering](#filtering)
 	- [Updating](#updating)
+	- [Resizing](#resizing)
+	- [Column Moving](#columnMoving)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
     -   [Samples](#samples)
@@ -139,6 +141,10 @@ The Filtering feature in the `igTreeGrid` is applied on the entirety of the colu
 The extended Updating feature adds support for hierarchy within a single grid, maintains functionality such as inline editing experience or row edit template and takes advantage of the to the underlying [`igTreeHierarchicalDataSource`](%%jQueryApiUrl%%/ig.treehierarchicaldatasource).
 
 **Related topic:** [Updating (igTreeGrid)](igTreeGrid-Updating.html)
+
+### <a id="resizing"></a> Resizing
+
+
 
 
 ## <a id="related-content"></a> Related Content
