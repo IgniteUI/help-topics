@@ -144,11 +144,8 @@ The extended Updating feature adds support for hierarchy within a single grid, m
 
 ### <a id="resizing"></a> Resizing
 
-The Column Resizing feature allows the user to change the width of the tree grid’s columns by extending the functionality of the igGrid's Resizing feature.
 
-### <a id="columnMoving"></a> Column Moving
 
-The Column Moving feature allows reordering of the tree grid’s columns via the tree grid's interface or programmatically through the TreeGridColumnMoving API. This feature extends the igGrid's ColumnMoving feature.
 
 ## <a id="related-content"></a> Related Content
 
