@@ -22,6 +22,7 @@ The following lists the concepts, topics, and articles required as a prerequisit
 ## In this topic
 
 -	UploadProgressManager and Server Events
+-	Sending additional data between the client and server
 -	Walkthrough: Server-side validation in MVC
 
 ## UploadProgressManager and Server Events
@@ -178,12 +179,82 @@ AddFinishedUploadEventHandler | UploadFinished | `UploadProgressManager .Instanc
 
 **Note:** It's a common error to attach to `igUpload` server-side events in a controller action. Since controller actions can be invoked multiple times during the application lifecycle this will result in single event handler attached multiple times (usually you'll want to attach to a server-side event only once.). It is recommended that you handle server-side events in the application start logic in the Global.asax file of a MVC project.
 
-##Walkthrough: Server-side validation in MVC
+##  Sending additional data between the client and server during file uploading
 
-###Introduction
+In some cases you may want to transfer additional custom data related to the uploaded file from the server to the client or vice versa.
+
+For instance you may want to apply some custom file validation on the server and display that result on the client or display some other custom message once the file uploading is complete. Or you may want to send some additional data from the client-side that is relevant to the file that’s being uploaded (security GUID, client-side input field, etc.) and would like to have access to that data on the related server-side events.
+
+The following sections will explain in details the way to achieve this in the `igUpload`.
+
+### Sending additional data from the server to the client
+
+To add a custom message you can use the `UploadStarting`, `UploadFinishing` and `UploadFinished` event argument `ServerMessage`.
+
+**In C#**
+
+```
+public static void igUpload_UploadStarting(object sender, Infragistics.Web.Mvc.UploadStartingEventArgs e){          
+              e.ServerMessage = "Upload of " + e.FileName + " started.";   
+        }
+        
+public static void igUpload_UploadFinishing(object sender, Infragistics.Web.Mvc.UploadFinishingEventArgs e){          
+        }
+        
+public static void igUpload_UploadFinished(object sender, Infragistics.Web.Mvc.UploadFinishedEventArgs e){          
+            	e.ServerMessage = "Upload of " + e.FileName + "is finished.";   
+        }           
+```
+This value can then be retrieved on the client-side on the related client-side events- [`fileUploading`](%%jQueryApiUrl%%/ui.igupload#events:fileUploading) and [`fileUploaded`](%%jQueryApiUrl%%/ui.igupload#events:fileUploaded). The  `uploadInfo` event argument contains the additional file information, including the serverMessage value send from the server.
+
+**In JavaScript:**
+
+```
+$(function(){
+        $("#upload1").on("iguploadfileuploading", function (evt, ui) {
+			alert(ui.fileInfo.serverMessage);
+        });  
+    
+        $("#upload1").on("iguploadfileuploaded", function (evt, ui) {
+			alert(ui.fileInfo.serverMessage);
+        });
+        
+     });
+
+```
+
+### Sending additional data from the client to the server
+
+In order to add additional data to the request you can use the [`onFormDataSubmit`](%%jQueryApiUrl%%/ui.igupload#events:onFormDataSubmit) client-side event to add additional data to the request. The [`addDataField`](%%jQueryApiUrl%%/ui.igupload#methods:addDataField) and [`addDataFields`](%%jQueryApiUrl%%/ui.igupload#methods:addDataFields) methods can be used to add the additional parameters.
+
+**In JavaScript:**
+
+```
+ $("#upload1").on("iguploadonformdatasubmit", function (evt, ui) {
+            $("#upload1").igUpload("addDataField", ui.formData, { "name": "Parameter Name", "value": "Value" });
+        });
+```
+To get the data on the server-side you can use the `UploadStarting`,`UploadFinishing` and `UploadFinished`’s `AdditionalDataFields` event argument, which will contain a collection of the field name and value passed from the server.
+
+**In C#:**
+
+```
+public static void igUpload_UploadStarting(object sender, Infragistics.Web.Mvc.UploadStartingEventArgs e){          
+       foreach (var dataField in e.AdditionalDataFields)
+	   {
+		   string fieldName = dataField.Name;
+		   string fieldValue = dataField.Value;
+	   } 
+   }
+```
+
+
+## Walkthrough: Server-side validation in MVC
+
+### Introduction
 This procedure guides you through the process of implementing custom validation on the server-side for the `igUpload`.
 
-###Requirements
+### Requirements
 To complete this procedure you need to follow the steps defined in the [igUpload Overview](igUpload-Overview.html) topic:
 
 
@@ -192,7 +263,7 @@ To complete this procedure you need to follow the steps defined in the [igUpload
 
 After following those steps you’ll have a basic upload control in your MVC application.
 
-###Steps
+### Steps
 
 **Step 1.** Register `igUpload`‘s server-side event handler for the UploadStarting event.
 
