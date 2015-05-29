@@ -199,6 +199,7 @@ public static void igUpload_UploadStarting(object sender, Infragistics.Web.Mvc.U
         }
         
 public static void igUpload_UploadFinishing(object sender, Infragistics.Web.Mvc.UploadFinishingEventArgs e){          
+             e.ServerMessage = "Upload of " + e.FileName + "is about to finish.";   
         }
         
 public static void igUpload_UploadFinished(object sender, Infragistics.Web.Mvc.UploadFinishedEventArgs e){          
@@ -222,6 +223,7 @@ $(function(){
      });
 
 ```
+>**Note:** If you wish to pass more complex data, you can pass it in JSON format as part of the e.ServerMessage string and deserialize it on the client-side.
 
 ### Sending additional data from the client to the server
 
