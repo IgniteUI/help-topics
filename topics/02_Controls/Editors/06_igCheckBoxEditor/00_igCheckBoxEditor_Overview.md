@@ -52,7 +52,7 @@ As the user interacts with the control the visual appearance is updated to give 
 
 	**In HTML:**
    	```html
-    <input id="checkBoxEditor"  type="text"/>
+    <input id="checkBoxEditor" />
 	```
 
 4.  Once the above setup is complete, initialize the check box editor. 
