@@ -104,7 +104,7 @@ $('#checkInput').igCheckboxEditor({
 **In HTML:**
 
 ```html
-<input id="checkBoxEditor" name="chkAgreeTerms" value: "Agree" checked/>
+<input id="checkBoxEditor" name="chkAgreeTerms" value="Agree" checked/>
 ```
 
 ## Related Links
