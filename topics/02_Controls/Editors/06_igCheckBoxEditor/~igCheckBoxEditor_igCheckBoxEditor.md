@@ -12,7 +12,7 @@
 
 ### Introduction
 
-The `igCheckBoxEditor` is a control that permits users to make a binary choice between one or multiple mutually exclusive options. It works as a two-way toggle, where one state reflects the checked solution and the other 
+The `igCheckBoxEditor` is a control that permits users to make a binary choice between one or multiple mutually exclusive options and allows the user to submit the check box value to the server. It works as a two-way toggle, where one state reflects the checked solution and the other 
 the unchecked one.
 
 ### Topics
