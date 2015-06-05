@@ -91,18 +91,21 @@ In this section we are going to pay attention to some of specific options for th
 Lets start with the value option. The `value` option sets the value of the input that is going to be used, when the form is submitted. What is more if this option is not set then the check box editor  begins to behave as a binary control with two states - true and false, depending on the check state.
 
 Another property worth to mention is the `inputName`. If you don't set this property then the widget can be use only as a simple binary editor, but if you want to use the control in a submitting form a name attribute is required. There are two ways to set the name attribute. You can either use the `inputName` property or you can set the name attribute in the INPUT DOM element.
-	**In Javascript:**
+
+**In Javascript:**
+	
 ```js
 $('#checkInput').igCheckboxEditor({
-	checked: true,
 	inputName: "chkAgreeTerms",
-	value: "Agree"
+	value: "Agree",
+	checked: true
 });
 ```
-	**In HTML:**
-   	```html
-    <input id="checkBoxEditor" name="chkAgreeTerms" value: "Agree" checked/>
-	```
+**In HTML:**
+
+```html
+<input id="checkBoxEditor" name="chkAgreeTerms" value: "Agree" checked/>
+```
 
 ## Related Links
 
