@@ -233,7 +233,7 @@ The following samples provide additional information related to this topic.
 
 -	[Virtualization](%%SamplesUrl%%/combo/virtualization):This sample demonstrates how enabling UI virtualization allows the `igCombo` control to quickly and efficiently render large amounts of data in the combo.
 
--	 [Filtering](%%SamplesUrl%%/combo/filtering):This sample demonstrates how the dropdown list of the `igCombo` control can be filtered based off of the input value. The auto-suggest and autocomplete functionalities are also supported.
+-	 [Filtering](%%SamplesUrl%%/combo/filtering):This sample demonstrates how the dropdown list of the `igCombo` control can be filtered based off of the input value. The auto-suggest and auto-complete functionalities are also supported.
 
 
 
