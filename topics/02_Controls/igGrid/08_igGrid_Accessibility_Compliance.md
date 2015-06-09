@@ -3,7 +3,7 @@
 {
     "fileName": "iggrid-accessibility-compliance",
     "controlName": "igGrid",
-    "tags": ["Grids","Section 508"]
+    "tags": ["Grids","Section 508","WAI-ARIA"]
 }
 |metadata|
 -->
@@ -80,6 +80,7 @@ The list below provides details about what changes have been made to the igGrid 
 <li>All elements of the igGrid render a <b>tabindex</b> attribute with a corresponding value from the <b>tabindex</b> option of the igGrid, which allows access to the elements through the use of TAB and SHIFT+TAB keys.</li>
 <li>The igGrid is decorated with a <b>grid</b> role.</li>
 <li> The header elements are each decorated with an <b>aria-label</b> attribute with the column header text, which allows the header text to be read instead of the <b>title</b> attribute value when a <b>title</b> attribute is present.</li>
+<li> All column headers are decorated with the <b>columnheader</b> role.</li>
 <li> The thead, tbody, and tfoot elements are all decorated with a <b>rowgroup</b> role</li>
 <li> The rows are decorated with a <b>row</b> role.</li>
 <li> Row selector elements are decorated with a <b>rowheader</b> role.</li>
@@ -87,5 +88,5 @@ The list below provides details about what changes have been made to the igGrid 
 <li> Table cell elements inside of the table body rows are decorated with <b>aria-describedby</b> attributes with a value set to the <b>id</b> of the corresponding columnheader element of the column the table cell belongs to. </li>
 <li> Table cell elements inside of the table body rows are decorated with <b>aria-selected</b> attributes when the selection feature is enabled. By default the value of the <b>aria-selected</b> will be <b>false</b> unless a row is selected initially in configuration.</li>
 <li> The table is decorated with an <b>aria-multiselectable</b> attribute when the selection feature is enabled. The value of this attribute depends on the value of the <b>multipleSelection</b> option of the selection feature.</li>
-<li> The igHierarchicalGrid's expandable row cell elements in the table body are decorated with <b>aria-expanded</b> attributes with a value corresponding to the expanded state.</li>
+<li> Checkboxes are decorated with the <b>checkbox</b> role and <b>aria-checked</b> attribute. In addition, checkboxes are decorated with the <b>aria-title</b> attribute which corresponds to the related column header.</li>
 </ul>
