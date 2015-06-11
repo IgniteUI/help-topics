@@ -77,9 +77,6 @@ Features inherited directly (extended without modifications) from the `igGrid` b
 
 While some feature might be successfully enabled for the `igTreeGrid`, some of them might not behave as expected, therefore they are considered as not yet supported and include the following:
 
-- Column Moving
-- Row Selectors
-- Resizing
 - Summaries
 - Column Grouping
 
@@ -94,40 +91,9 @@ While some feature might be successfully enabled for the `igTreeGrid`, some of t
 
 ### <a id="paging"></a> Paging
 
-Because of the extra hierarchy levels introduced in the data, paging has additional [`mode`](%%jQueryApiUrl%%/ui.igtreegridpaging#options:mode) options which by default operate on root level records. The visible records rendered per page in the grid will vary considerably depending on the  expansion state of root records, number of children and hierarchy depth. Meanwhile, page numbers will remain consistent.
+The Paging feature for the igTreeGrid is extended from the igGridPaging feature and is customized to present hierarchical data. It includes additional options and methods specific for the igTreeGrid. 
 
-In the following examples `flatDS` in an array with only **4 root-level nodes**:
-
-```js
-$("#treegrid").igTreeGrid({
-	dataSource: flatDS,
-	primaryKey: "employeeID",
-	foreignKey: "PID", 
-	features: [{
-		name: 'Paging',
-		mode: 'rootLevelOnly'
-	}]
-});
-```
-
-![igTreeGrid root only paging](images/igtreegrid-paging-rootlevelonly.png "Tree Grid with paging mode 'rootLevelOnly'")
-
-To apply paging to all visible records set `mode` equal to `allLevels`. This mode setting applies paging to all visible records regardless of their position in the data. The `allLevels` mode makes the paging controls dynamic. For instance the number of pages available changes as rows are expanded and collapsed.
-
-```js
-$("#treegrid").igTreeGrid({
-	dataSource: flatDS,
-	primaryKey: "employeeID",
-	foreignKey: "PID", 
-	features: [{
-		name: 'Paging',
-		mode: 'allLevels'
-	}]
-});
-```
-
-![igTreeGrid all levels paging](images/igtreegrid-paging-alllevels.png "Tree Grid with paging mode 'allLevels'")
-
+**Related topic:** [Paging (igTreeGrid)](igTreeGrid-Paging.html)
 
 ### <a id="filtering"></a> Filtering
 
