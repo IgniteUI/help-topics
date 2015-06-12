@@ -28,9 +28,9 @@ Due to the hierarchical representation of the data in the igTreeGrid there are t
 
 ## <a id="paging-modes"></a> Paging Modes
 
-Paging has additional [`mode`](%%jQueryApiUrl%%/ui.igtreegridpaging#options:mode) options which by default operate on root level records. The visible records rendered per page in the grid will vary considerably depending on the  expansion state of root records, number of children and hierarchy depth. Meanwhile, page numbers will remain consistent.
+Paging has additional [`mode`](%%jQueryApiUrl%%/ui.igtreegridpaging#options:mode) option which by default is set to operate only on root level records. In the default mode changing the visible rows by expanding or collapsing rows will not affect the page count.
 
-In the following examples `flatDS` in an array with only **4 root-level nodes**:
+In the following examples `flatDS` in an array with only **4 root-level rows**:
 
 ```js
 $("#treegrid").igTreeGrid({
@@ -105,10 +105,10 @@ Both of the following examples are valid ways to modify the context row's conten
 
 Via returning a custom string:
 ```js
-renderContextRowFunc: function(dataRow, $textArea, parents, mode){
-        var contextRowText= "<div>";
-        $(parents).each(function(index){
-        contextRowText +="<div> Parent "+ index +" :"+ this.row["firstName"] + " " + this.row["lastName"] +"</div>";
+renderContextRowFunc: function(dataRow, $textArea, parents, mode) {
+        var contextRowText = "<div>";
+        $(parents).each(function(index) {
+			contextRowText += "<div> Parent " + index + " :" + this.row["firstName"] + " " + this.row["lastName"] + "</div>";
         });
         contextRowText += "</div>";
         return contextRowText;
@@ -116,14 +116,14 @@ renderContextRowFunc: function(dataRow, $textArea, parents, mode){
 ```
 Via directly modifying the textArea content:
 ```js
-renderContextRowFunc: function(dataRow, $textArea, parents, mode){
-        var contextRowText= "<div>";
-        $(parents).each(function(index){
-        contextRowText +="<div> Parent "+ index +" :"+ this.row["firstName"] + " " + this.row["lastName"] +"</div>";
+renderContextRowFunc: function(dataRow, $textArea, parents, mode) {
+        var contextRowText = "<div>";
+        $(parents).each( function(index) {
+			contextRowText += "<div> Parent "+ index + " :" + this.row["firstName"] + " " + this.row["lastName"] + "</div>";
         });
         contextRowText += "</div>";				
 		$textArea.html(contextRowText);
-					} 
+} 
  ```
 And lead to the same result.
 
