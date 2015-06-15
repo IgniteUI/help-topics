@@ -62,7 +62,6 @@ $('#checkInput').igCheckboxEditor({
 
 ![](images/igCheckBoxEditor_custom_icon.png)
 
-
 ## Changing the size of the editor
 
 ### Size Property
@@ -95,6 +94,16 @@ $('#checkInput').igCheckboxEditor({
 	width: 60, 
 	height: 60
 });
+```
+
+You can set the dimensions through CSS. Using this approach will allow you to apply additional CSS rules.
+
+**CSS**
+```css
+.ui-checkbox-container {
+	width: 60;
+	height: 60;
+}
 ```
 
 ![](images/igCheckBoxEditor_custom_size.png)
