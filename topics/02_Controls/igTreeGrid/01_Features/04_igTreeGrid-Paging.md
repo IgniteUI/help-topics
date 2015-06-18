@@ -9,27 +9,34 @@
 -->
 
 # Paging (igTreeGrid)
-The Paging feature for the igTreeGrid is extended from the igGridPaging feature and is customized to present hierarchical data while also including additional API options and methods specific to the igTreeGrid.
-Due to the extra hierarchy levels additional paging modes are added as well as ways to present the parent row context of the currently visible child rows.
+The Paging feature for the igTreeGrid is extended from the igGrid Paging feature and is customized to present hierarchical data while also including additional API options and methods specific to the igTreeGrid.
 
 ### In this topic:
 
 - [**Introduction**](#introduction)
 - [**Paging Modes**](#paging-modes)
+    - [Root level paging](#paging-mode-root-level)
+    - [All levels paging](#paging-mode-all-levels)
 - [**Context Row**](#context-row)
+    - [No context row (default)](#context-row-none)
+    - [Parent context row](#context-row-parent)
+    - [Breadcrumb context row](#context-row-breadcrumb)
+    - [Custom context row rendering](#context-row-custom-rendering)
 - [**Related Content**](#related-content)
     - [Topics](#topics)
     - [Samples](#samples)
 
 
 ## <a id="introduction"></a> Introduction
-
-Due to the hierarchical representation of the data in the igTreeGrid there are two possible paging modes that operate either on the root level of data or on all data levels. When paging operates on the root level only the root rows are paged, the child rows do not affect paging. When paging operates on all levels the grid is paged based on all visible rows. Expanding and collapsing rows in that mode will affect the current page count and rendered rows. 
+Due to the nature of displaying hierarchical data additional paging modes are added as well as a way to present the parent-child context of the current and previous pages.
 
 ## <a id="paging-modes"></a> Paging Modes
+In the igTreeGrid there are two possible paging modes that operate either on the root level of data or on all data levels.  
 
-Paging has additional [`mode`](%%jQueryApiUrl%%/ui.igtreegridpaging#options:mode) option which by default is set to operate only on root level records. In the default mode changing the visible rows by expanding or collapsing rows will not affect the page count.
+Paging [`mode`](%%jQueryApiUrl%%/ui.igtreegridpaging#options:mode) option controls that functionality and by default is set to operate only on root level records. In the default mode changing the visible rows by expanding or collapsing rows will not affect the page count.
 
+### <a id="paging-mode-root-level"></a> Root level paging
+When paging operates on the root level only the root rows are paged and child rows do not affect paging. Expanding a root row will render all its children in the current page.
 In the following examples `flatDS` in an array with only **4 root-level rows**:
 
 ```js
@@ -45,6 +52,8 @@ $("#treegrid").igTreeGrid({
 ```
 
 ![igTreeGrid root only paging](images/igtreegrid-paging-rootlevelonly.png "Tree Grid with paging mode 'rootLevelOnly'")
+
+### <a id="paging-mode-all-levels"></a> All levels paging
 
 To apply paging to all visible records set `mode` equal to `allLevels`. This mode setting applies paging to all visible records regardless of their position in the data. The `allLevels` mode makes the paging controls dynamic. For instance the number of pages available changes as rows are expanded and collapsed.
 
@@ -67,15 +76,20 @@ $("#treegrid").igTreeGrid({
 For scenarios where the child data flows to the next page (when paging mode is set to "allLevels") and context needs to be introduced for the child level row, the TreeGridPaging feature introduces an additional [contextRowMode](%%jQueryApiUrl%%/ui.igtreegridpaging#options:contextRowMode) option that allows rendering of a context row below the grid headers that contains information on the parent row(s) of the current child level row.
 There are three possible modes to choose from: "none", "parent" and "breadcrumb".
 
+### <a id="context-row-none"></a> No context row (default)
 By default the option is set to "none", in which case no context row is rendered.
 
 ![igTreeGrid no context row](images/igtreegrid-paging-contextRow-none.png "Tree Grid with contextRowMode 'none'")
 
 As you can see from the screenshot the row at the top is a child row, however its related parent is on the previous page. With this mode there's no way to determine which is the parent row from the context of the current page.
 
+### <a id="context-row-parent"></a> Parent context row
+
 When contextRowMode is set to "parent" a context row will be displayed containing information on the immediate parent row. This mode is useful if the hierarchy isn't too deep and the immediate parent would give enough context for the child row(s). 
 
 ![igTreeGrid parent context row](images/igtreegrid-paging-contextRow-parent.png "Tree Grid with contextRowMode 'parent'")
+
+### <a id="context-row-breadcrumb"></a> Breadcrumb context row
 
 To give better context for more complex hierarchies the "breadcrumb" mode can be used. It will render the full path through the ancestors to the current child row. By default the primary key values will be used to build the breadcrumb path to the current row.
 
@@ -86,6 +100,8 @@ There are additional options that allow modification of the displayed breadcrumb
 [breadcrumbKey](%%jQueryApiUrl%%/ui.igtreegridpaging#options:breadcrumbKey) - sets the column key of ancestor to be shown in the breadcrumb trail. By default uses the primary key column.
 
 [breadcrumbDelimiter](%%jQueryApiUrl%%/ui.igtreegridpaging#options:breadcrumbKey) - sets the delimiter between ancestors in the breadcrumb trail. By default is ' &gt; '.
+
+### <a id="context-row-custom-rendering"></a> Custom context row rendering
 
 The whole context row rendering can be handled manually using the [renderContextRowFunc](%%jQueryApiUrl%%/ui.igtreegridpaging#options:renderContextRowFunc) option, which allows setting a custom function to handle the rendering of the context row.
 
@@ -136,3 +152,4 @@ And lead to the same result.
 
 ### <a id="samples"></a> Samples
 -	[igTreeGrid Remote Features](%%SamplesUrl%%/tree-grid/remote-features)
+-	[igTreeGrid Paging](%%SamplesUrl%%/tree-grid/paging)
