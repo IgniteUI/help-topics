@@ -70,7 +70,7 @@ When the control's scripts are changing the page markup, the new created content
 			</td>
 
             <td>
-                When igDateEditor is on focus(edit mode) keyboard navigation is availabe. See the
+                When `igTextEditor` is on focus(edit mode) keyboard navigation is availabe. See the
 [Editors Keyboard Navigation topic](Editors-Keyboard-Navigation.html) for a detailed list of available key operations and their respective action.
 
             </td>
