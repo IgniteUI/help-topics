@@ -22,39 +22,13 @@ To meet the requirements each accessibility rule, in some cases, you may need to
 
 Table 1: Section 508 compliance description
 
-<table class="igbluetablenowidth" class="table table-striped">
-    <tbody>
-        <tr>
-            <th>Rules</th>
+Rules|How We Comply with Rules
+---|---
+(c)|Using client side events, the user can change attributes of any of the control's DOM element reflecting the current state.
+(d)|The control's markup is readable without the associated style sheet because it’s a client-side control and depends on the CSS rules.
+(l)|When the control's scripts are changing the page markup, the new created content complies with the screen reader due to the attributes described in rule (c).
+(n)|[Keyboard Navigation (igNumericEditor)](igNumericEditor-Keyboadr-Navigation.html)</td>
 
-            <th>How We Comply with Rules</th>
-        </tr>
-
-        <tr>
-            <td>(c)</td>
-
-            <td>Using client side events, the user can change attributes of any of the control's DOM element reflecting the current state.</td>
-        </tr>
-
-        <tr>
-            <td>(d)</td>
-
-            <td>The control's markup is readable without the associated style sheet because it’s a client-side control and depends on the CSS rules.</td>
-        </tr>
-
-        <tr>
-            <td>(l)</td>
-
-            <td>When the control's scripts are changing the page markup, the new created content complies with the screen reader due to the attributes described in rule (c).</td>
-        </tr>
-
-        <tr>
-            <td>(n)</td>
-
-            <td>[Keyboard Navigation (igNumericEditor)](igNumericEditor-Keyboadr-Navigation.html)</td>
-        </tr>
-    </tbody>
-</table>
 
  
 
