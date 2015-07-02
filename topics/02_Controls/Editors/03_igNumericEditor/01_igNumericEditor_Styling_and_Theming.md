@@ -11,99 +11,39 @@
 # igNumericEditor Styling and Theming
 
 
+The `igNumericEditor` control is jQuery-based with a number of options for styling. To customize style of the numeric editor you can use different themes or apply custom CSS rules to the control. 
 
-##igNumericEditor Styling and Theming
+The Ignite UI package comes with a number of jQuery UI and Bootstrap themes. Bootstrap support also includes generating and customizing your own bootstrap themes - see [Styling and Theming](Deployment-Guide-Styling-and-Theming.html) for details. All of the themes will style all controls including the editors on the page.
 
+## Using ThemeRoller
 
-The `igNumericEditor` control is jQuery-based widget that extends the `igEditor` control and it exposes a number of options for styling. To customize style of the numeric editor you must use theme option to apply custom CSS rules to the control.
+As the `igNumericEditor` control uses the jQuery UI CSS framewrok it can also be fully styled using the [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/) where you can customize your own theme or choose from a gallery of available ones. These themes replace the ones that come by default with Ignite UI.
 
-##Changing the Theme Programmatically
+Text editor with drop list using the UI Darkness theme:
 
+![](images/igNumericEditor_DarkenTheme.png)
 
-The following code listings are an example how to set a custom theme named, `customTheme`, when the mouse hovers over the control. Listing 2 demonstrates how to apply the theme during control initialization, while Listing 3 shows you how to apply the theme after the control is initialized. In either case the HTML from Listing 1 is required.
+## Custom styling
 
-###Listing 1: Base HTML structure CSS style for instantiating a numeric editor
+Your CSS may include style overrides for many more elements of the numeric editor. For a full list of available classes see the [API Reference Theming classes](%%jQueryApiUrl%%/ui.igTextEditor#theming). Styles can be applied both by overriding the global classes applied to all editors or by targeting specific elements by ID or other specific trait to allow for more per-control customization.
 
-**In HTML:**
+The default color for a negative value in the `igNumericEditor` is red. Here is an example how to change this color:
 
 ```html
-<style type="text/css">
-    .customTheme .ui-igedit-hover
-    {
-        background: #f0ffff;
-        border-color:#a0a0a0;
-    }
-    .customTheme .ui-igedit-fieldincontainer
-    {
-        height:18px;
-        float:left;
-        padding-top:0px;
-        padding-bottom:0px;
-        margin:0px;
-        color:#1CC2FF
-    }
+<style>
+.ui-igedit-negative
+{
+	color: #00aeef;
+}
 </style>
-<body>
-     <input type="text"  id="numericEditor"  />
-</body>
 ```
 
-To change the theme during initialization, use the approach shown in Listing 2.
+![](images/igNumericEditor_custome_color.png)
 
-###Listing 2: Set editor theme during initialization
-
-**In Javascript:**
-
-```js
-$('#numericEditor').igNumericEditor({
-    width: 160,
-       dataMode: 'int',
-       theme: 'customTheme'
-});
-```
-
-If the control is already created in the DOM, then you can change the theme at any time using the approach shown in Listing 3.
-
-###Listing 3: Set editor theme after initialization
-
-jQueryUI – Set the theme option after init.
-```
-$('#numericEditor').igNumericEditor ('option', 'theme', 'customTheme');
-```
-For the full list of supported customizable CSS classes please visit [CSS Classes List](%%jQueryApiUrl%%/ui.igNumericEditor#!theming).
-
-##Using ThemeRoller
-
-The `igNumericEditor` control can also be fully styled using the [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/). Listing 4 demonstrates how to change the theme of a control from a Theme Switcher dropdown.
-
-###Listing 4: Set editor theme with jQuery UI ThemeRoller
-
-**In HTML:**
-
-```html
-<body>
-     <input type="text"  id="numericEditor"  />
-     <div id="themeRoller"></div>
-</body>
-```
-
-**In C#:**
-
-```csharp
-$('#numericEditor').igNumericEditor({
-     width: 160,
-     dataMode: 'int',
-     listItems: ['1234', '2567', '3367', '2578', '5373567', '623475245742'],
-     button: 'dropdown'
- });
-```
-
-##Related Topics
+## Related Topics  
 
 -   [igNumericEditor Overview](igNumericEditor-Overview.html)
--   [igNumericEditor Known Issues](igNumericEditor-Known-Issues.html)
 
- 
 
  
 
