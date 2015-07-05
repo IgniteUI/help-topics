@@ -27,3 +27,12 @@ Option| Previously| Now
 ---|---|---
 animationHideDuration animationShowDuration|Used to set animation duration when drop-down list is displayed/hidden.|These options are removed. New option [dropDownAnimationDuration](#dropDownAnimationDuration) is added to control the drop-down list animation duration.
 button|-|This option is renamed to `buttonType` to better communicate what it does.
+dataMode|-|Members of type 'number' are removed.
+decimalSeparator|-|This option is renamed to `numericDecimalSeparator` to better communicate what it does.
+display|-|This option is removed.
+dropDownOnReadOnly|-|This option is removed. If `readOnly` is set to `true` the drop-down list cannot be displayed.
+dropDownTriggers|-|This option is removed.
+focusOnSpin|-|This option is removed. Now if the editor is not focused, then a mouse click on the spin button will not focus the editor.
+groups|-|This option is renamed to `numericGroups` to better communicate what it does. Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+groupSeparator|-|This option is renamed to `numericGroupSeparator` to better communicate what it does. Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+height|Previously supported type `number`.|Now supported values are: `number`, `string`, `null`. If using type `string`, The height can be set in pixels (px) and percentage (%).
