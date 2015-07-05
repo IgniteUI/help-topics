@@ -26,3 +26,4 @@ This topic contains the following sections:
 Option| Previously| Now
 ---|---|---
 animationHideDuration animationShowDuration|Used to set animation duration when drop-down list is displayed/hidden.|These options are removed. New option [dropDownAnimationDuration](#dropDownAnimationDuration) is added to control the drop-down list animation duration.
+button|-|This option is renamed to `buttonType` to better communicate what it does.
