@@ -40,3 +40,14 @@ hideEnterKey|-|This option is removed.
 listColumns|-|This option is removed.
 listDropDownAsChild |Value `true` created html element for list as a child of main html element. Value `false` created list as a child of body.|Renamed to `dropDownAttachedToBody`. Value `true` creates list as a child of body. Value `false` will create html element for list as a child of main html element. 
 listMaxHeight|-|This option is removed.
+maxDecimals minDecimals|-|These options are renamed to `numericMaxDecimals` and `numericMinDecimals` to better communicate what they do.
+negativePattern|-|This option is renamed to `numericNegativePattern` to better communicate what it does.
+nullable|-|This option is renamed to `allowNullValue` to better communicate what it does.
+nullText|-|This option is renamed to `placeHolder` to better communicate what it does.
+renderInContainer|-|This option is removed.
+required|-|This option is removed.
+selectionOnFocus|Previously supported members: `select`, `-1`, `start`, `0`, `end`, `1`, `default`, `2`.|Now supported members are: `selectAll`, `atStart`, `atEnd`, `browserDefault`. The default value is `selectAll`.
+spinOnReadOnly|-|This option is removed. Setting `readOnly` to `true` disables the spin buttons.
+textAlign|Default was `null`|Now default is `left`.
+theme|-|This option is removed.
+validatorOptions |-|This option is removed.
