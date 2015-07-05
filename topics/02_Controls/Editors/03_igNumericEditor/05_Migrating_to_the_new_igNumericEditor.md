@@ -35,4 +35,8 @@ dropDownTriggers|-|This option is removed.
 focusOnSpin|-|This option is removed. Now if the editor is not focused, then a mouse click on the spin button will not focus the editor.
 groups|-|This option is renamed to `numericGroups` to better communicate what it does. Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
 groupSeparator|-|This option is renamed to `numericGroupSeparator` to better communicate what it does. Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
-height|Previously supported type `number`.|Now supported values are: `number`, `string`, `null`. If using type `string`, The height can be set in pixels (px) and percentage (%).
+height width|Previously supported type: `number`.|Now supported types are: `number`, `string`, `null`. If using type `string`, the height can be set in pixels (px) and percentage (%).
+hideEnterKey|-|This option is removed.
+listColumns|-|This option is removed.
+listDropDownAsChild |Value `true` created html element for list as a child of main html element. Value `false` created list as a child of body.|Renamed to `dropDownAttachedToBody`. Value `true` creates list as a child of body. Value `false` will create html element for list as a child of main html element. 
+listMaxHeight|-|This option is removed.
