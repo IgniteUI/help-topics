@@ -17,3 +17,12 @@ This topic aims to help with migration from old numeric editor to the new one. D
 
 ### In this topic
 This topic contains the following sections:
+
+1. [Options changes](#options_changes)
+
+<a name='options_changes'></a>
+### Options changes
+
+Option| Previously| Now
+---|---|---
+animationHideDuration animationShowDuration|Used to set animation duration when drop-down list is displayed/hidden.|These options are removed. New option [dropDownAnimationDuration](#dropDownAnimationDuration) is added to control the drop-down list animation duration.
