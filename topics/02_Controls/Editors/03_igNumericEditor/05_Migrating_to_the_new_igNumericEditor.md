@@ -20,6 +20,10 @@ This topic contains the following sections:
 
 1. [Options changes](#options_changes)
 2. [New options](#new_options)
+3. [API Methods changes](#methods_changes)
+4. [New API methods](#new_methods)
+5. [Event changes](#event_changes)
+6. [New events](#new_events)
 
 <a name='options_changes'></a>
 ### Options changes
@@ -63,5 +67,40 @@ listItemHoverDuration|<a name='listItemHoverDuration'></a>Use to set the hover/u
 visibleItemsCount|<a name='visibleItemsCount'></a>Use to set how many items should be shown at once: `$('#numericEditor').igNumericEditor({ listItems: [1, 2, 3, 4], visibleItemsCount: 2 }] })`.
 isLimitedToListValues|<a name='isLimitedToListValues'></a>Use to set the ability to allow values only set into the list items. This validation is done only when the editor is blured, or enter key is pressed: `$('#numericEditor').igNumericEditor({ listItems: [1, 2, 3, 4], isLimitedToListValues: true }] })`.
 revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key. If set to false clear is called: `$('#numericEditor').igNumericEditor({ listItems: [1, 2, 3, 4], isLimitedToListValues: true, revertIfNotValid: false }] })`.
-preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed.
+preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#numericEditor').igNumericEditor({ preventSubmitOnEnter: true }] })`.
 dropDownOrientation|<a name='dropDownOrientation'>Use to set drop down opening orientation for the dorp down list when open button is clicked: `$('#numericEditor').igNumericEditor({ listItems: [1, 2, 3, 4], dropDownOrientation: 'top' }] })`.
+
+<a name='methods_changes'></a>
+### API Methods changes
+
+Method| Previously| Now
+---|---|---
+
+<a name='new_methods'></a>
+### New API Methods
+
+Method|Description
+---|---
+
+<a name='event_changes'></a>
+### Event changes
+
+Event|Changes
+---|---
+hideDropDown|Event is not supported anymore. Two new events are introduced, giving you more control over hiding the drop-down list: [dropDownListClosing](#dropDownListClosing) and [dropDownListClosed](#dropDownListClosed).
+showDropDown|Event is not supported anymore. Two new events are introduced, giving you more control over showing the drop-down list: [dropDownListOpening](#dropDownListOpening) and [dropDownListOpened](#dropDownListOpened).
+listSelected|Event is renamed to `dropDownItemSelected` to better communicate what it does. Use `ui.owner` to obtain reference to igEditor. Use `ui.editorInput` to obtain reference to the editable input. Use `ui.list` to obtain reference to the list contaier. Use `ui.item` to obtain reference to the list item which is selected.
+listSelecting|Event is renamed to `dropDownItemSelecting` to better communicate what it does. Use `ui.owner` to obtain reference to igEditor. Use `ui.editorInput` to obtain reference to the editable input. Use `ui.list` to obtain reference to the list contaier. Use `ui.item` to obtain reference to the list item which is about to be selected.
+mouseleave|Event is renamed to `mouseout` to better communicate what it does.
+
+<a name='new_events'></a>
+### New events
+
+Event|Description
+---|---
+rendering|<a name='dropDownListOpening'></a>Event which is raised before rendering of the editor completes.
+rendered|<a name='rendered'></a>Event which is raised after rendering of the editor completes.
+dropDownListOpening|<a name='dropDownListOpening'></a>Event which is raised when the drop down is opening.
+dropDownListOpened|<a name='dropDownListOpened'></a>Event which is raised when the drop down is already opened.
+dropDownListClosing|<a name='dropDownListClosing'></a>Event which is raised when the drop down is closing.
+dropDownListClosed|<a name='dropDownListClosed'></a>Event which is raised when the drop down is already closed.
