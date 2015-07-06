@@ -26,28 +26,28 @@ This topic contains the following sections:
 Option| Previously| Now
 ---|---|---
 animationHideDuration animationShowDuration|Used to set animation duration when drop-down list is displayed/hidden.|These options are removed. New option [dropDownAnimationDuration](#dropDownAnimationDuration) is added to control the drop-down list animation duration.
-button|-|This option is renamed to `buttonType` to better communicate what it does.
-dataMode|-|Members of type 'number' are removed.
-decimalSeparator|-|This option is renamed to `numericDecimalSeparator` to better communicate what it does.
+button|This option was used to set visibility of spin and drop-down button.|This option is renamed to `buttonType` to better communicate what it does.
+dataMode|Members of type 'string' and 'number' were supported.|Members of type 'number' are not supported.
+decimalSeparator|This option set the character, which is used as decimal separator.|This option is renamed to `numericDecimalSeparator` to better communicate what it does.
 display|-|This option is removed.
-dropDownOnReadOnly|-|This option is removed. If `readOnly` is set to `true` the drop-down list cannot be displayed.
+dropDownOnReadOnly|This option was used to set ability to override the "readOnly" option and allow showing the drop-down list and changing the value in the editor from a list.|This option is removed. If `readOnly` is set to `true` the drop-down list cannot be displayed.
 dropDownTriggers|-|This option is removed.
-focusOnSpin|-|This option is removed. Now if the editor is not focused, then a mouse click on the spin button will not focus the editor.
-groups|-|This option is renamed to `numericGroups` to better communicate what it does. Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
-groupSeparator|-|This option is renamed to `numericGroupSeparator` to better communicate what it does. Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+focusOnSpin|If that option was disabled and the editor was not focused, then a mouse click on the spin button would keep the text in the editor in not focused format and perform spin actions.|This option is removed. Now if the editor is not focused, then a mouse click on the spin button will not focus the editor.
+groups|This was used to set the number of digits in integer part of number, which are divided into groups.|This option is renamed to `numericGroups` to better communicate what it does.
+groupSeparator|This was used to set the character, which is used as separator for groups.|This option is renamed to `numericGroupSeparator` to better communicate what it does.
 height width|Previously supported type: `number`.|Now supported types are: `number`, `string`, `null`. If using type `string`, the height can be set in pixels (px) and percentage (%).
 hideEnterKey|-|This option is removed.
 listColumns|-|This option is removed.
 listDropDownAsChild |Value `true` created html element for list as a child of main html element. Value `false` created list as a child of body.|Renamed to `dropDownAttachedToBody`. Value `true` creates list as a child of body. Value `false` will create html element for list as a child of main html element. 
 listMaxHeight|-|This option is removed.
-maxDecimals minDecimals|-|These options are renamed to `numericMaxDecimals` and `numericMinDecimals` to better communicate what they do.
-negativePattern|-|This option is renamed to `numericNegativePattern` to better communicate what it does.
-nullable|-|This option is renamed to `allowNullValue` to better communicate what it does.
-nullText|-|This option is renamed to `placeHolder` to better communicate what it does.
+maxDecimals minDecimals|These options were used to set the maximum/minimum number of decimal places which are used in no focus state.|These options are renamed to `numericMaxDecimals` and `numericMinDecimals` to better communicate what they do.
+negativePattern|This was used to set the pattern for negative numeric values.|This option is renamed to `numericNegativePattern` to better communicate what it does.
+nullable|This option was used to set ability to prevent null value.|This option is renamed to `allowNullValue` to better communicate what it does.
+nullText|Used to set text which appears in editor when editor has no focus and "value" in editor is null or empty string.|This option is renamed to `placeHolder` to better communicate what it does.
 renderInContainer|-|This option is removed.
 required|-|This option is removed.
 selectionOnFocus|Previously supported members: `select`, `-1`, `start`, `0`, `end`, `1`, `default`, `2`.|Now supported members are: `selectAll`, `atStart`, `atEnd`, `browserDefault`. The default value is `selectAll`.
-spinOnReadOnly|-|This option is removed. Setting `readOnly` to `true` disables the spin buttons.
+spinOnReadOnly|This was used to override the "readOnly" option and allow changing "value" of editor on spin events. |This option is removed. Setting `readOnly` to `true` disables the spin buttons.
 textAlign|Default was `null`|Now default is `left`.
 theme|-|This option is removed.
 validatorOptions |-|This option is removed.
