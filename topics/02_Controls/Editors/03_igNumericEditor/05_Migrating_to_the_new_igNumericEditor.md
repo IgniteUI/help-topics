@@ -19,6 +19,7 @@ This topic aims to help with migration from old numeric editor to the new one. D
 This topic contains the following sections:
 
 1. [Options changes](#options_changes)
+2. [New options](#new_options)
 
 <a name='options_changes'></a>
 ### Options changes
@@ -39,7 +40,7 @@ height width|Previously supported type: `number`.|Now supported types are: `numb
 hideEnterKey|-|This option is removed.
 listColumns|-|This option is removed.
 listDropDownAsChild |Value `true` created html element for list as a child of main html element. Value `false` created list as a child of body.|Renamed to `dropDownAttachedToBody`. Value `true` creates list as a child of body. Value `false` will create html element for list as a child of main html element. 
-listMaxHeight|-|This option is removed.
+listMaxHeight|Used to set maximum height of drop-down list in pixels.|This option is removed. You can use the new option [visibleItemsCount:](#visibleItemsCount) to set the number of visible list items.
 maxDecimals minDecimals|These options were used to set the maximum/minimum number of decimal places which are used in no focus state.|These options are renamed to `numericMaxDecimals` and `numericMinDecimals` to better communicate what they do.
 negativePattern|This was used to set the pattern for negative numeric values.|This option is renamed to `numericNegativePattern` to better communicate what it does.
 nullable|This option was used to set ability to prevent null value.|This option is renamed to `allowNullValue` to better communicate what it does.
@@ -51,3 +52,12 @@ spinOnReadOnly|This was used to override the "readOnly" option and allow changin
 textAlign|Default was `null`|Now default is `left`.
 theme|-|This option is removed.
 validatorOptions |-|This option is removed.
+
+<a name='new_options'></a>
+### New options
+
+Option| Description
+---|---
+disabled|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#numericEditor').igNumericEditor({ disabled: true }] })`.
+listItemHoverDuration|<a name='listItemHoverDuration'></a>Use to set the hover/unhover animation duration of items inside the drop-down list: `$('#numericEditor').igNumericEditor({ listItems: [1, 2, 3, 4], listItemHoverDuration: 400 }] })`.
+visibleItemsCount|<a name='visibleItemsCount'></a>Use to set how many items should be shown at once: `$('#numericEditor').igNumericEditor({ listItems: [1, 2, 3, 4], visibleItemsCount: 2 }] })`.
