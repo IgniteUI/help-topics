@@ -31,12 +31,12 @@ This topic contains the following sections:
 
 Option| Previously| Now
 ---|---|---
-animationHideDuration animationShowDuration|Used to set animation duration when drop-down list is displayed/hidden.|These options are replaced by new option `dropDownAnimationDuration` that controls the drop-down list animation duration.
-button|This option was used to set visibility of spin and drop-down button.|This option is renamed to `buttonType` to better communicate what it does.
+animationHideDuration animationShowDuration|Used to set animation duration when dropdown list is displayed/hidden.|These options are replaced by new option `dropDownAnimationDuration` that controls the dropdown list animation duration.
+button|This option was used to set visibility of spin and dropdown button.|This option is renamed to `buttonType` to better communicate what it does.
 dataMode|Members of type 'string' and 'number' were supported.|Members of type 'number' are not supported.
 decimalSeparator|This option set the character, which is used as decimal separator.|This option is renamed to `numericDecimalSeparator` to better communicate what it does.
 display|-|This option is removed.
-dropDownOnReadOnly|This option was used to set ability to override the "readOnly" option and allow showing the drop-down list and changing the value in the editor from a list.|This option is removed. If `readOnly` is set to `true` the drop-down list cannot be displayed.
+dropDownOnReadOnly|This option was used to set ability to override the "readOnly" option and allow showing the dropdown list and changing the value in the editor from a list.|This option is removed. If `readOnly` is set to `true` the dropdown list cannot be displayed.
 dropDownTriggers|-|This option is removed.
 focusOnSpin|If that option was disabled and the editor was not focused, then a mouse click on the spin button would keep the text in the editor in not focused format and perform spin actions.|This option is removed. Now if the editor is not focused, then a mouse click on the spin button will not focus the editor.
 groups|This was used to set the number of digits in integer part of number, which are divided into groups.|This option is renamed to `numericGroups` to better communicate what it does.
@@ -45,7 +45,7 @@ height width|Previously supported type: `number`.|Now supported types are: `numb
 hideEnterKey|-|This option is removed.
 listColumns|-|This option is removed.
 listDropDownAsChild |Value `true` created html element for list as a child of main html element. Value `false` created list as a child of body.|Renamed to `dropDownAttachedToBody`. Value `true` creates list as a child of body. Value `false` will create html element for list as a child of main html element. 
-listMaxHeight|Used to set maximum height of drop-down list in pixels.|This option is removed. You can use the new option [visibleItemsCount:](#visibleItemsCount) to set the number of visible list items.
+listMaxHeight|Used to set maximum height of dropdown list in pixels.|This option is removed. You can use the new option [visibleItemsCount:](#visibleItemsCount) to set the number of visible list items.
 maxDecimals minDecimals|These options were used to set the maximum/minimum number of decimal places which are used in no focus state.|These options are renamed to `numericMaxDecimals` and `numericMinDecimals` to better communicate what they do.
 negativePattern|This was used to set the pattern for negative numeric values.|This option is renamed to `numericNegativePattern` to better communicate what it does.
 nullable|This option was used to set ability to prevent null value.|This option is renamed to `allowNullValue` to better communicate what it does.
@@ -64,7 +64,7 @@ validatorOptions |-|This option is removed.
 Option| Description
 ---|---
 disabled|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#numericEditor').igNumericEditor({ disabled: true }] })`.
-listItemHoverDuration|<a name='listItemHoverDuration'></a>Use to set the hover/unhover animation duration of items inside the drop-down list: `$('#numericEditor').igNumericEditor({ listItems: [1, 2, 3, 4], listItemHoverDuration: 400 }] })`.
+listItemHoverDuration|<a name='listItemHoverDuration'></a>Use to set the hover/unhover animation duration of items inside the dropdown list: `$('#numericEditor').igNumericEditor({ listItems: [1, 2, 3, 4], listItemHoverDuration: 400 }] })`.
 visibleItemsCount|<a name='visibleItemsCount'></a>Use to set how many items should be shown at once: `$('#numericEditor').igNumericEditor({ listItems: [1, 2, 3, 4], visibleItemsCount: 2 }] })`.
 isLimitedToListValues|<a name='isLimitedToListValues'></a>Use to set the ability to allow values only set into the list items. This validation is done only when the editor is blured, or enter key is pressed: `$('#numericEditor').igNumericEditor({ listItems: [1, 2, 3, 4], isLimitedToListValues: true }] })`.
 revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key. If set to false clear is called: `$('#numericEditor').igNumericEditor({ listItems: [1, 2, 3, 4], isLimitedToListValues: true, revertIfNotValid: false }] })`.
@@ -78,20 +78,54 @@ dropDownOrientation|<a name='dropDownOrientation'>Use to set drop down opening o
 
 Method| Previously| Now
 ---|---|---
+addListItem|Used to add the object within item at the location indicated by the index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
+addListItems|Used to add the objects within the items array at the location indicated by the index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
+clearListItems|Removed all items from list.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
+dropDownElement|Got reference to jquery object which is used as container of dropdown.|This method is renamed to `dropDownContainter` to better communicate what it does.
+dropDownVisible|Set visibility of dropdown list according to the Boolean value that is passed.|This method is replaced by [showDropDown:](#showDropDown) and [hideDropDown:](#hideDropDown).
+findListItemIndex|Found index of list item by text that matches with the search parameters|We should provide only one numeric parameter `number` and look for exact matches of it (e. g. 15.00 would equal 15).
+getSelectedText|Used to get selected text in editor.|This method is renamed to `getSelection`. Through this method we get the selected part of the number as a text string and not as a number.
+getSelection|Used to get left or right edge of selection.|This method is replaced by [getSelectionStart:](#getSelectionStart) and [getSelectionEnd:](#getSelectionEnd).
+getValueByMode|Used to get value in editor by dataMode.|This method is not supported.
+hasInvalidMessage|Used to check if invalid message is displayed.|This method is removed as its` functionality is covered by the API for the igEditorNotifier.
+mainElement|Used to get reference to jquery object which is used as top/outer element of igNumericEditor.|This method is renamed to `editorContainter` to better communicate what it does.
+paste|Used to paste text at location of caret.|This is renamed to `insert` and the `txt` parameter is renamed to `string` as it is a numeric string of characters.
+remove|This was used to remove editor from its parent element, but keeps the rest of functionality|This method is not supported. 
+removeListItem|Used to remove item from list.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
+removeListItemAt|Used to remove item from list at index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
+select|Used to select text in editor. Valid parameters: `sel0`, `sel1`, `val`|`sel0` is renamed to `start` and `sel1` is renamed to `end` to prevent exchanging the two parameters. 
+setFocus|Used to set focus to editor with delay.  If parameter was -1, then focus was set without delay.|It now supports only positive values for the delay and 0 is default that signifies that it is immediately given the focus.
+spin|Used to increment (positive delta) or decrement (negative delta) value in editor according to the parameter.|This method is replaced by two new methods: `spinUp` and `spinDown`. This method works only on the value and not with the dropdown navigation. For the latter you should use [selectListIndexUp:](#selectListIndexUp) or [selectListIndexDown:](#selectListIndexDown) method.
+text|Used to get or set text in editor.|This is replaced by a getter method `displayValue` that takes no parameters and returns a string with all the characters shown in the input.
+validate|Used to trigger validation of editor and show error message. It had a single parameter: `noLabel`|The parameter is renamed to `skipErrorMessage`.
+value|Used to get or set value in editor.|This method is renamed to `newValue` to better communicate what it does.
 
 <a name='new_methods'></a>
 ### New API Methods
 
 Method|Description
 ---|---
+showDropDown|<a name='showDropDown'></a>Show the dropdown list.
+hideDropDown|<a name='hideDropDown'></a>Hide the dropdown list.
+getSelectionStart|<a name='getSelectionStart'></a>Gets the left edge of selection. 
+getSelectionEnd|<a name='getSelectionEnd'></a>Gets the right edge of selection. 
+selectListIndexUp|<a name='selectListIndexUp'></a>Moves the selection index to the item that appears above the current one in the list.
+selectListIndexDown|<a name='selectListIndexDown'></a>Moves the selection index to the item that appears above the current one in the list.
+clearButton|Returns a reference to the clear button of the editor.
+dropDownButton|Returns a reference to the dropdown button of the editor.
+spinUpButton|Returns a reference to the spin up button of the editor.
+spinDownButton|Returns a reference to the spin down button of the editor.
+dropDownVisible|Returns the visibility state of the drop down listing the items.
+
+[See all API methods](%%jQueryApiUrl%%/ui.ignumericeditor#methods)
 
 <a name='event_changes'></a>
 ### Event changes
 
 Event|Changes
 ---|---
-hideDropDown|Event is not supported anymore. Two new events are introduced, giving you more control over hiding the drop-down list: [dropDownListClosing](#dropDownListClosing) and [dropDownListClosed](#dropDownListClosed).
-showDropDown|Event is not supported anymore. Two new events are introduced, giving you more control over showing the drop-down list: [dropDownListOpening](#dropDownListOpening) and [dropDownListOpened](#dropDownListOpened).
+hideDropDown|Event is not supported anymore. Two new events are introduced, giving you more control over hiding the dropdown list: [dropDownListClosing](#dropDownListClosing) and [dropDownListClosed](#dropDownListClosed).
+showDropDown|Event is not supported anymore. Two new events are introduced, giving you more control over showing the dropdown list: [dropDownListOpening](#dropDownListOpening) and [dropDownListOpened](#dropDownListOpened).
 listSelected|Event is renamed to `dropDownItemSelected` to better communicate what it does. Use `ui.owner` to obtain reference to igEditor. Use `ui.editorInput` to obtain reference to the editable input. Use `ui.list` to obtain reference to the list contaier. Use `ui.item` to obtain reference to the list item which is selected.
 listSelecting|Event is renamed to `dropDownItemSelecting` to better communicate what it does. Use `ui.owner` to obtain reference to igEditor. Use `ui.editorInput` to obtain reference to the editable input. Use `ui.list` to obtain reference to the list contaier. Use `ui.item` to obtain reference to the list item which is about to be selected.
 mouseleave|Event is renamed to `mouseout` to better communicate what it does.
