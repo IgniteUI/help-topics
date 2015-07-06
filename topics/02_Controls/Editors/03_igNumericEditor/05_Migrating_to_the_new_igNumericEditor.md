@@ -24,6 +24,7 @@ This topic contains the following sections:
 4. [New API methods](#new_methods)
 5. [Event changes](#event_changes)
 6. [New events](#new_events)
+7. [Requirements](#requirements)
 
 <a name='options_changes'></a>
 ### Options changes
@@ -70,6 +71,8 @@ revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert 
 preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#numericEditor').igNumericEditor({ preventSubmitOnEnter: true }] })`.
 dropDownOrientation|<a name='dropDownOrientation'>Use to set drop down opening orientation for the dorp down list when open button is clicked: `$('#numericEditor').igNumericEditor({ listItems: [1, 2, 3, 4], dropDownOrientation: 'top' }] })`.
 
+[See all options](%%jQueryApiUrl%%/ui.ignumericeditor#options)
+
 <a name='methods_changes'></a>
 ### API Methods changes
 
@@ -104,3 +107,13 @@ dropDownListOpening|<a name='dropDownListOpening'></a>Event which is raised when
 dropDownListOpened|<a name='dropDownListOpened'></a>Event which is raised when the drop down is already opened.
 dropDownListClosing|<a name='dropDownListClosing'></a>Event which is raised when the drop down is closing.
 dropDownListClosed|<a name='dropDownListClosed'></a>Event which is raised when the drop down is already closed.
+
+[See all events](%%jQueryApiUrl%%/ui.ignumericeditor#events)
+
+<a name='requirements'></a>
+### jQuery requirements
+
+Lib| Prev required version| New required version
+---|---|---
+jQuery core|1.4.4|1.9.1
+jQuery UI|1.7|1.9.0
