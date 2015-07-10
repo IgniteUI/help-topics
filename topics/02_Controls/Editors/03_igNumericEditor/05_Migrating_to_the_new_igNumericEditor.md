@@ -42,7 +42,7 @@ focusOnSpin|If that option was disabled and the editor was not focused, then a m
 groups|This was used to set the number of digits in integer part of number, which are divided into groups.|This option is renamed to `numericGroups` to better communicate what it does.
 groupSeparator|This was used to set the character, which is used as separator for groups.|This option is renamed to `numericGroupSeparator` to better communicate what it does.
 height width|Previously supported type: `number`.|Now supported types are: `number`, `string`, `null`. If using type `string`, the height can be set in pixels (px) and percentage (%).
-hideEnterKey|-|This option is removed.
+hideEnterKey|-|This option is removed. You can use [preventSubmitOnEnter](#preventSubmitOnEnter) option to prevent submitting when pressing Enter.
 listColumns|-|This option is removed.
 listDropDownAsChild |Value `true` created html element for list as a child of main html element. Value `false` created list as a child of body.|Renamed to `dropDownAttachedToBody`. Value `true` creates list as a child of body. Value `false` will create html element for list as a child of main html element. 
 listMaxHeight|Used to set maximum height of dropdown list in pixels.|This option is removed. You can use the new option [visibleItemsCount:](#visibleItemsCount) to set the number of visible list items.
@@ -51,7 +51,6 @@ negativePattern|This was used to set the pattern for negative numeric values.|Th
 nullable|This option was used to set ability to prevent null value.|This option is renamed to `allowNullValue` to better communicate what it does.
 nullText|Used to set text which appears in editor when editor has no focus and "value" in editor is null or empty string.|This option is renamed to `placeHolder` to better communicate what it does.
 renderInContainer|-|This option is removed.
-required|-|This option is removed.
 selectionOnFocus|Previously supported members: `select`, `-1`, `start`, `0`, `end`, `1`, `default`, `2`.|Now supported members are: `selectAll`, `atStart`, `atEnd`, `browserDefault`. The default value is `selectAll`.
 spinOnReadOnly|This was used to override the "readOnly" option and allow changing "value" of editor on spin events. |This option is removed. Setting `readOnly` to `true` disables the spin buttons.
 textAlign|Default was `null`|Now default is `left`.
