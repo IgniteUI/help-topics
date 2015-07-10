@@ -37,7 +37,7 @@ dataMode|Members of type 'string' and 'number' were supported.|Members of type '
 decimalSeparator|This option set the character, which is used as decimal separator.|This option is renamed to `numericDecimalSeparator` to better communicate what it does.
 display|-|This option is removed.
 dropDownOnReadOnly|This option was used to set ability to override the "readOnly" option and allow showing the dropdown list and changing the value in the editor from a list.|This option is removed. If `readOnly` is set to `true` the dropdown list cannot be displayed.
-dropDownTriggers|-|This option is removed.
+dropDownTriggers|-|This option is removed. Now `Alt` + `down-arrow` shows dropdown.
 focusOnSpin|If that option was disabled and the editor was not focused, then a mouse click on the spin button would keep the text in the editor in not focused format and perform spin actions.|This option is removed. Now if the editor is not focused, then a mouse click on the spin button will not focus the editor.
 groups|This was used to set the number of digits in integer part of number, which are divided into groups.|This option is renamed to `numericGroups` to better communicate what it does.
 groupSeparator|This was used to set the character, which is used as separator for groups.|This option is renamed to `numericGroupSeparator` to better communicate what it does.
