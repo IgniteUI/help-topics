@@ -25,7 +25,7 @@ Text editor with drop list using the UI Darkness theme:
 
 ## Custom styling
 
-Your CSS may include style overrides for many more elements of the numeric editor. For a full list of available classes see the [API Reference Theming classes](%%jQueryApiUrl%%/ui.igTextEditor#theming). Styles can be applied both by overriding the global classes applied to all editors or by targeting specific elements by ID or other specific trait to allow for more per-control customization.
+Your CSS may include style overrides for many more elements of the numeric editor. For a full list of available classes see the [API Reference Theming classes](%%jQueryApiUrl%%/ui.igNumericEditor#theming). Styles can be applied both by overriding the global classes applied to all editors or by targeting specific elements by ID or other specific trait to allow for more per-control customization.
 
 The default color for a negative value in the `igNumericEditor` is red. Here is an example how to change this color:
 

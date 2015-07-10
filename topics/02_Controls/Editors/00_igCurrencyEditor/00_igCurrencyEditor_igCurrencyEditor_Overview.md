@@ -21,7 +21,7 @@ The `igCurrencyEditor` control may be extensively styled giving you an opportuni
 
 Figure 1: The `igCurrencyEditor` formatted for American currency
 
-![](images/igCurrencyEditor_Overview_Pic1.png)
+![](images/igCurrencyEditor_Overview.png)
 
 [igCurrencyEditor Options Sample](%%SamplesUrl%%/editors/currency-editor)
 
@@ -35,6 +35,22 @@ The `igCurrencyEditor` includes the following characteristics:
 -   JavaScript Client API
 -   ASP.NET MVC wrapper
 -   Min/Max Value
+
+
+`igCurrencyEditor` inherits the `igNumericEditor` options, but it has some unique properties of its own. For example you can use the `currencySymbol` option to change the displayed currency symbol. A full list of the `igCurrencyEditor` can be found in the [igCurrencyEditor jQuery API](%%jQueryApiUrl%%/ui.igCurrencyEditor).
+
+Similarly to the `igNumericEditor` the `igCurrencyEditor` have a negative pattern. The `currencyNegativePattern` option defines the display mode pattern for negative numeric values.It looks like this:
+`currencyNegativePattern: '$(n)'`
+The "$" character represents `currencySymbol` and the "n" character represents the value of number. The "-" and "()" characters are static part of pattern.
+
+Unlike the numeric editor, the currency one has a positive pattern. The `currencyPositivePattern` option defines the display mode pattern for positive numeric values. The "$" character represents the `currencySymbol` and the "n" character represents the value of number. Using these two characters, you can build custom patterns to best suit your needs.
+
+```js
+$('#currencyEditor').igCurrencyEditor({
+	currencyPositivePattern:'$$n'
+});
+```
+![](images/igCurrencyEditor_PositivePattern.png)
 
 ## Adding igCurrencyEditor to a Web Page
 
@@ -52,22 +68,7 @@ The `igCurrencyEditor` includes the following characteristics:
 	<script type="text/javascript" src="/Scripts/Samples/infragistics.lob.js"></script>
     ```
 
-	**In ASPX:**
-
-    ```csharp
-    <%@ Import Namespace="Infragistics.Web.Mvc" %>
-
-    <link type="text/css" href="<%= Url.Content("~/css/themes/infragistics/infragistics.theme.css") %>"rel="stylesheet" />
-    <link type="text/css" href="<%= Url.Content("~/css/structure/infragistics.css") %>"rel="stylesheet" />
-
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.min.js")%>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery-ui.min.js")%>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/Samples/infragistics.core.js")%>"></script>
-	<script type="text/javascript" src="<%= Url.Content("~/Scripts/Samples/infragistics.lob.js")%>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/Samples/modules/i18n/regional/infragistics.ui.regional-en.js")%>"></script>
-    ```
-
-    **In Razor:**
+	**In Razor:**
 
     ```csharp
     @using Infragistics.Web.Mvc;
@@ -82,15 +83,15 @@ The `igCurrencyEditor` includes the following characteristics:
     <script type="text/javascript" src="@Url.Content("~/Scripts/Samples/modules/i18n/regional/infragistics.ui.regional-en.js")"></script>
     ```
 
-3.  For jQuery implementations create an INPUT, TD, DIV or SPAN as the target element in HTML. This step is optional for ASP.NET MVC implementations as the MVC wrapper creates the containing element for you.    
+3.  For jQuery implementations create an INPUT, DIV or SPAN as the target element in HTML. This step is optional for ASP.NET MVC implementations as the MVC wrapper creates the containing element for you.    
 
     **In HTML:**
 
     ```html
-    <input id="currencyEditor" type="text" value="12345678.56723456" />
+    <input id="currencyEditor" />
     ```
 
-4.  Once the above setup is complete, initialize the numeric editor and set needed options, such as `width`, `nullText`, `dataMode` etc.
+4.  Once the above setup is complete, initialize the numeric editor.
 
     > **Note:** For the ASP.NET MVC Views, the `Render` method must be called after all other options are set.
 
@@ -98,29 +99,15 @@ The `igCurrencyEditor` includes the following characteristics:
 
     ```js
     <script type="text/javascript">
-         $('#currencyEditor').igCurrencyEditor({
-             width: 200
-         });
+         $('#currencyEditor').igCurrencyEditor();
     </script>
     ```
- 
-	**In ASPX:**
-
-     ```csharp
-     <%= Html.Infragistics().CurrencyEditor()
-       .ID("currencyEditor")
-       .Width(200)
-       .Value(12345678.56723456)
-       .Render()%>
-     ```
 
 	**In Razor:**
 
     ```csharp
     @(Html.Infragistics().CurrencyEditor()
        .ID("currencyEditor")
-       .Width(200)
-       .Value(12345678.56723456)
        .Render())
     ```
 
