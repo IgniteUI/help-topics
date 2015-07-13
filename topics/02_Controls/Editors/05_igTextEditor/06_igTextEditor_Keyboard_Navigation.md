@@ -1,14 +1,14 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "igpercenteditor-keyboard-navigation",
-    "controlName": "igPercentEditor",
+    "fileName": "igcurrencyeditor-keyboard-navigation",
+    "controlName": "igCurrencyEditor",
     "tags": []
 }
 |metadata|
 -->
 
-#Keyboard Navigation (igPercentEditor)
+#Keyboard Navigation (igCurrencyEditor)
 
 ##Topic overview
 This topic explains how to use keyboard navigation so that end-users can easily and quickly navigate through inputs and interact with them.
@@ -19,7 +19,7 @@ This topic contains the following sections:
 
 -   [Keyboard interactions](#skbInteraction)
 -   [Selecting the editor](#skbInteraction)
--   [igPercentEditor with dropdown](#ddInteraction)
+-   [igCurrencyEditor with dropdown](#ddInteraction)
 
 
 ## <a id="skbInteraction"></a>Standard Keyboard interactions
@@ -39,8 +39,6 @@ Press| To
 <kbd>Ctrl</kbd> + <kbd>Backspace</kbd>|Delete the previous chunk
 <kbd>Ctrl</kbd> + <kbd>Delete</kbd>|Delete the following chunk
 <kbd>Delete</kbd> + <kbd>Backspace</kbd> | Delete selected content
-<kbd>Up Arrow</kbd>| Increment the number in the input
-<kbd>Down Arrow</kbd>| Decrement the number in the input
 
 ## <a id="kbInteraction"></a>Selecting the editor
 
@@ -59,7 +57,7 @@ Press| To
 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> or <kbd>Shift</kbd> + <kbd>End</kbd>|Select value in the input till end
 <kbd>Ctrl</kbd> + <kbd>A</kbd> |Select the whole value in the input 
 
-## <a id="ddInteraction"></a>igPercentEditor with dropdown
+## <a id="ddInteraction"></a>igCurrencyEditor with dropdown
 
 In this section you can see what key combinations can be used when you have a numeric editor with dropdown.
 
@@ -67,5 +65,8 @@ Press| To
 ---|---
 <kbd>Alt</kbd> + <kbd>Down Arrow</kbd> | Open the dropdown, when the focus is in the input
 <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> | Close the dropdown, when the focus is in the input
+<kbd>Down Arrow</kbd> | Move to next item, when the focus is on the list of items  
+<kbd>Up Arrow</kbd> | Move to previous item, when the focus is on the list of items
 <kbd>Enter</kbd> | Confirm focused item as selected
 <kbd>Enter</kbd> or <kbd>Alt</kbd> + <kbd>Up Arrow</kbd>| Reject focused item and keep old selection
+

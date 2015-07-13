@@ -63,9 +63,10 @@ Press| To
 
 In this section you can see what key combinations can be used when you have a numeric editor with dropdown.
 
+
 Press| To
 ---|---
-<kbd>Alt</kbd> + <kbd>Down Arrow</kbd> |When the focus is in the input of the editor this key combination opens the dropdown 
-<kbd>Alt</kbd> + <kbd>Up Arrow</kbd> | When the focus is on the list of items the editor dropdown container, this key combination closes the dropdown 
-<kbd>Enter</kbd> | Confirms focused item as selected
-<kbd>Enter</kbd> or <kbd>Alt</kbd> + <kbd>Up Arrow</kbd>| Rejects focused item and keep old selection
+<kbd>Alt</kbd> + <kbd>Down Arrow</kbd> | Open the dropdown, when the focus is in the input
+<kbd>Alt</kbd> + <kbd>Up Arrow</kbd> | Close the dropdown, when the focus is in the input
+<kbd>Enter</kbd> | Confirm focused item as selected
+<kbd>Enter</kbd> or <kbd>Alt</kbd> + <kbd>Up Arrow</kbd>| Reject focused item and keep old selection
