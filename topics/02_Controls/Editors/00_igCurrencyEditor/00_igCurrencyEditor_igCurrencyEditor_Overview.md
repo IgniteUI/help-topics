@@ -39,15 +39,15 @@ The `igCurrencyEditor` includes the following characteristics:
 
 `igCurrencyEditor` inherits the `igNumericEditor` options, but it has some unique properties of its own. For example you can use the `currencySymbol` option to change the displayed currency symbol. A full list of the `igCurrencyEditor` options can be found in the [igCurrencyEditor jQuery API](%%jQueryApiUrl%%/ui.igCurrencyEditor).
 
-Similarly to the `igNumericEditor` the `igCurrencyEditor` have a negative pattern. The `currencyNegativePattern` option defines the display mode pattern for negative numeric values.It looks like this:
-`currencyNegativePattern: '$(n)'`
+Similarly to the `igNumericEditor` the `igCurrencyEditor` have a negative pattern. The `negativePattern` option defines the display mode pattern for negative numeric values.It looks like this:
+`negativePattern: '$(n)'`
 The "$" character represents `currencySymbol` and the "n" character represents the value of number. The "-" and "()" characters are static part of pattern.
 
-Unlike the numeric editor, the currency one has a positive pattern. The `currencyPositivePattern` option defines the display mode pattern for positive numeric values. The "$" character represents the `currencySymbol` and the "n" character represents the value of number. Using these two characters, you can build custom patterns to best suit your needs.
+Unlike the numeric editor, the currency one has a positive pattern. The `positivePattern` option defines the display mode pattern for positive numeric values. The "$" character represents the `currencySymbol` and the "n" character represents the value of number. Using these two characters, you can build custom patterns to best suit your needs.
 
 ```js
 $('#currencyEditor').igCurrencyEditor({
-	currencyPositivePattern:'$$n'
+	positivePattern:'$$n'
 });
 ```
 ![](images/igCurrencyEditor_PositivePattern.png)
