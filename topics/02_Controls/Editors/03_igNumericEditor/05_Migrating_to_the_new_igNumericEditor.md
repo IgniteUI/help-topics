@@ -44,7 +44,6 @@ hideEnterKey|-|This option is removed. You can use [preventSubmitOnEnter](#preve
 listColumns|-|This option is removed.
 listDropDownAsChild |Value `true` created html element for list as a child of main html element. Value `false` created list as a child of body.|Renamed to `dropDownAttachedToBody`. Value `true` creates list as a child of body. Value `false` will create html element for list as a child of main html element. 
 listMaxHeight|Used to set maximum height of dropdown list in pixels.|This option is removed. You can use the new option [visibleItemsCount](#visibleItemsCount) to set the number of visible list items.
-maxDecimals minDecimals|These options were used to set the maximum/minimum number of decimal places which are used in no focus state.|These options are renamed to `numericMaxDecimals` and `numericMinDecimals` to better communicate what they do.
 negativePattern|This was used to set the pattern for negative numeric values.|This option is renamed to `numericNegativePattern` to better communicate what it does.
 nullable|This option was used to set ability to prevent null value.|This option is renamed to `allowNullValue` to better communicate what it does.
 nullText|Used to set text which appears in editor when editor has no focus and "value" in editor is null or empty string.|This option is renamed to `placeHolder` to better communicate what it does.
