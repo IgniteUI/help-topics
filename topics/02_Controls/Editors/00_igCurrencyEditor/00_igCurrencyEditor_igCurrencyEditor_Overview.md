@@ -37,7 +37,7 @@ The `igCurrencyEditor` includes the following characteristics:
 -   Min/Max Value
 
 
-`igCurrencyEditor` inherits the `igNumericEditor` options, but it has some unique properties of its own. For example you can use the `currencySymbol` option to change the displayed currency symbol. A full list of the `igCurrencyEditor` can be found in the [igCurrencyEditor jQuery API](%%jQueryApiUrl%%/ui.igCurrencyEditor).
+`igCurrencyEditor` inherits the `igNumericEditor` options, but it has some unique properties of its own. For example you can use the `currencySymbol` option to change the displayed currency symbol. A full list of the `igCurrencyEditor` options can be found in the [igCurrencyEditor jQuery API](%%jQueryApiUrl%%/ui.igCurrencyEditor).
 
 Similarly to the `igNumericEditor` the `igCurrencyEditor` have a negative pattern. The `currencyNegativePattern` option defines the display mode pattern for negative numeric values.It looks like this:
 `currencyNegativePattern: '$(n)'`
