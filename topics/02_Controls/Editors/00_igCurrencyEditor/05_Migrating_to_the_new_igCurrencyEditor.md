@@ -17,3 +17,19 @@ This topic aims to help with migration from old currency editor to the new one. 
 
 ### In this topic
 This topic contains the following sections:
+
+1. [Options changes](#options_changes)
+2. [New options](#new_options)
+3. [API Methods changes](#methods_changes)
+4. [New API methods](#new_methods)
+5. [Event changes](#event_changes)
+6. [New events](#new_events)
+7. [Requirements](#requirements)
+
+<a name='options_changes'></a>
+### Options changes
+
+Option| Previously| Now
+---|---|---
+animationHideDuration animationShowDuration|Used to set animation duration when dropdown list is displayed/hidden.|These options are replaced by new option `dropDownAnimationDuration` that controls the dropdown list animation duration.
+button|This option was used to set visibility of spin and dropdown button.|This option is renamed to `buttonType` to better communicate what it does.
