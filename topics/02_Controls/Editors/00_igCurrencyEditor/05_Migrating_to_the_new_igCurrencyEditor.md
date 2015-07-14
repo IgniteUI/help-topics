@@ -66,3 +66,30 @@ revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert 
 preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#currencyEditor').igCurrencyEditor({ preventSubmitOnEnter: true }] })`.
 dropDownOrientation|<a name='dropDownOrientation'>Use to set drop down opening orientation for the dorp down list when open button is clicked: `$('#currencyEditor').igCurrencyEditor({ listItems: [1, 2, 3, 4, 5], dropDownOrientation: 'top' }] })`.
 positivePattern|<a name='positivePattern'></a>Use to set the string, which is used as positive pattern. The "n" flag represents the value of number. The "()" flag is static part of pattern.: `$('#currencyEditor').igCurrencyEditor({ positivePattern: '^%(n)' }] })`.
+
+<a name='methods_changes'></a>
+### API Methods changes
+
+Method| Previously| Now
+---|---|---
+addListItem|Used to add the object within item at the location indicated by the index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
+addListItems|Used to add the objects within the items array at the location indicated by the index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
+clearListItems|Removed all items from list.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
+dropDownElement|Got reference to jquery object which is used as container of dropdown.|This method is renamed to `dropDownContainter` to better communicate what it does.
+dropDownVisible|Set visibility of dropdown list according to the Boolean value that is passed.|This method is replaced by [showDropDown:](#showDropDown) and [hideDropDown:](#hideDropDown).
+findListItemIndex|Found index of list item by text that matches with the search parameters|We should provide only one numeric parameter `number` and look for exact matches of it (e. g. 15.00 would equal 15).
+getSelectedText|Used to get selected text in editor.|This method is removed as it doesn't make sense to have such a method in numeric editor.
+getSelection|Used to get left or right edge of selection.|This method is removed as it doesn't make sense to have such a method in numeric editor.
+getValueByMode|Used to get value in editor by dataMode.|This method is not supported.
+hasInvalidMessage|Used to check if invalid message is displayed.|This method is removed as its` functionality is covered by the API for the igEditorNotifier.
+mainElement|Used to get reference to jquery object which is used as top/outer element of igNumericEditor.|This method is renamed to `editorContainter` to better communicate what it does.
+paste|Used to paste text at location of caret.|This is renamed to `insert` and the `txt` parameter is renamed to `string` as it is a numeric string of characters.
+remove|This was used to remove editor from its parent element, but keeps the rest of functionality|This method is not supported. 
+removeListItem|Used to remove item from list.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
+removeListItemAt|Used to remove item from list at index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
+select|Used to select text in editor. Valid parameters: `sel0`, `sel1`, `val`|`sel0` is renamed to `start` and `sel1` is renamed to `end` to prevent exchanging the two parameters. 
+setFocus|Used to set focus to editor with delay.  If parameter was -1, then focus was set without delay.|It now supports only positive values for the delay and 0 is default that signifies that it is immediately given the focus.
+spin|Used to increment (positive delta) or decrement (negative delta) value in editor according to the parameter.|This method is replaced by two new methods: `spinUp` and `spinDown`. This method works only on the value and not with the dropdown navigation. For the latter you should use [selectListIndexUp:](#selectListIndexUp) or [selectListIndexDown:](#selectListIndexDown) method.
+text|Used to get or set text in editor.|This is replaced by a getter method `displayValue` that takes no parameters and returns a string with all the characters shown in the input.
+validate|Used to trigger validation of editor and show error message. It had a single parameter: `noLabel`|The parameter is renamed to `skipErrorMessage`.
+value|Used to get or set value in editor.|The parameter is renamed to `newValue` to better communicate what it does.
