@@ -101,8 +101,6 @@ Method|Description
 ---|---
 showDropDown|<a name='showDropDown'></a>Show the dropdown list.
 hideDropDown|<a name='hideDropDown'></a>Hide the dropdown list.
-getSelectionStart|<a name='getSelectionStart'></a>Gets the left edge of selection. 
-getSelectionEnd|<a name='getSelectionEnd'></a>Gets the right edge of selection. 
 selectListIndexUp|<a name='selectListIndexUp'></a>Moves the selection index to the item that appears above the current one in the list.
 selectListIndexDown|<a name='selectListIndexDown'></a>Moves the selection index to the item that appears above the current one in the list.
 clearButton|Returns a reference to the clear button of the editor.
