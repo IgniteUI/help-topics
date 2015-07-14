@@ -34,7 +34,6 @@ Option| Previously| Now
 animationHideDuration animationShowDuration|Used to set animation duration when dropdown list is displayed/hidden.|These options are replaced by new option `dropDownAnimationDuration` that controls the dropdown list animation duration.
 button|This option was used to set visibility of spin and dropdown button.|This option is renamed to `buttonType` to better communicate what it does.
 dataMode|Members of type 'string' and 'number' were supported.|Members of type 'number' are not supported.
-decimalSeparator|This option set the character, which is used as decimal separator.|This option is renamed to `numericDecimalSeparator` to better communicate what it does.
 display|-|This option is removed.
 dropDownOnReadOnly|This option was used to set ability to override the "readOnly" option and allow showing the dropdown list and changing the value in the editor from a list.|This option is removed. If `readOnly` is set to `true` the dropdown list cannot be displayed.
 dropDownTriggers|-|This option is removed. Now `Alt` + `down-arrow` shows dropdown.
