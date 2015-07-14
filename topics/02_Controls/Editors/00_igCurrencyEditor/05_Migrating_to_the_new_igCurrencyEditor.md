@@ -45,3 +45,10 @@ listDropDownAsChild |Value `true` created html element for list as a child of ma
 listMaxHeight|Used to set maximum height of dropdown list in pixels.|This option is removed. You can use the new option [visibleItemsCount](#visibleItemsCount) to set the number of visible list items.
 nullable|This option was used to set ability to prevent null value.|This option is renamed to `allowNullValue` to better communicate what it does.
 nullText|Used to set text which appears in editor when editor has no focus and "value" in editor is null or empty string.|This option is renamed to `placeHolder` to better communicate what it does.
+renderInContainer|-|This option is removed.
+selectionOnFocus|Previously supported members: `select`, `-1`, `start`, `0`, `end`, `1`, `default`, `2`.|Now supported members are: `selectAll`, `atStart`, `atEnd`, `browserDefault`. The default value is `selectAll`.
+spinOnReadOnly|This was used to override the "readOnly" option and allow changing "value" of editor on spin events. |This option is removed. Setting `readOnly` to `true` disables the spin buttons.
+symbol|Used to set currency symbol, which is used in display (no focus) state.|This option is renamed to `currencySymbol` to better communicate what it does.
+textAlign|Default was `null`|Now default is `left`.
+theme|-|This option is removed.
+validatorOptions |-|This option is removed.
