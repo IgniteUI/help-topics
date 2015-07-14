@@ -78,8 +78,8 @@ clearListItems|Removed all items from list.|This method is removed. You should m
 dropDownElement|Got reference to jquery object which is used as container of dropdown.|This method is renamed to `dropDownContainter` to better communicate what it does.
 dropDownVisible|Set visibility of dropdown list according to the Boolean value that is passed.|This method is replaced by [showDropDown:](#showDropDown) and [hideDropDown:](#hideDropDown).
 findListItemIndex|Found index of list item by text that matches with the search parameters|We should provide only one numeric parameter `number` and look for exact matches of it (e. g. 15.00 would equal 15).
-getSelectedText|Used to get selected text in editor.|This method is removed as it doesn't make sense to have such a method in numeric editor.
-getSelection|Used to get left or right edge of selection.|This method is removed as it doesn't make sense to have such a method in numeric editor.
+getSelectedText|Used to get selected text in editor.|This method is removed as it doesn't make sense to have such a method in currency editor.
+getSelection|Used to get left or right edge of selection.|This method is removed as it doesn't make sense to have such a method in currency editor.
 getValueByMode|Used to get value in editor by dataMode.|This method is not supported.
 hasInvalidMessage|Used to check if invalid message is displayed.|This method is removed as its` functionality is covered by the API for the igEditorNotifier.
 mainElement|Used to get reference to jquery object which is used as top/outer element of igNumericEditor.|This method is renamed to `editorContainter` to better communicate what it does.
