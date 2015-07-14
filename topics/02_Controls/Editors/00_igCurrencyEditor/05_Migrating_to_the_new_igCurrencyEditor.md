@@ -52,3 +52,17 @@ symbol|Used to set currency symbol, which is used in display (no focus) state.|T
 textAlign|Default was `null`|Now default is `left`.
 theme|-|This option is removed.
 validatorOptions |-|This option is removed.
+
+<a name='new_options'></a>
+### New options
+
+Option| Description
+---|---
+disabled|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#currencyEditor').igCurrencyEditor({ disabled: true }] })`.
+listItemHoverDuration|<a name='listItemHoverDuration'></a>Use to set the hover/unhover animation duration of items inside the dropdown list: `$('#currencyEditor').igCurrencyEditor({ listItems: [1, 2, 3, 4], listItemHoverDuration: 400 }] })`.
+visibleItemsCount|<a name='visibleItemsCount'></a>Use to set how many items should be shown at once: `$('#currencyEditor').igCurrencyEditor({ listItems: [1, 2, 3, 4], visibleItemsCount: 2 }] })`.
+isLimitedToListValues|<a name='isLimitedToListValues'></a>Use to set the ability to allow values only set into the list items. This validation is done only when the editor is blured, or enter key is pressed: `$('#currencyEditor').igCurrencyEditor({ listItems: [5, 10, 20, 50], isLimitedToListValues: true }] })`.
+revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key. If set to false clear is called: `$('#currencyEditor').igCurrencyEditor({ listItems: [1, 2, 3, 4, 5], isLimitedToListValues: true, revertIfNotValid: false }] })`.
+preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#currencyEditor').igCurrencyEditor({ preventSubmitOnEnter: true }] })`.
+dropDownOrientation|<a name='dropDownOrientation'>Use to set drop down opening orientation for the dorp down list when open button is clicked: `$('#currencyEditor').igCurrencyEditor({ listItems: [1, 2, 3, 4, 5], dropDownOrientation: 'top' }] })`.
+positivePattern|<a name='positivePattern'></a>Use to set the string, which is used as positive pattern. The "n" flag represents the value of number. The "()" flag is static part of pattern.: `$('#currencyEditor').igCurrencyEditor({ positivePattern: '^%(n)' }] })`.
