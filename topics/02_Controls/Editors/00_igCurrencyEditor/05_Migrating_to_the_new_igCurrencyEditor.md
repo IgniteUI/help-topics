@@ -93,3 +93,21 @@ spin|Used to increment (positive delta) or decrement (negative delta) value in e
 text|Used to get or set text in editor.|This is replaced by a getter method `displayValue` that takes no parameters and returns a string with all the characters shown in the input.
 validate|Used to trigger validation of editor and show error message. It had a single parameter: `noLabel`|The parameter is renamed to `skipErrorMessage`.
 value|Used to get or set value in editor.|The parameter is renamed to `newValue` to better communicate what it does.
+
+<a name='new_methods'></a>
+### New API Methods
+
+Method|Description
+---|---
+currencySymbol|<a name='currencySymbol'></a>Gets/sets a string that is used as the currency symbol shown with the number in the input. The value provided as a param is propagated to the currencySymbol option and thus has the same priority as the option.
+showDropDown|<a name='showDropDown'></a>Show the dropdown list.
+hideDropDown|<a name='hideDropDown'></a>Hide the dropdown list.
+selectListIndexUp|<a name='selectListIndexUp'></a>Moves the selection index to the item that appears above the current one in the list.
+selectListIndexDown|<a name='selectListIndexDown'></a>Moves the selection index to the item that appears above the current one in the list.
+clearButton|Returns a reference to the clear button of the editor.
+dropDownButton|Returns a reference to the dropdown button of the editor.
+spinUpButton|Returns a reference to the spin up button of the editor.
+spinDownButton|Returns a reference to the spin down button of the editor.
+dropDownVisible|Returns the visibility state of the drop down listing the items.
+
+[See all API methods](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods)
