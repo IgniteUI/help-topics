@@ -65,7 +65,6 @@ isLimitedToListValues|<a name='isLimitedToListValues'></a>Use to set the ability
 revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key. If set to false clear is called: `$('#currencyEditor').igCurrencyEditor({ listItems: [1, 2, 3, 4, 5], isLimitedToListValues: true, revertIfNotValid: false }] })`.
 preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#currencyEditor').igCurrencyEditor({ preventSubmitOnEnter: true }] })`.
 dropDownOrientation|<a name='dropDownOrientation'>Use to set drop down opening orientation for the dorp down list when open button is clicked: `$('#currencyEditor').igCurrencyEditor({ listItems: [1, 2, 3, 4, 5], dropDownOrientation: 'top' }] })`.
-positivePattern|<a name='positivePattern'></a>Use to set the string, which is used as positive pattern. The "n" flag represents the value of number. The "()" flag is static part of pattern.: `$('#currencyEditor').igCurrencyEditor({ positivePattern: '^%(n)' }] })`.
 
 <a name='methods_changes'></a>
 ### API Methods changes
