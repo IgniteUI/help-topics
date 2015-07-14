@@ -111,3 +111,36 @@ spinDownButton|Returns a reference to the spin down button of the editor.
 dropDownVisible|Returns the visibility state of the drop down listing the items.
 
 [See all API methods](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods)
+
+<a name='event_changes'></a>
+### Event changes
+
+Event|Changes
+---|---
+hideDropDown|Event is not supported anymore. Two new events are introduced, giving you more control over hiding the dropdown list: [dropDownListClosing](#dropDownListClosing) and [dropDownListClosed](#dropDownListClosed).
+showDropDown|Event is not supported anymore. Two new events are introduced, giving you more control over showing the dropdown list: [dropDownListOpening](#dropDownListOpening) and [dropDownListOpened](#dropDownListOpened).
+listSelected|Event is renamed to `dropDownItemSelected` to better communicate what it does. Use `ui.owner` to obtain reference to igEditor. Use `ui.editorInput` to obtain reference to the editable input. Use `ui.list` to obtain reference to the list contaier. Use `ui.item` to obtain reference to the list item which is selected.
+listSelecting|Event is renamed to `dropDownItemSelecting` to better communicate what it does. Use `ui.owner` to obtain reference to igEditor. Use `ui.editorInput` to obtain reference to the editable input. Use `ui.list` to obtain reference to the list contaier. Use `ui.item` to obtain reference to the list item which is about to be selected.
+mouseleave|Event is renamed to `mouseout` to better communicate what it does.
+
+<a name='new_events'></a>
+### New events
+
+Event|Description
+---|---
+rendering|<a name='dropDownListOpening'></a>Event which is raised before rendering of the editor completes.
+rendered|<a name='rendered'></a>Event which is raised after rendering of the editor completes.
+dropDownListOpening|<a name='dropDownListOpening'></a>Event which is raised when the drop down is opening.
+dropDownListOpened|<a name='dropDownListOpened'></a>Event which is raised when the drop down is already opened.
+dropDownListClosing|<a name='dropDownListClosing'></a>Event which is raised when the drop down is closing.
+dropDownListClosed|<a name='dropDownListClosed'></a>Event which is raised when the drop down is already closed.
+
+[See all events](%%jQueryApiUrl%%/ui.igcurrencyeditor#events)
+
+<a name='requirements'></a>
+### jQuery requirements
+
+Lib| Prev required version| New required version
+---|---|---
+jQuery core|1.4.4|1.9.1
+jQuery UI|1.7|1.9.0
