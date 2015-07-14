@@ -34,3 +34,7 @@ Option| Previously| Now
 animationHideDuration animationShowDuration|Used to set animation duration when dropdown list is displayed/hidden.|These options are replaced by new option `dropDownAnimationDuration` that controls the dropdown list animation duration.
 button|This option was used to set visibility of spin and dropdown button.|This option is renamed to `buttonType` to better communicate what it does.
 dataMode|Members of type 'string' and 'number' were supported.|Members of type 'number' are not supported.
+display|-|This option is removed.
+dropDownOnReadOnly|This option was used to set ability to override the "readOnly" option and allow showing the dropdown list and changing the value in the editor from a list.|This option is removed. If `readOnly` is set to `true` the dropdown list cannot be displayed.
+dropDownTriggers|-|This option is removed. Now `Alt` + `down-arrow` shows dropdown.
+focusOnSpin|If that option was disabled and the editor was not focused, then a mouse click on the spin button would keep the text in the editor in not focused format and perform spin actions.|This option is removed. Now if the editor is not focused, then a mouse click on the spin button will not focus the editor.
