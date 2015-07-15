@@ -2,7 +2,7 @@
 |metadata|
 {
     "fileName": "igcheckboxeditor-styling-and-theming",
-    "controlName": "igEditors",
+    "controlName": "igCheckboxEditor",
     "tags": ["Editing","Styling","Theming"]
 }
 |metadata|
@@ -10,11 +10,11 @@
 
 # igCheckBoxEditor Styling and Theming
 
-In this topic we are going to see how to customize the `igCheckBoxEditor`.
+In this topic we are going to see how to customize the `igCheckboxEditor`.
 
 ## Changing the Icon Image
 
-Lets start with the icon image. As you can see from the image below the default image for the checked state of the control is check icon, but that doesn't mean you should stick to it. The `igCheckBoxEditor` allows you to use custom check state image. You can choose one of the [jQuery UI Icons](http://api.jqueryui.com/theming/icons/) or you can set your own custom one. How to accomplish this? Just use the `iconClass` property and set it to a custom class to put you own image or use the JQuery classes. What is more, if intend to use the width and height properties to change the size of the check box editor, it is recommended to put your own custom class with custom image that will fit the sizes that you have set.
+Lets start with the icon image. As you can see from the image below the default image for the checked state of the control is check icon, but that doesn't mean you should stick to it. The `igCheckboxEditor` allows you to use custom check state image. You can choose one of the [jQuery UI Icons](http://api.jqueryui.com/theming/icons/) or you can set your own custom one. How to accomplish this? Just use the `iconClass` property and set it to a custom class to put you own image or use the JQuery classes. What is more, if intend to use the width and height properties to change the size of the check box editor, it is recommended to put your own custom class with custom image that will fit the sizes that you have set.
 
 **Default Icon Image** 
 
@@ -38,7 +38,7 @@ $('#checkInput').igCheckboxEditor({
 
 ### Using a custom image
 
-Probably you would want to have the option to use a custom image instead of the default one. That is not a problem for Infragistics' `igCheckBoxEditor` control. All you have to do is create your own CSS class and use it as a value for the `iconClass` property.
+Probably you would want to have the option to use a custom image instead of the default one. That is not a problem for Infragistics' `igCheckboxEditor` control. All you have to do is create your own CSS class and use it as a value for the `iconClass` property.
 
 **CSS:**
 

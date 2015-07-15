@@ -50,21 +50,6 @@ The `igTextEditor` includes the following characteristics:
 	<script type="text/javascript" src="/Scripts/Samples/infragistics.lob.js"></script>
     ```
 
-    **In ASPX:**
-
-    ```csharp
-    <%@ Import Namespace="Infragistics.Web.Mvc" %>
-
-    <link type="text/css" href="<%= Url.Content("~/css/themes/infragistics/infragistics.theme.css") %>"rel="stylesheet" />
-    <link type="text/css" href="<%= Url.Content("~/css/structure/infragistics.css") %>"rel="stylesheet" />
-
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery-1.4.4.min.js")%>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery-ui.min.js")%>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/Samples/infragistics.core.js")%>"></script>
-	<script type="text/javascript" src="<%= Url.Content("~/Scripts/Samples/infragistics.lob.js")%>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/Samples/modules/i18n/regional/infragistics.ui.regional-en.js")%>"></script>
-    ```
-
     **In Razor:**
 
     ```csharp
@@ -94,26 +79,13 @@ The `igTextEditor` includes the following characteristics:
 	**In Javascript:**
 	```js
     <script type="text/javascript">
-       $('#textEditor').igTextEditor({
-           width: 160,
-           placeholder: 'Enter Text'
-       });
+       $('#textEditor').igTextEditor();
     </script>	
-	```
-	**In ASPX:**
-	```csharp
-     <%= Html.Infragistics().TextEditor()
-       .ID("textEditor")
-       .Width("200px")
-       .PlaceHolder("Enter Text")
-       .Render()%>
 	```
 	**In Razor:**
 	```csharp
     @(Html.Infragistics().TextEditor()
        .ID("textEditor")
-       .Width("200px")
-       .PlaceHolder("Enter Text")
        .Render())
 	```
 

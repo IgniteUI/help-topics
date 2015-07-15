@@ -17,6 +17,8 @@ Click on the links below to find information on how to get `igPercentEditor` qui
 -   [igPercentEditor jQuery and ASP.NET MVC Helper API Links](igPercentEditor-jQuery-API.html)
 -   [igPercentEditor Accessibility Compliance](igPercentEditor-Accessibility-Compliance.html)
 -   [igPercentEditor Known Issues](igPercentEditor-Known-Issues.html)
+-   [igPercentEditor Migration Topic](Migrating-to-the-new-igPercentEditor.html)
+-   [igPercentEditor Keyboard Navigation](igPercentEditor-Keyboard-Navigation.html)
 -   [igEditor Known Issues](igEditor-Known-Issues-PE.html)
 
  

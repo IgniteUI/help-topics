@@ -2,11 +2,12 @@
 |metadata|
 {
     "fileName": "igcheckboxeditor-known-issues",
-    "controlName": "igEditors",
+    "controlName": "igCheckboxEditor",
     "tags": ["Editing","Known Issues"]
 }
 |metadata|
 -->
 
-# igCheckBoxEditor Known Issues
+# igCheckboxEditor Known Issues
 
+Currently there are no known issues or limitations connected to the k.

@@ -2,7 +2,7 @@
 |metadata|
 {
     "fileName": "igcheckboxeditor-overview",
-    "controlName": "igEditors",
+    "controlName": "igCheckboxEditor",
     "tags": ["Editing","Getting Started"]
 }
 |metadata|
@@ -10,14 +10,14 @@
 
 # igCheckBoxEditor Overview
 
-The Ignite UI check box editor, or "`igCheckBoxEditor`", is a control that renders a check box field, which permits users to make a binary choice between one or multiple mutually exclusive options and allows the user to submit the check box value to the server.
+The Ignite UI check box editor, or "`igCheckboxEditor`", is a control that renders a check box field, which permits users to make a binary choice between one or multiple mutually exclusive options and allows the user to submit the check box value to the server.
 
 As the user interacts with the control the visual appearance is updated to give immediate feedback. The editor has two states and the check box works as a two-state toggle. One of the states reflects the checked solution and the other reflects the not checked solution.
 
 
 ![](images/igCheckBoxEditor_normal_size.png) 
 
-## Adding igCheckBoxEditor to a Web Page
+## Adding igCheckboxEditor to a Web Page
 
 1.  To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) help topic.
 
@@ -52,7 +52,7 @@ As the user interacts with the control the visual appearance is updated to give 
 
 	**In HTML:**
    	```html
-    <input id="checkBoxEditor" />
+    <input id="checkboxEditor" />
 	```
 
 4.  Once the above setup is complete, initialize the check box editor. 
@@ -67,16 +67,16 @@ As the user interacts with the control the visual appearance is updated to give 
 	```
 	**In Razor:**
 	```csharp
-    @(Html.Infragistics().CheckBoxEditor()
+    @(Html.Infragistics().CheckboxEditor()
        .ID("checkBoxEditor")
        .Render())
 	```
 
-5.  Run the web page to view the basic setup of the `igCheckBoxEditor` control.
+5.  Run the web page to view the basic setup of the `igCheckboxEditor` control.
 
 ## Keyboard Navigation
 
-As most of the Infragistics' control the `igCheckBoxEditor` supports keyboard navigation. Essentially what you can do is use the 'Tab' key to focus the check box element and when the check box is focused you can use the 'space' key to toggle the check state of the control.
+As most of the Infragistics' control the `igCheckboxEditor` supports keyboard navigation. Essentially what you can do is use the 'Tab' key to focus the check box element and when the check box is focused you can use the 'space' key to toggle the check state of the control.
 
 Press| To
 ---|---

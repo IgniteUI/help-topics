@@ -15,10 +15,6 @@ The Ignite UI™ currency editor, or `igCurrencyEditor`, is a control that rende
 
 As the user interacts with the control the visual appearance is updated to give immediate feedback. Once the editor loses focus, a value-dependent positive or negative pattern is applied to the control, along with adding the appropriate currency sign.
 
-The `igCurrencyEditor` control exposes a rich client-side API, which may be configured to work with any server technology. While the Ignite UI™ controls are server-agnostic, the control does feature wrappers specific for the Microsoft® ASP.NET MVC Framework to configure the control with the .NET™ language of your choice.
-
-The `igCurrencyEditor` control may be extensively styled giving you an opportunity to provide a completely different look and feel for the control as opposed to the default style. Styling options include using your own styles as well as styles from jQuery UI’s ThemeRoller.
-
 Figure 1: The `igCurrencyEditor` formatted for American currency
 
 ![](images/igCurrencyEditor_Overview.png)

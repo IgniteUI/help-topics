@@ -23,6 +23,6 @@ Rules|Compliance
 (c)|Using client side events, the user can change attributes of any of the control's DOM element reflecting the current state.
 (d)|The control's markup is readable without the associated style sheet because it’s a client-side control and depends on the CSS rules.
 (l)|When the control's scripts are changing the page markup, the new created content complies with the screen reader due to the attributes described in rule (c).
-(n)|[Keyboard Navigation (igCurrencyEditor)](igCurrencyEditor-Keyboard-Navigation.html)
+(n)| [Keyboard Navigation (igCurrencyEditor)](igCurrencyEditor-Keyboard-Navigation.html)
 
 

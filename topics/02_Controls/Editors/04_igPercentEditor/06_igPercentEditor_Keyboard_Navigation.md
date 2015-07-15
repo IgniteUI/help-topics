@@ -61,7 +61,7 @@ Press| To
 
 ## <a id="ddInteraction"></a>igPercentEditor with dropdown
 
-In this section you can see what key combinations can be used when you have a numeric editor with dropdown.
+In this section you can see what key combinations can be used when you have a percent editor with dropdown.
 
 Press| To
 ---|---

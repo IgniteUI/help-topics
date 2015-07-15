@@ -109,13 +109,13 @@ The `igNumericEditor` includes the following characteristics:
 
 Although the `igNumericEditor` shares a lot of properties with the other editors it possesses quite a number of unique ones. Let's start with the `dataMode` property. This property can be used to set or get the type of  the editor's input value. The default value is "double", but you can choose between int, float, byte and other. The full list of values can be seen in the [igNumericEditor jQuery API](%%jQueryApiUrl%%/ui.igNumericEditor). 
 
-Another specific option is the `numericDecimalSeparator` which allows you to choose what character to be displayed as a decimal separator. The `numericGroupSeparator` has similar functionality but it allows you to choose a character that will be displayed between the digits in a large number like thousands or more. Below you can see an example of how to use it, but before that let take a look at one more property. The `numericGroups` takes an array as a value. This property can be used to determine after how many digits you would like to have a separator. Note that count on groups start from right to left and the option affects only in display mode.
+Another specific option is the `decimalSeparator` which allows you to choose what character to be displayed as a decimal separator. The `groupSeparator` has similar functionality but it allows you to choose a character that will be displayed between the digits in a large number like thousands or more. Below you can see an example of how to use it, but before that let take a look at one more property. The `groups` takes an array as a value. This property can be used to determine after how many digits you would like to have a separator. Note that count on groups start from right to left and the option affects only in display mode.
 
 ```js
 $('#divEditor').igNumericEditor({
 	width: "300",
-	numericGroups: [1,2,3],
-	numericGroupSeparator:"-"
+	groups: [1,2,3],
+	groupSeparator:"-"
 });
 ```
 

@@ -61,7 +61,7 @@ Press| To
 
 ## <a id="ddInteraction"></a>igCurrencyEditor with dropdown
 
-In this section you can see what key combinations can be used when you have a numeric editor with dropdown.
+In this section you can see what key combinations can be used when you have a currency editor with dropdown.
 
 
 Press| To
