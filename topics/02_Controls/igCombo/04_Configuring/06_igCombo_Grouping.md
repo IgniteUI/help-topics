@@ -71,7 +71,7 @@ $(".selector").igCombo({
 ##<a id="relatedContent"></a> Related content
 ###API help
 
--[Grouping api help](%%jQueryApiUrl%%/ui.igcombo#options:grouping)
+-	[Grouping api help](%%jQueryApiUrl%%/ui.igcombo#options:grouping)
 ### Samples
 The following samples provide additional information related to this topic.
--[Grouping with header and footer templates](%%SamplesUrl%%/combo/grouping):This sample demonstrates how grouping can be used with Header and Footer templates efficiently.
+-	[Grouping with header and footer templates](%%SamplesUrl%%/combo/grouping):This sample demonstrates how grouping can be used with Header and Footer templates efficiently.
