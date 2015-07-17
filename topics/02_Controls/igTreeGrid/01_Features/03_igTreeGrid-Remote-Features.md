@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 |metadata|
 {
     "fileName": "igtreegrid-remote-features",
@@ -27,54 +27,26 @@ The following lists the concepts, topics, and articles required as a prerequisit
     - [Remote Filtering](#filtering)
     - [Remote Sorting](#sorting)
     - [Remote Paging](#paging)
+- [**Performance Considerations**](#considerations)
 - [**Related Content**](#related-content)
     - [Topics](#topics)
     - [Samples](#samples)
 
 ## <a id="introduction"></a> Introduction
 
-When the tree grid is set up to use remote features, Ajax requests are used for data interactions. Having remote features such as Paging allows for working with very large sets without the need to bind the `igTreeGrid` to the entire data initially which can greatly benefit performance. Additionally, having server-side control on intermediate states allows for completely custom logic to be applied on the outcome of the operations. 
+When the tree grid is set up to use remote features, Ajax requests are used for data interactions. Having remote features such as Paging allows for working with very large sets without the need to bind the `igTreeGrid` to the entire data initially which can greatly benefit performance.What is more, data set is processed in memory. Additionally, having server-side control on intermediate states allows for completely custom logic to be applied on the outcome of the operations. 
 
 Supported features that can perform remote operations are **Sorting**, **Filtering** and **Paging**.
 
-> **Note:** Currently these remote operations need to be handled manually by manipulating the data on the server side based on the parameters send with the remote Ajax requests of the grid.
-
+In order to take advantage of the remote features functionality the controller action method responsible for Sorting, Filtering and Paging should be decorated with TreeGridDataSourceAction attribute. This is all that needs to be done and the TreeGridDataSourceAction is handling everything else for you. In this scenario requests are handled by the ignite UI Grid MVC Wrapper which automatically adds parameter to the request and returns the data in the appropriate format. 
+Another benefit of the remote features is that expanded state is persisted across user interactions. For instance, if the user expand a node on the first page and moves to the second page, afterwards when he is on the first page again the expanded state of the nodes is going to be persisted. Same is applicable when filtering or sorting interactions are performed. 
 
 ### <a id="request-format"></a> Request Format
 
-All features share the same [`dataSourceUrl`](%%jQueryApiUrl%%/ui.igtreegrid#options:dataSourceUrl) endpoint address (also used for [Load on Demand](igTreeGrid-Load-On-Demand.html)) for requesting additional data. This means back-end implementations for multiple remote features need to be able to handle more than one style of request by reading the provided parameters.
+All features share the same [`dataSourceUrl`](%%jQueryApiUrl%%/ui.igtreegrid#options:dataSourceUrl) endpoint address (also used for [Load on Demand](igTreeGrid-Load-On-Demand.html)) for requesting additional data. This means that if there are any custom back-end implementations for multiple remote features they need to be able to handle more than one style of request by reading the provided parameters.
 
-When handling requests on the back end it's important to maintain the logical order of the operations - for example filtering data transformations should be applied first and then sorting if needed, before cutting down the results to the required page size:
+In case that requests are going to be manually handled on the back end it's important to maintain the logical order of the operations - for example filtering data transformations should be applied first and then sorting if needed, before cutting down the results to the required page size:
 
-**In C#:**
-```csharpcsharp
-private IQueryable GetProcessedData(TreeGridModel gridModel)
-{
-	IQueryable queryableData = (IQueryable)gridModel.DataSource;
-	NameValueCollection queryString = this.HttpContext.Request.QueryString;
-	TreeGridProcessDataHelper helper = new TreeGridProcessDataHelper();
-	
-	foreach (string key in queryString.Keys)
-	{
-		if (key.Contains("filter"))
-		{
-			// handle filtering
-			queryableData = helper.TransformFilterData(queryString, gridModel);
-		}
-		if (key.Contains("sort"))
-		{
-			// handle sorting
-			queryableData = helper.TransformSortData(queryString, gridModel);
-		}
-		if (key.Contains("pageSize"))
-		{
-			// handle paging
-			queryableData = helper.TransformPagingData(queryString, gridModel, queryableData);
-		}
-	}
-	return queryableData;
-}
-```
 
 ## <a id="features"></a> Feature Specific Details
 
@@ -84,50 +56,51 @@ While besides the specific parameters, there can also be specific requirements f
 
 Enable the remote operation by setting the [`type`](%%jQueryApiUrl%%/ui.igtreegridfiltering#options:type) feature option to `'remote'`. Data requests for Filtering will supply at least one `filter(<property>)` style parameter. If Advanced [`mode`](%%jQueryApiUrl%%/ui.igtreegridfiltering#options:mode) is enabled a `filterLogic` conditional operator is also sent specifying if the criteria must all match ("AND") or any one is enough ("OR"). It will look similar to the following:
 
+
 ```
-http://<SERVER>/treegrid/GetTreeData?filter(LastName)=contains(ski)&filter(HireDate)=before(1425340800000)&filterLogic=AND
+ttp://<SERVER>/TreeGrid/GetData?filter(EmployeeID)=equals(3)&filterLogic=AND&filtering.fromLevel=0&filtering.toLevel=-1&__matchFiltering=__matchFiltering&filtering.displayMode=showWithAncestors&pk=EmployeeID&propertyDataLevel=__ig_options.dataLevel&propertyExpanded=__ig_options.expanded&childDataKey=Employees&initialExpandDepth=-1&_=1437122016866
 ```
+
 A full list of the possible conditions is availabe in the [API Usage (igGrid Filtering)](igGrid-Filtering.html#api) topic. In simple mode the criterial logic is not controlled by the user and is static (usually defaults to conditional-AND) so the `filterLogic` parameter is omitted. Usually the server side would have access to the inital Tree Grid model to verify that.
 
 When preparing data for the response the [`matchFiltering`](%%jQueryApiUrl%%/ui.igtreegridfiltering#options:matchFiltering) property must be set when handling the filtering to let filtering know which part of the data is an actual match, while also obeying the defined display mode and level restrictions  of the initial model.
+
+Filtering Response looks like the following:
+
+```js
+Metadata: {timezoneOffset: 10800000, filtering.countRecords: 1}
+filtering.countRecords: 1
+timezoneOffset: 10800000
+Records: [{EmployeeID: 2, FirstName: "Name 1", LastName: "Last Name 1", Level: "Level:0",…}]
+0: {EmployeeID: 2, FirstName: "Name 1", LastName: "Last Name 1", Level: "Level:0",…}
+TotalRecordsCount: 0
+```
+
 
 **Related topic:** [Remote Filtering (igGrid)](igGrid-Filtering.html#remote)
 
 ### <a id="sorting"></a> Remote Sorting
 
-Enable the remote operation by setting the [`type`](%%jQueryApiUrl%%/ui.ui.igtreegridsorting#options:type) feature option to `'remote'`. Ajax requests have at least one `sort(<propertyName>)` style parameter (depending on the [`mode`](%%jQueryApiUrl%%/ui.igtreegridsorting#options:mode)) that defines either ascending or descending sorting direction for each object property:
+Enable the remote operation by setting the [`type`](%%jQueryApiUrl%%/ui.ui.igtreegridsorting#options:type) feature option to `'remote'`. Ajax requests have at least one `sort(<propertyName>)` style parameter (depending on the [`mode`](%%jQueryApiUrl%%/ui.igtreegridsorting#options:mode)) that defines either ascending or descending sorting direction for each object property. There are two additional parameters defining from which(fromlevel) to which level(toLevel) sorting is performed:
 
 ```
-http://<SERVER>/treegrid/GetTreeData?sort(Email)=asc&sort(Title)=desc
+http://<SERVER>/TreeGrid/GetData?sort(EmployeeID)=asc&sorting.fromLevel=0&sorting.toLevel=-1&pk=EmployeeID&propertyDataLevel=__ig_options.dataLevel&propertyExpanded=__ig_options.expanded&childDataKey=Employees&initialExpandDepth=-1&_=1437123084738
 ```
 
 **Related topic:** [Remote Sorting (igGrid)](igGrid-Sorting-Overview.html#remote)
 
 ### <a id="paging"></a> Remote Paging
 
-Enable the remote operation by setting the [`type`](%%jQueryApiUrl%%/ui.igtreegridpaging#options:type) feature option to `'remote'`. Remote Paging operations use two main parameters - the `page` index the user is requesting and the respective row count per page set by `pageSize`:
+Enable the remote operation by setting the [`type`](%%jQueryApiUrl%%/ui.igtreegridpaging#options:type) feature option to `'remote'`. Remote Paging operations use following parameters - the `page` index the user is requesting, the respective row count per page set by `pageSize`, `listExpanisonStates[2]` which keeps the information about the expansion state.  Every time a node is expanded or collapsed a request is sent in order to update this property and preserve this state across user interactions:
 
 ```
-http://<SERVER>/treegrid/GetTreeData?page=1&pageSize=3
+http://<SERVER>/TreeGrid/GetData?page=1&pageSize=5&paging.mode=allLevels&paging.contextRowMode=none&pk=EmployeeID&listExpansionStates%5B2%5D=false&propertyDataLevel=__ig_options.dataLevel&propertyExpanded=__ig_options.expanded&childDataKey=Employees&initialExpandDepth=-1&_=1437129614152
 ```
-For all requests with remote Paging a `"TotalRecordsCount"` field must be provided in order for the client side widget to be able to determine the number of pages the user is allowed to pick from:
 
-```csharp
-public JsonResult GetTreeData()
-{
-	TreeGridModel gridModel = GetRemoteTreeGridModel();
-    IQueryable<EmployeeData> allData = RepositoryFactory.GetHierarchicalEmployeeData().AsQueryable();
-	gridModel.DataSource = allData.AsQueryable();
-	TreeGridPaging paging = (TreeGridPaging)gridModel.Features.Find(x => x.Name == "Paging");
+### <a id="considerations"></a> Performance Considerations
 
-	IQueryable data = GetProcessedData(gridModel);
+In case that there is an SQL end point in you application what could be done in order to improve performance by decreasing the number of calls to the SQL is caching the data.
 
-	JsonResult result = new JsonResult();
-	result.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
-	result.Data = new ResultData() { Records = data, TotalRecordsCount = paging.TotalRecordsCount };
-	return result;
-}
-```
 **Related topic:** [Remote Paging (igGrid)](igGrid-Paging.html#remote)
 
 ## <a id="related-content"></a> Related Content
