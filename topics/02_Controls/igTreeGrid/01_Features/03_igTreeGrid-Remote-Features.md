@@ -22,7 +22,7 @@ The following lists the concepts, topics, and articles required as a prerequisit
 ### In this topic:
 
 - [**Introduction**](#introduction)
-	- [Request Format](#request-format)
+    - [Request Format](#request-format)
 - [**Feature Specific Details**](#features)
     - [Remote Filtering](#filtering)
     - [Remote Sorting](#sorting)
@@ -34,18 +34,30 @@ The following lists the concepts, topics, and articles required as a prerequisit
 
 ## <a id="introduction"></a> Introduction
 
-When the tree grid is set up to use remote features, Ajax requests are used for data interactions. Having remote features such as Paging allows for working with very large sets without the need to bind the `igTreeGrid` to the entire data initially which can greatly benefit performance.What is more, data set is processed in memory. Additionally, having server-side control on intermediate states allows for completely custom logic to be applied on the outcome of the operations. 
+When the tree grid is set up to use remote features, Ajax requests are used for data interactions. Having remote features such as Paging allows for working with very large sets without the need to bind the `igTreeGrid` to the entire data initially which can greatly benefit performance. What is more, data set is processed in memory. Additionally, having server-side control on intermediate states allows for completely custom logic to be applied on the outcome of the operations. 
 
 Supported features that can perform remote operations are **Sorting**, **Filtering** and **Paging**.
 
 In order to take advantage of the remote features functionality the controller action method responsible for Sorting, Filtering and Paging should be decorated with TreeGridDataSourceAction attribute. This is all that needs to be done and the TreeGridDataSourceAction is handling everything else for you. In this scenario requests are handled by the ignite UI Grid MVC Wrapper which automatically adds parameter to the request and returns the data in the appropriate format. 
+
+```csharp
+
+		[TreeGridDataSourceAction]
+		public ActionResult GetData()
+		{
+			List<MyEmployeeHierarchical> emp = GenerateEmployees();
+			return View("Index", emp.AsQueryable());
+		}
+```
+
 Another benefit of the remote features is that expanded state is persisted across user interactions. For instance, if the user expand a node on the first page and moves to the second page, afterwards when he is on the first page again the expanded state of the nodes is going to be persisted. Same is applicable when filtering or sorting interactions are performed. 
+
 
 ### <a id="request-format"></a> Request Format
 
 All features share the same [`dataSourceUrl`](%%jQueryApiUrl%%/ui.igtreegrid#options:dataSourceUrl) endpoint address (also used for [Load on Demand](igTreeGrid-Load-On-Demand.html)) for requesting additional data. This means that if there are any custom back-end implementations for multiple remote features they need to be able to handle more than one style of request by reading the provided parameters.
 
-In case that requests are going to be manually handled on the back end it's important to maintain the logical order of the operations - for example filtering data transformations should be applied first and then sorting if needed, before cutting down the results to the required page size:
+In case that requests are going to be manually handled on the back end it's important to maintain the logical order of the operations - for example filtering data transformations should be applied first and then sorting if needed, before cutting down the results to the required page size.
 
 
 ## <a id="features"></a> Feature Specific Details
@@ -54,14 +66,14 @@ While besides the specific parameters, there can also be specific requirements f
 
 ### <a id="filtering"></a> Remote Filtering
 
-Enable the remote operation by setting the [`type`](%%jQueryApiUrl%%/ui.igtreegridfiltering#options:type) feature option to `'remote'`. Data requests for Filtering will supply at least one `filter(<property>)` style parameter. If Advanced [`mode`](%%jQueryApiUrl%%/ui.igtreegridfiltering#options:mode) is enabled a `filterLogic` conditional operator is also sent specifying if the criteria must all match ("AND") or any one is enough ("OR"). It will look similar to the following:
+Enable the remote operation by setting the [`type`](%%jQueryApiUrl%%/ui.igtreegridfiltering#options:type) feature option to `'remote'`. Data requests for Filtering will supply at least one `filter(<property>)` style parameter. If Advanced [`mode`](%%jQueryApiUrl%%/ui.igtreegridfiltering#options:mode) is enabled a `filterLogic` conditional operator is also sent specifying if the criteria must all match ("AND") or any one is enough ("OR"). Another parameters in the request `fromLevel` and `toLevey` specify from which to which level the `igTreeGrid` is going to be filtered. It will look similar to the following:
 
 
 ```
-ttp://<SERVER>/TreeGrid/GetData?filter(EmployeeID)=equals(3)&filterLogic=AND&filtering.fromLevel=0&filtering.toLevel=-1&__matchFiltering=__matchFiltering&filtering.displayMode=showWithAncestors&pk=EmployeeID&propertyDataLevel=__ig_options.dataLevel&propertyExpanded=__ig_options.expanded&childDataKey=Employees&initialExpandDepth=-1&_=1437122016866
+http://<SERVER>/TreeGrid/GetData?filter(EmployeeID)=equals(3)&filterLogic=AND&filtering.fromLevel=0&filtering.toLevel=-1&__matchFiltering=__matchFiltering&filtering.displayMode=showWithAncestors&pk=EmployeeID&propertyDataLevel=__ig_options.dataLevel&propertyExpanded=__ig_options.expanded&childDataKey=Employees&initialExpandDepth=-1&_=1437122016866
 ```
 
-A full list of the possible conditions is availabe in the [API Usage (igGrid Filtering)](igGrid-Filtering.html#api) topic. In simple mode the criterial logic is not controlled by the user and is static (usually defaults to conditional-AND) so the `filterLogic` parameter is omitted. Usually the server side would have access to the inital Tree Grid model to verify that.
+A full list of the possible conditions is available in the [API Usage (igGrid Filtering)](igGrid-Filtering.html#api) topic. In simple mode the criterial logic is not controlled by the user and is static (usually defaults to conditional-AND) so the `filterLogic` parameter is omitted. Usually the server side would have access to the initial Tree Grid model to verify that.
 
 When preparing data for the response the [`matchFiltering`](%%jQueryApiUrl%%/ui.igtreegridfiltering#options:matchFiltering) property must be set when handling the filtering to let filtering know which part of the data is an actual match, while also obeying the defined display mode and level restrictions  of the initial model.
 
@@ -99,7 +111,7 @@ http://<SERVER>/TreeGrid/GetData?page=1&pageSize=5&paging.mode=allLevels&paging.
 
 ### <a id="considerations"></a> Performance Considerations
 
-In case that there is an SQL end point in you application what could be done in order to improve performance by decreasing the number of calls to the SQL is caching the data.
+In case that there is an SQL end point in your application what could be done in order to improve performance by decreasing the number of calls to the SQL is caching the data.
 
 **Related topic:** [Remote Paging (igGrid)](igGrid-Paging.html#remote)
 
