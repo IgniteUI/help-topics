@@ -919,6 +919,7 @@ When virtualization is enabled the autofitLastColumn is not effective | When vir
 Column virtualization will not work when grid width is defined in percentage units | When grid width is defined in percentage units and column virtualization is enabled ([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) horizontal scrollbar will not render. | ![](../images/images/negative.png)
 Fixed virtualization is not supported with RWD Mode | Fixed virtualization depends on the row's height being constant. If the row's height changes the fixed virtualization will not work as expected. RWD Mode changes the row's height as it adopts to the screen size so fixed virtualization will not work as expected with it. | ![](../images/images/positive.png)
 Column virtualization is not supported with continuous virtualization | Column virtualization is supported only with fixed virtualization. When column virtualization is enabled([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) then the virtualization mode must be set to "fixed"([virtualizationMode](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) = "fixed"). | ![](../images/images/negative.png)
+Virtualization and auto sizing of columns is not supported | Auto sizing columns by setting their width option to "*"  is not supported with virtualization. | ![](../images/images/negative.png)
 
 ### <a id="grid-responsive"></a> [igGrid – Responsive Web Design Mode](igGrid-Known-Issues.html)
 <table class="table table-striped">
