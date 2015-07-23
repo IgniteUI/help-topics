@@ -56,7 +56,7 @@ To quickly get enable the Load on demand functionality of the Tree Grid follow t
 	**In CSHTML:**
 
 	```csharp
-	        @(Html.Infragistics().TreeGrid<IgniteUI.SamplesBrowser.Models.EmployeeData>()
+	     @(Html.Infragistics().TreeGrid<IgniteUI.SamplesBrowser.Models.EmployeeData>()
         .DataSourceUrl(Url.Action("GetTreeData"))
         .Width("100%")
         .Height("600px")
@@ -88,7 +88,7 @@ To quickly get enable the Load on demand functionality of the Tree Grid follow t
 2. Create controller action to handle data request:
 
 ```csharp
-	        [TreeGridDataSourceAction]
+	    [TreeGridDataSourceAction]
         public ActionResult ChildEmployeesOnDemand()
         {
             IQueryable allData = RepositoryFactory.GetHierarchicalEmployeeData().AsQueryable();
