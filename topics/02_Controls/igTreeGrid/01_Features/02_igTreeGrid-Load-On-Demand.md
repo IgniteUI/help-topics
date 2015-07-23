@@ -52,42 +52,40 @@ and as visible, the child record's key value is "5", producing a path of `2/5` f
 
 To quickly get enable the Load on demand functionality of the Tree Grid follow the steps.
 
-1. Configure the `TreeGridModel` model. Set [`EnableRemoteLoadOnDemand`](Infragistics.Web.Mvc~Infragistics.Web.Mvc.TreeGridModel~LoadOnDemand.html) to `true` and [`DataSourceUrl`](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridModel~DataSourceUrl.html) to the endpoint URL that will handle the requests:
+1. Define `igTreeGridModel` in the View. Set [`EnableRemoteLoadOnDemand`](Infragistics.Web.Mvc~Infragistics.Web.Mvc.TreeGridModel~LoadOnDemand.html) to `true` and [`DataSourceUrl`](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridModel~DataSourceUrl.html) to the endpoint URL that will handle the requests:
+	**In CSHTML:**
 
 	```csharp
-	private TreeGridModel GetTreeGridModel()
-	{
-		TreeGridModel gridModel = new TreeGridModel();
-		gridModel.EnableRemoteLoadOnDemand = true;
-		gridModel.DataSourceUrl = Url.Action("ChildEmployeesOnDemand");
-
-		gridModel.Width = "100%";
-		gridModel.AutoGenerateColumns = false;
-		gridModel.Columns = new List<GridColumn>();
-		gridModel.Columns.Add(new GridColumn() { Key = "ID", HeaderText = "ID", DataType = "number", Width = "10%", Hidden = true });
-		gridModel.Columns.Add(new GridColumn() { Key = "FirstName", HeaderText = "First Name", DataType = "string", Width = "25%" });
-		gridModel.Columns.Add(new GridColumn() { Key = "LastName", HeaderText = "Last Name", DataType = "string", Width = "25%" });
-		gridModel.Columns.Add(new GridColumn() { Key = "Title", HeaderText = "Title", DataType = "string", Width = "30%" });
-		gridModel.Columns.Add(new GridColumn() { Key = "StartDate", HeaderText = "Start Date", DataType = "date", Width = "15%" });
-		gridModel.PrimaryKey = "ID";
-		gridModel.ChildDataKey = "Employees";
-		gridModel.RenderExpansionIndicatorColumn = true;
-		gridModel.InitialIndentationLevel = 4;
-		return gridModel;
-	}
-	```
-2. Assign the appropriate source and pass the model to the view:
-
-	```csharp
-        [ActionName("load-on-demand")]
-        public ActionResult LoadOnDemand()
+	        @(Html.Infragistics().TreeGrid<IgniteUI.SamplesBrowser.Models.EmployeeData>()
+        .DataSourceUrl(Url.Action("GetTreeData"))
+        .Width("100%")
+        .Height("600px")
+        .ID("TreeGrid")
+        .EnableRemoteLoadOnDemand(true)
+        .AutoGenerateColumns(false)
+        .Columns(column =>
         {
-           TreeGridModel gridModel = GetTreeGridModel();
-           gridModel.DataSourceUrl = Url.Action("ChildEmployeesOnDemand");
-           return View(gridModel);
-        }
+            column.For(x => x.ID).HeaderText("ID").DataType("number").Width("10%");
+            column.For(x => x.FirstName).HeaderText("$$(Northwind_Employees_FirstName)").DataType("string").Width("25%");
+            column.For(x => x.LastName).HeaderText("$$(Northwind_Employees_LastName)").DataType("string").Width("15%");
+            column.For(x => x.Email).HeaderText("$$(Northwind_Employees_Email)").DataType("string").Width("25%");
+            column.For(x => x.Title).HeaderText("$$(Northwind_Employees_Title)").DataType("string").Width("25%");
+            column.For(x => x.HireDate).HeaderText("$$(Employees_HireDate)").DataType("date").Width("10%");
+
+        })
+        .PrimaryKey("ID")
+        .ChildDataKey("Employees")
+        .Features(features =>
+        {
+            features.Paging().Type(OpType.Remote).Mode(TreeGridPagingMode.RootLevelOnly).PageSize(3);
+            features.Filtering().Type(OpType.Remote).DisplayMode(TreeGridFilteringDisplayMode.ShowWithAncestors);
+            features.Sorting().Type(OpType.Remote);
+        })
+        .DataBind()
+        .Render()
+    )
 	```
-3. Crate a controller action to handle the data requests. Use the `path` parameter by splitting it into separate identifiers that correspond to the record key values and use those to navigate to the target level. Return the level data with empty collections for child data:
+2. Create controller action to handle data request:
 
 ```csharp
 	        [TreeGridDataSourceAction]
@@ -98,15 +96,6 @@ To quickly get enable the Load on demand functionality of the Tree Grid follow t
         }
 ```
 	> Note: The `igTreeGrid` will provide as much information as possbile to determine the requested data and using it entirely depends on the level of funtionality required. For example if the underlying data has a unique **primary keys** the last identifier (or `identifiers[depth]`) can be used to access the expanded record directly. Also the provided key name parameter can be used to either assign Routing rules for separate data views or in the creation of a predicate string used for querying the source.
-
-4. Create a view and instantiate the `TreeGrid` wrapper with the configured model.
-
-	**In CSHTML:**
-	```csharp
-	@using Infragistics.Web.Mvc
-	// ..
-	@(Html.Infragistics().TreeGrid(Model))
-	```
 
 ## <a id="related-content"></a> Related Content
 
