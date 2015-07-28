@@ -8,7 +8,7 @@
 |metadata|
 -->
 # Row Selectors (igTreeGrid)
-The Row Selectors feature for the `igTreeGrid` is extended from the `igGrid` RowSelectors. The feature is customized to ease selection in hierarchical data.  Additional API options specific to the igTreeGrid are introduced – `rowSelectorNumberingMode` and `chechkboxMode`.
+The Row Selectors feature for the `igTreeGrid` is extended from the `igGrid` RowSelectors. The feature is customized to ease selection in hierarchical data. What is more, in order to meet all kind of requirements Row Selectors provides the opportunity to decouple checkboxes from selection. Additional API options specific to the igTreeGrid are introduced – `rowSelectorNumberingMode` and `chechkboxMode` as well as additional API methods - `checkedRows`, `uncheckedRows`, `partiallyCheckedRows`, `toggleCheckState` and `toggleCheckStateById`.
 
 ### In this topic:
 
@@ -21,7 +21,7 @@ The Row Selectors feature for the `igTreeGrid` is extended from the `igGrid` Row
     - [Tri-state checkboxes](#triState-checkobox-mode)
 
 ## <a id="introduction"></a> Introduction
-The rowSelectors feature widget provides the user with the functionality to select cell(s), or entire row(s) by clicking the row selector column placed on the left of the first column of the grid. In addition to that, the widget provides row numbering functionalities and checkboxes for row selection.
+The rowSelectors feature widget provides the user with the functionality to select cell(s), or entire row(s) by clicking the row selector column placed on the left of the first column of the grid. In addition to that, the widget provides row numbering functionalities and checkboxes for row selection. Another advantage of Row Selectors is that they could be easily configured to decouple checkboxes from selection if you would like achieve a "tree-like" look and feel of the applications.
 
 ## <a id="numbering-modes"></a> Row Selector`s Numbering Modes
 In the `igTreeGrid` there are two possible modes for the row selectors numbering[`mode`](%%jQueryApiUrl%%/ui.igtreegridrowselectors#options:rowSelectorNumberingMode) – sequential and hierarchical.
@@ -72,7 +72,7 @@ $("#treegrid ").igTreeGrid({
 ![igTreeGrid hierarachical numbering](images/igtree-grid-row-numbering-mode-hierarchical.png "Tree Grid with row numbering mode hierarachical")
 
 ## <a id="checkobox-modes"></a> Row Selector`s Numbering Modes
-Depending on how you would like selection on child rows to affect parent row there are two possible types of checkboxes that you could render: biState and triState.
+Depending on the selection is going to be coupled with checkboxes or decoupeled  there are two possible types of checkboxes that you could render: biState and triState.
 Bi-state checkboxes
 
 ### <a id="biState-checkobox-mode"></a>Bi-state checkboxes
@@ -86,7 +86,7 @@ $("#treegrid ").igTreeGrid({
 	features : [
 	{
 		name : "RowSelectors",
-		checkboxMode: "biState"
+		checkBoxMode: "biState"
 	},
 	{
 		name: "Selection"
@@ -98,8 +98,8 @@ $("#treegrid ").igTreeGrid({
 ![igTreeGrid biState checkbox mode](images/igtree-grid-checkobox-mode-biState.png "Tree Grid with check box mode bi state'")
 
 ### <a id="triState-checkobox-mode"></a>Tri-state checkboxes
-
-When “triState” mode parent checkboxes will be fully checked if all of their children are fully checked and partially checked if only some of their children are checked. With `checkboxMode` set to “triState” selecting parent node will select all its children as well.
+In this mode there is a clear distinction between selected row and the state of the corresponding checkbox. This configuration will decouple checkboxes from selection and selection in this case could only be single.
+When in “triState” `checkBoxMode` selecting a row is not going to check the corresponding checkbox and vice versa, clicking a selector checkbox is not going to apply selection to the row.
 
 ```js
 $("#treegrid ").igTreeGrid({
@@ -109,7 +109,8 @@ $("#treegrid ").igTreeGrid({
 	features : [
 	{
 		name : "RowSelectors",
-		checkboxMode: "triState"
+        enableCheckBoxes: true,
+		checkBoxMode: "triState"
 	},
 	{
 		name: "Selection"
@@ -118,4 +119,10 @@ $("#treegrid ").igTreeGrid({
 });
 ```
 
-![igTreeGrid biState checkbox mode](images/igtree-grid-checkobox-mode-triState.png "Tree Grid with check box mode tri state")
+Tri state checkboxes - selecting a row
+
+![igTreeGrid biState checkbox mode](images/igTreeGridCheckBoxModeTriStateNew2.png "Tree Grid with check box mode tri state")
+
+Tri state checkboxes - clicking on the checkbox
+
+![igTreeGrid biState checkbox mode](images/igTreeGridCheckBoxModeTriStateNew.png "Tree Grid with check box mode tri state")
