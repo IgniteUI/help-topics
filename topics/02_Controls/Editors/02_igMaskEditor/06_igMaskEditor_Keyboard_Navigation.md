@@ -1,14 +1,14 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "igtexteditor-keyboard-navigation",
-    "controlName": "igTextEditor",
+    "fileName": "igmaskeditor-keyboard-navigation",
+    "controlName": "igMaskEditor",
     "tags": []
 }
 |metadata|
 -->
 
-#Keyboard Navigation (igTextEditor)
+#Keyboard Navigation (igMaskEditor)
 
 ##Topic overview
 This topic explains how to use keyboard navigation so that end-users can easily and quickly navigate through inputs and interact with them.
@@ -19,7 +19,7 @@ This topic contains the following sections:
 
 -   [Keyboard interactions](#skbInteraction)
 -   [Selecting the editor](#skbInteraction)
--   [igTextEditor with dropdown](#ddInteraction)
+-   [igMaskEditor with dropdown](#ddInteraction)
 
 
 ## <a id="skbInteraction"></a>Standard Keyboard interactions
@@ -57,9 +57,9 @@ Press| To
 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> or <kbd>Shift</kbd> + <kbd>End</kbd>|Select value in the input till end
 <kbd>Ctrl</kbd> + <kbd>A</kbd> |Select the whole value in the input 
 
-## <a id="ddInteraction"></a>igTextEditor with dropdown
+## <a id="ddInteraction"></a>igMaskEditor with dropdown
 
-In this section you can see what key combinations can be used when you have a text editor with dropdown.
+In this section you can see what key combinations can be used when you have a mask editor with dropdown.
 
 Press| To
 ---|---

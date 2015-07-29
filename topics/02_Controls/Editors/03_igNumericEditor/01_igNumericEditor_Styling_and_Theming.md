@@ -10,7 +10,6 @@
 
 # igNumericEditor Styling and Theming
 
-
 The `igNumericEditor` control is jQuery-based with a number of options for styling. To customize style of the numeric editor you can use different themes or apply custom CSS rules to the control. 
 
 The Ignite UI package comes with a number of jQuery UI and Bootstrap themes. Bootstrap support also includes generating and customizing your own bootstrap themes - see [Styling and Theming](Deployment-Guide-Styling-and-Theming.html) for details. All of the themes will style all controls including the editors on the page.
