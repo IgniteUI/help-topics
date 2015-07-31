@@ -26,6 +26,8 @@ The `igMaskEditor` includes the following characteristics:
 -   JavaScript Client API
 -   ASP.NET MVC wrapper
 
+
+>**Note:** One of the major changed in the new Mask editor is that it no longer supports Lists and DropDown. Note that if you try to use methods connected to dropdown and list, you will receive a notification pointing out that they are no longer available. 
    
 ##Adding igMaskEditor to a Web Page
 

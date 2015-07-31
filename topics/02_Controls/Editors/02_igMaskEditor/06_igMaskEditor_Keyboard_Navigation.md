@@ -19,7 +19,6 @@ This topic contains the following sections:
 
 -   [Keyboard interactions](#skbInteraction)
 -   [Selecting the editor](#skbInteraction)
--   [igMaskEditor with dropdown](#ddInteraction)
 
 
 ## <a id="skbInteraction"></a>Standard Keyboard interactions
@@ -57,17 +56,5 @@ Press| To
 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> or <kbd>Shift</kbd> + <kbd>End</kbd>|Select value in the input till end
 <kbd>Ctrl</kbd> + <kbd>A</kbd> |Select the whole value in the input 
 
-## <a id="ddInteraction"></a>igMaskEditor with dropdown
 
-In this section you can see what key combinations can be used when you have a mask editor with dropdown.
-
-Press| To
----|---
-<kbd>Alt</kbd> + <kbd>Down Arrow</kbd> or  <kbd>Down Arrow</kbd>| Open the dropdown, when the focus is in the input
-<kbd>Alt</kbd> + <kbd>Up Arrow</kbd> or <kbd>Esc</kbd>| Close the dropdown, when the focus is on the dropdown list
-<kbd>Up Arrow</kbd>| Close the dropdown, when the focus is on the top item of the dropdown list 
-<kbd>Down Arrow</kbd> | Move to next item, when the focus is on the list of items  
-<kbd>Up Arrow</kbd> | Move to previous item, when the focus is on the list of items
-<kbd>Enter</kbd> | Confirm focused item as selected
-<kbd>Enter</kbd> or <kbd>Alt</kbd> + <kbd>Up Arrow</kbd>| Reject focused item and keep old selection
 
