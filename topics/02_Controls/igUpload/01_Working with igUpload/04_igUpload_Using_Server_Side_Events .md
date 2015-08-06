@@ -236,7 +236,7 @@ In order to add additional data to the request you can use the [`onFormDataSubmi
             $("#upload1").igUpload("addDataField", ui.formData, { "name": "Parameter Name", "value": "Value" });
         });
 ```
-To get the data on the server-side you can use the `UploadStarting`,`UploadFinishing` and `UploadFinished`’s `AdditionalDataFields` event argument, which will contain a collection of the field name and value passed from the server.
+To get the data on the server-side you can use the `UploadStarting`,`UploadFinishing` and `UploadFinished`’s `AdditionalDataFields` event argument, which will contain a collection of the field name and value passed from the client.
 
 **In C#:**
 
