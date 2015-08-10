@@ -99,11 +99,9 @@ The `igDateEditor` includes the following characteristics:
     ```js
     <script type="text/javascript">
           $('#dateEditor').igDateEditor({
-              button: 'spin',
-              minValue: new Date(1900, 0, 1),
-              maxValue: new Date(2200, 11, 31),
+              buttonType: 'spin',
               width: 195,
-              nullText: 'Enter date'
+              placeHolder: 'Enter date'
           });
     </script>
     ```
@@ -114,8 +112,6 @@ The `igDateEditor` includes the following characteristics:
      <%= Html.Infragistics().DateTimeEditor()
                   .ID("dateEditor")
                   .ButtonType(TextEditorButtonType.Spin)
-                  .MinValue(new DateTime(1900, 1, 1))
-                  .MaxValue(new DateTime(2200, 12, 31))
                   .NullText("Enter date")
                   .Render()%>
      ```
@@ -126,8 +122,6 @@ The `igDateEditor` includes the following characteristics:
     @(Html.Infragistics().DateTimeEditor()
                  .ID("dateEditor")
                  .ButtonType(TextEditorButtonType.Spin)
-                 .MinValue(new DateTime(1900, 1, 1))
-                 .MaxValue(new DateTime(2200, 12, 31))
                  .NullText("Enter date")
                  .Render())
     ```
