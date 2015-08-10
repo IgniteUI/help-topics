@@ -83,7 +83,7 @@ The `igDateEditor` control can also be fully styled using the [jQuery UI ThemeRo
 $('#dateEditor'). igDateEditor({
     width: 160,
     renderInContainer: true,
-    button: 'spin', 
+    buttonType: 'spin', 
     dateInputFormat: 'MMM/yy'
 });
 $('#themeRoller').themeswitcher();
