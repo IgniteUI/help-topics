@@ -1,4 +1,4 @@
-><!--
+<!--
 |metadata|
 {
     "fileName": "igtreegrid-row-selectors",
