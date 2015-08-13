@@ -1,4 +1,4 @@
-<!--
+><!--
 |metadata|
 {
     "fileName": "igtreegrid-row-selectors",
@@ -95,6 +95,7 @@ $("#treegrid ").igTreeGrid({
 });
 ```
 
+
 ![igTreeGrid biState checkbox mode](images/igtree-grid-checkobox-mode-biState.png "Tree Grid with check box mode bi state'")
 
 ### <a id="triState-checkobox-mode"></a>Tri-state checkboxes
@@ -125,4 +126,52 @@ Tri state checkboxes - selecting a row
 
 Tri state checkboxes - clicking on the checkbox
 
-![igTreeGrid biState checkbox mode](images/igTreeGridCheckBoxModeTriStateNew.png "Tree Grid with check box mode tri state")
+![igTreeGrid biState checkbox mode](images/igTreeGridCheckBoxModeTriStateNew.png "Tree Grid with check box
+mode tri state")
+
+
+## <a id="paging-integration"></a> Integration with Paging
+By default the user can select all rows in the current grid page using a checkbox in the header of the row selector column. 
+Along with Paging feature, Row Selectors feature provides the ability of the user to select all records across all grid pages when 'enableSelectAllForPaging' option is enabled. 
+> **Note:**  This option is enabled by default.  
+
+An option 'selectAllForPagingTemplate' is available to control the notification template. The template supports parameters ${checked} (total checked records) and ${totalRecordsCount}. 
+The default template is:
+```<div><div>```You have selected ${checked} records. ```<a data-rs-select-all>```Select all ${totalRecordsCount} records```</a><span data-rs-close-all></span></div></div>```
+
+
+The differences between the two checkbox modes related to "Select All" Paging functionality are described below:
+### <a id="biState-paging"></a>Bi-state mode
+With the default "biState" mode in order to select all grid pages, along with "enableSelectAllForPaging" option should be enabled also multiple selection.
+```js
+$("#treegrid").igTreeGrid({
+	dataSource: flatDS,
+	primaryKey: “employeeID”,
+	foreignKey: “PID”,
+	features : [
+	{
+		name: "RowSelectors",
+        rowSelectorNumberingMode: "sequential",
+        enableCheckBoxes: true,
+        checkBoxMode: "biState",
+        enableSelectAllForPaging: true
+	},
+	{
+		name: "Selection",
+        multipleSelection: true
+	},
+    {
+        name: "Paging",
+        pageSize: 10,
+        mode : "allLevels"
+    }
+	]
+});
+```
+Bi state mode - Select All functionality
+
+![igTreeGrid Paging with biState checkbox mode](images/treeGridPagingSelectAll.png "Tree Grid with Paging and biState mode")
+
+### <a id="triState-paging"></a>Tri-state mode
+
+> **Note:** TriState mode is not supported with multiple selection.
