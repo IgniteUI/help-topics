@@ -19,7 +19,7 @@ This topic contains the following sections:
 
 -   [Keyboard interactions](#skbInteraction)
 -   [Selecting the editor](#skbInteraction)
--   [igNumericEditor with dropdown](#ddInteraction)
+-   [igDateEditor specific navigation](#ddInteraction)
 
 
 ## <a id="skbInteraction"></a>Standard Keyboard interactions
@@ -59,7 +59,7 @@ Press| To
 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> or <kbd>Shift</kbd> + <kbd>End</kbd>|Select value in the input till end
 <kbd>Ctrl</kbd> + <kbd>A</kbd> |Select the whole value in the input 
 
-## <a id="ddInteraction"></a> igDateEditor special navigation
+## <a id="ddInteraction"></a> igDateEditor specific navigation
 
 
 Press| To

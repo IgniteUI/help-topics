@@ -1,14 +1,14 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "igdateeditor-keyboard-navigation",
-    "controlName": "igDateEditor",
+    "fileName": "igdatepicker-keyboard-navigation",
+    "controlName": "igDatePicker",
     "tags": []
 }
 |metadata|
 -->
 
-#Keyboard Navigation (igDateEditor)
+#Keyboard Navigation (igDatePicker)
 
 ##Topic overview
 This topic explains how to use keyboard navigation so that end-users can easily and quickly navigate through inputs and interact with them.
@@ -19,7 +19,7 @@ This topic contains the following sections:
 
 -   [Keyboard interactions](#skbInteraction)
 -   [Selecting the editor](#skbInteraction)
--   [igNumericEditor with dropdown](#ddInteraction)
+-   [igDatePicker specific navigation](#ddInteraction)
 
 
 ## <a id="skbInteraction"></a>Standard Keyboard interactions
@@ -59,7 +59,7 @@ Press| To
 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> or <kbd>Shift</kbd> + <kbd>End</kbd>|Select value in the input till end
 <kbd>Ctrl</kbd> + <kbd>A</kbd> |Select the whole value in the input 
 
-## <a id="ddInteraction"></a> igDatePicker special navigation
+## <a id="ddInteraction"></a> igDatePicker specific navigation
 
 
 Press| To
