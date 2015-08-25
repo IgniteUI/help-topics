@@ -24,23 +24,23 @@ This topic contains the following sections:
 
 ## <a id="skbInteraction"></a>Standard Keyboard interactions
 
-You can use the standard key combinations for functionalists such as copy, cut, paste, undo and redo.  
+You can use the standard key combinations for functionalists such as copy, cut, paste, undo and redo and these further ones.  
 
 Press| To
 ---|---
 <kbd>Right Arrow</kbd>|Move the caret one char to the right
 <kbd>Left Arrow</kbd>|Move the caret one char to the left
-<kbd>Ctrl</kbd> + <kbd>Right Arrow</kbd>|Move the caret one chunk to the right
-<kbd>Ctrl</kbd> + <kbd>Left Arrow</kbd>|Move the caret one chunk to the left
+<kbd>Ctrl</kbd> + <kbd>Right Arrow</kbd>|Move the caret one part of date to the right
+<kbd>Ctrl</kbd> + <kbd>Left Arrow</kbd>|Move the caret one part of date to the left
 <kbd>Ctrl</kbd> + <kbd>Home</kbd> or just <kbd>Home</kbd>|Move the caret to the start of the input
 <kbd>Ctrl</kbd> + <kbd>End</kbd> or just <kbd>End</kbd>|Move the caret to the end of the input
-<kbd>Backspace</kbd>|Delete the previous char
-<kbd>Delete</kbd>|Delete the following char
+<kbd>Backspace</kbd>|Delete the previous part of date
+<kbd>Delete</kbd>|Delete the following part of date
 <kbd>Ctrl</kbd> + <kbd>Backspace</kbd>|Delete the previous chunk
 <kbd>Ctrl</kbd> + <kbd>Delete</kbd>|Delete the following chunk
 <kbd>Delete</kbd> + <kbd>Backspace</kbd> | Delete selected content
-<kbd>Up Arrow</kbd>| Increment the number in the input
-<kbd>Down Arrow</kbd>| Decrement the number in the input
+<kbd>Up Arrow</kbd>| Increment the current part of date in the input
+<kbd>Down Arrow</kbd>| Decrement the current part of date in the input
 
 ## <a id="kbInteraction"></a>Selecting the editor
 
@@ -53,8 +53,8 @@ Press| To
 <kbd>Tab</kbd>|Focus the following component
 <kbd>Shift</kbd> + <kbd>Right Arrow</kbd>|Select char to the right
 <kbd>Shift</kbd> + <kbd>Left Arrow</kbd>|Select char to the left
-<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Right Arrow</kbd>|Select to current chunk end or select one chunk to the right
-<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Left Arrow</kbd>|Select to current chunk start or select one chunk to the left
+<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Right Arrow</kbd>|Select to current part of date end or select the following one
+<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Left Arrow</kbd>|Select to current part of date start or select the previous one
 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Home</kbd> or <kbd>Shift</kbd> + <kbd>Home</kbd>|Select value in the input till start
 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> or <kbd>Shift</kbd> + <kbd>End</kbd>|Select value in the input till end
 <kbd>Ctrl</kbd> + <kbd>A</kbd> |Select the whole value in the input 
@@ -64,5 +64,5 @@ Press| To
 
 Press| To
 ---|---
-<kbd>Down Arrow</kbd> | Spin down the date, month or year depending on the position of the mouse indicator.
-<kbd>Up Arrow</kbd> | Spin up the date, month or year depending on the position of the mouse indicator.
+<kbd>Down Arrow</kbd> | Spin down the current part of date depending on the position of the mouse indicator.
+<kbd>Up Arrow</kbd> | Spin up the current part of date depending on the position of the mouse indicator.

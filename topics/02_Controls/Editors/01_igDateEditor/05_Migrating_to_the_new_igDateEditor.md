@@ -1,16 +1,16 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "migrating-to-the-new-ignumericeditor",
+    "fileName": "migrating-to-the-new-igdateeditor",
     "controlName": "igEditors",
     "tags": ["Migration","Getting Started"]
 }
 |metadata|
 -->
 
-# Migrating to the new igNumericEditor
+# Migrating to the new igDateEditor
 
-With the 15.2 release of Ignite UI™ a new set of editor controls were introduced including a reworked `igNumericEditor`. With a new design focused on simplicity and better UX out-of-the-box some features and their API were revised, removed and new ones added. This topic will cover the differences that will be helpful for developers migrating their applications to the new editors.
+With the 15.2 release of Ignite UI™ a new set of editor controls were introduced including a reworked `igDateEditor`. With a new design focused on simplicity and better UX out-of-the-box some features and their API were revised, removed and new ones added. This topic will cover the differences that will be helpful for developers migrating their applications to the new editors.
 
 ## Topic overview
 This topic aims to help with migration from old numeric editor to the new one. Different scenarios are viewed and how they were done before and how they can be done now.
@@ -61,7 +61,7 @@ Option| Description
 disabled|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#dateEditor').igDateEditor({ disabled: true }] })`.
 preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#dateEditor').igDateEditor({ preventSubmitOnEnter: true }] })`.
 
-[See all options](%%jQueryApiUrl%%/ui.ignumericeditor#options)
+[See all options](%%jQueryApiUrl%%/ui.igdateeditor#options)
 
 <a name='methods_changes'></a>
 ### API Methods changes
@@ -78,7 +78,7 @@ getSelectedText|Used to get selected text in editor.|This method is removed.
 getSelection|Used to get left or right edge of selection.|This method is removed.
 getValueByMode|Used to get value in editor by dataMode.|This method is not supported.
 hasInvalidMessage|Used to check if invalid message is displayed.|This method is removed as its` functionality is covered by the API for the igEditorNotifier.
-mainElement|Used to get reference to jquery object which is used as top/outer element of igNumericEditor.|This method is renamed to `editorContainter` to better communicate what it does.
+mainElement|Used to get reference to jquery object which is used as top/outer element of igDateEditor.|This method is renamed to `editorContainter` to better communicate what it does.
 paste|Used to paste text at location of caret.|This is renamed to `insert` and the `txt` parameter is renamed to `string` as it is a numeric string of characters.
 remove|This was used to remove editor from its parent element, but keeps the rest of functionality|This method is not supported. 
 removeListItem|Used to remove item from list.|This method is removed. 
@@ -104,10 +104,10 @@ clearButton|Returns a reference to the clear button of the editor.
 
 Event|Changes
 ---|---
-hideDropDown|Event is not supported anymore. Two new events are introduced, giving you more control over hiding the dropdown list: [dropDownListClosing](#dropDownListClosing) and [dropDownListClosed](#dropDownListClosed).
-showDropDown|Event is not supported anymore. Two new events are introduced, giving you more control over showing the dropdown list: [dropDownListOpening](#dropDownListOpening) and [dropDownListOpened](#dropDownListOpened).
-listSelected|Event is renamed to `dropDownItemSelected` to better communicate what it does. Use `ui.owner` to obtain reference to igEditor. Use `ui.editorInput` to obtain reference to the editable input. Use `ui.list` to obtain reference to the list container. Use `ui.item` to obtain reference to the list item which is selected.
-listSelecting|Event is renamed to `dropDownItemSelecting` to better communicate what it does. Use `ui.owner` to obtain reference to igEditor. Use `ui.editorInput` to obtain reference to the editable input. Use `ui.list` to obtain reference to the list contaier. Use `ui.item` to obtain reference to the list item which is about to be selected.
+hideDropDown|Event is not supported anymore. 
+showDropDown|Event is not supported anymore. 
+listSelected|Event is not supported anymore.
+listSelecting|Event is not supported anymore.
 mouseleave|Event is renamed to `mouseout` to better communicate what it does.
 
 <a name='new_events'></a>
@@ -117,10 +117,6 @@ Event|Description
 ---|---
 rendering|<a name='dropDownListOpening'></a>Event which is raised before rendering of the editor completes.
 rendered|<a name='rendered'></a>Event which is raised after rendering of the editor completes.
-dropDownListOpening|<a name='dropDownListOpening'></a>Event which is raised when the drop down is opening.
-dropDownListOpened|<a name='dropDownListOpened'></a>Event which is raised when the drop down is already opened.
-dropDownListClosing|<a name='dropDownListClosing'></a>Event which is raised when the drop down is closing.
-dropDownListClosed|<a name='dropDownListClosed'></a>Event which is raised when the drop down is already closed.
 
 [See all events](%%jQueryApiUrl%%/ui.ignumericeditor#events)
 
