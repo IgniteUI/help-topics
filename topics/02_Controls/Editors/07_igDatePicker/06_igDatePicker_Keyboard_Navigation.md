@@ -59,10 +59,18 @@ Press| To
 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> or <kbd>Shift</kbd> + <kbd>End</kbd>|Select value in the input till end
 <kbd>Ctrl</kbd> + <kbd>A</kbd> |Select the whole value in the input 
 
-## <a id="ddInteraction"></a> igDateEditor special navigation
+## <a id="ddInteraction"></a> igDatePicker special navigation
 
 
 Press| To
 ---|---
+<kbd>Alt</kbd> + <kbd>Down Arrow</kbd> | Open the dropdown, when the focus is in the input
+<kbd>Alt</kbd> + <kbd>Up Arrow</kbd> | Close the dropdown, when the focus is in the input
 <kbd>Down Arrow</kbd> | Spin down the date, month or year depending on the position of the mouse indicator.
 <kbd>Up Arrow</kbd> | Spin up the date, month or year depending on the position of the mouse indicator.
+<kbd>Right Arrow</kbd> | Move to next item when the focus is on the date, month or on the year in the calendar.
+<kbd>Left Arrow</kbd> | Move to previous item when the focus is on the date, month or on the year in the calendar.
+<kbd>Down Arrow</kbd> | Move from month to date, when the focus is in the month OR to move to the below row if the focus is on a date.
+<kbd>Up Arrow</kbd> | Move from date to month, when the focus is on the date at the top row of the calendar OR to move to the above row, when the focus is on date in a row different from the top row of the calendar.
+<kbd>Enter</kbd> | Confirm focused item as selected
+<kbd>Enter</kbd> or <kbd>Alt</kbd> + <kbd>Up Arrow</kbd>| Reject focused item and keep old selection
