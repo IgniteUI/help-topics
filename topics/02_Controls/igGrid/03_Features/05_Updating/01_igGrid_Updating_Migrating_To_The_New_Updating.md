@@ -51,9 +51,9 @@ When [showDoneCancelButtons](%%jQueryApiUrl%%/ui.igGridUpdating#options:showDone
 ### <a id="option-changes"></a> Option changes
 
 > **Note:** All options for the row edit dialog are located under a new option named rowEditDialogOptions in the Updating feature. In the table below they are marked with *.
-> 
+
 | Old Option| New Option| Old Syntax | New Syntax|
---|--|--|--
+---|---|---|---
 |editMode: "rowedittemplate" |editMode: "dialog"| $("#grid").igGrid({ features: [{   name: "Updating", <b>editMode:"rowedittemplate"</b> } ]});|$("#grid").igGrid({ features: [{ name: "Updating", <b>editMode:"dialog"</b>}] });|
 |rowEditDialogWidth|width*|$("#grid").igGrid({ features: [{ name: "Updating", editMode:"rowedittemplate", <b>rowEditDialogWidth: "370px"</b> } ]}); |$("#grid").igGrid({ features: [{ name: "Updating", editMode:"dialog", <b>rowEditDialogOptions: {width: "370px" }</b> ]});|
 |rowEditDialogHeight|height*| $("#grid").igGrid({ features: [ { name: "Updating", editMode:"rowedittemplate", <b>rowEditDialogHeight: "350px"</b>}] });|$("#grid").igGrid({ features: [ { name: "Updating", editMode:"dialog", <b>rowEditDialogOptions: { height: "350px" } </b>} ]});|
@@ -63,8 +63,9 @@ When [showDoneCancelButtons](%%jQueryApiUrl%%/ui.igGridUpdating#options:showDone
 |showReadonlyEditors|showReadonlyEditors*|$("#grid").igGrid({ features: [ { name: "Updating", editMode:"rowedittemplate", <b>showReadonlyEditors: false</b>}] });|$("#grid").igGrid({ features: [ { name: "Updating", editMode:"dialog", <b>rowEditDialogOptions: { showReadonlyEditors: false } </b>} ]});|
 
 ### <a id="options-new"></a> New Options
+
 |Option| Description|
---|--
+---|---
 |animationDuration*|Specifies the animation duration for the opening and closing operations.|
 |dialogTemplate*|Specifies a template to be rendered against the currently edited record.|
 |dialogTemplateSelector*|Specifies a selector to a template rendered against the currently edited record.|
@@ -77,7 +78,7 @@ When [showDoneCancelButtons](%%jQueryApiUrl%%/ui.igGridUpdating#options:showDone
 #### Renamed Events
 
 |Old name | New Name | Additional information|
---|--|--
+---|---|---
 |rowEditDialogOpening|rowEditDialogBeforeOpen|This event is not cancelable. If editing for a row needs to be canceled the [editRowStarting](%%jQueryApiUrl%%/ui.igGridUpdating#events:editRowStarting) event should be used instead.|
 |rowEditDialogOpened|rowEditDialogAfterOpen||
 |rowEditDialogClosing|rowEditDialogBeforeClose|This event is not cancelable.|
