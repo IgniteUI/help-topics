@@ -18,15 +18,21 @@ The Ignite UI package comes with a number of jQuery UI and Bootstrap themes. Boo
 
 As the `igDateEditor` control uses the jQuery UI CSS framewrok it can also be fully styled using the [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/) where you can customize your own theme or choose from a gallery of available ones. These themes replace the ones that come by default with Ignite UI.
 
-Date editor with drop list using the UI Darkness theme:
+Date editor using the UI Darkness theme:
 
+![](\images\igDateEditor_UI_Darkness.png)
 
 ## Custom styling
 
 Your CSS may include style overrides for many more elements of the date editor. For a full list of available classes see the [API Reference Theming classes](%%jQueryApiUrl%%/ui.igDateEditor#theming). Styles can be applied both by overriding the global classes applied to all editors or by targeting specific elements by ID or other specific trait to allow for more per-control customization.
 
+```css
+.ui-igedit-input{
+	color: #00aeef;
+}
+```
 
-
+![](\images\igDateEditor_custom_style.png)
 
 ## Related Topics
 

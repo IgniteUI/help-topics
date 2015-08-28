@@ -17,8 +17,11 @@ The `igDateEditor` control exposes a rich client-side API, which may be configur
 
 The `igDateEditor` control may be extensively styled giving you an opportunity to provide a completely different look and feel for the control as opposed to the default style. Styling options include using your own styles as well as styles from jQuery UI’s ThemeRoller.
 
+>**Note:** One of the major changed in the new date editor is that it no longer supports Lists and DropDown. Note that if you try to use methods connected to dropdown and list, you will receive a notification pointing out that they are no longer available. 
+
 Figure 1: The `igDateEditor` rendered to the user
 
+![](images/igDateEditor.png)
 
 ## Features
 
