@@ -11,9 +11,9 @@
 # igCurrencyEditor Overview
 
 
-The Ignite UI™ currency editor, or `igCurrencyEditor`, is a control that renders an input field which only accepts numeric digits, formatted as various currency types. The `igCurrencyEditor` control supports localization, by recognizing different regional options exposed from the browser.
+The Ignite UI™ currency editor, or `igCurrencyEditor`, is a control which renders an input field which only accepts numeric values, formatted as various currency types. The `igCurrencyEditor` control supports localization, by recognizing different regional options exposed from the browser.
 
-As the user interacts with the control the visual appearance is updated to give immediate feedback. Once the editor loses focus, a value-dependent positive or negative pattern is applied to the control, along with adding the appropriate currency sign.
+As the user interacts with the control, the visual appearance is updated to reflect any changes. Once the editor loses focus, a value-dependent positive or negative pattern is applied to the control, along with adding the appropriate currency sign.
 
 Figure 1: The `igCurrencyEditor` formatted for American currency
 
@@ -25,7 +25,7 @@ Figure 1: The `igCurrencyEditor` formatted for American currency
 
 The `igCurrencyEditor` includes the following characteristics:
 
--   Overall theme support
+-   Theme support
 -   Validation
 -   Localization
 -   JavaScript Client API
@@ -33,13 +33,13 @@ The `igCurrencyEditor` includes the following characteristics:
 -   Min/Max Value
 
 
-`igCurrencyEditor` inherits the `igNumericEditor` options, but it has some unique properties of its own. For example you can use the `currencySymbol` option to change the displayed currency symbol. A full list of the `igCurrencyEditor` options can be found in the [igCurrencyEditor jQuery API](%%jQueryApiUrl%%/ui.igCurrencyEditor).
+The `igCurrencyEditor` inherits the `igNumericEditor` options, but it has some unique properties of its own. For example you can use the `currencySymbol` option to change the displayed currency symbol. A full list of the `igCurrencyEditor` options can be found in the [igCurrencyEditor jQuery API](%%jQueryApiUrl%%/ui.igCurrencyEditor).
 
-Similarly to the `igNumericEditor` the `igCurrencyEditor` have a negative pattern. The `negativePattern` option defines the display mode pattern for negative numeric values.It looks like this:
+Similarly to the `igNumericEditor`, the `igCurrencyEditor` has a `negativePattern` option, which defines the display mode pattern for negative numeric values.It looks like this:
 `negativePattern: '$(n)'`
-The "$" character represents `currencySymbol` and the "n" character represents the value of number. The "-" and "()" characters are static part of pattern.
+The "$" character represents `currencySymbol` and the "n" character represents the value of number. The "-" and "()" characters are a static part of the pattern.
 
-Unlike the numeric editor, the currency one has a positive pattern. The `positivePattern` option defines the display mode pattern for positive numeric values. The "$" character represents the `currencySymbol` and the "n" character represents the value of number. Using these two characters, you can build custom patterns to best suit your needs.
+Unlike the numeric editor, the currency one has a positive pattern. The `positivePattern` option defines the display mode pattern for positive numeric values. The "$" character represents the `currencySymbol` and the "n" character represents the value of the number. Using these two characters, you can build custom patterns for maximum flexibility. One possible usage is demonstrated below:
 
 ```js
 $('#currencyEditor').igCurrencyEditor({
@@ -79,7 +79,7 @@ $('#currencyEditor').igCurrencyEditor({
     <script type="text/javascript" src="@Url.Content("~/Scripts/Samples/modules/i18n/regional/infragistics.ui.regional-en.js")"></script>
     ```
 
-3.  For jQuery implementations create an INPUT, DIV or SPAN as the target element in HTML. This step is optional for ASP.NET MVC implementations as the MVC wrapper creates the containing element for you.    
+3.  For purely jQuery implementations, start off by creating an INPUT, DIV or SPAN as the target element in HTML. This step is optional for ASP.NET MVC implementations as the MVC wrapper creates the containing element for you.    
 
     **In HTML:**
 
@@ -107,7 +107,7 @@ $('#currencyEditor').igCurrencyEditor({
        .Render())
     ```
 
-5.  Run the web page to view the basic setup of the `igCurrencyEditor` control.
+5.  Run the web page to view the resulting `igCurrencyEditor` control.
 
 ## Related Links
 
