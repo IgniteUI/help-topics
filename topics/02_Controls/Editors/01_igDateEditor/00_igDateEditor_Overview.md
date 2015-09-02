@@ -11,13 +11,13 @@
 # igDateEditor Overview
 
 
-The Ignite UI™ date editor, or `igDateEditor`, is a control that renders an input field which allows users to edit date formatted data. The `igDateEditor` control supports localization, by recognizing different regional options exposed from the browser.
+The Ignite UI™ date editor, or `igDateEditor`, is a control that renders an input field, which allows users to edit date formatted data. The `igDateEditor` control supports localization, by recognizing different regional options exposed from the browser.
 
-The `igDateEditor` control exposes a rich client-side API, which may be configured the work with any server technology. While the Ignite UI™ controls are server-agnostic, the control does feature wrappers specific for the Microsoft® ASP.NET MVC Framework to configure the control with the .NET™ language of your choice.
+The `igDateEditor` control exposes a rich client-side API, which can be configured to work with any server technology. While the Ignite UI™ controls are server-agnostic, the control does feature wrappers specific for the Microsoft® ASP.NET MVC Framework to configure the control with the .NET™ language of your choice.
 
 The `igDateEditor` control may be extensively styled giving you an opportunity to provide a completely different look and feel for the control as opposed to the default style. Styling options include using your own styles as well as styles from jQuery UI’s ThemeRoller.
 
->**Note:** One of the major changed in the new date editor is that it no longer supports Lists and DropDown. Note that if you try to use methods connected to dropdown and list, you will receive a notification pointing out that they are no longer available. 
+>**Note:** One of the major changes in the new date editor is that it no longer supports Lists and DropDown. Note that if you try to use methods related to dropdown and list, you will receive a notification pointing out that they are no longer available. 
 
 Figure 1: The `igDateEditor` rendered to the user
 
@@ -67,7 +67,7 @@ The `igDateEditor` includes the following characteristics:
     <script type="text/javascript" src="@Url.Content("~/Scripts/Samples/modules/i18n/regional/infragistics.ui.regional-en.js")"></script>
     ```
 
-3.  For jQuery implementations create an INPUT, DIV or SPAN as the target element in HTML. This step is optional for ASP.NET MVC implementations as the MVC wrapper creates the containing element for you.
+3.  For jQuery implementations, create an INPUT, DIV or SPAN as the target element in HTML. This step is optional for ASP.NET MVC implementations as the MVC wrapper creates the containing element for you.
 
     **In HTML:**
 
