@@ -10,10 +10,10 @@
 
 # Migrating to the new igDateEditor
 
-With the 15.2 release of Ignite UI™ a new set of editor controls were introduced including a reworked `igDateEditor`. With a new design focused on simplicity and better UX out-of-the-box some features and their API were revised, removed and new ones added. This topic will cover the differences that will be helpful for developers migrating their applications to the new editors.
+With the 15.2 release of Ignite UI™ a new set of editor controls was introduced, including a reworked `igDateEditor`. With a new design, focused on simplicity and better UX, many features and their API were revised. This topic covers many of these changes and will be helpful for developers migrating their applications to the new editors.
 
 ## Topic overview
-This topic aims to help with migration from old numeric editor to the new one. Different scenarios are viewed and how they were done before and how they can be done now.
+This topic aims to help migrating from the old numeric editor to the new one. 
 
 ### In this topic
 This topic contains the following sections:
@@ -31,7 +31,7 @@ This topic contains the following sections:
 
 Option| Previously| Now
 ---|---|---
-animationHideDuration animationShowDuration|Used to set animation duration when dropdown list is displayed/hidden.|These options are replaced by new option `dropDownAnimationDuration` that controls the dropdown list animation duration.
+animationHideDuration animationShowDuration|Used to set animation duration when dropdown list is displayed/hidden.|These options are replaced by a new option `dropDownAnimationDuration` that controls the dropdown list animation duration.
 button|This option was used to set visibility of spin and dropdown button.|This option is renamed to `buttonType` to better communicate what it does.
 dataMode|Members of type 'string' and 'number' were supported.|Members of type 'number' are not supported.
 display|-|This option is removed.
