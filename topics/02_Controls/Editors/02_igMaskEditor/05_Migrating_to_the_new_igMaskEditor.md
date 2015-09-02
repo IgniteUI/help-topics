@@ -49,7 +49,7 @@ listMatchIgnoreCase |-|This option is removed.
 listMatchOnly |-|This option is removed.
 nullText|Used to set text which appears in editor when editor has no focus and "value" in editor is null or empty string.|This option is renamed to `placeHolder` to better communicate what it does.
 padChar |The default value used to be an empty sting.|The default value is '^'.
-promptChar | Sets character which is used as prompt in edit mode for available entry position. | This option is to better communicate what it does. renamed to 'unfilledCharsPrompt'
+promptChar | Sets character which is used as prompt in edit mode for available entry position. | This option is renamed to [unfilledCharsPrompt](#unfilledCharsPrompt) to better communicate what it does. 
 renderInContainer|-|This option is removed.
 selectionOnFocus|Previously supported members: `select`, `-1`, `start`, `0`, `end`, `1`, `default`, `2`.|Now supported members are: `selectAll`, `atStart`, `atEnd`, `browserDefault`. The default value is `selectAll`.
 spinOnReadOnly|- |This option is removed. 
