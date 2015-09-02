@@ -24,6 +24,8 @@ The `igTreeGrid` extends the [`igGrid`](igGrid-Overview.html "igGrid Overview") 
 	- [Paging](#paging)
 	- [Filtering](#filtering)
 	- [Updating](#updating)
+	- [Resizing](#resizing)
+	- [Column Moving](#columnMoving)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
     -   [Samples](#samples)
@@ -140,6 +142,13 @@ The extended Updating feature adds support for hierarchy within a single grid, m
 
 **Related topic:** [Updating (igTreeGrid)](igTreeGrid-Updating.html)
 
+### <a id="resizing"></a> Resizing
+
+The Column Resizing feature allows the user to change the width of the tree grid’s columns by extending the functionality of the igGrid's Resizing feature.
+
+### <a id="columnMoving"></a> Column Moving
+
+The Column Moving feature allows reordering of the tree grid’s columns via the tree grid's interface or programmatically through the TreeGridColumnMoving API. This feature extends the igGrid's ColumnMoving feature.
 
 ## <a id="related-content"></a> Related Content
 
