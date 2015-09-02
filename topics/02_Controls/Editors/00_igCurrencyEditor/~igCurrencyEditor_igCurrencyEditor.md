@@ -10,8 +10,7 @@
 
 # igCurrencyEditor
 
-
-Click on the links below to find information on how to get `igCurrencyEditor` quickly up and running.
+Follow the links below to find more information on the `igCurrencyEditor` configuration options and specific how-to scenarios and knows inssues.
 
 -   [igCurrencyEditor Overview](igCurrencyEditor-igCurrencyEditor-Overview.html)
 -   [igCurrencyEditor Styling and Theming](igCurrencyEditor-igCurrencyEditor-Styling-and-Theming.html)
