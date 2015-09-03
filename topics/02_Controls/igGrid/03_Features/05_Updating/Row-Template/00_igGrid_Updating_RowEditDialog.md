@@ -98,7 +98,7 @@ The rendering of disabled editors (marked with `readOnly`: true) is controlled b
 
 There is validation integration in the row edit dialog. The validation is performed by reading the `validation` property for column settings. Validation messages are rendered inline in the row edit dialog when the end user types something which isn’t allowed.
 
-You can use the public API methods `startEdit` and `closeEdit` in order to open/close the row edit template.
+You can use the public API methods `startEdit` and `closeEdit` in order to open/close the row edit dialog.
 
 
 
