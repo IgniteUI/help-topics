@@ -86,7 +86,7 @@ The `editMode` property has a new value added, “dialog”
 
 The row dialog is rendered as a dialog window. An example is shown below.
 
-![](images/igGrid_Updating_RowEditTemplate_1.png)
+![](images/igGrid_Updating_RowEditDialog_1.png)
 
 Clicking Done and Cancel performs the same action as when using `editMode`: “row”.
 
