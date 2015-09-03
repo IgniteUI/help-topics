@@ -22,7 +22,8 @@ The following lists the concepts, topics, and articles required as a prerequisit
 ### In this topic:
 
 - [**Introduction**](#introduction)
-    - [Request Format](#request-format)
+    - [Request Format](#request-format) 
+    - [Binding to flat data](#flat-data)
 - [**Feature Specific Details**](#features)
     - [Remote Filtering](#filtering)
     - [Remote Sorting](#sorting)
@@ -58,6 +59,23 @@ Another benefit of the remote features is that expanded state is persisted acros
 All features share the same [`dataSourceUrl`](%%jQueryApiUrl%%/ui.igtreegrid#options:dataSourceUrl) endpoint address (also used for [Load on Demand](igTreeGrid-Load-On-Demand.html)) for requesting additional data. This means that if there are any custom back-end implementations for multiple remote features they need to be able to handle more than one style of request by reading the provided parameters.
 
 In case that requests are going to be manually handled on the back end it's important to maintain the logical order of the operations - for example filtering data transformations should be applied first and then sorting if needed, before cutting down the results to the required page size.
+
+### <a id="flat-data"></a> Binding to flat data in the MVC wrapper
+
+The igTreeGrid can be bound to a flat self-referencing data via the MVC wrapper, where the parent-child relation is defined via the PrimaryKey/ForeignKey options. The flat data is internally parsed to Hierarchical based on the PrimaryKey and ForeignKey relation before it gets send to the client. This is usefull in scenarios when you want to bind to a self-referencing table of data, without having to transform it to a hierarchical structure.
+
+However, this data transformation will have a performance impacts, especially when combined with other remote features, which will trigger remote requests to the data source on certain operations. If you'd like to optimize the performance in this case you can transfrom the flat data to hierarchical only once, using the public TransformFlatToHierarchicalData method of the TreeGridModel and cache it to use on the next request. 
+
+```
+		public ActionResult GetData()
+		{
+			TreeGridModel model = GetTreeGridModel();
+            IQueryable<Employee> empl = GetEmployeeData();
+			IList data = model.TransformFlatToHierarchicalData(empl);
+			...
+		}
+```
+> Note: In this scenario setting the ChildDataKey option to an existing object that's of type ICollection (or a type that implements ICollection) in the current data model is mandatory. As well as setting the ForeignKeyRootValue option, which specifies the row(s) in the data source that will be treated as the root row(s) based on the ForeignKey value.
 
 
 ## <a id="features"></a> Feature Specific Details
