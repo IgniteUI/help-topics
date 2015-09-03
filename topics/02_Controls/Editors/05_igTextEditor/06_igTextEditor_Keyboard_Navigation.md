@@ -24,16 +24,16 @@ This topic contains the following sections:
 
 ## <a id="skbInteraction"></a>Standard Keyboard interactions
 
-You can use the standard key combinations for functionalists such as copy, cut, paste, undo and redo.  
+You can use the standard key combinations for functionalists such as copy, cut, paste, undo and redo and these further ones.    
 
 Press| To
 ---|---
-<kbd>Right Arrow</kbd>|Move the caret one char to the right
-<kbd>Left Arrow</kbd>|Move the caret one char to the left
+<kbd>Right Arrow</kbd>|Move the mouse indicator  one char to the right
+<kbd>Left Arrow</kbd>|Move the mouse indicator  one char to the left
 <kbd>Ctrl</kbd> + <kbd>Right Arrow</kbd>|Move the caret one chunk to the right
 <kbd>Ctrl</kbd> + <kbd>Left Arrow</kbd>|Move the caret one chunk to the left
-<kbd>Ctrl</kbd> + <kbd>Home</kbd> or just <kbd>Home</kbd>|Move the caret to the start of the input
-<kbd>Ctrl</kbd> + <kbd>End</kbd> or just <kbd>End</kbd>|Move the caret to the end of the input
+<kbd>Ctrl</kbd> + <kbd>Home</kbd> or just <kbd>Home</kbd>|Move the mouse indicator  to the start of the input
+<kbd>Ctrl</kbd> + <kbd>End</kbd> or just <kbd>End</kbd>|Move the mouse indicator  to the end of the input
 <kbd>Backspace</kbd>|Delete the previous char
 <kbd>Delete</kbd>|Delete the following char
 <kbd>Ctrl</kbd> + <kbd>Backspace</kbd>|Delete the previous chunk
