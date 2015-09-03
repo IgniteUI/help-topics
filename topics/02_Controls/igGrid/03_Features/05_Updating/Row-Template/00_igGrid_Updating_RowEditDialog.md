@@ -367,8 +367,7 @@ Specifies a selector to a template to be executed for each column in the grid's 
 	This property controls the height of the row edit dialog in pixels.
 	
 	Its default value is 350 and can be either a string (“350px”) or a number (350).
-	
-	![](images/igGrid_Updating_RowEditTemplate_3.png)
+
 
 - [width](%%jQueryApiUrl%%/ui.iggridupdating#options:rowEditDialogOptions.width)
 
@@ -376,13 +375,12 @@ Specifies a selector to a template to be executed for each column in the grid's 
 	
 	Its default value is 370 and can be either a string (“370px”) or a number (370).
 	
-	![](images/igGrid_Updating_RowEditTemplate_4.png)
 
 - [namesColumnWidth](%%jQueryApiUrl%%/ui.iggridupdating#options:rowEditDialogOptions.namesColumnWidth)
 
 	Controls the width of the column containing the column names in the default row edit dialog. It’s a number and the default value is 150.
 	
-	![](images/igGrid_Updating_RowEditTemplate_5.png)
+	
 
 - [startEditTriggers](%%jQueryApiUrl%%/ui.iggridupdating#options:startEditTriggers)
 
@@ -497,9 +495,9 @@ The following topics provide additional information related to this topic.
 
 The following samples provide additional information related to this topic.
 
-- [Row Edit Template](%%SamplesUrl%%/grid/row-edit-dialog): This sample shows how to configure a Row Edit Dialog in the `igGrid`
+- [Row Edit Dialog](%%SamplesUrl%%/grid/row-edit-dialog): This sample shows how to configure a Row Edit Dialog in the `igGrid`
 
-- [HierarchicalGrid Row Edit Template](%%SamplesUrl%%/hierarchical-grid/row-edit-dialog): This sample shows how to configure a Row Edit Dialog in the `igHierarchicalGrid`
+- [HierarchicalGrid Row Edit Dialog](%%SamplesUrl%%/hierarchical-grid/row-edit-dialog): This sample shows how to configure a Row Edit Dialog in the `igHierarchicalGrid`
 
 
 
