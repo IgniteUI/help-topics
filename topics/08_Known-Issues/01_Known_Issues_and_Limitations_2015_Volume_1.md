@@ -1210,6 +1210,7 @@ Issue | Description | Status
 ------|-------------|-------
 Expansion indicators can be cropped/hidden with remote features|Expansion indicators on lower levels in the hierarchy can be cropped/hidden when rendered in the separate indicators non-data column in remote scenarios|![](../images/images/positive.png)
 Misaligned first cells' data on lower levels|Padding on lower levels can push displayed data beyond the available width of the cell and cause the text to wrap around to the initial position, breaking visual hierarchy|![](../images/images/positive.png)
+Scroll position changes when expanding/collapsing rows in rowVirtualization mode with paging (allLevels).|When rowVirtualization and paging with  [`mode`](%%jQueryApiUrl%%/ui.igtreegrid#options:mode) set to `allLevels` are enabled the scroll position will change when expanding/collapsing rows.| ![](../../images/images/negative.png) 
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
