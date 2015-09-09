@@ -1,122 +1,73 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "igcurrencyeditor-igcurrencyeditor-overview",
-    "controlName": "igEditors",
+    "fileName": "igvalidator_overview",
+    "controlName": "igValidator",
     "tags": ["Getting Started"]
 }
 |metadata|
 -->
 
-# igCurrencyEditor Overview
+## igValidator Overview
 
+The `igValidator` control provides new look and feel compared to the previous one. It is designed to be easy to use with any form element and our existing components such as editors, combo box and other components for collecting user input. This control takes advantage to the notification widget design and use its visualizations to display the necessary warning and error messages. 
 
-The Ignite UI™ currency editor, or `igCurrencyEditor`, is a control which renders an input field which only accepts numeric values, formatted as various currency types. The `igCurrencyEditor` control supports localization, by recognizing different regional options exposed from the browser.
+### In this topic
 
-As the user interacts with the control, the visual appearance is updated to reflect any changes. Once the editor loses focus, a value-dependent positive or negative pattern is applied to the control, along with adding the appropriate currency sign.
+- [Walk through the igValidator](walk-through)
+- [Setting up the igValidator](setting-up)
+- [Validations’ priority](validation-priority)
+- [Related Content](related-content)
 
-Figure 1: The `igCurrencyEditor` formatted for American currency
+## <a id="walk-through"></a> Walk through the igValidator
 
-![](images/igCurrencyEditor_Overview.png)
+The main purpose of the `igValidator` control is to inform the end user for the passed and failed validation immediately. This means that when a user blur the editor's input a feedback message is immediately displayed giving useful information about the state in which the editor is in. For example it can display messages that indicate whether the current field is required or not and whether the user filled the input with the expected type of data. 
 
-[igCurrencyEditor Options Sample](%%SamplesUrl%%/editors/currency-editor)
+The `igValidator` is rich UX control. When the user commit an error the specific input is colored in red to indicate that something went wrong with the current interaction. Optionally you can use the `requiredIndication` property to show in advanced which form elements are required. Also there is a `optionalIndication` property that indicates if a particular field is optional or not.
 
-## Features
+The invalid notification are shown when the users is not in edit mode. As the user fix the wrong data the notification will disappear.
 
-The `igCurrencyEditor` includes the following characteristics:
+A whole list of the `igValidator` options can be found in the [igValidator API](%%jQueryApiUrl%%/ui.igValidator)
 
--   Theme support
--   Validation
--   Localization
--   JavaScript Client API
--   ASP.NET MVC wrapper
--   Min/Max Value
+## <a id="setting-up"></a> Setting up the igValidator
 
+Unlike the old validator control, the new one can be configured independently. This means that you can attach it to any HTML form element as well as our specific editor controls and the combo. It possesses plenty of options which allows you to customize and configure this control corresponding to your needs. The following example demonstrates a basic usage of the `igValidator`.
 
-The `igCurrencyEditor` inherits the `igNumericEditor` options, but it has some unique properties of its own. For example you can use the `currencySymbol` option to change the displayed currency symbol. A full list of the `igCurrencyEditor` options can be found in the [igCurrencyEditor jQuery API](%%jQueryApiUrl%%/ui.igCurrencyEditor).
-
-Similarly to the `igNumericEditor`, the `igCurrencyEditor` has a `negativePattern` option, which defines the display mode pattern for negative numeric values.It looks like this:
-`negativePattern: '$(n)'`
-The "$" character represents `currencySymbol` and the "n" character represents the value of number. The "-" and "()" characters are a static part of the pattern.
-
-Unlike the numeric editor, the currency one has a positive pattern. The `positivePattern` option defines the display mode pattern for positive numeric values. The "$" character represents the `currencySymbol` and the "n" character represents the value of the number. Using these two characters, you can build custom patterns for maximum flexibility. One possible usage is demonstrated below:
+```html
+<div id="validator"></div>
+```
 
 ```js
-$('#currencyEditor').igCurrencyEditor({
-	positivePattern:'$$n'
+$('#validator').igTextEditor();
+
+$('#validator').igValidator({
+  required: true,
+  onblur: true,
+  requiredIndication: true
 });
 ```
-![](images/igCurrencyEditor_PositivePattern.png)
 
-## Adding igCurrencyEditor to a Web Page
-
-1.  To get started, include the required and localized resources for your application. Details on which resources to include are found in the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) help topic.
-2.  On your HTML page or ASP.NET MVC View, reference the required JavaScript files, CSS files, and ASP.NET MVC assemblies.
-
-    **In HTML:**
-
-    ```html
-    <link type="text/css" href="/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
-    <link type="text/css" href="/css/structure/infragistics.css" rel="stylesheet" />
-    <script type="text/javascript" src="/Scripts/jquery.min.js"></script>
-    <script type="text/javascript" src="/Scripts/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="/Scripts/Samples/infragistics.core.js"></script>
-	<script type="text/javascript" src="/Scripts/Samples/infragistics.lob.js"></script>
-    ```
-
-	**In Razor:**
-
-    ```csharp
-    @using Infragistics.Web.Mvc;
-
-    <link type="text/css" href="@Url.Content("~/css/themes/infragistics/infragistics.theme.css")" rel="stylesheet" />
-    <link type="text/css" href="@Url.Content("~/css/structure/infragistics.css")" rel="stylesheet" />
-
-    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.min.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-ui.min.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Scripts/Samples/infragistics.core.js")"></script>
-	<script type="text/javascript" src="@Url.Content("~/Scripts/Samples/infragistics.lob.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Scripts/Samples/modules/i18n/regional/infragistics.ui.regional-en.js")"></script>
-    ```
-
-3.  For purely jQuery implementations, start off by creating an INPUT, DIV or SPAN as the target element in HTML. This step is optional for ASP.NET MVC implementations as the MVC wrapper creates the containing element for you.    
-
-    **In HTML:**
-
-    ```html
-    <input id="currencyEditor" />
-    ```
-
-4.  Once the above setup is complete, initialize the numeric editor.
-
-    > **Note:** For the ASP.NET MVC Views, the `Render` method must be called after all other options are set.
-
-    **In Javascript:**
-
-    ```js
-    <script type="text/javascript">
-         $('#currencyEditor').igCurrencyEditor();
-    </script>
-    ```
-
-	**In Razor:**
-
-    ```csharp
-    @(Html.Infragistics().CurrencyEditor()
-       .ID("currencyEditor")
-       .Render())
-    ```
-
-5.  Run the web page to view the resulting `igCurrencyEditor` control.
-
-## Related Links
-
--   [Currency Editor Sample](%%SamplesUrl%%/editors/currency-editor)
--   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
--   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
-
- 
-
- 
+![](images/igValidator.png)
 
 
+## <a id="validation-priority"></a> Validations' priority
+
+In some scenarios you might need to use multiple validators on a single input in order to validate upon different criteria. In those cases it is important to mention that when you attache multiple validators to a single input, the validations perform in a particular order. The simplest validations passes first and then the more sophisticated conditions are performed. Please note that if one of the validation fails, the other ones won't be triggered until it is fixed. 
+
+By default, the validations priority is as follows (first is most important, last is least important):
+1.	required
+2.	Infragistics' editor (optional)*
+3.	Number
+4.	Date
+2.	LengthRange
+3.	ValueRange
+4.	EqualsTo
+5.	Email
+6.	Pattern (= the regular expression)
+7.	Custom function
+
+\* This step is optional and is fired only when you use an `igEditor`. The validator will check id the editor is valid.
+
+## <a id="related-content"></a> Related Content
+
+-	[igValidator jQuery API](%%jQueryApiUrl%%/ui.igValidator)
