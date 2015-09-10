@@ -47,7 +47,7 @@ nullable|This option was used to set ability to prevent null value.|This option 
 nullText|Used to set text which appears in editor when editor has no focus and "value" in editor is null or empty string.|This option is renamed to `placeHolder` to better communicate what it does.
 renderInContainer|-|This option is removed.
 selectionOnFocus|Previously supported members: `select`, `-1`, `start`, `0`, `end`, `1`, `default`, `2`.|Now supported members are: `selectAll`, `atStart`, `atEnd`, `browserDefault`. The default value is `selectAll`.
-spin1Field | -|This option is renamed to limitSpinToCurrentField.
+spin1Field | -|This option is renamed to `limitSpinToCurrentField`.
 spinOnReadOnly|This was used to override the "readOnly" option and allow changing "value" of editor on spin events. |This option is removed. Setting `readOnly` to `true` disables the spin buttons.
 textAlign|Default was `null`|Now default is `left`.
 theme|-|This option is removed.
