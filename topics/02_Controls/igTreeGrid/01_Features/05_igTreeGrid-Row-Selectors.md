@@ -137,9 +137,13 @@ Along with Paging feature, Row Selectors feature provides the ability of the use
 
 An option 'selectAllForPagingTemplate' is available to control the notification template. The template supports parameters ${checked} (total checked records) and ${totalRecordsCount}. 
 The default template is:
-```<div><div>```You have selected ${checked} records. ```<a data-rs-select-all>```Select all ${totalRecordsCount} records```</a><span data-rs-close-all></span></div></div>```
+```<div class='ui-widget-header' tabindex='0'><div><div class='ui-widget-header' tabindex='0'><div>You have selected ${checked} records. <a href='#' tabindex='0' data-rs-select-all>Select all ${totalRecordsCount} records</a><span data-rs-close-all class='ui-icon-close ui-icon ui-iggrid-button' tabindex='0' style='float:right;'></span></div></div>```       
+Similar to selecting all records, the grid provides the ability to deselect all records using the option 'deselectAllForPagingTemplate', which has the following default template: ```<div class='ui-widget-header' tabindex='0'><div>You have deselected ${unchecked} records. <a href='#' tabindex='0' data-rs-deselect-all>Deselect all ${totalRecordsCount} records</a><span data-rs-close-all class='ui-icon-close ui-icon ui-iggrid-button' tabindex='0' style='float:right;'></span></div></div>```
+<br/>
+<br/>
+> **Note:** "Select/Deselect All" template represents an overlay which renders directly over the records, starting at the top of them. 
 
-
+<br/>
 The differences between the two checkbox modes related to "Select All" Paging functionality are described below:
 ### <a id="biState-paging"></a>Bi-state mode
 With the default "biState" mode in order to select all grid pages, along with "enableSelectAllForPaging" option should be enabled also multiple selection.
