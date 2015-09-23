@@ -22,88 +22,13 @@ To meet the requirements each accessibility rule, in some cases, you may need to
 
 Table 1: Section 508 compliance description
 
-<table class="igbluetablenowidth" class="table table-striped">
-    <tbody>
-        <tr>
-            <th>Rules</th>
+Rules|How We Comply with Rules
+---|---
+(c)|Using client side events, the user can change attributes of any of the control's DOM element reflecting the current state.
+(d)|The control's markup is readable without the associated style sheet because it’s a client-side control and depends on the CSS rules.
+(l)|When the control's scripts are changing the page markup, the new created content complies with the screen reader due to the attributes described in rule (c).
+(n)|[Keyboard Navigation (igNumericEditor)](igNumericEditor-Keyboadr-Navigation.html)</td>
 
-            <th>How We Comply with Rules</th>
-        </tr>
-
-        <tr>
-            <td>(c)</td>
-
-            <td>Using client side events, the user can change attributes of any of the control's DOM element reflecting the current state.</td>
-        </tr>
-
-        <tr>
-            <td>(d)</td>
-
-            <td>The control's markup is readable without the associated style sheet because it’s a client-side control and depends on the CSS rules.</td>
-        </tr>
-
-        <tr>
-            <td>(l)</td>
-
-            <td>When the control's scripts are changing the page markup, the new created content complies with the screen reader due to the attributes described in rule (c).</td>
-        </tr>
-
-        <tr>
-            <td>(n)</td>
-
-            <td>
-                <p>When igDateEditor is on focus(edit mode):</p>
-
-                <ul>
-                    <li>UP ARROW – increases the value of the editor</li>
-
-                    <li>DOWN ARROW – decrease the value of the editor</li>
-
-                    <li>If igDateEditor has list items set Up/Down arrow will change the value according to the list</li>
-
-                    <li>If listitem option is set:
-
-                        <ul>
-                            <li>Ctrl/Alt + DOWN ARROW – opens dropdown list</li>
-
-                            <li>Ctrl/Alt + UP ARROW – closes dropdown list</li>
-
-                            <li>Escape – closes dropdown list(if opened)</li>
-
-                            <li>If dropdown list is opened
-
-                                <ul>
-                                    <li>If list has several columns:
-
-                                        <ul>
-                                            <li>LEFT ARROW – move highlighted item to the left column(if there is any), on the same row</li>
-
-                                            <li>RIGHT ARROW – move highlighted item to the right column(if there is any), on the same row</li>
-                                        </ul>
-                                    </li>
-
-                                    <li>Page Up/Down – when there are more items in the list it behaves like a normal Page Up/Down Otherwise it just moves highlighted item to top/bottom item</li>
-
-                                    <li>DOWN ARROW – navigate highlighted item down</li>
-
-                                    <li>UP ARROW – navigate highlighted item up</li>
-
-                                    <li>HOME – set highlighted item to the first item of the list</li>
-
-                                    <li>END – set highlighted item to the last item of the</li>
-
-                                    <li>Enter/Space - select highlighted item, update value in field and close list</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-                * Descriptive label is not provided for the editor input.
-            </td>
-        </tr>
-    </tbody>
-</table>
 
  
 

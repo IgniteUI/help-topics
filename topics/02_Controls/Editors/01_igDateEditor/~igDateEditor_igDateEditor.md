@@ -18,6 +18,8 @@ Click on the links below to find information on how to get `igDateEditor` quickl
 -   [igDateEditor jQuery and ASP.NET MVC Helper API Links](igDateEditor-jQuery-API.html)
 -   [igDateEditor Accessibility Compliance](igDateEditor-Accessibility-Compliance.html)
 -   [igDateEditor Known Issues](igDateEditor-Known-Issues.html)
+-   [Migrating to the new igDateEditor](Migrating-to-the-new-igDateEditor.html)
+-   [igDateEditor Keyboard Navigation](igDateEditor-Keyboard-Navigation.html)
 
  
 

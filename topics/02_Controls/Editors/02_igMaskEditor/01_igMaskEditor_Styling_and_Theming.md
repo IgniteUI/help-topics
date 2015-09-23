@@ -10,102 +10,39 @@
 
 # igMaskEditor Styling and Theming
 
-##igMaskEditor Styling and Theming
-
 
 The `igMaskEditor` control is jQuery-based widget that extends the `igEditor` control and it exposes a number of options for styling. To customize style of the mask editor you must use theme option to apply custom CSS rules to the control.
 
-##Changing the Theme Programmatically
+The Ignite UI package comes with a number of jQuery UI and Bootstrap themes. Bootstrap support also includes generating and customizing your own bootstrap themes - see [Styling and Theming](Deployment-Guide-Styling-and-Theming.html) for details. All of the themes will style all controls including the editors on the page.
 
+## Using ThemeRoller
 
-The following code listings are an example how to set a custom theme named, `customTheme`, when the mouse hovers over the control. Listing 2  demonstrates how to apply the theme during control initialization, while Listing 3 shows you how to apply the theme after the control is initialized. In either case the HTML from Listing 1 is required.
+As the `igMaskEditor` control uses the jQuery UI CSS framewrok it can also be fully styled using the [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/) where you can customize your own theme or choose from a gallery of available ones. These themes replace the ones that come by default with Ignite UI.
 
-###Listing 1: Base HTML structure CSS style for instantiating a mask editor
+Numeric editor with drop list using the UI Darkness theme:
 
-**In HTML:**
+![](images/igMaskEditor-ui-darkness.png)
+
+## Custom styling
+
+Your CSS may include style overrides for many more elements of the mask editor. For a full list of available classes see the [API Reference Theming classes](%%jQueryApiUrl%%/ui.igMaskEditor#theming). Styles can be applied both by overriding the global classes applied to all editors or by targeting specific elements by ID or other specific trait to allow for more per-control customization.
+
+The default color for the input value in the `igMaskEditor` is black. Here is an example how to change this color:
 
 ```html
-<style type="text/css">
-    .customTheme .ui-igedit-hover
-    { 
-        background: #f0ffff;
-        border-color:#a0a0a0; 
-    }
-    .customTheme .ui-igedit-fieldincontainer
-    { 
-        height:18px; 
-        float:left; 
-        padding-top:0px; 
-        padding-bottom:0px; 
-        margin:0px; 
-        color:#1CC2FF  
-    }
+<style>
+.ui-igedit-input
+{
+	color: #00aeef;
+}
 </style>
-<body>
-     <input type="text"  id="maskEditor"  />
-</body>
 ```
 
-To change the theme during initialization, use the approach shown in Listing 2.
+![](images/igMaskEditor-custom-style.png)
 
-###Listing 2: Set editor theme during initialization
+## Related Topics  
 
-**In Javascript:**
-
-```js
-$('#maskEditor').igMaskEditor({
-    width: 160,
-    renderInContainer: true,
-    nullText: 'Enter Value', 
-       theme: 'customTheme'
-});
-```
-
-If the control is already created in the DOM, then you can change the theme at any time using the approach shown in Listing 3.
-
-###Listing 3: Set editor theme after initialization
-
-**In Javascript:**
-
-```js
-$('#maskEditor').igDateEditor('option', 'theme', 'customTheme');
-```
-
-For the full list of supported customizable CSS classes please visit [CSS Class List](%%jQueryApiUrl%%/ui.igMaskEditor#!theming)
-
-##Using ThemeRoller
-
-The `igMaskEditor` control can also be fully styled using the [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/). Listing 4 demonstrates how to change the theme of a control from a Theme Switcher dropdown.
-
-###Listing 4: Set editor theme with jQuery UI ThemeRoller
-
-**In HTML:**
-
-```html
-<body>
-     <input type="text"  id="maskEditor"  />
-     <div id="themeRoller"></div>
-</body>
-```
-
-**In C#:**
-
-```csharp
-$('#maskEditor').igMaskEditor({
-    width: 160,
-    renderInContainer: true,
-    nullText: 'Enter Value',
-       listItems: ['1234567832', '1235567853', '1235567238'], 
-       button: 'dropdown'
-});
-$('#themeRoller').themeswitcher();
-```
-
-##Related Topics  
-
--   [igMaskEditor Overview](igMaskEditor--Overview.html)
--   [igMaskEditor Known Issues](igMaskEditor-Known-Issues.html)
-
+-   [igMaskEditor Overview](igMaskEditor-Overview.html)
  
 
  

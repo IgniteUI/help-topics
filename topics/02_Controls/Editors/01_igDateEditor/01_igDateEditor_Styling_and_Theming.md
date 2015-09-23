@@ -10,84 +10,29 @@
 
 # igDateEditor Styling and Theming
 
-The `igDateEditor` control is jQuery-based widget that extends the `igEditor` control and it exposes a number of options for styling. To customize style of the numeric editor you must use theme option to apply custom CSS rules to the control.
+The `igDateEditor` control is a jQuery-based widget that extends the `igEditor` control and it exposes a number of options for styling. To customize the style of the date editor you must use the theme option to apply a set of custom CSS rules to the control.
 
-## Changing the Theme Programmatically
-
-The following code listings are an example how to set a custom theme named *"customTheme"*, when the mouse hovers over the control. Listing 2 demonstrates how to apply the theme during control initialization, while Listing 3 shows you how to apply the theme after the control is initialized. In either case the HTML from Listing 1 is required.
-
-**Listing 1:** Base HTML structure CSS style for instantiating a date editor
-
-**In HTML:**
-
-```html
-<style type="text/css">
-     .customTheme .ui-igedit-hover
-     { 
-          background: #f0ffff;
-          border-color:#a0a0a0; 
-     }
-</style>
-<body>
-     <input type="text"  id="dateEditor"  />
-</body>
-```
-
-To change the theme during initialization, use the approach shown in Listing 2.
-
-**Listing 2:** Set editor theme during initialization
-
-**In Javascript:**
-
-```js
-$('#dateEditor'). igDateEditor(
-{
-    width: 160,
-    theme: 'customTheme' ,
-    renderInContainer: true
-});
-```
-
-If the control is already created in the DOM, then you can change the theme at any time using the approach shown in Listing 3.
-
-**Listing 3:** Set editor theme after initialization
-
-**In Javascript:**
-
-```js
-$('#dateEditor').igDateEditor('option', 'theme', 'customTheme');
-```
-
-For the full list of supported customizable CSS classes please visit:
-
-[**API Docs CSS classes list**](%%jQueryApiUrl%%/ui.igdateeditor#theming)
+The Ignite UI package comes with a number of jQuery UI and Bootstrap themes. Bootstrap support also includes generating and customizing your own bootstrap themes - see [Styling and Theming](Deployment-Guide-Styling-and-Theming.html) for details. All of the themes will style all controls, including the editors on the page.
 
 ## Using ThemeRoller
 
-The `igDateEditor` control can also be fully styled using the [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/). Listing 4 demonstrates how to change the theme of a control from a Theme Switcher dropdown.
+As the `igDateEditor` control uses the jQuery UI CSS framewrok it can also be fully styled using the [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/), where you can customize your own theme or choose from a gallery of available ones. These themes replace the ones that come by default with Ignite UI.
 
-**Listing 4:** Set editor theme with jQuery UI ThemeRoller
+Date editor using the UI Darkness theme:
 
-**In HTML:**
+![](\images\igDateEditor_UI_Darkness.png)
 
-```html
-<body>
-     <input type="text"  id="dateEditor"  />
-     <div id="themeRoller"></div>
-</body>
+## Custom styling
+
+Your CSS may include style overrides for many more elements of the date editor. For a full list of available classes see the [API Reference Theming classes](%%jQueryApiUrl%%/ui.igDateEditor#theming). Styles can be applied both by overriding the global classes, applied to all editors, or by targeting specific elements by ID or other selectors to allow for a more per-control customization.
+
+```css
+.ui-igedit-input{
+	color: #00aeef;
+}
 ```
 
-**In Javascript:**
-
-```js
-$('#dateEditor'). igDateEditor({
-    width: 160,
-    renderInContainer: true,
-    button: 'spin', 
-    dateInputFormat: 'MMM/yy'
-});
-$('#themeRoller').themeswitcher();
-```
+![](\images\igDateEditor_custom_style.png)
 
 ## Related Topics
 

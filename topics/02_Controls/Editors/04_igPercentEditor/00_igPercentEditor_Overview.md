@@ -15,8 +15,6 @@
 
 The Ignite UI™ percent editor, or `igPercentEditor`, is a control that renders an input field which only accepts numeric digits, formatted as a percentage. The `igPercentEditor` control supports localization, by recognizing different regional options exposed from the browser.
 
-The `igPercentEditor` control exposes a rich client-side API, which may be configured the work with any server technology. While the Ignite UI™ controls are server-agnostic, the control does feature wrappers specific for the Microsoft® ASP.NET MVC Framework to configure the control with the .NET™ language of your choice.
-
 The `igPercentEditor` control may be extensively styled giving you an opportunity to provide a completely different look and feel for the control as opposed to the default style. Styling options include using your own styles as well as styles from jQuery UI’s `ThemeRoller`.
 
 Figure 1: The `igPercentEditor` as rendered to the user
@@ -33,10 +31,6 @@ The `igPercentEditor` includes the following characteristics:
 -   JavaScript Client API
 -   ASP.NET MVC wrapper
 
-##Limitations
-
-
--   In edit mode “%” and group separator symbols are not supported
 
 ##Adding igPercentEditor to a Web Page
 
@@ -55,21 +49,6 @@ The `igPercentEditor` includes the following characteristics:
 	<script type="text/javascript" src="/Scripts/Samples/infragistics.lob.js"></script>
     ```
 
-    **In ASPX:**
-
-    ```csharp
-    <%@ Import Namespace="Infragistics.Web.Mvc" %>
-
-    <link type="text/css" href="<%= Url.Content("~/css/themes/infragistics/infragistics.theme.css") %>"rel="stylesheet" />
-    <link type="text/css" href="<%= Url.Content("~/css/structure/infragistics.css") %>"rel="stylesheet" />
-
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery-1.4.4.min.js")%>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery-ui.min.js")%>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/Samples/infragistics.core.js")%>"></script>
-	<script type="text/javascript" src="<%= Url.Content("~/Scripts/Samples/infragistics.lob.js")%>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/Samples/modules/i18n/regional/infragistics.ui.regional-en.js")%>"></script>
-    ```
-
     **In Razor:**
 
     ```csharp
@@ -85,15 +64,15 @@ The `igPercentEditor` includes the following characteristics:
     <script type="text/javascript" src="@Url.Content("~/Scripts/Samples/modules/i18n/regional/infragistics.ui.regional-en.js")"></script>
     ```
 
-3.  For jQuery implementations create an INPUT, TD, DIV or SPAN as the target element in HTML. This step is optional for ASP.NET MVC implementations as the MVC wrapper creates the containing element for you.
+3.  For jQuery implementations create an INPUT, DIV or SPAN as the target element in HTML. This step is optional for ASP.NET MVC implementations as the MVC wrapper creates the containing element for you.
 
     **In HTML:**
 
     ```html
-    <input id="percentEditor" type="text" value="25.75"/>
+    <input id="percentEditor" />
     ```
 
-4. Once the above setup is complete, initialize the numeric editor and set needed options, such as `width`, `nullText`, `dataMode` etc.
+4. Once the above setup is complete, initialize the numeric editor.
 
     >**Note:** For the ASP.NET MVC Views, the `Render` method must be called after all other options are set.
 
@@ -101,20 +80,8 @@ The `igPercentEditor` includes the following characteristics:
 
     ```js
     <script type="text/javascript">
-      $('#percentEditor').igPercentEditor({
-          width: 160
-      });
+      $('#percentEditor').igPercentEditor();
     </script>
-    ```
-
-    **In ASPX:**
-
-    ```csharp
-    <%= Html.Infragistics().PercentEditor()
-    .ID("percentEditor")
-    .Value(0.0)
-    .Width(120)    
-    .Render()%>
     ```
 
     **In Razor:**
@@ -122,8 +89,6 @@ The `igPercentEditor` includes the following characteristics:
 	```csharp
 	@(Html.Infragistics().PercentEditor()
 		.ID("percentEditor")
-		.Value(0.0)
-		.Width(120)    
 		.Render())
 	```
 

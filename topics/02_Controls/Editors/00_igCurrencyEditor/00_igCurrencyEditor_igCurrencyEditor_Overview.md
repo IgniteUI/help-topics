@@ -11,17 +11,13 @@
 # igCurrencyEditor Overview
 
 
-The Ignite UI™ currency editor, or `igCurrencyEditor`, is a control that renders an input field which only accepts numeric digits, formatted as various currency types. The `igCurrencyEditor` control supports localization, by recognizing different regional options exposed from the browser.
+The Ignite UI™ currency editor, or `igCurrencyEditor`, is a control which renders an input field which only accepts numeric values, formatted as various currency types. The `igCurrencyEditor` control supports localization, by recognizing different regional options exposed from the browser.
 
-As the user interacts with the control the visual appearance is updated to give immediate feedback. Once the editor loses focus, a value-dependent positive or negative pattern is applied to the control, along with adding the appropriate currency sign.
-
-The `igCurrencyEditor` control exposes a rich client-side API, which may be configured the work with any server technology. While the Ignite UI™ controls are server-agnostic, the control does feature wrappers specific for the Microsoft® ASP.NET MVC Framework to configure the control with the .NET™ language of your choice.
-
-The `igCurrencyEditor` control may be extensively styled giving you an opportunity to provide a completely different look and feel for the control as opposed to the default style. Styling options include using your own styles as well as styles from jQuery UI’s ThemeRoller.
+As the user interacts with the control, the visual appearance is updated to reflect any changes. Once the editor loses focus, a value-dependent positive or negative pattern is applied to the control, along with adding the appropriate currency sign.
 
 Figure 1: The `igCurrencyEditor` formatted for American currency
 
-![](images/igCurrencyEditor_Overview_Pic1.png)
+![](images/igCurrencyEditor_Overview.png)
 
 [igCurrencyEditor Options Sample](%%SamplesUrl%%/editors/currency-editor)
 
@@ -29,12 +25,28 @@ Figure 1: The `igCurrencyEditor` formatted for American currency
 
 The `igCurrencyEditor` includes the following characteristics:
 
--   Overall theme support
+-   Theme support
 -   Validation
 -   Localization
 -   JavaScript Client API
 -   ASP.NET MVC wrapper
 -   Min/Max Value
+
+
+The `igCurrencyEditor` inherits the `igNumericEditor` options, but it has some unique properties of its own. For example you can use the `currencySymbol` option to change the displayed currency symbol. A full list of the `igCurrencyEditor` options can be found in the [igCurrencyEditor jQuery API](%%jQueryApiUrl%%/ui.igCurrencyEditor).
+
+Similarly to the `igNumericEditor`, the `igCurrencyEditor` has a `negativePattern` option, which defines the display mode pattern for negative numeric values.It looks like this:
+`negativePattern: '$(n)'`
+The "$" character represents `currencySymbol` and the "n" character represents the value of number. The "-" and "()" characters are a static part of the pattern.
+
+Unlike the numeric editor, the currency one has a positive pattern. The `positivePattern` option defines the display mode pattern for positive numeric values. The "$" character represents the `currencySymbol` and the "n" character represents the value of the number. Using these two characters, you can build custom patterns for maximum flexibility. One possible usage is demonstrated below:
+
+```js
+$('#currencyEditor').igCurrencyEditor({
+	positivePattern:'$$n'
+});
+```
+![](images/igCurrencyEditor_PositivePattern.png)
 
 ## Adding igCurrencyEditor to a Web Page
 
@@ -52,22 +64,7 @@ The `igCurrencyEditor` includes the following characteristics:
 	<script type="text/javascript" src="/Scripts/Samples/infragistics.lob.js"></script>
     ```
 
-	**In ASPX:**
-
-    ```csharp
-    <%@ Import Namespace="Infragistics.Web.Mvc" %>
-
-    <link type="text/css" href="<%= Url.Content("~/css/themes/infragistics/infragistics.theme.css") %>"rel="stylesheet" />
-    <link type="text/css" href="<%= Url.Content("~/css/structure/infragistics.css") %>"rel="stylesheet" />
-
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.min.js")%>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery-ui.min.js")%>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/Samples/infragistics.core.js")%>"></script>
-	<script type="text/javascript" src="<%= Url.Content("~/Scripts/Samples/infragistics.lob.js")%>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/Samples/modules/i18n/regional/infragistics.ui.regional-en.js")%>"></script>
-    ```
-
-    **In Razor:**
+	**In Razor:**
 
     ```csharp
     @using Infragistics.Web.Mvc;
@@ -82,15 +79,15 @@ The `igCurrencyEditor` includes the following characteristics:
     <script type="text/javascript" src="@Url.Content("~/Scripts/Samples/modules/i18n/regional/infragistics.ui.regional-en.js")"></script>
     ```
 
-3.  For jQuery implementations create an INPUT, TD, DIV or SPAN as the target element in HTML. This step is optional for ASP.NET MVC implementations as the MVC wrapper creates the containing element for you.    
+3.  For purely jQuery implementations, start off by creating an INPUT, DIV or SPAN as the target element in HTML. This step is optional for ASP.NET MVC implementations as the MVC wrapper creates the containing element for you.    
 
     **In HTML:**
 
     ```html
-    <input id="currencyEditor" type="text" value="12345678.56723456" />
+    <input id="currencyEditor" />
     ```
 
-4.  Once the above setup is complete, initialize the numeric editor and set needed options, such as `width`, `nullText`, `dataMode` etc.
+4.  Once the above setup is complete, initialize the numeric editor.
 
     > **Note:** For the ASP.NET MVC Views, the `Render` method must be called after all other options are set.
 
@@ -98,33 +95,19 @@ The `igCurrencyEditor` includes the following characteristics:
 
     ```js
     <script type="text/javascript">
-         $('#currencyEditor').igCurrencyEditor({
-             width: 200
-         });
+         $('#currencyEditor').igCurrencyEditor();
     </script>
     ```
- 
-	**In ASPX:**
-
-     ```csharp
-     <%= Html.Infragistics().CurrencyEditor()
-       .ID("currencyEditor")
-       .Width(200)
-       .Value(12345678.56723456)
-       .Render()%>
-     ```
 
 	**In Razor:**
 
     ```csharp
     @(Html.Infragistics().CurrencyEditor()
        .ID("currencyEditor")
-       .Width(200)
-       .Value(12345678.56723456)
        .Render())
     ```
 
-5.  Run the web page to view the basic setup of the `igCurrencyEditor` control.
+5.  Run the web page to view the resulting `igCurrencyEditor` control.
 
 ## Related Links
 

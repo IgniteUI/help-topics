@@ -26,14 +26,16 @@ Figure 1: The `igTextEditor` control as rendered to the user
 ## Features
 The `igTextEditor` includes the following characteristics:
 
--   Overall theme support
+-	Single and multiline input
 -   Validation
--   JavaScript Client API
--   ASP.NET MVC wrapper
 -   Filtering entries by include/exclude specific characters
 -   Filtering entries by predefined list
+-   JavaScript Client API
+-   ASP.NET MVC wrapper
+-   Overall theme support
 
 ## Adding igTextEditor to a Web Page
+
 1.  To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) help topic.
 2.  On your HTML page or ASP.NET MVC View, reference the required JavaScript files, CSS files, and ASP.NET MVC assemblies.
 
@@ -42,25 +44,10 @@ The `igTextEditor` includes the following characteristics:
     ```html
     <link type="text/css" href="/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
     <link type="text/css" href="/css/structure/infragistics.css" rel="stylesheet" />
-    <script type="text/javascript" src="/Scripts/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/Scripts/Samples/infragistics.core.js"></script>
 	<script type="text/javascript" src="/Scripts/Samples/infragistics.lob.js"></script>
-    ```
-
-    **In ASPX:**
-
-    ```csharp
-    <%@ Import Namespace="Infragistics.Web.Mvc" %>
-
-    <link type="text/css" href="<%= Url.Content("~/css/themes/infragistics/infragistics.theme.css") %>"rel="stylesheet" />
-    <link type="text/css" href="<%= Url.Content("~/css/structure/infragistics.css") %>"rel="stylesheet" />
-
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery-1.4.4.min.js")%>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery-ui.min.js")%>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/Samples/infragistics.core.js")%>"></script>
-	<script type="text/javascript" src="<%= Url.Content("~/Scripts/Samples/infragistics.lob.js")%>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/Samples/modules/i18n/regional/infragistics.ui.regional-en.js")%>"></script>
     ```
 
     **In Razor:**
@@ -71,47 +58,34 @@ The `igTextEditor` includes the following characteristics:
     <link type="text/css" href="@Url.Content("~/css/themes/infragistics/infragistics.theme.css")" rel="stylesheet" />
     <link type="text/css" href="@Url.Content("~/css/structure/infragistics.css")" rel="stylesheet" />
 
-    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.9.1.min.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-ui.min.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Scripts/Samples/infragistics.core.js")"></script>
 	<script type="text/javascript" src="@Url.Content("~/Scripts/Samples/infragistics.lob.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Scripts/Samples/modules/i18n/regional/infragistics.ui.regional-en.js")"></script>
     ```
 
-3.  For jQuery implementations create an INPUT, TD, DIV or SPAN as the target element in HTML. This step is optional for ASP.NET MVC implementations as the MVC wrapper creates the containing element for you.
+3.  For jQuery implementations create an INPUT, DIV or SPAN as the target element in HTML. This step is optional for ASP.NET MVC implementations as the MVC wrapper can create the containing element for you.
 
 	**In HTML:**
    	```html
     <input id="textEditor" type="text" />
 	```
 
-4.  Once the above setup is complete, initialize the numeric editor and set needed options, such as `width`, `nullText` etc. 
+4.  Once the above setup is complete, initialize the text editor and set needed options, such as [`width`](%%jQueryApiUrl%%/ui.igTextEditor#options:width), [`placeHolder`](%%jQueryApiUrl%%/ui.igTextEditor#options:placeHolder) etc. 
 
-	> **Note:** For the ASP.NET MVC Views, the `Render` method must be called after all other options are set.
+	> **Note:** For the ASP.NET MVC Views, the `Render` method must be called after all other options are set. An optional boolen parameter can be passed to skip rendering target element if it's already present in the page from the previous step.
 
 	**In Javascript:**
 	```js
     <script type="text/javascript">
-       $('#textEditor').igTextEditor({
-           width: 160,
-           nullText: 'Enter Text'
-       });
+       $('#textEditor').igTextEditor();
     </script>	
-	```
-	**In ASPX:**
-	```csharp
-     <%= Html.Infragistics().TextEditor()
-       .ID("textEditor")
-       .Width(200)
-       .NullText("Enter Text")
-       .Render()%>
 	```
 	**In Razor:**
 	```csharp
     @(Html.Infragistics().TextEditor()
        .ID("textEditor")
-       .Width(200)
-       .NullText("Enter Text")
        .Render())
 	```
 

@@ -37,10 +37,6 @@ The `igNumericEditor` includes the following characteristics:
 -   ASP.NET MVC wrapper
 -   Min/Max Value
 
-##Limitations
-
-
--   Group separators are not supported in edit mode
 
 ##Adding igNumericEditor to a Web Page
 
@@ -59,21 +55,6 @@ The `igNumericEditor` includes the following characteristics:
 	<script type="text/javascript" src="/Scripts/Samples/infragistics.lob.js"></script>
     ```
 
-    **In ASPX:**
-
-    ```csharp
-    <%@ Import Namespace="Infragistics.Web.Mvc" %>
-
-    <link type="text/css" href="<%= Url.Content("~/css/themes/infragistics/infragistics.theme.css") %>"rel="stylesheet" />
-    <link type="text/css" href="<%= Url.Content("~/css/structure/infragistics.css") %>"rel="stylesheet" />
-
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.min.js")%>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery-ui.min.js")%>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/Samples/infragistics.core.js")%>"></script>
-	<script type="text/javascript" src="<%= Url.Content("~/Scripts/Samples/infragistics.lob.js")%>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/Samples/modules/i18n/regional/infragistics.ui.regional-en.js")%>"></script>
-    ```
-
     **In Razor:**
 
     ```csharp
@@ -89,15 +70,15 @@ The `igNumericEditor` includes the following characteristics:
     <script type="text/javascript" src="@Url.Content("~/Scripts/Samples/modules/i18n/regional/infragistics.ui.regional-en.js")"></script>
     ```
 
-3.  For jQuery implementations create an INPUT, TD, DIV or SPAN as the target element in HTML. This step is optional for ASP.NET MVC implementations as the MVC wrapper creates the containing element for you.
+3.  For jQuery implementations create an INPUT, DIV or SPAN as the target element in HTML. This step is optional for ASP.NET MVC implementations as the MVC wrapper creates the containing element for you.
 
     **In HTML:**
 
     ```html
-    <input id="numericEditor" type="text" />
+    <input id="numericEditor"/>
     ```
 
-4. Once the above setup is complete, initialize the numeric editor and set needed options, such as `width`, `nullText`, `dataMode` etc.
+4. Once the above setup is complete, initialize the numeric editor.
 
     >**Note:** For the ASP.NET MVC Views, the `Render` method must be called after all other options are set.
 
@@ -105,28 +86,8 @@ The `igNumericEditor` includes the following characteristics:
 
     ```js
     <script type="text/javascript">
-    $('#numericEditor').igNumericEditor(
-    {
-        dataMode: 'int',
-        maxValue: 100,
-        minValue: 0,
-        button: 'spin',
-        width: 190
-    });
+    $('#numericEditor').igNumericEditor();
     </script>
-    ```
-
-    **In ASPX:**
-
-    ```csharp
-    <%= Html.Infragistics().NumericEditor()
-         .ID("numericEditor")
-         .DataMode(NumericEditorDataMode.Int)
-         .MinValue(0)
-         .Value(0)
-         .ButtonType(TextEditorButtonType.Spin)
-         .Width(120)
-         .Render() %>
     ```
 
     **In Razor:**
@@ -143,6 +104,26 @@ The `igNumericEditor` includes the following characteristics:
     ```
 
 5.  Run the web page to view the basic setup of the `igNumericEditor` control.
+
+##Specific options
+
+Although the `igNumericEditor` shares a lot of properties with the other editors it possesses quite a number of unique ones. Let's start with the `dataMode` property. This property can be used to set or get the type of  the editor's input value. The default value is "double", but you can choose between int, float, byte and other. The full list of values can be seen in the [igNumericEditor jQuery API](%%jQueryApiUrl%%/ui.igNumericEditor). 
+
+Another specific option is the `decimalSeparator` which allows you to choose what character to be displayed as a decimal separator. The `groupSeparator` has similar functionality but it allows you to choose a character that will be displayed between the digits in a large number like thousands or more. Below you can see an example of how to use it, but before that let take a look at one more property. The `groups` takes an array as a value. This property can be used to determine after how many digits you would like to have a separator. Note that count on groups start from right to left and the option affects only in display mode.
+
+```js
+$('#divEditor').igNumericEditor({
+	width: "300",
+	groups: [1,2,3],
+	groupSeparator:"-"
+});
+```
+
+![](images/igNumericEditor_numericGroups.png)
+
+ 
+
+>**Note:** Full list of properties can be found in the [API documentation](%%jQueryApiUrl%%/ui.igNumericEditor)
 
 ##Related Links
 
