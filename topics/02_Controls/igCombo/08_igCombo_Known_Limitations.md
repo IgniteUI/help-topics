@@ -29,6 +29,7 @@ Issue | Description | Status
 ---|---|---
 [In IE9 and lower versions placeHolder text is not previewed](#IE9PlaceHolder) | Input placeholders are simply ignored in IE9 and below|![](../../images/images/negative.png)
 [When virtualization is enabled, all ItemTemplate elements should have equal heights](#virtualizationAndItemTemplate) | Misalignment issues may occur with the scrollbar | ![](../../images/images/positive.png)
+[When Grouping and Virtualization are used some items are not rendered properly](#groupingWithVirtualization) | When scrolling down, some items are not properly added|![](../../images/images/negative.png)
 
 
 ##Known Issues and Limitations Details
@@ -64,3 +65,6 @@ A potential work around for this issue is to set `height` to the item template l
 	});
 </script>
 ```
+###<a id="groupingWithVirtualization"></a>When Grouping and Virtualization are used some items are not rendered properly
+
+When scrolling up/down through the item list, while there are grouped items, some list items may not be rendered properly or rendered at all.
