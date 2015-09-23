@@ -21,6 +21,7 @@ The `igTreeGrid` control is a jQuery widget that displays data in a tree-like ta
 -   [Features Overview (igTreeGrid)](igTreeGrid-Features-Overview.html): This topic covers the basics around the modular features available for the `igTreeGrid` control. 
 -   [Filtering (igTreeGrid)](igTreeGrid-Filtering.html): This topic explains how the `igTreeGridFiltering` operates on hierarchical data.
 -   [Updating (igTreeGrid)](igTreeGrid-Updating.html): This topic contains an overview of the Updating functionality specific to the `igTreeGrid` control.
+-   [Paging (igTreeGrid)](igTreeGrid-Paging.html): This topic contains an overview of the Paging functionality specific to the igTreeGrid control.
 -   [Load on Demand (igTreeGrid)](igTreeGrid-Load-On-Demand.html): This topic explains the benefits of the `igTreeGrid` Load on Demand functionality and how it can be implemented.
 -	[Remote Features (igTreeGrid)](igTreeGrid-Remote-Features.html): This topic contains an overview and implementation details on performing remote operations with `igTreeGrid` features.
   
