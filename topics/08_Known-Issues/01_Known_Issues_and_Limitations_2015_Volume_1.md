@@ -1177,8 +1177,8 @@ Go up to [Known Issues and Limitations Summary](#summary)
 
 Issue | Description | Status
 ---|---|---
-igGridExcelExporter does not work in Microsoft Internet Explorer 8 | The issue is that 'export' is a reserved word and thus Internet Explorer 8 is not allowing its use. This will be fixed for the upcoming volume release 15.2 | ![](../images/images/negative.png)
-
+Saving exported file does not work in IE9 and earlier | GridExcelExporter uses a Blob object to keep the raw data of the exported worksheet, which is not supported in IE9 and earlier: https://developer.mozilla.org/en-US/docs/Web/API/Blob | ![](../images/images/negative.png)
+Only part of the data is exported in Append Rows on Demand or remote paging scenarios | The GridExcelExporter is entirely a client-side component and thus it deals only with data currently available on the client. In scenarios implementing Remote Paging and Append Rows on Demand when further sets of data are fetched through additional requests, this data is not exported. |
 Go up to [Known Issues and Limitations Summary](#summary)
 
 
