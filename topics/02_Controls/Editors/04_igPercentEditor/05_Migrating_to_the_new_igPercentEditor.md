@@ -54,7 +54,6 @@ symbol|Used to set percent symbol, which is used in display (no focus) state.|Th
 textAlign|Default was `null`|Now default is `left`.
 theme|-|This option is removed.
 type|-|This option is removed.
-validatorOptions |-|This option is removed.
 
 <a name='new_options'></a>
 ### New options

@@ -52,7 +52,6 @@ spinOnReadOnly|This was used to override the "readOnly" option and allow changin
 symbol|Used to set the currency symbol, which is used in display (no focus) state.|This option is renamed to `currencySymbol` to better communicate what it does.
 textAlign|Default was `null`|Now default is `left`.
 theme|-|This option is removed.
-validatorOptions |-|This option is removed.
 
 <a name='new_options'></a>
 ### New options

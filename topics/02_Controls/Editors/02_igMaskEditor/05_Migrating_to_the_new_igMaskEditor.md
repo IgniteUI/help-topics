@@ -53,7 +53,6 @@ promptChar | Sets character which is used as prompt in edit mode for available e
 renderInContainer|-|This option is removed.
 selectionOnFocus|Previously supported members: `select`, `-1`, `start`, `0`, `end`, `1`, `default`, `2`.|Now supported members are: `selectAll`, `atStart`, `atEnd`, `browserDefault`. The default value is `selectAll`.
 spinOnReadOnly|- |This option is removed. 
-validatorOptions |-|This option is removed.
 
 <a name='new_options'></a>
 ### New options

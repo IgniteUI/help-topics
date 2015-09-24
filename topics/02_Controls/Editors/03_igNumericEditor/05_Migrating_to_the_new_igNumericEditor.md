@@ -50,7 +50,6 @@ selectionOnFocus|Previously supported members: `select`, `-1`, `start`, `0`, `en
 spinOnReadOnly|This was used to override the "readOnly" option and allow changing "value" of editor on spin events. |This option is removed. Setting `readOnly` to `true` disables the spin buttons.
 textAlign|Default was `null`|Now default is `left`.
 theme|-|This option is removed.
-validatorOptions |-|This option is removed.
 
 <a name='new_options'></a>
 ### New options
