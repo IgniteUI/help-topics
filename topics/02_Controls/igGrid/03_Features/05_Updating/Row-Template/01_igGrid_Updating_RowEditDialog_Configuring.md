@@ -1,7 +1,7 @@
 <!--
 |metadata|
 {
-    "fileName": "iggrid-updating-roweditdialog-configuring",
+    "fileName": "iggrid-updating-rowedittemplate-configuring",
     "controlName": "igGrid",
     "tags": ["Editing","Grids","How Do I","Templating"]
 }
