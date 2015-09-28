@@ -13,7 +13,7 @@
 With the 15.2 release of Ignite UI™ a new set of editor controls were introduced including a reworked `igTextEditor`. With a new design focused on simplicity and better UX out-of-the-box some features and their API were revised, removed and new ones added. This topic will cover the differences that will be helpful for developers migrating their applications to the new editors.
 
 ## Topic overview
-This topic aims to help with migration from old numeric editor to the new one. Different scenarios are viewed and how they were done before and how they can be done now.
+This topic aims to help with migration from old text editor to the new one. Different scenarios are viewed and how they were done before and how they can be done now.
 
 ### In this topic
 This topic contains the following sections:
@@ -80,9 +80,9 @@ addListItems|Used to add the objects within the items array at the location indi
 clearListItems|Removed all items from list.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 dropDownElement|Got reference to jquery object which is used as container of dropdown.|This method is renamed to `dropDownContainter` to better communicate what it does.
 dropDownVisible|Set visibility of dropdown list according to the Boolean value that is passed.|This method is replaced by [showDropDown:](#showDropDown) and [hideDropDown:](#hideDropDown).
-findListItemIndex|Found index of list item by text that matches with the search parameters|We should provide only one numeric parameter `number` and look for exact matches of it (e. g. 15.00 would equal 15).
+findListItemIndex|Found index of list item by text that matches with the search parameters|
 getRegionalOption|Gets calculated value of regional option used by numeric and date editors.|This method in no longer available.
-getSelectedText|Used to get selected text in editor.|This method is removed as it doesn't make sense to have such a method in numeric editor.
+getSelectedText|Used to get selected text in editor.|This method is removed as it doesn't make sense to have such a method in text editor.
 getSelection|Used to get left or right edge of selection.|This method is removed as it doesn't make sense to have such a method in numeric editor.
 getValueByMode|Used to get value in editor by dataMode.|This method is not supported.
 hasInvalidMessage|Used to check if invalid message is displayed.|This method is removed as its` functionality is covered by the API for the igEditorNotifier.
