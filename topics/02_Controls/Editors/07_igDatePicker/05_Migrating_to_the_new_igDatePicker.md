@@ -13,7 +13,7 @@
 With the 15.2 release of Ignite UI™ a new set of editor controls were introduced including a reworked `igDatePicker`. With a new design focused on simplicity and better UX out-of-the-box some features and their API were revised, removed and new ones added. This topic will cover the differences that will be helpful for developers migrating their applications to the new editors.
 
 ## Topic overview
-This topic aims to help with migration from old numeric editor to the new one. Different scenarios are viewed and how they were done before and how they can be done now.
+This topic aims to help with migration from old date picker to the new one. Different scenarios are viewed and how they were done before and how they can be done now.
 
 ### In this topic
 This topic contains the following sections:
@@ -57,13 +57,13 @@ theme|-|This option is removed.
 
 Option| Description
 ---|---
-disabled|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#numericEditor').igDatePicker({ disabled: true }] })`.
-listItemHoverDuration|<a name='listItemHoverDuration'></a>Use to set the hover/unhover animation duration of items inside the dropdown list: `$('#numericEditor').igDatePicker({ listItems: [1, 2, 3, 4], listItemHoverDuration: 400 }] })`.
-visibleItemsCount|<a name='visibleItemsCount'></a>Use to set how many items should be shown at once: `$('#numericEditor').igDatePicker({ listItems: [1, 2, 3, 4], visibleItemsCount: 2 }] })`.
-isLimitedToListValues|<a name='isLimitedToListValues'></a>Use to set the ability to allow values only set into the list items. This validation is done only when the editor is blured, or enter key is pressed: `$('#numericEditor').igDatePicker({ listItems: [1, 2, 3, 4], isLimitedToListValues: true }] })`.
-revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key. If set to false clear is called: `$('#numericEditor').igDatePicker({ listItems: [1, 2, 3, 4], isLimitedToListValues: true, revertIfNotValid: false }] })`.
-preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#numericEditor').igDatePicker({ preventSubmitOnEnter: true }] })`.
-dropDownOrientation|<a name='dropDownOrientation'>Use to set drop down opening orientation for the dorp down list when open button is clicked: `$('#numericEditor').igDatePicker({ listItems: [1, 2, 3, 4], dropDownOrientation: 'top' }] })`.
+disabled|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#datePicker').igDatePicker({ disabled: true }] })`.
+listItemHoverDuration|<a name='listItemHoverDuration'></a>Use to set the hover/unhover animation duration of items inside the dropdown list: `$('#datePicker').igDatePicker({ listItems: [1, 2, 3, 4], listItemHoverDuration: 400 }] })`.
+visibleItemsCount|<a name='visibleItemsCount'></a>Use to set how many items should be shown at once: `$('#datePicker').igDatePicker({ listItems: [1, 2, 3, 4], visibleItemsCount: 2 }] })`.
+isLimitedToListValues|<a name='isLimitedToListValues'></a>Use to set the ability to allow values only set into the list items. This validation is done only when the editor is blured, or enter key is pressed: `$('#datePicker').igDatePicker({ listItems: [1, 2, 3, 4], isLimitedToListValues: true }] })`.
+revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key. If set to false clear is called: `$('#datePicker').igDatePicker({ listItems: [1, 2, 3, 4], isLimitedToListValues: true, revertIfNotValid: false }] })`.
+preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#datePicker').igDatePicker({ preventSubmitOnEnter: true }] })`.
+dropDownOrientation|<a name='dropDownOrientation'>Use to set drop down opening orientation for the dorp down list when open button is clicked: `$('#datePicker').igDatePicker({ listItems: [1, 2, 3, 4], dropDownOrientation: 'top' }] })`.
 
 [See all options](%%jQueryApiUrl%%/ui.igdatepicker#options)
 
