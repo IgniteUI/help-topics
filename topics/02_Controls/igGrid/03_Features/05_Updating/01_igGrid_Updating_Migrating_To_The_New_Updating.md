@@ -24,6 +24,7 @@ This topic contains the following sections:
 - 	[**Option changes**](#option-changes)
 - 	[**New options**](#options-new)
 - 	[**Event changes**](#event-changes)
+- 	[**Method changes**](#method-changes)
 -   [**Related Topics**](#topics)
 
 
@@ -45,7 +46,7 @@ New option [rowEditDialogOptions](%%jQueryApiUrl%%/ui.igGridUpdating#options:row
 
 ### <a id="##behavioral-changes"></a> Behavioral changes
 
-When [showDoneCancelButtons](%%jQueryApiUrl%%/ui.igGridUpdating#options:showDoneCancelButtons) is true you cannot exit edit mode of the currently edited row by starting edit mode on another row in the grid. To exit edit mode you need to explicitly exit editing by clicking on the buttons or hitting the Escape key.
+When editing a column with a multiline text editor, the end-user should now use ALT+ENTER key combination to insert a new line and ENTER to submit the changes as normal.
 
 
 ### <a id="option-changes"></a> Option changes
@@ -73,6 +74,7 @@ When [showDoneCancelButtons](%%jQueryApiUrl%%/ui.igGridUpdating#options:showDone
 |editorsTemplateSelector*|Specifies a selector to a template to be executed for each column in the grid's column collection. Decorate the element to be used as an editor with 'data-editor-for-${key}'. The ${key} template tag should be replaced with the chosen templating engine's syntax for rendering values. If any editors for columns are specified in the dialog markup they will be exluded from the data the template will be rendered for. This property is ignored if the dialog markup does not include an element with the 'data-render-tmpl' attribute. If both editorsTemplate and editorsTemplateSelector are specified, editorsTemplateSelector will be used.|
 |namesColumnWidth*|Controls the width of the column containing the column names in the default row edit dialog.|
 |showEditorsForHiddenColumns*| Controls if editors should be rendered for hidden columns.|
+|wrapAround|Controls if editing mode should wrap around the grid when navigating using the keyboard.|
 ### <a id="event-changes"></a> Event changes
 
 #### Renamed Events
@@ -84,8 +86,20 @@ When [showDoneCancelButtons](%%jQueryApiUrl%%/ui.igGridUpdating#options:showDone
 |rowEditDialogClosing|rowEditDialogBeforeClose|This event is not cancelable.|
 |rowEditDialogClosed|rowEditDialogAfterClose||
 
+#### Changed Event Arguments
+
+|Argument|Affected Events|Additional information|
+---|---|---
+|keepEditing|editCellEnding,editRowEnding|The argument is removed. To prevent editing from exiting users can cancel the events by returning false|
+
 #### Deprecated Events
 - rowEditDialogContentsRendering
+
+
+### <a id="method-changes"></a> Method changes
+- The [setCellValue](%%jQueryApiUrl%%/ui.igGridUpdating#methods:setCellValue) method no longer requires or provides the option to pass the cell element to update. The operation is now always controlled by the primary key - column key combination.
+- The [updateRow](%%jQueryApiUrl%%/ui.igGridUpdating#methods:updateRow) method no longer requires or provides the option to pass the row element to update. The operation is now always controlled by the primary key of the record to update.
+- The `findHiddenComboEditor` method was obsolete and was removed.
 
 ## <a id="topics"></a> Related Topics 
 Following are some other topics you may find useful.
