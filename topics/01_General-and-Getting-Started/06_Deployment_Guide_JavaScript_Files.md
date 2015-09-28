@@ -345,6 +345,7 @@ JavaScript files in the page code.
 			    <br>infragistics.templating-en.js
 			    <br>infragistics.templating.js
 			    <br>infragistics.ui.shared.js
+				<br>infragistics.ui.grid.shared.js
 			    <br>infragistics.ui.scroll.js
 			</td>
 		</tr>
@@ -399,7 +400,8 @@ JavaScript files in the page code.
 			    <br>infragistics.dataSource.js
 			    <br>infragistics.templating-en.js
 			    <br>infragistics.templating.js
-			    <br>infragistics.ui.shared.js
+			    <br>infragistics.ui.shared.js				
+				<br>infragistics.ui.grid.shared.js
 			    <br>infragistics.ui.scroll.js
 			    <br>infragistics.ui.grid-en.js
 			    <br>infragistics.ui.grid.framework.js
