@@ -77,7 +77,7 @@ dropDownElement|Got reference to jquery object which is used as container of dro
 dropDownVisible|Set visibility of dropdown list according to the Boolean value that is passed.|This method is no longer available for the mask editor.
 findListItemIndex|Found index of list item by text that matches with the search parameters|This method is no longer available for the mask editor.
 getSelectedText|Used to get selected text in editor.|This method is removed as it doesn't make sense to have such a method in mask editor.
-getSelection|Used to get left or right edge of selection.|This method is replaced by getSectionStar ans getSelectionEnd.
+getSelection|Used to get left or right edge of selection.|This method is replaced by getSeletionStart and getSelectionEnd.
 getValueByMode|Used to get value in editor by dataMode.|This method is not supported.
 hasInvalidMessage|Used to check if invalid message is displayed.|This method is removed as its` functionality is covered by the API for the igEditorNotifier.
 mainElement|Used to get reference to jquery object which is used as top/outer element of igMaskEditor.|This method is renamed to `editorContainter` to better communicate what it does.
