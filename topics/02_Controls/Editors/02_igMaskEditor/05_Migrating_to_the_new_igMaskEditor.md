@@ -36,7 +36,6 @@ dataMode|Members of type 'string' and 'number' were supported.|Members of type '
 display|-|This option is removed.
 dropDownOnReadOnly|-|This option is removed. 
 dropDownTriggers|-|This option is removed.
-emptyChar| The default value used to be an empty string. | The default value is an asterix symbol " ".
 focusOnSpin|-|This option is removed. 
 height width|Previously supported type: `number`.|Now supported types are: `number`, `string`, `null`. If using type `string`, the height can be set in pixels (px) and percentage (%).
 hideEnterKey|-|This option is removed. You can use [preventSubmitOnEnter](#preventSubmitOnEnter) option to prevent submitting when pressing Enter.
@@ -48,7 +47,6 @@ listMatchContains |-| This option is removed.
 listMatchIgnoreCase |-|This option is removed.
 listMatchOnly |-|This option is removed.
 nullText|Used to set text which appears in editor when editor has no focus and "value" in editor is null or empty string.|This option is renamed to `placeHolder` to better communicate what it does.
-padChar |The default value is an empty sting ' '.|
 promptChar | Sets character which is used as prompt in edit mode for available entry position. | This option is renamed to `unfilledCharsPrompt` to better communicate what it does. The default value is '_'.
 renderInContainer|-|This option is removed.
 selectionOnFocus|Previously supported members: `select`, `-1`, `start`, `0`, `end`, `1`, `default`, `2`.|Now supported members are: `selectAll`, `atStart`, `atEnd`, `browserDefault`. The default value is `selectAll`.
