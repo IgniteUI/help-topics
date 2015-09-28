@@ -49,7 +49,7 @@ nullable|This option was used to set ability to prevent cnull value.|This option
 nullText|Used to set text which appears in editor when editor has no focus and "value" in editor is null or empty string.|This option is renamed to `placeHolder` to better communicate what it does.
 renderInContainer|-|This option is removed.
 selectionOnFocus|Previously supported members: `select`, `-1`, `start`, `0`, `end`, `1`, `default`, `2`.|Now supported members are: `selectAll`, `atStart`, `atEnd`, `browserDefault`. The default value is `selectAll`.
-spinDelta|Previous default value was 1 | Default value is 0.01.
+spinDelta|Previous default value was 1. | Default value is 0.01.
 spinOnReadOnly|This was used to override the "readOnly" option and allow changing "value" of editor on spin events. |This option is removed. Setting `readOnly` to `true` disables the spin buttons.
 symbol|Used to set percent symbol, which is used in display (no focus) state.|This option is renamed to `percentSymbol` to better communicate what it does.
 textAlign|Default was `null`|Now default is `left`.
