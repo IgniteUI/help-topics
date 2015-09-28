@@ -75,7 +75,7 @@ Method| Previously| Now
 addListItem|Used to add the object within item at the location indicated by the index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 addListItems|Used to add the objects within the items array at the location indicated by the index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 clearListItems|Removed all items from list.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
-dropDownElement|Got reference to jquery object which is used as container of dropdown.|This method is renamed to `dropDownContainter` to better communicate what it does.
+dropDownElement|Got reference to jquery object which is used as container of dropdown.|This method is renamed to `getCalendar` to better communicate what it does.
 dropDownVisible|Set visibility of dropdown list according to the Boolean value that is passed.|This method is replaced by [showDropDown:](#showDropDown) and [hideDropDown:](#hideDropDown).
 findListItemIndex|Found index of list item by text that matches with the search parameters|We should provide only one numeric parameter `number` and look for exact matches of it (e. g. 15.00 would equal 15).
 getSelectedText|Used to get selected text in editor.|This method is removed as it doesn't make sense to have such a method in numeric editor.
@@ -99,6 +99,7 @@ value|Used to get or set value in editor.|The parameter is renamed to `newValue`
 
 Method|Description
 ---|---
+getCalendar|<a name='getCalendar'></a>Returns a reference to the jQuery calendar used as a picker selector.
 showDropDown|<a name='showDropDown'></a>Show the dropdown list.
 hideDropDown|<a name='hideDropDown'></a>Hide the dropdown list.
 selectListIndexUp|<a name='selectListIndexUp'></a>Moves the selection index to the item that appears above the current one in the list.
