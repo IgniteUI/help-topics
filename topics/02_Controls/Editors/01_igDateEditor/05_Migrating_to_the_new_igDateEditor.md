@@ -98,7 +98,7 @@ clearButton|Returns a reference to the clear button of the editor.
 
 >**Note:** One of the major changed in the new date editor is that it no longer supports Lists and DropDown. Note that if you try to use methods connected to dropdown and list, you will receive a notification pointing out that they are no longer available. 
 
-[See all API methods](%%jQueryApiUrl%%/ui.ignumericeditor#methods)
+[See all API methods](%%jQueryApiUrl%%/ui.igdateeditor#methods)
 
 <a name='event_changes'></a>
 ### Event changes
@@ -119,7 +119,7 @@ Event|Description
 rendering|<a name='dropDownListOpening'></a>Event which is raised before rendering of the editor completes.
 rendered|<a name='rendered'></a>Event which is raised after rendering of the editor completes.
 
-[See all events](%%jQueryApiUrl%%/ui.ignumericeditor#events)
+[See all events](%%jQueryApiUrl%%/ui.igdateeditor#events)
 
 <a name='requirements'></a>
 ### jQuery requirements
