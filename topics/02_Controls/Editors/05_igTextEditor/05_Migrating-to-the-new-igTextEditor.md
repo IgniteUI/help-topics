@@ -79,7 +79,7 @@ addListItem|Used to add the object within item at the location indicated by the 
 addListItems|Used to add the objects within the items array at the location indicated by the index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 clearListItems|Removed all items from list.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 dropDownElement|Got reference to jquery object which is used as container of dropdown.|This method is renamed to `dropDownContainter` to better communicate what it does.
-dropDownVisible|Set visibility of dropdown list according to the Boolean value that is passed.|Only gets visibility of dropdown list. There are new methods - [showDropDown:](#showDropDown) and [hideDropDown:](#hideDropDown), that replaces the previous functionality.
+dropDownVisible|Set visibility of dropdown list according to the Boolean value that is passed.|Only gets visibility of dropdown list. There are new methods - [showDropDown](#showDropDown) and [hideDropDown](#hideDropDown), that replaces the previous functionality.
 findListItemIndex|Found index of list item by text that matches with the search parameters|
 getRegionalOption|Gets calculated value of regional option used by numeric and date editors.|This method in no longer available.
 getSelectedText|Used to get selected text in editor.|This method is removed as it doesn't make sense to have such a method in text editor.
@@ -93,7 +93,7 @@ removeListItem|Used to remove item from list.|This method is removed. You should
 removeListItemAt|Used to remove item from list at index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 select|Used to select text in editor. Valid parameters: `sel0`, `sel1`, `val`|`sel0` is renamed to `start` and `sel1` is renamed to `end` to prevent exchanging the two parameters. 
 setFocus|Used to set focus to editor with delay.  If parameter was -1, then focus was set without delay.|It now supports only positive values for the delay and 0 is default that signifies that it is immediately given the focus.
-spin|Used to increment (positive delta) or decrement (negative delta) value in editor according to the parameter.|This method is replaced by two new methods: `spinUp` and `spinDown`. This method works only on the value and not with the dropdown navigation. For the latter you should use [selectListIndexUp:](#selectListIndexUp) or [selectListIndexDown:](#selectListIndexDown) method.
+spin|Used to increment (positive delta) or decrement (negative delta) value in editor according to the parameter.|This method is replaced by two new methods: `spinUp` and `spinDown`. This method works only on the value and not with the dropdown navigation. For the latter you should use [selectListIndexUp](#selectListIndexUp) or [selectListIndexDown](#selectListIndexDown) method.
 text|Used to get or set text in editor.|This is replaced by a getter method `displayValue` that takes no parameters and returns a string with all the characters shown in the input.
 validate|Used to trigger validation of editor and show error message. It had a single parameter: `noLabel`|The parameter is renamed to `skipErrorMessage`.
 value|Used to get or set value in editor.|The parameter is renamed to `newValue` to better communicate what it does.
