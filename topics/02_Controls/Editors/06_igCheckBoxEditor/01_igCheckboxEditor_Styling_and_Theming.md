@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# igCheckBoxEditor Styling and Theming
+# igCheckboxEditor Styling and Theming
 
 In this topic we are going to see how to customize the `igCheckboxEditor`.
 
@@ -85,7 +85,7 @@ $('#checkInput').igCheckboxEditor({
 
 ### Width and Height
 
-Apart from the `size` option you can change the size of the `igCheckBoxEditor` control by using the width and height properties. Pay attention that those properties overwrite the size option. Another thing that you should note, when you change the width and the height properties, is that the icon will always be positioned at the center of the DIV element. 
+Apart from the `size` option you can change the size of the `igCheckboxEditor` control by using the width and height properties. Pay attention that those properties overwrite the size option. Another thing that you should note, when you change the width and the height properties, is that the icon will always be positioned at the center of the DIV element. 
 
 **JavaScript:**
 
