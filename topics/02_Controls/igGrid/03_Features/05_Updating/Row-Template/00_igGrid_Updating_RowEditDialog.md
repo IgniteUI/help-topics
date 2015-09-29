@@ -157,7 +157,7 @@ The row dialog can be defined in the ways listed below:
 		// Grid Definition
 		.Features(features =>
 		{features.Updating()                
-		.EditMode(GridEditMode.rowEditTemplate)
+		.EditMode(GridEditMode.Dialog)
 		.ShowReadonlyEditors(true)
 		.StartEditTriggers(GridStartEditTriggers.Click)
 		 .RowEditDialogOptions(options =>
@@ -294,7 +294,7 @@ The default template is `<table><colgroup><col></col><col></col></colgroup><tbod
 	{ 
 		name: "Updating",
 		startEditTriggers: 'enter dblclick',    
-		editMode: 'rowedittemplate',      
+		editMode: 'dialog',      
 		showReadonlyEditors: false,      
 		rowEditDialogOptions:{
         dialogTemplate:"<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>"
@@ -316,7 +316,7 @@ The default template is `<table><colgroup><col></col><col></col></colgroup><tbod
 	{ 
 		name: "Updating",
 		startEditTriggers: 'enter dblclick',    
-		editMode: 'rowedittemplate',      
+		editMode: 'dialog',      
 		showReadonlyEditors: false,      
 		rowEditDialogOptions:{
         dialogTemplate:"<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>"

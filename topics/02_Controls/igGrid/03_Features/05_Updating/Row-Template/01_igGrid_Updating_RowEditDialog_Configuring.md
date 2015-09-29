@@ -1,7 +1,7 @@
 <!--
 |metadata|
 {
-    "fileName": "iggrid-updating-rowedittemplate-configuring",
+    "fileName": "iggrid-updating-dialog-configuring",
     "controlName": "igGrid",
     "tags": ["Editing","Grids","How Do I","Templating"]
 }
@@ -349,7 +349,7 @@ The following steps demonstrate how to configure a Row Edit Template in `igGrid`
 	        features.Paging().PageSize(30).Type(OpType.Local);
 	        features.Selection().Mode(SelectionMode.Row);
 	        features.Updating().EnableAddRow(false).EnableDeleteRow(true)                
-	            .EditMode(GridEditMode.RowEditTemplate)
+	            .EditMode(GridEditMode.Dialog)
                 RowEditDialogOptions(opt =>
             	{
                 	opt.Containment("owner");
@@ -384,7 +384,7 @@ The following steps demonstrate how to configure a Row Edit Template in `igGrid`
 	        {
 	            var ctx = new AdventureWorksDataContext(this.DataRepository.GetDataContext().Connection);
 	            var ds = ctx.ProductAllDatas.Take(40);      
-	            return View("RowEditTemplate", ds);
+	            return View("RowEditDialog", ds);
 	        }
 	```
 ​
