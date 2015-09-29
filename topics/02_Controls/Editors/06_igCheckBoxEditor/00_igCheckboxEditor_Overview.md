@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# igCheckBoxEditor Overview
+# igCheckboxEditor Overview
 
 The Ignite UI check box editor, or "`igCheckboxEditor`", is a control that renders a check box field, which permits users to make a binary choice between one or multiple mutually exclusive options and allows the user to submit the check box value to the server.
 
@@ -86,7 +86,7 @@ Press| To
 
 ## Specific properties
 
-In this section we are going to pay attention to some of specific options for the `igCheckBoxEditor` and how to use them. 
+In this section we are going to pay attention to some of specific options for the `igCheckboxEditor` and how to use them. 
 
 Lets start with the value option. The `value` option sets the value of the input that is going to be used, when the form is submitted. What is more if this option is not set then the check box editor  begins to behave as a binary control with two states - true and false, depending on the check state.
 
