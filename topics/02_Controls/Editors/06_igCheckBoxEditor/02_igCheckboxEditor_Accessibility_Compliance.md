@@ -8,4 +8,4 @@
 |metadata|
 -->
 
-# igCheckBoxEditor Accessibility Compliance
+# igCheckboxEditor Accessibility Compliance
