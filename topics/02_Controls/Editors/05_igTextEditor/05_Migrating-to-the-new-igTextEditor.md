@@ -79,7 +79,7 @@ addListItem|Used to add the object within item at the location indicated by the 
 addListItems|Used to add the objects within the items array at the location indicated by the index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 clearListItems|Removed all items from list.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 dropDownElement|Got reference to jquery object which is used as container of dropdown.|This method is renamed to `dropDownContainter` to better communicate what it does.
-dropDownVisible|Set visibility of dropdown list according to the Boolean value that is passed.|This method is replaced by [showDropDown:](#showDropDown) and [hideDropDown:](#hideDropDown).
+dropDownVisible|Set visibility of dropdown list according to the Boolean value that is passed.|Only gets visibility of dropdown list. There are new methods - [showDropDown:](#showDropDown) and [hideDropDown:](#hideDropDown), that replaces the previous functionality.
 findListItemIndex|Found index of list item by text that matches with the search parameters|
 getRegionalOption|Gets calculated value of regional option used by numeric and date editors.|This method in no longer available.
 getSelectedText|Used to get selected text in editor.|This method is removed as it doesn't make sense to have such a method in text editor.
