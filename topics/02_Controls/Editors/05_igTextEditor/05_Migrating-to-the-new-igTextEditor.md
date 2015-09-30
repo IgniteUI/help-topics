@@ -75,7 +75,6 @@ dropDownOrientation|<a name='dropDownOrientation'>Use to set drop down opening o
 
 Method| Previously| Now
 ---|---|---
-dropDownElement|Gets reference to jquery object which is used as container of drop-down. | This method is renamed to `dropDownContainer`
 addListItem|Used to add the object within item at the location indicated by the index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 addListItems|Used to add the objects within the items array at the location indicated by the index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 clearListItems|Removed all items from list.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
