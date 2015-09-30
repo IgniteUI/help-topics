@@ -42,6 +42,59 @@ Feature | Description
 ---|---
 [New Axis Intervals](#chart-axis-intervals) | The Major and Minor intervals feature of the `igDataChart` control allows you to apply intervals with the specified color and thickness to the x and y axes of the `igDataChart` control.
 
+### Editors
+
+Feature | Description
+---|---
+[New editors](#new-editors)| In 15.2, we are shipping a brand new editors that are more robust, feature rich and performant.
+
+### igGrid
+
+Feature | Description
+---|---
+[Refactored Updating](#grid-refactored-updating) | The refactored grid Updating feature takes advantage of the new editors and validation mechanisms and offers a re-designed dialog edit mode experience.
+Column Auto Sizing | Grid columns now support automatic resizing based on the width of cell content. To enable auto-sizing use the `*` as a value of a column's [`width`](%%jQueryApiUrl%%/ui.iggrid#options:columns.width) option.
+[Filtering Improvements](#grid-filtering-improvements) | You can now add a custom filter condition and choose the filtering conditions for a specific column.
+Improved KnockoutJS support | Responsive Vertical Column rendering is now supported with KnockoutJS.
+JavaScript-based Excel Grid Exporter (RTM) | JavaScript-based Excel Grid Exporter is now RTM and supports igGrid, igTreeGrid and igHierarchicalGrid.
+ARIA support | We now comply with the W3C WAI-ARIA specification to ensure our customers can provide their disabled users with satisfactory experience.
+
+### igHierarchicalGrid
+
+Feature | Description
+---|---
+JavaScript-based Excel Grid Exporter (RTM) | JavaScript-based Excel Grid Exporter is now RTM and supports igGrid, igTreeGrid and igHierarchicalGrid.
+ARIA support | We now comply with the W3C WAI-ARIA specification to ensure our customers can provide their disabled users with satisfactory experience.
+
+### igTreeGrid
+
+Feature | Description
+---|---
+[Row Selectors](#treegrid-row-selectors) | TreeGrid Row Selectors feature inherits the functionality from the igGrid Row Selectors feature and add additional tri-state mode.
+[Remote Sorting, Paging, Filtering and Load on Demand in the TreeGrid MVC Wrapper](#treegrid-remote-mvc-features) | All the standard sorting, paging, filtering and load on deamand functionalities now work out of the box within the MVC wrapper in a remote scenario.
+Column Moving | TreeGrid now features Column Moving feature which inherits from its igGrid counterpart.
+Resizing | TreeGrid now features Resizing feature which inherits from its igGrid counterpart.
+Keyboard Navigation | Keyboard navigation in TreeGrid is improved. 
+[Paging Context Row](#treegrid-paging-context-row) | Paging context row is added to communicate the context of a leaf level row.
+JavaScript-based Excel Grid Exporter (RTM) | JavaScript-based Excel Grid Exporter is now RTM and supports igGrid, igTreeGrid and igHierarchicalGrid.
+ARIA support | We now comply with the W3C WAI-ARIA specification to ensure our customers can provide their disabled users with satisfactory experience.
+
+### igNotifier
+Feature | Description
+---|---
+[New component](#notifier) | The Notifier component is an extension of the popover component, which specializes in providing the end user with notification information.
+
+### igValidator
+Feature | Description
+---|---
+[Refactored Validator](#validator) | The Validator validator is reworked to allow flexible validation on an array of Ignite UI components, as well as standard input form elements
+
+### igUpload
+
+Feature | Description
+---|---
+Sending additional data between the client and server during file uploading | You can now transmit data between client and server during the file uploading process.
+
 ##General
 
 ### <a id="igniteui-scafolder"></a> New Ignite UI Scaffolder for MVC
@@ -124,6 +177,7 @@ Last, but not least, the new updating functionality of the grid component has be
 -   [Migrating to the new Updating (igGrid)](iggrid-updating-migrating-to-the-new-updating.html)
 -   [Row Edit Dialog Overview (igGrid)](iggrid-updating-roweditdialog.html)
 -   [Configuring the Row Edit Dialog (igGrid)](iggrid-updating-roweditdialog-configuring.html)
+
 #### Related Samples
 -   [Row Edit Dialog](%%SamplesUrl%%/grid/row-edit-dialog)
 -   [Editing: Custom Editor Provider](%%SamplesUrl%%/grid/editing-custom-editor-provider)
@@ -163,6 +217,7 @@ Additionally when Paging feature is enabled in combination with Row Selectors an
  
 #### Related Topics
 -   [Row Selectors (igTreeGrid)](igtreegrid-row-selectors.html)
+
 #### Related Samples
 -   [Row Selectors](%%SamplesUrl%%/tree-grid/row-selectors)
 
@@ -173,6 +228,7 @@ You just need to decorate the action that handles the remote features with the `
  
 #### Related Topics
 -   [Remote Features (igTreeGrid)](igtreegrid-remote-features.html)
+
 #### Related Samples
 -   [Remote Features](%%SamplesUrl%%/tree-grid/remote-features)
 
@@ -180,6 +236,7 @@ You just need to decorate the action that handles the remote features with the `
 
 With large hierarchical data sets sometimes you might find yourself in trouble figuring out where you are in the hierarchy. We add a new paging context row to communicate the context of a leaf level row. This shows a trail representing the full path of the leaf through all ancestors. The available contexts are:
     - none - context row is not rendered.
+    - parent - renders a read-only representation of the immediate parent row.
     - breadcrumb - renders a read-only breadcrumb trail representing the full path through all ancestors.
 The functionality is controlled by the [`contextRowMode`](%%jQueryApiUrl%%ui.igtreegridpaging#options:contextRowMode) option.
 
@@ -187,6 +244,7 @@ The functionality is controlled by the [`contextRowMode`](%%jQueryApiUrl%%ui.igt
 
 #### Related Topics
 -   [Paging (igTreeGrid)](igtreegrid-paging.html)
+
 #### Related Samples
 -   [Paging](%%SamplesUrl%%/tree-grid/paging)
 
@@ -202,6 +260,7 @@ Whether used with an Ignite UI widget or on its own, the Notifier component prov
 
 #### Related Topics
 -   [igNotifier Overview](ignotifier-overview.html)
+
 #### Related Samples
 -   [Basic Usage](%%SamplesUrl%%/notifier/basic-usage)
 -   [Inline messages](%%SamplesUrl%%/notifier/inline-messages)
@@ -218,5 +277,6 @@ The refactored igValidator component allows flexible validation on an array of I
 #### Related Topics
 -   [igValidator Overview](igvalidator-overview.html)
 -   [Migrating to the new igValidator control](igvalidator-migration-topic.html)
+
 #### Related Samples
 -   [Basic Usage](%%SamplesUrl%%/validator/basic-usage)
