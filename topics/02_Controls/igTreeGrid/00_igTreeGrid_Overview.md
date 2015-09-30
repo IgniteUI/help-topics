@@ -314,10 +314,43 @@ The Filtering and Paging features are shown to include commented out option valu
 
 ## <a id="keyboard-navigation"></a> Keyboard navigation 
 
-For supported features, specific keyboard interactions available are also inherited. Navigation with the [Selection (igGrid)](igGrid-Selection-Overview.html#keyboard-interaction) actually funtions the same way as it would for the `igHierarchicalGrid` where if the currently selected active cell is the one containing the expand/collapse, `SPACE/ENTER` buttons this will also expand/collapse the child level of the row.
+### General
 
+Press|While| To
+---|---|---
+<kbd>Space key</kbd> / <kbd>Enter key</kbd>| Focus is on the expansion indicator cell.|Expand/Collapse the row.
+
+
+### With Row Selection
+
+Press|While| To
+---|---|---
+<kbd>Up arrow</kbd> or <kbd>Shift + Tab</kbd> | A row is selected.|Move to the row above.
+<kbd>Down arrow</kbd> or <kbd>Tab</kbd> | A row is selected.|Move to the row below.
+<kbd>Right arrow</kbd> | A row is selected.|Expand row.
+<kbd>Left arrow</kbd> | A row is selected.|Collapse row.
+<kbd>Home</kbd> or <kbd>Ctrl+Home</kbd> | A row is selected.|Collapse row.
+<kbd>End</kbd> or <kbd>Ctrl+End</kbd> | A row is selected.|Move to bottom row.
+<kbd>Right arrow</kbd> | An expanded or leaf row is selected.|Scroll left.
+<kbd>Left arrow</kbd> | An expanded or leaf row is selected.|Scroll left.
+
+### With Cell Selection
+
+Press|While| To
+---|---|---
+<kbd>Up arrow</kbd>| A cell is selected.|Move to the cell above.
+<kbd>Down arrow</kbd>| A cell is selected.|Move to the cell below.
+<kbd>Right arrow</kbd>| A cell is selected.|Move to the cell on the right.
+<kbd>Left arrow</kbd>| A cell is selected.|Move to the cell on the left.
+<kbd>Alt + Down arrow</kbd> or <kbd>Enter</kbd>| The expansion indicator cell is selected.|Expand row.
+<kbd>Alt + Up arrow</kbd> or <kbd>Enter</kbd>| The expansion indicator cell is selected.|Collapse  row.
+<kbd>Home</kbd>| A cell is selected.|Move to leftmost cell in the row.
+<kbd>End</kbd>| A cell is selected.|Move to rightmost cell in the row.
+<kbd>Ctrl+Home</kbd>| A cell is selected.|Move to top left cell in the grid.
+<kbd>Ctrl+End</kbd>| A cell is selected.|Move to bottom right cell in the grid.
 
 ## <a id="related-content"></a> Related Content
+
 
 ### <a id="topics"></a> Topics
 -   [Features Overview (igTreeGrid)](igTreeGrid-Features-Overview.html): This topic covers the basics around the modular features available for the `igTreeGrid` control.
