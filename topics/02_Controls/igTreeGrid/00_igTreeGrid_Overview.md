@@ -342,8 +342,8 @@ Press|While| To
 <kbd>Down arrow</kbd>| A cell is selected.|Move to the cell below.
 <kbd>Right arrow</kbd>| A cell is selected.|Move to the cell on the right.
 <kbd>Left arrow</kbd>| A cell is selected.|Move to the cell on the left.
-<kbd>Alt + Down arrow</kbd> or <kbd>Enter</kbd>| The expansion indicator cell is selected.|Expand row.
-<kbd>Alt + Up arrow</kbd> or <kbd>Enter</kbd>| The expansion indicator cell is selected.|Collapse  row.
+<kbd>Alt + Down arrow</kbd> or <kbd>Enter key</kbd>| The expansion indicator cell is selected.|Expand row.
+<kbd>Alt + Up arrow</kbd> or <kbd>Enter key</kbd>| The expansion indicator cell is selected.|Collapse  row.
 <kbd>Home</kbd>| A cell is selected.|Move to leftmost cell in the row.
 <kbd>End</kbd>| A cell is selected.|Move to rightmost cell in the row.
 <kbd>Ctrl+Home</kbd>| A cell is selected.|Move to top left cell in the grid.
