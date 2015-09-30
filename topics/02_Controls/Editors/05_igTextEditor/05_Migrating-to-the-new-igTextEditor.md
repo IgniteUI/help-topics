@@ -75,15 +75,15 @@ dropDownOrientation|<a name='dropDownOrientation'>Use to set drop down opening o
 
 Method| Previously| Now
 ---|---|---
+dropDownElement|Gets reference to jquery object which is used as container of drop-down. | This method is renamed to `dropDownContainer`
 addListItem|Used to add the object within item at the location indicated by the index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 addListItems|Used to add the objects within the items array at the location indicated by the index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 clearListItems|Removed all items from list.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 dropDownElement|Got reference to jquery object which is used as container of dropdown.|This method is renamed to `dropDownContainter` to better communicate what it does.
 dropDownVisible|Set visibility of dropdown list according to the Boolean value that is passed.|Only gets visibility of dropdown list. There are new methods - [showDropDown](#showDropDown) and [hideDropDown](#hideDropDown), that replaces the previous functionality.
-findListItemIndex|Found index of list item by text that matches with the search parameters|
+findListItemIndex|Found index of list item by text that matches with the search parameters.|Now there are only two parameters which are the `text` to search for and a `matchType` of the following types: `startsWith`, `endsWith`, `exact` or the default, which searches if the `text` is part of any list item.
 getRegionalOption|Gets calculated value of regional option used by numeric and date editors.|This method in no longer available.
-getSelectedText|Used to get selected text in editor.|This method is removed as it doesn't make sense to have such a method in text editor.
-getSelection|Used to get left or right edge of selection.|This method is removed as it doesn't make sense to have such a method in numeric editor.
+getSelection|Used to get left or right edge of selection.|This method is replaced by the methods `getSelectionStart` and `getSelectionEnd`.
 getValueByMode|Used to get value in editor by dataMode.|This method is not supported.
 hasInvalidMessage|Used to check if invalid message is displayed.|This method is removed as its` functionality is covered by the API for the igEditorNotifier.
 mainElement|Used to get reference to jquery object which is used as top/outer element of igTextEditor.|This method is renamed to `editorContainter` to better communicate what it does.
@@ -93,7 +93,7 @@ removeListItem|Used to remove item from list.|This method is removed. You should
 removeListItemAt|Used to remove item from list at index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 select|Used to select text in editor. Valid parameters: `sel0`, `sel1`, `val`|`sel0` is renamed to `start` and `sel1` is renamed to `end` to prevent exchanging the two parameters. 
 setFocus|Used to set focus to editor with delay.  If parameter was -1, then focus was set without delay.|It now supports only positive values for the delay and 0 is default that signifies that it is immediately given the focus.
-spin|Used to increment (positive delta) or decrement (negative delta) value in editor according to the parameter.|This method is replaced by two new methods: `spinUp` and `spinDown`. This method works only on the value and not with the dropdown navigation. For the latter you should use [selectListIndexUp](#selectListIndexUp) or [selectListIndexDown](#selectListIndexDown) method.
+spin|Used to increment (positive delta) or decrement (negative delta) value in editor according to the parameter.|This method is replaced by two new methods: `spinUp` and `spinDown`. If editor has listItems, then those methods increment or decrement active index in the list, without setting the vew value.
 text|Used to get or set text in editor.|This is replaced by a getter method `displayValue` that takes no parameters and returns a string with all the characters shown in the input.
 validate|Used to trigger validation of editor and show error message. It had a single parameter: `noLabel`|The parameter is renamed to `skipErrorMessage`.
 value|Used to get or set value in editor.|The parameter is renamed to `newValue` to better communicate what it does.
@@ -103,17 +103,22 @@ value|Used to get or set value in editor.|The parameter is renamed to `newValue`
 
 Method|Description
 ---|---
-dropDownContainer|Gets reference to jquery object which is used as container of drop-down.
+inputName|Gets sets name attribute applied to the editor element
+editorContainer|Gets reference to jquery object which is used as top/outer element of igEditor.
 field|Gets the visual editor element.
+dropDownContainer|Gets reference to jquery object which is used as container of drop-down.
 showDropDown|<a name='showDropDown'></a>Show the dropdown list.
 hideDropDown|<a name='hideDropDown'></a>Hide the dropdown list.
+dropDownVisible|Returns the visibility state of the drop down listing the items.
+dropDownButton|Returns a reference to the dropdown button of the editor.
 selectListIndexUp|<a name='selectListIndexUp'></a>Moves the selection index to the item that appears above the current one in the list.
 selectListIndexDown|<a name='selectListIndexDown'></a>Moves the selection index to the item that appears above the current one in the list.
 clearButton|Returns a reference to the clear button of the editor.
-dropDownButton|Returns a reference to the dropdown button of the editor.
+getSelectionStart|Gets start index of the selected text in editor.
+getSelectionEnd|Gets end index of the selected text in editor.
+insert|Paste text at location of caret.
 spinUpButton|Returns a reference to the spin up button of the editor.
 spinDownButton|Returns a reference to the spin down button of the editor.
-dropDownVisible|Returns the visibility state of the drop down listing the items.
 
 [See all API methods](%%jQueryApiUrl%%/ui.igtexteditor#methods)
 
