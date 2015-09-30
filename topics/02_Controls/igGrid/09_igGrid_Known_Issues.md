@@ -53,6 +53,7 @@ Events not triggered | By design, events only trigger on user interaction. Event
 The id attribute is mandatory for the DOM control placeholder|The id attribute should be set on the DOM element on which the grid is initialized. Grid use jQuery ID selector internally for faster selection.|![](../../images/images/negative.png)
 Column keys which contain spaces are not supported|Column keys are used for generating some DOM elements IDs. Having spaces in an HTML id attribute is not allowed according to the [HTML 5 specification](http://www.w3.org/TR/html5/dom.html#the-id-attribute).|![](../../images/images/negative.png)
 The contextMenu event is renamed to cellRightClick|The event is renamed to be more self-explanatory.|![](../../images/images/negative.png)
+Header text and  sorting/filtering/gear icons are misaligned in IE8  | This is a browser limitation due to IE8 not supporting css calc(). For details refer to: http://caniuse.com/#feat=calc| ![](../images/images/negative.png)
 
 ## [igGrid – Data Binding](#data-binding)
 
@@ -309,7 +310,6 @@ Selecting not working correctly in IE 9 | In Internet Explorer 9, selecting usin
 Issue | Description | Status
 ------|-------------|-------
 [Cell selection in iOS does not work properly](#selection-cell-ios) | In iOS, when wanting to scroll the `igGrid`, the user should first tap on a cell and then swipe in the desired direction. There is a difference when scrolling the `igGrid` under iOS and Android due to the way jQuery Mobile handles the events. | ![](../../images/images/negative.png)
-Selection works only with visible rows when virtualization is enabled | This limitation is due to the fact that invisible rows/cells do not exist in the DOM tree when virtualization is enabled. | ![](../../images/images/negative.png)
 [Incorrect selection when selecting row/cell with continuous virtualization enabled](#selection-continuous-virtualization) | When selecting row/cell of the `igGrid` while continuous virtualization is enabled, the grid scrolls down and a different row/cell is selected due to a bug in jQuery version 1.6.4. This problem appears only in this version of the jQuery library. | ![](../../images/images/positive.png)
 Incorrect cell selection when selecting with mouse dragging and persistence is enabled|Selecting with mouse dragging when persistence is enabled and there are rows which cells are duplicated (the rows are visually the same) will select only the cells from the first row.|![](../../images/images/positive.png)
 
