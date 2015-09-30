@@ -104,6 +104,7 @@ value|Used to get or set value in editor.|The parameter is renamed to `newValue`
 Method|Description
 ---|---
 inputName|Gets sets name attribute applied to the editor element
+displayValue|Returns a string with all the characters shown in the input.
 editorContainer|Gets reference to jquery object which is used as top/outer element of igEditor.
 field|Gets the visual editor element.
 dropDownContainer|Gets reference to jquery object which is used as container of drop-down.
@@ -117,6 +118,8 @@ clearButton|Returns a reference to the clear button of the editor.
 getSelectionStart|Gets start index of the selected text in editor.
 getSelectionEnd|Gets end index of the selected text in editor.
 insert|Paste text at location of caret.
+spinUp|If editor has listItems, then this method increments the active index in the list, without setting the vew value.
+spinDown|If editor has listItems, then this method decrements the active index in the list, without setting the vew value.
 spinUpButton|Returns a reference to the spin up button of the editor.
 spinDownButton|Returns a reference to the spin down button of the editor.
 
