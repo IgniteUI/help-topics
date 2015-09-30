@@ -329,10 +329,10 @@ Press|While| To
 <kbd>Down arrow</kbd> or <kbd>Tab</kbd> | A row is selected.|Move to the row below.
 <kbd>Right arrow</kbd> | A row is selected.|Expand row.
 <kbd>Left arrow</kbd> | A row is selected.|Collapse row.
-<kbd>Home</kbd> or <kbd>Ctrl+Home</kbd> | A row is selected.|Collapse row.
+<kbd>Home</kbd> or <kbd>Ctrl+Home</kbd> | A row is selected.|Move to top row.
 <kbd>End</kbd> or <kbd>Ctrl+End</kbd> | A row is selected.|Move to bottom row.
 <kbd>Right arrow</kbd> | An expanded or leaf row is selected.|Scroll left.
-<kbd>Left arrow</kbd> | An expanded or leaf row is selected.|Scroll left.
+<kbd>Left arrow</kbd> | An expanded or leaf row is selected.|Scroll right.
 
 ### With Cell Selection
 
