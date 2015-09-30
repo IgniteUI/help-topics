@@ -89,7 +89,7 @@ removeListItem|Used to remove item from list.|This method is removed. You should
 removeListItemAt|Used to remove item from list at index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 select|Used to select text in editor. Valid parameters: `sel0`, `sel1`, `val`|`sel0` is renamed to `start` and `sel1` is renamed to `end` to prevent exchanging the two parameters. 
 setFocus|Used to set focus to editor with delay.  If parameter was -1, then focus was set without delay.|It now supports only positive values for the delay and 0 is default that signifies that it is immediately given the focus.
-spin|Used to increment (positive delta) or decrement (negative delta) value in editor according to the parameter.|This method is replaced by two new methods: `spinUp` and `spinDown`. This method works only on the value and not with the dropdown navigation. For the latter you should use [selectListIndexUp:](#selectListIndexUp) or [selectListIndexDown:](#selectListIndexDown) method.
+spin|Used to increment (positive delta) or decrement (negative delta) value in editor according to the parameter.|This method is replaced by two new methods: `spinUp` and `spinDown`. This method works only on the value and not with the dropdown navigation. For the latter you should use [selectListIndexUp](#selectListIndexUp) or [selectListIndexDown](#selectListIndexDown) method.
 text|Used to get or set text in editor.|This is replaced by a getter method `displayValue` that takes no parameters and returns a string with all the characters shown in the input.
 validate|Used to trigger validation of editor and show error message. It had a single parameter: `noLabel`|The parameter is renamed to `skipErrorMessage`.
 value|Used to get or set value in editor.|The parameter is renamed to `newValue` to better communicate what it does. Note that depending on the `dataMode` it will return `text`, `date` or `editModeText`.
@@ -104,11 +104,11 @@ showDropDown|<a name='showDropDown'></a>Show the dropdown list.
 hideDropDown|<a name='hideDropDown'></a>Hide the dropdown list.
 selectListIndexUp|<a name='selectListIndexUp'></a>Moves the selection index to the item that appears above the current one in the list.
 selectListIndexDown|<a name='selectListIndexDown'></a>Moves the selection index to the item that appears above the current one in the list.
-clearButton|Returns a reference to the clear button of the editor.
-dropDownButton|Returns a reference to the dropdown button of the editor.
-spinUpButton|Returns a reference to the spin up button of the editor.
-spinDownButton|Returns a reference to the spin down button of the editor.
-dropDownVisible|Returns the visibility state of the drop down listing the items.
+clearButton|<a name='clearButton'></a>Returns a reference to the clear button of the editor.
+dropDownButton|<a name='dropDownButton'></a>Returns a reference to the dropdown button of the editor.
+spinUpButton|<a name='spinUpButton'></a>Returns a reference to the spin up button of the editor.
+spinDownButton|<a name='spinDownButton'></a>Returns a reference to the spin down button of the editor.
+dropDownVisible|<a name='dropDownVisible'></a>Returns the visibility state of the drop down listing the items.
 
 
 [See all API methods](%%jQueryApiUrl%%/ui.igdatepicker#methods)
@@ -129,12 +129,13 @@ mouseleave|Event is renamed to `mouseout` to better communicate what it does.
 
 Event|Description
 ---|---
-rendering|<a name='dropDownListOpening'></a>Event which is raised before rendering of the editor completes.
+rendering|<a name='rendering'></a>Event which is raised before rendering of the editor completes.
 rendered|<a name='rendered'></a>Event which is raised after rendering of the editor completes.
 dropDownListOpening|<a name='dropDownListOpening'></a>Event which is raised when the drop down is opening.
 dropDownListOpened|<a name='dropDownListOpened'></a>Event which is raised when the drop down is already opened.
 dropDownListClosing|<a name='dropDownListClosing'></a>Event which is raised when the drop down is closing.
 dropDownListClosed|<a name='dropDownListClosed'></a>Event which is raised when the drop down is already closed.
+mouseout|<a name='mouseout'>Event which is raised on mouseleave at any part of editor including drop-down list.
 
 [See all events](%%jQueryApiUrl%%/ui.igdatepicker#events)
 
