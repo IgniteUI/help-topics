@@ -75,6 +75,7 @@ preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability o
 dropDownOrientation|<a name='dropDownOrientation'></a>Use to set drop down opening orientation for the dorp down list when open button is clicked: `$('#percentEditor').igPercentEditor({ listItems: ["A", "B", "C", "D"], dropDownOrientation: 'top' }] })`.
 suppressNotifications|<a name='suppressNotifications'></a>Disables default notifications for basic validation scenarios built in the editors such as required list selection, value wrapping around or spin limits.
 
+>**Note:** If you want to set the option 'decimalSeparator', it must differ from the regional option for 'gropupSeparator'.
 
 [See all options](%%jQueryApiUrl%%/ui.igpercenteditor#options)
 
