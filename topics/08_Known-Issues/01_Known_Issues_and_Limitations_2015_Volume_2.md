@@ -1,20 +1,20 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "known-issues-and-limitations-2015-volume-1",
+    "fileName": "known-issues-and-limitations-2015-volume-2",
     "controlName": "",
     "tags": ["Breaking Changes","Known Issues"]
 }
 |metadata|
 -->
 
-# Known Issues and Limitations in 2015 Volume 1
+# Known Issues and Limitations in 2015 Volume 2
 
 ## Topic Overview
 
 ### Purpose
 
-This summarizes the known issues and limitations of the Ignite UI™ 2015 Volume 1 release. Information about previous releases can be found [here](Known-Issues-Revision-History.html).
+This summarizes the known issues and limitations of the Ignite UI™ 2015 Volume 2 release. Information about previous releases can be found [here](Known-Issues-Revision-History.html).
 
 ### In this topic
 
@@ -73,7 +73,7 @@ This topic contains the following sections:
 
 ## <a id="summary"></a> Known Issues and Limitations Summary
 
-The following table summarizes the known issues and limitations of the Ignite UI 2015 Volume 1 release. Detailed explanations of known issues and the possible workarounds are provided in the known issues topics for each control.
+The following table summarizes the known issues and limitations of the Ignite UI 2015 Volume 2 release. Detailed explanations of known issues and the possible workarounds are provided in the known issues topics for each control.
 <a id="legend"></a>
 
 Legend | 
@@ -1178,8 +1178,7 @@ Go up to [Known Issues and Limitations Summary](#summary)
 
 Issue | Description | Status
 ---|---|---
-Saving exported file does not work in IE9 and earlier | GridExcelExporter uses a Blob object to keep the raw data of the exported worksheet, which is not supported in IE9 and earlier: https://developer.mozilla.org/en-US/docs/Web/API/Blob | ![](../images/images/negative.png)
-Only part of the data is exported in Append Rows on Demand or remote paging scenarios | The GridExcelExporter is entirely a client-side component and thus it deals only with data currently available on the client. In scenarios implementing Remote Paging and Append Rows on Demand when further sets of data are fetched through additional requests, this data is not exported. |
+igGridExcelExporter does not work in Microsoft Internet Explorer 8 | The issue is that 'export' is a reserved word and thus Internet Explorer 8 is not allowing its use. This will be fixed for the upcoming volume release 15.2 | ![](../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
