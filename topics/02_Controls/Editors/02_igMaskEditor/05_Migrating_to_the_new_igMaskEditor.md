@@ -51,7 +51,7 @@ nullText|Used to set text which appears in editor when editor has no focus and "
 renderInContainer|Sets gets option to wrap input field into SPAN.|This option is removed.
 required|Set gets validation for empty value in editor.|This options is removed. You can use the validator options to set the field as required.
 selectionOnFocus|Previously supported members: `select`, `-1`, `start`, `0`, `end`, `1`, `default`, `2`.|Now supported members are: `selectAll`, `atStart`, `atEnd`, `browserDefault`. The default value is `selectAll`.
-spinOnReadOnly|This was used to override the "readOnly" option and allow changing "value" of editor on spin events. |This option is removed. Setting `readOnly` to `true` disables the spin buttons.
+spinOnReadOnly|This was used to override the "readOnly" option and allow changing "value" of editor on spin events. |This option is no longer available for the mask editor.
 textAlign|Default was `null`|Now default is `left`.
 theme|Sets gets selector for css classes used by editor.|This option is removed.
 type|Sets type of editor.|This option is removed. You can use the corresponding controls.
@@ -66,9 +66,9 @@ Option| Description
 unfilledCharsPrompt|<a name='unfilledCharsPrompt'></a>Sets gets character which is used as prompt in edit mode for available entry position.
 allowNullValue|<a name='allowNullValue'></a>If that option is false, and editor has no value, then value is set to an empty string.
 disabled|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#maskEditor').igMaskEditor({ disabled: true }] })`.
-buttonType|<a name='buttonType'></a>Sets gets visibility of spin, clear and drop-down button.
+buttonType|<a name='buttonType'></a>Sets gets clear button.
 placeHolder|<a name='placeHolder'></a>Gets sets text which appears in editor when editor has no focus and "value" in editor is null or empty string.
-revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key. If set to false clear is called: `$('#maskEditor').igMaskEditor({ listItems: ["A", "B", "C", "D"], isLimitedToListValues: true, revertIfNotValid: false }] })`.
+revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key.
 preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#maskEditor').igMaskEditor({ preventSubmitOnEnter: true }] })`.
 suppressNotifications|<a name='suppressNotifications'></a>Disables default notifications for basic validation scenarios built in the editors such as required list selection, value wrapping around or spin limits.
 
