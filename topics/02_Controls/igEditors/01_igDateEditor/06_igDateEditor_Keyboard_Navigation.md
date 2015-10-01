@@ -18,7 +18,7 @@ This topic explains how to use keyboard navigation so that end-users can easily 
 This topic contains the following sections:
 
 -   [Keyboard interactions](#skbInteraction)
--   [Selecting the editor](#skbInteraction)
+-   [Selecting the editor](#kbInteraction)
 -   [igDateEditor specific navigation](#ddInteraction)
 
 
