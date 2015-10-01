@@ -104,8 +104,6 @@ setFocus|Used to set focus to editor with delay.  If parameter was -1, then focu
 spin|Used to increment (positive delta) or decrement (negative delta) value in editor according to the parameter.|This method is replaced by two new methods: `spinUp` and `spinDown`. This method works only on the value and not with the dropdown navigation. For the latter you should use [selectListIndexUp](#selectListIndexUp) or [selectListIndexDown](#selectListIndexDown) method.
 spinDelta|Previous default value was 1.|Default value is 0.01.
 text|Used to get or set text in editor.|This is replaced by a getter method `displayValue` that takes no parameters and returns a string with all the characters shown in the input.
-validate|Used to trigger validation of editor and show error message. It had a single parameter: `noLabel`|The parameter is renamed to `skipErrorMessage`.
-value|Used to get or set value in editor.|The parameter is renamed to `newValue` to better communicate what it does.
 
 <a name='new_methods'></a>
 ### New API Methods
