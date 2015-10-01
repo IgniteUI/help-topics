@@ -49,7 +49,7 @@ The `igMaskEditor` includes the following characteristics:
     @using Infragistics.Web.Mvc;
     <link type="text/css" href="@Url.Content("~/css/themes/infragistics/infragistics.theme.css")" rel="stylesheet" />
     <link type="text/css" href="@Url.Content("~/css/structure/infragistics.css")" rel="stylesheet" />
-    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.9.1.min.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-ui.min.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Scripts/Samples/infragistics.core.js")"></script>
 	<script type="text/javascript" src="@Url.Content("~/Scripts/Samples/infragistics.lob.js")"></script>
