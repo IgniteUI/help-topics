@@ -115,8 +115,8 @@ clearButton|<a name='clearButton'></a>Returns a reference to the clear button of
 getSelectionStart|<a name='getSelectionStart'></a>Gets start index of the selected text in editor.
 getSelectionEnd|<a name='getSelectionEnd'></a>Gets end index of the selected text in editor.
 insert|<a name='insert'></a>Paste text at location of caret.
-spinUp|<a name='spinUp'></a>If editor has listItems, then this method increments the active index in the list, without setting the vew value.
-spinDown|<a name='spinDown'></a>If editor has listItems, then this method decrements the active index in the list, without setting the vew value.
+spinUp|<a name='spinUp'></a>Increase date-time period, depending on the cursor position.
+spinDown|<a name='spinDown'></a>Decrease date-time period, depending on the cursor position.
 spinUpButton|<a name='spinUpButton'></a>Returns a reference to the spin up button of the editor.
 spinDownButton|<a name='spinDownButton'></a>Returns a reference to the spin down button of the editor.
 
