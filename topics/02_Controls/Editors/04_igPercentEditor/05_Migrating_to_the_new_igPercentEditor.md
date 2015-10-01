@@ -34,6 +34,7 @@ Option| Previously| Now
 animationHideDuration animationShowDuration|Used to set animation duration when dropdown list is displayed/hidden.|These options are replaced by new option `dropDownAnimationDuration` that controls the dropdown list animation duration.
 button|This option was used to set visibility of spin and dropdown button.|This option is renamed to `buttonType` to better communicate what it does.
 display|Sets gets style.display for outer html element.|This option is removed.
+displayFactor|Possible values: 1, 10, 100, 1000, 10000, 100000, etc.|Possible values: 1, 100 as other options are out of scope for the percent editor. Default value is 100.
 dropDownOnReadOnly|This option was used to set ability to override the "readOnly" option and allow showing the dropdown list and changing the value in the editor from a list.|This option is removed. If `readOnly` is set to `true` the dropdown list cannot be displayed.
 dropDownTriggers|Sets gets list of actions which trigger display of drop-down list or calendar.|This option is removed. Now `Alt` + `down-arrow` shows dropdown.
 focusOnSpin|If that option was disabled and the editor was not focused, then a mouse click on the spin button would keep the text in the editor in not focused format and perform spin actions.|This option is removed. Now if the editor is not focused, then a mouse click on the spin button will not focus the editor.
@@ -42,6 +43,7 @@ hideEnterKey|Sets gets ability to hide the Enter key from browser.|This option i
 listColumns|Sets gets number of columns in drop-down list.|This option is removed.
 listDropDownAsChild |Value `true` created html element for list as a child of main html element. Value `false` created list as a child of body.|Renamed to `dropDownAttachedToBody`. Value `true` creates list as a child of body. Value `false` will create html element for list as a child of main html element.
 listMaxHeight|Used to set maximum height of dropdown list in pixels.|This option is removed. You can use the new option [visibleItemsCount](#visibleItemsCount) to set the number of visible list items.
+negativeSign|Used to set the character, which is used for negative numeric values.|Only valid cultural signs are allowed for this option.
 nullText|Used to set text which appears in editor when editor has no focus and "value" in editor is null or empty string.|This option is renamed to `placeHolder` to better communicate what it does.
 renderInContainer|Sets gets option to wrap input field into SPAN.|This option is removed.
 required|Set gets validation for empty value in editor.|This options is removed. You can use the validator options to set the field as required.
@@ -99,6 +101,7 @@ removeListItemAt|Used to remove item from list at index.|This method is removed.
 select|Used to select text in editor. Valid parameters: `sel0`, `sel1`, `val`|`sel0` is renamed to `start` and `sel1` is renamed to `end` to prevent exchanging the two parameters. 
 setFocus|Used to set focus to editor with delay.  If parameter was -1, then focus was set without delay.|It now supports only positive values for the delay and 0 is default that signifies that it is immediately given the focus.
 spin|Used to increment (positive delta) or decrement (negative delta) value in editor according to the parameter.|This method is replaced by two new methods: `spinUp` and `spinDown`. This method works only on the value and not with the dropdown navigation. For the latter you should use [selectListIndexUp](#selectListIndexUp) or [selectListIndexDown](#selectListIndexDown) method.
+spinDelta|Previous default value was 1.|Default value is 0.01.
 text|Used to get or set text in editor.|This is replaced by a getter method `displayValue` that takes no parameters and returns a string with all the characters shown in the input.
 validate|Used to trigger validation of editor and show error message. It had a single parameter: `noLabel`|The parameter is renamed to `skipErrorMessage`.
 value|Used to get or set value in editor.|The parameter is renamed to `newValue` to better communicate what it does.
