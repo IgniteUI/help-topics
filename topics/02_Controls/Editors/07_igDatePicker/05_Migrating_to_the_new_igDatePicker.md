@@ -58,15 +58,21 @@ type|Sets type of editor.|This option is removed. You can use the corresponding 
 <a name='new_options'></a>
 ### New options
 
-Option| Description
 ---|---
 limitSpinToCurrentField|<a name='limitSpinToCurrentField'></a>Sets gets ability to modify only 1 date field on spin events.
 allowNullValue|<a name='allowNullValue'></a>If that option is false, and editor has no value, then value is set to an empty string.
-disabled|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#datePicker').igDatePicker({ disabled: true }] })`.
+allowNullValue|<a name='allowNullValue'></a>If that option is false, and editor has no value, then value is set to an empty string.
+disabled|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#textEditor').igTextEditor({ disabled: true }] })`.
 buttonType|<a name='buttonType'></a>Sets gets visibility of spin, clear and drop-down button.
+listItemHoverDuration|<a name='listItemHoverDuration'></a>Use to set the hover/unhover animation duration of items inside the dropdown list: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], listItemHoverDuration: 400 }] })`.
+dropDownAttachedToBody|<a name='dropDownAttachedToBody'></a>Gets sets location of drop-down list.
+dropDownAnimationDuration|<a name='dropDownAnimationDuration'></a>Gets sets show/hide drop-down list animation duration in milliseconds.
+visibleItemsCount|<a name='visibleItemsCount'></a>Use to set how many items should be shown at once: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], visibleItemsCount: 2 }] })`.
+isLimitedToListValues|<a name='isLimitedToListValues'></a>Use to set the ability to allow values only set into the list items. This validation is done only when the editor is blured, or enter key is pressed: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], isLimitedToListValues: true }] })`.
 placeHolder|<a name='placeHolder'></a>Gets sets text which appears in editor when editor has no focus and "value" in editor is null or empty string.
-revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key.
-preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#datePicker').igDatePicker({ preventSubmitOnEnter: true }] })`.
+revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key. If set to false clear is called: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], isLimitedToListValues: true, revertIfNotValid: false }] })`.
+preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#textEditor').igTextEditor({ preventSubmitOnEnter: true }] })`.
+dropDownOrientation|<a name='dropDownOrientation'></a>Use to set drop down opening orientation for the dorp down list when open button is clicked: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], dropDownOrientation: 'top' }] })`.
 suppressNotifications|<a name='suppressNotifications'></a>Disables default notifications for basic validation scenarios built in the editors such as required list selection, value wrapping around or spin limits.
 
 [See all options](%%jQueryApiUrl%%/ui.igdatepicker#options)
@@ -105,7 +111,7 @@ Method|Description
 ---|---
 getSelectedDate|Gets selected date.
 selectDate|Sets selected date.
-getCalendar|<a name='dropDownContainer'></a>Returns a reference to the jQuery calendar used as a picker selector.
+getCalendar|<a name='getCalendar'></a>Returns a reference to the jQuery calendar used as a picker selector.
 inputName|<a name='inputName'></a>Gets sets name attribute applied to the editor element
 displayValue|<a name='displayValue'></a>Returns a string with all the characters shown in the input.
 editorContainer|<a name='editorContainer'></a>Gets reference to jquery object which is used as top/outer element of igEditor.
