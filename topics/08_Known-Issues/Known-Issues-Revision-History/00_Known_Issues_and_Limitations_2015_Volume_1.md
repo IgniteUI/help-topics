@@ -912,7 +912,6 @@ Issue | Description | Status
 ---|---|---
 Fixed headers always enabled (limitation) | When virtualization is enabled, there is a limitation in the form of the [fixedHeaders](%%jQueryApiUrl%%/ui.iggrid#options:fixedHeaders) option being unchangeable and always set to true. | ![](../images/images/negative.png)
 Grid height settings limitation | The height of the igGrid must always be exactly divisible by the average row height. (The remainder of the division must be 0.) | ![](../images/images/negative.png)
-Rows’ height settings limitation | In an igGrid with only a few data rows, all igGrid rows receive expanded height. This is because the sum of the rows’ heights has to match the grid’s height. | ![](../images/images/negative.png)
 Columns visible width settings limitation | The columns visible width must be equal to the igGrid’s width (for horizontal virtualization) | ![](../images/images/negative.png)
 Keyboard navigation not supported for horizontal virtualization (limitation) | Keyboard navigation is not supported for horizontal virtualization. | ![](../images/images/negative.png)
 Limitation to applying cell classes | Applying a specific cell class to every cell that is in a sorted column is not supported, i.e. [applySortedColumnCss](%%jQueryApiUrl%%/ui.iggridsorting#options:applySortedColumnCss) is automatically set to false. | ![](../images/images/negative.png)
