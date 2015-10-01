@@ -130,8 +130,6 @@ spinUpButton|<a name='spinUpButton'></a>Returns a reference to the spin up butto
 spinDownButton|<a name='spinDownButton'></a>Returns a reference to the spin down button of the editor.
 spinDownButton|<a name='spinDownButton'></a>Returns a reference to the spin down button of the editor.
 
->**Note:** One of the major changed in the new date editor is that it no longer supports Lists and DropDown. Note that if you try to use methods connected to dropdown and list, you will receive a notification pointing out that they are no longer available. 
-
 [See all API methods](%%jQueryApiUrl%%/ui.igdatepicker#methods)
 
 <a name='event_changes'></a>
