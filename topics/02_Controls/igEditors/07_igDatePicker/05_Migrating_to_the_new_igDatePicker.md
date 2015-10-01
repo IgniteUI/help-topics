@@ -65,7 +65,6 @@ limitSpinToCurrentField|<a name='limitSpinToCurrentField'></a>Sets gets ability 
 allowNullValue|<a name='allowNullValue'></a>If that option is false, and editor has no value, then value is set to an empty string.
 disabled|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#datePicker').igDatePicker({ disabled: true }] })`.
 buttonType|<a name='buttonType'></a>Sets gets visibility of spin, clear and drop-down button.
-listItemHoverDuration|<a name='listItemHoverDuration'></a>Use to set the hover/unhover animation duration of items inside the dropdown list: `$('#datePicker').igDatePicker({ listItems: ["A", "B", "C", "D"], listItemHoverDuration: 400 }] })`.
 dropDownAttachedToBody|<a name='dropDownAttachedToBody'></a>Gets sets location of drop-down list.
 dropDownAnimationDuration|<a name='dropDownAnimationDuration'></a>Gets sets show/hide drop-down list animation duration in milliseconds.
 visibleItemsCount|<a name='visibleItemsCount'></a>Use to set how many items should be shown at once: `$('#datePicker').igDatePicker({ listItems: ["A", "B", "C", "D"], visibleItemsCount: 2 }] })`.
