@@ -63,6 +63,7 @@ type|Sets type of editor.|This option is removed. You can use the corresponding 
 
 Option| Description
 ---|---
+limitSpinToCurrentField|<a name='limitSpinToCurrentField'></a>Sets gets ability to modify only 1 date field on spin events.
 allowNullValue|<a name='allowNullValue'></a>If that option is false, and editor has no value, then value is set to an empty string.
 disabled|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#dateEditor').igDateEditor({ disabled: true }] })`.
 buttonType|<a name='buttonType'></a>Sets gets visibility of spin, clear and drop-down button.
