@@ -39,7 +39,7 @@ addListItems|Used to add the objects within the items array at the location indi
 clearListItems|Removed all items from list.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 dropDownElement|Got reference to jquery object which is used as container of dropdown.|This method is renamed to `getCalandar` to better communicate what it does.
 dropDownVisible|Set visibility of dropdown list according to the Boolean value that is passed.|Only gets visibility of dropdown list. There are new methods - [showDropDown](#showDropDown) and [hideDropDown](#hideDropDown), that replaces the previous functionality.
-findListItemIndex|Found index of list item by text that matches with the search parameters.|Now there are only two parameters which are the `text` to search for and a `matchType` of the following types: `startsWith`, `endsWith`, `exact` or the default, which searches if the `text` is part of any list item.
+findListItemIndex|Found index of list item by text that matches with the search parameters.|This option is no longer available for the mask editor.
 getRegionalOption|Gets calculated value of regional option used by numeric and date editors.|This method in no longer available.
 getSelection|Used to get left or right edge of selection.|This method is replaced by the methods `getSelectionStart` and `getSelectionEnd`.
 getValueByMode|Used to get value in editor by dataMode.|This method is not supported.
