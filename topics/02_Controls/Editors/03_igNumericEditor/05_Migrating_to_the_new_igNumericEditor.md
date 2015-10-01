@@ -55,9 +55,6 @@ maxLength|Sets gets maximum length of text which can be entered by user.|This op
 <a name='new_options'></a>
 ### New options
 
-<a name='new_options'></a>
-### New options
-
 Option| Description
 ---|---
 allowNullValue|<a name='allowNullValue'></a>If that option is false, and editor has no value, then value is set to an empty string.
@@ -81,8 +78,7 @@ suppressNotifications|<a name='suppressNotifications'></a>Disables default notif
 
 Method| Previously| Now
 ---|---|---
-Method| Previously| Now
----|---|---
+
 addListItem|Used to add the object within item at the location indicated by the index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 addListItems|Used to add the objects within the items array at the location indicated by the index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 clearListItems|Removed all items from list.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
