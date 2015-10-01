@@ -69,11 +69,15 @@ The table below briefly explains the main features of the `igCombo`.
 
             <th>Description</th>
         </tr>
-
         <tr>
             <td>Virtualization</td>
 
             <td>The igCombo control can re-use HTML elements when binding large amounts of data to improve performance.</td>
+        </tr>
+		<tr>
+            <td>Auto-complete</td>
+
+            <td>Enabling this allows the igCombo control to automatically fill in the remaining input text based off of the first match in the list of choices.</td>
         </tr>
         <tr>
             <td>Auto-suggest</td>
@@ -123,6 +127,16 @@ Virtualization allows the `igCombo` control to bind to hundreds of items while k
 
 - [igCombo Virtualization](%%SamplesUrl%%/combo/virtualization)
 
+### Auto-Complete
+
+
+The auto-complete feature helps users select content that is already in a list of choices. After the first character is entered, the combo prefills the remaining text of the first matching item in the list.
+
+![](images/igCombo_Auto_Complete.png)
+
+#### Related Topics
+
+-	[Adding igCombo](igCombo-Getting-Started.html)
 
 ### Auto-suggest
 

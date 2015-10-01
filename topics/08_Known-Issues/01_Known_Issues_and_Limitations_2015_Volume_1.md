@@ -739,6 +739,7 @@ KnockoutJS observable array functions’ limitations | The use of `unshift`, `re
 The id attribute is mandatory for the DOM control placeholder| The id attribute should be set on the DOM element on which the grid is initialized. Grid use jQuery ID selector internally for faster selection.| ![](../images/images/negative.png)
 Column keys which contain spaces are not supported|Column keys are used for generating some DOM elements IDs. Having spaces in an HTML id attribute is not allowed according to the <a href="http://www.w3.org/TR/html5/dom.html#the-id-attribute" target="_blank">HTML 5 specification</a>.| ![](../images/images/negative.png)
 The contextMenu event is renamed to cellRightClick|The event is renamed to be more self-explanatory.|![](../images/images/negative.png)
+Header text and  sorting/filtering/gear icons are misaligned in IE8  | This is a browser limitation due to IE8 not supporting css calc(). For details refer to: http://caniuse.com/#feat=calc| ![](../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
@@ -919,6 +920,7 @@ When virtualization is enabled the autofitLastColumn is not effective | When vir
 Column virtualization will not work when grid width is defined in percentage units | When grid width is defined in percentage units and column virtualization is enabled ([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) horizontal scrollbar will not render. | ![](../images/images/negative.png)
 Fixed virtualization is not supported with RWD Mode | Fixed virtualization depends on the row's height being constant. If the row's height changes the fixed virtualization will not work as expected. RWD Mode changes the row's height as it adopts to the screen size so fixed virtualization will not work as expected with it. | ![](../images/images/positive.png)
 Column virtualization is not supported with continuous virtualization | Column virtualization is supported only with fixed virtualization. When column virtualization is enabled([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) then the virtualization mode must be set to "fixed"([virtualizationMode](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) = "fixed"). | ![](../images/images/negative.png)
+Virtualization and auto sizing of columns is not supported | Auto sizing columns by setting their width option to "*"  is not supported with virtualization. | ![](../images/images/negative.png)
 
 ### <a id="grid-responsive"></a> [igGrid – Responsive Web Design Mode](igGrid-Known-Issues.html)
 <table class="table table-striped">
@@ -1147,7 +1149,6 @@ Go up to [Known Issues and Limitations Summary](#summary)
 Issue | Description | Status
 ---|---|---
 Cell selection in iOS does not work properly | In iOS, when wanting to scroll the `igGrid`, the user should first tap on a cell and then swipe in the desired direction. There is a difference when scrolling the `igGrid` under iOS and Android due to the way jQuery Mobile handles the events. | ![](../images/images/negative.png)
-Selection works only with visible rows when virtualization is enabled | This limitation is due to the fact that invisible rows/cells do not exist in the DOM tree when virtualization is enabled. | ![](../images/images/negative.png)
 Incorrect selection when selecting row/cell with continuous virtualization enabled | When selecting row/cell of the `igGrid` while continuous virtualization is enabled, the grid scrolls down and a different row/cell is selected due to a bug in jQuery version 1.6.4. This problem appears only in this version of the jQuery library. | ![](../images/images/positive.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
@@ -1177,7 +1178,8 @@ Go up to [Known Issues and Limitations Summary](#summary)
 
 Issue | Description | Status
 ---|---|---
-igGridExcelExporter does not work in Microsoft Internet Explorer 8 | The issue is that 'export' is a reserved word and thus Internet Explorer 8 is not allowing its use. This will be fixed for the upcoming volume release 15.2 | ![](../images/images/negative.png)
+Saving exported file does not work in IE9 and earlier | GridExcelExporter uses a Blob object to keep the raw data of the exported worksheet, which is not supported in IE9 and earlier: https://developer.mozilla.org/en-US/docs/Web/API/Blob | ![](../images/images/negative.png)
+Only part of the data is exported in Append Rows on Demand or remote paging scenarios | The GridExcelExporter is entirely a client-side component and thus it deals only with data currently available on the client. In scenarios implementing Remote Paging and Append Rows on Demand when further sets of data are fetched through additional requests, this data is not exported. |
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
@@ -1209,6 +1211,7 @@ Issue | Description | Status
 ------|-------------|-------
 Expansion indicators can be cropped/hidden with remote features|Expansion indicators on lower levels in the hierarchy can be cropped/hidden when rendered in the separate indicators non-data column in remote scenarios|![](../images/images/positive.png)
 Misaligned first cells' data on lower levels|Padding on lower levels can push displayed data beyond the available width of the cell and cause the text to wrap around to the initial position, breaking visual hierarchy|![](../images/images/positive.png)
+Scroll position changes when expanding/collapsing rows in rowVirtualization mode with paging (allLevels).|When rowVirtualization and paging with  [`mode`](%%jQueryApiUrl%%/ui.igtreegrid#options:mode) set to `allLevels` are enabled the scroll position will change when expanding/collapsing rows.| ![](../../images/images/negative.png) 
 
 Go up to [Known Issues and Limitations Summary](#summary)
 

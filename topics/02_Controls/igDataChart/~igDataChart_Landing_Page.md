@@ -43,6 +43,8 @@ The topics in this section provide detailed information regarding the `igDataCha
 
 -	[Configuring the Chart Title and Subtitle (igDataChart)](igDataChart-Chart-Titles-and-Subtitles.html): This topic provides information on using the chart title and subtitle feature of the `igDataChart`™ control.
 
+- [Configuring Axis Intervals (igDataChart)](igdatachart-configuring-axis-intervals.html): This topic provides information on configuring the major and minor axis intervals on the `igDataChart`™ control.
+
 -	[Configuring Hover Interactions (igDataChart)](HoverInteractions-Hover-Interactions.html): This sections provides information about the hover interactions available on the `igDataChart` control including the different type of hover interactions layers available.
 
 -	[Configuring the Series Highlighting (igDataChart)](igDataChart-Series-Highlighting.html): This topic provides information on enabling the series highlighting feature along with a listing of the supported series.

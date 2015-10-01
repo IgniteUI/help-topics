@@ -1,20 +1,22 @@
-﻿<!--
+<!--
 |metadata|
 {
-    "fileName": "iggrid-updating-rowedittemplate-configuring",
+    "fileName": "iggrid-updating-dialog-configuring",
     "controlName": "igGrid",
     "tags": ["Editing","Grids","How Do I","Templating"]
 }
 |metadata|
 -->
 
-# Configuring the Row Edit Template (igGrid)
+# Configuring the Row Edit Dialog (igGrid)
 
 ## Topic Overview
 
 ### Purpose
 
-This topic explains how to use the updating feature of the `igGrid`™ control in combination with the Row Edit template.
+This topic explains how to use the updating feature of the `igGrid`™ control in combination with the Row Edit Dialog.
+By design editorsTemplate is executed for each column in the grid`s column collection, while the dialogTemplate is rendered against the currently edited record.
+
 
 ### Required background
 
@@ -23,8 +25,6 @@ The following table lists the topics and articles required as a prerequisite to 
 - [igGrid Overview](igGrid-Overview.html): The `igGrid` is a jQuery-based client-side grid that is responsible for presenting and manipulating tabular data. Its whole lifecycle is on the client-side, which makes it independent from server-side technology.
 
 - [Updating Overview (igGrid)](igGrid-Updating.html): This topic explains how to use the updating feature of the `igGrid`™ control.
-
-- [Row Edit Template Overview (igGrid)](igGrid-Updating-RowEditTemplate.html): This document explains specific properties and methods when using the Row Edit Template
 
 - [igTemplating](igTemplating-Overview.html): This topic explains how to use the Infragistics® Templating Engine.
 
@@ -35,10 +35,10 @@ The following table lists the topics and articles required as a prerequisite to 
 This topic contains the following sections:
 
 - [**Introduction**](#introduction)
-- [**Configuring Row Edit Template in JavaScript**](#javascript)
+- [**Configuring Row Edit Dialog in JavaScript**](#javascript)
 	- [Overview](#js-overview)
 	- [Steps](#js-steps)
-- [**Configuring Row Edit Template in ASP.NET MVC**](#mvc)
+- [**Configuring Row Edit Dialog in ASP.NET MVC**](#mvc)
 	- [Requirements](#mvc-requirements)
 	- [Overview](#mvc-overview)
 	- [Steps](#mvc-steps)
@@ -47,27 +47,32 @@ This topic contains the following sections:
 
 ## <a id="introduction"></a> Introduction
 
-The Row Edit Template allows users to edit records in a pop up dialog, as compared to inline editing.
+The Row Edit Dialog allows users to edit records in a pop up dialog, as compared to inline editing.
 
-The feature is implemented as part of the `igGridUpdating` widget. Starting with version 12.2, the `editMode` option has a new value added: “rowedittemplate”, to enable the row edit template.
-
-The row edit template is rendered as a dialog window
-
-![](images/igGrid_Updating_ConfigureRowEditTemplate_1.png)
-
-The row template itself can be defined in the ways listed below:
-
--   Automatically generated, based on the data types of columns
--   Specified as a string by the developer using the `RowEditDialogRowTemplate` option
--   A reference to a template element using `RowEditDialogRowTemplateID` option
-
-There is a new option introduced: `showReadonlyEditors`. Depending on its value, the editors are not rendered in the template when editing is disabled for a particular column.
-
-The row edit template uses the `ColumnSettings` for updating, in order to determine what kind of editor to be rendered (if a row edit template is manually defined then it will be used). There are also validation images and validation messages rendered inline in the row edit template, when the end user types something which isn’t allowed for various reasons.
+The feature is implemented as part of the `igGridUpdating` widget. The `editMode` option has a new value: “dialog”, to enable the row edit dialog. The new dialog uses a different templating structure and allows building complex custom editing dialog.
 
 
+![](images/igGrid_Updating_RowEditDialog.png)
 
-## <a id="javascript"></a> Configuring Row Edit Template in JavaScript
+The row template itself can be defined by setting different properties in the newly added `rowEditDialogOptions` option. These options are listed in the following table:
+
+Options|Description
+---|---
+animationDuration|Specifies the animation duration for the opening and closing operations.
+dialogTemplate|Specifies a template to be rendered against the currently edited record.
+dialogTemplateSelector|Specifies a selector to a template rendered against the currently edited record.
+editorsTemplate|Specifies a template to be executed for each column in the grid's column collection (or just the read-write columns if showReadonlyEditors is false). Decorate the element to be used as an editor with 'data-editor-for-${key}'.The ${key} template tag should be replaced with the chosen templating engine's syntax for rendering values. If any editors for columns are specified in the dialog markup they will be exluded from the data the template will be rendered for.This property is ignored if the dialog template does not include an element with the "data-render-tmpl" attribute. If both editorsTemplate and editorsTemplateSelector are specified, editorsTemplateSelector will be used.
+editorsTemplateSelector|Specifies a selector to a template to be executed for each column in the grid's column collection. Decorate the element to be used as an editor with 'data-editor-for-${key}'. The ${key} template tag should be replaced with the chosen templating engine's syntax for rendering values. If any editors for columns are specified in the dialog markup they will be exluded from the data the template will be rendered for. This property is ignored if the dialog markup does not include an element with the 'data-render-tmpl' attribute. If both editorsTemplate and editorsTemplateSelector are specified, editorsTemplateSelector will be used.
+namesColumnWidth|Controls the width of the column containing the column names in the default row edit dialog.
+showEditorsForHiddenColumns|Controls if editors should be rendered for hidden columns.
+width| Controls the default row edit dialog width.
+height| Controls the default row edit dialog height.
+showDoneCancelButtons|Controls the visibility of the done and cancel buttons for the dialog. If disabled the end-user will be able to stop editing only with the ENTER and ESC keys.
+captionLabel| Specifies the caption of the dialog. If not set $.ig.GridUpdating.locale.rowEditDialogCaptionLabel is used.
+
+
+
+## <a id="javascript"></a> Configuring Row Edit Dialog in JavaScript
 This procedure guides you through the process of configuring row edit template in the `igGrid`.
 
 ### <a id="js-overview"></a> Overview
@@ -79,7 +84,7 @@ Following is a conceptual overview of the process:
 3.  [Define a template element for the Row Edit Dialog Row Template.](#js-define-template)
 4.  [Define the HTML placeholder.](#js-define-html)
 5.  [Instantiate the igGrid](#js-instantiate-grid)
-6.  [Handle the rowEditDialogOpening client side event](#js-handle-event)
+6.  [Handle the rowEditDialogBeforeOpen client side event](#js-handle-event)
 
 ### <a id="js-steps"></a> Steps
 
@@ -121,33 +126,31 @@ The following steps demonstrate how to configure Row Edit Template in the `igGri
 	namedData[4] = { "ProductID": 5, "UnitsInStock": "65", "ProductDescription": "trainers", "UnitPrice": "$1000", "DateCol": "24/6/2012" };
 	```
 
-3. Define a template element for the Row Edit Dialog Row Template <a id="js-define-template"></a>
+3. Define a template element for the Row Edit Dialog Template <a id="js-define-template"></a>
 
 	The following code defines a template element which is used as a row template for the row edit template to specify custom formatting and styling.
 	
 	**In HTML:**
 	
 	```html
-	<style type="text/css">
-	        .tableBackGround
-	        {
-	            background-color: #FF7283;
-	        }
-	        .labelBackGround
-	        {
-	            background-color: #FFE96D;
-	        }
-	    </style>
-	<script id="rowEditDialogRowTemplate1" type="text/x-jquery-tmpl">
-	   <tr class="tableBackGround">                  
-	      <td class="labelBackGround"> 
-	           ${headerText}
-	      </td>
-	      <td data-key='${dataKey}'>
-	          <input /> 
-	      </td>
-	    </tr>
-	</script>
+	<script id="dialogTemplate" type="text/html">
+	<div style="float: left;">
+			<table style="width: 100%;">
+				<colgroup>
+					<col style="width: 30%;" />
+					<col style="width: 70%;" />
+				</colgroup>
+				<tbody data-render-tmpl="true">
+				</tbody>
+			</table>
+		</div>
+	<script>
+	<script id="editorsTemplate" type="text/html">
+        <tr>
+           <td style="text-align:right;color:#777;"><strong${headerText}</strong></td>
+            <td><input data-editor-for-${key}="true" /></td>
+        </tr>
+    </script>
 	```
 
 4. Define the HTML placeholder. <a id="js-define-html"></a>
@@ -160,15 +163,13 @@ The following steps demonstrate how to configure Row Edit Template in the `igGri
 
 5. Instantiate the `igGrid`. <a id="js-instantiate-grid"></a>
 	
-	The following code enables the updating feature and `editMode` is set to be “rowedittemplate”.
+	The following code enables the updating feature and `editMode` is set to be “dialog”.
 	
-	As container of the row edit dialog is set as “owner” with the `rowEditDialogContainment` property. Thus, the row edit dialog is draggable only in the grid area.
+	As container of the row edit dialog is set as “owner” with the `containment` property. Thus, the row edit dialog is draggable only in the grid area.
 	
 	Column settings are defined and the “ProductID” column is set to be `ReadOnly`. As the option `showReadonlyEditors` is *false*, the disabled columns won’t be rendered as editors in the dialog window (in this case: ProductID).
 	
-	The Row Edit Template will use the `ColumnSettings` for updating, in order to determine what kind of editor to be rendered. There are also validation images and validation messages rendered inline in the Row Edit Template when the end user types something which isn’t allowed. The EditorType of the DateCol is specified to be DatePicker and UnitPrice is marked as required. Thus DateCol will be rendered as a DatePicker editor and a validation error message will be shown in the Row Edit Template if the UnitPrice isn’t filled.
-	
-	The property `rowEditDialogRowTemplateID` points to the id of the defined `x-jquery-tmpl` template defined in Step 3
+	The property `dialogTemplateSelector` points to the of the template defined in Step 3
 	
 	**In JavaScript:**
 	
@@ -196,54 +197,37 @@ The following steps demonstrate how to configure Row Edit Template in the `igGri
 	      {
 	            name: 'Updating',
 	            startEditTriggers: 'enter dblclick',
-	            editMode: 'rowedittemplate',
-	               rowEditDialogContainment: "owner",
-	            showReadonlyEditors: false,
-	            rowEditDialogRowTemplateID:'rowEditDialogRowTemplate1',
-	            columnSettings: [{
-	                  columnKey: "ProductID",
-	                  editorType: 'numeric',
-	                  readOnly: true
-	            }, {
-	                  columnKey: "ProductDescription",
-	                  editorOptions: { readOnly: true }
-	            }, {
-	                  columnKey: "DateCol",
-	                  editorType: 'datepicker',
-	                  validation: true,
-	                  editorOptions: { required: true }
-	            }, {
-	                  columnKey: "UnitPrice",
-	                  editorType: 'currency',
-	                  validation: true,
-	                  editorOptions: { button: 'spin', required: true }
-	            }]
+	            editMode: 'dialog',
+				rowEditDialogOptions:{
+					dialogTemplateSelector: "#dialogTemplate",
+					editorsTemplateSelector: "#editorsTemplate",
+	               	containment: "owner",
+	            	showReadonlyEditors: false,
+
+				}
+	            
 	      }]
 	});
 	```
 
-6. Handle the `rowEditDialogOpening` client side event. <a id="js-handle-event"></a>
+6. Handle the `rowEditDialogBeforeOpen` client side event. <a id="js-handle-event"></a>
 
-	The following code handles the `rowEditDialogOpening` client side event. It provides references to the `igGridUpdating` widget and to the row edit dialog DOM element.
-	
-	To get a reference to the current data row you should use `ui.dialogElement.data('tr')`.
-	
+	The following code handles the `rowEditDialogBeforeOpen` client side event. It provides references to the `igGridUpdating` widget and to the row edit dialog DOM element.
 	**In JavaScript:**
 	
 	```js
-	$("#grid1").live("iggridupdatingrowEditDialogOpening ", function (event, ui) {
+	 $(document).delegate(".selector", "iggridupdatingroweditdialogbeforeopen", function (evt, ui) { 
 	           var gridUpdating = ui.owner;
 	           var gridID = ui.owner.element.context.id;
 	           var dialogWindow = ui.dialogElement;
-	           var currDataRow = ui.dialogElement.data('tr');
-	   });
+	  });
 	```
 
 
 
 ## <a id="mvc"></a> Configuring a Row Edit Template in ASP.NET MVC
 
-This procedure guides you through the process of configuring a Row Edit Template in the `igGrid`.
+This procedure guides you through the process of configuring a Row Edit Dialog in the `igGrid`.
 
 ### <a id="mvc-requirements"></a> Requirements
 
@@ -291,7 +275,6 @@ The following steps demonstrate how to configure a Row Edit Template in `igGrid`
 	<%= Html.Infragistics().Loader()
 	        .ScriptPath("http://localhost/ig_ui/js/")
 	        .CssPath("http://localhost/ig_ui/css/")
-	        .Resources("igShared")
 	        .Render()
 	    %>
 	```
@@ -300,51 +283,48 @@ The following steps demonstrate how to configure a Row Edit Template in `igGrid`
 
 	Add an ADO.NET Entity Data Model for the Product table of the AdventureWorks Database.
 	
-	![](images/igGrid_Updating_ConfigureRowEditTemplate_2.png)
 
-3. Defining a template element for the Row Edit Dialog RowTemplate. <a id="mvc-template"></a>
+3. Defining dialogTemplate and editorTemplate for the Row Edit Dialog. <a id="mvc-template"></a>
 
-	The following code defines a template element which is used as a RowTemplate for the Row Edit Dialog.You can use it to specify custom formatting and styling.
+	The following code defines a template for the Row Edit Dialog.You can use it to specify custom formatting and styling.
 	
 	**In HTML:**
 	
 	```html
-	<style type="text/css">
-	        .tableBackGround
-	        {
-	            background-color: #FF7283;
-	        }
-	        .labelBackGround
-	        {
-	            background-color: #FFE96D;
-	        }
-	</style>
-	<script id="rowEditDialogRowTemplate1" type="text/x-jquery-tmpl">      
-	          <tr class="tableBackGround">                  
-	                <td class="labelBackGround"> ${headerText}
-	                </td>
-	                <td data-key='${dataKey}'>
-	                      <input /> 
-	                </td>
-	          </tr>
+	 <script id="dialogTemplate" type="text/html">
+
+		<div style="float: left;">
+			<table style="width: 100%;">
+				<colgroup>
+					<col style="width: 30%;" />
+					<col style="width: 70%;" />
+				</colgroup>
+				<tbody data-render-tmpl="true">
+				</tbody>
+			</table>
+		</div>
 	</script>
+    <script id="editorsTemplate" type="text/html">
+        <tr>
+           <td style="text-align:right;color:#777;"><strong${headerText}</strong></td>
+            <td><input data-editor-for-${key}="true" /></td>
+        </tr>
+    </script>
 	```
 
 4. Define the view <a id="mvc-define-view"></a>
 
 	Open the Index.cshtml View and add the code below.
 	
-	The following code enables the updating feature and `EditMode` is set to be “RowEditTemplate”.
+	The following code enables the updating feature and `EditMode` is set to be “Dialog”.
 	
-	The `RowEditDialogContainment` is set to be “owner”. Thus the row edit dialog is draggable only in the grid area.
-	
-	The row edit template will use the `ColumnSettings` for Updating in order to determine what kind of editor is rendered (if the row edit template is manually defined then it will be used). There are also validation images and validation messages rendered inline in the row edit template when the end user types something which isn’t allowed.
+	The `containment` oprion of teh row edit dialog is set to be “owner”. Thus the row edit dialog is draggable only in the grid area.
 	
 	In the code snippet below, the `EditorType` of ModifiedDate is specified to be `DatePicker` and is marked as required. Thus the `DatePicker` editor will be rendered and a validation error message is shown if no value is entered in the field.
 	
-	The “ProductID” column is set to be `ReadOnly`. As the option `ShowReadonlyEditors` is false, the disabled column won’t be rendered as editors in the dialog window.
+	The “ProductID” column is set to be `ReadOnly`. As the option `showReadonlyEditors` is false, the disabled column won’t be rendered as editors in the dialog window.
 	
-	The option `RowEditDialogRowTemplateID` points to ID the defined `x-jquery-tmpl` template above.
+	The option `DialogTemplateSelector` points to ID the defined `x-jquery-tmpl` template above.
 	
 	**In ASPX:**
 	
@@ -369,15 +349,17 @@ The following steps demonstrate how to configure a Row Edit Template in `igGrid`
 	        features.Paging().PageSize(30).Type(OpType.Local);
 	        features.Selection().Mode(SelectionMode.Row);
 	        features.Updating().EnableAddRow(false).EnableDeleteRow(true)                
-	            .EditMode(GridEditMode.RowEditTemplate)
-	            .RowEditDialogContainment("owner")
-	            .RowEditDialogWidth("300px")
-	            .RowEditDialogHeight("400px")
-	            .RowEditDialogOkCancelButtonWidth("100px")
-	            .RowEditDialogFieldWidth("150px")
-	            .ShowReadonlyEditors(false)              
-	            .RowEditDialogRowTemplateID("rowEditDialogRowTemplate1")
-	            .ColumnSettings(settings =>
+	            .EditMode(GridEditMode.Dialog)
+                RowEditDialogOptions(opt =>
+            	{
+                	opt.Containment("owner");
+                	opt.DialogTemplateSelector("#dialogTemplate");
+					opt.EditorsTemplateSelector("#editorsTemplate");
+                    opt.ShowReadonlyEditors(false);
+                	opt.Width("300px");
+                	opt.Height("400px");
+            })
+	           .ColumnSettings(settings =>
 	            {
 	                settings.ColumnSetting().ColumnKey("ProductID").ReadOnly(true);
 	                settings.ColumnSetting().ColumnKey("Name").EditorType(ColumnEditorType.Mask);
@@ -402,24 +384,21 @@ The following steps demonstrate how to configure a Row Edit Template in `igGrid`
 	        {
 	            var ctx = new AdventureWorksDataContext(this.DataRepository.GetDataContext().Connection);
 	            var ds = ctx.ProductAllDatas.Take(40);      
-	            return View("RowEditTemplate", ds);
+	            return View("RowEditDialog", ds);
 	        }
 	```
 ​
 6. Handle the `rowEditDialogOpening` client side event <a id="mvc-event"></a>
 
-	The following code handles the `rowEditDialogOpening` client side event and provides references to the `igGridUpdating` widget and to the row edit dialog DOM element.
-	
-	To get reference to the current data row you should use `ui.dialogElement.data('tr')`.
+	The following code handles the `rowEditDialoBeforeOpen` client side event and provides references to the `igGridUpdating` widget and to the row edit dialog DOM element.
 	
 	**In JavaScript:**
 	
 	```js
-	$("#grid1").live("iggridupdatingrowEditDialogOpening ", function (event, ui) {
+	$("#grid1").live("iggridupdatingroweditdialogbeforeopen ", function (event, ui) {
 	           var gridUpdating = ui.owner;
 	           var gridID = ui.owner.element.context.id;
 	           var dialogWindow = ui.dialogElement;
-	           var currDataRow = ui.dialogElement.data('tr');
 	   });
 	```
 
@@ -431,7 +410,7 @@ The following steps demonstrate how to configure a Row Edit Template in `igGrid`
 
 The following topics provide additional information related to this topic.
 
-- [Row Edit Template](igGrid-Updating-RowEditTemplate.html): This document explains the specific properties and methods used with Row Edit Templates
+- [Row Edit Dialog](igGrid-Updating-RowEditDialog.html): This document explains the specific properties and methods used with Row Edit Templates
 
 
 
@@ -439,9 +418,9 @@ The following topics provide additional information related to this topic.
 
 The following samples provide additional information related to this topic.
 
-- [Row Edit Template](%%SamplesUrl%%/grid/row-edit-template): This sample shows how to configure a Row Edit Template in the `igGrid`
+- [Row Edit Dialog](%%SamplesUrl%%/grid/row-edit-dialog): This sample shows how to configure a Row Edit Template in the `igGrid`
 
-- [HierarchicalGrid Row Edit Template](%%SamplesUrl%%/hierarchical-grid/row-edit-template): This sample shows how to configure a Row Edit Template in the `igHierarchicalGrid`
+- [HierarchicalGrid Row Edit Dialog](%%SamplesUrl%%/hierarchical-grid/row-edit-dialog): This sample shows how to configure a Row Edit Dialog in the `igHierarchicalGrid`
 
 
 

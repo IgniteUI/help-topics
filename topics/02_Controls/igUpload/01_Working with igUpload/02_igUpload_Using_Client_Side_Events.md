@@ -227,6 +227,37 @@ onError
                 
             </td>
         </tr>
+		<tr>
+		<td>onFormDataSubmit</td>
+		<td>
+			The onFormDataSubmit event fires before submitting the uploading file(and its additional data if any) to the server. 
+			It could be used to append additional data fields to the FormData object.
+			 <ul>
+                    <li>
+`fileId`:  Gets unique identifier of the file.
+					</li>
+
+                    <li>
+`fileInfo`: Gets reference to the fileInfo object - contains information for the fileName, fileSize, serverMessage, etc.
+					</li>
+
+                    <li>
+`xhr`:	Gets reference to the original XMLHttpRequest object(if the browser supports HTML 5 file API - if not it is undefined).
+					</li>
+
+                    <li>
+`formData`: Gets reference to FormData object(if the browser supports HTML5 file API) or reference to jQuery representation of <form>.
+					</li>
+                    <li>
+`owner`: Gets igUpload widget object.
+					</li>
+                </ul>
+		</td>
+		</tr>
+		<tr>
+		<td>onXHRLoad</td>
+		<td>The onXHRLoad event is fired when the onload(of XmlHttpRequest) is fired. This event will be fired only if the browser supports HTML5 API.</td>
+		</tr>
     </tbody>
 </table>
 
