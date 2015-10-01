@@ -87,7 +87,7 @@ Feature | Description
 ### igValidator
 Feature | Description
 ---|---
-[Refactored Validator](#validator) | The Validator validator is reworked to allow flexible validation on an array of Ignite UI components, as well as standard input form elements
+[Refactored Validator](#validator) | The Validator is reworked to allow flexible validation on an array of Ignite UI components, as well as standard input form elements
 
 ### igUpload
 
