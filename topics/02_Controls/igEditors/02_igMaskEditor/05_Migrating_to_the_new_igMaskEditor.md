@@ -98,8 +98,6 @@ select|Used to select text in editor. Valid parameters: `sel0`, `sel1`, `val`|`s
 setFocus|Used to set focus to editor with delay.  If parameter was -1, then focus was set without delay.|It now supports only positive values for the delay and 0 is default that signifies that it is immediately given the focus.
 spin|Used to increment (positive delta) or decrement (negative delta) value in editor according to the parameter.|This method is no longer available for the mask editor.
 text|Used to get or set text in editor.|This is replaced by a getter method `displayValue` that takes no parameters and returns a string with all the characters shown in the input.
-validate|Used to trigger validation of editor and show error message. It had a single parameter: `noLabel`|The parameter is renamed to `skipErrorMessage`.
-value|Used to get or set value in editor.|The parameter is renamed to `newValue` to better communicate what it does.
 
 >**Note:** One of the major changed in the new mask editor is that it no longer supports Lists and DropDown. Note that if you try to use methods connected to dropdown and list, you will receive a notification pointing out that they are no longer available. 
 

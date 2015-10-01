@@ -121,40 +121,41 @@ The row dialog can be defined in the ways listed below:
 	**In ASPX:**
 	
 	```csharp
-	<%= (Html.Infragistics().Grid(Model).ID("grid1").Height("400px").Width("100%")”
+	<%= (Html.Infragistics().Grid(Model).ID("grid1").Height("400px").Width("100%")
 		// Grid Definition
-		.Features(features =>
-		{features.Updating()                
-		.EditMode(GridEditMode.rowEditTemplate)
-		.ShowReadonlyEditors(true)
-		.StartEditTriggers(GridStartEditTriggers.Click)
-		.RowEditDialogOptions(options =>
-       {
-           options.Containment("owner")
-           .DialogTemplate("<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>")
-           .EditorsTemplate("<tr><td>${headerText}</td><td><input data-editor-for-${key} /></td></tr>")
-           .Width("400px");
-       });
+		.Features(features => {
+			features.Updating()                
+				.EditMode(GridEditMode.Dialog)
+				.ShowReadonlyEditors(true)
+				.StartEditTriggers(GridStartEditTriggers.Click)
+				.RowEditDialogOptions(options => {
+		           		options.Containment("owner")
+		           		.DialogTemplate("<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>")
+		           		.EditorsTemplate("<tr><td>${headerText}</td><td><input data-editor-for-${key} /></td></tr>")
+		           		.Width("400px");
+			});
 		})
 		.DataBind()
-		.Render()%>
+		.Render()
+	%>
 	```
 	
 	**In JavaScript:**
 	
 	```js
 	features: [
-	{ 
-		name: "Updating",
-		startEditTriggers: 'enter dblclick',    
-		editMode: 'dialog',      
-		showReadonlyEditors: false,      
-	  	rowEditDialogOptions: {
-                    editorsColumnWidth: 100,
-                    dialogTemplate: "<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>",
-                   editorsTemplate: "<tr><td>${headerText}</td><td><input data-editor-for-${key} /></td></tr>"
-        }
-	},
+		{ 
+			name: "Updating",
+			startEditTriggers: 'enter,dblclick',    
+			editMode: 'dialog',      
+			showReadonlyEditors: false,      
+		  	rowEditDialogOptions: {
+				editorsColumnWidth: 100,
+				dialogTemplate: "<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>",
+				editorsTemplate: "<tr><td>${headerText}</td><td><input data-editor-for-${key} /></td></tr>"
+			}
+		}
+	]
 	```
 
 3.  Referencing a template element using the `dialogTemplateSelector` and the `editorsTemplateSelector` properties.
@@ -189,34 +190,40 @@ The row dialog can be defined in the ways listed below:
 	//Inside the grid Definition
 	..    
 	features: [      
-	{
-	    name: 'Updating',
-	    startEditTriggers: 'enter,dblclick',
-	    editMode: 'dialog',	    
-	    showReadonlyEditors: false,
-	   	rowEditDialogOptions:{
-       		dialogTemplateSelector: "#dialogTemplate",
-			editorsTemplateSelector: "#editorsTemplate"
-		},
-	    columnSettings: [{
-	          columnKey: "ProductID",
-	          editorType: 'numeric',
-	          readOnly: true
-	    }, {
-	          columnKey: "ProductDescription",
-	          editorOptions: { readOnly: true }
-	    }, {
-	          columnKey: "DateCol",
-	          editorType: 'datepicker',
-	          validation: true,
-	          editorOptions: { required: true }
-	    }, {
-	          columnKey: "UnitPrice",
-	          editorType: 'currency',
-	          validation: true,
-	          editorOptions: { button: 'spin', required: true }
-	    }]
-	}]
+		{
+			name: 'Updating',
+			startEditTriggers: 'enter,dblclick',
+			editMode: 'dialog',	    
+			showReadonlyEditors: false,
+			rowEditDialogOptions: {
+				dialogTemplateSelector: "#dialogTemplate",
+				editorsTemplateSelector: "#editorsTemplate"
+			},
+			columnSettings: [
+				{
+					columnKey: "ProductID",
+					editorType: 'numeric',
+					readOnly: true
+				},
+				{
+					columnKey: "ProductDescription",
+					editorOptions: { readOnly: true }
+				},
+				{
+					columnKey: "DateCol",
+					editorType: 'datepicker',
+					validation: true,
+					editorOptions: { required: true }
+				},
+				{
+					columnKey: "UnitPrice",
+					editorType: 'currency',
+					validation: true,
+					editorOptions: { button: 'spin', required: true }
+				}
+			]
+		}
+	]
 	…
 	```
 
@@ -255,15 +262,16 @@ The default template is `<table><colgroup><col></col><col></col></colgroup><tbod
 	
 	```js
 	features: [
-	{ 
-		name: "Updating",
-		startEditTriggers: 'enter dblclick',    
-		editMode: 'rowedittemplate',      
-		showReadonlyEditors: false,      
-		rowEditDialogOptions:{
-        dialogTemplate:"<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>"
+		{ 
+			name: "Updating",
+			startEditTriggers: 'enter,dblclick',    
+			editMode: 'dialog',      
+			showReadonlyEditors: false,      
+			rowEditDialogOptions: {
+	        		dialogTemplate:"<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>"
+			}
 		}
-	},
+	]
 	```
     
 - [editorsTemplate](%%jQueryApiUrl%%/ui.iggridupdating#options:rowEditDialogOptions.editorsTemplate:"")
@@ -277,15 +285,16 @@ The default template is `<table><colgroup><col></col><col></col></colgroup><tbod
 	
 	```js
 	features: [
-	{ 
-		name: "Updating",
-		startEditTriggers: 'enter dblclick',    
-		editMode: 'rowedittemplate',      
-		showReadonlyEditors: false,      
-		rowEditDialogOptions:{
-        dialogTemplate:"<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>"
+		{ 
+			name: "Updating",
+			startEditTriggers: 'enter,dblclick',    
+			editMode: 'dialog',      
+			showReadonlyEditors: false,      
+			rowEditDialogOptions: {
+				dialogTemplate:"<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>"
+			}
 		}
-	},
+	]
 	``` 
 
 - [dialogTemplateSelector](%%jQueryApiUrl%%/ui.iggridupdating#options:rowEditDialogOptions.dialogTemplateSelector)

@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# Editors
+# igEditors
 
 
 -   [igTextEditor](igTextEditor-igTextEditor.html)

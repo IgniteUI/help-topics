@@ -13,7 +13,7 @@
 With the 15.2 release of Ignite UI™ a new set of editor controls were introduced including a reworked `igDatePicker`. With a new design focused on simplicity and better UX out-of-the-box some features and their API were revised, removed and new ones added. This topic will cover the differences that will be helpful for developers migrating their applications to the new editors.
 
 ## Topic overview
-This topic aims to help with migration from old text editor to the new one. Different scenarios are viewed and how they were done before and how they can be done now.
+This topic aims to help with migration from old date picker to the new one. Different scenarios are viewed and how they were done before and how they can be done now.
 
 ### In this topic
 This topic contains the following sections:
@@ -53,8 +53,6 @@ select|Used to select text in editor. Valid parameters: `sel0`, `sel1`, `val`|`s
 setFocus|Used to set focus to editor with delay.  If parameter was -1, then focus was set without delay.|It now supports only positive values for the delay and 0 is default that signifies that it is immediately given the focus.
 spin|Used to increment (positive delta) or decrement (negative delta) value in editor according to the parameter.|This method is replaced by two new methods: `spinUp` and `spinDown`. If editor has listItems, then those methods increment or decrement active index in the list, without setting the vew value.
 text|Used to get or set text in editor.|This is replaced by a getter method `displayValue` that takes no parameters and returns a string with all the characters shown in the input.
-validate|Used to trigger validation of editor and show error message. It had a single parameter: `noLabel`|The parameter is renamed to `skipErrorMessage`.
-value|Used to get or set value in editor.|The parameter is renamed to `newValue` to better communicate what it does.
 
 <a name='new_options'></a>
 ### New options
@@ -65,7 +63,6 @@ limitSpinToCurrentField|<a name='limitSpinToCurrentField'></a>Sets gets ability 
 allowNullValue|<a name='allowNullValue'></a>If that option is false, and editor has no value, then value is set to an empty string.
 disabled|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#datePicker').igDatePicker({ disabled: true }] })`.
 buttonType|<a name='buttonType'></a>Sets gets visibility of spin, clear and drop-down button.
-listItemHoverDuration|<a name='listItemHoverDuration'></a>Use to set the hover/unhover animation duration of items inside the dropdown list: `$('#datePicker').igDatePicker({ listItems: ["A", "B", "C", "D"], listItemHoverDuration: 400 }] })`.
 dropDownAttachedToBody|<a name='dropDownAttachedToBody'></a>Gets sets location of drop-down list.
 dropDownAnimationDuration|<a name='dropDownAnimationDuration'></a>Gets sets show/hide drop-down list animation duration in milliseconds.
 visibleItemsCount|<a name='visibleItemsCount'></a>Use to set how many items should be shown at once: `$('#datePicker').igDatePicker({ listItems: ["A", "B", "C", "D"], visibleItemsCount: 2 }] })`.

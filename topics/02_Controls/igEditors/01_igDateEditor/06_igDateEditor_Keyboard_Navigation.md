@@ -18,7 +18,7 @@ This topic explains how to use keyboard navigation so that end-users can easily 
 This topic contains the following sections:
 
 -   [Keyboard interactions](#skbInteraction)
--   [Selecting the editor](#skbInteraction)
+-   [Selecting the editor](#kbInteraction)
 -   [igDateEditor specific navigation](#ddInteraction)
 
 
@@ -38,7 +38,7 @@ Press| To
 <kbd>Delete</kbd>|Delete the following part of date
 <kbd>Ctrl</kbd> + <kbd>Backspace</kbd>|Delete the previous chunk
 <kbd>Ctrl</kbd> + <kbd>Delete</kbd>|Delete the following chunk
-<kbd>Delete</kbd> + <kbd>Backspace</kbd> | Delete selected content
+<kbd>Delete</kbd> or <kbd>Backspace</kbd> | Delete selected content
 <kbd>Up Arrow</kbd>| Increment the current part of date in the input
 <kbd>Down Arrow</kbd>| Decrement the current part of date in the input
 

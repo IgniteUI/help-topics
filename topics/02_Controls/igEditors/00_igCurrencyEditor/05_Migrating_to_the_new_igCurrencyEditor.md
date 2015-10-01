@@ -66,12 +66,12 @@ buttonType|<a name='buttonType'></a>Sets gets visibility of spin, clear and drop
 listItemHoverDuration|<a name='listItemHoverDuration'></a>Use to set the hover/unhover animation duration of items inside the dropdown list: `$('#currencyEditor').igCurrencyEditor({ listItems: ["A", "B", "C", "D"], listItemHoverDuration: 400 }] })`.
 dropDownAttachedToBody|<a name='dropDownAttachedToBody'></a>Gets sets location of drop-down list.
 dropDownAnimationDuration|<a name='dropDownAnimationDuration'></a>Gets sets show/hide drop-down list animation duration in milliseconds.
-visibleItemsCount|<a name='visibleItemsCount'></a>Use to set how many items should be shown at once: `$('#currencyEditor').igCurrencyEditor({ listItems: ["A", "B", "C", "D"], visibleItemsCount: 2 }] })`.
-isLimitedToListValues|<a name='isLimitedToListValues'></a>Use to set the ability to allow values only set into the list items. This validation is done only when the editor is blured, or enter key is pressed: `$('#currencyEditor').igCurrencyEditor({ listItems: ["A", "B", "C", "D"], isLimitedToListValues: true }] })`.
+visibleItemsCount|<a name='visibleItemsCount'></a>Use to set how many items should be shown at once: `$('#currencyEditor').igCurrencyEditor({ listItems: [10, 20, 30, 40], visibleItemsCount: 2 }] })`.
+isLimitedToListValues|<a name='isLimitedToListValues'></a>Use to set the ability to allow values only set into the list items. This validation is done only when the editor is blured, or enter key is pressed: `$('#currencyEditor').igCurrencyEditor({ listItems: [10, 20, 30, 40], isLimitedToListValues: true }] })`.
 placeHolder|<a name='placeHolder'></a>Gets sets text which appears in editor when editor has no focus and "value" in editor is null or empty string.
-revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key. If set to false clear is called: `$('#currencyEditor').igCurrencyEditor({ listItems: ["A", "B", "C", "D"], isLimitedToListValues: true, revertIfNotValid: false }] })`.
+revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key. If set to false clear is called: `$('#currencyEditor').igCurrencyEditor({ listItems: [10, 20, 30, 40], isLimitedToListValues: true, revertIfNotValid: false }] })`.
 preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#currencyEditor').igCurrencyEditor({ preventSubmitOnEnter: true }] })`.
-dropDownOrientation|<a name='dropDownOrientation'></a>Use to set drop down opening orientation for the dorp down list when open button is clicked: `$('#currencyEditor').igCurrencyEditor({ listItems: ["A", "B", "C", "D"], dropDownOrientation: 'top' }] })`.
+dropDownOrientation|<a name='dropDownOrientation'></a>Use to set drop down opening orientation for the dorp down list when open button is clicked: `$('#currencyEditor').igCurrencyEditor({ listItems: [10, 20, 30, 40], dropDownOrientation: 'top' }] })`.
 suppressNotifications|<a name='suppressNotifications'></a>Disables default notifications for basic validation scenarios built in the editors such as required list selection, value wrapping around or spin limits.
 
 
@@ -91,7 +91,7 @@ findListItemIndex|Found index of list item by text that matches with the search 
 getSelectedText|Used to get selected text in editor.|This method is removed as it doesn't make sense to have such a method in numeric editor.
 getSelection|Used to get left or right edge of selection.|This method is removed as it doesn't make sense to have such a method in currency editor.
 getValueByMode|Used to get value in editor by dataMode.|This method is not supported.
-hasInvalidMessage|Used to check if invalid message is displayed.|This method is removed as its` functionality is covered by the API for the igEditorNotifier.
+hasInvalidMessage|Used to check if invalid message is displayed.|This method is removed as its` functionality is covered by the API for the igNotifier.
 mainElement|Used to get reference to jquery object which is used as top/outer element of igCurrencyEditor.|This method is renamed to `editorContainter` to better communicate what it does.
 paste|Used to paste text at location of caret.|This is renamed to `insert` and the `txt` parameter is renamed to `string` as it is a string of characters.
 remove|This was used to remove editor from its parent element, but keeps the rest of functionality|This method is not supported.
@@ -101,8 +101,6 @@ select|Used to select text in editor. Valid parameters: `sel0`, `sel1`, `val`|`s
 setFocus|Used to set focus to editor with delay.  If parameter was -1, then focus was set without delay.|It now supports only positive values for the delay and 0 is default that signifies that it is immediately given the focus.
 spin|Used to increment (positive delta) or decrement (negative delta) value in editor according to the parameter.|This method is replaced by two new methods: `spinUp` and `spinDown`. This method works only on the value and not with the dropdown navigation. For the latter you should use [selectListIndexUp](#selectListIndexUp) or [selectListIndexDown](#selectListIndexDown) method.
 text|Used to get or set text in editor.|This is replaced by a getter method `displayValue` that takes no parameters and returns a string with all the characters shown in the input.
-validate|Used to trigger validation of editor and show error message. It had a single parameter: `noLabel`|The parameter is renamed to `skipErrorMessage`.
-value|Used to get or set value in editor.|The parameter is renamed to `newValue` to better communicate what it does.
 
 <a name='new_methods'></a>
 ### New API Methods
