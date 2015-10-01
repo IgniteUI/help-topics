@@ -10,4 +10,4 @@
 
 # igCheckboxEditor Known Issues
 
-Currently there are no known issues or limitations connected to the k.
+Currently there are no known issues or limitations connected to the `igCheckboxEditor`.

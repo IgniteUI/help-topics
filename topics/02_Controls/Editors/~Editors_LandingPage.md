@@ -11,13 +11,14 @@
 # Editors
 
 
-
--   [igCurrencyEditor](igCurrencyEditor-igCurrencyEditor.html)
--   [igDateEditor](igDateEditor-igDateEditor.html)
--   [igMaskEditor](igMaskEditor-igMaskEditor.html)
+-   [igTextEditor](igTextEditor-igTextEditor.html)
 -   [igNumericEditor](igNumericEditor-igNumericEditor.html)
 -   [igPercentEditor](igPercentEditor-igPercentEditor.html)
--   [igTextEditor](igTextEditor-igTextEditor.html)
+-   [igCurrencyEditor](igCurrencyEditor-igCurrencyEditor.html)
+-   [igMaskEditor](igMaskEditor-igMaskEditor.html)
+-   [igDateEditor](igDateEditor-igDateEditor.html)
+-   [igDatePicker](igDatePicker-igDatePicker.html)
+-   [igCheckboxEditor](igCheckboxEditor-igCheckboxEditor.html)
 -   [Configuring Editors](Editors-Configure-Editors.html)
 
  
