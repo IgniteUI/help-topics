@@ -28,13 +28,13 @@ Ignite UI TypeScript 1.5 definitions | The Ignite UI TypeScript definitions now 
 ### igCombo
 Feature | Description
 ---|---
-Auto Complete | Typing in the combo will now suggests the first matching result from the list.
-Grouping | You can now group items in the combo list.
-Header and Footer Templates | Header and footer can now be configured in the combo using templates.
+Auto complete | Typing in the combo will now suggests the first matching result from the list. [View sample](%%SamplesUrl%%/combo/filtering)
+[Grouping](#combo-grouping) | You can now group items in the combo list. [View sample](%%SamplesUrl%%/combo/grouping)
+Header and Footer Templates | Header and footer can now be configured in the combo using templates. [View sample](%%SamplesUrl%%/combo/templates) 
 RTL Support | Added support for right-to-left languages.
-Dropdown Orientation | By default the dropdown list will automatically display on top or bottom depending on the available space. You can also explicilty configure its behavior with the `dropDownOrientation` option.
-Custom Values | The option `allowCustomValue` to set custom values in combo’s text input was dropped in 15.1, but we listened to your feedback and we are enabling this back in this release.
-Performance Improvements | We ensure all interactions with the combo work smoothly with more than 10 000 records. Initial loading time, dropdown opening and closing animations, selection, typing with auto complete and auto select – it all works blazing fast.
+[Dropdown Orientation](#combo-dd-orientation) | By default the dropdown list will automatically display on top or bottom depending on the available space. You can also explicilty configure its behavior with the `dropDownOrientation` option. 
+Custom Values | The option `allowCustomValue` to set custom values in combo’s text input was dropped in 15.1, but we listened to your feedback and we are enabling this back in this release. [View sample](%%SamplesUrl%%/combo/editing)
+Performance Improvements | We ensure all interactions with the combo work smoothly with more than 10 000 records. Initial loading time, dropdown opening and closing animations, selection, typing with auto complete and auto select – it all works blazing fast. 
 
 ### igDataChart
 
@@ -87,7 +87,7 @@ Feature | Description
 ### igValidator
 Feature | Description
 ---|---
-[Refactored Validator](#validator) | The Validator validator is reworked to allow flexible validation on an array of Ignite UI components, as well as standard input form elements
+[Refactored Validator](#validator) | The Validator is reworked to allow flexible validation on an array of Ignite UI components, as well as standard input form elements
 
 ### igUpload
 
@@ -107,6 +107,28 @@ Along with the standard templates for create, edit, delete, details and list tha
 #### Related Topics
 
 -   [Ignite UI Scaffolder Visual Studio extension](scaffoldertopic.html)
+
+## igCombo
+### <a id="combo-grouping"></a>
+####Grouping
+All new Grouping functionality will provide a way items to be grouped and distinguished according to categories they belong, like an employee and the department that he belongs to.
+
+![](images/combo-grouping.png)
+
+### <a id="combo-dd-orientation"></a>
+####DropDown orientation
+By default the dropdown orientation is set to 'auto' and this means that according to the available space above and below the combo, the dropdown position will be calculated automatically. You can set the value to be 'bottom' in order to open in below, and 'top' for above.
+
+#### Related Samples
+
+-   [Auto Complete](%%SamplesUrl%%/combo/filtering) 
+-   [Grouping](%%SamplesUrl%%/combo/grouping)
+-   [Header and Footer Templates](%%SamplesUrl%%/combo/templates)
+-   [Custom Values](%%SamplesUrl%%/combo/editing)
+
+
+
+
 
 ## igDataChart
 
