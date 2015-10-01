@@ -56,6 +56,8 @@ New option [rowEditDialogOptions](%%jQueryApiUrl%%/ui.igGridUpdating#options:row
 
 When editing a column with a multiline text editor, the end-user should now use ALT+ENTER key combination to insert a new line and ENTER to submit the changes as normal.
 
+Changes in the editors architecture and its implication on the integration between the editors and igGridUpdating resulted in the `valueChanged` event for the editors to fire on every character input by the end-user instead of when the editor detects blur.
+
 
 ### <a id="option-changes"></a> Option changes
 
