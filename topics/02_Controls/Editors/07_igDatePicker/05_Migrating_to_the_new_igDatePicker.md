@@ -29,7 +29,7 @@ This topic contains the following sections:
 <a name='options_changes'></a>
 ### Options changes
 
-ption| Previously| Now
+Option| Previously| Now
 ---|---|---
 animationHideDuration animationShowDuration|Used to set animation duration when dropdown list is displayed/hidden.|These options are replaced by new option `dropDownAnimationDuration` that controls the dropdown list animation duration.
 button|This option was used to set visibility of spin and dropdown button.|This option is renamed to `buttonType` to better communicate what it does.
@@ -57,7 +57,6 @@ type|Sets type of editor.|This option is removed. You can use the corresponding 
 
 <a name='new_options'></a>
 ### New options
-
 ---|---
 limitSpinToCurrentField|<a name='limitSpinToCurrentField'></a>Sets gets ability to modify only 1 date field on spin events.
 allowNullValue|<a name='allowNullValue'></a>If that option is false, and editor has no value, then value is set to an empty string.
