@@ -106,6 +106,8 @@ value|Used to get or set value in editor.|The parameter is renamed to `newValue`
 
 Method|Description
 ---|---
+getSelectedDate|Gets selected date.
+selectDate|Sets selected date.
 inputName|<a name='inputName'></a>Gets sets name attribute applied to the editor element
 displayValue|<a name='displayValue'></a>Returns a string with all the characters shown in the input.
 editorContainer|<a name='editorContainer'></a>Gets reference to jquery object which is used as top/outer element of igEditor.
