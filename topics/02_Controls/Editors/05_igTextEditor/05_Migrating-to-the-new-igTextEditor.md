@@ -37,7 +37,7 @@ display|Sets gets style.display for outer html element.|This option is removed.
 dropDownOnReadOnly|This option was used to set ability to override the "readOnly" option and allow showing the dropdown list and changing the value in the editor from a list.|This option is removed. If `readOnly` is set to `true` the dropdown list cannot be displayed.
 dropDownTriggers|Sets gets list of actions which trigger display of drop-down list or calendar.|This option is removed. Now `Alt` + `down-arrow` shows dropdown.
 focusOnSpin|If that option was disabled and the editor was not focused, then a mouse click on the spin button would keep the text in the editor in not focused format and perform spin actions.|This option is removed. Now if the editor is not focused, then a mouse click on the spin button will not focus the editor.
-height width|Previously supported type: `number`.|Now supported types are: `number`, `string`, `null`. If using type `string`, the height can be set in pixels (px) and percentage (%).
+height, width|Previously supported type: `number`.|Now supported types are: `number`, `string`, `null`. If using type `string`, the height can be set in pixels (px) and percentage (%).
 hideEnterKey|Sets gets ability to hide the Enter key from browser.|This option is removed. You can use [preventSubmitOnEnter](#preventSubmitOnEnter) option to prevent submitting when pressing Enter.
 listAutoComplete|Sets gets autocomplete.|This option is removed.
 listColumns|Sets gets number of columns in drop-down list.|This option is removed.
@@ -115,8 +115,6 @@ showDropDown|<a name='showDropDown'></a>Show the dropdown list.
 hideDropDown|<a name='hideDropDown'></a>Hide the dropdown list.
 dropDownVisible|<a name='dropDownVisible'></a>Returns the visibility state of the drop down listing the items.
 dropDownButton|<a name='dropDownButton'></a>Returns a reference to the dropdown button of the editor.
-selectListIndexUp|<a name='selectListIndexUp'></a>Moves the selection index to the item that appears above the current one in the list.
-selectListIndexDown|<a name='selectListIndexDown'></a>Moves the selection index to the item that appears above the current one in the list.
 clearButton|<a name='clearButton'></a>Returns a reference to the clear button of the editor.
 getSelectionStart|<a name='getSelectionStart'></a>Gets start index of the selected text in editor.
 getSelectionEnd|<a name='getSelectionEnd'></a>Gets end index of the selected text in editor.
