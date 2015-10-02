@@ -1,7 +1,7 @@
 <!--
 |metadata|
 {
-    "fileName": "scaffoldertopic",
+    "fileName": "mvc-scaffolding",
     "controlName": "",
     "tags": ["ASP.NET MVC","Getting Started"]
 }
