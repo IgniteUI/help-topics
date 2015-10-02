@@ -38,7 +38,7 @@ Press| To
 <kbd>Delete</kbd>|Delete the following char
 <kbd>Ctrl</kbd> + <kbd>Backspace</kbd>|Delete the previous chunk
 <kbd>Ctrl</kbd> + <kbd>Delete</kbd>|Delete the following chunk
-<kbd>Delete</kbd> + <kbd>Backspace</kbd> | Delete selected content
+<kbd>Delete</kbd> or <kbd>Backspace</kbd> | Delete selected content
 <kbd>Up Arrow</kbd>| Increment the number in the input
 <kbd>Down Arrow</kbd>| Decrement the number in the input
 
@@ -68,5 +68,6 @@ Press| To
 ---|---
 <kbd>Alt</kbd> + <kbd>Down Arrow</kbd> | Open the dropdown, when the focus is in the input
 <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> | Close the dropdown, when the focus is in the input
+<kbd>Down Arrow</kbd> or <kbd>Up Arrow</kbd> | Navigate through the list items
 <kbd>Enter</kbd> | Confirm focused item as selected
 <kbd>Enter</kbd> or <kbd>Alt</kbd> + <kbd>Up Arrow</kbd>| Reject focused item and keep old selection
