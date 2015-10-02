@@ -109,5 +109,6 @@ $('#checkInput').igCheckboxEditor({
 
 ## Related Links
 
--  
+-   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
+-   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
 
