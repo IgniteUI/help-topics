@@ -28,7 +28,7 @@ This topic contains the following sections:
 ### <a id="basicConfig"></a> Basic Configuration
 This procedure guides you through the process of configuring an igCombo editor in the igGrid.
 
-1.	Instantiate the igGrid and define a igCombo editor in the igGrid Updating’s column settings for a specific column.
+1. Instantiate the igGrid and define a igCombo editor in the igGrid Updating’s column settings for a specific column.
 
 **In JavaScript**
 
@@ -58,14 +58,15 @@ $("#gridProducts").igGrid({
 					mode: "dropdown",
 					dataSource: northWindCategoriesJSON
 					}
-			}]  }
-				]            
+					}]	
+				}
+		]            
 });
 ```
 
 > **Note:** A single instance of the igCombo will be created for the specified column and that instance will be reused when editing the different cells of that column.
 
-2.	Define additional editorOptions for the igCombo in the related column settings.
+2. Define additional editorOptions for the igCombo in the related column settings.
 
 **In JavaScript**:
 
@@ -80,8 +81,7 @@ columnSettings: [{
 		textKey: "Name",
 		valueKey: "ID"
 	}
-		}],
-
+}]
 ```
 
 The basic options that need to be defined for the combo are the following:
@@ -109,7 +109,7 @@ function formatCategoryCombo(val) {
 	return val;
 }
 ```
-3.	Observe the result.
+3. Observe the result.
 
 ![](images/igGrid_Combo_Editor_Provider_1.png)
 
@@ -120,7 +120,7 @@ If the textKey and valueKey are different and the value is of type that can’t 
 
 The following proceedure guides you through the process of creating a custom provider that extends the combo editor in order to support multiple selection for a column of type string, in which the value saved in the data source will be a coma separated list of the selected items.
 
-1.	Instantiate the igGrid and define an custom editor in the igGrid Updating’s column settings for a specific column.
+1. Instantiate the igGrid and define an custom editor in the igGrid Updating’s column settings for a specific column.
 
 **In JavaScript**
 
@@ -142,44 +142,42 @@ northWindCategoriesJSON = [
 	{ "ID": 2, "Name": "Electronics" }
 ];  
 $("#gridProducts").igGrid({
-		dataSource: northwindProductsJSON,
-		autoGenerateColumns: true,
-		primaryKey: "ID",
-		autoCommit: true,               
-		features: [
-		{
-			name: 'Updating',
-			columnSettings: [{
-				//The combo is defined as a custom editor provider. Combo options are defined under 'editorOptions'.
-				columnKey: "CategoryID",
-				editorProvider: new $.ig.ComboEditorProviderCustom(),
-				editorOptions: {
-					mode: "dropdown",
-					dataSource: northWindCategoriesJSON,
-					textKey: "Name",
-					valueKey: "Name",
-					allowCustomValue: true,
-					multiSelection: {
-						enabled: true,
-						showCheckboxes: true,
-						itemSeparator: ', '						
-					}
+	dataSource: northwindProductsJSON,
+	autoGenerateColumns: true,
+	primaryKey: "ID",
+	autoCommit: true,               
+	features: [
+	{
+		name: 'Updating',
+		columnSettings: [{
+			//The combo is defined as a custom editor provider. Combo options are defined under 'editorOptions'.
+			columnKey: "CategoryID",
+			editorProvider: new $.ig.ComboEditorProviderCustom(),
+			editorOptions: {
+				mode: "dropdown",
+				dataSource: northWindCategoriesJSON,
+				textKey: "Name",
+				valueKey: "Name",
+				allowCustomValue: true,
+				multiSelection: {
+					enabled: true,
+					showCheckboxes: true,
+					itemSeparator: ', '						
 				}
-				}]	
-				}
-				]
-			});
-		});
+			}
+		}]				
+	}]
+});
 ```
 
 In the above configuration the textKey and valueKey are set to use the same field and therefore there’s no need for specifying a formatter function.
 Also note that multiselection with checkboxes is enabled.
 
-2.	Create a custom editor provider that extends the default EditorProviderCombo and overwrite its default getValue and setValue methods.
+2. Create a custom editor provider that extends the default EditorProviderCombo and overwrite its default getValue and setValue methods.
 
 **In JavaScript**
 ```
-$.ig.ComboEditorProviderCustom = 	$.ig.EditorProviderCombo.extend({
+$.ig.ComboEditorProviderCustom = $.ig.EditorProviderCombo.extend({
 	getValue: function () {			
 	var val = this.editor.value();
 	var text= this.editor.text();
@@ -204,7 +202,7 @@ $.ig.ComboEditorProviderCustom = 	$.ig.EditorProviderCombo.extend({
 });
 ```
 
-3.	Observe the result.
+3. Observe the result.
 
 You can select multiple values from the combo, which are applied as string to the grid.
 
