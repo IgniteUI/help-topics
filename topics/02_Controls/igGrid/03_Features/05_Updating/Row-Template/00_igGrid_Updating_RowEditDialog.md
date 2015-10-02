@@ -46,9 +46,40 @@ Starting with version 12.2, the updating feature of `igGrid` provides a row edit
 
 The feature is implemented as part of grid updating. The `editMode` property has a new value added: “dialog”, apart from the “row” and “cell” which exist currently.
 
-|Property|Type|Description|Default Value|
-|---|---|---|---|
-[editMode](%%jQueryApiUrl%%/ui.igGridUpdating#options:editMode)|“row\|cell\|**dialog**\|none\|null”|The `editMode` property has a new value added, “dialog”|`row`
+<table class="table">
+	<thead>
+		<tr>
+            <th>
+Property
+			</th>
+            <th>
+Type
+			</th>
+            <th>
+Description
+			</th>
+            <th>
+Default Value
+			</th>
+        </tr>
+	</thead>
+	<tbody>
+        <tr>
+            <td>
+[editMode](%%jQueryApiUrl%%/ui.iggridupdating#options:editMode)
+			</td>
+            <td>
+“row|cell|**dialog**|none|null”
+			</td>
+            <td>
+The `editMode` property has a new value added, **dialog**
+			</td>
+            <td>
+                row
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 The row dialog is rendered as a dialog window. An example is shown below.
 
