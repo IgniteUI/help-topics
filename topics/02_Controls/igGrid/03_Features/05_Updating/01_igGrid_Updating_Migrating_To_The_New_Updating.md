@@ -19,7 +19,7 @@ This topic aims to help with migration from old igGridUpdating to the new one.
 This topic contains the following sections:
 
 -   [**General Changes**](#general)
-    -   [Dependencies] (#dependencies)
+    -   [Dependencies](#dependencies)
     -   [Enabling editing rows via a dialog](#RED)
     -   [Behavioral changes](#behavioral-changes)
 - 	[**Option changes**](#option-changes)
@@ -30,14 +30,14 @@ This topic contains the following sections:
 
 
 ## <a id="general"></a> General Changes
-### <a id="#dependencies"></a> Dependencies
+### <a id="dependencies"></a> Dependencies
 Changes and improvements in the structure and functionality in the igEditors suite that igGridUpdating uses to edit rows and cells in the grid changed the earliest jQuery and jQuery UI versions that are supported. The difference is summarized in the following table.
 
 ||Ignite UI 15.1|Ignite UI 15.2|
 |---|:---:|:---:|
 |**Earliest supported jQuery version**|1.4.4|1.9.1|
 |**Earliest supported jQuery UI version**|-|1.9.0|
-### <a id="#RED"></a> Enabling editing rows via a dialog
+### <a id="RED"></a> Enabling editing rows via a dialog
 The edit mode that enabled editing via a dialog is now named "dialog" instead of "rowedittemplate".
 The new dialog uses a different templating structure and allows building complex custom editing dialogs. For details on the new capabilities of this mode please refer to the main topic: [Row Edit Template Overview (igGrid)](igGrid-Updating-RowEditTemplate.html)
 
@@ -52,7 +52,7 @@ The table below briefly explains the user interaction capabilities of the Updati
 New option [rowEditDialogOptions](%%jQueryApiUrl%%/ui.igGridUpdating#options:rowEditDialogOptions) is added, which contains all options related to the Row Edit Dialog. 
 
 
-### <a id="##behavioral-changes"></a> Behavioral changes
+### <a id="behavioral-changes"></a> Behavioral changes
 
 When editing a column with a multiline text editor, the end-user should now use ALT+ENTER key combination to insert a new line and ENTER to submit the changes as normal.
 
