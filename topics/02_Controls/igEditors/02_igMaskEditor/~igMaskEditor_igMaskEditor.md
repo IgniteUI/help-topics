@@ -18,7 +18,6 @@ Click on the links below to find information on how to get `igMaskEditor` quickl
 -   [igMaskEditor jQuery and ASP.NET MVC Helper API Links](igMaskEditor-jQuery-API.html)
 -   [igMaskEditor Accessibility Compliance](igMaskEditor-Accessibility-Compliance.html)
 -   [igMaskEditor Known Issues](igMaskEditor-Known-Issues.html)
--   [igEditor Known Issues](igEditor-Known-Issues-ME.html)
 
  
 
