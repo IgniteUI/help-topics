@@ -38,7 +38,7 @@ Press| To
 <kbd>Delete</kbd>|Delete the following char
 <kbd>Ctrl</kbd> + <kbd>Backspace</kbd>|Delete the previous part of date
 <kbd>Ctrl</kbd> + <kbd>Delete</kbd>|Delete the following chunk
-<kbd>Delete</kbd> + <kbd>Backspace</kbd> | Delete the following part of date
+<kbd>Delete</kbd> or <kbd>Backspace</kbd> | Delete the following part of date
 <kbd>Up Arrow</kbd>| Increment the current part of date in the input
 <kbd>Down Arrow</kbd>| Decrement the current part of date in the input
 
@@ -68,9 +68,9 @@ Press| To
 <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> | Close the dropdown, when the focus is in the input
 <kbd>Down Arrow</kbd> | | Spin down the current part of date depending on the position of the mouse indicator
 <kbd>Up Arrow</kbd> | Spin up the current part of date depending on the position of the mouse indicator
-<kbd>Right Arrow</kbd> | Move to the next item in the calendar for the current part of date.
-<kbd>Left Arrow</kbd> | Move to the previous item in the calendar for the current part of date.
-<kbd>Down Arrow</kbd> | Move from month to date, when the focus is in the month OR move to the below row of dates, if the focus is on a date.
-<kbd>Up Arrow</kbd> | Move from date to month, when the focus is on the date at the top row of the calendar OR to move to the above row, when the focus is on date in a row different than the top one of the calendar.
+<kbd>Ctrl</kbd> + <kbd>Right Arrow</kbd> | Move to the next item in the calendar for the current part of date.
+<kbd>Ctrl</kbd> + <kbd>Left Arrow</kbd> | Move to the previous item in the calendar for the current part of date.
+<kbd>Ctrl</kbd> + <kbd>Down Arrow</kbd> | Move from month to date, when the focus is in the month OR move to the below row of dates, if the focus is on a date.
+<kbd>Ctrl</kbd> + <kbd>Up Arrow</kbd> | Move from date to month, when the focus is on the date at the top row of the calendar OR to move to the above row, when the focus is on date in a row different than the top one of the calendar.
 <kbd>Enter</kbd> | Confirm focused item as selected
 <kbd>Enter</kbd> or <kbd>Alt</kbd> + <kbd>Up Arrow</kbd>| Reject focused item and keep old selection
