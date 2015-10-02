@@ -38,7 +38,7 @@ Press| To
 <kbd>Delete</kbd>|Delete the following char
 <kbd>Ctrl</kbd> + <kbd>Backspace</kbd>|Delete the previous chunk
 <kbd>Ctrl</kbd> + <kbd>Delete</kbd>|Delete the following chunk
-<kbd>Delete</kbd> + <kbd>Backspace</kbd> | Delete selected content
+<kbd>Delete</kbd> or <kbd>Backspace</kbd> | Delete selected content
 <kbd>Enter</kbd> and <kbd>Alt</kbd> + <kbd>Enter</kbd>  | Go to new row in multiline text editor
 
 ## <a id="kbInteraction"></a>Selecting the editor
