@@ -227,12 +227,12 @@ The Filtering and Paging features are shown to include commented out option valu
 	<table id="treegrid"></table>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="http://localhost/ig_ui15.1/js/infragistics.loader.js"></script>
+    <script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.loader.js"></script>
 	<script type="text/javascript">
 
         $.ig.loader({
-            scriptPath: 'http://localhost/ig_ui15.1/js/',
-            cssPath: 'http://localhost/ig_ui15.1/css/',
+            scriptPath: 'http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/',
+            cssPath: 'http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/css/',
             resources: 'igTreeGrid.Filtering.Paging.Sorting',
             ready: function () {
 
