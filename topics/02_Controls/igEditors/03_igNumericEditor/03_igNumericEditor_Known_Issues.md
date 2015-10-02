@@ -11,6 +11,11 @@
 # igNumericEditor Known Issues
 
 
+**Known Issues**
+
+Currently there are no known issues or limitations connected to the `igNumericEditor`.
+
+
  
 
  
