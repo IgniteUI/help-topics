@@ -39,7 +39,7 @@ Changes and improvements in the structure and functionality in the igEditors sui
 |**Earliest supported jQuery UI version**|-|1.9.0|
 ### <a id="RED"></a> Enabling editing rows via a dialog
 The edit mode that enabled editing via a dialog is now named "dialog" instead of "rowedittemplate".
-The new dialog uses a different templating structure and allows building complex custom editing dialogs. For details on the new capabilities of this mode please refer to the main topic: [Row Edit Template Overview (igGrid)](igGrid-Updating-RowEditTemplate.html)
+The new dialog uses a different templating structure and allows building complex custom editing dialogs. For details on the new capabilities of this mode please refer to the main topic: [Row Edit Dialog Overview (igGrid)](igGrid-Updating-RowEditDialog.html)
 
 Declaration example:
 
