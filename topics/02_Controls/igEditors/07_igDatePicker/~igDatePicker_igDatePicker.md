@@ -17,7 +17,6 @@ Click on the links below to find information on how to get `igDatePicker` quickl
 -   [igDatePicker jQuery and ASP.NET MVC Helper API Links](igDatePicker-jQuery-API.html)
 -   [igDatePicker Accessibility Compliance](igDatePicker-Accessibility-Compliance.html)
 -   [igDatePicker Known Issues](igDatePicker-Known-Issues.html)
--   [igEditor Known Issues](igEditor-Known-Issues-DP.html)
 -   [Migrating to the new igDatePicker](Migrating-to-the-new-igDatePicker.html)
 -   [igDatePicker Keyboard Navigation](igDatePicker-Keyboard-Navigation.html)
 
