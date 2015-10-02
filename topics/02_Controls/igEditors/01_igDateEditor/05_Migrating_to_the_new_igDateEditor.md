@@ -35,17 +35,17 @@ animationHideDuration animationShowDuration|Used to set animation duration when 
 button|This option was used to set visibility of spin and dropdown button.|This option is renamed to `buttonType` to better communicate what it does.
 dataMode|Members of type 'string' and 'number' were supported.|Members of type 'number' are not supported.
 display|Sets gets style.display for outer html element.|This option is removed.
-dropDownOnReadOnly|This option was used to set ability to override the "readOnly" option and allow showing the dropdown list and changing the value in the editor from a list.|This option is no longer available for the mask editor.
-dropDownTriggers|Sets gets list of actions which trigger display of drop-down list or calendar.|This option is no longer available for the mask editor.
+dropDownOnReadOnly|This option was used to set ability to override the "readOnly" option and allow showing the dropdown list and changing the value in the editor from a list.|This option is no longer available for the date editor.
+dropDownTriggers|Sets gets list of actions which trigger display of drop-down list or calendar.|This option is no longer available for the date editor.
 focusOnSpin|If that option was disabled and the editor was not focused, then a mouse click on the spin button would keep the text in the editor in not focused format and perform spin actions.|This option is removed. Now if the editor is not focused, then a mouse click on the spin button will not focus the editor.
 height, width|Previously supported type: `number`.|Now supported types are: `number`, `string`, `null`. If using type `string`, the height can be set in pixels (px) and percentage (%).
 hideEnterKey|Sets gets ability to hide the Enter key from browser.|This option is removed. You can use [preventSubmitOnEnter](#preventSubmitOnEnter) option to prevent submitting when pressing Enter.
 listAutoComplete|Sets gets autocomplete.|This option is removed.
 listColumns|Sets gets number of columns in drop-down list.|This option is removed.
-listDropDownAsChild |Value `true` created html element for list as a child of main html element. Value `false` created list as a child of body.|This option is no longer available for the mask editor.
+listDropDownAsChild |Value `true` created html element for list as a child of main html element. Value `false` created list as a child of body.|This option is no longer available for the date editor.
 listMatchContains|Sets gets list match contains.|This option is removed.
 listMatchIgnoreCase|Sets gets case validation.|This option is removed. 
-listMaxHeight|Used to set maximum height of dropdown list in pixels.|This option is no longer available for the mask editor.
+listMaxHeight|Used to set maximum height of dropdown list in pixels.|This option is no longer available for the date editor.
 listWidth|Sets gets custom width of drop-down list in pixels. If value is equal to 0 or negative, then the width of editor is used.|This option is removed.
 nullable|This option was used to set ability to prevent null value.|This option is renamed to `allowNullValue` to better communicate what it does.
 nullText|Used to set text which appears in editor when editor has no focus and "value" in editor is null or empty string.|This option is renamed to `placeHolder` to better communicate what it does.
