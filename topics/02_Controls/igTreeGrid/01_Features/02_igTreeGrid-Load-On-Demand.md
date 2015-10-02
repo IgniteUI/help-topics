@@ -52,7 +52,7 @@ and as visible, the child record's key value is "5", producing a path of `2/5` f
 
 To quickly get enable the Load on demand functionality of the Tree Grid follow the steps.
 
-1. Define `igTreeGridModel` in the View. Set [`EnableRemoteLoadOnDemand`](Infragistics.Web.Mvc~Infragistics.Web.Mvc.TreeGridModel~LoadOnDemand.html) to `true` and [`DataSourceUrl`](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridModel~DataSourceUrl.html) to the endpoint URL that will handle the requests:
+1. Define `igTreeGridModel` in the View. Set [`EnableRemoteLoadOnDemand`](Infragistics.Web.Mvc~Infragistics.Web.Mvc.TreeGridModel~EnableRemoteLoadOnDemand.html) to `true` and [`DataSourceUrl`](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridModel~DataSourceUrl.html) to the endpoint URL that will handle the requests:
 	**In CSHTML:**
 
 	```csharp
@@ -66,11 +66,11 @@ To quickly get enable the Load on demand functionality of the Tree Grid follow t
         .Columns(column =>
         {
             column.For(x => x.ID).HeaderText("ID").DataType("number").Width("10%");
-            column.For(x => x.FirstName).HeaderText("$$(Northwind_Employees_FirstName)").DataType("string").Width("25%");
-            column.For(x => x.LastName).HeaderText("$$(Northwind_Employees_LastName)").DataType("string").Width("15%");
-            column.For(x => x.Email).HeaderText("$$(Northwind_Employees_Email)").DataType("string").Width("25%");
-            column.For(x => x.Title).HeaderText("$$(Northwind_Employees_Title)").DataType("string").Width("25%");
-            column.For(x => x.HireDate).HeaderText("$$(Employees_HireDate)").DataType("date").Width("10%");
+            column.For(x => x.FirstName).HeaderText("First Name)").DataType("string").Width("25%");
+            column.For(x => x.LastName).HeaderText("Last Name)").DataType("string").Width("15%");
+            column.For(x => x.Email).HeaderText("Email)").DataType("string").Width("25%");
+            column.For(x => x.Title).HeaderText("Title)").DataType("string").Width("25%");
+            column.For(x => x.HireDate).HeaderText("Hire Date)").DataType("date").Width("10%");
 
         })
         .PrimaryKey("ID")
@@ -95,7 +95,8 @@ To quickly get enable the Load on demand functionality of the Tree Grid follow t
             return View("load-on-demand", allData);
         }
 ```
-	> Note: The `igTreeGrid` will provide as much information as possbile to determine the requested data and using it entirely depends on the level of funtionality required. For example if the underlying data has a unique **primary keys** the last identifier (or `identifiers[depth]`) can be used to access the expanded record directly. Also the provided key name parameter can be used to either assign Routing rules for separate data views or in the creation of a predicate string used for querying the source.
+
+> Note: The `igTreeGrid` will provide as much information as possbile to determine the requested data and using it entirely depends on the level of funtionality required. For example if the underlying data has a unique **primary keys** the last identifier (or `identifiers[depth]`) can be used to access the expanded record directly. Also the provided key name parameter can be used to either assign Routing rules for separate data views or in the creation of a predicate string used for querying the source.
 
 ## <a id="related-content"></a> Related Content
 
