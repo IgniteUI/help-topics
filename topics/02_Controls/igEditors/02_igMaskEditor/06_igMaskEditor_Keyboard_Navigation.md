@@ -37,7 +37,7 @@ Press| To
 <kbd>Delete</kbd>|Delete the following char
 <kbd>Ctrl</kbd> + <kbd>Backspace</kbd>|Delete the previous chunk
 <kbd>Ctrl</kbd> + <kbd>Delete</kbd>|Delete the following chunk
-<kbd>Delete</kbd> + <kbd>Backspace</kbd> | Delete selected content
+<kbd>Delete</kbd> or <kbd>Backspace</kbd> | Delete selected content
 
 ## <a id="kbInteraction"></a>Selecting the editor
 
