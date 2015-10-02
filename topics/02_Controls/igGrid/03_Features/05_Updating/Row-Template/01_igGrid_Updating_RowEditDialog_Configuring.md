@@ -73,7 +73,7 @@ captionLabel| Specifies the caption of the dialog. If not set $.ig.GridUpdating.
 
 
 ## <a id="javascript"></a> Configuring Row Edit Dialog in JavaScript
-This procedure guides you through the process of configuring row edit template in the `igGrid`.
+This procedure guides you through the process of configuring row edit dialog in the `igGrid`.
 
 ### <a id="js-overview"></a> Overview
 
@@ -88,7 +88,7 @@ Following is a conceptual overview of the process:
 
 ### <a id="js-steps"></a> Steps
 
-The following steps demonstrate how to configure Row Edit Template in the `igGrid`.
+The following steps demonstrate how to configure Row Edit Dialog in the `igGrid`.
 
 1. Reference the required JavaScript and CSS files. <a id="js-reference-resources"></a>
 
@@ -128,7 +128,7 @@ The following steps demonstrate how to configure Row Edit Template in the `igGri
 
 3. Define a template element for the Row Edit Dialog Template <a id="js-define-template"></a>
 
-	The following code defines a template element which is used as a row template for the row edit template to specify custom formatting and styling.
+	The following code defines a template element which is used as a row template for the row edit dialog to specify custom formatting and styling.
 	
 	**In HTML:**
 	
@@ -225,7 +225,7 @@ The following steps demonstrate how to configure Row Edit Template in the `igGri
 
 
 
-## <a id="mvc"></a> Configuring a Row Edit Template in ASP.NET MVC
+## <a id="mvc"></a> Configuring a Row Edit Dialog in ASP.NET MVC
 
 This procedure guides you through the process of configuring a Row Edit Dialog in the `igGrid`.
 
@@ -252,7 +252,7 @@ Following is a conceptual overview of the process:
 
 ### <a id="mvc-steps"></a> Steps
 
-The following steps demonstrate how to configure a Row Edit Template in `igGrid`.
+The following steps demonstrate how to configure a Row Edit Dialog in `igGrid`.
 
 
 1. Reference the required JavaScript and CSS files <a id="mvc-reference-resources"></a>
@@ -410,7 +410,7 @@ The following steps demonstrate how to configure a Row Edit Template in `igGrid`
 
 The following topics provide additional information related to this topic.
 
-- [Row Edit Dialog](igGrid-Updating-RowEditDialog.html): This document explains the specific properties and methods used with Row Edit Templates
+- [Row Edit Dialog](igGrid-Updating-RowEditDialog.html): This document explains the specific properties and methods used with Row Edit Dialog
 
 
 
@@ -418,7 +418,7 @@ The following topics provide additional information related to this topic.
 
 The following samples provide additional information related to this topic.
 
-- [Row Edit Dialog](%%SamplesUrl%%/grid/row-edit-dialog): This sample shows how to configure a Row Edit Template in the `igGrid`
+- [Row Edit Dialog](%%SamplesUrl%%/grid/row-edit-dialog): This sample shows how to configure a Row Edit Dialog in the `igGrid`
 
 - [HierarchicalGrid Row Edit Dialog](%%SamplesUrl%%/hierarchical-grid/row-edit-dialog): This sample shows how to configure a Row Edit Dialog in the `igHierarchicalGrid`
 
