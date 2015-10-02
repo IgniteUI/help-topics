@@ -46,43 +46,9 @@ Starting with version 12.2, the updating feature of `igGrid` provides a row edit
 
 The feature is implemented as part of grid updating. The `editMode` property has a new value added: “dialog”, apart from the “row” and “cell” which exist currently.
 
-<table class="table">
-	<thead>
-		<tr>
-            <th>
-Property
-			</th>
-            <th>
-Type
-			</th>
-            <th>
-Description
-			</th>
-            <th>
-Default Value
-			</th>
-        </tr>
-	</thead>
-	<tbody>
-        <tr>
-            <td>
-[editMode](%%jQueryApiUrl%%/ui.iggridupdating#options:editMode)
-			</td>
-            <td>
-“row|cell|**dialog**|none|null”
-			</td>
-            <td>
-The `editMode` property has a new value added, “dialog”
-			</td>
-
-            <td>
-                <ul>row</ul>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-
+|Property|Type|Description|Default Value|
+|---|---|---|---|
+[editMode](%%jQueryApiUrl%%/ui.igGridUpdating#options:editMode)|“row\|cell\|**dialog**\|none\|null”|The `editMode` property has a new value added, “dialog”|`row`
 
 The row dialog is rendered as a dialog window. An example is shown below.
 
@@ -98,7 +64,7 @@ The rendering of disabled editors (marked with `readOnly`: true) is controlled b
 
 There is validation integration in the row edit dialog. The validation is performed by reading the `validation` property for column settings. Validation messages are rendered inline in the row edit dialog when the end user types something which isn’t allowed.
 
-You can use the public API methods `startEdit` and `closeEdit` in order to open/close the row edit dialog.
+You can use the public API methods [startEdit](%%jQueryApiUrl%%/ui.igGridUpdating#methods:startEdit) and [endEdit](%%jQueryApiUrl%%/ui.igGridUpdating#methods:endEdit) in order to open/close the row edit dialog.
 
 
 
@@ -110,99 +76,98 @@ The row dialog can be defined in the ways listed below:
 
 1.  Automatically generated row edit dialog
 
-	The row edit dialog is automatically generated, based on the data types of the columns. In this case, the row edit dialog uses the `columnSettings` of the updating feature in order to determine what kind of editor will be rendered.
+	When neither of the template settings are used the widget generates a default dialog containing a table with two columns. The left column displays the header texts for each column in the grid while the right column contains editors the type of which is based on the `columnSettings` for that column and its data type.
 
 	**In JavaScript:**
 	
 	```js
 	{
-	    name: "Updating",
-	    enableAddRow: true,
-	    editMode: "dialog",
-	    enableDeleteRow: true,	  
-	    columnSettings:
-	    [
-	        {
-	            columnKey: "OrderID",
-	            readOnly: true
-	        },
-	        {
-	            columnKey: "ShipName",
-	            defaultValue: names[1],
-	            editorOptions: {
-	                button: "dropdown",
-	                listItems: names,
-	                readOnly: true,
-	                dropDownOnReadOnly: true
-	            }
-	        }
-	    ]
+		name: "Updating",
+		enableAddRow: true,
+		editMode: "dialog",
+		enableDeleteRow: true,
+		columnSettings: [
+			{
+				columnKey: "OrderID",
+				readOnly: true
+			},
+			{
+				columnKey: "ShipName",
+				defaultValue: names[1],
+				editorOptions: {
+					button: "dropdown",
+					listItems: names,
+					readOnly: true,
+					dropDownOnReadOnly: true
+				}
+			}
+		]
 	}
 	```
 
 2.  Specified as a template string using the `dialogTemplate` and `editorsTemplate` properties.
 
-	If these options are specified, then the custom template is used for the row edit dialog.
+	If one or both of these options is set the widget will create the dialog using the templating engine of choice. 
 	
-    Inside the dialogTemplate, the element marked with the `data-render-tmpl` attribute is the elemenent in which the control should render the editors template specified in the editorsTemplate option for the currently edited row.
-    
-	In the editorsTemplate, `${headerText}` references the header text of the column and `${key}` references the column key. The element marked with the `data-editor-for-{key}` attribute is the element to be used as an editor.   
-    
-	These property can be used to format and style the row edit dialog.
+	2.1. `dialogTemplate` is a template rendered against the record currently being edited. Users can utilize any of the properties native to the elements in the grid's data source in this template.
+	After the template renders the widget searches for elements marked with the following special attributes
+
+	- `data-editor-for-<columnKey>` - where <columnKey> is the key of one of the grid's columns. An editor is created for each of these elements as long as only one element passes the criteria per column.
+	
+	- `data-render-tmpl` - the element marked with this attribute is used as a container for the template specified in the `editorsTemplate` option. If no element with this attribute is found, the template specified by the `editorsTemplate` will not be executed.
+
+	2.2. `editorsTemplate` is a template rendered against a collection of columns that be modified internally by the options `showReadonlyEditors` and `showEditorsForHiddenColumns`. These two options control which columns will be included in the collection passed to the templating engine. Additionally, columns that have editors specified in the `dialogTemplate` are excluded. All of the properties native to the grid's column collection objects can be used in this template. Editors are still expected to have the `data-editor-for-<columnKey>` attribute, however, its application should be left to the templating engine using a `${key}` template tag (e.g. `data-editor-for-${key}`) or similar based on the templating engine of choice.
 	
 	**In ASPX:**
 	
 	```csharp
-	<%= (Html.Infragistics().Grid(Model).ID("grid1").Height("400px").Width("100%")”
+	<%= (Html.Infragistics().Grid(Model).ID("grid1").Height("400px").Width("100%")
 		// Grid Definition
-		.Features(features =>
-		{features.Updating()                
-		.EditMode(GridEditMode.rowEditTemplate)
-		.ShowReadonlyEditors(true)
-		.StartEditTriggers(GridStartEditTriggers.Click)
-		 .RowEditDialogOptions(options =>
-       {
-           options.Containment("owner")
-           .DialogTemplate("<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>")
-           .EditorsTemplate("<tr><td>${headerText}</td><td><input data-editor-for-${key} /></td></tr>")
-           .Width("400px");
-       });
+		.Features(features => {
+			features.Updating()                
+				.EditMode(GridEditMode.Dialog)
+				.ShowReadonlyEditors(true)
+				.StartEditTriggers(GridStartEditTriggers.Click)
+				.RowEditDialogOptions(options => {
+		           		options.Containment("owner")
+		           		.DialogTemplate("<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>")
+		           		.EditorsTemplate("<tr><td>${headerText}</td><td><input data-editor-for-${key} /></td></tr>")
+		           		.Width("400px");
+			});
 		})
 		.DataBind()
-		.Render()%>
+		.Render()
+	%>
 	```
 	
 	**In JavaScript:**
 	
 	```js
 	features: [
-	{ 
-		name: "Updating",
-		startEditTriggers: 'enter dblclick',    
-		editMode: 'dialog',      
-		showReadonlyEditors: false,      
-	  	rowEditDialogOptions: {
-                    editorsColumnWidth: 100,
-                    dialogTemplate: "<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>",
-                   editorsTemplate: "<tr><td>${headerText}</td><td><input data-editor-for-${key} /></td></tr>"
-        }
-	},
+		{ 
+			name: "Updating",
+			startEditTriggers: 'enter,dblclick',    
+			editMode: 'dialog',      
+			showReadonlyEditors: false,      
+		  	rowEditDialogOptions: {
+				editorsColumnWidth: 100,
+				dialogTemplate: "<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>",
+				editorsTemplate: "<tr><td>${headerText}</td><td><input data-editor-for-${key} /></td></tr>"
+			}
+		}
+	]
 	```
 
 3.  Referencing a template element using the `dialogTemplateSelector` and the `editorsTemplateSelector` properties.
 
-	The `dialogTemplateSelector` and the `editorsTemplateSelector` properties point to the IDs of the `x-jquery-tmpl` templates.
-	
-	Inside the template for the editorsTemplateSelector `${headerText}` references the header text of the column and `${key}` references the column key.
-	
-	The property can be used to format and style the row edit dialog.
+	Every rule from 2. applies here as well. The selector properties should be used when it is more convenient for the template to be added to the page html instead of passed as a string to the control.
 	
 	If both `editorsTemplateSelector` and `editorsTemplate` are specified, then `editorsTemplateSelector` is used. Same applies to the `dialogTemplateSelector` and the `dialogTemplate` options.
 	
 	**In JavaScript:**
 	
 	```js
-		<script id="dialogTemplate" type="text/html">	
+	<script id="dialogTemplate" type="text/html">	
 		<div style="float: left;">
 			<strong>${Name}</strong><br />
 			<table style="width: 100%;">
@@ -225,34 +190,40 @@ The row dialog can be defined in the ways listed below:
 	//Inside the grid Definition
 	..    
 	features: [      
-	{
-	    name: 'Updating',
-	    startEditTriggers: 'enter dblclick',
-	    editMode: 'dialog',	    
-	    showReadonlyEditors: false,
-	   	rowEditDialogOptions:{
-       		dialogTemplateSelector: "#dialogTemplate",
-			editorsTemplateSelector: "#editorsTemplate"
-		},
-	    columnSettings: [{
-	          columnKey: "ProductID",
-	          editorType: 'numeric',
-	          readOnly: true
-	    }, {
-	          columnKey: "ProductDescription",
-	          editorOptions: { readOnly: true }
-	    }, {
-	          columnKey: "DateCol",
-	          editorType: 'datepicker',
-	          validation: true,
-	          editorOptions: { required: true }
-	    }, {
-	          columnKey: "UnitPrice",
-	          editorType: 'currency',
-	          validation: true,
-	          editorOptions: { button: 'spin', required: true }
-	    }]
-	}]
+		{
+			name: 'Updating',
+			startEditTriggers: 'enter,dblclick',
+			editMode: 'dialog',	    
+			showReadonlyEditors: false,
+			rowEditDialogOptions: {
+				dialogTemplateSelector: "#dialogTemplate",
+				editorsTemplateSelector: "#editorsTemplate"
+			},
+			columnSettings: [
+				{
+					columnKey: "ProductID",
+					editorType: 'numeric',
+					readOnly: true
+				},
+				{
+					columnKey: "ProductDescription",
+					editorOptions: { readOnly: true }
+				},
+				{
+					columnKey: "DateCol",
+					editorType: 'datepicker',
+					validation: true,
+					editorOptions: { required: true }
+				},
+				{
+					columnKey: "UnitPrice",
+					editorType: 'currency',
+					validation: true,
+					editorOptions: { button: 'spin', required: true }
+				}
+			]
+		}
+	]
 	…
 	```
 
@@ -280,7 +251,7 @@ The following summarizes the purpose and functionality of the unbound columns’
 
 - [dialogTemplate](%%jQueryApiUrl%%/ui.iggridupdating#options:rowEditDialogOptions.dialogTemplate:"")
 
-	Specifies a template to be rendered against the currently edited record (or up-to-date key-value pairs in the case of not yet
+	Specifies a template to be rendered against the currently edited record (or default key-value pairs in the case of not yet
 					created records). It may contain an element decorated with the 'data-render-tmpl' attribute to specify where the control should render the
 					editors template specified in the editorsTemplate option. For custom dialogs, the elements can be decorated with 'data-editor-for-<columnKey>'
 					attributes where columnKey is the key of the column that editor or input will be used to edit.
@@ -291,15 +262,16 @@ The default template is `<table><colgroup><col></col><col></col></colgroup><tbod
 	
 	```js
 	features: [
-	{ 
-		name: "Updating",
-		startEditTriggers: 'enter dblclick',    
-		editMode: 'rowedittemplate',      
-		showReadonlyEditors: false,      
-		rowEditDialogOptions:{
-        dialogTemplate:"<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>"
+		{ 
+			name: "Updating",
+			startEditTriggers: 'enter,dblclick',    
+			editMode: 'dialog',      
+			showReadonlyEditors: false,      
+			rowEditDialogOptions: {
+	        		dialogTemplate:"<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>"
+			}
 		}
-	},
+	]
 	```
     
 - [editorsTemplate](%%jQueryApiUrl%%/ui.iggridupdating#options:rowEditDialogOptions.editorsTemplate:"")
@@ -313,26 +285,27 @@ The default template is `<table><colgroup><col></col><col></col></colgroup><tbod
 	
 	```js
 	features: [
-	{ 
-		name: "Updating",
-		startEditTriggers: 'enter dblclick',    
-		editMode: 'rowedittemplate',      
-		showReadonlyEditors: false,      
-		rowEditDialogOptions:{
-        dialogTemplate:"<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>"
+		{ 
+			name: "Updating",
+			startEditTriggers: 'enter,dblclick',    
+			editMode: 'dialog',      
+			showReadonlyEditors: false,      
+			rowEditDialogOptions: {
+				dialogTemplate:"<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>"
+			}
 		}
-	},
+	]
 	``` 
 
 - [dialogTemplateSelector](%%jQueryApiUrl%%/ui.iggridupdating#options:rowEditDialogOptions.dialogTemplateSelector)
 
-	Specifies a selector to a template rendered against the currently edited record (or up-to-date key-value pairs in the case of not yet created records). It may contain an element decorated with the 'data-render-tmpl' attribute to specify where the control should render the editors template specified in the editorsTemplate option. For custom dialogs, the elements can be decorated with 'data-editor-for-<columnKey>'	attributes where columnKey is the key of the column that editor or input will be used to edit. If both editorsTemplate and editorsTemplateSelector are specified, editorsTemplateSelector will be used.	The default template is `<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>`.
+	Specifies a selector to a template rendered against the currently edited record (or default key-value pairs in the case of not yet created records). It may contain an element decorated with the 'data-render-tmpl' attribute to specify where the control should render the editors template specified in the editorsTemplate option. For custom dialogs, the elements can be decorated with 'data-editor-for-<columnKey>'	attributes where columnKey is the key of the column that editor or input will be used to edit. If both editorsTemplate and editorsTemplateSelector are specified, editorsTemplateSelector will be used.	The default template is `<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>`.
 	
 **In JavaScript:**
 	
 ```js
 	
-<script id="dialogTemplate" type="text/html">
+	<script id="dialogTemplate" type="text/html">
 		<div style="float: left;">
 			<strong>${Name}</strong><br />
 			<table style="width: 100%;">
@@ -410,78 +383,13 @@ Each handler function takes arguments `evt` and `ui`. You can use `ui.owner` to 
 
 To get a reference to the current data row you should use `ui.dialogElement.data('tr')`.
 
-<table class="table table-bordered">
-	<thead>
-		<tr>
-            <th>
-Event
-			</th>
-            <th>
-Description
-			</th>
-        </tr>
-	</thead>
-	<tbody>
-        <tr>
-            <td>
-[rowEditDialogBeforeOpen](%%jQueryApiUrl%%/ui.iggridupdating#events:rowEditDialogBeforeOpen)
-			</td>
-            <td>
-This event is fired before the row edit dialog is opened. It is not cancelable. <br />
-                
-**In JavaScript:**
-<pre>
-	<code>
- $(document).delegate(".selector", "iggridupdatingroweditdialogbeforeopen", function (evt, ui) { 
-   // get reference to igGridUpdating widget
-   ui.owner;
-
-   // get reference to the row edit dialog DOM element
-   ui.dialogElement;                   
-   });
-	</code>
-</pre>
-			</td>
-        </tr>
-
-        <tr>
-            <td>
-[rowEditDialogAfterOpen](%%jQueryApiUrl%%/ui.iggridupdating#events:rowEditDialogAfterOpen)
-			</td>
-            <td>
-This event is fired after the row edit dialog is opened.
-			</td>
-        </tr>
-        <tr>
-            <td>
-[rowEditDialogContentsRendered](%%jQueryApiUrl%%/ui.iggridupdating#events:rowEditDialogContentsRendered)
-			</td>
-            <td>
-This event is fired after the contents of the row edit dialog are rendered.
-			</td>
-        </tr>
-
-        <tr>
-            <td>
-[rowEditDialogBeforeClose](%%jQueryApiUrl%%/ui.iggridupdating#events:rowEditDialogBeforeClose)
-			</td>
-            <td>
-This event is fired before the row edit dialog is closed. It is not cancelable.
-			</td>
-        </tr>
-
-        <tr>
-            <td>
-[rowEditDialogAfterClose](%%jQueryApiUrl%%/ui.iggridupdating#events:rowEditDialogAfterClose)
-			</td>
-            <td>
-                <ul>This event is fired after the row edit dialog is closed.</ul>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-
+|Event|Description|
+|---|---|
+|[rowEditDialogBeforeOpen](%%jQueryApiUrl%%/ui.iggridupdating#events:rowEditDialogBeforeOpen)|This event is fired before the row edit dialog is opened. It is not cancelable.|
+|[rowEditDialogAfterOpen](%%jQueryApiUrl%%/ui.iggridupdating#events:rowEditDialogAfterOpen)|This event is fired after the row edit dialog is opened.|
+|[rowEditDialogContentsRendered](%%jQueryApiUrl%%/ui.iggridupdating#events:rowEditDialogContentsRendered)|This event is fired after the contents of the row edit dialog are rendered.|
+|[rowEditDialogBeforeClose](%%jQueryApiUrl%%/ui.iggridupdating#events:rowEditDialogBeforeClose)|This event is fired before the row edit dialog is closed. It is not cancelable.|
+|[rowEditDialogAfterClose](%%jQueryApiUrl%%/ui.iggridupdating#events:rowEditDialogAfterClose)|This event is fired after the row edit dialog is closed.|
 
 ## <a id="related-content"></a> Related Content
 

@@ -1,14 +1,23 @@
-﻿<!--
+<!--
 |metadata|
 {
     "fileName": "accessibility-compliance",
     "controlName": [],
-    "tags": []
+    "tags": ["Accessibility", "Section 508", "WAI-ARIA"]
 }
 |metadata|
 -->
 
 # Accessibility Compliance
+
+### In this topic
+
+This topic contains the following sections:
+
+-	[Section 508 Compliance](#section-508)
+-	[WAI-ARIA Support](#wai-aria)
+
+## <a id="section-508"></a>Section 508 Compliance
 
 [Section 508](http://www.section508.gov/) of the Rehabilitation Act was amended in 1998 by Congress to require all Federal agencies to make their electronic and information technology accessible to people with disabilities. Since then, Section 508 compliance has not only been a requirement in government agencies, but it's also important when providing software solutions and designing Web pages.
 
@@ -1223,3 +1232,12 @@ Legend |
  - **o** - A method shall be provided that permits users to skip repetitive navigation links.
 
  - **p** - When a timed response is required, the user shall be alerted and given sufficient time to indicate more time is required.
+
+## <a id="wai-aria"></a>WAI-ARIA Support
+
+In 2014 the W3C finalized their [WAI-ARIA specification](http://www.w3.org/TR/wai-aria/) which defined how to design Web content and Web applications to be more accessible to users with disabilities.
+
+The list below provides links to more details on how WAI-ARIA support has been implemented in various controls.
+
+[igGrid](iggrid-accessibility-compliance.html#wai-aria)
+[igHierarchicalGrid](ighierarchicalgrid-accessibility-compliance#wai-aria)

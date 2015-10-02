@@ -136,6 +136,11 @@ The following table maps the desired behaviors to property settings. The propert
 			<td>[caseSensitive](%%jQueryApiUrl%%/ui.igCombo#options:caseSensitive)</td>
 			<td>true</td>
 		</tr>
+		<tr>
+			<td>Enable auto-complete</td>
+			<td>[autoComplete](%%jQueryApiUrl%%/ui.igCombo#options:autoComplete)</td>
+			<td>true</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -199,6 +204,37 @@ The following settings demonstrate how to configure the auto-suggest behavior to
 		</tr>
 		<tr>
 			<td>[caseSensitive](%%jQueryApiUrl%%/ui.igCombo#options:caseSensitive)</td>
+			<td>true</td>
+		</tr>
+	</tbody>
+</table>
+
+###Example: auto-suggest with auto-complete and local filtering
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Property</th>
+			<th>Setting</th>
+			<th>Preview</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>[filteringType](%%jQueryApiUrl%%/ui.igCombo#options:filteringType)</td>
+			<td>local</td>
+			<td rowspan="4">![](images/igCombo_Auto_Complete.png)</td>
+		</tr>
+		<tr>
+			<td>[highlightMatchesMode](%%jQueryApiUrl%%/ui.igCombo#options:highlightMatchesMode)</td>
+			<td>startsWith</td>
+		</tr>
+		<tr>
+			<td>[filteringCondition](%%jQueryApiUrl%%/ui.igCombo#options:filteringCondition)</td>
+			<td>startsWith</td>
+		</tr>
+		<tr>
+			<td>[autoComplete](%%jQueryApiUrl%%/ui.igCombo#options:autoComplete)</td>
 			<td>true</td>
 		</tr>
 	</tbody>

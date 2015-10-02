@@ -41,7 +41,7 @@ The following steps demonstrate how to configure basic options and bind to data 
 
 Following is a preview of the final result.
 
-![](images/Getting_Started_with_igCombo__01.png)
+![](images/igCombo_Auto_Complete.png)
 
 ###Requirements
 
@@ -60,6 +60,7 @@ Following is a conceptual overview of the process:
 1.  Instantiating the `igCombo`
 2.  Binding to data
 3.  (Optional) Configuring the width
+4.  (Optional) Enabling auto-complete
 
 ###Steps
 
@@ -194,6 +195,22 @@ Following is a conceptual overview of the process:
     Width("200px")
     ```
 
+4.  **(Optional) Enabling auto-complete.**
+
+    Use the autoComplete option to enable auto-complete in the `igCombo`
+
+    **In HTML:**
+
+    ```html
+    autoComplete: true
+    ```
+
+    **In ASPX:**
+
+    ```csharp
+    AutoComplete(true)
+    ```
+
 ##Code Examples
 
 
@@ -249,6 +266,10 @@ The code below demonstrates how to create and configure the `igCombo` control us
 			<td>Width</td>
 			<td>200px</td>
 		</tr>
+		<tr>
+			<td>AutoComplete</td>
+			<td>true</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -274,7 +295,8 @@ The code below demonstrates how to create and configure the `igCombo` control us
             dataSource: colors,
             textKey: "Name",
             valueKey: "Name",
-            width: "200px"
+            width: "200px",
+			autoComplete: true
         });
     });
 </script>
@@ -309,6 +331,10 @@ The code below demonstrates how to create and configure the `igCombo` control us
 			<td>Width</td>
 			<td>300px</td>
 		</tr>
+		<tr>
+			<td>AutoComplete</td>
+			<td>true</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -323,7 +349,8 @@ The code below demonstrates how to create and configure the `igCombo` control us
     DataSource(this.Model as IQueryable<System.Drawing.Color>).
     ValueKey("Name").
     TextKey("Name").
-    Width("300px").   
+    Width("300px").
+	AutoComplete(true).   
     Render()
 %>
 ```

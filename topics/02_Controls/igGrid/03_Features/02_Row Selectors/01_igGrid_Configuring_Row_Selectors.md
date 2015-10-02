@@ -24,6 +24,10 @@ This topic contains the following sections:
 -   [**Enabling Multiple Rows Selection**](#multiple-row-selection)
     -   [Preview](#multiple-preview)
     -   [Code](#multiple-code)
+-   [**Enabling Selection across all pages**](#select-all-pages)
+    -   [Preview](#selectall-preview)
+    -   [Property settings for enabling Select All functionality](#selectall-enabling)
+    -   [Code](#selectall-code)
 -   [**Adding Selection Checkboxes**](#adding-selection-checkboxes)
     -   [Preview](#checkboxes-preview)
     -   [Property settings for enabling checkboxes](#checkboxes-enabling)
@@ -105,6 +109,73 @@ $(function () {
     .Features(feature =>        {       
         feature.Selection().MultipleSelection(true);
         feature.RowSelectors();
+    })
+	.DataBind()
+	.Render()
+%>
+```
+
+## <a id="select-all-pages"></a> Enabling Selection across all pages
+
+By default the header checkbox, available in multiple selection mode, checks all rows from the current data view. Now the grid Row Selectors along with Paging feature provides the ability to select all records across all pages using the option "enableSelectAllForPaging" (set to true by default).
+
+
+### <a id="selectall-preview"></a> Preview 
+The picture below demonstrates the "Select All" functionality.
+
+![](images/gridPagingSelectAll.png)
+
+### <a id="selectall-enabling"></a> Property settings for enabling "Select All" functionality 
+
+The table below maps the desired configurations to property settings. The properties are accessed through the igGridRowSelectors options.
+
+Property | Setting
+---|---
+[enableSelectAllForPaging](%%jQueryApiUrl%%/ui.iggridrowselectors#options:enableSelectAllForPaging) | “true”
+[enableCheckBoxes](%%jQueryApiUrl%%/ui.iggridrowselectors#options:enableCheckBoxes) | “true”
+[multipleSelection](%%jQueryApiUrl%%/ui.iggridselection#options:multipleSelection) | “true”
+
+### <a id="selectall-code"></a> Code 
+**In HTML:**
+
+```html
+<script type="text/javascript">
+  $(function () {
+      $("#grid").igGrid({
+                autoGenerateColumns: true,
+                dataSource: source,
+                features: [
+                  {
+                      name: 'RowSelectors',
+                      enableCheckBoxes: true,
+                      enableSelectAllForPaging: true
+                  },
+                  {
+                      name: 'Selection',
+                      multipleSelection: true
+                  },
+                  {
+                      name: 'Paging',
+                      type: "local",
+                      pageSize: 10
+                  }
+              ]
+       });    
+   });
+</script>
+```
+
+**In ASPX:**
+
+```csharp
+<%= Html.Infragistics().Grid(Model)
+    .AutoGenerateColumns(true)
+    .Features(feature =>        {       
+        feature.Selection().MultipleSelection(true);
+      	feature.RowSelectors()
+        	.EnableCheckBoxes(true)
+            .EnableSelectAllForPaging(true);
+        feature.Paging().PageSize(10);
     })
 	.DataBind()
 	.Render()
