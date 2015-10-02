@@ -21,7 +21,7 @@ The following summarizes what’s new in 2015 Volume 2. Additional details follo
 
 Feature | Description
 ---|---
-[New Ignite UI Scaffolder for MVC](#igniteui-scafolder) | New scaffolder for Ignite UI widgets.
+[New Ignite UI Scaffolder for MVC](#igniteui-scaffolder) | New scaffolder for Ignite UI widgets.
 Full support for ASP.NET MVC 6 for all Ignite UI widgets | The Infragistics.Web.Mvc.dll now includes version build against ASP.NET MVC 6.
 Ignite UI TypeScript 1.5 definitions | The Ignite UI TypeScript definitions now support TypeScript 1.5. Intellisense is added for widget methods.
 
@@ -97,7 +97,7 @@ Sending additional data between the client and server during file uploading | Yo
 
 ##General
 
-### <a id="igniteui-scafolder"></a> New Ignite UI Scaffolder for MVC
+### <a id="igniteui-scaffolder"></a> New Ignite UI Scaffolder for MVC
 
 We release a brand new Scaffolder for Ignite UI widgets. With this we boost developer productivity greatly by providing code generation and templates to quickly target standard data scenarios like creating, reading, updating and deleting data. With a few clicks you can completely configure a Grid, generate a controller and save time on manual coding. Configuring other widgets as HierarchicalGrid, TreeGrid, Data Chart and others are already in the works.
 Along with the standard templates for create, edit, delete, details and list that ship with ASP.NET MVC, we provide customized Ignite UI templates that use the new editor widgets.
@@ -106,7 +106,7 @@ Along with the standard templates for create, edit, delete, details and list tha
 
 #### Related Topics
 
--   [Ignite UI Scaffolder Visual Studio extension](scaffoldertopic.html)
+-   [Ignite UI Scaffolder Visual Studio extension](MVC-Scaffolding.html)
 
 ## igCombo
 ### <a id="combo-grouping"></a>
