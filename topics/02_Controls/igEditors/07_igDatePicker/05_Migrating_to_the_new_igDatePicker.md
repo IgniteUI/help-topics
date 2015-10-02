@@ -43,7 +43,7 @@ findListItemIndex|Found index of list item by text that matches with the search 
 getRegionalOption|Gets calculated value of regional option used by numeric and date editors.|This method in no longer available.
 getSelection|Used to get left or right edge of selection.|This method is replaced by the methods `getSelectionStart` and `getSelectionEnd`.
 getValueByMode|Used to get value in editor by dataMode.|This method is not supported.
-hasInvalidMessage|Used to check if invalid message is displayed.|This method is removed as its` functionality is covered by the API for the igEditorNotifier.
+hasInvalidMessage|Used to check if invalid message is displayed.|This method is removed as its` functionality is covered by the API for the igNotifier.
 mainElement|Used to get reference to jquery object which is used as top/outer element of igDatePicker.|This method is renamed to `editorContainter` to better communicate what it does.
 paste|Used to paste text at location of caret.|This is renamed to `insert` and the `txt` parameter is renamed to `string` as it is a string of characters.
 remove|This was used to remove editor from its parent element, but keeps the rest of functionality|This method is not supported.
@@ -87,7 +87,7 @@ findListItemIndex|Found index of list item by text that matches with the search 
 getRegionalOption|Gets calculated value of regional option used by numeric and date editors.|This method in no longer available.
 getSelection|Used to get left or right edge of selection.|This method is replaced by the methods `getSelectionStart` and `getSelectionEnd`.
 getValueByMode|Used to get value in editor by dataMode.|This method is not supported.
-hasInvalidMessage|Used to check if invalid message is displayed.|This method is removed as its` functionality is covered by the API for the igEditorNotifier.
+hasInvalidMessage|Used to check if invalid message is displayed.|This method is removed as its` functionality is covered by the API for the igNotifier.
 mainElement|Used to get reference to jquery object which is used as top/outer element of igDatePicker.|This method is renamed to `editorContainter` to better communicate what it does.
 paste|Used to paste text at location of caret.|This is renamed to `insert` and the `txt` parameter is renamed to `string` as it is a string of characters.
 remove|This was used to remove editor from its parent element, but keeps the rest of functionality|This method is not supported.
