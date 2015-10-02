@@ -42,7 +42,7 @@ The default color for the input value in the `igMaskEditor` is black. Here is an
 
 ## Related Topics  
 
--   [igMaskEditor Overview](igMaskEditor-Overview.html)
+-   [igMaskEditor Overview](igMaskEditor--Overview.html)
  
 
  

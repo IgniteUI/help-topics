@@ -12,7 +12,10 @@
 
 ##Overview Of The igMaskEditor
 
-The Ignite UI™ mask editor, or `igMaskEditor`, is a control that renders an input field enforces input restrictions as determined by a given input mask. The `igMaskEditor` control supports localization, by recognizing different regional options exposed from the browser. The `igMaskEditor` control exposes a rich client-side API, which may be configured the work with any server technology. While the Ignite UI™ controls are server-agnostic, the control does feature wrappers specific for the Microsoft® ASP.NET MVC Framework to configure the control with the .NET™ language of your choice. The `igMaskEditor` control may be extensively styled giving you an opportunity to provide a completely different look and feel for the control as opposed to the default style. Styling options include using your own styles as well as styles from jQuery UI’s ThemeRoller. Figure 1: The `igMaskEditor` control apply a phone number mask.
+The Ignite UI™ mask editor, or `igMaskEditor`, is a control that renders an input field enforces input restrictions as determined by a given input mask. The `igMaskEditor` control supports localization, by recognizing different regional options exposed from the browser. The `igMaskEditor` control exposes a rich client-side API, which may be configured the work with any server technology. While the Ignite UI™ controls are server-agnostic, the control does feature wrappers specific for the Microsoft® ASP.NET MVC Framework to configure the control with the .NET™ language of your choice. The `igMaskEditor` control may be extensively styled giving you an opportunity to provide a completely different look and feel for the control as opposed to the default style. Styling options include using your own styles as well as styles from jQuery UI’s ThemeRoller. <br />Figure 1: The `igMaskEditor` control apply a phone number mask.
+
+![](images/igMaskEditor_Overview_Pic1.png)
+
 
 
 ##Features
