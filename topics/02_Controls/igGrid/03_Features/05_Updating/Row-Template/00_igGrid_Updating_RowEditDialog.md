@@ -143,11 +143,11 @@ The row dialog can be defined in the ways listed below:
 	2.1. `dialogTemplate` is a template rendered against the record currently being edited. Users can utilize any of the properties native to the elements in the grid's data source in this template.
 	After the template renders the widget searches for elements marked with the following special attributes
 
-	- `data-editor-for-<columnKey>` - where <columnKey> is the key of one of the grid's columns. An editor is created for each of these elements as long as only one element passes the criteria per column.
+	- `data-editor-for-<columnKey>` - where `<columnKey>` is the key of one of the grid's columns. An editor is created for each of these elements as long as only one element passes the criteria per column.
 	
 	- `data-render-tmpl` - the element marked with this attribute is used as a container for the template specified in the `editorsTemplate` option. If no element with this attribute is found, the template specified by the `editorsTemplate` will not be executed.
 
-	2.2. `editorsTemplate` is a template rendered against a collection of columns that be modified internally by the options `showReadonlyEditors` and `showEditorsForHiddenColumns`. These two options control which columns will be included in the collection passed to the templating engine. Additionally, columns that have editors specified in the `dialogTemplate` are excluded. All of the properties native to the grid's column collection objects can be used in this template. Editors are still expected to have the `data-editor-for-<columnKey>` attribute, however, its application should be left to the templating engine using a `${key}` template tag (e.g. `data-editor-for-${key}`) or similar based on the templating engine of choice.
+	2.2. `editorsTemplate` is a template rendered against the collection of columns that can be modified internally by the options `showReadonlyEditors` and `showEditorsForHiddenColumns`. These two options control which columns will be included in the collection passed to the templating engine. Additionally, columns that have editors specified in the `dialogTemplate` are excluded. All of the properties native to the grid's column collection objects can be used in this template. Editors are still expected to have the `data-editor-for-<columnKey>` attribute, however, its application should be left to the templating engine using a `${key}` template tag (e.g. `data-editor-for-${key}`) or similar based on the templating engine of choice.
 	
 	**In ASPX:**
 	
@@ -282,12 +282,11 @@ The following summarizes the purpose and functionality of the unbound columns’
 
 - [dialogTemplate](%%jQueryApiUrl%%/ui.iggridupdating#options:rowEditDialogOptions.dialogTemplate:"")
 
-	Specifies a template to be rendered against the currently edited record (or default key-value pairs in the case of not yet
-					created records). It may contain an element decorated with the 'data-render-tmpl' attribute to specify where the control should render the
-					editors template specified in the editorsTemplate option. For custom dialogs, the elements can be decorated with 'data-editor-for-<columnKey>'
-					attributes where columnKey is the key of the column that editor or input will be used to edit.
-					If both dialogTemplate and dialogTemplateSelector are specified, dialogTemplateSelector will be used.
-The default template is `<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>`.
+	Specifies a template to be rendered against the currently edited record (or default key-value pairs in the case of not yet created records). 
+	It may contain an element decorated with the 'data-render-tmpl' attribute to specify where the control should render the editors template specified in the editorsTemplate option. For custom dialogs, the elements can be decorated with 'data-editor-for-<columnKey>'
+	attributes where columnKey is the key of the column that editor or input will be used to edit.
+	If both dialogTemplate and dialogTemplateSelector are specified, dialogTemplateSelector will be used.
+	The default template is `<table><colgroup><col></col><col></col></colgroup><tbody data-render-tmpl></tbody></table>`.
 	
 	**In JavaScript:**
 	
@@ -308,9 +307,9 @@ The default template is `<table><colgroup><col></col><col></col></colgroup><tbod
 - [editorsTemplate](%%jQueryApiUrl%%/ui.iggridupdating#options:rowEditDialogOptions.editorsTemplate:"")
 
 	Specifies a template to be executed for each column in the grid's column collection.Decorate the element to be used as an editor with 'data-editor-for-${key}'. The ${key} template tag should
-					be replaced with the chosen templating engine's syntax for rendering values. If any editors for columns are specified in the dialog markup
-					they will be exluded from the data the template will be rendered for.
-					This property is ignored if the dialog template does not include an element with the 'data-render-tmpl' attribute. 
+	be replaced with the chosen templating engine's syntax for rendering values. If any editors for columns are specified in the dialog markup
+	they will be exluded from the data the template will be rendered for.
+	This property is ignored if the dialog template does not include an element with the 'data-render-tmpl' attribute. 
 	
 	**In JavaScript:**
 	
