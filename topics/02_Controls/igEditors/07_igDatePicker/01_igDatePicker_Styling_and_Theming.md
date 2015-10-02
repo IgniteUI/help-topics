@@ -39,7 +39,6 @@ Your CSS may include style overrides for many more elements of the date picker. 
 
 -   [igDateEditor Overview](igDateEditor-Overview.html)
 -   [igDatePicker Overview](igDatePicker-Overview.html)
--   [igDatePicker Known Issues](igDatePicker-Known-Issues.html)
 
  
 
