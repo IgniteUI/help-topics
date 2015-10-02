@@ -387,7 +387,7 @@ Specifies a selector to a template to be executed for each column in the grid's 
 
 - [startEditTriggers](%%jQueryApiUrl%%/ui.iggridupdating#options:startEditTriggers)
 
-	The row edit template is opened by the same triggers that are specified in the `startEditTriggers`  updating property (*click*, *dblClick*, *enter*, *F2*, etc.)
+	The row edit dialog is opened by the same triggers that are specified in the `startEditTriggers`  updating property (*click*, *dblClick*, *enter*, *F2*, etc.)
 
 - [doneLabel](%%jQueryApiUrl%%/ui.iggridupdating#options:doneLabel)
 
@@ -401,9 +401,9 @@ Specifies a selector to a template to be executed for each column in the grid's 
 
 ## <a id="events-reference"></a> Row Edit Dialog Events Reference
 
-This section describes the various properties related to the Row Edit Template when using the Updating feature in the `igGrid` control.
+This section describes the various properties related to the Row Edit Dialog when using the Updating feature in the `igGrid` control.
 
-The following table explains the events fired when the row edit template is enabled.
+The following table explains the events fired when the row edit dialog is enabled.
 
 The events are fired when the template is shown or hidden.
 
