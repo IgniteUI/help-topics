@@ -120,7 +120,7 @@ If the textKey and valueKey are different and the value is of type that can’t 
 
 The following proceedure guides you through the process of creating a custom provider that extends the combo editor in order to support multiple selection for a column of type string, in which the value saved in the data source will be a coma separated list of the selected items.
 
-1. Instantiate the igGrid and define an custom editor in the igGrid Updating’s column settings for a specific column.
+1. Instantiate the igGrid and define a custom editor in the igGrid Updating’s column settings for a specific column.
 
 **In JavaScript**
 
