@@ -318,13 +318,13 @@ The following steps demonstrate how to configure a Row Edit Dialog in `igGrid`.
 	
 	The following code enables the updating feature and `EditMode` is set to be “Dialog”.
 	
-	The `containment` oprion of teh row edit dialog is set to be “owner”. Thus the row edit dialog is draggable only in the grid area.
+	The `containment` option of the row edit dialog is set to be “owner”. Thus the row edit dialog is draggable only in the grid area.
 	
 	In the code snippet below, the `EditorType` of ModifiedDate is specified to be `DatePicker` and is marked as required. Thus the `DatePicker` editor will be rendered and a validation error message is shown if no value is entered in the field.
 	
-	The “ProductID” column is set to be `ReadOnly`. As the option `showReadonlyEditors` is false, the disabled column won’t be rendered as editors in the dialog window.
+	The “ProductID” column is set to be `ReadOnly`. As the option `showReadonlyEditors` is false, the disabled column won’t be rendered as editor in the dialog window.
 	
-	The option `DialogTemplateSelector` points to ID the defined `x-jquery-tmpl` template above.
+	The option `DialogTemplateSelector` points to the ID of the defined `x-jquery-tmpl` template above.
 	
 	**In ASPX:**
 	
