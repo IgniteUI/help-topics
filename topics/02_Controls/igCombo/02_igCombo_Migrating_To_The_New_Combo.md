@@ -53,8 +53,6 @@ dropDownAsChild|Used to render the drop down list as child of the combo element.
 showDropDownButton|Used to control the visibility of the drop down button|This option is removed. The visibility of the drop down button can be controlled through css. To disable the drop down button: `<style>.ui-igcombo-button { display: none; }</style>`
 nullText|Used to specify what text is shown in text input when it is empty.| Renamed to `placeHolder`. It is a known issue that this option does not work for IE8/9.
 closeDropDownOnSelect|Used to specify whether the drop down should close when selection is made.|Changed to specify whether to close the drop down list when single item in the list is selected with mouse click or enter press. Default is `false` for single selection and `true` for multiple selection. This option will not close the drop down when multiple selection is enabled and additive selection is performed. `$('#combo').igCombo({ closeDropDownOnSelect: false })`
-autoComplete|Used to automatically complete the text in input field to the first matching item from the drop down list. |Option is not yet supported*.
-headerTemplate footerTemplate|Used to specify header/footer templates.|Options are not yet supported*.
 allowCustomValues|Used to allow custom values in combo's text input.|This option is not supported.
 dataBindOnOpen|Used to delay data binding to when the drop down is opened.|This option is not supported. The same functionality can be achieved by canceling the data binding event and data bind when the drop down list is first opened.
 text|Used to set custom text in combo input on initialization|This option is not supported. To set initial selection use option [initialSelectedItems](#initialSelectedItems).
@@ -144,7 +142,7 @@ selectionChanging|Event argument ui.oldItems renamed to ui.currentItems to bette
 selectionChanged|Items are in [item](#item) format.
 dropDownOpening dropDownOpened dropDownClosing dropDownClosed|Event argument ui.element renamed to ui.list to communicate better that this is the drop down list.
 textChanged|This event was removed. To check when the text has changed bind to combo text input keydown event.
-noMatchFound|This event was removed as the `autoComplete` feature is not yet supported.
+noMatchFound|This event was removed as the `autoComplete` feature is not fully supported yet.
 activeItemChanging activeItemChanged|These events were removed.
 
 <a name='new_events'></a>

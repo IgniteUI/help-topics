@@ -589,7 +589,7 @@ The following table maps the desired behavior to its respective property setting
 			</th>
 
 			<td>
-				The distance at which the major tick marks begin relative to the <a class="ig-topic-link" href="#size-position-settings">starting position</a> of the scale
+				The distance at which the major tick marks begin relative to the <a class="ig-topic-link" id="size-position-settings">starting position</a> of the scale
 			</td>
 
 			<td><a href="%%jQueryApiUrl%%/ui.igLinearGauge#options" target="_blank">ticksPostInitial</a></td>
@@ -605,7 +605,7 @@ The following table maps the desired behavior to its respective property setting
 			</th>
 
 			<td>
-				The distance at which the major tick marks end relative to the <a class="ig-topic-link" href="#size-position-settings">ending position</a> of the scale
+				The distance at which the major tick marks end relative to the <a class="ig-topic-link" id="size-position-settings">ending position</a> of the scale
 			</td>
 
 			<td><a href="%%jQueryApiUrl%%/ui.igLinearGauge#options" target="_blank">ticksPreTerminal</a></td>

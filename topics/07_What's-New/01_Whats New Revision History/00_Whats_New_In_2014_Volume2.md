@@ -158,11 +158,6 @@ Our new Excel Library is a 100% pure JavaScript client-side library that support
 -   [Ignite UI Client-Side Excel Library Overview](JavaScript-Excel-Library-Overview.html)
 -   [Using the Ignite UI Client-Side Excel Library](Using-the-JavaScript-Excel-Library.html)
 
-#### Related Samples
-
--   [Creating Excel Worksheet in Browser](%%NewSamplesUrl%%/client-side-excel-library/create-excel-worksheet-in-browser)
-
-
 
 ## igGrid
 

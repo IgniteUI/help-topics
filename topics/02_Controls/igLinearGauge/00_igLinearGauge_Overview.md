@@ -155,7 +155,7 @@ The following table provides an overview of the configurable aspects of the visu
 
 		<tr>
 			<td>
-				<a class="ig-topic-link" href="#scale">Scale</a>
+				<a class="ig-topic-link" id="scale">Scale</a>
 			</td>
 
 			<td>
@@ -171,7 +171,7 @@ The following table provides an overview of the configurable aspects of the visu
 
 		<tr>
 			<td>
-				<a class="ig-topic-link" href="#needle">Needle</a>
+				<a class="ig-topic-link" id="needle">Needle</a>
 			</td>
 
 			<td>
@@ -187,7 +187,7 @@ The following table provides an overview of the configurable aspects of the visu
 
 		<tr>
 			<td>
-				<a class="ig-topic-link" href="#comparative-ranges">Comparative ranges</a>
+				<a class="ig-topic-link" id="comparative-ranges">Comparative ranges</a>
 			</td>
 
 			<td>
@@ -203,7 +203,7 @@ The following table provides an overview of the configurable aspects of the visu
 
 		<tr>
 			<td>
-				<a class="ig-topic-link" href="#background-overview">Background</a>
+				<a class="ig-topic-link" id="background-overview">Background</a>
 			</td>
 
 			<td>
@@ -217,7 +217,7 @@ The following table provides an overview of the configurable aspects of the visu
 
 		<tr>
 			<td>
-				<a class="ig-topic-link" href="#tooltip-overview">Tooltips</a>
+				<a class="ig-topic-link" id="tooltip-overview">Tooltips</a>
 			</td>
 
 			<td>
