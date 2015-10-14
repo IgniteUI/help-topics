@@ -58,7 +58,7 @@ Column Auto Sizing | Grid columns now support automatic resizing based on the wi
 Improved KnockoutJS support | Responsive Vertical Column rendering is now supported with KnockoutJS.
 JavaScript-based Excel Grid Exporter (RTM) | JavaScript-based Excel Grid Exporter is now RTM and supports igGrid, igTreeGrid and igHierarchicalGrid.
 ARIA support | We now comply with the W3C WAI-ARIA specification to ensure our customers can provide their disabled users with satisfactory experience.
-[igGrid RowSelectors Improvements](#grid-row-selectors-improvements)  | You can now enabled selection across all pages when Row Selectors with checkboxes and Paging are enabled.
+[RowSelectors Improvements](#grid-row-selectors-improvements)  | You can now enabled selection across all pages when Row Selectors with checkboxes and Paging are enabled.
 
 
 ### igHierarchicalGrid
@@ -223,7 +223,7 @@ Two new options are introduced in the Filtering feature:
 ### <a id="grid-row-selectors-improvements"></a> RowSelectors Improvements
 When Paging feature is enabled in combination with Row Selectors an additional UI is introduced to allow users to select all rows across all pages.
 
-![](images/grid-improvements-row-selectors.png)
+![](images/grid_improvements_row_selectors.png)
 
 This functionality can be enabled via the [enableSelectAllForPaging](%%jQueryApiUrl%%/ui.iggridrowselectors#options:enableSelectAllForPaging) option together with [enableCheckBoxes](%%jQueryApiUrl%%/ui.iggridrowselectors#options:enableCheckBoxes) and [multipleSelection](%jQueryApiUrl%%/ui.iggridselection#options:multipleSelection) options.
 
