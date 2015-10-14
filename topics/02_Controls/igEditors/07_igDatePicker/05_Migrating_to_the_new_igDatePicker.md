@@ -29,10 +29,10 @@ This topic contains the following sections:
 <a name='options_changes'></a>
 ### Options changes
 
-<a name='methods_changes'></a>
-### API Methods changes
+<a name='options_changes'></a>
+### API Options changes
 
-Method| Previously| Now
+Option| Previously| Now
 ---|---|---
 addListItem|Used to add the object within item at the location indicated by the index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 addListItems|Used to add the objects within the items array at the location indicated by the index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
@@ -55,6 +55,7 @@ spin|Used to increment (positive delta) or decrement (negative delta) value in e
 text|Used to get or set text in editor.|This is replaced by a getter method `displayValue` that takes no parameters and returns a string with all the characters shown in the input.
 validate|Used to trigger validation of editor and show error message. It had a single parameter: `noLabel`|The parameter is renamed to `skipErrorMessage`.
 value|Used to get or set value in editor.|The parameter is renamed to `newValue` to better communicate what it does.
+hideMaskOnFocus|Set gets ability to hide mask in focus state.|This option is removed.
 
 <a name='new_options'></a>
 ### New options
