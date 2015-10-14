@@ -223,7 +223,7 @@ Two new options are introduced in the Filtering feature:
 ### <a id="grid-row-selectors-improvements"></a> RowSelectors Improvements
 When Paging feature is enabled in combination with Row Selectors an additional UI is introduced to allow users to select all rows across all pages.
 
-![](images/grid_improvements_row_selector.png)
+![](images/grid_improvements_row_selectors.png)
 
 This functionality can be enabled via the [enableSelectAllForPaging](%%jQueryApiUrl%%/ui.iggridrowselectors#options:enableSelectAllForPaging) option together with [enableCheckBoxes](%%jQueryApiUrl%%/ui.iggridrowselectors#options:enableCheckBoxes) and [multipleSelection](%jQueryApiUrl%%/ui.iggridselection#options:multipleSelection) options.
 
