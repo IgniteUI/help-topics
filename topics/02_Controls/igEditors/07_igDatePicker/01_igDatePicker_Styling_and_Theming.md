@@ -33,7 +33,7 @@ Your CSS may include style overrides for many more elements of the date picker. 
 }
 ```
 
-![](\images\igDateEditor_custom_style.png)
+![](\images\igDatePicker_custom_style.png)
 
 ## Related Topics
 
