@@ -22,6 +22,7 @@ As the `igDatePicker` control uses the jQuery UI CSS framewrok it can also be fu
 Date picker using the UI Darkness theme:
 
 
+![](\images\igDatePicker_themeroller.png)
 
 ## Custom styling
 
