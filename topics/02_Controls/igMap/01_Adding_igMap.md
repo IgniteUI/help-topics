@@ -313,7 +313,7 @@ To complete the procedure, you need an ASP.NET MVC web application in Visual Stu
 
 Following is a conceptual overview of the process:
 
-1.  [Addding the data model](#mvc-adding-data-model)
+1.  [Adding the data model](#mvc-adding-data-model)
 2.  [Adding the controller action method](#mvc-adding-controller-action)
 3.  [Creating the ASP.NET View](#mvc-view)
 4.  [Instantiating the igMap control](#mvc-instantiating-igMap)
