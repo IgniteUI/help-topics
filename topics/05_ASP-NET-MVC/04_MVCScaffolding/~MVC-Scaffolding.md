@@ -44,3 +44,13 @@ This is demonstrated in the screenshot below:
 ![](images/Step3.png)
 6. Once we are done with the settings for the component that we are adding, we click on the "Add" button. This automatically adds a view, containing the widget wrapper definition, along with all the settings that we have enabled.
 You can further customize it, add or remove properties and methods, as you would normally do in a standard view, containing an Ignite UI widget wrapper.
+
+###Prerequisites
+
+In order to use the ASP.NET Scaffolding feature, you must have:
+
+1.Microsoft Visual Studio 2013 Update 2 or higher
+2.Web Developer Tools (part of default Visual Studio 2013 installation)
+3.ASP.NET Web Frameworks and Tools 2013 (part of default Visual Studio 2013 installation)
+
+
