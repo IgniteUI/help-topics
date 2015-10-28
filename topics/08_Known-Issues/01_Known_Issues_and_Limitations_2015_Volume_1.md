@@ -691,6 +691,19 @@ If you need to apply blur to the shadow, use the Compound type of shadow (`useSi
 		    <p><img alt="" src="../images/images/negative.png"></p>
 		</td>
 	</tr>
+	<tr>
+		<td>
+		    <p>AddClientEvent method is not avaialable in the DataChart's ASP.NET MVC helper.</p>
+		</td>
+		
+		<td>
+		    <p>AddClientEvent method is not avaialable in the DataChart's ASP.NET MVC helper.</p>
+		</td>
+		
+		<td>
+		    <p><img alt="" src="../images/images/negative.png"></p>
+		</td>
+	</tr>
     </tbody>
 </table>
 
