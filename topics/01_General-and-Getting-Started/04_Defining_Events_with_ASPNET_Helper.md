@@ -17,7 +17,7 @@
 
 #### Purpose
 
-This topic demonstrates how to define a client event handler using the ASP.NET MVC helper. While the provided example uses the `igCombo`™ `selectionChanged` event, the same approach is used for all components’ ASP.NET MVC helpers that support it(all Line of Bussiness components' ASP.NET MVC helpers).
+This topic demonstrates how to define a client event handler using the ASP.NET MVC helper. While the provided example uses the `igCombo`™ `selectionChanged` event, the same approach is used for all components’ ASP.NET MVC helpers that support it(all Line of Business components' ASP.NET MVC helpers).
 
 #### Required background
 
