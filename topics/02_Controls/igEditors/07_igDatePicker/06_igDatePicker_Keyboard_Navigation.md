@@ -57,7 +57,7 @@ Press| To
 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Left Arrow</kbd>|Select to current chunk start or select one chunk to the left
 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Home</kbd> or <kbd>Shift</kbd> + <kbd>Home</kbd>|Select value in the input till start
 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> or <kbd>Shift</kbd> + <kbd>End</kbd>|Select value in the input till end
-<kbd>Ctrl</kbd> + <kbd>A</kbd> |Select the whole value in the input 
+<kbd>Ctrl</kbd> + <kbd>A</kbd> |Select the whole value in the input
 
 ## <a id="ddInteraction"></a> igDatePicker specific navigation
 
@@ -66,7 +66,7 @@ Press| To
 ---|---
 <kbd>Alt</kbd> + <kbd>Down Arrow</kbd> | Open the dropdown, when the focus is in the input
 <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> | Close the dropdown, when the focus is in the input
-<kbd>Down Arrow</kbd> | | Spin down the current part of date depending on the position of the mouse indicator
+<kbd>Down Arrow</kbd> | Spin down the current part of date depending on the position of the mouse indicator
 <kbd>Up Arrow</kbd> | Spin up the current part of date depending on the position of the mouse indicator
 <kbd>Ctrl</kbd> + <kbd>Right Arrow</kbd> | Move to the next item in the calendar for the current part of date.
 <kbd>Ctrl</kbd> + <kbd>Left Arrow</kbd> | Move to the previous item in the calendar for the current part of date.

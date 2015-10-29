@@ -246,7 +246,7 @@ onError
 					</li>
 
                     <li>
-`formData`: Gets reference to FormData object(if the browser supports HTML5 file API) or reference to jQuery representation of <form>.
+`formData`: Gets reference to FormData object(if the browser supports HTML5 file API) or reference to jQuery representation of `<form>`.
 					</li>
                     <li>
 `owner`: Gets igUpload widget object.
