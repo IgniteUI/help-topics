@@ -210,8 +210,7 @@ Some map providers offer multiple imagery sets for their maps. Imagery sets are 
 
 ### <a id="bing-maps-imagery"></a>Bing Maps imagery sets
 
-The following table summarizes the imagery sets for **Bing Maps** supported by the `igMap` control. Configure the selected style by assigning a style code to the [backgroundContent.imagerySet](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent.imagerySet) option. The following a table catalogs the available **Bing Maps** styles. [imagerySet](%%jQueryApiUrl%%/ui.igMap#options:imagerySet)
-
+The following summarizes the imagery sets for **Bing Maps** supported by the `igMap` control. Configure the selected style by assigning a style code to the [`backgroundContent.imagerySet`](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent.imagerySet) option.
 
 Aerial
 
