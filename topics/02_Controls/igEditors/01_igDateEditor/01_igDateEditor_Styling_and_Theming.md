@@ -20,7 +20,7 @@ As the `igDateEditor` control uses the jQuery UI CSS framewrok it can also be fu
 
 Date editor using the UI Darkness theme:
 
-![](\images\igDateEditor_UI_Darkness.png)
+![](images/igDateEditor_UI_Darkness.png)
 
 ## Custom styling
 
@@ -32,15 +32,9 @@ Your CSS may include style overrides for many more elements of the date editor. 
 }
 ```
 
-![](\images\igDateEditor_custom_style.png)
+![](images/igDateEditor_custom_style.png)
 
 ## Related Topics
 
 -   [igDateEditor Overview](igDateEditor-Overview.html)
 -   [igDateEditor Known Issues](igDateEditor-Known-Issues.html)
-
- 
-
- 
-
-

@@ -30,8 +30,8 @@ The `igMaskEditor` includes the following characteristics:
 -   ASP.NET MVC wrapper
 
 
->**Note:** One of the major changed in the new Mask editor is that it no longer supports Lists and DropDown. Note that if you try to use methods connected to dropdown and list, you will receive a notification pointing out that they are no longer available. 
-   
+>**Note:** One of the major changed in the new Mask editor is that it no longer supports Lists and DropDown. Note that if you try to use methods connected to dropdown and list, you will receive a notification pointing out that they are no longer available.
+
 ##Adding igMaskEditor to a Web Page
 
 1.  To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) help topic.
@@ -58,7 +58,7 @@ The `igMaskEditor` includes the following characteristics:
 	<script type="text/javascript" src="@Url.Content("~/Scripts/Samples/infragistics.lob.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Scripts/Samples/modules/i18n/regional/infragistics.ui.regional-en.js")"></script>
     ```
-3.  For jQuery implementations create an INPUT, DIV or SPAN as the target element in HTML. This step is optional for ASP.NET MVC implementations as the MVC wrapper creates the containing element for you. 
+3.  For jQuery implementations create an INPUT, DIV or SPAN as the target element in HTML. This step is optional for ASP.NET MVC implementations as the MVC wrapper creates the containing element for you.
 
 	**In HTML:**
     ```html
@@ -89,9 +89,6 @@ The `igMaskEditor` includes the following characteristics:
 
 ##Related Links
 
--   [Validation Sample](%%SamplesUrl%%/editors/validation)
+-   [Mask Editor Basic Sample](%%SamplesUrl%%/editors/mask-editor-basic)
 -   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
 -   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
- 
- 
-
