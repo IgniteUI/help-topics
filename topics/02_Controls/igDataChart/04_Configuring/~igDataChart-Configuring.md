@@ -30,6 +30,8 @@ This is a group of topics explaining how to configure the various aspects of the
 
 -	[Configuring the Series Highlighting (igDataChart)](igDataChart-Series-Highlighting.html): This topic provides information on enabling the series highlighting feature along with a listing of the supported series. This topic also explains how to configure the series highlighting using the available events.
 
+-   [Configuring Axis Intervals (igDataChart)](igDataChart-Axis-Intervals.html): This topic provides information on configuring the major and minor intervals for axes of the `igDataChart`™ control.
+
 -	[Configuring Hover Interactions (igDataChart)](HoverInteractions-Hover-Interactions.html): The topics in this group explain the hover interaction feature.
 
 -	[Configuring Knockout Support (igDataChart)](igDataChart-KnockoutJS-Support.html): This topic explains how to configure the `igDataChart`™ control to bind to View-Model objects managed by the Knockout library.

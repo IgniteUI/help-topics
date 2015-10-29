@@ -21,7 +21,7 @@
 -   [igDatePicker](igDatePicker-igDatePicker.html)
 -   [igDialog](igDialog.html)
 -   [igDoughnutChart](igDoughnutChart.html)
--   [Editors](Editors-LandingPage.html)
+-   [igEditors](igEditors-LandingPage.html)
 -   [igFunnelChart](igFunnelChart-igFunnelChart.html)
 -   [igGrid](igGrid.html)
 -   [igHierarchicalGrid](igHierarchicalGrid-igHierarchicalGrid.html)

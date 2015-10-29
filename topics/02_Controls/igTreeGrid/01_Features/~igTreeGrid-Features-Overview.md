@@ -24,6 +24,9 @@ The `igTreeGrid` extends the [`igGrid`](igGrid-Overview.html "igGrid Overview") 
 	- [Paging](#paging)
 	- [Filtering](#filtering)
 	- [Updating](#updating)
+	- [Column Moving](#columnMoving)
+	- [Column Fixing](#columnFixing)
+	- [Column Hiding](#columnHiding)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
     -   [Samples](#samples)
@@ -62,22 +65,16 @@ In addition, the same compatibility between supported feature module apply as we
 ### <a id="inherited-features"></a> Inherited igGrid Features
 Features inherited directly (extended without modifications) from the `igGrid` behave in the exact same way in the `igTreeGrid` as they would in the `igGrid`. These include:
 
--	[Column Fixing](igGrid-ColumnFixing-Overview.html "Column Fixing Overview")
--	[Column Hiding](igGrid-Column-Hiding.html "Column Hiding")
+-   [Column Resizing](igGrid-Column-Resizing.html "Column Resizing")
 -	[Multi Column Headers](igGrid-MultiColumnHeaders-MultiColumnHeaders.html "Multi-Column Headers Overview")
 -	[Responsive](igGrid-Responsive-Web-Design-Mode-LandingPage.html "Responsive Web Design /RWD/ Mode")
 -	[Selection](igGrid-Selection-Overview.html "Selection Overview")
 -	[Tooltips](igGrid-Tooltips.html "Tooltips")
 
-> **Note:** The only difference in some of these features can be the always-present expansion indicators on the first column, unless rendered in their own column.
-
 ### <a id="unsupported-features"></a> Unsupported Features
 
 While some feature might be successfully enabled for the `igTreeGrid`, some of them might not behave as expected, therefore they are considered as not yet supported and include the following:
 
-- Column Moving
-- Row Selectors
-- Resizing
 - Summaries
 - Column Grouping
 
@@ -92,40 +89,9 @@ While some feature might be successfully enabled for the `igTreeGrid`, some of t
 
 ### <a id="paging"></a> Paging
 
-Because of the extra hierarchy levels introduced in the data, paging has additional [`mode`](%%jQueryApiUrl%%/ui.igtreegridpaging#options:mode) options which by default operate on root level records. The visible records rendered per page in the grid will vary considerably depending on the  expansion state of root records, number of children and hierarchy depth. Meanwhile, page numbers will remain consistent.
+The Paging feature for the igTreeGrid is extended from the igGridPaging feature and is customized to present hierarchical data. It includes additional options and methods specific for the igTreeGrid. 
 
-In the following examples `flatDS` in an array with only **4 root-level nodes**:
-
-```js
-$("#treegrid").igTreeGrid({
-	dataSource: flatDS,
-	primaryKey: "employeeID",
-	foreignKey: "PID", 
-	features: [{
-		name: 'Paging',
-		mode: 'rootLevelOnly'
-	}]
-});
-```
-
-![igTreeGrid root only paging](images/igtreegrid-paging-rootlevelonly.png "Tree Grid with paging mode 'rootLevelOnly'")
-
-To apply paging to all visible records set `mode` equal to `allLevels`. This mode setting applies paging to all visible records regardless of their position in the data. The `allLevels` mode makes the paging controls dynamic. For instance the number of pages available changes as rows are expanded and collapsed.
-
-```js
-$("#treegrid").igTreeGrid({
-	dataSource: flatDS,
-	primaryKey: "employeeID",
-	foreignKey: "PID", 
-	features: [{
-		name: 'Paging',
-		mode: 'allLevels'
-	}]
-});
-```
-
-![igTreeGrid all levels paging](images/igtreegrid-paging-alllevels.png "Tree Grid with paging mode 'allLevels'")
-
+**Related topic:** [Paging (igTreeGrid)](igTreeGrid-Paging.html)
 
 ### <a id="filtering"></a> Filtering
 
@@ -140,6 +106,19 @@ The extended Updating feature adds support for hierarchy within a single grid, m
 
 **Related topic:** [Updating (igTreeGrid)](igTreeGrid-Updating.html)
 
+### <a id="columnMoving"></a> Column Moving
+
+The Column Moving feature allows reordering of the tree grid’s columns via the tree grid's interface or programmatically through the TreeGridColumnMoving API. This feature extends the igGrid's ColumnMoving feature.
+
+### <a id="columnFixing"></a> Column Fixing
+
+The Column Fixing feature allows fixing of the tree grid’s columns via the tree grid's interface or programmatically through the TreeGridColumnFixing API. This feature extends the igGrid's ColumnFixing feature.
+
+### <a id="columnHiding"></a> Column Hiding
+
+The Column Hiding feature allows hiding of the tree grid’s columns via the tree grid's interface or programmatically through the TreeGridColumnHiding API. This feature extends the igGrid's ColumnHiding feature.
+
+> **Note:** The only difference in Column Moving, Column Fixing and Column Hiding features of the igGrid and igTreeGrid controls is the fact that the expansion indicator is always rendered in the first visible column. If the first visible column changes, then the grid will be rerendered and the expansion indicator will be in the new first column.
 
 ## <a id="related-content"></a> Related Content
 

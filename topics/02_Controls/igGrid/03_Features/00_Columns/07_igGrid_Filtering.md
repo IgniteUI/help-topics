@@ -31,6 +31,7 @@ This topic contains the following sections:
 -   [List of Filtering Options (Properties)](#properties)
 -   [Filtering CSS Classes](#css)
 -   [Keyboard Interactions](#keyboard-interaction)
+-   [Breaking Changes](#changes)
 -   [Related Content](#related-content)
 
 
@@ -717,6 +718,24 @@ When focus is on the advanced filter dialog:
 -	ESCAPE: Closes the dialog.
 
 _Note_: There is a difference between the drop-down for selecting the column and the condition drop-down. One is an igCombo, the other a standard < select > element. The < select > element opens on SPACE/ENTER and its content can be navigated with the UP/DOWN keys and selected with ENTER. The igCombo cannot be opened with enter/space. Its values can be changed directly using the UP/DOWN keys.
+
+## <a id="changes"></a> Breaking Changes
+
+- Option changes
+
+`filterDialogFilterConditionTemplate` option's default value was changed.
+
+|Old default value|New default value|
+|---|---|
+|`"<option value='${conditionName}'>${conditionLabel}</option>"`|`"<option value='${condition}'>${text}</option>"`|
+
+- Behavioral changes
+
+|Old behavior|New behavior|
+|---|---|
+|When filtering on a date column, the filter is applied each time the text in the editor is changed.| When filtering on a date column, the filter is applied only after you move the focus outside of the editor or when you hit the Enter key.|
+
+
 
 ## <a id="related-content"></a> Related Content
 
