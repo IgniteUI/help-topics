@@ -244,9 +244,11 @@ The following steps demonstrate how to print the `igHtmlEditor` contents.
 
 	**In JavaScript:**
 
-    ```js
-    if (typeof document.getElementById("htmlEditor_editor").contentWindow.focus === "function")   document.getElementById("htmlEditor_editor").contentWindow.focus();
-    ```       
+    	```js
+    	if (typeof document.getElementById("htmlEditor_editor").contentWindow.focus === "function") {
+    		document.getElementById("htmlEditor_editor").contentWindow.focus();
+    	}
+    	```       
 
 2. Call print on the IFRAME DOM element
 
@@ -255,7 +257,9 @@ The following steps demonstrate how to print the `igHtmlEditor` contents.
 	**In JavaScript:**
 
 	```js
-	if (typeof document.getElementById("htmlEditor_editor").contentWindow.print === "function") document.getElementById("htmlEditor_editor").contentWindow.print();
+	if (typeof document.getElementById("htmlEditor_editor").contentWindow.print === "function") {
+		document.getElementById("htmlEditor_editor").contentWindow.print();
+	}
 	```
 
 3. Set the @media CSS rule for the Opera browser
