@@ -223,7 +223,7 @@ The following settings demonstrate how to configure the auto-suggest behavior to
 		<tr>
 			<td>[filteringType](%%jQueryApiUrl%%/ui.igCombo#options:filteringType)</td>
 			<td>local</td>
-			<td rowspan="4">![](images/igCombo_Auto_Complete.png)</td>
+			<td rowspan="4">![](../images/igCombo_Auto_Complete.png)</td>
 		</tr>
 		<tr>
 			<td>[highlightMatchesMode](%%jQueryApiUrl%%/ui.igCombo#options:highlightMatchesMode)</td>
