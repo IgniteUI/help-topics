@@ -192,7 +192,7 @@ The following steps demonstrate how to localize x control.
 
 2. <a id="localize_file"></a> Localizing infragistics.ui.grid-es.js
 
-	Open file `%%InstallPath%%\j\smodulesi18n\infragistics.ui.grid-es.js` with text editor and translate `igGridPaging` section strings into your language. In our case this is Spanish.
+	Open file `%%InstallPath%%\js\modules\i18n\infragistics.ui.grid-es.js` with text editor and translate `igGridPaging` section strings into your language. In our case this is Spanish.
 	
 	>**Note:**  `infragistics.ui.grid-es.js` contains localization strings for all `igGrid` features, so you do not have to translate the whole file if you do not need to use all `igGrid` features.
 	
