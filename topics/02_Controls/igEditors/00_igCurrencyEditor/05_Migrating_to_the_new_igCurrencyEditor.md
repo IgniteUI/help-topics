@@ -38,7 +38,7 @@ dropDownOnReadOnly|This option was used to set ability to override the "readOnly
 dropDownTriggers|Sets gets list of actions which trigger display of drop-down list or calendar.|This option is removed. Now `Alt` + `down-arrow` shows dropdown.
 focusOnSpin|If that option was disabled and the editor was not focused, then a mouse click on the spin button would keep the text in the editor in not focused format and perform spin actions.|This option is removed. Now if the editor is not focused, then a mouse click on the spin button will not focus the editor.
 height, width|Previously supported type: `number`.<br>`$(".selector").igCurrencyEditor({`<br>`width : 200`<br>`});`|Now supported types are: `number`, `string`, `null`. If using type `string`, the height can be set in pixels (px) and percentage (%).<br>`$(".selector").igCurrencyEditor({`<br>`width : "200px"`<br>`});`
-hideEnterKey|Sets gets ability to hide the Enter key from browser.<br>`$(".selector").igCurrencyEditor({`<br>    hideEnterKey : false<br>`});`|This option is removed. You can use [preventSubmitOnEnter](#preventSubmitOnEnter) option to prevent submitting when pressing Enter.<br>`$(".selector").igCurrencyEditor({`<br>`preventSubmitOnEnter : false`<br>`});`
+hideEnterKey|Sets gets ability to hide the Enter key from browser.<br>`$(".selector").igCurrencyEditor({`<br>    `hideEnterKey : false`<br>`});`|This option is removed. You can use [preventSubmitOnEnter](#preventSubmitOnEnter) option to prevent submitting when pressing Enter.<br>`$(".selector").igCurrencyEditor({`<br>`preventSubmitOnEnter : false`<br>`});`
 listColumns|Sets gets number of columns in drop-down list.|This option is removed.
 listDropDownAsChild |Value `true` created html element for list as a child of main html element. Value `false` created list as a child of body.<br>`$(".selector").igCurrencyEditor({`<br>`listDropDownAsChild : true`<br>`});`|Renamed to `dropDownAttachedToBody`. Value `true` creates list as a child of body. Value `false` will create html element for list as a child of main html element.<br>`$(".selector").igCurrencyEditor({`<br> `dropDownAttachedToBody : true`<br>`});`
 listMaxHeight|Used to set maximum height of dropdown list in pixels.<br>`$(".selector").igCurrencyEditor({`<br>    `listMaxHeight : 400`<br>`});`|This option is removed. You can use the new option [visibleItemsCount](#visibleItemsCount) to set the number of visible list items.<br>`$(".selector").igCurrencyEditor({`<br>    `visibleItemsCount : 5`<br>`});`
@@ -52,7 +52,7 @@ textAlign|Default was `null`|Now default is `left`.
 theme|Sets gets selector for css classes used by editor.|This option is removed.
 type|Sets type of editor.|This option is removed. You can use the corresponding controls.
 maxLength|Sets gets maximum length of text which can be entered by user.|This option is removed.
-symbol|Used to set the currency symbol, which is used in display (no focus) state.<br>`$(".selector").igCurrencyEditor({`<br>`symbol: "*"`<br>}`);`|This option is renamed to `currencySymbol` to better communicate what it does.<br>`$(".selector").igCurrencyEditor({``currencySymbol: "*"`<br>`});`
+symbol|Used to set the currency symbol, which is used in display (no focus) state.<br>`$(".selector").igCurrencyEditor({`<br>`symbol: "*"`<br>}`);`|This option is renamed to `currencySymbol` to better communicate what it does.<br>`$(".selector").igCurrencyEditor({`<br>`currencySymbol: "*"`<br>`});`
 
 <a name='new_options'></a>
 ### New options
