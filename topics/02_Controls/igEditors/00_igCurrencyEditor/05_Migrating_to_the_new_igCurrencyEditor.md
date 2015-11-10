@@ -31,7 +31,7 @@ This topic contains the following sections:
 
 Option| Previously| Now
 ---|---|---
-animationHideDuration animationShowDuration|Used to set animation duration when dropdown list is displayed/hidden.|These options are replaced by new option `dropDownAnimationDuration` that controls the dropdown list animation duration.
+animationHideDuration animationShowDuration|Used to set animation duration when dropdown list is displayed/hidden.<br>`$(".selector").igCurrencyEditor({`<br>`animationShowDuration: 500,`<br>`animationHideDuration: 500<br>});`|These options are replaced by new option `dropDownAnimationDuration` that controls the dropdown list animation duration.<br>`$(".selector").igCurrencyEditor({`<br>`dropDownAnimationDuration: 500`<br>`});`
 button|This option was used to set visibility of spin and dropdown button.|This option is renamed to `buttonType` to better communicate what it does.
 display|Sets gets style.display for outer html element.|This option is removed.
 dropDownOnReadOnly|This option was used to set ability to override the "readOnly" option and allow showing the dropdown list and changing the value in the editor from a list.|This option is removed. If `readOnly` is set to `true` the dropdown list cannot be displayed.
