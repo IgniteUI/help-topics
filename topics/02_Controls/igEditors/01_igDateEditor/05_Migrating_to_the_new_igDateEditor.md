@@ -54,7 +54,7 @@ renderInContainer|Sets gets option to wrap input field into SPAN.|This option is
 required|Set gets validation for empty value in editor.<br>`$(".selector").igDateEditor({`<br>`required : true`<br>`});`|This options is removed. You can use the validator options to set the field as required.<br>`$(".selector").igDateEditor({`<br>` validatorOptions : {`<br>`required: true`<br>`}`<br>`});`
 selectionOnFocus|Previously supported members: `select`, `-1`, `start`, `0`, `end`, `1`, `default`, `2`.<br>`$(".selector").igDateEditor({`<br>`selectionOnFocus: 0`<br>`});`|Now supported members are: `selectAll`, `atStart`, `atEnd`, `browserDefault`. The default value is `selectAll`.<br>`$(".selector").igDateEditor({`<br>`selectionOnFocus: "atStart"`<br>`});`
 spin1Field|Sets gets ability to modify only 1 date field on spin events.<br>`$(".selector").igDateEditor({`<br>    `spin1Field : true`<br>`});`|This option is renamed to limitSpinToCurrentField.<br>`$(".selector").igDateEditor({`<br>`limitSpinToCurrentField : true`<br>`});`
-spinOnReadOnly|This was used to override the "readOnly" option and allow changing "value" of editor on spin events.<br>`$(".selector").igDateEditor({`<br>`spinOnReadOnly : true`<br>`});` |This option is removed. Setting readOnly to true disables the spin buttons.<br>`$(".selector").igDateEditor({`<br>`readOnly : true`<br>`});
+spinOnReadOnly|This was used to override the "readOnly" option and allow changing "value" of editor on spin events.<br>`$(".selector").igDateEditor({`<br>`spinOnReadOnly : true`<br>`});` |This option is removed. Setting readOnly to true disables the spin buttons.<br>`$(".selector").igDateEditor({`<br>`readOnly : true`<br>``});`
 textAlign|Default was `null`|Now default is `left`.
 theme|Sets gets selector for css classes used by editor.|This option is removed.
 type|Sets type of editor.|This option is removed. You can use the corresponding controls.
@@ -90,7 +90,7 @@ getRegionalOption|Gets calculated value of regional option used by numeric and d
 getSelection|Used to get left or right edge of selection.|This method is replaced by the methods `getSelectionStart` and `getSelectionEnd`.
 getValueByMode|Used to get value in editor by dataMode.|This method is not supported.
 hasInvalidMessage|Used to check if invalid message is displayed.|This method is removed as its` functionality is covered by the API for the igEditorNotifier.
-mainElement|Used to get reference to jquery object which is used as top/outer element of igDateEditor.|This method is renamed to `editorContainter` to better communicate what it does.
+mainElement|Used to get reference to jquery object which is used as top/outer element of `igDateEditor`.|This method is renamed to `editorContainter` to better communicate what it does.
 paste|Used to paste text at location of caret.|This is renamed to `insert` and the `txt` parameter is renamed to `string` as it is a string of characters.
 remove|This was used to remove editor from its parent element, but keeps the rest of functionality|This method is not supported.
 removeListItem|Used to remove item from list.|This method is removed. 
