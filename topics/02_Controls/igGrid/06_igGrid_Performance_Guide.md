@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 |metadata|
 {
     "fileName": "iggrid-performance-guide",
@@ -111,7 +111,7 @@ When [`columns.template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template) i
 
 If [`autoAdjustHeight`](%%jQueryApiUrl%%/ui.iggrid#options:autoAdjustHeight) is enabled (default), the height which is set on the grid (if any), is applied on the topmost grid container DIV. Then, if features such as paging or filtering are enabled, all other inner container sizes are subsequently calculated in order to calculate the scrolling container height of the element which holds all data rows.
 
-This calculation is an expensive operation in most modern browsers (primarily FireFox and Internet Explorer), because it causes a [reflow](http://code.google.com/speed/articles/reflow.html) of the document. The DOM property which causes the reflow, simply by accessing it, is `offsetHeight`. Therefore, you can significantly increase the initial rendering time of the `igGrid` control by setting `autoAdjustHeight` to false.
+This calculation is an expensive operation in most modern browsers (primarily FireFox and Internet Explorer), because it causes a [reflow](http://code.google.com/speed/articles/reflow.html) of the document. The DOM property which causes the reflow, simply by accessing it, is `offsetHeight`. Therefore, you can significantly decrease the initial rendering time of the `igGrid` control by setting `autoAdjustHeight` to false.
 
 Then `autoAdjustHeight` is disabled, the height specified as option during initialization is applied directly to the scrolling data container. Once the height is a known value then all other elements are added resulting in the final height of the grid. The ultimate height of the grid can more than the actual height setting depending on whether features such as paging or filtering enabled or whether [`fixedHeaders`](%%jQueryApiUrl%%/ui.iggrid#options:fixedHeaders) is enabled, and so on.
 
