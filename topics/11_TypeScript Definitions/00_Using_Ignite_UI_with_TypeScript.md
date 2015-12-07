@@ -51,7 +51,7 @@ Syntax for using Ignite UI controls in TypeScript application is the same as you
 
 ###  <a id="requirements"></a>Requirements 
 
-When considering the required resources the same requirements and options apply as described in the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) documentation in addition to loading the Ignite UI Angular directives module afterwards. This means that along with some styles the application would also need to include:
+When considering the required resources the same requirements and options apply as described in the ["Using JavaScript Resources in Ignite UI"](Deployment-Guide-JavaScript-Resources.html) documentation in addition to loading the Ignite UI Angular directives module afterwards. This means that along with some styles the application would also need to include:
 
 -   [jQuery](http://www.jquery.com/) 1.9 and later
 -   [jQuery UI](http://jqueryui.com/) 1.10 and later
@@ -79,15 +79,15 @@ When considering the required resources the same requirements and options apply 
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
     ```
-4.  Include Ignite UI scripts. Preferably use a custom download, but you can also [include Ignite UI in any available way](Deployment-Guide-JavaScript-Resources.html).
+4.  Include Ignite UI scripts. Preferably use a custom download, but you can also check ["Using JavaScript Resources in Ignite UI"](Deployment-Guide-JavaScript-Resources.html) topic for other methods.
 
     **In HTML:**
     ```html
     <!-- Ignite UI Required Combined JavaScript Files -->
     <script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.core.js"></script>
     <script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.lob.js"></script>
-  <!-- Required by the data vizualization controls -->
-  <script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.dv.js"></script>
+	<!-- Required by the data vizualization controls -->
+	<script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.dv.js"></script>
     ```
 
 5. Add reference path to where the TypeScript file for your application is located:
@@ -117,7 +117,7 @@ When considering the required resources the same requirements and options apply 
         <div id="sampleAppID"></div>
         <!--...-->
     </body>
- ```
+	```
     
 8. And finally add the desired control, for example an igDialog:
 
