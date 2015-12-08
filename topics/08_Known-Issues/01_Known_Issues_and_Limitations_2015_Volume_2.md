@@ -1191,7 +1191,7 @@ Go up to [Known Issues and Limitations Summary](#summary)
 Issue | Description | Status
 ---|---|---
 Saving exported file does not work in IE9 and earlier | GridExcelExporter uses a Blob object to keep the raw data of the exported worksheet, which is not supported in IE9 and earlier: https://developer.mozilla.org/en-US/docs/Web/API/Blob | ![](../images/images/negative.png)
-Only part of the data is exported in Append Rows on Demand or remote paging scenarios | The GridExcelExporter is entirely a client-side component and thus it deals only with data currently available on the client. In scenarios implementing Remote Paging and Append Rows on Demand when further sets of data are fetched through additional requests, this data is not exported.
+Only part of the data is exported in Append Rows on Demand or remote paging scenarios | The GridExcelExporter is entirely a client-side component and thus it deals only with data currently available on the client. In scenarios implementing Remote Paging and Append Rows on Demand when further sets of data are fetched through additional requests, this data is not exported. | ![](../images/images/positive.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
