@@ -715,6 +715,7 @@ If you need to apply blur to the shadow, use the Compound type of shadow (`useSi
 Issue | Description | Status
 ------|-------------|-------
 Controls sized incorrectly when inside an `igDialog` and their width/ height is relative | Controls inside an `igDialog`™ do not have correct dimensions if their width/height is relative. This is because any embedded controls are instantiated before rendering `igDialog` so their dimensions cannot be calculated correctly. | ![](../images/images/positive.png)
+Embedded iframe (including in controls like `igHtmlEditor`) may reload and lose content | Maximizing and minimizing the `igDialog` can cause frame elements in the content (including in controls like the `igHtmlEditor`) to reload. This is caused by the dialog moving in the DOM to position itself under the body of the document. Depending on configuration, pinning can produce similar behavior. | ![](../images/images/positive.png)
 
 
  Go up to [Known Issues and Limitations Summary](#summary)
