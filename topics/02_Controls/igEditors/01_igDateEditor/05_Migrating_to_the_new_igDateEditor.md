@@ -31,15 +31,15 @@ This topic contains the following sections:
 
 Option| Previously| Now
 ---|---|---
-animationHideDuration animationShowDuration|Used to set animation duration when dropdown list is displayed/hidden.|These options are replaced by new option `dropDownAnimationDuration` that controls the dropdown list animation duration.
-button|This option was used to set visibility of spin and dropdown button.|This option is renamed to `buttonType` to better communicate what it does.
-dataMode|Members of type 'string' and 'number' were supported.|Members of type 'number' are not supported.
+animationHideDuration animationShowDuration|Used to set animation duration when dropdown list is displayed/hidden.|These options are replaced by new option `dropDownAnimationDuration` that controls the dropdown list animation duration. But note that the igDateEditor doesn't support dropdown.
+button|This option was used to set visibility of spin and dropdown button. <br>`$(".selector").igDateEditor({`<br>`button : "dropdown"`<br>`});`|This option is renamed to `buttonType` to better communicate what it does. For date editor the supported types are 'spin' and 'clear'.<br>`$(".selector").igDateEditor({`<br>`buttonType : "spin"`<br>`});`
+dataMode|Members of type 'string' and 'number' were supported.<br>`$(".selector").igDateEditor({`<br>`dataMode: 0`<br>`});`|Members of type 'number' are not supported.<br>`$(".selector").igDateEditor({`<br>`dataMode: "editModeText"`<br>`});`
 display|Sets gets style.display for outer html element.|This option is removed.
 dropDownOnReadOnly|This option was used to set ability to override the "readOnly" option and allow showing the dropdown list and changing the value in the editor from a list.|This option is no longer available for the date editor.
 dropDownTriggers|Sets gets list of actions which trigger display of drop-down list or calendar.|This option is no longer available for the date editor.
 focusOnSpin|If that option was disabled and the editor was not focused, then a mouse click on the spin button would keep the text in the editor in not focused format and perform spin actions.|This option is removed. Now if the editor is not focused, then a mouse click on the spin button will not focus the editor.
-height, width|Previously supported type: `number`.|Now supported types are: `number`, `string`, `null`. If using type `string`, the height can be set in pixels (px) and percentage (%).
-hideEnterKey|Sets gets ability to hide the Enter key from browser.|This option is removed. You can use [preventSubmitOnEnter](#preventSubmitOnEnter) option to prevent submitting when pressing Enter.
+height, width|Previously supported type: `number`.<br>`$(".selector").igDateEditor({`<br>`width : 200`<br>`});`|Now supported types are: `number`, `string`, `null`. If using type `string`, the height can be set in pixels (px) and percentage (%).<br>`$(".selector").igDateEditor({`<br>`width : "200px"`<br>`});`
+hideEnterKey|Sets gets ability to hide the Enter key from browser.<br>`$(".selector").igDateEditor({`<br>    `hideEnterKey : false`<br>`});`|This option is removed. You can use [preventSubmitOnEnter](#preventSubmitOnEnter) option to prevent submitting when pressing Enter.<br>`$(".selector").igDateEditor({`<br>`preventSubmitOnEnter : true`<br>`});`
 hideMaskOnFocus|Set ability to hide mask in focus state.|This option is removed.
 listAutoComplete|Sets gets autocomplete.|This option is removed.
 listColumns|Sets gets number of columns in drop-down list.|This option is removed.
@@ -48,13 +48,13 @@ listMatchContains|Sets gets list match contains.|This option is removed.
 listMatchIgnoreCase|Sets gets case validation.|This option is removed. 
 listMaxHeight|Used to set maximum height of dropdown list in pixels.|This option is no longer available for the date editor.
 listWidth|Sets gets custom width of drop-down list in pixels. If value is equal to 0 or negative, then the width of editor is used.|This option is removed.
-nullable|This option was used to set ability to prevent null value.|This option is renamed to `allowNullValue` to better communicate what it does.
-nullText|Used to set text which appears in editor when editor has no focus and "value" in editor is null or empty string.|This option is renamed to `placeHolder` to better communicate what it does.
+nullable|This option was used to set ability to prevent null value.<br>`$(".selector").igDateEditor({`<br>    `nullable : false`<br>`});`|This option is renamed to `allowNullValue` to better communicate what it does.<br>`$(".selector").igDateEditor({`<br>`allowNullValue: true`<br>`});`
+nullText|Used to set text which appears in editor when editor has no focus and "value" in editor is null or empty string.<br>`$(".selector").igDateEditor({`<br>`nullText : "Enter Value"`<br>`});`|This option is renamed to `placeHolder` to better communicate what it does.<br>`$(".selector").igDateEditor({`<br>    `placeHolder : "Enter Value"`<br>`});`
 renderInContainer|Sets gets option to wrap input field into SPAN.|This option is removed.
-required|Set gets validation for empty value in editor.|This options is removed. You can use the validator options to set the field as required.
-selectionOnFocus|Previously supported members: `select`, `-1`, `start`, `0`, `end`, `1`, `default`, `2`.|Now supported members are: `selectAll`, `atStart`, `atEnd`, `browserDefault`. The default value is `selectAll`.
-spin1Field|Sets gets ability to modify only 1 date field on spin events.|This option is renamed to limitSpinToCurrentField.
-spinOnReadOnly|This was used to override the "readOnly" option and allow changing "value" of editor on spin events. |This option is removed. Setting readOnly to true disables the spin buttons.
+required|Set gets validation for empty value in editor.<br>`$(".selector").igDateEditor({`<br>`required : true`<br>`});`|This options is removed. You can use the validator options to set the field as required.<br>`$(".selector").igDateEditor({`<br>` validatorOptions : {`<br>`required: true`<br>`}`<br>`});`
+selectionOnFocus|Previously supported members: `select`, `-1`, `start`, `0`, `end`, `1`, `default`, `2`.<br>`$(".selector").igDateEditor({`<br>`selectionOnFocus: 0`<br>`});`|Now supported members are: `selectAll`, `atStart`, `atEnd`, `browserDefault`. The default value is `selectAll`.<br>`$(".selector").igDateEditor({`<br>`selectionOnFocus: "atStart"`<br>`});`
+spin1Field|Sets gets ability to modify only 1 date field on spin events.<br>`$(".selector").igDateEditor({`<br>    `spin1Field : true`<br>`});`|This option is renamed to limitSpinToCurrentField.<br>`$(".selector").igDateEditor({`<br>`limitSpinToCurrentField : true`<br>`});`
+spinOnReadOnly|This was used to override the "readOnly" option and allow changing "value" of editor on spin events.<br>`$(".selector").igDateEditor({`<br>`spinOnReadOnly : true`<br>`});` |This option is removed. Setting readOnly to true disables the spin buttons.<br>`$(".selector").igDateEditor({`<br>`readOnly : true`<br>``});`
 textAlign|Default was `null`|Now default is `left`.
 theme|Sets gets selector for css classes used by editor.|This option is removed.
 type|Sets type of editor.|This option is removed. You can use the corresponding controls.
@@ -90,7 +90,7 @@ getRegionalOption|Gets calculated value of regional option used by numeric and d
 getSelection|Used to get left or right edge of selection.|This method is replaced by the methods `getSelectionStart` and `getSelectionEnd`.
 getValueByMode|Used to get value in editor by dataMode.|This method is not supported.
 hasInvalidMessage|Used to check if invalid message is displayed.|This method is removed as its` functionality is covered by the API for the igEditorNotifier.
-mainElement|Used to get reference to jquery object which is used as top/outer element of igDateEditor.|This method is renamed to `editorContainter` to better communicate what it does.
+mainElement|Used to get reference to jquery object which is used as top/outer element of `igDateEditor`.|This method is renamed to `editorContainter` to better communicate what it does.
 paste|Used to paste text at location of caret.|This is renamed to `insert` and the `txt` parameter is renamed to `string` as it is a string of characters.
 remove|This was used to remove editor from its parent element, but keeps the rest of functionality|This method is not supported.
 removeListItem|Used to remove item from list.|This method is removed. 

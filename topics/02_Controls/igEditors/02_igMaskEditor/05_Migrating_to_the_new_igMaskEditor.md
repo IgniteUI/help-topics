@@ -31,32 +31,30 @@ This topic contains the following sections:
 
 Option| Previously| Now
 ---|---|---
-animationHideDuration animationShowDuration|Used to set animation duration when dropdown list is displayed/hidden.|These options are replaced by new option `dropDownAnimationDuration` that controls the dropdown list animation duration.
-button|This option was used to set visibility of spin and dropdown button.|This option is renamed to `buttonType` to better communicate what it does.
-dataMode|Members of type 'string' and 'number' were supported.|Members of type 'number' are not supported.
+animationHideDuration animationShowDuration|Used to set animation duration when dropdown list is displayed/hidden.<br> `$(".selector").igMaskEditor({`<br>`animationShowDuration: 500,`<br>`animationHideDuration: 500`<br>`});`|These options are replaced by new option `dropDownAnimationDuration` that controls the dropdown list animation duration.<br>`$(".selector").igMaskEditor({`<br>`dropDownAnimationDuration: 500`<br>`});` But note that the igMaskEditor doesn't support dropdown.
+button|This option was used to set visibility of spin and dropdown button. <br>`$(".selector").igMaskEditor({`<br>`button : "dropdown"`<br>`});`|This option is renamed to `buttonType` to better communicate what it does.For date editor the supported types are 'clear'. <br>`$(".selector").igMaskEditor({`<br>`buttonType : "clear"`<br>`});`
+dataMode|Members of type 'string' and 'number' were supported.<br>`$(".selector").igMaskEditor({`<br>`dataMode: 0`<br>`});`|Members of type 'number' are not supported.<br>`$(".selector").igMaskEditor({`<br>`dataMode: "rawText"`<br>`});`
 display|Sets gets style.display for outer html element.|This option is removed.
-dropDownOnReadOnly|This option was used to set ability to override the "readOnly" option and allow showing the dropdown list and changing the value in the editor from a list.|This option is no longer available for the mask editor.
-dropDownTriggers|Sets gets list of actions which trigger display of drop-down list or calendar.|This option is no longer available for the mask editor.
-focusOnSpin|If that option was disabled and the editor was not focused, then a mouse click on the spin button would keep the text in the editor in not focused format and perform spin actions.|This option is removed. Now if the editor is not focused, then a mouse click on the spin button will not focus the editor.
-height, width|Previously supported type: `number`.|Now supported types are: `number`, `string`, `null`. If using type `string`, the height can be set in pixels (px) and percentage (%).
-hideEnterKey|Sets gets ability to hide the Enter key from browser.|This option is removed. You can use [preventSubmitOnEnter](#preventSubmitOnEnter) option to prevent submitting when pressing Enter.
-hideMaskOnFocus|Set gets ability to hide mask in focus state.|This option is removed.
+dropDownOnReadOnly|This option was used to set ability to override the "readOnly" option and allow showing the dropdown list and changing the value in the editor from a list.<br>`$(".selector").igMaskEditor({`<br>    `dropDownOnReadOnly : true`<br>`});`|This option is removed. If `readOnly` is set to `true` the control will be displayed.<br>`$(".selector").igMaskEditor({`<br>`readOnly : true`<br>`});`
+dropDownTriggers|Sets gets list of actions which trigger display of drop-down list or calendar.|This option is removed. 
+focusOnSpin|If that option was disabled and the editor was not focused, then a mouse click on the spin button would keep the text in the editor in not focused format and perform spin actions.|This option is removed. The spin buttons are not available for the mask editor.
+height, width|Previously supported type: `number`.<br>`$(".selector").igMaskEditor({`<br>`width : 200`<br>`});`|Now supported types are: `number`, `string`, `null`. If using type `string`, the height can be set in pixels (px) and percentage (%).<br>`$(".selector").igMaskEditor({`<br>`width : "200px"`<br>`});`
+hideEnterKey|Sets gets ability to hide the Enter key from browser.<br>`$(".selector").igMaskEditor({`<br>    `hideEnterKey : false`<br>`});`|This option is removed. You can use [preventSubmitOnEnter](#preventSubmitOnEnter) option to prevent submitting when pressing Enter.<br>`$(".selector").igMaskEditor({`<br>`preventSubmitOnEnter : true`<br>`});
 listAutoComplete|Sets gets autocomplete.|This option is removed.
 listColumns|Sets gets number of columns in drop-down list.|This option is removed.
-listDropDownAsChild |Value `true` created html element for list as a child of main html element. Value `false` created list as a child of body.|This option is no longer available for the mask editor.
+listDropDownAsChild |Value `true` created html element for list as a child of main html element. Value `false` created list as a child of body.<br>`$(".selector").igMaskEditor({`<br>`listDropDownAsChild : true`<br>`});`|This option is not available for igMaskEditor.
 listMatchContains|Sets gets list match contains.|This option is removed.
 listMatchIgnoreCase|Sets gets case validation.|This option is removed. 
-listMaxHeight|Used to set maximum height of dropdown list in pixels.|This option is no longer available for the mask editor.
-listWidth|Sets gets custom width of drop-down list in pixels. If value is equal to 0 or negative, then the width of editor is used.|This option is removed. 
-nullText|Used to set text which appears in editor when editor has no focus and "value" in editor is null or empty string.|This option is renamed to `placeHolder` to better communicate what it does.
+listMaxHeight|Used to set maximum height of dropdown list in pixels.<br>`$(".selector").igMaskEditor({`<br>    `listMaxHeight : 400`<br>`});`|This option is removed. 
+nullText|Used to set text which appears in editor when editor has no focus and "value" in editor is null or empty string.<br>`$(".selector").igMaskEditor({`<br>`nullText : "Enter Value"`<br>`});`|This option is renamed to `placeHolder` to better communicate what it does.<br>`$(".selector").igMaskEditor({`<br>    `placeHolder : "Enter Value"`<br>`});`
 renderInContainer|Sets gets option to wrap input field into SPAN.|This option is removed.
-required|Set gets validation for empty value in editor.|This options is removed. You can use the validator options to set the field as required.
-selectionOnFocus|Previously supported members: `select`, `-1`, `start`, `0`, `end`, `1`, `default`, `2`.|Now supported members are: `selectAll`, `atStart`, `atEnd`, `browserDefault`. The default value is `selectAll`.
-spinOnReadOnly|This was used to override the "readOnly" option and allow changing "value" of editor on spin events. |This option is no longer available for the mask editor.
+required|Set gets validation for empty value in editor.<br>`$(".selector").igMaskEditor({`<br>`required : true`<br>`});`|This options is removed. You can use the validator options to set the field as required.<br>`$(".selector").igMaskEditor({`<br>` validatorOptions : {`<br>`required: true`<br>`}`<br>`});`
+selectionOnFocus|Previously supported members: `select`, `-1`, `start`, `0`, `end`, `1`, `default`, `2`.<br>`$(".selector").igMaskEditor({`<br>`selectionOnFocus: 0`<br>`});`|Now supported members are: `selectAll`, `atStart`, `atEnd`, `browserDefault`. The default value is `selectAll`.<br>`$(".selector").igMaskEditor({`<br>`selectionOnFocus: "atStart"`<br>`});`
+spinOnReadOnly|This was used to override the "readOnly" option and allow changing "value" of editor on spin events.<br>` $(".selector").igMaskEditor({`<br> `spinOnReadOnly : true`<br>`});` |This option is removed. Setting `readOnly` to `true` disables the editor.<br>`$(".selector").igMaskEditor({`<br>`readOnly : true`<br>`});`
 textAlign|Default was `null`|Now default is `left`.
 theme|Sets gets selector for css classes used by editor.|This option is removed.
 type|Sets type of editor.|This option is removed. You can use the corresponding controls.
-promptChar|Sets character which is used as prompt in edit mode for available entry position.|This option is renamed to `unfilledCharsPrompt` to better communicate what it does.
+promptChar|Sets character which is used as prompt in edit mode for available entry position.<br>`$(".selector").igMaskEditor({`<br>`promptChar : "*"`<br>`});`|This option is renamed to `unfilledCharsPrompt` to better communicate what it does.<br>`$(".selector").igMaskEditor({`<br>`unfilledCharsPrompt  : "*"`<br>`});`
 
 
 <a name='new_options'></a>
@@ -71,7 +69,7 @@ buttonType|<a name='buttonType'></a>Sets gets clear button.
 placeHolder|<a name='placeHolder'></a>Gets sets text which appears in editor when editor has no focus and "value" in editor is null or empty string.
 revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key.
 preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#maskEditor').igMaskEditor({ preventSubmitOnEnter: true }] })`.
-suppressNotifications|<a name='suppressNotifications'></a>Disables default notifications for basic validation scenarios built in the editors such as required list selection, value wrapping around or spin limits.
+suppressNotifications|<a name='suppressNotifications'></a>Disables default notifications for basic validation scenarios built in the editors such as required list selection, value wrapping around.
 
 [See all options](%%jQueryApiUrl%%/ui.igmaskeditor#options)
 
@@ -84,13 +82,13 @@ addListItem|Used to add the object within item at the location indicated by the 
 addListItems|Used to add the objects within the items array at the location indicated by the index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 clearListItems|Removed all items from list.|This method is no longer available for the mask editor.
 dropDownElement|Got reference to jquery object which is used as container of dropdown.|This method is no longer available for the mask editor.
-dropDownVisible|Set visibility of dropdown list according to the Boolean value that is passed.This method is no longer available for the mask editor.
+dropDownVisible|Set visibility of dropdown list according to the Boolean value that is passed.|This method is no longer available for the mask editor.
 findListItemIndex|Found index of list item by text that matches with the search parameters.|This method is no longer available for the mask editor.
 getRegionalOption|Gets calculated value of regional option used by numeric and date editors.|This method in no longer available.
 getSelection|Used to get left or right edge of selection.|This method is replaced by the methods `getSelectionStart` and `getSelectionEnd`.
 getValueByMode|Used to get value in editor by dataMode.|This method is not supported.
 hasInvalidMessage|Used to check if invalid message is displayed.|This method is removed as its` functionality is covered by the API for the igEditorNotifier.
-mainElement|Used to get reference to jquery object which is used as top/outer element of igMaskEditor.|This method is renamed to `editorContainter` to better communicate what it does.
+mainElement|Used to get reference to jquery object which is used as top/outer element of `igMaskEditor`.|This method is renamed to `editorContainter` to better communicate what it does.
 paste|Used to paste text at location of caret.|This is renamed to `insert` and the `txt` parameter is renamed to `string` as it is a string of characters.
 remove|This was used to remove editor from its parent element, but keeps the rest of functionality|This method is not supported.
 removeListItem|Used to remove item from list.|This method is no longer available for the mask editor.
