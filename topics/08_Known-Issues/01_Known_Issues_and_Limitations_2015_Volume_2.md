@@ -62,6 +62,7 @@ This topic contains the following sections:
     -   [igPivotGrid](#pivot-grid)
     -   [igPopover](#popover)
     -   [igQRCodeBarcode](#qr-barcode)
+    -   [igValidator](#validator)
     -   [igZoombar](#zoombar)
     -   [Infragistics Document Engine](#infragistics-documents)
     -   [Infragistics Templating Engine](#templating-engine)
@@ -188,7 +189,7 @@ clone
     </tbody>
 </table>
 
-### <a id="editors"></a> [Editors Common Known Issues](igCurrencyEditor-igEditor-Known-Issues.html)
+### <a id="editors"></a> [Editors Common Known Issues](igEditors-LandingPage.html)
 
 <table class="table table-striped">
 	<thead>
@@ -207,56 +208,6 @@ Status
         </tr>
 	</thead>
 	<tbody>
-        
-
-        <tr>
-            <td>
-Placeholder behavior when element is `<input>` or `<textarea>`
-			</td>
-
-            <td>
-If the editor’s base element is an `<input>` or `<textarea>` element and `buttons`, `theme`, or [`renderInContainer`](%%jQueryApiUrl%%/ui.igeditor#options:renderInContainer) options are enabled, then the editor’s base element is removed from its parent and wrapped in a `<span>` element.
-			</td>
-
-            <td>
-![](../images/images/negative.png)
-			</td>
-        </tr>
-
-        <tr>
-            <td>
-Editor not rendering correctly in some browsers when in a `<td>` base element
-			</td>
-
-            <td>
-If the base element for the editor is a `<td>` element (or some other special container different from the `<span>` or `<div>` elements), then some browsers may not render the control. For example, rendering fails in the Safari® browser when using a `<td>` as the base element for the `igCurrencyEditor`™ control.
-
-                <blockquote>
-**Workaround**
-                <br />
-                    Change the default value of the `display` option from inline-block to block.
-                </blockquote>
-            </td>
-
-            <td>
-![](../images/images/positive.png)
-			</td>
-        </tr>
-
-        <tr>
-            <td>
-Changing theme after initialization not supported under certain conditions
-			</td>
-
-            <td>
-Changing the `theme` option is not supported after initialization when the base element is either `<input>` or `<textarea>`and if the `button`, [`renderInContainer`](%%jQueryApiUrl%%/ui.igeditor#options:renderInContainer), and `theme` options are disabled.
-			</td>
-
-            <td>
-![](../images/images/negative.png)
-			</td>
-        </tr>
-
         <tr>
             <td>
 Multi-line text mode not supported in an `<input>` base element
@@ -284,132 +235,30 @@ If the base element is `<textarea>`, the [`textMode`](%%jQueryApiUrl%%/ui.igtext
 ![](../images/images/negative.png)
 			</td>
         </tr>
-
         <tr>
             <td>
-Base `<select>` element auto-replaced with `<input>` element
+Selection on focus behavior
 			</td>
 
             <td>
-If the base element is a `<select>` element, it is replaced with an `<input>` element. The drop-down button and list Items are created programmatically and the content is filled with the options of the original `<select>` element.
+When the input element is a `<textarea>` (textMode=”multiline”) element the caret position behaviour can be inconsistent. In some browsers, Gecko-based (Firefox) and WebKit-based (Chrome, Opera, Safari) when a is focused, the insertion point is placed at the beginning of the text by default, instead of at the end as observed in Internet Explorer. To provide consistent behavior the [selectionOnFocus](%%jQueryApiUrl%%/ui.igTextEditor#options:selectionOnFocus) default value is set to `selectAll` instead of `browserDefault`
 			</td>
 
             <td>
 ![](../images/images/negative.png)
 			</td>
         </tr>
-
-        <tr>
-            <td>
-Width and height options can be set only absolutely (in pixels) under certain conditions
-			</td>
-
-            <td>
-If the editor’s base element is not an `<input>` or `<textarea>` element and `buttons`, `theme`, or [`renderInContainer`](%%jQueryApiUrl%%/ui.igeditor#options:renderInContainer) options are enabled, then the width and height options can be set only absolutely (in pixels).
-
-                <blockquote>
-**Workaround**
-                <br />
-If the editor is rendered as an `<input>` or `<textarea>` element without a `<span>`element wrapper, then the width and height can be set to a string with percent and other HTML units.
-                </blockquote>
-            </td>
-
-            <td>
-![](../images/images/positive.png)
-			</td>
-        </tr>
-
         <tr>
             <td>
 Some options cannot change values after initialization
 			</td>
 
             <td>
-Changing value after initialization for `button`, [`textMode`](%%jQueryApiUrl%%/ui.igeditor#options:textMode), and [`renderInContainer`](%%jQueryApiUrl%%/ui.igeditor#options:renderInContainer) options is not supported.
+Changing value after initialization for [`buttonType`](%%jQueryApiUrl%%/ui.igtexteditor#options:buttonType), [`textMode`](%%jQueryApiUrl%%/ui.igtexteditor#options:textMode), [`dropDownOnReadOnly`](%%jQueryApiUrl%%/ui.igtexteditor#options:dropDownOnReadOnly), [`visibleItemsCount`](%%jQueryApiUrl%%/ui.igtexteditor#options:visibleItemsCount), and [`dropDownAttachedToBody`](%%jQueryApiUrl%%/ui.igtexteditor#options:dropDownAttachedToBody) options is not supported for `igTextEditor`. Additionally [`inputMask`](%%jQueryApiUrl%%/ui.igmaskeditor#options:inputMask), [`excludeKeys`](%%jQueryApiUrl%%/ui.igmaskeditor#options:excludeKeys), [`includeKeys`](%%jQueryApiUrl%%/ui.igmaskeditor#options:includeKeys) for the `igMaskEditor` and [`dateInputFormat`](%%jQueryApiUrl%%/ui.igdateeditor#options:dateInputFormat) for the `igDateEditor` cannot be changed after initialization. Limitations apply for derived types where applicable.
 			</td>
 
             <td>
 ![](../images/images/positive.png)
-			</td>
-        </tr>
-
-        <tr>
-            <td>
-Limitations to filtering an entry by list
-			</td>
-
-            <td>
-Options related to filtering an entry by list, such as [`listMatchIgnoreCase`](%%jQueryApiUrl%%/ui.igeditor#options:listMatchIgnoreCase), [`listMatchOnly`](%%jQueryApiUrl%%/ui.igeditor#options:listMatchOnly), [`listMatchContains`](%%jQueryApiUrl%%/ui.igeditor#options:listMatchContains)and [`listAutoComplete`](%%jQueryApiUrl%%/ui.igeditor#options:listAutoComplete), have effect only for an editor with `type` set to either text or `igTextEditor`.
-			</td>
-
-            <td>
-![](../images/images/negative.png)
-			</td>
-        </tr>
-
-        <tr>
-            <td>
-Specifics about disabling all triggers for a drop-down
-			</td>
-
-            <td>
-To disable all triggers for a drop-down, the [`dropDownTriggers`](%%jQueryApiUrl%%/ui.igeditor#options:dropDownTriggers) option should be set to either an empty string or null.
-			</td>
-
-            <td>
-![](../images/images/negative.png)
-			</td>
-        </tr>
-
-        <tr>
-            <td>
-Erroneous behavior when user input exceeds the length of the input field
-			</td>
-
-            <td>
-If the user enters text longer than the width of the edit field:
-
-                <ul>
-                    <li>
-Caret in some browsers may go out of view. (The editor control’s has logic designed to minimize this occurrence, but it does not cover 100% of the cases).
-					</li>
-
-                    <li>
-Some browsers may fail to instantly adjust the caret position while characters are entered. The caret may also briefly (for a split-second) jump to the end of the text and back. Although the actual entry point for the next key and the actual location of caret should be correct.
-					</li>
-
-                    <li>
-In some browsers, particularly Firefox®, text may jump/shake horizontally on every keypress.
-					</li>
-                </ul>
-            </td>
-
-            <td>
-![](../images/images/negative.png)
-			</td>
-        </tr>
-
-        <tr>
-            <td>
-Erroneous behavior when under certain conditions
-			</td>
-
-            <td>
-If the base element is `<textarea>` (`textMode=”multiline”`) and multiple lines are entered, that make the field scroll:
-
-                <ul>
-                    <li>
-Vertical scroll may fail and the caret may go out of view after multiple keyboard entries, when Shift+Enter (new line) is entered. This may happen if the caret has been located in the middle of text.
-					</li>
-
-                    <li>
-In some browsers, particularly Firefox, text may jump vertically and horizontally on every keypress.
-					</li>
-                </ul>
-            </td>
-
-            <td>
-![](../images/images/negative.png)
 			</td>
         </tr>
 
@@ -419,35 +268,7 @@ Specific referencing requirements for the date picker
 			</td>
 
             <td>
-If an editor has a type set to either *datepicker* or `igDatePicker`™, then it is dependent on jquery-datepicker and requires reference to either `jquery.ui.datepicker.js` or to combined library such as `jqueryui/1.8.7/jquery-ui.js`.
-			</td>
-
-            <td>
-![](../images/images/negative.png)
-			</td>
-        </tr>
-
-        <tr>
-            <td>
-Date picker not supporting multi-line mode
-			</td>
-
-            <td>
-If an editor has a type set to either *datepicker* or `igDatePicker`, it does not support *multiline*  [`textMode`](%%jQueryApiUrl%%/ui.igeditor#options:textMode) option.
-			</td>
-
-            <td>
-![](../images/images/negative.png)
-			</td>
-        </tr>
-
-        <tr>
-            <td>
-Date picker not supporting `<textarea>` base element
-			</td>
-
-            <td>
-If an editor has a type set to either *datepicker* or `igDatePicker`, it does not support `<textarea>` as a base element.
+`igDatePicker`™ is dependent on jquery-datepicker and requires reference to either `jquery.ui.datepicker.js` or to combined library such as `jqueryui/1.9.1/jquery-ui.js`.
 			</td>
 
             <td>
@@ -462,20 +283,6 @@ Numeric editors limitations in Edit mode
 
             <td>
 Numeric editors do not support group, or thousand separators and symbols, in Edit mode.
-			</td>
-
-            <td>
-![](../images/images/negative.png)
-			</td>
-        </tr>
-
-        <tr>
-            <td>
-Specific referencing requirements for the numeric and date editors
-			</td>
-
-            <td>
-Numeric and Date editors depend on `$.ig._regional`, therefore, that object should be available in a reference to `ig.util.js` or to a combined `ig-js` file.
 			</td>
 
             <td>
@@ -507,26 +314,6 @@ A post-back is necessary in order to change the `regional` option. Another worka
 
         <tr>
             <td>
-Change in styling
-			</td>
-
-            <td>
-The layout of HTML elements has modified and rounded corners are rendered around the whole editor, not only around buttons.
-
-                <blockquote>
-**Workaround**
-                <br />
-Applications can disable rounded corners by providing custom CSS or overriding default `igEditor` CSS classes.
-                </blockquote>
-            </td>
-
-            <td>
-![](../images/images/positive.png)
-			</td>
-        </tr>
-
-        <tr>
-            <td>
 Spin buttons issue
 			</td>
 
@@ -541,40 +328,12 @@ Spin buttons are rendered horizontally.
 
         <tr>
             <td>
-Editors rendering failure
+Minimum and maximum values on date editors
 			</td>
 
             <td>
-Rendering may fail if the base element is `<td>`.
-
-                <blockquote>
-**Workaround**
-                <br />
-Applications should not restrict the width of a parent element if the base element is `<td>` or it should ensure that the actual width of the `<td>` element is no less than the width of the editor control. The parent element is not only the parent table but the whole upchain of parents in the DOM hierarchy.
-                </blockquote>
-            </td>
-
-            <td>
-![](../images/images/positive.png)
+Using `new Date()` for the for the `minValue`, `maxValue` and the `value` options can cause issues as it also has a time component that will be taken into account when evaluating limits (but not included and parsed from the default input format), so it's suggested to parse fixed dates or remove the time component.
 			</td>
-        </tr>
-
-        <tr>
-            <td>
-`igDateEditor` and `igDatePicker` Knockout extensions have limitation in Immediate update mode
-			</td>
-
-            <td>
-`igDateEditor`™ and `igDatePicker` Knockout extensions have a limitation when the `updateMode` property is set to immediate. The Immediate mode is not supported when date format is different than en-US.
-<br />
-When non en-US format is used, Immediate mode, works correct only if the date is selected from the date picker, or a valid date is pasted inside the editor. If the value is typed, character by character, the wrong date is populated. The limitation is due to limitation of the JavaScript Date object constructor.
-
-                <blockquote>
-**Workaround**
-                <br />
-Either use the default update mode – On Change – or force the user to select the date from the `igDatePicker` component and not to enter it manually.
-                </blockquote>
-            </td>
 
             <td>
 ![](../images/images/positive.png)
@@ -1375,6 +1134,13 @@ Structured Append mode not supported | The `igQRCodeBarcode` control currently d
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
+### <a id="validator"></a> igValidator
+
+Issue | Description | Status
+---|---|---
+Minimum and maximum values with Date object | Using `new Date()` in the `valueRange` option can cause issues as it also has a time component that will be taken into account when evaluating limits (but not included and parsed from the default input format), so it's suggested to parse fixed dates or remove the time component. Alternatively, the `custom` validation can be used to perform checks instead. | ![](../images/images/positive.png)
+
+Go up to [Known Issues and Limitations Summary](#summary)
 
 ### <a id="zoombar"></a> [igZoombar](igZoombar-Known-Issues-And-Limitations.html)
 

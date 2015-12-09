@@ -10,12 +10,9 @@
 
 # igMaskEditor Known Issues
 
-##Known Issues
+##Known Limitations
 
-Currently there are no know issues and limitation connected to the `igMaskEditor`.
+- Changing value after initialization for [`inputMask`](%%jQueryApiUrl%%/ui.igmaskeditor#options:inputMask), [`excludeKeys`](%%jQueryApiUrl%%/ui.igmaskeditor#options:excludeKeys), [`includeKeys`](%%jQueryApiUrl%%/ui.igmaskeditor#options:includeKeys) options is not supported.
 
- 
-
- 
-
-
+## Related Links
+- [igMaskEditor Overview](igMaskEditor--Overview.html)
