@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 |metadata|
 {
     "fileName": "accessibility-compliance",
@@ -1239,5 +1239,5 @@ In 2014 the W3C finalized their [WAI-ARIA specification](http://www.w3.org/TR/wa
 
 The list below provides links to more details on how WAI-ARIA support has been implemented in various controls.
 
-[igGrid](iggrid-accessibility-compliance.html#wai-aria)
-[igHierarchicalGrid](ighierarchicalgrid-accessibility-compliance#wai-aria)
+- [igGrid](iggrid-accessibility-compliance.html#wai-aria)
+- [igHierarchicalGrid](ighierarchicalgrid-accessibility-compliance#wai-aria)

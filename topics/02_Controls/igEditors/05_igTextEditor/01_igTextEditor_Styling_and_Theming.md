@@ -21,13 +21,9 @@ The Ignite UI package comes with a number of jQuery UI and Bootstrap themes. Boo
 
 As the `igTextEditor` control uses the jQuery UI CSS framewrok it can also be fully styled using the [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/) where you can customize your own theme or choose from a gallery of available ones. These themes replace the ones that come by default with Ignite UI.
 
-Text editor with drop list using the Dark Hive theme:
+Text editor with drop list using the Darkness theme:
 
 ![](images/igTextEditor-theme-dark-hive.png)
-
-Text editor with drop list using the UI Lightness theme:
-
-![](images/igTextEditor-theme-ui-lightness.png)
 
 
 ## Custom styling

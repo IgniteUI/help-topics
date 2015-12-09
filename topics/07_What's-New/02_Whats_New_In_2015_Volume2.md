@@ -140,11 +140,11 @@ The igDataChart now allows you to implement both Major and Minor intervals for a
 
 The following example demonstrates the use of Major and Minor Axis Intervals on the NumericX Axis of an igDataChart LineSeries.
 
-![](images/jQuery_AxisIntervals_NumericX_01.png)
+![](images/jQuery_AxisIntervals_NumericX_X_Intervals.png)
 
 This example demonstrates the use of Major and Minor Axis Intervals on the NumericY Axis of an igDataChart LineSeries.
 
-![](images/jQuery_AxisIntervals_NumericY_01.png)
+![](images/jQuery_AxisIntervals_NumericY_Y_Intervals.png)
 
 #### Related Topics
 

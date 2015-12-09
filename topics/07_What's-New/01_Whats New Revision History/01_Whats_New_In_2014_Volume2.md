@@ -160,7 +160,7 @@ Our new Excel Library is a 100% pure JavaScript client-side library that support
 
 #### Related Samples
 
--   [Creating Excel Worksheet in Browser](%%NewSamplesUrl%%/client-side-excel-library/create-excel-worksheet-in-browser)
+-   [JavaScript Excel Overview](%%NewSamplesUrl%%/javascript-excel-library/overview)
 
 
 

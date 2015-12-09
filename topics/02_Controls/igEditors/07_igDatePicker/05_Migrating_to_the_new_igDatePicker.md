@@ -29,10 +29,10 @@ This topic contains the following sections:
 <a name='options_changes'></a>
 ### Options changes
 
-<a name='methods_changes'></a>
-### API Methods changes
+<a name='options_changes'></a>
+### API Options changes
 
-Method| Previously| Now
+Option| Previously| Now
 ---|---|---
 addListItem|Used to add the object within item at the location indicated by the index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 addListItems|Used to add the objects within the items array at the location indicated by the index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
@@ -53,6 +53,9 @@ select|Used to select text in editor. Valid parameters: `sel0`, `sel1`, `val`|`s
 setFocus|Used to set focus to editor with delay.  If parameter was -1, then focus was set without delay.|It now supports only positive values for the delay and 0 is default that signifies that it is immediately given the focus.
 spin|Used to increment (positive delta) or decrement (negative delta) value in editor according to the parameter.|This method is replaced by two new methods: `spinUp` and `spinDown`. If editor has listItems, then those methods increment or decrement active index in the list, without setting the vew value.
 text|Used to get or set text in editor.|This is replaced by a getter method `displayValue` that takes no parameters and returns a string with all the characters shown in the input.
+validate|Used to trigger validation of editor and show error message. It had a single parameter: `noLabel`|The parameter is renamed to `skipErrorMessage`.
+value|Used to get or set value in editor.|The parameter is renamed to `newValue` to better communicate what it does.
+hideMaskOnFocus|Set gets ability to hide mask in focus state.|This option is removed.
 
 <a name='new_options'></a>
 ### New options

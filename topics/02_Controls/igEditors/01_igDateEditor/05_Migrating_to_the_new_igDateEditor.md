@@ -40,6 +40,7 @@ dropDownTriggers|Sets gets list of actions which trigger display of drop-down li
 focusOnSpin|If that option was disabled and the editor was not focused, then a mouse click on the spin button would keep the text in the editor in not focused format and perform spin actions.|This option is removed. Now if the editor is not focused, then a mouse click on the spin button will not focus the editor.
 height, width|Previously supported type: `number`.|Now supported types are: `number`, `string`, `null`. If using type `string`, the height can be set in pixels (px) and percentage (%).
 hideEnterKey|Sets gets ability to hide the Enter key from browser.|This option is removed. You can use [preventSubmitOnEnter](#preventSubmitOnEnter) option to prevent submitting when pressing Enter.
+hideMaskOnFocus|Set ability to hide mask in focus state.|This option is removed.
 listAutoComplete|Sets gets autocomplete.|This option is removed.
 listColumns|Sets gets number of columns in drop-down list.|This option is removed.
 listDropDownAsChild |Value `true` created html element for list as a child of main html element. Value `false` created list as a child of body.|This option is no longer available for the date editor.

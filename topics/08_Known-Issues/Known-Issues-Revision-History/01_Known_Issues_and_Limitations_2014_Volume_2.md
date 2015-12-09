@@ -699,7 +699,7 @@ If you need to apply blur to the shadow, use the Compound type of shadow (`useSi
 		</td>
 		
 		<td>
-		    <p><img alt="" src="../images/images/negative.png"></p>
+		    <p><img alt="" src="../../images/images/negative.png"></p>
 		</td>
 	</tr>
     </tbody>

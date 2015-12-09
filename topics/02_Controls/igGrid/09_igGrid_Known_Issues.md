@@ -53,7 +53,7 @@ Events not triggered | By design, events only trigger on user interaction. Event
 The id attribute is mandatory for the DOM control placeholder|The id attribute should be set on the DOM element on which the grid is initialized. Grid use jQuery ID selector internally for faster selection.|![](../../images/images/negative.png)
 Column keys which contain spaces are not supported|Column keys are used for generating some DOM elements IDs. Having spaces in an HTML id attribute is not allowed according to the [HTML 5 specification](http://www.w3.org/TR/html5/dom.html#the-id-attribute).|![](../../images/images/negative.png)
 The contextMenu event is renamed to cellRightClick|The event is renamed to be more self-explanatory.|![](../../images/images/negative.png)
-Header text and  sorting/filtering/gear icons are misaligned in IE8  | This is a browser limitation due to IE8 not supporting css calc(). For details refer to: http://caniuse.com/#feat=calc| ![](../images/images/negative.png)
+Header text and sorting/filtering/gear icons are misaligned in IE8|This is a browser limitation due to IE8 not supporting css calc(). For details refer to: http://caniuse.com/#feat=calc| ![](../../images/images/negative.png)
 
 ## [igGrid – Data Binding](#data-binding)
 
@@ -148,7 +148,8 @@ When virtualization is enabled the autofitLastColumn is not effective|When virtu
 Column virtualization will not work when grid width is defined in percentage units|When grid width is defined in percentage units and column virtualization is enabled ([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) horizontal scrollbar will not render.|![](../../images/images/negative.png)
 [Fixed virtualization is not supported with RWD Mode](#fixed-virtualization)|Fixed virtualization depends on the row's height being constant. If the row's height changes the fixed virtualization will not work as expected. RWD Mode changes the row's height as it adopts to the screen size so fixed virtualization will not work as expected with it.|![](../../images/images/positive.png)
 Column virtualization is not supported with continuous virtualization | Column virtualization is supported only with fixed virtualization. When column virtualization is enabled([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) then the virtualization mode must be set to "fixed"([virtualizationMode](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) = "fixed"). | ![](../../images/images/negative.png)
-Virtualization and auto sizing of columns is not supported | Auto sizing columns by setting their width option to "*"  is not supported with virtualization. | ![](../images/images/negative.png)
+Virtualization and auto sizing of columns is not supported | Auto sizing columns by setting their width option to "*"  is not supported with virtualization. | ![](../../images/images/negative.png)
+
 
 ## igGrid – Responsive Web Design Mode
 Issue | Description | Status
@@ -924,7 +925,6 @@ Editing rows/cells with Updating when the [`autoCommit`](%%jQueryApiUrl%%/ui.igg
 > **Workaround** 
 > 
 > The `autoCommit` option should be set to true.
-
 
 ## Related Content
 
