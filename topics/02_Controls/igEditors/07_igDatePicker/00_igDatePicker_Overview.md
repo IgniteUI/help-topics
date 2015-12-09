@@ -25,7 +25,7 @@ Figure 1: The `igDatePicker` control during date selection
 
 ![](images/igDatePicker_Overview_Pic1.png)
 
-[igDatePicker Sample](%%SamplesUrl%%/date-picker/basic-usage)
+-   [igDatePicker Sample](%%SamplesUrl%%/editors/date-picker-overview)
 
 ## Features
 
