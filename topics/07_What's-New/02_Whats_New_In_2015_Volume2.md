@@ -218,7 +218,7 @@ Two new options are introduced in the Filtering feature:
 - [`conditionList`](%%jQueryApiUrl%%/ui.iggridfiltering#options:columnSettings.conditionList) - an array of consitions to be enabled per column basis.
 
 #### Related Samples
--   [Filtering](%%SamplesUrl%%/grid/filtering)
+-   [Filtering](%%SamplesUrl%%/grid/custom-conditions-filtering)
 
 ### <a id="grid-row-selectors-improvements"></a> RowSelectors Improvements
 When Paging feature is enabled in combination with Row Selectors an additional UI is introduced to allow users to select all rows across all pages.
