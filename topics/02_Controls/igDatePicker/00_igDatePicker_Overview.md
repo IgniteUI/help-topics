@@ -134,7 +134,6 @@ The `igDatePicker` includes the following characteristics:
 
 ## Related Links
 
--   [igDatePicker Sample](%%SamplesUrl%%/date-picker/basic-usage) 
 -   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)  
 -   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
 
