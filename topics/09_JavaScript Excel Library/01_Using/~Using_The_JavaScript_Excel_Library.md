@@ -274,4 +274,5 @@ function exportWorkbook() {
 - [Excel Table](%%NewSamplesUrl%%/javascript-excel-library/excel-table)
 - [Excel Formatting](%%NewSamplesUrl%%/javascript-excel-library/excel-formatting)
 - [Excel Formulas](%%NewSamplesUrl%%/javascript-excel-library/excel-formulas)
+- [Import Data From Excel ](%%NewSamplesUrl%%/javascript-excel-library/excel-import-data)
                     
