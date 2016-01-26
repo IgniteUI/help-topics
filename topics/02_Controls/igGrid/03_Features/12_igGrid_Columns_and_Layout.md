@@ -21,6 +21,7 @@ This topic contains the following sections:
 
 -   [Defining Widths and Height](#width-height)
 -   [Defining Columns](#defining-columns)
+-   [Defining Mapper function for Column](#defining-mapper)
 -   [AutoGenerateColumns](#autoGenerateColumns)
 -   [Styling](#styling)
 -   [Rendering Checkboxes on a Column](#checkboxes)
@@ -112,6 +113,35 @@ The format and `dataType` options may be configured a number of different ways.
 -   If `dataType`=”number”, then the corresponding format also can be set to something like “0.0###”, “#.##”, “0.000” etc. In this case number of zeros after the decimal point define minimum decimal places and overall number of characters after decimal point defines number of maximum decimal places.
 -   If `dataType` is not “date” or “number”, then the corresponding format can contain “{0}” flag. In this case that flag is replaced by the value of cell.For example, if format=”Name: {0}” and value is cell is “Bob”, then cell will be rendered as “Name: Bob”.
 
+## <a id="defining-mapper"></a> Defining Mapper function for column
+
+The [`mapper`](%%jQueryApiUrl%%/ui.iggrid#options:columns.mapper) column option allows defining a function for complex data extraction from the data record. It allows specifying values per data record to be used for all data operations for the specific column. 
+
+> **Note:** The function will be invoked each time the grid needs to extract data from the data source for this column. This includes any data rendering or data manupulation operations related to the column.
+
+Listing 1: Defining mapper function for column in igGrid
+
+**In Javascript:**
+
+```js
+  $("#grid").igGrid({
+  columns: [
+                    { headerText: "", key: "ID", dataType: "number", width: "200px" },
+                    { headerText: "Name", key: "Name", dataType: "string", width: "200px" },
+                    { headerText: "Description", key: "Description", dataType: "string", width: "200px" },
+                    { headerText: "Category", key: "Category", dataType: "object", width: "200px",
+                    mapper: function(record){
+                    	//extracting data from complex object
+						return record.Category.Name;
+						}					
+					}
+                ],
+                autoGenerateColumns: false,
+                dataSource: northwindProductsJSON,         
+               ...
+});
+
+```
 
 ## <a id="autoGenerateColumns"></a> AutoGenerateColumns
 
@@ -277,6 +307,7 @@ $("#grid1").igGrid({
 ### Samples
 
 -   [Auto-Generate Columns](%%SamplesUrl%%/grid/auto-generate-columns)
+-   [Handling Complex Objects](%%SamplesUrl%%/grid/handling-complex-objects)
 
 ### Topic
 -   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
