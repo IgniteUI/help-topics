@@ -107,7 +107,7 @@ A column definition is a JavaScript object containing at least a key property. I
 
 The format and `dataType` options may be configured a number of different ways.
 
--   The `dataType` can be a string, number, date or bool
+-   The `dataType` can be a string, number, date, bool or object
 -   The `format` column property corresponding to dataType=”date” (Date objects) can be “date”, “dateLong” , “dateLong” , “dateTime” , “timeLong” or explicit pattern like “MM-dd-yyyy h:mm:ss tt”.
 -   The `format` column property corresponding to dateType=”number” (number objects) or for dataType=”string” can be “number”, “double” , “int” , “currency” , “percent”.
 -   If `dataType`=”number”, then the corresponding format also can be set to something like “0.0###”, “#.##”, “0.000” etc. In this case number of zeros after the decimal point define minimum decimal places and overall number of characters after decimal point defines number of maximum decimal places.
@@ -115,11 +115,34 @@ The format and `dataType` options may be configured a number of different ways.
 
 ## <a id="defining-mapper"></a> Defining Mapper function for column
 
-The [`mapper`](%%jQueryApiUrl%%/ui.iggrid#options:columns.mapper) column option allows defining a function for complex data extraction from the data record. It allows specifying values per data record to be used for all data operations for the specific column. 
+The mapper function can be used in scenarios where you have a complex data object and need to extract specific data from it, which will define both the display value and the value used for data operations on that column.
+For such scenarios the column dataType needs to be specified as "object" and the mapper function can be used to extract the desired data from the record. 
+The mapping is done on the data source level and will allow all data operations to be executed based on the mapped values.
+For instance if we have a complex object in each record in the data source as in the following example: 
+```js
+var data = [{ "ID": 0, "Name": "Bread", "Description": "Whole grain bread", "Category":  { "ID": 0, "Name": "Food", "Active": true }},
+{ "ID": 1, "Name": "Milk", "Description": "Low fat milk",  "Category":   { "ID": 1, "Name": "Beverages", "Active": true } },
+ ...
+ ];
+```
+and would like to display a specific sub-field or combined data from the complex `Category` object( for example we'd like to map the value to contain the ID and Name sub-field values in a single string), we can do so via the `mapper` function.
+
+Example:
+
+**In Javascript:**
+```js
+mapper: function(record){
+	//extracting data from complex object
+	return record.Category.ID + " : " + record.Category.Name;
+	}				
+
+```
+The function is defined via the [`mapper`](%%jQueryApiUrl%%/ui.iggrid#options:columns.mapper) column option as shown in Listing 2. It allows specifying values per data record to be used for all data operations related to the specific column. 
+The function accepts a single parameter, which contains the whole data record and should return a single simple value per record. 
 
 > **Note:** The function will be invoked each time the grid needs to extract data from the data source for this column. This includes any data rendering or data manupulation operations related to the column.
 
-Listing 1: Defining mapper function for column in igGrid
+Listing 2: Defining mapper function for column in igGrid
 
 **In Javascript:**
 
