@@ -140,7 +140,7 @@ mapper: function(record){
 The function is defined via the [`mapper`](%%jQueryApiUrl%%/ui.iggrid#options:columns.mapper) column option as shown in Listing 2. It allows specifying values per data record to be used for all data operations related to the specific column. 
 The function accepts a single parameter, which contains the whole data record and should return a single simple value per record. 
 
-> **Note:** The function will be invoked each time the grid needs to extract data from the data source for this column. This includes any data rendering or data manupulation operations related to the column.
+> **Note:** The function will be invoked each time the grid needs to extract data from the data source for this column. This includes any data rendering or data manupulation operations related to the column. Due to this note that if you have complex data extraction and/or calculation logic there will be a performance impact.
 
 Listing 2: Defining mapper function for column in igGrid
 
