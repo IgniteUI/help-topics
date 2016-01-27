@@ -29,12 +29,11 @@ Feature | Description
 ---|---
 New field option - mapper| For field with dataType="object" we now allow setting a mapper function, which can be used for complex data extraction from complex objects, whose return value will be used for all data operations executed on the specific field.  </br> You can find more detailed information in the following topic: [igDataSource Overview](igDataSource-igDataSource-Overview.html#schema-fields-mapper)|
 
-
 ### igGrid
 
 Feature | Description
 ---|---
-New column option- Mapper| For columns with dataType="object" we now allow setting a mapper function, which can be used for complex data extraction from complex objects, whose return value will be used for all data operations executed on the specific column.- [view sample](%%SamplesUrl%%/grid/handling-complex-objects). </br> You can find more detailed information in the following topic: [Columns and Layout](igGrid-Columns-and-Layout.html#-defining-mapper-function-for-column)|
+New column option- mapper| For columns with dataType="object" we now allow setting a mapper function, which can be used for complex data extraction from complex objects, whose return value will be used for all data operations executed on the specific column.- [view sample](%%SamplesUrl%%/grid/handling-complex-objects). </br> You can find more detailed information in the following topic: [Columns and Layout](igGrid-Columns-and-Layout.html#-defining-mapper-function-for-column)|
 
 ### TypeScript Support
 
