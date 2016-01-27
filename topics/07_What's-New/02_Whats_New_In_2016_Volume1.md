@@ -23,6 +23,19 @@ Feature | Description
 ---|---
 Splitter Options| `splitterOptions` now replaces the `showSplitter` option. Besides showing and hiding, additional functionalities are added. You can configure the splitter to be collapsible as well as attach to its collapsed/expanded events. Since `showSplitter` option will no longer be available, you can refer to the following sample to see how the new option can be used - [view sample](%%SamplesUrl%%/tile-manager/collapsible-splitter).
 
+### igDataSource
+
+Feature | Description
+---|---
+New field option - mapper| For field with dataType="object" we now allow setting a mapper function, which can be used for complex data extraction from complex objects, whose return value will be used for all data operations executed on the specific field.  </br> You can find more detailed information in the following topic: [igDataSource Overview](igDataSource-igDataSource-Overview.html#schema-fields-mapper)|
+
+
+### igGrid
+
+Feature | Description
+---|---
+New column option- Mapper| For columns with dataType="object" we now allow setting a mapper function, which can be used for complex data extraction from complex objects, whose return value will be used for all data operations executed on the specific column.- [view sample](%%SamplesUrl%%/grid/handling-complex-objects). </br> You can find more detailed information in the following topic: [Columns and Layout](igGrid-Columns-and-Layout.html#-defining-mapper-function-for-column)|
+
 ### TypeScript Support
 
 Starting with 16.1 release Ignite UI the minimum supported TypeScript version is 1.4.
