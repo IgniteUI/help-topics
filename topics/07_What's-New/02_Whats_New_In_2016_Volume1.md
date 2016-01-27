@@ -21,7 +21,7 @@ The following summarizes what’s new in 2016 Volume 1. Additional details follo
 
 Feature | Description
 ---|---
-Splitter Options| `splitterOptions` now replaces the `showSplitter` option. We added additional functionalities besades showing/hiding the splitter. You can configure the splitter to be collapsible as well as attach to its collapsed/expanded events. Since `showSplitter` option will no longer be available, you can refer to the following sample to see how the new option can be used - [view sample](%%SamplesUrl%%/tile-manager/collapsible-splitter).
+Splitter Options| `splitterOptions` now replaces the `showSplitter` option. Besides showing and hiding, additional functionalities are added. You can configure the splitter to be collapsible as well as attach to its collapsed/expanded events. Since `showSplitter` option will no longer be available, you can refer to the following sample to see how the new option can be used - [view sample](%%SamplesUrl%%/tile-manager/collapsible-splitter).
 
 ### TypeScript Support
 
