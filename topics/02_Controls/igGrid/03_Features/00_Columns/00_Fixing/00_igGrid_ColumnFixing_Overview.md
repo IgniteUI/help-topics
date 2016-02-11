@@ -71,9 +71,9 @@ The Fixed Columns area can be either on the left (default) or the right. The fol
 
 ![](images/igGrid_ColumnFixing_Overview_1.png)
 
-Column Fixing feature requires the grid and its columns (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option) to have their width defined in pixels units.
+Column Fixing feature requires the columns to have their width defined in pixels units (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option).
 
->**Note:** Only widths in pixel units is supported.
+>**Note:** Only widths in pixel units is supported for the columns. For the grid any valid width setting is allowed (the width setting can also be omitted).
 
 Fixed and Non-Fixed Columns areas in the `igGrid`™ control are implemented as a two separate table DOM elements. This requires all grid DOM manipulation methods to be duplicated for the Fixed Columns area. Usually, the Fixed Column area APIs are prefixed with the word fixed.
 
@@ -273,7 +273,6 @@ The `igGrid` Column Fixing feature is integrated with the following `igGrid` fea
 The column fixing functionality is not supported with the following `igGrid` features:
 
 -   [GroupBy](igGrid-GroupBy.html)
--   [Hiding](igGrid-Column-Hiding.html)
 -   [Responsive Web Design (RWD) Mode](igGrid-Responsive-Web-Design-Mode-LandingPage.html)
 -   [Unbound Columns](igGrid-UnboundColumns-Landing-Page.html) 
 

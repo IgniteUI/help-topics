@@ -799,12 +799,10 @@ In Internet Explorer 9 or higher, if you fix a column in an igGrid and scroll do
 
         <tr>
             <td>
-Grid and its columns widths are mandatory and should be defined in pixels units
+The column widths are mandatory and should be defined in pixels units
 			</td>
-
             <td>
-Grid and its columns (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option) widths are mandatory
-                    and should be defined in pixels units.
+The column widths are mandatory and should be defined in pixels units (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option).
 			</td>
 
             <td>
