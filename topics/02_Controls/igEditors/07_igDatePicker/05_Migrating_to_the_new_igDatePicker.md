@@ -87,7 +87,6 @@ addListItem|Used to add the object within item at the location indicated by the 
 addListItems|Used to add the objects within the items array at the location indicated by the index.|This method is removed.
 clearListItems|Removed all items from list.|This method is removed.
 dropDownElement|Got reference to jquery object which is used as container of dropdown.|This method is removed.
-dropDownVisible|Set visibility of dropdown list according to the Boolean value that is passed.|This method is removed.
 findListItemIndex|Found index of list item by text that matches with the search parameters.|This method is removed.
 getRegionalOption|Gets calculated value of regional option used by numeric and date editors.|This method in no longer available.
 getSelection|Used to get left or right edge of selection.|This method is replaced by the methods `getSelectionStart` and `getSelectionEnd`.
