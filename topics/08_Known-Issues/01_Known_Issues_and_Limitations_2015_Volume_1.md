@@ -715,6 +715,7 @@ If you need to apply blur to the shadow, use the Compound type of shadow (`useSi
 Issue | Description | Status
 ------|-------------|-------
 Controls sized incorrectly when inside an `igDialog` and their width/ height is relative | Controls inside an `igDialog`™ do not have correct dimensions if their width/height is relative. This is because any embedded controls are instantiated before rendering `igDialog` so their dimensions cannot be calculated correctly. | ![](../images/images/positive.png)
+Embedded iframe (including in controls like `igHtmlEditor`) may reload and lose content | Maximizing and minimizing the `igDialog` can cause frame elements in the content (including in controls like the `igHtmlEditor`) to reload. This is caused by the dialog moving in the DOM to position itself under the body of the document. Depending on configuration, pinning can produce similar behavior. | ![](../images/images/positive.png)
 
 
  Go up to [Known Issues and Limitations Summary](#summary)
@@ -1192,7 +1193,7 @@ Go up to [Known Issues and Limitations Summary](#summary)
 Issue | Description | Status
 ---|---|---
 Saving exported file does not work in IE9 and earlier | GridExcelExporter uses a Blob object to keep the raw data of the exported worksheet, which is not supported in IE9 and earlier: https://developer.mozilla.org/en-US/docs/Web/API/Blob | ![](../images/images/negative.png)
-Only part of the data is exported in Append Rows on Demand or remote paging scenarios | The GridExcelExporter is entirely a client-side component and thus it deals only with data currently available on the client. In scenarios implementing Remote Paging and Append Rows on Demand when further sets of data are fetched through additional requests, this data is not exported. |
+Only part of the data is exported in Append Rows on Demand or remote paging scenarios | The GridExcelExporter is entirely a client-side component and thus it deals only with data currently available on the client. In scenarios implementing Remote Paging and Append Rows on Demand when further sets of data are fetched through additional requests, this data is not exported. | ![](../images/images/positive.png)
 Go up to [Known Issues and Limitations Summary](#summary)
 
 
@@ -1223,7 +1224,7 @@ Issue | Description | Status
 ------|-------------|-------
 Expansion indicators can be cropped/hidden with remote features|Expansion indicators on lower levels in the hierarchy can be cropped/hidden when rendered in the separate indicators non-data column in remote scenarios|![](../images/images/positive.png)
 Misaligned first cells' data on lower levels|Padding on lower levels can push displayed data beyond the available width of the cell and cause the text to wrap around to the initial position, breaking visual hierarchy|![](../images/images/positive.png)
-Scroll position changes when expanding/collapsing rows in rowVirtualization mode with paging (allLevels).|When rowVirtualization and paging with  [`mode`](%%jQueryApiUrl%%/ui.igtreegrid#options:mode) set to `allLevels` are enabled the scroll position will change when expanding/collapsing rows.| ![](../../images/images/negative.png) 
+Scroll position changes when expanding/collapsing rows in rowVirtualization mode with paging (allLevels).|When rowVirtualization and paging with  [`mode`](%%jQueryApiUrl%%/ui.igtreegrid#options:mode) set to `allLevels` are enabled the scroll position will change when expanding/collapsing rows.| ![](../images/images/negative.png) 
 
 Go up to [Known Issues and Limitations Summary](#summary)
 

@@ -22,7 +22,7 @@ This topic contains the following sections:
 -   [Configuration Considerations](#considerations)
 -   [Enabling Sorting](#enable)
 -   [Column Settings](#column-settings)
--   [Remote Filtering](#remote)
+-   [Remote Sorting](#remote)
 -   [API Usage](#api)
 -   [Client-Side events](#client-side-events)
 -   [Sorting options](#properties)
