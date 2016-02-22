@@ -80,6 +80,7 @@ While some feature might be successfully enabled for the `igTreeGrid`, some of t
 - Resizing
 - Summaries
 - Column Grouping
+- Unbound columns
 
 ## <a id="specialized-features"></a> Specialized Features
 
