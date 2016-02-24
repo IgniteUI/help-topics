@@ -1215,6 +1215,11 @@ Characters different from A-Z, a-z, 0-9, "_" are not substituted/recognized.
 ![](../images/images/positive.png)
 			</td>
         </tr>
+        <tr>
+		<td>List of blocks is not supported</td>
+		<td>List of blocks are not supported, which means the following - “{{if *Condition1* }} Do Something {{/if}} {{if *Condition2* }} Do Something else {{/if}}” is not a correctly defined block.</td>
+		<td>![](../images/images/negative.png)</td>
+        </tr>
     </tbody>
 </table>
 
