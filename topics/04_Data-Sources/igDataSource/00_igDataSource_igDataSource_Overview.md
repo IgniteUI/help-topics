@@ -31,7 +31,7 @@ The `igDataSource` component supports the following features out-of-the-box:
 	
 ###  Schema field's mapper 
 
-The schema field definition allow setting a mapper function for columns with dataType "object", which will be used for all data operations on the data source level (sorting, filtering, etc.). 
+The schema field definition allow setting a mapper function for columns with dataType "object", which will be used for all data operations on a data source level (sorting, filtering, etc.). 
 This is useful in scenarios where we want to apply data operations on a specific value from the complex object. For instance if we have the following data source structure:
 
 **In Javascript:**
@@ -68,7 +68,7 @@ var ds = new $.ig.DataSource({
 	}
 });
 ```
-The function accepts a single paratmeter, which holds the whole data record, and should return a single simple value, which will be used for any data operation on the related field.
+The function accepts a single paratmeter, which holds a reference to the data record, and should return a primitive value, which will be used for any data operation on the related field.
 Note that since the dataType of the field is "object" no additional data transfromation will be applied for field  and the returned value will be used as is. Due to this additional data type conversion should be done in the function.
 For example date values, which may be stored in string format in the client data source, would need to be processed before being returned in the mapper, otherwise they will be considered as string values.
 
@@ -97,7 +97,7 @@ var ds = new $.ig.DataSource({
 ```
 
 > **Note:** The function will be invoked each time the data source needs to extract data from the related field. This includes any data manupulation operations related to the field.
- Due to this note that if you have complex data extraction and/or calculation logic there will be a performance impact.
+ Due to this note that complex data extraction and/or calculation logic may impact performance.
 
 ## Adding Data Source to a Web Page
 1.  On your HTML page, reference the required JavaScript libraries: 

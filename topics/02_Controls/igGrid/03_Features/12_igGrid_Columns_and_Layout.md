@@ -115,9 +115,9 @@ The format and `dataType` options may be configured a number of different ways.
 
 ## <a id="defining-mapper"></a> Defining Mapper function for column
 
-The mapper function can be used in scenarios where you have a complex data object and need to extract specific data from it, which will define both the display value and the value used for data operations on that column.
-For such scenarios the column dataType needs to be specified as "object" and the mapper function can be used to extract the desired data from the record. 
-The mapping is done on the data source level and will allow all data operations to be executed based on the mapped values.
+The mapper function can be used in scenarios where you have a complex data object and you need to extract specific property from it, which will define both the display value and the value used for data operations on that column.
+For such scenarios the column dataType needs to be specified as "object" and a mapper function can be used to extract the desired data from the record. 
+The mapping is done on a data source level and will allow all data operations to be executed based on the mapped values.
 For instance if we have a complex object in each record in the data source as in the following example: 
 ```js
 var data = [{ "ID": 0, "Name": "Bread", "Description": "Whole grain bread", "Category":  { "ID": 0, "Name": "Food", "Active": true }},
@@ -125,13 +125,13 @@ var data = [{ "ID": 0, "Name": "Bread", "Description": "Whole grain bread", "Cat
  ...
  ];
 ```
-and would like to display a specific sub-field or combined data from the complex `Category` object( for example we'd like to map the value to contain the ID and Name sub-field values in a single string), we can do so via the `mapper` function.
+and would like to display a specific property, or computed value from multiple properties of the 'Category' object( for example we'd like to map the value to contain the ID and Name sub-field values in a single string), we can do so via the `mapper` function.
 
 Example:
 
 **In Javascript:**
 ```js
-mapper: function(record){
+	mapper: function(record){
 	//extracting data from complex object
 	return record.Category.ID + " : " + record.Category.Name;
 	}				
@@ -142,7 +142,7 @@ The function accepts a single parameter, which contains the whole data record an
 
 > **Note:** The function will be invoked each time the grid needs to extract data from the data source for this column. This includes any data rendering or data manupulation operations related to the column. Due to this note that if you have complex data extraction and/or calculation logic there will be a performance impact.
 
-Listing 2: Defining mapper function for column in igGrid
+Listing 2: Defining mapper function for a column in igGrid
 
 **In Javascript:**
 
@@ -153,10 +153,10 @@ Listing 2: Defining mapper function for column in igGrid
                     { headerText: "Name", key: "Name", dataType: "string", width: "200px" },
                     { headerText: "Description", key: "Description", dataType: "string", width: "200px" },
                     { headerText: "Category", key: "Category", dataType: "object", width: "200px",
-                    mapper: function(record){
-                    	//extracting data from complex object
-						return record.Category.Name;
-						}					
+						mapper: function(record){
+								//extracting data from complex object
+								return record.Category.Name;
+							}					
 					}
                 ],
                 autoGenerateColumns: false,
