@@ -27,6 +27,77 @@ The `igDataSource` component supports the following features out-of-the-box:
 -   Sorting
 -   Filtering
 -   Data schema support: translate data from many sources into a consistent format
+	- Schema field's mapper 
+	
+###  Schema field's mapper 
+
+The schema field definition allow setting a mapper function for columns with dataType "object", which will be used for all data operations on a data source level (sorting, filtering, etc.). 
+This is useful in scenarios where we want to apply data operations on a specific value from the complex object. For instance if we have the following data source structure:
+
+**In Javascript:**
+	
+```js
+var data = [
+{ "ID": 0, "Name": "Bread", "Description": "Whole grain bread", "Category":  { "ID": 0, "Name": "Food", , "Date": "\/Date(1159660800000)\/"  } },
+...
+];
+
+```
+Out of the box the data source would not be able to apply data operations on the Category field as it has a complex object structure. 
+The [field's](%%jQueryApiUrl%%/ig.datasource#options:settings.fields) mapper option allows defining a data extraction function, which will allow specifying the data to be used for the field - it could be a sub-field or combined data from the complex object.
+For instance if you'd like the data operations to be executed based on the ID sub-field you can set a mapper function, which will return the ID value. You can refer to the example in Listing 1. 
+
+Listing 1: Defining mapper function for schema field
+
+**In Javascript:**
+	
+```js
+var ds = new $.ig.DataSource({
+	type: "json", 
+	dataSource: data, 
+	 schema: {
+		fields: [{
+			name: "ID", type:"number"
+		}, {
+			name: "Name", type:"string"
+		}, {
+			name: "Category" , type:"object", mapper: function(record){							
+				return record.Category.ID;
+			}
+		}]         
+	}
+});
+```
+The function accepts a single paratmeter, which holds a reference to the data record, and should return a primitive value, which will be used for any data operation on the related field.
+Note that since the dataType of the field is "object" no additional data transfromation will be applied for field  and the returned value will be used as is. Due to this additional data type conversion should be done in the function.
+For example date values, which may be stored in string format in the client data source, would need to be processed before being returned in the mapper, otherwise they will be considered as string values.
+
+Converting string to date in the mapper function:
+
+**In Javascript:**
+	
+```js
+var ds = new $.ig.DataSource({
+	type: "json", 
+	dataSource: data, 
+	 schema: {
+		fields: [{
+			name: "ID", type:"number"
+		}, {
+			name: "Name", type:"string"
+		}, {
+			name: "Category" , type:"object", mapper: function(record){							
+					var ticks = record.Category.Date.replace("Date(", "").replace(")", "");
+					return new Date( parseInt(ticks)) ;
+			}
+		}]         
+	}
+});
+
+```
+
+> **Note:** The function will be invoked each time the data source needs to extract data from the related field. This includes any data manupulation operations related to the field.
+ Due to this note that complex data extraction and/or calculation logic may impact performance.
 
 ## Adding Data Source to a Web Page
 1.  On your HTML page, reference the required JavaScript libraries: 
