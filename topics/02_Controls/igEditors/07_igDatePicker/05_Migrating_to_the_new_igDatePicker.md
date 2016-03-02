@@ -153,8 +153,6 @@ dropDownListOpening|<a name='dropDownListOpening'></a>Event which is raised when
 dropDownListOpened|<a name='dropDownListOpened'></a>Event which is raised when the drop down is already opened.
 dropDownListClosing|<a name='dropDownListClosing'></a>Event which is raised when the drop down is closing.
 dropDownListClosed|<a name='dropDownListClosed'></a>Event which is raised when the drop down is already closed.
-dropDownItemSelecting|<a name='dropDownItemSelecting'></a>Event which is raised when the drop down list item is selecting.
-dropDownItemSelected|<a name='dropDownItemSelected'></a>Event which is raised when the drop down list item is selected.
 mouseout|<a name='mouseout'></a>Event which is raised on mouseleave at any part of editor including drop-down list.
 
 [See all events](%%jQueryApiUrl%%/ui.igdatepicker#events)
