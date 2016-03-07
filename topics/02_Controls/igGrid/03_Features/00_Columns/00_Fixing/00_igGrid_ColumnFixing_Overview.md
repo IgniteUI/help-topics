@@ -265,6 +265,7 @@ The `igGrid` Column Fixing feature is integrated with the following `igGrid` fea
 -   [Selection](igGrid-Selection.html)
 -   [Sorting](igGrid-Sorting.html)
 -   [Summaries](igGrid-Column-Summaries.html)
+-   [Hiding](igGrid-Column-Hiding.html) 
 -   [Tooltips](igGrid-Tooltips.html)
 -   [](igGrid-Updating.html)[Updating](igGrid-Updating.html)
 
