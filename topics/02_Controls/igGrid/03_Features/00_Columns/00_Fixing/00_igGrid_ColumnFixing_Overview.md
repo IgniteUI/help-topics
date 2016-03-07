@@ -73,7 +73,7 @@ The Fixed Columns area can be either on the left (default) or the right. The fol
 
 Column Fixing feature requires the columns to have their width defined in pixels units (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option).
 
->**Note:** Only widths in pixel units is supported for the columns. For the grid any valid width setting is allowed (the width setting can also be omitted).
+>**Note:** Only widths in pixel units is supported for the columns. The grid width can be set in either pixel or percentage units (cannot be comitted).
 
 Fixed and Non-Fixed Columns areas in the `igGrid`™ control are implemented as a two separate table DOM elements. This requires all grid DOM manipulation methods to be duplicated for the Fixed Columns area. Usually, the Fixed Column area APIs are prefixed with the word fixed.
 

@@ -802,14 +802,24 @@ In Internet Explorer 9 or higher, if you fix a column in an igGrid and scroll do
 The column widths are mandatory and should be defined in pixels units
 			</td>
             <td>
-The column widths are mandatory and should be defined in pixels units (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option).
+The column widths are mandatory and should be defined in pixels units (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option). The grid width should be set either in pixels or percentage units.
 			</td>
 
             <td>
 ![](../images/images/negative.png)
 			</td>
         </tr>
-
+<tr>
+            <td>
+The grid height cannot be set in percentage units.
+			</td>
+            <td>
+Setting grid height in percentage units is not supported.
+			</td>
+            <td>
+![](../../images/images/negative.png)
+			</td>
+        </tr>
         <tr>
             <td>
 The grid scrolls to the top, when a column is unfixed and continuous virtualization is enabled
