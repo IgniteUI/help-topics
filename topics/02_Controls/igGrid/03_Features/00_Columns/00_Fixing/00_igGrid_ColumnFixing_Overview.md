@@ -273,7 +273,6 @@ The `igGrid` Column Fixing feature is integrated with the following `igGrid` fea
 The column fixing functionality is not supported with the following `igGrid` features:
 
 -   [GroupBy](igGrid-GroupBy.html)
--   [Hiding](igGrid-Column-Hiding.html)
 -   [Responsive Web Design (RWD) Mode](igGrid-Responsive-Web-Design-Mode-LandingPage.html)
 -   [Unbound Columns](igGrid-UnboundColumns-Landing-Page.html) 
 
