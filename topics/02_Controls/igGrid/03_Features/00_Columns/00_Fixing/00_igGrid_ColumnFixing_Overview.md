@@ -274,7 +274,6 @@ The column fixing functionality is not supported with the following `igGrid` fea
 
 -   [Column Moving](igGrid-ColumnMoving-LandingPage.html)
 -   [GroupBy](igGrid-GroupBy.html)
--   [Hiding](igGrid-Column-Hiding.html)
 -   [Responsive Web Design (RWD) Mode](igGrid-Responsive-Web-Design-Mode-LandingPage.html)
 -   [Virtualization](igGrid-Virtualization.html)
 -   [Unbound Columns](igGrid-UnboundColumns-Landing-Page.html) 
