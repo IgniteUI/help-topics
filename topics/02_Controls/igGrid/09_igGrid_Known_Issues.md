@@ -210,13 +210,14 @@ In Internet Explorer 9 or higher, if you fix a column in an `igGrid` and scroll 
 ![](../../images/images/positive.png)
 			</td>
         </tr>
-        <tr>
+    <tr>
             <td>
-Grid and its columns widths are mandatory and should be defined in pixels units
+The column widths are mandatory and should be defined in pixel units
 			</td>
+
             <td>
-Grid and its columns (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option) widths are mandatory and should be defined in pixels units.
-			</td>
+The column widths are mandatory and should be defined in pixels units (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option). The grid width should be set either in pixel or in percentage units.			</td>
+
             <td>
 ![](../../images/images/negative.png)
 			</td>
