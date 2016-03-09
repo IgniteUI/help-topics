@@ -222,6 +222,18 @@ The column widths are mandatory and should be defined in pixels units (either ex
 ![](../../images/images/negative.png)
 			</td>
         </tr>
+	  <tr>
+            <td>
+In Chrome and Safari when there is a caption with long text defined for the grid, the fixed column header's width will stretch to the length of the caption and the unfix column button may not be visible.
+			</td>
+
+            <td>
+This is a third party issue in Chrome and Safari. In those browsers the thead element, which contains the fixed headers, stretches to the full width of the caption, which may lead to the unfix button going outside of the visible area of the header (in cases where the column width is smaller than the caption width). All other browsers retain the same column width in the fixed grid area and don't exhibit this behavior.	    </td>
+
+            <td>
+![](../../images/images/negative.png)
+			</td>
+        </tr>
     </tbody>
 </table>
 
