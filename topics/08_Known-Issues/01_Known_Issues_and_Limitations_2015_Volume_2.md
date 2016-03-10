@@ -835,6 +835,17 @@ This is a third party issue in Chrome and Safari. In those browsers the thead el
 ![](../../images/images/negative.png)
 			</td>
         </tr>
+<tr>  
+<td>  
+The grid height cannot be set in percentage units.  
+ </td>  
+        <td>  
+Setting grid height in percentage units is not supported.  
+			</td>  
+            <td>  
+![](../../images/images/negative.png)  
+	</td>  
+  </tr>   
     </tbody>
 </table>
 

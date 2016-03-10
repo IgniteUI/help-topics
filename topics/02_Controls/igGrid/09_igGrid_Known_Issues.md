@@ -210,18 +210,18 @@ In Internet Explorer 9 or higher, if you fix a column in an `igGrid` and scroll 
 ![](../../images/images/positive.png)
 			</td>
         </tr>
-    <tr>
+        <tr>
             <td>
 The column widths are mandatory and should be defined in pixel units
 			</td>
-
             <td>
 The column widths are mandatory and should be defined in pixels units (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option). The grid width should be set either in pixel or in percentage units.			</td>
-
             <td>
 ![](../../images/images/negative.png)
-			</td>
+	
+	</td>	
         </tr>
+
 	  <tr>
             <td>
 In Chrome and Safari when there is a caption with long text defined for the grid, the fixed column header's width will stretch to the length of the caption and the unfix column button may not be visible.
@@ -229,13 +229,24 @@ In Chrome and Safari when there is a caption with long text defined for the grid
 
             <td>
 This is a third party issue in Chrome and Safari. In those browsers the thead element, which contains the fixed headers, stretches to the full width of the caption, which may lead to the unfix button going outside of the visible area of the header (in cases where the column width is smaller than the caption width). All other browsers retain the same column width in the fixed grid area and don't exhibit this behavior.	    </td>
-
-            <td>
+   <td>
 ![](../../images/images/negative.png)
 			</td>
-        </tr>
+	</tr>
+	<tr>  
+<td>  
+The grid height cannot be set in percentage units.  
+ </td>  
+        <td>  
+Setting grid height in percentage units is not supported.  
+			</td>  
+            <td>  
+![](../../images/images/negative.png)  
+	</td>  
+  </tr>   
     </tbody>
 </table>
+
 
 
 ## [igGridColumnMoving](#column-moving)
