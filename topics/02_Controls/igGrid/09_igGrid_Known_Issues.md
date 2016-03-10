@@ -151,7 +151,6 @@ Column virtualization will not work when grid width is defined in percentage uni
 Column virtualization is not supported with continuous virtualization | Column virtualization is supported only with fixed virtualization. When column virtualization is enabled([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) then the virtualization mode must be set to "fixed"([virtualizationMode](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) = "fixed"). | ![](../../images/images/negative.png)
 Virtualization and auto sizing of columns is not supported | Auto sizing columns by setting their width option to "*"  is not supported with virtualization. | ![](../../images/images/negative.png)
 
-
 ## igGrid – Responsive Web Design Mode
 Issue | Description | Status
 ---|---|---
@@ -222,8 +221,20 @@ Grid and its columns (either explicitly or using the [defaultColumnWidth](%%jQue
 ![](../../images/images/negative.png)
 			</td>
         </tr>
+	<tr>  
+<td>  
+The grid height cannot be set in percentage units.  
+ </td>  
+        <td>  ## [igGridColumnMoving](#column-moving)
+Setting grid height in percentage units is not supported.  
+			</td>  
+            <td>  
+![](../../images/images/negative.png)  
+	</td>  
+  </tr>  
     </tbody>
 </table>
+
 
 
 ## [igGridColumnMoving](#column-moving)
@@ -342,7 +353,6 @@ Adding and updating a virtual grid doesn’t work if it is grouped | When using 
 `rowEditDialogMaxHeight` property renamed to [`rowEditDialogContentHeight`](%%jQueryApiUrl%%/ui.iggridupdating#options:rowEditDialogContentHeight) | This property is related to the Row Edit Template ([`editMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:editMode)=“rowedittemplate”). It is used to set the height of the row edit dialog content. <br /> This is a breaking change from the previous versions’ functionality. | ![](../../images/images/negative.png)
 [Column template including `<td>` tag attributes](igGrid-Known-Issues.html#updating-tempalte-attributes) is ignored when updating rows | When updating rows, the `igGrid` correctly changes only the content of the `<td>` tags so that styles and/or attributes applied internally to the `<td>` elements are not lost. | ![](../../images/images/positive.png)
 [Updating rows/cells when the Updating and Continuous Virtualization features are enabled while [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) is disabled is not supported.](#updating-edit-virtualization) | Editing rows/cells with Updating when the [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) grid option is set to false and Continuous Virtualization is enable will throw exception. | ![](../../images/images/positive.png)
-
 
 ## <a id="feature-chooser"></a>Feature Chooser
 
