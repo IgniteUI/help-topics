@@ -266,7 +266,8 @@ The `igGrid` Column Fixing feature is integrated with the following `igGrid` fea
 -   [Summaries](igGrid-Column-Summaries.html)
 -   [Tooltips](igGrid-Tooltips.html)
 -   [Virtualization](igGrid-Virtualization.html)(Fixed and Continuous Virtualization are supported.)
--   [](igGrid-Updating.html)[Updating](igGrid-Updating.html)
+-   [Updating](igGrid-Updating.html)
+-   [Hiding](igGrid-Column-Hiding.html)
 
 ### <a id="non-supported-features"></a> Non-supported features summary
 
@@ -274,7 +275,6 @@ The column fixing functionality is not supported with the following `igGrid` fea
 
 -   [Column Moving](igGrid-ColumnMoving-LandingPage.html)
 -   [GroupBy](igGrid-GroupBy.html)
--   [Hiding](igGrid-Column-Hiding.html)
 -   [Responsive Web Design (RWD) Mode](igGrid-Responsive-Web-Design-Mode-LandingPage.html)
 -   [Unbound Columns](igGrid-UnboundColumns-Landing-Page.html) 
 
