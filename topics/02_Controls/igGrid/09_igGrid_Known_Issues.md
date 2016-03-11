@@ -155,6 +155,7 @@ Virtualization and auto sizing of columns is not supported | Auto sizing columns
 Issue | Description | Status
 ---|---|---
 RWD mode is not supported in IE8|RWD is unable to determine the mode in IE8. This feature is mainly targeted at mobile compatibility so it is not supported under IE8.|![](../../images/images/negative.png)
+RWD single column template is not supported with any of the grid features, excepts Paging.| The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.|![](../../images/images/negative.png)
 
 ## [igGridColumnFixing](#column-fixing)
 
