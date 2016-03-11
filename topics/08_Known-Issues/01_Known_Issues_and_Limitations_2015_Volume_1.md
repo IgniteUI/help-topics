@@ -960,8 +960,8 @@ Status
         <td>![](../images/images/negative.png)</td>
         </tr>     
 	<tr>
-        <td>RWD mode is not supported in IE8</td>
-        <td>RWD is unable to determine the mode in IE8. This feature is mainly targeted at mobile compatibility so it is not supported under IE8.</td>
+        <td>RWD single column template is not supported with any of the grid features, excepts Paging.</td>  
+	<td>The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.</td> 
         <td>![](../images/images/negative.png)</td>
         </tr>  
     </tbody>
