@@ -58,12 +58,6 @@ Cells may also be selected in a more traditional sense. Cells can be selected ei
 
 -   Arbitrary selections are possible by dragging the mouse to form rectangles around selected files as well.
 
-Keyboard navigation is available using any of the ARROW keys: LEFT ARROW, RIGHT ARROW, DOWN ARROW, and UP ARROW. Variations of keyboard navigation include:
-
--   When CTRL and SHIFT are held down and the cells/rows are already selected, they become deselected.
--   When CTRL is held down and the arrow keys are used, the activation of the cells and rows is changed. Pressing SPACE changes only the selection.
--   Therefore if CTRL is held and SPACE is pressed, the row or cell changes selection, meaning if they have been selected, they are deselected, and vice versa. Once the CTRL key is released and some of the arrow keys are pressed, the current existing continuous selection is cleared and active and so are the selected row and/or cell (that is, they are moving along). This is basically the same behavior you can observe in Windows Explorer.
-
 **Figure 1: The igGrid control with continuous selection by dragging with the mouse**
 
 ![](images/igGrid_Selection_01.png)
