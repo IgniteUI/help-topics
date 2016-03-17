@@ -1073,16 +1073,16 @@ When you have continuous virtualization enabled and you unfix a column, the grid
 			</td>
         </tr>
 		<tr>  
-<td>  
-The grid height cannot be set in percentage units.  
- </td>  
-        <td>  ## [igGridColumnMoving](#column-moving)
-Setting grid height in percentage units is not supported.  
-			</td>  
-            <td>  
-![](../images/images/negative.png)  
-	</td>  
-  </tr> 
+        <td>  
+        The grid height cannot be set in percentage units.  
+        </td>  
+                <td>
+        Setting grid height in percentage units is not supported.  
+                    </td>  
+                    <td>  
+        ![](../images/images/negative.png)  
+            </td>  
+        </tr> 
     </tbody>
 </table>
 

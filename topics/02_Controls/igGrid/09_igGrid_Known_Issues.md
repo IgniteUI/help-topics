@@ -226,7 +226,7 @@ Grid and its columns (either explicitly or using the [defaultColumnWidth](%%jQue
 <td>  
 The grid height cannot be set in percentage units.  
  </td>  
-        <td>  ## [igGridColumnMoving](#column-moving)
+        <td>  
 Setting grid height in percentage units is not supported.  
 			</td>  
             <td>  
