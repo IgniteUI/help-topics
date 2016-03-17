@@ -31,7 +31,7 @@ This topic contains the following sections:
 
 Option| Previously| Now
 ---|---|---
-animationHideDuration animationShowDuration|Used to set animation duration when dropdown list is displayed/hidden.|These options are replaced by new option `dropDownAnimationDuration` that controls the dropdown list animation duration. But note that the igDateEditor doesn't support dropdown.
+animationHideDuration animationShowDuration|Used to set animation duration when dropdown list is displayed/hidden.|As the igDateEditor doesn't support dropdown, these options are not supported for the control.
 button|This option was used to set visibility of spin and dropdown button. <br>`$(".selector").igDateEditor({`<br>`button : "dropdown"`<br>`});`|This option is renamed to `buttonType` to better communicate what it does. For date editor the supported types are 'spin' and 'clear'.<br>`$(".selector").igDateEditor({`<br>`buttonType : "spin"`<br>`});`
 dataMode|Members of type 'string' and 'number' were supported.<br>`$(".selector").igDateEditor({`<br>`dataMode: 0`<br>`});`|Members of type 'number' are not supported.<br>`$(".selector").igDateEditor({`<br>`dataMode: "editModeText"`<br>`});`
 display|Sets gets style.display for outer html element.|This option is removed.

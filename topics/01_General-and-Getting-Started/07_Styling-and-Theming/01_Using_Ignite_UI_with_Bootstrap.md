@@ -1,7 +1,7 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "using-ignite-ui-with-botstrap",
+    "fileName": "using-ignite-ui-with-bootstrap",
     "controlName": [],
     "tags": ["Styling"]
 }

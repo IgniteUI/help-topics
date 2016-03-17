@@ -24,7 +24,8 @@ This topic contains the following sections:
 6. [Event changes](#event_changes)
 7. [New events](#new_events)
 8. [Knockout Integration changes](#ko_changes)
-9. [Requirements](#requirements)
+9. [Knockout Backwards compitability] (#ko_backwards)
+10. [Requirements](#requirements)
 
 <a name='general_changes'></a>
 ### General changes
@@ -223,6 +224,101 @@ var viewModel = new ViewModel(model);
 ```
 
 >**Note:** This will only work, when there is a change from the `igCombo` to the View-Model. 
+
+<a name='ko_backwards'></a>
+###Knockout Backwards compatibility 
+
+The new combo and its knockout extensions have been redesigned and therefore there are some changes in architecture. The combo selection collection was designed to only accept values that are available in its drop down items. The knockout extension follows that pattern and the observable item, which monitors the changes in the combo, is now an array of the selected items. 
+In the previous version the extension was monitoring the combo filed. With the new implementation one can monitor multiple selected items and not only a single selection. 
+
+This architectural approach means that one cannot bind igCombo with an HTML input element for example, because the input observable cannot be defined as an observable array. Our igEditors and their extensions, in contrast, are designed to work with HTML inputs. If one needs a way to combine igCombo with HTML inputs, one can use the approach demonstrated in the previous section (Knockout Integration Changes). 
+The code in this section demonstrates a custom solution, which allows the use of the new version of the igCombo and Knockout extension, but without the need to change the code in your ViewModel and View. This polyfill is suitable for situations when you want to upgrade to the latest version of IgniteUI but cannot change your current code to handle selection notifications.
+
+The following binding handler should be defined after the igCombo knockout handlers are loaded:
+
+```html
+<script type="text/javascript">
+ko.bindingHandlers.igComboPolyfill = {
+	init: function (element, valueAccessor) {
+		var combo = $(element),
+			isMultiple = valueAccessor().multiSelection ? valueAccessor().multiSelection.enabled : false;
+
+		ko.utils.registerEventHandler(element, "igcomboselectionchanged", function (evt, ui) {
+			var item = ui.items[0], dataItem, newText, newValue;
+
+			if (isMultiple) {
+				if (ko.isObservable(valueAccessor().text)) {
+					valueAccessor().text(combo.igCombo("text"));
+				}
+			} else {
+				if (item !== undefined) {
+					dataItem = item.data;
+					if (ko.isObservable(dataItem)) {
+						dataItem = dataItem();
+					}
+					newText = dataItem[valueAccessor().textKey];
+					newValue = dataItem[valueAccessor().valueKey];
+
+					if (ko.isObservable(valueAccessor().text)) {
+						if (ko.isObservable(newText)) {
+							newText = newText();
+						}
+						valueAccessor().text(newText);
+					}
+					if (ko.isObservable(valueAccessor().value)) {
+						if (ko.isObservable(newValue)) {
+							newValue = newValue();
+						}
+						valueAccessor().value(newValue);
+					}
+				}
+			}
+		});
+
+		ko.utils.registerEventHandler(element, "igcombodropdownclosed", function (evt, ui) {
+			if (isMultiple) {
+				if (ko.isObservable(valueAccessor().text)) {
+					valueAccessor().text(combo.igCombo("text"));
+				}
+			}
+		});
+
+		ko.applyBindingsToNode(element, { igCombo: valueAccessor() });
+	},
+	update: function (element, valueAccessor) {
+		var combo = $(element),
+			value = valueAccessor().text();
+
+		if (combo.igCombo("text") !== value) {
+			$(element).igCombo("text", value);
+		}
+	}
+};
+</script>
+```
+Then you can use the same logic as before and define the observable item as a string:
+
+**Before**
+```html
+<script type="text/javascript">
+var model = [
+    { name: "Adam Sandler", id: "nm0001191" },
+    { name: "Brooke Shields", id: "nm0000222" },
+    { name: "Charles Chaplin", id: "nm0000122" },
+];
+var viewModel = new ViewModel(model);
+ function ViewModel(actorsList) {
+    this.selectedActor = ko.observable(actorsList[0].name);
+ }
+</script>
+<span id="comboActors" data-bind="igCombo: {
+    text: selectedActor,
+    textKey: 'name',
+    valueKey: 'id'
+}"></span>
+<input type="text" data-bind="value: selectedActor"/><br />
+```
+
 
 <a name='requirements'></a>
 ### jQuery requirements
