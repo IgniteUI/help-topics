@@ -969,6 +969,17 @@ In Internet Explorer 9 or higher, if you fix a column in an `igGrid` and scroll 
 		<img alt="" src="../../images/images/negative.png">
 	</td>
 </tr>
+        <tr>  
+            <td>  
+The grid height cannot be set in percentage units.  
+            </td> 
+            <td>  
+Setting grid height in percentage units is not supported.
+            </td>  
+            <td>  
+![](../../images/images/negative.png)  
+            </td>  
+        </tr>  
     </tbody>
 </table>
 
