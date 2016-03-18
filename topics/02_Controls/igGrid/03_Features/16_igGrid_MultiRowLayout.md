@@ -20,7 +20,11 @@
 
 ## <a id="overview"></a> Overview
 
+<<<<<<< HEAD
 Multi-Row Layout is a feature for the Ignite UI™ grid, or `igGrid`. It allows you to create a complex structure that repeats for each record and contains multiple physical rows with cells in them that can span multiple columns and rows. Such structure allows for greater rendering flexibility for grids with many columns that would otherwise require a horizontal scrollbar or when the data shown is better presented in a non-tabular fashion.
+=======
+Multi-Row Layout is a feature for the Ignite UI? grid, or `igGrid`. It allows you to create a complex structure that repeats for each record and contains multiple physical rows and cells in them that can span multiple columns and rows. Such structure allows for greater rendering flexibility in grids with many columns that would otherwise require a horizontal scrollbar or when the data shown is better presented in a non-tabular fashion.
+>>>>>>> 72fc65fb5d85d1feb7474977c827c8f52c3e44d5
 
 **Figure 1: Visual example of a Multi-Row Layout Grid**
 
@@ -30,7 +34,11 @@ Multi-Row Layout is a feature for the Ignite UI™ grid, or `igGrid`. It allows yo
 
 ## <a id="initialization"></a> Initialization
 
+<<<<<<< HEAD
 Initializing the Multi-Row Layout is done entirely through the igGrid's column collection. Four new properties are added to the column definition that specify the position and size of the column - `rowIndex`, `columnIndex`, `rowSpan` and `colSpan`. HTML tables are rendered stricly based on rows and columns and the size of a cell in a Multi-Row Layout grid is based on how many rows and columns it spans. To enable the feature all fields in the column's collection should have `rowIndex` and `columnIndex`. The `rowSpan` and `colSpan` properties can be omitted in which case they default to a value of 1. The field definitions should create a matrix of cells that doesn't contain empty spaces and no two fields should occupy the same space. In case any of the two happen a user-friendly initialization exception will be thrown pointing to the issue's origin.
+=======
+Initializing the Multi-Row Layout is done entirely in igGrid's column collection. Four new properties are added in the column definition that specify the position and size of the column - `rowIndex`, `columnIndex`, `rowSpan` and `colSpan`. HTML tables are rendered stricly based on rows and columns and the size of a cell in a Multi-Row Layout grid is based on how many rows and columns it spans. To enable the feature all fields in the column's collection should have `rowIndex` and `columnIndex`. The `rowSpan` and `colSpan` properties can be omitted in which case they default to a value of 1. The field definitions should create a matrix of cells that doesn't contain empty spaces and no two fields should occupy the same space. In case any of the two happen a user-friendly initialization exception will be thrown pointing to the issue's origin.
+>>>>>>> 72fc65fb5d85d1feb7474977c827c8f52c3e44d5
 
 In a Multi-Row Layout grid widths can be defined for only part of the fields. The grid will attempt to make the necessery calculations and fill widths for fields that depend on the width of others leaving those without such relation to be sized by the browser.
 
@@ -58,7 +66,11 @@ Since Multi-Row Layout changes how cells are rendered and therefore breaks the c
 * `rowById(rowId)` - returns all `TR` elements that are rendered for the record with the specified `rowId`
 * `rowAt(rowIndex)` - returns the `TR` element at the specified `rowIndex`
 * `cellAt(columnIndex, rowIndex)` - returns the `TD` element at the specified coordinates based on the Multi-Row Layout matrix. This means that cells with row/col spans will be taken into account when determining the element to be returned.
+<<<<<<< HEAD
 * `cellById(rowId, columnKey)` - returns the `TD` element specified by the `rowId` and `columnKey`.
+=======
+* `cellById(rowId, columnKey))` - returns the `TD` element specified by the `rowId` and `columnKey`.
+>>>>>>> 72fc65fb5d85d1feb7474977c827c8f52c3e44d5
 * `getCellValue(rowId/recordIndex, columnKey)` - returns the value associated with the `rowId` (if a primary key is specified) or `recordIndex` (if no primary key is specified) and the `columnKey`
 * `getCellText(rowId/recordIndex, columnKey)` - returns the text for the cell associated with the `rowId` (if a primary key is specified) or `recordIndex` (if no primary key is specified) and the `columnKey`
 
@@ -67,9 +79,15 @@ An additional function is added to the public API that accepts a DOM element and
 [getElementInfo](%%jQueryApiUrl%%/ui.iggrid#methods:getElementInfo) - accepts a DOM element and returns and object containing the following properties:
 
 * rowId - will be null if no primary key is specified
+<<<<<<< HEAD
 * rowIndex - the index of the row (the element itself of its parent in case of `TD`/`TH`) in the DOM 
 * recordIndex - the index of the data record the element is rendered for in the data view
 * columnObject - only applicable if the parameter is a `TD` or `TH` - the column object in the column collection for that cell
+=======
+* rowIndex ? the index of the row (the element itself of its parent in case of `TD`/`TH`) in the DOM 
+* recordIndex ? the index of the data record the element is rendered for in the data view
+* columnObject - only applicable if the element is a `TD` or `TH` - the column object in the column collection for that cell
+>>>>>>> 72fc65fb5d85d1feb7474977c827c8f52c3e44d5
 
 Finally, two arguments returned by two igGrid events received some clarification in the context of Multi-Row Layout.
 
@@ -82,7 +100,11 @@ Finally, two arguments returned by two igGrid events received some clarification
 
 ## <a id="features"></a> Supported Features
 
+<<<<<<< HEAD
 When igGrid is rendered in a multi-row layout mode the following features are supported: Sorting, Filtering, Paging and Updating. Enabling any of the other features native to igGrid will result in unexpected behavior or initialization exceptions. The supported features have certain limitations in this mode. They are listed below.
+=======
+When igGrid is rendered in a multi-row layout mode only the following features are supported: Sorting, Filtering, Paging and Updating. Enabling any of the other features native to igGrid will result in unexpected behavior or initialization exceptions. The supported features have certain limitations in this mode. They are listed below.
+>>>>>>> 72fc65fb5d85d1feb7474977c827c8f52c3e44d5
 
 * Updating is supported only in `dialog` edit mode. Attempting to enable `row` or `cell` edit modes will result in an initialization exception.
 * Filtering is supported only in `advanced` mode. Attempting to use it in `simple` mode will result in an initialization exception.
