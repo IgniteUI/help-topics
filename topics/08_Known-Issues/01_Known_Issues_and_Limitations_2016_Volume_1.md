@@ -1,20 +1,20 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "known-issues-and-limitations-2015-volume-2",
+    "fileName": "known-issues-and-limitations-2016-volume-1",
     "controlName": "",
     "tags": ["Breaking Changes","Known Issues"]
 }
 |metadata|
 -->
 
-# Known Issues and Limitations in 2015 Volume 2
+# Known Issues and Limitations in 2016 Volume 1
 
 ## Topic Overview
 
 ### Purpose
 
-This summarizes the known issues and limitations of the Ignite UI™ 2015 Volume 2 release. Information about previous releases can be found [here](Known-Issues-Revision-History.html).
+This summarizes the known issues and limitations of the Ignite UI™ 2016 Volume 1 release. Information about previous releases can be found [here](Known-Issues-Revision-History.html).
 
 ### In this topic
 
@@ -74,7 +74,7 @@ This topic contains the following sections:
 
 ## <a id="summary"></a> Known Issues and Limitations Summary
 
-The following table summarizes the known issues and limitations of the Ignite UI 2015 Volume 2 release. Detailed explanations of known issues and the possible workarounds are provided in the known issues topics for each control.
+The following table summarizes the known issues and limitations of the Ignite UI 2016 Volume 1 release. Detailed explanations of known issues and the possible workarounds are provided in the known issues topics for each control.
 <a id="legend"></a>
 
 Legend | 
@@ -716,12 +716,12 @@ Status
         <td>RWD mode is not supported in IE8</td>
         <td>RWD is unable to determine the mode in IE8. This feature is mainly targeted at mobile compatibility so it is not supported under IE8.</td>
         <td>![](../images/images/negative.png)</td>
-        </tr>     
-	<tr>
-	<td>RWD single column template is not supported with any of the grid features, excepts Paging.</td>    
-	<td>The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.</td>    
-        <td>![](../images/images/negative.png)</td>    
-        </tr>
+        </tr>   
+	<tr>  
+	<td>RWD single column template is not supported with any of the grid features, excepts Paging.</td>  
+      <td>The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.</td>  
+      <td>![](../images/images/negative.png)</td>  
+      </tr>    	
     </tbody>
 </table>
 
@@ -804,27 +804,17 @@ In Internet Explorer 9 or higher, if you fix a column in an igGrid and scroll do
 
         <tr>
             <td>
-The column widths are mandatory and should be defined in pixels units
+The column widths are mandatory and should be defined in pixel units
 			</td>
+
             <td>
-The column widths are mandatory and should be defined in pixels units (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option). The grid width should be set either in pixels or percentage units.
-			</td>
+The column widths are mandatory and should be defined in pixels units (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option). The grid width should be set either in pixel or percentage units.			</td>
 
             <td>
 ![](../images/images/negative.png)
 			</td>
         </tr>
-<tr>
-            <td>
-The grid height cannot be set in percentage units.
-			</td>
-            <td>
-Setting grid height in percentage units is not supported.
-			</td>
-            <td>
-![](../../images/images/negative.png)
-			</td>
-        </tr>
+
         <tr>
             <td>
 The grid scrolls to the top, when a column is unfixed and continuous virtualization is enabled
@@ -850,6 +840,17 @@ This is a third party issue in Chrome and Safari. In those browsers the thead el
 ![](../images/images/negative.png)
 			</td>
         </tr>
+<tr>  
+<td>  
+The grid height cannot be set in percentage units.  
+ </td>  
+        <td>  
+Setting grid height in percentage units is not supported.  
+			</td>  
+            <td>  
+![](../images/images/negative.png)  
+	</td>  
+  </tr>   
     </tbody>
 </table>
 
@@ -1240,6 +1241,11 @@ Characters different from A-Z, a-z, 0-9, "_" are not substituted/recognized.
 ![](../images/images/positive.png)
 			</td>
         </tr>
+        <tr>
+		<td>List of blocks is not supported</td>
+		<td>List of blocks are not supported, which means the following - “{{if *Condition1* }} Do Something {{/if}} {{if *Condition2* }} Do Something else {{/if}}” is not a correctly defined block.</td>
+		<td>![](../images/images/negative.png)</td>
+        </tr>
     </tbody>
 </table>
 
@@ -1272,9 +1278,3 @@ Issue | Description | Status
 Mobile Slider does not slide on Windows Phone 7 | Because Windows® Phone 7 does not support standard touch events, the slider is read-only. | ![](../images/images/positive.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
-
-
-
- 
-
-
