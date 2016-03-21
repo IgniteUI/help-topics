@@ -716,12 +716,12 @@ Status
         <td>RWD mode is not supported in IE8</td>
         <td>RWD is unable to determine the mode in IE8. This feature is mainly targeted at mobile compatibility so it is not supported under IE8.</td>
         <td>![](../images/images/negative.png)</td>
-        </tr>   
-	<tr>  
-	<td>RWD single column template is not supported with any of the grid features, excepts Paging.</td>  
-      <td>The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.</td>  
-      <td>![](../images/images/negative.png)</td>  
-      </tr>    	
+        </tr>     
+	<tr>
+	<td>RWD single column template is not supported with any of the grid features, excepts Paging.</td>    
+	<td>The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.</td>    
+        <td>![](../images/images/negative.png)</td>    
+        </tr>
     </tbody>
 </table>
 
@@ -815,7 +815,7 @@ The column widths are mandatory and should be defined in pixels units (either ex
 			</td>
         </tr>
 
-        <tr>
+<tr>
             <td>
 The grid scrolls to the top, when a column is unfixed and continuous virtualization is enabled
 			</td>
@@ -824,6 +824,29 @@ The grid scrolls to the top, when a column is unfixed and continuous virtualizat
 When you have continuous virtualization enabled and you unfix a column, the grid scrolls to the top.
 			</td>
 
+            <td>
+![](../images/images/negative.png)
+			</td>
+        </tr>
+        <tr>
+            <td>
+In Chrome and Safari when there is a caption with long text defined for the grid, the fixed column header's width will stretch to the length of the caption and the unfix column button may not be visible.
+			</td>
+
+            <td>
+This is a third party issue in Chrome and Safari. In those browsers the thead element, which contains the fixed headers, stretches to the full width of the caption, which may lead to the unfix button going outside of the visible area of the header (in cases where the column width is smaller than the caption width). All other browsers retain the same column width in the fixed grid area and don't exhibit this behavior.	    </td>
+
+            <td>
+![](../images/images/negative.png)
+			</td>
+        </tr>
+	<tr>
+            <td>
+The grid height cannot be set in percentage units.  
+			</td>
+            <td>
+Setting grid height in percentage units is not supported.  
+			</td>  
             <td>
 ![](../images/images/negative.png)
 			</td>

@@ -19,7 +19,7 @@ Follow the links below to find more information on the `igCurrencyEditor` config
 -   [igCurrencyEditor Known Issues](igCurrencyEditor-igCurrencyEditor-Known-Issues.html)
 -   [igCurrencyEditor Migration Topic](Migrating-to-the-new-igCurrencyEditor.html)
 -   [igCurrencyEditor Keyboard Navigation](igCurrencyEditor-Keyboard-Navigation.html)
--   [igCurrencyEditor Known Issues](igCurrencyEditor-igEditor-Known-Issues.html)
+-   [igCurrencyEditor Known Issues](igCurrencyEditor-igCurrencyEditor-Known-Issues.html)
 
  
 

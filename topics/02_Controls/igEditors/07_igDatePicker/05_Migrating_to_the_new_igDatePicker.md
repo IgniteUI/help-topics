@@ -35,7 +35,7 @@ This topic contains the following sections:
 Option| Previously| Now
 ---|---|---
 animationHideDuration animationShowDuration|Used to set animation duration when dropdown list is displayed/hidden.<br>`$(".selector").igDatePicker({`<br>`animationShowDuration: 500,`<br>`animationHideDuration: 500`<br>`});`|These options are replaced by new option `dropDownAnimationDuration` that controls the dropdown list animation duration. <br>`$(".selector").igDatePicker({`<br>`dropDownAnimationDuration: 500`<br>`});`
-button|This option was used to set visibility of spin and dropdown button. <br>`$(".selector").igDatePicker({`<br>`button : "dropdown"`<br>`});`|This option is renamed to `buttonType` to better communicate what it does. For date picker the supported types are 'dropdown' and 'clear'.<br>`$(".selector").igDatePicker({`<br>`buttonType : "dropdown"`<br>`});`
+button|This option was used to set visibility of spin and dropdown button. <br>`$(".selector").igDatePicker({`<br>`button : "dropdown"`<br>`});`|This option is renamed to `buttonType` to better communicate what it does. <br>`$(".selector").igDatePicker({`<br>`buttonType : "dropdown"`<br>`});`
 display|Sets gets style.display for outer html element.|This option is removed.
 dropDownOnReadOnly|This option was used to set ability to override the "readOnly" option and allow showing the dropdown list and changing the value in the editor from a list.<br>`$(".selector").igDatePicker({`<br>    `dropDownOnReadOnly : true`<br>`});`|This option is removed. If `readOnly` is set to `true` the dropdown list cannot be displayed.<br>`$(".selector").igDatePicker({`<br>`readOnly : true`<br>`});`
 dropDownTriggers|Sets gets list of actions which trigger display of drop-down list or calendar.|This option is removed. Now `Alt` + `down-arrow` shows dropdown.
@@ -87,7 +87,6 @@ addListItem|Used to add the object within item at the location indicated by the 
 addListItems|Used to add the objects within the items array at the location indicated by the index.|This method is removed.
 clearListItems|Removed all items from list.|This method is removed.
 dropDownElement|Got reference to jquery object which is used as container of dropdown.|This method is removed.
-dropDownVisible|Set visibility of dropdown list according to the Boolean value that is passed.|This method is removed.
 findListItemIndex|Found index of list item by text that matches with the search parameters.|This method is removed.
 getRegionalOption|Gets calculated value of regional option used by numeric and date editors.|This method in no longer available.
 getSelection|Used to get left or right edge of selection.|This method is replaced by the methods `getSelectionStart` and `getSelectionEnd`.
@@ -154,8 +153,6 @@ dropDownListOpening|<a name='dropDownListOpening'></a>Event which is raised when
 dropDownListOpened|<a name='dropDownListOpened'></a>Event which is raised when the drop down is already opened.
 dropDownListClosing|<a name='dropDownListClosing'></a>Event which is raised when the drop down is closing.
 dropDownListClosed|<a name='dropDownListClosed'></a>Event which is raised when the drop down is already closed.
-dropDownItemSelecting|<a name='dropDownItemSelecting'></a>Event which is raised when the drop down list item is selecting.
-dropDownItemSelected|<a name='dropDownItemSelected'></a>Event which is raised when the drop down list item is selected.
 mouseout|<a name='mouseout'></a>Event which is raised on mouseleave at any part of editor including drop-down list.
 
 [See all events](%%jQueryApiUrl%%/ui.igdatepicker#events)

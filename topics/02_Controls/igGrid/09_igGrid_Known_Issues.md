@@ -155,7 +155,7 @@ Virtualization and auto sizing of columns is not supported | Auto sizing columns
 Issue | Description | Status
 ---|---|---
 RWD mode is not supported in IE8|RWD is unable to determine the mode in IE8. This feature is mainly targeted at mobile compatibility so it is not supported under IE8.|![](../../images/images/negative.png)
-RWD single column template is not supported with any of the grid features, excepts Paging.| The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.|![](../../images/images/negative.png)  
+RWD single column template is not supported with any of the grid features, excepts Paging.| The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.|![](../../images/images/negative.png) 
 
 ## [igGridColumnFixing](#column-fixing)
 
@@ -222,7 +222,7 @@ The column widths are mandatory and should be defined in pixels units (either ex
 ![](../../images/images/negative.png)
 			</td>
         </tr>
-	<tr>
+        <tr>
             <td>
 The grid height cannot be set in percentage units.
 			</td>
@@ -235,7 +235,7 @@ Setting grid height in percentage units is not supported.
         </tr>
 	<tr>
             <td>
-In Chrome and Safari when there is a caption with long text defined for the grid, the fixed column header's width will stretch to the length of the caption and the unfix column button may not be visible.
+Grid and its columns (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option) widths are mandatory and should be defined in pixels units.
 			</td>
 
             <td>
@@ -247,6 +247,7 @@ This is a third party issue in Chrome and Safari. In those browsers the thead el
         </tr>
     </tbody>
 </table>
+
 
 
 ## [igGridColumnMoving](#column-moving)
