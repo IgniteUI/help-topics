@@ -21,6 +21,7 @@ This topic contains the following sections:
 
 -   [Defining Widths and Height](#width-height)
 -   [Defining Columns](#defining-columns)
+-   [Column Formatting](#column-formatting)
 -   [AutoGenerateColumns](#autoGenerateColumns)
 -   [Styling](#styling)
 -   [Rendering Checkboxes on a Column](#checkboxes)
@@ -111,6 +112,56 @@ The format and `dataType` options may be configured a number of different ways.
 -   The `format` column property corresponding to dateType=”number” (number objects) or for dataType=”string” can be “number”, “double” , “int” , “currency” , “percent”.
 -   If `dataType`=”number”, then the corresponding format also can be set to something like “0.0###”, “#.##”, “0.000” etc. In this case number of zeros after the decimal point define minimum decimal places and overall number of characters after decimal point defines number of maximum decimal places.
 -   If `dataType` is not “date” or “number”, then the corresponding format can contain “{0}” flag. In this case that flag is replaced by the value of cell.For example, if format=”Name: {0}” and value is cell is “Bob”, then cell will be rendered as “Name: Bob”.
+
+## <a id="column-formatting"></a> Column Formatting
+
+Column formatting defines how column cell values are displayed in the grid. Formatting operates at the grid rendering phase and doesn't affect the data in the underlying data source. This means that features that operate on the data like Sorting, Filtering, Group By will not consider the formatted cell values.
+
+Column formatting (rendering) is affected by several `igGrid` options. These are column's [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter), [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) and [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template). Additionally there's grid's [`autoFormat`](%%jQueryApiUrl%%/ui.iggrid#options:autoFormat) option which affects how the regional settings are applied to the grid.
+
+-  [`autoFormat`](%%jQueryApiUrl%%/ui.iggrid#options:autoFormat) - is a string which identifies how the regional settings are applied globally on the grid for "date" and "number" columns. By default only "date" columns are formatted according the regional settings. This option is overridden by [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) and [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) options if available.
+ > **Note:** Regional settings can be accessed with the following expression: 
+ ```js
+ $.ig.regional.defaults;
+ ```
+ 
+ Here is the flow of column rendering when no format decorators are used: 
+ ```
+ Raw Value -> autoFormat -> (template)* -> Cell Value
+ * - optional setting
+ ```
+
+ > **Note:** By default when there are no column rendering decorators applied and the Raw Value is null, undefined or empty string ("") a non-breaking space (`&nbsp;`) is rendered instead in the cell.
+ 
+-  [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) - is a function or a string name of a function bound to the global window object. It gives you full control on rendering the data source value. When defining formatter function it's up to you to control the format and regional representation of the value. There is a utility function `$.ig.formatter(rawValue, dataType, formatPattern)` which can be used for formatting values either using the regional settings or using custom format pattern.
+
+ **In Javascript:**
+ ```js
+ var formattedValue = $.ig.formatter(new Date()); //formats the date according to the current regional settings.
+ var formattedValue = $.ig.formatter(1000000); //formats the number according to the current regional settings.
+ ```
+ [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) and [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) options does not operate at the same time. When defined, [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) function is considered with priority and [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) is not used. However value from the [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) function is further decorated with a [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template).
+
+ Here is the flow of column rendering when formatter is used:
+ ```
+ Raw Value -> formatter -> (template)* -> Cell Value
+ * - optional setting
+ ```
+
+-  [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) - is a string identifying a format patterns. Internally [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) option uses the `$.ig.formatter(rawValue, dataType, formatPattern)` function. When set, [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) overrides the setting of the [`autoFormat`](%%jQueryApiUrl%%/ui.iggrid#options:autoFormat) option and also the default regional settings.
+
+ Here is the flow of column rendering when [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) is used:
+ ```
+ Raw Value -> format -> (template)* -> Cell Value 
+ * - optional setting
+ ```
+- [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template) - is a templated string (templating engine used is defined in the `templatingEngine` option).  
+ 
+ Here is the flow of column rendering when [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template) is used:
+ ```
+ Raw Value -> (autoFormat|formatter|format)* -> template -> Cell Value 
+ * - optional setting
+ ```
 
 
 ## <a id="autoGenerateColumns"></a> AutoGenerateColumns
