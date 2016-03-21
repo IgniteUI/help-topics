@@ -30,9 +30,9 @@ Multi-Row Layout is a feature for the Ignite UI™ grid, or `igGrid`. It allows yo
 
 ## <a id="initialization"></a> Initialization
 
-Initializing the Multi-Row Layout is done entirely through the igGrid's column collection. Four new properties are added to the column definition that specify the position and size of the column - `rowIndex`, `columnIndex`, `rowSpan` and `colSpan`. HTML tables are rendered stricly based on rows and columns and the size of a cell in a Multi-Row Layout grid is based on how many rows and columns it spans. To enable the feature all fields in the column's collection should have `rowIndex` and `columnIndex`. The `rowSpan` and `colSpan` properties can be omitted in which case they default to a value of 1. The field definitions should create a matrix of cells that doesn't contain empty spaces and no two fields should occupy the same space. In case any of the two happen a user-friendly initialization exception will be thrown pointing to the issue's origin.
+Initializing the Multi-Row Layout is done entirely through the igGrid's column collection. Four new properties are added to the column definition that specify the position and size of the column - `rowIndex`, `columnIndex`, `rowSpan` and `colSpan`. HTML tables are rendered stricly based on rows and columns and the size of a cell in a Multi-Row Layout grid is based on how many rows and columns it spans. To enable the feature all columns definitions in the column's collection should have `rowIndex` and `columnIndex`. The `rowSpan` and `colSpan` properties can be omitted in which case they default to a value of 1. The columns definitions should create a matrix of cells that doesn't contain empty spaces and no two cells should occupy the same space. In case any of the two happen a user-friendly initialization exception will be thrown pointing to the issue's origin.
 
-In a Multi-Row Layout grid widths can be defined for only part of the fields. The grid will attempt to make the necessery calculations and fill widths for fields that depend on the width of others leaving those without such relation to be sized by the browser.
+In a Multi-Row Layout grid widths can be defined for only part of the columns. The grid will attempt to make the necessery calculations and fill widths for columns that depend on the width of others leaving those without such relation to be sized by the browser.
 
 To put the information so far into perspective, the Multi-Row Layout in Figure 1 is generated with the following code snippet: 
 
@@ -49,7 +49,7 @@ columns: [
 ]
 ```
 
-> **Note:** For cells that span one column the `colSpan` property is omitted and for those that span one row the `rowSpan` property is omitted. Widths are defined only for two fields.
+> **Note:** For cells that span one column the `colSpan` property is omitted and for those that span one row the `rowSpan` property is omitted. Widths are defined only for two columns.
 
 ## <a id="api"></a> API in a Multi-Row Layout Grid
 
