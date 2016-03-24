@@ -1,7 +1,7 @@
-<!--
+﻿<!--
 |metadata|
 {
-    "fileName": "iggrid-multi-row-layout",
+    "fileName": "iggrid-multirowlayout",
     "controlName": "igGrid",
     "tags": ["Getting Started","Grids","Multi-Row Layout"]
 }
@@ -21,7 +21,7 @@
 ## <a id="overview"></a> Overview
 [setCellValue](%%jQueryApiUrl%%/ui.igGridUpdating#methods:setCellValue)
 
-Multi-Row Layout is a feature for the Ignite UI� grid, or `igGrid`. It allows you to create a complex structure that repeats for each record and contains multiple physical rows with cells in them that can span multiple columns and rows. Such structure allows for greater rendering flexibility for grids with many columns that would otherwise require a horizontal scrollbar or when the data shown is better presented in a non-tabular fashion.
+Multi-Row Layout is a feature for the Ignite UI™ grid, or `igGrid`. It allows you to create a complex structure that repeats for each record and contains multiple physical rows with cells in them that can span multiple columns and rows. Such structure allows for greater rendering flexibility for grids with many columns that would otherwise require a horizontal scrollbar or when the data shown is better presented in a non-tabular fashion.
 
 **Figure 1: Visual example of a Multi-Row Layout Grid**
 

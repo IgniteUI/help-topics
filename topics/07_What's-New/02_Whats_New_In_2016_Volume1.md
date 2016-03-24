@@ -33,7 +33,7 @@ New field option - mapper| For field with dataType="object" we now allow setting
 
 Feature | Description
 ---|---
-New column option- mapper| For columns with dataType="object" we now allow setting a mapper function, which can be used for complex data extraction from complex objects, whose return value will be used for all data operations executed on the specific column.- [view sample](%%SamplesUrl%%/grid/handling-complex-objects). </br> You can find more detailed information in the following topic: [Columns and Layout](igGrid-Columns-and-Layout.html#-defining-mapper-function-for-column)|
+New column option- mapper| For columns with dataType="object" we now allow setting a mapper function, which can be used for complex data extraction from complex objects, whose return value will be used for all data operations executed on the specific column.- [view sample](%%SamplesUrl%%/grid/handling-complex-objects). </br> You can find more detailed information in the following topic: [Columns and Layout](igGrid-Columns-and-Layout.html#defining-mapper)|
 The ColumnFixing feature now works with grid width set in percentage| The ColumnFixing feature now works when the grid width is set in percentage. <br/> **Note**: The column widths should still be defined in pixels units (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option).|
 [Multi-Row Layout feature](#multi-row-layout)| Multi-Row Layout allows you to create a complex structure that contains multiple physical rows with cells in them that can span multiple columns and rows. |
 
@@ -57,7 +57,7 @@ Initializing the Multi-Row Layout is done entirely through the igGrid's column c
 ![](images/iggrid-multi-row-layout.png)
  
 #### Related Topics
--   [Grid Multi-Row Layout](iggrid-multi-row-layout.html)
+-   [Grid Multi-Row Layout](igGrid-MultiRowLayout.html)
 
 #### Related Samples
 -   [Multi-Row Layout](%%SamplesUrl%%/grid/multi-row-layout)
