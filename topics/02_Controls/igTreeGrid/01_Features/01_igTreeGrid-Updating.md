@@ -194,7 +194,8 @@ $("#treegrid").igTreeGridUpdating("addChild", {employeeId: 8, firstName: "John",
 > **Note:** Child row could be added only **under** an **existing** row in the treeGrid. You cannot add a record **between** two neighbour records.
 
 ### <a id="add-child-api"></a> Add Child API
-Several new options and methods are exposed with the new 'add child' functionality: 
+Several new options and methods are exposed with the new 'add child' functionality:
+ 
 Public options | Description
 ---|---
 [enableAddChild](%%jQueryApiUrl%%/ui.igTreeGridUpdating#options:enableAddChild) (true) | Specifies whether to enable or disable adding children to rows
