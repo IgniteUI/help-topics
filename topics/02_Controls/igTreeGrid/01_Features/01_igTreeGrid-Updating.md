@@ -258,4 +258,4 @@ When a row is selected (the Selection feature is enabled and its mode is row):
 -   [Load on Demand (igTreeGrid)](igTreeGrid-Load-On-Demand.html): This topic explains the benefits of the `igTreeGrid` Load on Demand functionality and how it can be implemented.
 
 ### <a id="samples"></a> Samples
-- [igTreeGrid Updating](%%SamplesUrl%%/tree-grid/overview)
+- [igTreeGrid Updating](%%SamplesUrl%%/tree-grid/updating)
