@@ -29,7 +29,7 @@ The `igDataSource` component supports the following features out-of-the-box:
 -   Data schema support: translate data from many sources into a consistent format
 	- Schema field's mapper 
 	
-###  Schema field's mapper 
+###  <a id="schema-fields-mapper"></a>Schema field's mapper 
 
 The schema field definition allow setting a mapper function for columns with dataType "object", which will be used for all data operations on a data source level (sorting, filtering, etc.). 
 This is useful in scenarios where we want to apply data operations on a specific value from the complex object. For instance if we have the following data source structure:
