@@ -56,7 +56,7 @@ On done, the new row is inserted as a last child of the target parent row.
 > **Note:** If there is Paging enabled and the target parent row’s children span multiple pages then the **autoCommit** option should be considered. When autoCommit is **false**, then the new child row is added as last record on the current page. When autoCommit is **true**, the new child row is added as a last child and the grid is paged so the new row is visible.
 
 ### <a id="touch"></a> Touch UI
-##### <a id="touch-environment"></a> Add child row in touch environment
+### <a id="touch-environment"></a> Add child row in touch environment
 In touch environment the user can show the add child button on swipe or tap over the respective row. 
 
 ![igTreeGrid touch](images/addChildTouch.png "Tree Grid Add child touch")
