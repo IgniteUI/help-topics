@@ -78,9 +78,9 @@ If you have chosen the typical installation of Ignite UI 20%%ProductVersionShort
 	</tbody>
 </table>
 
-## MVC 2, MVC 3, MVC 4 and MVC 5
+## MVC 2, MVC 3, MVC 4, MVC 5 and MVC6
 
-All the code for the MVC helper is contained in the `Infragistics.Web.Mvc` assembly, which comes compiled against all MVC2, MVC3, MVC4 and MVC5. For further details on the assembly location of the ASP.NET MVC helpers, please read [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+All the code for the MVC helper is contained in the `Infragistics.Web.Mvc` assembly, which comes compiled against all MVC2, MVC3, MVC4, MVC5 and MVC6. For further details on the assembly location of the ASP.NET MVC helpers, please read [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
 
 > **Note**: You should set `Copy Local` property of the reference of the dll to be `true`.
 
