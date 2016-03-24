@@ -22,17 +22,17 @@ This topic contains the following sections:
 -   [**Updating UI**](#ui)
     -   [Mouse UI](#mouse)
     -   [Touch UI](#touch)
-        -   [Add child row in touch environment](#touch-environment)
 -   [**Working with Updating**](#working-with-updating)
-     -   [Configuring Updating](#configure)
-     -   [Persisting the changes to the server](#persist-changes)
+     -   [Enabling Updating](#enable)
+     -   [Configuring Updating](#configuring)
 -   [**Updating API**](#api)
     -   [Adding a new row to a root level](#api-add-row)
     -   [Adding a child row to a specific level](#api-add-child-row)
-    -   [Add Child API](#add-child-api)
+    -   [Deleting a row](#api-delete-row)
+    -   [Updating a row](#api-update-row)
 -   [**Keyboard Interactions**](#keyboard-interaction)
 -   [**Related Topics**](#topics)
--   [**Samples**](#samples)
+-   [**Related Samples**](#samples)
 
 ### Required Background
 
@@ -43,27 +43,32 @@ The following lists the concepts, topics, and articles required as a prerequisit
 
 ## <a id="introduction"></a> Introduction
 
-Similar to other features, Updating also extends the equivalent flat data control to add support for hierarchy within a single grid. This is made possible via the underlying instance of the `igTreeHierarchicalDataSource`. While most additions are under-the-hood support for available functionality such as inline editing experience or row edit template, one change is that since version 16.1 the "Add new row" user interface is already enabled and along with it TreeGrid Updating supports adding new records not only directly to the root level, but also adding a child records to a specified level as through the UI, as well through the API.  
+Similar to other features, Updating also extends the equivalent flat data control to add support for hierarchy within a single grid. This is made possible via the underlying instance of the [`igTreeHierarchicalDataSource`](%%jQueryApiUrl%%/ig.treehierarchicaldatasource). While most additions are under-the-hood support for available functionality such as inline editing experience or row edit dialog, one change is that since version 16.1 the "Add new row" user interface is already enabled and along with it TreeGrid Updating supports adding new records not only directly to the root level, but also adding a child records to a specified level as through the UI, as well through the API.  
 
 ## <a id="ui"></a> Updating UI 
 
-The updating UI encompasses the built-in adding, updating, and deleting functionality of the treeGrid including the add new row button, add child row button, editors, and edit and delete buttons.
+The Updating UI encompasses the built-in adding, updating, and deleting functionality of the igTreeGrid including the "Add new row" button, "Add child row" button, editors, and delete buttons.
 
 ### <a id="mouse"></a> Mouse UI
-The updating feature works in the same way as in igGrid. In addition, users can add rows as children of the currently hovered row. The user can add new root level node by using the “Add new row” button at the top pf the grid records. The user can add a new child node by first hovering a row, then clicking on the add button that appears next to the delete button. A new empty row appears just below the target parent row. 
+
+The Updating feature works in the same way as in igGrid. In addition, users can add rows as children of the currently hovered row. The user can add new root level node by using the "Add new row" button at the top of the grid records. The user can add a new child node by first hovering a row, then clicking on the "Add child row" button that appears next to the "Delete row" button. A new row (in edit mode) appears just below the target parent row. 
 On cancel, the row is removed and no data changes are made. 
-On done, the new row is inserted as a last child of the target parent row. 
-> **Note:** If there is Paging enabled and the target parent row’s children span multiple pages then the **autoCommit** option should be considered. When autoCommit is **false**, then the new child row is added as last record on the current page. When autoCommit is **true**, the new child row is added as a last child and the grid is paged so the new row is visible.
+On done, the new row is appended as a last child of the target parent row. 
+> **Note:** If there is Paging enabled and the target parent row's children span multiple pages then the **autoCommit** option should be considered. When autoCommit is **false**, then the new child row is added as last record on the current page. When autoCommit is **true**, the new child row is added as a last child and the grid is paged so the new row gets visible.
+
+![](images/addChildMouse.png "Tree Grid Add child mouse")
 
 ### <a id="touch"></a> Touch UI
-### <a id="touch-environment"></a> Add child row in touch environment
-In touch environment the user can show the add child button on swipe or tap over the respective row. 
 
-![igTreeGrid touch](images/addChildTouch.png "Tree Grid Add child touch")
+In touch environment hover interaction is not available which requires the user to swipe or tap over the respective row in order to show the "Add child row" button. 
+
+![](images/addChildTouch.png "Tree Grid Add child touch")
 
 ## <a id="working-with-updating"></a> Working with Updating
+
 By enabling the Updating feature, you enable adding, removing and updating the data in the grid.
-### <a id="configure"></a> Configuring Updating
+
+### <a id="enable"></a> Enabling Updating
 
 The snippet below demonstrates how to configure the igTreeGrid to support updating.
 
@@ -115,100 +120,60 @@ $("#treegrid").igTreeGrid({
 	)
 ```
 
-## <a id="api"></a> Updating API
-### <a id="api-add-row"></a> Adding a new row to a root level
-To add a new row **at the root level** programmatically to the Tree Grid you can use the inherited from the igGrid [`addRow`](%%jQueryApiUrl%%/ui.igtreegridupdating#methods:addRow) API method. You need to specify only pairs of values in the format: { column1Key: value1, column2Key: value2, ... } .
+### <a id="configuring"></a> Configuring Updating
 
-For example with the following grid definition:
-```js
-			$("#treegrid").igTreeGrid({
-				dataSource: data,
-				height: 400,
-				autoCommit: true,
-				primaryKey: "employeeId",
-				foreignKey: "supervisorId",
-				initialExpandDepth: -1,
-				autoGenerateColumns: false,
-				columns: [
-					{ headerText: "ID", key: "employeeId", dataType: "number" },
-					{ headerText: "First Name", key: "firstName", dataType: "string" },
-					{ headerText: "Last Name", key: "lastName", dataType: "string" },
-				],
-				features: [
-				{
-                       name: "Updating",
-					   enableAddRow: true
-                }
-			   ]
-			});	
-```
-
-Adding a new row to the root level looks like so:
-
-```js
-$("#treegrid").igTreeGridUpdating("addRow", {employeeId: 3, firstName: "John", lastName: "Miller"}); 
-```
-![igTreeGrid adding row](images/rowAdding.png "Tree Grid Row Adding")
-
-![igTreeGrid adding row](images/rowAdded.png "Tree Grid Row Adding")
-### <a id="api-add-child-row"></a> Adding a child row to a specific level
-To add a **child** row **at a specific level** you can use either TreeGrid Updating UI or add it programmatically using [`addChild`](%%jQueryApiUrl%%/ui.igtreegridupdating#methods:addChild) API method. The parameters for this method allow you to specify both parent key as well as the new record object that should be inserted. 
-
-> **Note:** Adding a child row to a specific level depends on **enableAddChild** option, which by default is set to true.
-
-For example:
-```js
-$("#treegrid").igTreeGrid({
-				dataSource: data,
-				height: 400,
-				autoCommit: true,
-				primaryKey: "employeeId",
-				foreignKey: "supervisorId",
-				initialExpandDepth: -1,
-				autoGenerateColumns: false,
-				columns: [
-					{ headerText: "ID", key: "employeeId", dataType: "number" },
-					{ headerText: "First Name", key: "firstName", dataType: "string" },
-					{ headerText: "Last Name", key: "lastName", dataType: "string" },
-				],
-				features: [
-				{
-                       name: "Updating",
-					   enableAddRow: true,
-					   enableAddChild: true,
-                }
-			   ]
-			});	
-```
-
-Adding a child row to a specific level using the API looks like:
-
-```js
-$("#treegrid").igTreeGridUpdating("addChild", {employeeId: 8, firstName: "John", lastName: "Miller"}, 5);
-```
-
-![igTreeGrid adding child row](images/childAdding.png "Tree Grid Child Row Adding")
-
-![igTreeGrid adding child row](images/childAdded.png "Tree Grid Child Row Adding")
-
-> **Note:** Child row could be added only **under** an **existing** row in the treeGrid. You cannot add a record **between** two neighbour records.
-
-### <a id="add-child-api"></a> Add Child API
-Several new options and methods are exposed with the new 'add child' functionality:
+Along with the inherited options for configuring adding, updating and deleting rows several new options are available for configuring the 'add child' functionality:
  
-Public options | Description
+Option | Description
 ---|---
 [enableAddChild](%%jQueryApiUrl%%/ui.igTreeGridUpdating#options:enableAddChild) (true) | Specifies whether to enable or disable adding children to rows
 [addChildTooltip](%%jQueryApiUrl%%/ui.igTreeGridUpdating#options:addChildTooltip) (null) | Specifies the add child tooltip text
 [addChildButtonLabel](%%jQueryApiUrl%%/ui.igTreeGridUpdating#options:addChildButtonLabel) (null) | Specifies the label of the add child button in touch environment
 
-Public methods | Description
+## <a id="api"></a> Updating API
+
+Along with the inherited methods from igGrid Updating several new methods are available related to the 'add child' functionality:
+
+Method | Description
 ---|---
-[renderNewChild](%%jQueryApiUrl%%/ui.igTreeGrid#methods:renderNewChild) | Adds a new row (TR) to the grid as a child of a specific row, by taking a data row object. Assumes the record will have the primary key
 [addChild](%%jQueryApiUrl%%/ui.igTreeGridUpdating#methods:addChild) | Adds a new child to a specific row. It also creates a transaction and updates the UI
 [startAddChildFor](%%jQueryApiUrl%%/ui.igTreeGridUpdating#methods:startAddChildFor) | Starts editing for adding a new child for specific row
-[showAddChildButtonFor](%%jQueryApiUrl%%/ui.igTreeGridUpdating#methods:showAddChildButtonFor) | Shows the "Add Child" button for specific row
-[hideAddChildButton](%%jQueryApiUrl%%/ui.igTreeGridUpdating#methods:hideAddChildButton) | Hides the "Add Child" button
+[showAddChildButtonFor](%%jQueryApiUrl%%/ui.igTreeGridUpdating#methods:showAddChildButtonFor) | Shows the "Add child row" button for specific row
+[hideAddChildButton](%%jQueryApiUrl%%/ui.igTreeGridUpdating#methods:hideAddChildButton) | Hides the "Add child row" button
+
+### <a id="api-add-row"></a> Adding a new row to a root level
+To add a new row **at the root level** programmatically to the Tree Grid you can use the inherited from the igGrid [`addRow`](%%jQueryApiUrl%%/ui.igtreegridupdating#methods:addRow) API method. You need to specify only pairs of values in the format: { column1Key: value1, column2Key: value2, ... } .
+Using the Tree Grid configuration above adding a new row to the root level looks like so:
+
+```js
+$("#treegrid").igTreeGridUpdating("addRow", {employeeId: 3, firstName: "John", lastName: "Miller"}); 
+```
+
+### <a id="api-add-child-row"></a> Adding a child row to a specific level
+To add a **child** row **at a specific level** you can use either Tree Grid Updating UI or add it programmatically using [`addChild`](%%jQueryApiUrl%%/ui.igtreegridupdating#methods:addChild) API method. The parameters for this method allow you to specify both parent key as well as the new record object that should be inserted. 
+Using the Tree Grid configuration above adding a child row to a specific level using the API looks like:
+
+```js
+$("#treegrid").igTreeGridUpdating("addChild", {employeeId: 8, firstName: "John", lastName: "Miller"}, 5);
+```
+
+> **Note:** The child row is appended as the last child of its parent
+
+### <a id="api-delete-row"></a> Deleting a row
+
+A row can be deleted using the [`deleteRow`](%%jQueryApiUrl%%/ui.igtreegridupdating#methods:deleteRow) API method. The only argument it accepts is the primary key value. 
+> **Note:** Deleting a parent row will delete all its children as well.
+
+```js
+$("#treegrid").igTreeGridUpdating("deleteRow", 1)
+```
+### <a id="api-update-row"></a> Updating a row
+
+A row can be updated using the [`updateRow`](%%jQueryApiUrl%%/ui.igtreegridupdating#methods:updateRow) API method.
+
+```js
+$("#treegrid").igTreeGridUpdating("updateRow", 5, {lastName: "Fuller"});
+```
 
 ## <a id="keyboard-interaction"></a> Keyboard Interactions
 #### When Editing the following keyboard interactions are available:
@@ -216,13 +181,13 @@ Public methods | Description
 The related options that may change these behaviors are:
 >
 
--	[horizontalMoveOnEnter](%%jQueryApiUrl%%/ui.igGridUpdating#options:horizontalMoveOnEnter) -  Default: false
--	[startEditTriggers](%%jQueryApiUrl%%/ui.igGridUpdating#options:startEditTriggers) - Default: click,F2,enter
-- 	[excelNavigationMode](%%jQueryApiUrl%%/ui.igGridUpdating#options:excelNavigationMode) - Default: false
+-	[horizontalMoveOnEnter](%%jQueryApiUrl%%/ui.igtreegridupdating#options:horizontalMoveOnEnter) -  Default: false
+-	[startEditTriggers](%%jQueryApiUrl%%/ui.igtreegridupdating#options:startEditTriggers) - Default: click,F2,enter
+- 	[excelNavigationMode](%%jQueryApiUrl%%/ui.igtreegridupdating#options:excelNavigationMode) - Default: false
 
  When a cell/row is selected (Selection feature is enabled):
  
- -	ENTER/F2 – Enters edit mode for the selected cell/row. (See  [startEditTriggers](%%jQueryApiUrl%%/ui.igGridUpdating#options:startEditTriggers))
+ -	ENTER/F2 – Enters edit mode for the selected cell/row. (See  [startEditTriggers](%%jQueryApiUrl%%/ui.igtreegridupdating#options:startEditTriggers))
 
 When editMode is row and a row is in edit mode, the following key interactions are available:
 
@@ -233,9 +198,9 @@ When editMode is row and a row is in edit mode, the following key interactions a
 When editMode is cell and a cell is in edit mode, the following key interactions are available:
 
 -	TAB: The next cell from the row enters edit mode. If the current cell is the last from the row then the first cell from the next row will enter edit mode. If the current cell is the last from the last row in the grid then the first cell from the first row will enter edit mode.
--	ENTER: Changes are accepted and the cell from the same column on the next row enters edit mode. If the current cell is on the last row of the grid then the related cell from the first row enters edit mode. (See [horizontalMoveOnEnter](%%jQueryApiUrl%%/ui.igGridUpdating#options:horizontalMoveOnEnter)).
+-	ENTER: Changes are accepted and the cell from the same column on the next row enters edit mode. If the current cell is on the last row of the grid then the related cell from the first row enters edit mode. (See [horizontalMoveOnEnter](%%jQueryApiUrl%%/ui.igtreegridupdating#options:horizontalMoveOnEnter)).
 -	ESCAPE: If any changes were made they are reverted. If there are no pending changes then the cell exits edit mode.
--	UP/DOWN/LEFT/RIGHT: Arrows will navigate the cursor inside the edited cell (See [excelNavigationMode](%%jQueryApiUrl%%/ui.igGridUpdating#options:excelNavigationMode)).
+-	UP/DOWN/LEFT/RIGHT: Arrows will navigate the cursor inside the edited cell (See [excelNavigationMode](%%jQueryApiUrl%%/ui.igtreegridupdating#options:excelNavigationMode)).
 
 When editMode is rowEditTemplate and a cell is in edit mode, the following key interactions are available:
 When the row edit template dialog is open:
@@ -257,5 +222,5 @@ When a row is selected (the Selection feature is enabled and its mode is row):
 ### <a id="topics"></a> Related Topics
 -   [Load on Demand (igTreeGrid)](igTreeGrid-Load-On-Demand.html): This topic explains the benefits of the `igTreeGrid` Load on Demand functionality and how it can be implemented.
 
-### <a id="samples"></a> Samples
+### <a id="samples"></a> Related Samples
 - [igTreeGrid Updating](%%SamplesUrl%%/tree-grid/updating)
