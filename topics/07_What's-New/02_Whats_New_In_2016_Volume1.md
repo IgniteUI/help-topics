@@ -57,7 +57,7 @@ Initializing the Multi-Row Layout is done entirely through the igGrid's column c
 ![](images/iggrid-multi-row-layout.png)
  
 #### Related Topics
--   [Grid Multi-Row Layout](iggrid-multi-row-layout.html)
+-   [Grid Multi-Row Layout](igGrid-MultiRowLayout.html)
 
 #### Related Samples
 -   [Multi-Row Layout](%%SamplesUrl%%/grid/multi-row-layout)
