@@ -51,7 +51,7 @@ $('#success').igNotifier({
 
 ### <a id="info"></a>Info
 
-The gray color is accompanying the info message notifications so they would appear neutral in most themes. This type of notification is the second in the hierarchy level. Since the message in intended to provide information about the specific state of the system or the action expected from the user, there is no default and it can be set via the [`messages`]((%%jQueryApiUrl%%/ui.igNotifier#options:messages) option. The input border remains unchanged for this state.
+The gray color is accompanying the info message notifications so they would appear neutral in most themes. This type of notification is the second in the hierarchy level. Since the message in intended to provide information about the specific state of the system or the action expected from the user, there is no default and it can be set via the [`messages`](%%jQueryApiUrl%%/ui.igNotifier#options:messages) option. The input border remains unchanged for this state.
 
 ```js
 $('#info').igNotifier({
@@ -124,7 +124,7 @@ $('#notifier').igNotifier({
 
 As every other control, the `igNotifier` has its own properties that allow the users to customize the way the notifications look. You can for example use the `direction` property to specify the position of the messages. It can be situated on either side of the editors input.
 
-Another worth mentioning option is the `mode`. You can choose between `popover` and `inline` display modes. The default value is auto. This means that the notifier sets popover mode for info and warning messages and inline for the success and the error messages.
+Another worth mentioning option is the [`mode`](%%jQueryApiUrl%%/ui.igNotifier#options:mode). You can choose between `popover` and `inline` display modes. The default value is auto. This means that the notifier sets popover mode for info and warning messages and inline for the success and the error messages.
 
 You can use the `messages` property to customize the default text that is going to be displayed for a specific state or provide it as a last parameter of the `notify` method.
 
@@ -134,5 +134,5 @@ The whole list of available options and detailed description can be found in the
 
 - [Notifier Basic Usage sample](%%SamplesUrl%%/notifier/basic-usage)
 - [Notifier Inline messages sample](%%SamplesUrl%%/notifier/inline-messages)
-- [Notifier with igEditors sample](%%SamplesUrl%%/notifier/with-igEditors)
+- [Notifier with igEditors sample](%%SamplesUrl%%/editors/with-igEditors)
 -	[igNotifier jQuery API](%%jQueryApiUrl%%/ui.igNotifier)
