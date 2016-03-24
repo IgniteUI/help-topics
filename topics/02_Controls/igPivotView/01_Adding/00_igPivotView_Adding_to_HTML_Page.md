@@ -122,7 +122,9 @@ The following table summarizes the requirements for using the `igPivotView` cont
 				The igPivotView functionality of the Ignite UI library is distributed across several files. You can load the required resources in one of the following ways:
 
 				<ul>
-					<li>(Recommended)&nbsp;&nbsp;Use the Infragistics® Loader (igLoader™). You only need to include a script reference to igLoader on your page.</li>
+					<li>**Including a custom JavaScript file**: This is the recommended approach to reference Ignite UI JavaScript files. You can [create a custom download](%%SamplesUrl%%/download) of selected Ignite UI controls and components.</li>
+                    
+					<li>**Using Infragistics Loader**: The *Infragistics Loader* can be used to resolve all the Infragistics resources (styles and scripts)</li>
 
 					<li>Load the required resources manually. You need to use the dependencies listed in the table below.</li>
 				</ul>
@@ -302,6 +304,8 @@ The following table summarizes the requirements for using the `igPivotView` cont
 				Add one of the following:
 
 				<ul>
+					<li>A reference to custom JavaScript file</li>
+                    
 					<li>A reference to igLoader</li>
 
 					<li>A reference to all the required JavaScript files (listed in the table on the left).</li>
@@ -357,9 +361,6 @@ The following table summarizes the requirements for using the `igPivotView` cont
 	</tbody>
 </table>
 
-
-
->**Note:** It is recommended to use the `igLoader` component to load JavaScript and CSS resources. For information on how to do this, refer to the online Ignite UI [Samples Browser](http://www.infragistics.com/products/jquery/pivot-view), you can find some specific examples on how to use the `igLoader` with `igPivotView` component.
 
 ### <a id="steps-summary"></a>Steps
 

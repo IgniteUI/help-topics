@@ -297,7 +297,7 @@ Whether used with an Ignite UI widget or on its own, the Notifier component prov
 #### Related Samples
 -   [Basic Usage](%%SamplesUrl%%/notifier/basic-usage)
 -   [Inline messages](%%SamplesUrl%%/notifier/inline-messages)
--   [Notifier with igEditors](%%SamplesUrl%%/notifier/with-igEditors)
+-   [Notifier with igEditors](%%SamplesUrl%%/editors/with-igEditors)
 
 ## igValidator
 
