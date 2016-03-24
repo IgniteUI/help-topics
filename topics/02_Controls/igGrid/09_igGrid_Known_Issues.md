@@ -245,6 +245,17 @@ This is a third party issue in Chrome and Safari. In those browsers the thead el
 ![](../../images/images/negative.png)
 			</td>
         </tr>
+		<tr>
+            <td>
+Grid applies the focus to the unfixed part of the row when selecting is done through the row selectors.
+			</td>
+            <td>
+This is related to that the record is separated in two physical rows - for fixed and unfixed part. And only one element on the page can be focused.
+			</td>
+            <td>
+![](../../images/images/negative.png)
+			</td>
+        </tr>
     </tbody>
 </table>
 
