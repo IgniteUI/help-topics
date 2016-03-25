@@ -27,17 +27,17 @@ Rules|Compliance
 
 ## <a id="wai-aria"></a> WAI-ARIA Support
 
-In 2014 the W3C finalized their [WAI-ARIA specification](http://www.w3.org/TR/wai-aria/) which defined how to design Web content and Web applications to be more accessible to users with disabilities. The igCurrencyEditor has been designed so that it follows these guidelines.
+In 2014 the W3C finalized their [WAI-ARIA specification](http://www.w3.org/TR/wai-aria/) which defined how to design Web content and Web applications to be more accessible to users with disabilities. The `igCurrencyEditor` has been designed so that it follows these guidelines.
 
-The list below provides details about what changes have been made to the igCurrencyEdiotr to support WAI-ARIA. Please note that no special settings are  needed to leverage these changes, as they are all enabled by default.
+The list below provides details about what changes have been made to the `igCurrencyEditor` to support WAI-ARIA. Please note that no special settings are  needed to leverage these changes, as they are all enabled by default.
 
 <ul>
-<li>The input element of the igCurrencyEditor will render a <b>tabindex</b> attribute with a corresponding value from the <b>tabindex</b> option of the igCurrencyEditor, which allows access to the elements through the use of TAB and SHIFT+TAB keys. <br />
+<li>The input element of the `igCurrencyEditor` will render a <b>tabindex</b> attribute with a corresponding value from the <b>tabindex</b> option of the `igCurrencyEditor`, which allows access to the elements through the use of TAB and SHIFT+TAB keys. <br />
 >**Note:** If the tabindex option is not specified - tabindex equal to -1 is rendered as an attribute to the input element.</li>
 
-<li>The igCurrencyEditor is decorated with a <b>textbox</b> role. In case there are defined listItems option and list is rendered the editor input is decorated with <b>combobox</b> role.</li>
+<li>The `igCurrencyEditor` is decorated with a <b>textbox</b> role. In case there are defined listItems option and list is rendered the editor input is decorated with <b>combobox</b> role.</li>
 
-<li>The igCurrencyEditor is decorated with a <b>aria-label</b> attribute with the corresponding value depending on the locale. The default value is 'Currency Editor'. </li>
+<li>The `igCurrencyEditor` is decorated with a <b>aria-label</b> attribute with the corresponding value depending on the locale. The default value is 'Currency Editor'. </li>
 
 <li>In case button is rendered
 <ul>

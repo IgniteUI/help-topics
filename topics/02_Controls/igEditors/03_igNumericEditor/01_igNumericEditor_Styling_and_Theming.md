@@ -16,7 +16,7 @@ The Ignite UI package comes with a number of jQuery UI and Bootstrap themes. Boo
 
 ## Using ThemeRoller
 
-As the `igNumericEditor` control uses the jQuery UI CSS framewrok it can also be fully styled using the [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/) where you can customize your own theme or choose from a gallery of available ones. These themes replace the ones that come by default with Ignite UI.
+As the `igNumericEditor` control uses the jQuery UI CSS framework it can also be fully styled using the [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/) where you can customize your own theme or choose from a gallery of available ones. These themes replace the ones that come by default with Ignite UI.
 
 Numeric editor with drop list using the UI Darkness theme:
 
