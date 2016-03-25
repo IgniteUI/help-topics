@@ -829,6 +829,17 @@ When you have continuous virtualization enabled and you unfix a column, the grid
 			</td>
         </tr>
 	<tr>
+<tr>
+            <td>
+The [fixDataSkippedColumns](%%jQueryApiUrl%%/ui.iggrid#methods:fixDataSkippedColumns) and [unfixDataSkippedColumns](%%jQueryApiUrl%%/ui.iggrid#methods:unfixDataSkippedColumns) methods have been deprecated.
+	</td>
+            <td>
+Use the [fixNonDataColumns](%%jQueryApiUrl%%/ui.iggrid#methods:fixNonDataColumns) and [unfixNonDataColumns](%%jQueryApiUrl%%/ui.iggrid#methods:unfixNonDataColumns) methods instead.
+	</td>
+        <td>
+![](../images/images/negative.png)
+	</td>
+</tr>
             <td>
 In Chrome and Safari when there is a caption with long text defined for the grid, the fixed column header's width will stretch to the length of the caption and the unfix column button may not be visible.
 			</td>
