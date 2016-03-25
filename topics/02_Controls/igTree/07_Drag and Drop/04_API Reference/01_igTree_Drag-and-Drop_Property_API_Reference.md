@@ -54,7 +54,7 @@ Boolean
             <td>
 Specifies whether the control will accept drops from other controls.
 
-                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings) property.
 			</td>
 
             <td>
@@ -74,7 +74,7 @@ Boolean/Selector/Element/String/Array
             <td>
 When true, the area inside which the helper is contained is scrollable while dragging.
 
-                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings) property.
 			</td>
 
             <td>
@@ -94,7 +94,7 @@ String
             <td>
 Hint markup upon “Copy after”. This hint appears when the copied node is about to be dropped after the currently highlighted node (the node over which the mouse pointer is hovering at the moment).
 
-                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings) property.
 			</td>
 
             <td>
@@ -114,7 +114,7 @@ String
             <td>
 Hint markup upon “Copy before”. This hint appears when the copied node is about to be dropped before the currently highlighted node (the node over which the mouse pointer is hovering at the moment).
 
-                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings) property.
 			</td>
 
             <td>
@@ -134,7 +134,7 @@ String
             <td>
 Hint markup upon “Copy between”. This hint appears when the copied node is about to be dropped between the two currently highlighted adjacent nodes (the nodes between which the mouse pointer is hovering at the moment).
 
-                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings) property.
 			</td>
 
             <td>
@@ -155,7 +155,7 @@ String
 Hint markup upon “Copy to”. This hint appears during dragging when the copied node is about to be dropped over the currently highlighted node (the node over which the mouse pointer is hovering at the moment). In this case, the copied node
                     will become a child node of the target (highlighted) node.
 
-                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings) property.
 			</td>
 
             <td>
@@ -195,7 +195,7 @@ Provides an entry point for custom drop validation. The custom validation must h
 
                 Custom drop validation function is overridden by the internal tree validation, so you can invalidate a drop-and-drop action only at the drop point.
 
-                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings) property.
 			</td>
 
             <td>
@@ -269,7 +269,7 @@ String
 
                 Each of them sets the respective Drag-and-Drop mode.
 
-                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings) property.
             </td>
 
             <td>
@@ -290,7 +290,7 @@ Float
 Opacity/transparency level of the dragged node and the hint while dragging. The range of valid values is between 0 and 1 with 1 meaning the hint is
                     fully opaque and 0 meaning the hint is fully transparent.
 
-                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings) property.
 			</td>
 
             <td>
@@ -310,7 +310,7 @@ Number
             <td>
 Time to elapse (in milliseconds) after a `mousedown` event after which dragging will be allowed. The purpose of this option is to prevent unwanted drags when clicking on an element.
 
-                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings) property.
 			</td>
 
             <td>
@@ -330,7 +330,7 @@ Number
             <td>
 Time to elapse (in milliseconds) after a `mousedown` event after which the node will expand after hovering it during drag.
 
-                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings) property.
 			</td>
 
             <td>
@@ -366,7 +366,7 @@ String
 
                 The default setting means the the helper element uses a function that is defined internally.
 
-                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings) property.
             </td>
 
             <td>
@@ -386,7 +386,7 @@ String
             <td>
 Hint markup for invalid drop location. This hint appears when the moved node is about to be dropped over an invalid drop location.
 
-                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings) property.
 			</td>
 
             <td>
@@ -406,7 +406,7 @@ String
             <td>
 Hint markup upon “Move after”. This hint appears when the moved node is about to be dropped after the currently highlighted node (the node over which the mouse pointer is hovering at the moment).
 
-                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings) property.
 			</td>
 
             <td>
@@ -426,7 +426,7 @@ String
             <td>
 Hint markup upon “Move before”. This hint appears when the moved node is about to be dropped before the currently highlighted node (the node over which the mouse pointer is hovering at the moment).
 
-                This property is set inside the [DragAndDropSettings property.](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings property.)
+                This property is set inside the [DragAndDropSettings property.](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings property.)
 			</td>
 
             <td>
@@ -446,7 +446,7 @@ String
             <td>
 Hint markup upon “Move between”. This hint appears when the moved node is about to be dropped between the two currently highlighted adjacent nodes (the nodes between which the mouse pointer is hovering at the moment).
 
-                This property is set inside the [DragAndDropSettings property.](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings property.)
+                This property is set inside the [DragAndDropSettings property.](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings property.)
 			</td>
 
             <td>
@@ -467,7 +467,7 @@ String
 Hint markup upon “Move to”. This hint appears during dragging when the moved node is about to be dropped over the currently highlighted node (the node over which the mouse pointer is hovering at the moment). In this case, the moved node
                     will become a child node of the target (highlighted) node.
 
-                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings) property.
 			</td>
 
             <td>
@@ -487,7 +487,7 @@ Boolean
             <td>
 If set to true, the dragged node will return to its original locations when dragging stops.
 
-                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings) property.
 			</td>
 
             <td>
@@ -512,7 +512,7 @@ Duration of the revert animation (in milliseconds).
                 The [revertDuration](%%jQueryApiUrl%%/ui.igtree#options:revertDuration) setting is ignored if the [revert](%%jQueryApiUrl%%/ui.igtree#options:revert) property
                     is false.
 
-                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings) property.
 			</td>
 
             <td>
@@ -534,7 +534,7 @@ z-index for the helper while the element being dragged.
 
                 The z-index specifies the stack order of an element. An element with a greater stack index is always in front of an element with a lower stack order.
 
-                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:DragAndDropSettings) property.
+                This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings) property.
 			</td>
 
             <td>
