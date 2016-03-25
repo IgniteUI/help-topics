@@ -59,7 +59,7 @@ Usage
 
                         <tr>
                             <td>
-[node](%%jQueryApiUrl%%/ui.igtree#methods:node)
+[node](%%jQueryApiUrl%%/ui.igtree#methods:addNode)
 			</td>
 
                             <td>
@@ -69,7 +69,7 @@ Specifies the data for creating the new node.
 
                         <tr>
                             <td>
-[parent](%%jQueryApiUrl%%/ui.igtree#methods:parent)
+[parent](%%jQueryApiUrl%%/ui.igtree#methods:addNode)
 			</td>
 
                             <td>
@@ -107,7 +107,7 @@ Usage
 
                         <tr>
                             <td>
-[path](%%jQueryApiUrl%%/ui.igtree#methods:path)
+[path](%%jQueryApiUrl%%/ui.igtree#methods:removeAt)
 			</td>
 
                             <td>
@@ -145,7 +145,7 @@ Usage
 
                         <tr>
                             <td>
-[value](%%jQueryApiUrl%%/ui.igtree#methods:value)
+[value](%%jQueryApiUrl%%/ui.igtree#methods:removeNodesByValue)
 			</td>
 
                             <td>
