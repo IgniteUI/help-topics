@@ -107,7 +107,7 @@ The table below demonstrates what type of format property [`position`](%%jQueryA
 
 			<td>{</span> my: “left top”,</span> at: “left top”,</span> of: window,</span> offset: “</span>10</span>0</span> 20</span>0”</span>}</span></td>
 
-			<td>object (supported by jQuery UI</span> <a href="http://jqueryui.com/demos/position/">position()</a> method)</span></td>
+			<td>object (supported by jQuery UI</span> <a href="http://jqueryui.com/demos/position/" target="_blank">position()</a> method)</span></td>
 		</tr>
 	</tbody>
 </table>

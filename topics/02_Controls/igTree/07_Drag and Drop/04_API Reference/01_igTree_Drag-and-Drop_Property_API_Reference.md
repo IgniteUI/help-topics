@@ -44,7 +44,7 @@ Default Value
 
         <tr>
             <td>
-[allowDrop](%%jQueryApiUrl%%/ui.igtree#options:allowDrop)
+[allowDrop](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.allowDrop)
 			</td>
 
             <td>
@@ -64,7 +64,7 @@ false
 
         <tr>
             <td>
-[containment](%%jQueryApiUrl%%/ui.igtree#options:containment)
+[containment](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.containment)
 			</td>
 
             <td>
@@ -84,7 +84,7 @@ false
 
         <tr>
             <td>
-[]()[copyAfterMarkup](%%jQueryApiUrl%%/ui.igtree#options:copyAfterMarkup)
+[]()[copyAfterMarkup](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.copyAfterMarkup)
 			</td>
 
             <td>
@@ -104,7 +104,7 @@ Hint markup upon “Copy after”. This hint appears when the copied node is abo
 
         <tr>
             <td>
-[copyBeforeMarkup](%%jQueryApiUrl%%/ui.igtree#options:copyBeforeMarkup)
+[copyBeforeMarkup](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.copyBeforeMarkup)
 			</td>
 
             <td>
@@ -124,7 +124,7 @@ Hint markup upon “Copy before”. This hint appears when the copied node is ab
 
         <tr>
             <td>
-[copyBetweenMarkup](%%jQueryApiUrl%%/ui.igtree#options:copyBetweenMarkup)
+[copyBetweenMarkup](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.copyBetweenMarkup)
 			</td>
 
             <td>
@@ -144,7 +144,7 @@ Hint markup upon “Copy between”. This hint appears when the copied node is a
 
         <tr>
             <td>
-[copyToMarkup](%%jQueryApiUrl%%/ui.igtree#options:copyToMarkup)
+[copyToMarkup](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.copyToMarkup)
 			</td>
 
             <td>
@@ -183,7 +183,7 @@ Hint markup upon “Copy to”. This hint appears during dragging when the copie
 
         <tr>
             <td>
-[customDropValidation](%%jQueryApiUrl%%/ui.igtree#options:customDropValidation)
+[customDropValidation](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.customDropValidation)
 			</td>
 
             <td>
@@ -241,7 +241,7 @@ none
 
         <tr>
             <td>
-[dragAndDropMode](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropMode)
+[dragAndDropMode](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.dragAndDropMode)
 			</td>
 
             <td>
@@ -279,7 +279,7 @@ default
 
         <tr>
             <td>
-[dragOpacity](%%jQueryApiUrl%%/ui.igtree#options:dragOpacity)
+[dragOpacity](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.dragOpacity)
 			</td>
 
             <td>
@@ -300,7 +300,7 @@ Opacity/transparency level of the dragged node and the hint while dragging. The 
 
         <tr>
             <td>
-[dragStartDelay](%%jQueryApiUrl%%/ui.igtree#options:dragStartDelay)
+[dragStartDelay](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.dragStartDelay)
 			</td>
 
             <td>
@@ -320,7 +320,7 @@ Time to elapse (in milliseconds) after a `mousedown` event after which dragging 
 
         <tr>
             <td>
-[expandDelay](%%jQueryApiUrl%%/ui.igtree#options:expandDelay)
+[expandDelay](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.expandDelay)
 			</td>
 
             <td>
@@ -340,7 +340,7 @@ Time to elapse (in milliseconds) after a `mousedown` event after which the node 
 
         <tr>
             <td>
-[helper](%%jQueryApiUrl%%/ui.igtree#options:helper)
+[helper](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.helper)
 			</td>
 
             <td>
@@ -376,7 +376,7 @@ default
 
         <tr>
             <td>
-[invalidMoveToMarkup](%%jQueryApiUrl%%/ui.igtree#options:invalidMoveToMarkup)
+[invalidMoveToMarkup](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.invalidMoveToMarkup)
 			</td>
 
             <td>
@@ -396,7 +396,7 @@ Hint markup for invalid drop location. This hint appears when the moved node is 
 
         <tr>
             <td>
-[moveAfterMarkup](%%jQueryApiUrl%%/ui.igtree#options:moveAfterMarkup)
+[moveAfterMarkup](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.moveAfterMarkup)
 			</td>
 
             <td>
@@ -416,7 +416,7 @@ Hint markup upon “Move after”. This hint appears when the moved node is abou
 
         <tr>
             <td>
-[moveBeforeMarkup](%%jQueryApiUrl%%/ui.igtree#options:moveBeforeMarkup)
+[moveBeforeMarkup](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.moveBeforeMarkup)
 			</td>
 
             <td>
@@ -436,7 +436,7 @@ Hint markup upon “Move before”. This hint appears when the moved node is abo
 
         <tr>
             <td>
-[moveBetweenMarkup](%%jQueryApiUrl%%/ui.igtree#options:moveBetweenMarkup)
+[moveBetweenMarkup](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.moveBetweenMarkup)
 			</td>
 
             <td>
@@ -456,7 +456,7 @@ Hint markup upon “Move between”. This hint appears when the moved node is ab
 
         <tr>
             <td>
-[moveToMarkup](%%jQueryApiUrl%%/ui.igtree#options:moveToMarkup)
+[moveToMarkup](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.moveToMarkup)
 			</td>
 
             <td>
@@ -477,7 +477,7 @@ Hint markup upon “Move to”. This hint appears during dragging when the moved
 
         <tr>
             <td>
-[revert](%%jQueryApiUrl%%/ui.igtree#options:revert)
+[revert](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.revert)
 			</td>
 
             <td>
@@ -497,7 +497,7 @@ true
 
         <tr>
             <td>
-[revertDuration](%%jQueryApiUrl%%/ui.igtree#options:revertDuration)
+[revertDuration](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.revertDuration)
 			</td>
 
             <td>
@@ -522,7 +522,7 @@ Duration of the revert animation (in milliseconds).
 
         <tr>
             <td>
-[zIndex](%%jQueryApiUrl%%/ui.igtree#options:zIndex)
+[zIndex](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.zIndex)
 			</td>
 
             <td>

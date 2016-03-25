@@ -35,7 +35,7 @@ This topic contains the following sections:
 Option| Previously| Now
 ---|---|---
 animationHideDuration animationShowDuration|Used to set animation duration when dropdown list is displayed/hidden.<br>`$(".selector").igDatePicker({`<br>`animationShowDuration: 500,`<br>`animationHideDuration: 500`<br>`});`|These options are replaced by new option `dropDownAnimationDuration` that controls the dropdown list animation duration. <br>`$(".selector").igDatePicker({`<br>`dropDownAnimationDuration: 500`<br>`});`
-button|This option was used to set visibility of spin and dropdown button. <br>`$(".selector").igDatePicker({`<br>`button : "dropdown"`<br>`});`|This option is renamed to `buttonType` to better communicate what it does. For date picker the supported types are 'dropdown' and 'clear'.<br>`$(".selector").igDatePicker({`<br>`buttonType : "dropdown"`<br>`});`
+button|This option was used to set visibility of spin and dropdown button. <br>`$(".selector").igDatePicker({`<br>`button : "dropdown"`<br>`});`|This option is renamed to `buttonType` to better communicate what it does. <br>`$(".selector").igDatePicker({`<br>`buttonType : "dropdown"`<br>`});`
 display|Sets gets style.display for outer html element.|This option is removed.
 dropDownOnReadOnly|This option was used to set ability to override the "readOnly" option and allow showing the dropdown list and changing the value in the editor from a list.<br>`$(".selector").igDatePicker({`<br>    `dropDownOnReadOnly : true`<br>`});`|This option is removed. If `readOnly` is set to `true` the dropdown list cannot be displayed.<br>`$(".selector").igDatePicker({`<br>`readOnly : true`<br>`});`
 dropDownTriggers|Sets gets list of actions which trigger display of drop-down list or calendar.|This option is removed. Now `Alt` + `down-arrow` shows dropdown.
@@ -66,13 +66,13 @@ Option| Description
 ---|---
 limitSpinToCurrentField|<a name='limitSpinToCurrentField'></a>Sets gets ability to modify only 1 date field on spin events.
 allowNullValue|<a name='allowNullValue'></a>If that option is false, and editor has no value, then value is set to an empty string.
-disabled|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#datePicker').igDatePicker({ disabled: true }] })`.
+disabled|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#datePicker').igDatePicker({ disabled: true })`.
 buttonType|<a name='buttonType'></a>Sets gets visibility of spin, clear and drop-down button.
 dropDownAttachedToBody|<a name='dropDownAttachedToBody'></a>Gets sets location of drop-down list.
 dropDownAnimationDuration|<a name='dropDownAnimationDuration'></a>Gets sets show/hide drop-down list animation duration in milliseconds.
 placeHolder|<a name='placeHolder'></a>Gets sets text which appears in editor when editor has no focus and "value" in editor is null or empty string.
 revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key. If set to false clear is called.
-preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#datePicker').igDatePicker({ preventSubmitOnEnter: true }] })`.
+preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#datePicker').igDatePicker({ preventSubmitOnEnter: true })`.
 dropDownOrientation|<a name='dropDownOrientation'></a>Use to set drop down opening orientation for the dorp down list when open button is clicked.
 suppressNotifications|<a name='suppressNotifications'></a>Disables default notifications for basic validation scenarios built in the editors such as required list selection, value wrapping around or spin limits.
 
@@ -87,7 +87,6 @@ addListItem|Used to add the object within item at the location indicated by the 
 addListItems|Used to add the objects within the items array at the location indicated by the index.|This method is removed.
 clearListItems|Removed all items from list.|This method is removed.
 dropDownElement|Got reference to jquery object which is used as container of dropdown.|This method is removed.
-dropDownVisible|Set visibility of dropdown list according to the Boolean value that is passed.|This method is removed.
 findListItemIndex|Found index of list item by text that matches with the search parameters.|This method is removed.
 getRegionalOption|Gets calculated value of regional option used by numeric and date editors.|This method in no longer available.
 getSelection|Used to get left or right edge of selection.|This method is replaced by the methods `getSelectionStart` and `getSelectionEnd`.
@@ -95,7 +94,7 @@ getValueByMode|Used to get value in editor by dataMode.|This method is not suppo
 hasInvalidMessage|Used to check if invalid message is displayed.|This method is removed as its` functionality is covered by the API for the igNotifier.
 mainElement|Used to get reference to jquery object which is used as top/outer element of igDatePicker.|This method is renamed to `editorContainter` to better communicate what it does.
 paste|Used to paste text at location of caret.|This is renamed to `insert` and the `txt` parameter is renamed to `string` as it is a string of characters.
-remove|This was used to remove editor from its parent element, but keeps the rest of functionality|This method is not supported.
+remove|This was used to remove editor from its parent element, but keeps the rest of functionality.|This method is not supported.
 removeListItem|Used to remove item from list.|This method is removed. 
 removeListItemAt|Used to remove item from list at index.|This method is removed. 
 select|Used to select text in editor. Valid parameters: `sel0`, `sel1`, `val`|`sel0` is renamed to `start` and `sel1` is renamed to `end` to prevent exchanging the two parameters. 
@@ -113,7 +112,7 @@ Method|Description
 getSelectedDate|Gets selected date.
 selectDate|Sets selected date.
 getCalendar|<a name='getCalendar'></a>Returns a reference to the jQuery calendar used as a picker selector.
-inputName|<a name='inputName'></a>Gets sets name attribute applied to the editor element
+inputName|<a name='inputName'></a>Gets sets name attribute applied to the editor element.
 displayValue|<a name='displayValue'></a>Returns a string with all the characters shown in the input.
 editorContainer|<a name='editorContainer'></a>Gets reference to jquery object which is used as top/outer element of igEditor.
 showDropDown|<a name='showDropDown'></a>Show the dropdown list.
@@ -139,8 +138,8 @@ Event|Changes
 ---|---
 hideDropDown|Event is not supported anymore. Two new events are introduced, giving you more control over hiding the dropdown list: [dropDownListClosing](#dropDownListClosing) and [dropDownListClosed](#dropDownListClosed).
 showDropDown|Event is not supported anymore. Two new events are introduced, giving you more control over showing the dropdown list: [dropDownListOpening](#dropDownListOpening) and [dropDownListOpened](#dropDownListOpened).
-listSelected|Event is renamed to `dropDownItemSelected` to better communicate what it does. Use `ui.owner` to obtain reference to igEditor. Use `ui.editorInput` to obtain reference to the editable input. Use `ui.list` to obtain reference to the list contaier. Use `ui.item` to obtain reference to the list item which is selected.
-listSelecting|Event is renamed to `dropDownItemSelecting` to better communicate what it does. Use `ui.owner` to obtain reference to igEditor. Use `ui.editorInput` to obtain reference to the editable input. Use `ui.list` to obtain reference to the list contaier. Use `ui.item` to obtain reference to the list item which is about to be selected.
+listSelected|Event is renamed to `dropDownItemSelected` to better communicate what it does. Use `ui.owner` to obtain reference to igEditor. Use `ui.editorInput` to obtain reference to the editable input. Use `ui.list` to obtain reference to the list container. Use `ui.item` to obtain reference to the list item which is selected.
+listSelecting|Event is renamed to `dropDownItemSelecting` to better communicate what it does. Use `ui.owner` to obtain reference to igEditor. Use `ui.editorInput` to obtain reference to the editable input. Use `ui.list` to obtain reference to the list container. Use `ui.item` to obtain reference to the list item which is about to be selected.
 mouseleave|Event is renamed to `mouseout` to better communicate what it does.
 
 <a name='new_events'></a>
@@ -154,8 +153,6 @@ dropDownListOpening|<a name='dropDownListOpening'></a>Event which is raised when
 dropDownListOpened|<a name='dropDownListOpened'></a>Event which is raised when the drop down is already opened.
 dropDownListClosing|<a name='dropDownListClosing'></a>Event which is raised when the drop down is closing.
 dropDownListClosed|<a name='dropDownListClosed'></a>Event which is raised when the drop down is already closed.
-dropDownItemSelecting|<a name='dropDownItemSelecting'></a>Event which is raised when the drop down list item is selecting.
-dropDownItemSelected|<a name='dropDownItemSelected'></a>Event which is raised when the drop down list item is selected.
 mouseout|<a name='mouseout'></a>Event which is raised on mouseleave at any part of editor including drop-down list.
 
 [See all events](%%jQueryApiUrl%%/ui.igdatepicker#events)

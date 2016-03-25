@@ -804,20 +804,18 @@ In Internet Explorer 9 or higher, if you fix a column in an igGrid and scroll do
 
         <tr>
             <td>
-Grid and its columns widths are mandatory and should be defined in pixels units
+The column widths are mandatory and should be defined in pixel units
 			</td>
 
             <td>
-Grid and its columns (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option) widths are mandatory
-                    and should be defined in pixels units.
-			</td>
+The column widths are mandatory and should be defined in pixels units (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option). The grid width should be set either in pixel or percentage units.			</td>
 
             <td>
 ![](../images/images/negative.png)
 			</td>
         </tr>
 
-        <tr>
+<tr>
             <td>
 The grid scrolls to the top, when a column is unfixed and continuous virtualization is enabled
 			</td>
@@ -830,6 +828,52 @@ When you have continuous virtualization enabled and you unfix a column, the grid
 ![](../images/images/negative.png)
 			</td>
         </tr>
+        <tr>
+            <td>
+In Chrome and Safari when there is a caption with long text defined for the grid, the fixed column header's width will stretch to the length of the caption and the unfix column button may not be visible.
+			</td>
+
+            <td>
+This is a third party issue in Chrome and Safari. In those browsers the thead element, which contains the fixed headers, stretches to the full width of the caption, which may lead to the unfix button going outside of the visible area of the header (in cases where the column width is smaller than the caption width). All other browsers retain the same column width in the fixed grid area and don't exhibit this behavior.	    </td>
+
+            <td>
+![](../images/images/negative.png)
+			</td>
+        </tr>
+	<tr>
+            <td>
+The grid height cannot be set in percentage units.  
+			</td>
+            <td>
+Setting grid height in percentage units is not supported.  
+			</td>  
+            <td>
+![](../images/images/negative.png)
+			</td>
+        </tr>
+	<tr>
+            <td>
+In Chrome and Safari when there is a caption with long text defined for the grid, the fixed column header's width will stretch to the length of the caption and the unfix column button may not be visible.
+			</td>
+
+            <td>
+This is a third party issue in Chrome and Safari. In those browsers the thead element, which contains the fixed headers, stretches to the full width of the caption, which may lead to the unfix button going outside of the visible area of the header (in cases where the column width is smaller than the caption width). All other browsers retain the same column width in the fixed grid area and don't exhibit this behavior.	    </td>
+
+            <td>
+![](../images/images/negative.png)
+			</td>
+        </tr>
+<tr>  
+<td>  
+The grid height cannot be set in percentage units.  
+ </td>  
+        <td>  
+Setting grid height in percentage units is not supported.  
+			</td>  
+            <td>  
+![](../images/images/negative.png)  
+	</td>  
+  </tr>   
     </tbody>
 </table>
 
@@ -1220,6 +1264,11 @@ Characters different from A-Z, a-z, 0-9, "_" are not substituted/recognized.
 ![](../images/images/positive.png)
 			</td>
         </tr>
+        <tr>
+		<td>List of blocks is not supported</td>
+		<td>List of blocks are not supported, which means the following - “{{if *Condition1* }} Do Something {{/if}} {{if *Condition2* }} Do Something else {{/if}}” is not a correctly defined block.</td>
+		<td>![](../images/images/negative.png)</td>
+        </tr>
     </tbody>
 </table>
 
@@ -1252,9 +1301,3 @@ Issue | Description | Status
 Mobile Slider does not slide on Windows Phone 7 | Because Windows® Phone 7 does not support standard touch events, the slider is read-only. | ![](../images/images/positive.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
-
-
-
- 
-
-

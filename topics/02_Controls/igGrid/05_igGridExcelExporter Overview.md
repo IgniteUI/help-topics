@@ -98,7 +98,7 @@ For more information on all the available properties of the exporter you can exp
                 });
                 
                 $("#export-button").click(function(){
-                    $.ig.GridExcelExporter.export($("#grid"), { 	
+                    $.ig.GridExcelExporter.exportGrid($("#grid"), { 	
                         fileName: "igGrid",
                         worksheetName: "Sheet1",
                         tableStyle: "tableStyleLight13"

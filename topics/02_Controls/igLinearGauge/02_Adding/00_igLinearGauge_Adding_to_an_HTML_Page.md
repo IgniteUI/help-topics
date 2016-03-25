@@ -82,9 +82,13 @@ The following table summarizes the requirements for using the `igLinearGauge` co
                 Ignite UI™ is built on top of the following frameworks:
 
                 <ul>
-                    <li><a href="http://jquery.com/">jQuery</a></li>
+                    <li>
+                    [jQuery](http://jquery.com/)
+                    </li>
 
-                    <li><a href="http://jqueryui.com/">jQuery UI</a></li>
+                    <li>
+                    [jQuery UI](http://jqueryui.com/)
+                    </li>
                 </ul>
             </td>
 

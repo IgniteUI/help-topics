@@ -18,7 +18,7 @@ All of the themes will style all controls on the page, including the editors.
 
 ## Using ThemeRoller
 
-As the `igCurrencyEditor` control uses the jQuery UI CSS framewrok, it can also be fully styled using the [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/) where you can customize your own theme or choose from a gallery of available ones. These themes replace the ones that come by default with Ignite UI.
+As the `igCurrencyEditor` control uses the jQuery UI CSS framework, it can also be fully styled using the [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/) where you can customize your own theme or choose from a gallery of available ones. These themes replace the ones that come by default with Ignite UI.
 
 Currency editor using the UI Darkness theme:
 

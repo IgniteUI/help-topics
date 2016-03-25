@@ -155,7 +155,7 @@ Virtualization and auto sizing of columns is not supported | Auto sizing columns
 Issue | Description | Status
 ---|---|---
 RWD mode is not supported in IE8|RWD is unable to determine the mode in IE8. This feature is mainly targeted at mobile compatibility so it is not supported under IE8.|![](../../images/images/negative.png)
-RWD single column template is not supported with any of the grid features, excepts Paging.| The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.|![](../../images/images/negative.png)  
+RWD single column template is not supported with any of the grid features, excepts Paging.| The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.|![](../../images/images/negative.png) 
 
 ## [igGridColumnFixing](#column-fixing)
 
@@ -213,10 +213,44 @@ In Internet Explorer 9 or higher, if you fix a column in an `igGrid` and scroll 
         </tr>
         <tr>
             <td>
-Grid and its columns widths are mandatory and should be defined in pixels units
+The column widths are mandatory and should be defined in pixel units
 			</td>
             <td>
+The column widths are mandatory and should be defined in pixels units (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option). The grid width should be set either in pixel or percentage units.
+			</td>
+            <td>
+![](../../images/images/negative.png)
+			</td>
+        </tr>
+        <tr>
+            <td>
+The grid height cannot be set in percentage units.
+			</td>
+            <td>
+Setting grid height in percentage units is not supported.
+			</td>
+            <td>
+![](../../images/images/negative.png)
+			</td>
+        </tr>
+	<tr>
+            <td>
 Grid and its columns (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option) widths are mandatory and should be defined in pixels units.
+			</td>
+
+            <td>
+This is a third party issue in Chrome and Safari. In those browsers the thead element, which contains the fixed headers, stretches to the full width of the caption, which may lead to the unfix button going outside of the visible area of the header (in cases where the column width is smaller than the caption width). All other browsers retain the same column width in the fixed grid area and don't exhibit this behavior.	    </td>
+
+            <td>
+![](../../images/images/negative.png)
+			</td>
+        </tr>
+		<tr>
+            <td>
+Grid applies the focus to the unfixed part of the row when selecting is done through the row selectors.
+			</td>
+            <td>
+This is related to that the record is separated in two physical rows - for fixed and unfixed part. And only one element on the page can be focused.
 			</td>
             <td>
 ![](../../images/images/negative.png)
@@ -224,6 +258,7 @@ Grid and its columns (either explicitly or using the [defaultColumnWidth](%%jQue
         </tr>
     </tbody>
 </table>
+
 
 
 ## [igGridColumnMoving](#column-moving)

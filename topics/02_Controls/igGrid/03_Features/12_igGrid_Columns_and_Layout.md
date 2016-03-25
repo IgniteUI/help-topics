@@ -21,6 +21,8 @@ This topic contains the following sections:
 
 -   [Defining Widths and Height](#width-height)
 -   [Defining Columns](#defining-columns)
+-   [Column Formatting](#column-formatting)
+-   [Defining Mapper function for Column](#defining-mapper)
 -   [AutoGenerateColumns](#autoGenerateColumns)
 -   [Styling](#styling)
 -   [Rendering Checkboxes on a Column](#checkboxes)
@@ -106,16 +108,147 @@ A column definition is a JavaScript object containing at least a key property. I
 
 The format and `dataType` options may be configured a number of different ways.
 
--   The `dataType` can be a string, number, date or bool
+-   The `dataType` can be a string, number, date, bool or object
 -   The `format` column property corresponding to dataType=”date” (Date objects) can be “date”, “dateLong” , “dateLong” , “dateTime” , “timeLong” or explicit pattern like “MM-dd-yyyy h:mm:ss tt”.
 -   The `format` column property corresponding to dateType=”number” (number objects) or for dataType=”string” can be “number”, “double” , “int” , “currency” , “percent”.
+-   The `format` column property corresponding to dateType=”bool” (bool objects) can be “checkbox”.
 -   If `dataType`=”number”, then the corresponding format also can be set to something like “0.0###”, “#.##”, “0.000” etc. In this case number of zeros after the decimal point define minimum decimal places and overall number of characters after decimal point defines number of maximum decimal places.
 -   If `dataType` is not “date” or “number”, then the corresponding format can contain “{0}” flag. In this case that flag is replaced by the value of cell.For example, if format=”Name: {0}” and value is cell is “Bob”, then cell will be rendered as “Name: Bob”.
 
+## <a id="column-formatting"></a> Column Formatting
+
+Column formatting defines how column cell values are displayed in the grid. Formatting operates at the grid rendering phase and doesn't affect the data in the underlying data source. This means that features that operate on the data like Sorting, Filtering, Group By will not consider the formatted cell values.
+
+Column formatting (rendering) is affected by several `igGrid` options. These are column's [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter), [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) and [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template). Additionally there's grid's [`autoFormat`](%%jQueryApiUrl%%/ui.iggrid#options:autoFormat) option which affects how the regional settings are applied to the grid.
+
+-  [`autoFormat`](%%jQueryApiUrl%%/ui.iggrid#options:autoFormat) - is a string which identifies how the regional settings are applied globally on the grid for "date" and "number" columns. By default only "date" columns are formatted according the regional settings. This option is overridden by [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) and [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) options if available.
+ > **Note:** Regional settings can be accessed with the following expression: 
+ ```js
+ $.ig.regional.defaults;
+ ```
+ 
+ Here is the flow of column rendering when no format decorators are used: 
+ ```
+ Raw Value -> autoFormat -> (template)* -> Cell Value
+ * - optional setting
+ ```
+
+ > **Note:** By default when there are no column rendering decorators applied and the Raw Value is null, undefined or empty string ("") a non-breaking space (`&nbsp;`) is rendered instead in the cell.
+ 
+-  [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) - is a function or a string name of a function bound to the global window object. It gives you full control on rendering the data source value. When defining formatter function it's up to you to control the format and regional representation of the value. There is a utility function `$.ig.formatter(rawValue, dataType, formatPattern)` which can be used for formatting values either using the regional settings or using custom format pattern.
+
+ **In Javascript:**
+ ```js
+ var formattedValue = $.ig.formatter(new Date()); //formats the date according to the current regional settings.
+ var formattedValue = $.ig.formatter(1000000); //formats the number according to the current regional settings.
+ ```
+ [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) and [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) options does not operate at the same time. When defined, [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) function is considered with priority and [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) is not used. However value from the [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) function is further decorated with a [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template).
+
+ Here is the flow of column rendering when formatter is used:
+ ```
+ Raw Value -> formatter -> (template)* -> Cell Value
+ * - optional setting
+ ```
+
+-  [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) - is a string identifying a format patterns. Internally [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) option uses the `$.ig.formatter(rawValue, dataType, formatPattern)` function. When set, [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) overrides the setting of the [`autoFormat`](%%jQueryApiUrl%%/ui.iggrid#options:autoFormat) option and also the default regional settings.
+
+ Here is the flow of column rendering when [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) is used:
+ ```
+ Raw Value -> format -> (template)* -> Cell Value 
+ * - optional setting
+ ```
+- [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template) - is a templated string (templating engine used is defined in the `templatingEngine` option).  
+ 
+ Here is the flow of column rendering when [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template) is used:
+ ```
+ Raw Value -> (autoFormat|formatter|format)* -> template -> Cell Value 
+ * - optional setting
+ ```
+
+## <a id="defining-mapper"></a> Defining Mapper function for column
+
+The mapper function can be used in scenarios where you have a complex data object and you need to extract specific property from it, which will define both the display value and the value used for data operations on that column.
+For such scenarios the column dataType needs to be specified as "object" and a mapper function can be used to extract the desired data from the record. 
+The mapping is done on a data source level and will allow all data operations to be executed based on the mapped values.
+For instance if we have a complex object in each record in the data source as in the following example: 
+```js
+var data = [{ "ID": 0, "Name": "Bread", "Description": "Whole grain bread", "Category":  { "ID": 0, "Name": "Food", "Active": true }},
+{ "ID": 1, "Name": "Milk", "Description": "Low fat milk",  "Category":   { "ID": 1, "Name": "Beverages", "Active": true } },
+ ...
+ ];
+```
+and would like to display a specific property, or computed value from multiple properties of the 'Category' object( for example we'd like to map the value to contain the ID and Name sub-field values in a single string), we can do so via the `mapper` function.
+
+Example:
+
+**In Javascript:**
+```js
+	mapper: function(record){
+	//extracting data from complex object
+	return record.Category.ID + " : " + record.Category.Name;
+	}				
+
+```
+The function is defined via the [`mapper`](%%jQueryApiUrl%%/ui.iggrid#options:columns.mapper) column option as shown in Listing 2. It allows specifying values per data record to be used for all data operations related to the specific column. 
+The function accepts a single parameter, which contains the whole data record and should return a single simple value per record. 
+
+> **Note:** The function will be invoked each time the grid needs to extract data from the data source for this column. This includes any data rendering or data manupulation operations related to the column. Due to this note that if you have complex data extraction and/or calculation logic there will be a performance impact.
+
+Listing 2: Defining mapper function for a column in igGrid
+
+**In Javascript:**
+
+```js
+  $("#grid").igGrid({
+  columns: [
+                    { headerText: "", key: "ID", dataType: "number", width: "200px" },
+                    { headerText: "Name", key: "Name", dataType: "string", width: "200px" },
+                    { headerText: "Description", key: "Description", dataType: "string", width: "200px" },
+                    { headerText: "Category", key: "Category", dataType: "object", width: "200px",
+						mapper: function(record){
+								//extracting data from complex object
+								return record.Category.Name;
+							}					
+					}
+                ],
+                autoGenerateColumns: false,
+                dataSource: northwindProductsJSON,         
+               ...
+});
+
+```
+
+ **In Javascript:**
+ ```js
+ var formattedValue = $.ig.formatter(new Date()); //formats the date according to the current regional settings.
+ var formattedValue = $.ig.formatter(1000000); //formats the number according to the current regional settings.
+ ```
+ `formatter` and `format` options does not operate at the same time. When defined, `formatter` function is considered with priority and `format` is not used. However value from the `formatter` function is further decorated with a `template`.
+
+ Here is the flow of column rendering when formatter is used:
+ ```
+ Raw Value -> formatter -> (template)* -> Cell Value
+ * - optional setting
+ ```
+
+-  `format` - is a string identifying a format patterns. Internally `format` option uses the `$.ig.formatter(rawValue, dataType, formatPattern)` function. When set, `format` overrides the setting of the `autoFormat` option and also the default regional settings.
+
+ Here is the flow of column rendering when `format` is used:
+ ```
+ Raw Value -> format -> (template)* -> Cell Value 
+ * - optional setting
+ ```
+- `template` - is a templated string (templating engine used is defined in the `templatingEngine` option).  
+ 
+ Here is the flow of column rendering when `template` is used:
+ ```
+ Raw Value -> (autoFormat|formatter|format)* -> template -> Cell Value 
+ * - optional setting
+ ```
 
 ## <a id="autoGenerateColumns"></a> AutoGenerateColumns
 
-Whenever `autoGenerateColumns` is set to *false*, you are required to manually define columns in the columns array. When `autoGenerateColumns` is *true* (default), you are not required to specify columns. In that case the grid will infer columns automatically from the data source and add them to the columns collection. Header texts are automatically generated as well, and are equivalent to the keys in the data source. When remote data binding is used, header texts are automatically generated only when data is available from the backend on the client. However, in most real-world scenarios it’s best to explicitly define columns.
+Whenever `autoGenerateColumns` is set to *false*, you are required to manually define columns in the columns array. When `autoGenerateColumns` is *true* (default), you are not required to specify columns. In that case the grid will infer columns automatically from the data source (assuming there is at least one row in it) and add them to the columns collection. Header texts are automatically generated as well, and are equivalent to the keys in the data source. Setting column widths for auto-generated columns is done with `defaultColumnWidth` option, which will apply one and the same column width for all generated columns. When remote data binding is used, header texts are automatically generated only when data is available from the backend on the client. However, in most real-world scenarios it’s best to explicitly define columns.
 
 When `autoGenerateColumns` is set to true, and you have manually defined columns, there are a few possible scenarios for how the columns render to the user:
 
@@ -277,6 +410,7 @@ $("#grid1").igGrid({
 ### Samples
 
 -   [Auto-Generate Columns](%%SamplesUrl%%/grid/auto-generate-columns)
+-   [Handling Complex Objects](%%SamplesUrl%%/grid/handling-complex-objects)
 
 ### Topic
 -   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
