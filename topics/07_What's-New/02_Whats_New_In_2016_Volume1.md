@@ -17,6 +17,14 @@ This topic presents the controls and the new and enhanced features for the Ignit
 
 The following summarizes what’s new in 2016 Volume 1. Additional details follow.
 
+### General
+
+Feature | Description
+---|---
+New Bootstrap 4 theme | A new Bootstrap 4 compatible theme is now shipped with Ignite UI - [view sample](%%SamplesUrl%%/themes/bootstrap4-default).
+Angular 2 Components (CTP) | Ignite UI widgets have component wrappers for Angular 2. For detailed information visit [Ignite UI Angular 2 GitHub](https://github.com/IgniteUI/igniteui-angular2) page.|
+New scalable font icons | The default Infragistics theme now uses [jQuery UI font icons](https://github.com/mkkeck/jquery-ui-iconfont) instead of image icons. |
+
 ### igTileManager
 
 Feature | Description
@@ -36,6 +44,14 @@ Feature | Description
 New column option- mapper| For columns with dataType="object" we now allow setting a mapper function, which can be used for complex data extraction from complex objects, whose return value will be used for all data operations executed on the specific column.- [view sample](%%SamplesUrl%%/grid/handling-complex-objects). </br> You can find more detailed information in the following topic: [Columns and Layout](igGrid-Columns-and-Layout.html#defining-mapper)|
 The ColumnFixing feature now works with grid width set in percentage| The ColumnFixing feature now works when the grid width is set in percentage. <br/> **Note**: The column widths should still be defined in pixels units (either explicitly or using the [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) option).|
 [Multi-Row Layout feature](#multi-row-layout)| Multi-Row Layout allows you to create a complex structure that contains multiple physical rows with cells in them that can span multiple columns and rows. |
+[Checkbox Appearance](#checkbox-appearance)| Checkbox column visual appearance have changed to indicate that the checkmarks are not interactable in display mode. |
+Paste from Excel sample| A new sample is added that demonstrates pasting Excel clipboard data into igGrid - [view sample](%%SamplesUrl%%/grid/paste-from-excel). |
+
+### igTreeGrid
+
+Feature | Description
+---|---
+[Improved Updating feature](#treegrid-updating) | igTreeGrid Updating feature now adds the UI for adding root and child level rows.
 
 ### TypeScript Support
 
@@ -61,6 +77,35 @@ Initializing the Multi-Row Layout is done entirely through the igGrid's column c
 
 #### Related Samples
 -   [Multi-Row Layout](%%SamplesUrl%%/grid/multi-row-layout)
+
+### <a id="checkbox-appearance"></a> Checkbox Appearance
+Checkbox column visual appearance have changed and it's square box is not going to be rendered when the grid is in display mode. What would be provided is only a plain checkmark. This change is due to refinement of the experience for the end-users, who naturally perceived that this was an interactive element, which they can click to toggle.
+
+![](images/iggrid-checkbox.png)
+
+#### Related Topics
+-   [Rendering Checkboxes on a Column](igGrid-Columns-and-Layout.html#checkboxes)
+
+#### Related Samples
+-   [Checkbox Column](%%SamplesUrl%%/grid/checkbox-column)
+
+## igTreeGrid
+
+### <a id="treegrid-updating"></a> Improved Updating feature
+
+The "Add new row" user interface is now enabled and along with it TreeGrid Updating supports adding new records not only directly to the root level, but also adding a child records to a specified level as through the UI, as well through the API.
+The "Add child row" button is available next to the "Delete row" button when a row is hoovered with the mouse or swiped left or right when on touch enabled device.
+![](images/igtreegrid-updating.png)
+
+The add new row UI is rendered inline next to its parent.
+
+![](images/igtreegrid-updating-add-child.png)
+
+#### Related Topics
+-   [Updating (igTreeGrid)](igTreeGrid-Updating.html)
+
+#### Related Samples
+-   [Updating](%%SamplesUrl%%/tree-grid/updating)
 
 ## TypeScript Support
 
