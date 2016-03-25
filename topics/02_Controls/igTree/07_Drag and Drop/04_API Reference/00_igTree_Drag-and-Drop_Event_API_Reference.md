@@ -372,7 +372,7 @@ Usage
 
                         <tr>
                             <td>
-[ui.binding](%%jQueryApiUrl%%/ui.igtree#events:dragStop)
+[ui.binding](%%jQueryApiUrl%%/ui.igtree#events:nodeDropped)
 			</td>
 
                             <td>
@@ -382,7 +382,7 @@ Gets a reference to the binding property.
 
                         <tr>
                             <td>
-[ui.data](%%jQueryApiUrl%%/ui.igtree#events:dragStop)
+[ui.data](%%jQueryApiUrl%%/ui.igtree#events:nodeDropped)
 			</td>
 
                             <td>
@@ -392,7 +392,7 @@ Gets a reference to the data property.
 
                         <tr>
                             <td>
-[ui.draggable](%%jQueryApiUrl%%/ui.igtree#events:dragStop)
+[ui.draggable](%%jQueryApiUrl%%/ui.igtree#events:nodeDropped)
 			</td>
 
                             <td>
@@ -402,7 +402,7 @@ Gets a reference to the draggable property.
 
                         <tr>
                             <td>
-[ui.element](%%jQueryApiUrl%%/ui.igtree#events:dragStop)
+[ui.element](%%jQueryApiUrl%%/ui.igtree#events:nodeDropped)
 			</td>
 
                             <td>
@@ -412,7 +412,7 @@ Gets a reference to the element property.
 
                         <tr>
                             <td>
-[ui.helper](%%jQueryApiUrl%%/ui.igtree#events:dragStop)
+[ui.helper](%%jQueryApiUrl%%/ui.igtree#events:nodeDropped)
 			</td>
 
                             <td>
@@ -422,7 +422,7 @@ Gets a reference to the helper property.
 
                         <tr>
                             <td>
-[ui.offset](%%jQueryApiUrl%%/ui.igtree#events:dragStop)
+[ui.offset](%%jQueryApiUrl%%/ui.igtree#events:nodeDropped)
 			</td>
 
                             <td>
@@ -432,7 +432,7 @@ Gets a reference to the offset property.
 
                         <tr>
                             <td>
-[ui.path](%%jQueryApiUrl%%/ui.igtree#events:dragStop)
+[ui.path](%%jQueryApiUrl%%/ui.igtree#events:nodeDropped)
 			</td>
 
                             <td>
@@ -442,7 +442,7 @@ Gets a reference to the path property.
 
                         <tr>
                             <td>
-[ui.position](%%jQueryApiUrl%%/ui.igtree#events:dragStop)
+[ui.position](%%jQueryApiUrl%%/ui.igtree#events:nodeDropped)
 			</td>
 
                             <td>
