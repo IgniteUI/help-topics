@@ -256,6 +256,17 @@ This is related to that the record is separated in two physical rows - for fixed
 ![](../../images/images/negative.png)
 			</td>
         </tr>
+<tr>
+            <td>
+The [fixDataSkippedColumns](%%jQueryApiUrl%%/ui.iggrid#methods:fixDataSkippedColumns) and [unfixDataSkippedColumns](%%jQueryApiUrl%%/ui.iggrid#methods:unfixDataSkippedColumns) methods have been deprecated.
+			</td>
+            <td>
+Use the [fixNonDataColumns](%%jQueryApiUrl%%/ui.iggrid#methods:fixNonDataColumns) and [unfixNonDataColumns](%%jQueryApiUrl%%/ui.iggrid#methods:unfixNonDataColumns) methods instead.
+			</td>
+            <td>
+![](../../images/images/negative.png)
+			</td>
+        </tr>
     </tbody>
 </table>
 
