@@ -1518,7 +1518,9 @@ The following table summarizes the purpose and functionality of the `igDialog` *
 
 		<tr>
 			<td>
-				<p>DialogClass</p>
+                <p>
+                [DialogClass](Infragistics.Web.Mvc~Infragistics.Web.Mvc.DialogModel~DialogClass.html)
+                </p>
 			</td>
 
 			<td>

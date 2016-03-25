@@ -96,13 +96,13 @@ The following steps demonstrate how to create a basic implementation of the vide
 
 3.  For jQuery implementations, define a div or video as the target element in HTML. This step is optional for ASP.NET MVC implementations as the MVC wrapper creates the containing element for you. 
 
-** Listing 4: Base DIV element defined for use with igVideoPlayer**
+	**Listing 4: Base DIV element defined for use with igVideoPlayer**
 
-    **In HTML:**
+	**In HTML:**
 
-    ```html
-    <div id=”videoPlayer” ></div>
-    ```
+	```html
+	<div id=”videoPlayer” ></div>
+	```
 
 4.  Once the above setup is complete, begin to set options including ID, Height, Width, and Title. The Height and Width options are strings which can be set as integer, pixel, or percent widths. 
 	>**Note:** For the ASP.NET MVC Views, the Render method must be called after all other options are set. 
