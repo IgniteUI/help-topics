@@ -186,21 +186,6 @@ clone
 ![](../images/images/negative.png)
 			</td>
         </tr>
-        <tr>
-            <td>
-The Infragistics theme now includes a font icon set replacing the default [jQuery UI Icons](https://api.jqueryui.com/theming/icons/)
-			</td>
-            <td>
-This change allows font-based icons to scale for high resolution displays. 
-While it should work seamlessly, there is a chance that additional custom styling might need to be updated - for example icon dimensions now scale with `font-size`.
-To continue using background image instead an `!important` rule override might be required as well as hiding the `::before` pseudo element.
-
-Note that at this point the `igRating` and `igHtmlEditor` controls retain their custom icons. Furthermore, other available themes remain unchanged.
-            </td>
-            <td>
-![](../images/images/positive.png)
-			</td>
-        </tr>
     </tbody>
 </table>
 
