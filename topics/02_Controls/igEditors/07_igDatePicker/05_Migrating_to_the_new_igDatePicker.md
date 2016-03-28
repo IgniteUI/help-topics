@@ -136,10 +136,10 @@ spinDownButton|<a name='spinDownButton'></a>Returns a reference to the spin down
 
 Event|Changes
 ---|---
-hideDropDown|Event is not supported anymore. Two new events are introduced, giving you more control over hiding the dropdown list: [dropDownListClosing](#dropDownListClosing) and [dropDownListClosed](#dropDownListClosed).
+hideDropDown|Event is not supported anymore. Two new events are introduced, giving you more control over hiding the dropdown list: [dropDownListClosed](#dropDownListClosed) and the jQuery UI datepicker `onClose` function can also be used through `datepickerOptions`.
 showDropDown|Event is not supported anymore. Two new events are introduced, giving you more control over showing the dropdown list: [dropDownListOpening](#dropDownListOpening) and [dropDownListOpened](#dropDownListOpened).
-listSelected|Event is renamed to `dropDownItemSelected` to better communicate what it does. Use `ui.owner` to obtain reference to igEditor. Use `ui.editorInput` to obtain reference to the editable input. Use `ui.list` to obtain reference to the list container. Use `ui.item` to obtain reference to the list item which is selected.
-listSelecting|Event is renamed to `dropDownItemSelecting` to better communicate what it does. Use `ui.owner` to obtain reference to igEditor. Use `ui.editorInput` to obtain reference to the editable input. Use `ui.list` to obtain reference to the list container. Use `ui.item` to obtain reference to the list item which is about to be selected.
+listSelected|Event is renamed to `itemSelected` to better communicate what it does. Use `ui.owner` to obtain reference to igEditor. Use `ui.editorInput` to obtain reference to the editable input. Use `ui.calendar ` to obtain reference to the jQuery UI date picker, used as a calendar from the igDatePicker. Use `ui.dateFromPicker` or `ui.item` to obtain reference to the item which is selected. The jQuery UI datepicker `onSelect` function can also be used through `datepickerOptions`.
+listSelecting|Event is not supported anymore.
 mouseleave|Event is renamed to `mouseout` to better communicate what it does.
 
 <a name='new_events'></a>
@@ -151,7 +151,6 @@ rendering|<a name='rendering'></a>Event which is raised before rendering of the 
 rendered|<a name='rendered'></a>Event which is raised after rendering of the editor completes.
 dropDownListOpening|<a name='dropDownListOpening'></a>Event which is raised when the drop down is opening.
 dropDownListOpened|<a name='dropDownListOpened'></a>Event which is raised when the drop down is already opened.
-dropDownListClosing|<a name='dropDownListClosing'></a>Event which is raised when the drop down is closing.
 dropDownListClosed|<a name='dropDownListClosed'></a>Event which is raised when the drop down is already closed.
 mouseout|<a name='mouseout'></a>Event which is raised on mouseleave at any part of editor including drop-down list.
 
