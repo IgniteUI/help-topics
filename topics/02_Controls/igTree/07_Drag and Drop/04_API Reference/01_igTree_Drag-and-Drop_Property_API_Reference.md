@@ -255,15 +255,15 @@ String
 
                 <ul>
                     <li>
-[default](%%jQueryApiUrl%%/ui.igtree#options:default)
+[default](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.dragAndDropMode)
 					</li>
 
                     <li>
-[move](%%jQueryApiUrl%%/ui.igtree#options:move)
+[move](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.dragAndDropMode)
 					</li>
 
                     <li>
-[copy](%%jQueryApiUrl%%/ui.igtree#options:copy)
+[copy](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.dragAndDropMode)
 					</li>
                 </ul>
 
@@ -354,7 +354,7 @@ String
 
                 <ul>
                     <li>
-[default](%%jQueryApiUrl%%/ui.igtree#options:default)
+[default](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.helper)
 					</li>
 
                     <li>
@@ -509,7 +509,7 @@ Duration of the revert animation (in milliseconds).
 
                 Setting this property to 0 disables the animation.
 
-                The [revertDuration](%%jQueryApiUrl%%/ui.igtree#options:revertDuration) setting is ignored if the [revert](%%jQueryApiUrl%%/ui.igtree#options:revert) property
+                The [revertDuration](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.revertDuration) setting is ignored if the [revert](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings.revert) property
                     is false.
 
                 This property is set inside the [DragAndDropSettings](%%jQueryApiUrl%%/ui.igtree#options:dragAndDropSettings) property.
