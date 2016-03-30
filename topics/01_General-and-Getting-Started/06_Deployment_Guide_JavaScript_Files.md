@@ -48,7 +48,7 @@ With the exception of the debug version all JavaScript files are minified.
 
 **Non-minified JavaScript files** (debug version)
 
-The non-minified files are used for debugging purposes. They expose the same folder structure as the minified files and have the same file names. The non-minified files are shipped in a `.zip` archive named `infragistics.jquery.debug.zip`.
+The non-minified files are used for debugging purposes. They expose the same folder structure as the minified files and have the same file names. The non-minified files are shipped in a `.zip` archive named `infragistics.IgniteUI.debug.zip`.
 
 **Internationalization**
 
