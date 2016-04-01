@@ -25,7 +25,7 @@ This topic contains the following sections:
 7. [Event changes](#event_changes)
 8. [New events](#new_events)
 9. [Knockout Integration changes](#ko_changes)
-10. [Knockout Backwards compitability] (#ko_backwards)
+10. [Knockout Backwards compitability](#ko_backwards)
 11. [Requirements](#requirements)
 
 <a name='general_changes'></a>
