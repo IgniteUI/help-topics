@@ -21,10 +21,11 @@ This topic contains the following sections:
 3. [New options](#new_options)
 4. [API Methods changes](#methods_changes)
 5. [New API methods](#new_methods)
-6. [Event changes](#event_changes)
-7. [New events](#new_events)
-8. [Knockout Integration changes](#ko_changes)
-9. [Requirements](#requirements)
+6. [Theming changes](#theming_changes)
+7. [Event changes](#event_changes)
+8. [New events](#new_events)
+9. [Knockout Integration changes](#ko_changes)
+10. [Requirements](#requirements)
 
 <a name='general_changes'></a>
 ### General changes
@@ -132,6 +133,23 @@ valueInput|Gets jQuery reference to the value input of the combo
 dropDownOpened|Checks whether the drop down is opened
 
 [See all API methods](%%jQueryApiUrl%%/ui.igcombo#methods)
+
+<a name='theming_changes'></a>
+### Theming changes
+
+Event|Changes
+---|---
+ui-igcombo-nulltext| Class is removed. Now, for example, if a text color needs to be applied to the combo input element, the approach below could be used.
+	
+```html
+<style>
+      input#combo::-webkit-input-placeholder {
+        color: red;
+      }
+</style>
+
+```
+> **Note:** Depending on the browser (`:-moz-placeholder`, `:-ms-input-placeholder`);
 
 <a name='event_changes'></a>
 ### Event changes
