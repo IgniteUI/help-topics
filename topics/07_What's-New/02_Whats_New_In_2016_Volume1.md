@@ -24,7 +24,6 @@ Feature | Description
 New Bootstrap 4 theme | A new Bootstrap 4 compatible theme is now shipped with Ignite UI - [view sample](%%SamplesUrl%%/themes/bootstrap4-default).
 Angular 2 Components (CTP) | Ignite UI widgets have component wrappers for Angular 2. For detailed information visit [Ignite UI Angular 2 GitHub](https://github.com/IgniteUI/igniteui-angular2) page.|
 New scalable font icons | The default Infragistics theme now uses [jQuery UI font icons](https://github.com/mkkeck/jquery-ui-iconfont) instead of image icons. |
-Modernizr 3.x support | Ignite UI uses Modernizr library to detect touch environments (see [Touch Support for Ignite UI Controls](08_Touch_Support_for_NetAdvantage_for_jQuery_Controls.html)). [Mordernizr 3.x](https://modernizr.com/) is now supported along with older Modernizr versions. |
 
 ### igTileManager
 
