@@ -28,7 +28,7 @@ This topic contains the following sections:
     -   [igCombo](#combo)
     -   [igDataChart](#data-chart)
     -   [igDialog](#dialog)
--   [igUpload](#upload)
+    -   [igUpload](#upload)
     -   [igGrid – General](#grid)
     -   [igGrid – Data Binding](#grid-data-binding)
     -   [igGrid – Unbound Columns](#grid-unbound-columns)
