@@ -601,6 +601,7 @@ Checkbox rendering not compatible with templates (row and column) | When using t
 Setting attributes to table rows with a row template not possible | In both `igGrid` and `igHierarchicalGrid`, setting attributes to table rows cannot be done possible using a row template. | ![](../images/images/positive.png)
 Events not triggered | By design, events only trigger on user interaction. Events do not trigger when the public API is used. | ![](../images/images/negative.png)
 KnockoutJS observable array functions’ limitations | The use of `unshift`, `reverse` and `sort` observable array functions results in incorrect visual appearance of the grid. | ![](../images/images/positive.png)
+igGrid does not support column keys containing special chars - [, ], \, (, ), etc. | The column keys are used in internal jQuery selectors for many of the grid's features. Currently the selectors are not explicitly escaped so any special characters in the column key would break the selectors. | ![](../images/images/positive.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
