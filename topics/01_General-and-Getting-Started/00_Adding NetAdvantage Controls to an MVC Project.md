@@ -390,27 +390,21 @@ The following steps demonstrate how to develop ASP.NET MVC application with `igT
 	        }).
 	```
 
+## Next Steps
+Now that you've had the opportunity to learn about working with Ignite UI and ASP.NET MVC, make sure to check out 
+[Developing ASP.NET MVC Applications with igGrid](igGrid-Developing-ASP-NET-MVC-Applications-with-igGrid.html) for more detail on working specifically with ASP.NET MVC.
+
 ## <a id="related"></a>Related Content
 
 ### Topics
 
 The following topics provide additional information related to this topic.
 
-- [JavaScript Files in Ignite UI](Deployment-Guide-JavaScript-Files.html): This topic is a reference to the JavaScript files required to work with the controls included in Ignite UI™.
+- [Developing ASP.NET MVC Applications with igGrid](igGrid-Developing-ASP-NET-MVC-Applications-with-igGrid.html)
 
-- [Using JavaScript Resouces in Ignite UI](Deployment-Guide-JavaScript-Resources.html): This topic explains the new organization of JavaScript resources in Ignite UI and the usage of Infragistics Loader
+- [JavaScript Files in Ignite UI](Deployment-Guide-JavaScript-Files.html)
 
-- [Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html): Instructions on setting up your application for design time, options for using CSS in production and an overview on creating or customizing a theme.
+- [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+- [Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html)
 
-- [Infragistics Content Delivery Network (CDN) for Ignite UI](Deployment-Guide-Infragistics-Content-Delivery-Network%28CDN%29.html): Instructions on using Infragistics Content Delivery Network (CDN) in Ignite UI.
-
-
-
-
-
-
- 
-
- 
-
-
+- [Infragistics Content Delivery Network (CDN) for Ignite UI](Deployment-Guide-Infragistics-Content-Delivery-Network%28CDN%29.html)
