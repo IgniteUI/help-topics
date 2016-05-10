@@ -297,6 +297,7 @@ Issue | Description | Status
 [Cell selection in iOS does not work properly](#selection-cell-ios) | In iOS, when wanting to scroll the `igGrid`, the user should first tap on a cell and then swipe in the desired direction. There is a difference when scrolling the `igGrid` under iOS and Android due to the way jQuery Mobile handles the events. | ![](../../images/images/negative.png)
 Selection works only with visible rows when virtualization is enabled | This limitation is due to the fact that invisible rows/cells do not exist in the DOM tree when virtualization is enabled. | ![](../../images/images/negative.png)
 [Incorrect selection when selecting row/cell with continuous virtualization enabled](#selection-continuous-virtualization) | When selecting row/cell of the `igGrid` while continuous virtualization is enabled, the grid scrolls down and a different row/cell is selected due to a bug in jQuery version 1.6.4. This problem appears only in this version of the jQuery library. | ![](../../images/images/positive.png)
+[Text selection is not working when Selection feature is enabled](#text-selection) | The Selection feature disables text selection inside the grid by cancelling the selectstart event and as a result the cell's text cannot be selected. | ![](../../images/images/positive.png)
 
 
 
@@ -819,6 +820,24 @@ version of the jQuery library.
 > 
 > Use version of the jQuery library different from 1.6.4.
 
+### <a id="text-selection"></a> Text selection is not working when Selection feature is enabled
+
+The Selection feature disables text selection inside the grid by cancelling the selectstart event and as a result the cell's text cannot be selected. 
+For cell selection mode the following workaround can be applied:
+
+> **Workaround** 
+> 
+> Handle the selectstart event on a closer parent than the grid and stopping propagation (so that the grid never receives it to cancel it).
+
+**In JavaScript:**
+
+```js
+$("#grid td").on("selectstart",
+function (e) {
+e.stopPropagation();
+}
+```
+This workaround cannot be applied to row selection where there's additional custom logic that ensures that the whole row stays focused while it is selected. In this case the cells cannot take the focus and since text selection depends on the focused element the cell's text cannot be selected.
 
 
 ## <a id="summaries"></a> igGridSummaries
