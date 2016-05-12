@@ -169,7 +169,7 @@ The following table summarizes the purpose and functionality of the `igDialog` c
 			</td>
 
 			<td>
-				<p>Gets or sets the initial position of the igDialog. That can be array of 2 numeric values which represent left/top coordinates. The other option is an object supported by jQuery <a href="http://jqueryui.com/demos/position/">`position()`</a> method.</p>
+				<p>Gets or sets the initial position of the igDialog. That can be array of 2 numeric values which represent left/top coordinates. The other option is an object supported by jQuery <a href="http://jqueryui.com/demos/position/" target="_blank">`position()`</a> method.</p>
 			</td>
 		</tr>
 
@@ -1518,7 +1518,9 @@ The following table summarizes the purpose and functionality of the `igDialog` *
 
 		<tr>
 			<td>
-				<p>DialogClass</p>
+                <p>
+                [DialogClass](Infragistics.Web.Mvc~Infragistics.Web.Mvc.DialogModel~DialogClass.html)
+                </p>
 			</td>
 
 			<td>

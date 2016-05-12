@@ -60,17 +60,17 @@ type|Sets type of editor.|This option is removed. You can use the corresponding 
 Option| Description
 ---|---
 allowNullValue|<a name='allowNullValue'></a>If that option is false, and editor has no value, then value is set to an empty string.
-disabled|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#textEditor').igTextEditor({ disabled: true }] })`.
+disabled|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#textEditor').igTextEditor({ disabled: true })`.
 buttonType|<a name='buttonType'></a>Sets gets visibility of spin, clear and drop-down button.
-listItemHoverDuration|<a name='listItemHoverDuration'></a>Use to set the hover/unhover animation duration of items inside the dropdown list: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], listItemHoverDuration: 400 }] })`.
+listItemHoverDuration|<a name='listItemHoverDuration'></a>Use to set the hover/unhover animation duration of items inside the dropdown list: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], listItemHoverDuration: 400 })`.
 dropDownAttachedToBody|<a name='dropDownAttachedToBody'></a>Gets sets location of drop-down list.
 dropDownAnimationDuration|<a name='dropDownAnimationDuration'></a>Gets sets show/hide drop-down list animation duration in milliseconds.
-visibleItemsCount|<a name='visibleItemsCount'></a>Use to set how many items should be shown at once: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], visibleItemsCount: 2 }] })`.
-isLimitedToListValues|<a name='isLimitedToListValues'></a>Use to set the ability to allow values only set into the list items. This validation is done only when the editor is blured, or enter key is pressed: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], isLimitedToListValues: true }] })`.
+visibleItemsCount|<a name='visibleItemsCount'></a>Use to set how many items should be shown at once: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], visibleItemsCount: 2 })`.
+isLimitedToListValues|<a name='isLimitedToListValues'></a>Use to set the ability to allow values only set into the list items. This validation is done only when the editor is blured, or enter key is pressed: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], isLimitedToListValues: true })`.
 placeHolder|<a name='placeHolder'></a>Gets sets text which appears in editor when editor has no focus and "value" in editor is null or empty string.
-revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key. If set to false clear is called: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], isLimitedToListValues: true, revertIfNotValid: false }] })`.
-preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#textEditor').igTextEditor({ preventSubmitOnEnter: true }] })`.
-dropDownOrientation|<a name='dropDownOrientation'></a>Use to set drop down opening orientation for the dorp down list when open button is clicked: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], dropDownOrientation: 'top' }] })`.
+revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key. If set to false clear is called: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], isLimitedToListValues: true, revertIfNotValid: false })`.
+preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#textEditor').igTextEditor({ preventSubmitOnEnter: true })`.
+dropDownOrientation|<a name='dropDownOrientation'></a>Use to set drop down opening orientation for the dorp down list when open button is clicked: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], dropDownOrientation: 'top' })`.
 suppressNotifications|<a name='suppressNotifications'></a>Disables default notifications for basic validation scenarios built in the editors such as required list selection, value wrapping around or spin limits.
 
 [See all options](%%jQueryApiUrl%%/ui.igtexteditor#options)
@@ -92,7 +92,7 @@ getValueByMode|Used to get value in editor by dataMode.|This method is not suppo
 hasInvalidMessage|Used to check if invalid message is displayed.|This method is removed as its` functionality is covered by the API for the igEditorNotifier.
 mainElement|Used to get reference to jquery object which is used as top/outer element of igTextEditor.|This method is renamed to `editorContainter` to better communicate what it does.
 paste|Used to paste text at location of caret.|This is renamed to `insert` and the `txt` parameter is renamed to `string` as it is a string of characters.
-remove|This was used to remove editor from its parent element, but keeps the rest of functionality|This method is not supported.
+remove|This was used to remove editor from its parent element, but keeps the rest of functionality.|This method is not supported.
 removeListItem|Used to remove item from list.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 removeListItemAt|Used to remove item from list at index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 select|Used to select text in editor. Valid parameters: `sel0`, `sel1`, `val`|`sel0` is renamed to `start` and `sel1` is renamed to `end` to prevent exchanging the two parameters. 
@@ -105,7 +105,7 @@ text|Used to get or set text in editor.|This is replaced by a getter method `dis
 
 Method|Description
 ---|---
-inputName|<a name='inputName'></a>Gets sets name attribute applied to the editor element
+inputName|<a name='inputName'></a>Gets sets name attribute applied to the editor element.
 displayValue|<a name='displayValue'></a>Returns a string with all the characters shown in the input.
 editorContainer|<a name='editorContainer'></a>Gets reference to jquery object which is used as top/outer element of igEditor.
 dropDownContainer|<a name='dropDownContainer'></a>Gets reference to jquery object which is used as container of drop-down.
@@ -131,8 +131,8 @@ Event|Changes
 ---|---
 hideDropDown|Event is not supported anymore. Two new events are introduced, giving you more control over hiding the dropdown list: [dropDownListClosing](#dropDownListClosing) and [dropDownListClosed](#dropDownListClosed).
 showDropDown|Event is not supported anymore. Two new events are introduced, giving you more control over showing the dropdown list: [dropDownListOpening](#dropDownListOpening) and [dropDownListOpened](#dropDownListOpened).
-listSelected|Event is renamed to `dropDownItemSelected` to better communicate what it does. Use `ui.owner` to obtain reference to igEditor. Use `ui.editorInput` to obtain reference to the editable input. Use `ui.list` to obtain reference to the list contaier. Use `ui.item` to obtain reference to the list item which is selected.
-listSelecting|Event is renamed to `dropDownItemSelecting` to better communicate what it does. Use `ui.owner` to obtain reference to igEditor. Use `ui.editorInput` to obtain reference to the editable input. Use `ui.list` to obtain reference to the list contaier. Use `ui.item` to obtain reference to the list item which is about to be selected.
+listSelected|Event is renamed to `dropDownItemSelected` to better communicate what it does. Use `ui.owner` to obtain reference to igEditor. Use `ui.editorInput` to obtain reference to the editable input. Use `ui.list` to obtain reference to the list container. Use `ui.item` to obtain reference to the list item which is selected.
+listSelecting|Event is renamed to `dropDownItemSelecting` to better communicate what it does. Use `ui.owner` to obtain reference to igEditor. Use `ui.editorInput` to obtain reference to the editable input. Use `ui.list` to obtain reference to the list container. Use `ui.item` to obtain reference to the list item which is about to be selected.
 mouseleave|Event is renamed to `mouseout` to better communicate what it does.
 
 <a name='new_events'></a>

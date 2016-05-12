@@ -26,7 +26,7 @@ The following table lists the topics and concepts required as a prerequisite to 
 
 -   JavaScript arrays
 -   [JSON](http://www.json.org/)
--   [Web Services](http://www.w3schools.com/webservices/ws_intro.asp)
+-   [Web Services](https://en.wikipedia.org/wiki/Web_service)
 -   [WCF Services](http://msdn.microsoft.com/en-us/library/aa480190.aspx)
 -   [ASP.NET MVC](http://www.asp.net/mvc)
 -   [Shape files](http://wiki.openstreetmap.org/wiki/Shapefiles)

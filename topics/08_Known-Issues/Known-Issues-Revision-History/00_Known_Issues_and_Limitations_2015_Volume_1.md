@@ -670,7 +670,7 @@ When the [`useSingleShadow`](%%jQueryApiUrl%%/ui.igDataChart#options:useSingleSh
                 
 
 >**Workaround:**
-If you need to apply blur to the shadow, use the Compound type of shadow (`useSingleShadow = “true”`).
+If you need to apply blur to the shadow, use the Compound type of shadow (`useSingleShadow = “false”`).
                 
             </td>
 
@@ -1065,6 +1065,17 @@ When you have continuous virtualization enabled and you unfix a column, the grid
 ![](../../images/images/negative.png)
 			</td>
         </tr>
+        <tr>  
+            <td>  
+The grid height cannot be set in percentage units.  
+            </td> 
+            <td>  
+Setting grid height in percentage units is not supported.
+            </td>  
+            <td>  
+![](../../images/images/negative.png)  
+            </td>  
+        </tr>
     </tbody>
 </table>
 
@@ -1311,8 +1322,8 @@ Go up to [Known Issues and Limitations Summary](#summary)
 
 Issue | Description | Status
 ---|---|---
-Tooltips are shown for the Geographic Contour Line series | Currently tooltips are not supported for the Geographic Contour Line series. | ![](../../images/images/negative.png) ![](../../images/images/plannedFix.png)
-Tooltips are rendered for the Geographic Symbol series on an iPad device | No tooltips appear on an iPad device when Geographic Symbol series are rendered. | ![](../../images/images/negative.png) ![](../../images/images/plannedFix.png)
+Tooltips are not shown for the Geographic Contour Line series | Currently tooltips are not supported for the Geographic Contour Line series. | ![](../../images/images/negative.png) ![](../../images/images/plannedFix.png)
+Tooltips are not rendered for the Geographic Symbol series on an iPad device | No tooltips appear on an iPad device when Geographic Symbol series are rendered. | ![](../../images/images/negative.png) ![](../../images/images/plannedFix.png)
 
 
 Go up to [Known Issues and Limitations Summary](#summary)
