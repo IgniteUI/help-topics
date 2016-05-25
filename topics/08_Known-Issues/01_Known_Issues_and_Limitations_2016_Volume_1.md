@@ -339,6 +339,27 @@ Using `new Date()` for the for the `minValue`, `maxValue` and the `value` option
 ![](../images/images/positive.png)
 			</td>
         </tr>
+       
+               <tr>
+            <td>
+Android Web View (chrome mobile and android internet browser) doesn’t fire keypress event
+			</td>
+
+            <td>
+           Some features of the editors rely on keypress event for character recognition – which makes those features unsupported on some Android browsers during auto complete/suggest (IME) input. The alternatives in the new DOM3 UI events specification needs to be finalized in order to commit to fully supporting those features on android devices.
+
+Specific options affected in igTextEditor are excludeKeys, includeKeys, toLower and toUpper. 
+This also affects continuous character restriction functionality during typing in the igMaskEditor and the derived igDateEditor. Validation before the editor accepts the value (on enter or blur) should still work as expected.
+All the numeric type editors should work as expected on android devices.
+ 
+			</td>
+
+            <td>
+![](../images/images/negative.png)
+			</td>
+        </tr>
+         
+        
     </tbody>
 </table>
 
