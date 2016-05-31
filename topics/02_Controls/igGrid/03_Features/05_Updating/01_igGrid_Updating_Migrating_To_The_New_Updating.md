@@ -24,6 +24,7 @@ This topic contains the following sections:
     -   [Behavioral changes](#behavioral-changes)
 - 	[**Option changes**](#option-changes)
 - 	[**New options**](#options-new)
+- 	[**Removed options**](#options-removed)
 - 	[**Event changes**](#event-changes)
 - 	[**Method changes**](#method-changes)
 -   [**Related Topics**](#topics)
@@ -86,6 +87,14 @@ Changes in the editors architecture and its implication on the integration betwe
 |showEditorsForHiddenColumns*| Controls if editors should be rendered for hidden columns.|
 |wrapAround|Controls if editing mode should wrap around the grid when navigating using the keyboard.|
 ### <a id="event-changes"></a> Event changes
+
+### <a id="options-removed"></a> Removed Options
+|Option| Additional information|
+---|---
+|rowEditDialogOkCancelButtonWidth| This options is now removed as the width of the buttons can be set via css. For example: .ui-igbutton{ width: 300px}|
+|rowEditDialogRowTemplate| Due to the refactored dialog edit mode this option is now removed. The new templating options, which have a similar functionality, are [dialogTemplate](%%jQueryApiUrl%%/ui.igGridUpdating#options:dialogTemplate) and [editorsTemplate](%%jQueryApiUrl%%/ui.igGridUpdating#options:editorsTemplate). For more details on the specific settings please refer to the [Configuring the Row Edit Dialog (igGrid)](iggrid-updating-roweditdialog-configuring.html) topic.
+|rowEditDialogRowTemplateID | Due to the refactored dialog edit mode this option is now removed. The new templating options, which have a similar functionality, are [dialogTemplateSelector](%%jQueryApiUrl%%/ui.igGridUpdating#options:dialogTemplateSelector) and [editorsTemplateSelector](%%jQueryApiUrl%%/ui.igGridUpdating#options:editorsTemplateSelector). For more details on the specific settings please refer to the [Configuring the Row Edit Dialog (igGrid)](iggrid-updating-roweditdialog-configuring.html) topic.
+
 
 #### Renamed Events
 
