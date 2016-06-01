@@ -665,8 +665,8 @@ Monolith shadows do not allow for the blur effect to be applied to them
 
             <td>
 When the [`useSingleShadow`](%%jQueryApiUrl%%/ui.igDataChart#options:useSingleShadow) property of the series is set to “true”, the [`shadowBlur`](%%jQueryApiUrl%%/ui.igDataChart#options:shadowBlur) setting is disregarded and no blur is applied to the shadow. This is a deliberate limitation due to a [Google® Chrome™ bug](https://code.google.com/p/chromium/issues/detail?id=100703) and extended to all major browsers thus ensuring consistent behavior across all of them. This behavior is subject to change once the aforementioned Chrome issue is resolved.
-                
 
+                
 >**Workaround:**
 If you need to apply blur to the shadow, use the Compound type of shadow (`useSingleShadow = “true”`).
                 
@@ -703,7 +703,7 @@ Controls sized incorrectly when inside an `igDialog` and their width/ height is 
 
 
  Go up to [Known Issues and Limitations Summary](#summary)
- 
+
 #### <a id="upload"></a> [igUpload](igUpload-Known-Issues.html)
 
 Issue | Description | Status
@@ -736,6 +736,8 @@ KnockoutJS observable array functions’ limitations | The use of `unshift`, `re
 The id attribute is mandatory for the DOM control placeholder| The id attribute should be set on the DOM element on which the grid is initialized. Grid use jQuery ID selector internally for faster selection.| ![](../images/images/negative.png)
 Column keys which contain spaces are not supported|Column keys are used for generating some DOM elements IDs. Having spaces in an HTML id attribute is not allowed according to the <a href="http://www.w3.org/TR/html5/dom.html#the-id-attribute" target="_blank">HTML 5 specification</a>.| ![](../images/images/negative.png)
 Header text and  sorting/filtering/gear icons are misaligned in IE8  | This is a browser limitation due to IE8 not supporting css calc(). For details refer to: http://caniuse.com/#feat=calc| ![](../images/images/negative.png)
+igGrid does not support column keys containing special chars - [, ], \, (, ), etc. | The column keys are used in internal jQuery selectors for many of the grid's features. Currently the selectors are not explicitly escaped so any special characters in the column key would break the selectors. | ![](../images/images/positive.png)
+
 Go up to [Known Issues and Limitations Summary](#summary)
 
 
@@ -996,7 +998,7 @@ Unbound Columns
 					</li>
                 </ul>
 
-                Integration of Column Fixing with these features will be implemented in a future volume release.
+Integration of Column Fixing with these features will be implemented in a future volume release.
             </td>
 
             <td>
@@ -1004,7 +1006,7 @@ Unbound Columns
                 
 
                 
-                    ![](../images/images/plannedFix.png)
+![](../images/images/plannedFix.png)
 			</td>
         </tr>
 
@@ -1051,17 +1053,17 @@ When you have continuous virtualization enabled and you unfix a column, the grid
 ![](../images/images/negative.png)
 			</td>
         </tr>
-	<tr>  
-<td>  
-The grid height cannot be set in percentage units.  
- </td>  
-        <td>  
-Setting grid height in percentage units is not supported.  
-			</td>  
-            <td>  
+	<tr>
+        <td>
+The grid height cannot be set in percentage units.
+			</td>
+            <td>
+Setting grid height in percentage units is not supported.
+			</td>
+            <td>
 ![](../images/images/negative.png)  
-	</td>  
-  </tr>  
+	</td>
+        </tr>
     </tbody>
 </table>
 
@@ -1149,6 +1151,7 @@ Row Selectors not working with column virtualization | Row Selectors are not sup
 The `igGridRowSelectors` widget requires the Selection feature enabled | The [`requireSelection`](%%jQueryApiUrl%%/ui.iggridrowselectors#options:requireSelection) option of the `igGridRowSelectors` widget is set to *true* by default and will throw an exception indicating that the Selection feature is required for using row selectors. | ![](../images/images/positive.png)
 Selecting not working correctly in IE 9 | In Internet Explorer 9, selecting using `RowSelectors` with or without checkboxes does not work correctly when the table is large enough to cause the page to have a vertical scrollbar and the user scrolls down. When the grid receives focus, Internet Explorer 9 scrolls the page back up and the selecting is either applied to the wrong row or not applied at all. | ![](../images/images/negative.png)
 The Selection feature cannot be enabled automatically | Automatically Enabling of the Selection feature does not work. The Selection widget is required for the `RowSelectors` to have full functionality. | ![](../images/images/positive.png)
+Text selection is not working when Selection feature is enabled | The Selection feature disables text selection inside the grid by cancelling the selectstart event and as a result the cell's text cannot be selected. | ![](../images/images/positive.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
