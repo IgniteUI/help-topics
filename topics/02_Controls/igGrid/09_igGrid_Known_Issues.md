@@ -54,6 +54,7 @@ The id attribute is mandatory for the DOM control placeholder|The id attribute s
 Column keys which contain spaces are not supported|Column keys are used for generating some DOM elements IDs. Having spaces in an HTML id attribute is not allowed according to the [HTML 5 specification](http://www.w3.org/TR/html5/dom.html#the-id-attribute).|![](../../images/images/negative.png)
 The contextMenu event is renamed to cellRightClick|The event is renamed to be more self-explanatory.|![](../../images/images/negative.png)
 Header text and sorting/filtering/gear icons are misaligned in IE8|This is a browser limitation due to IE8 not supporting css calc(). For details refer to: http://caniuse.com/#feat=calc| ![](../../images/images/negative.png)
+[igGrid does not support column keys containing special chars - [, ], \, (, ), etc.](#special-chars) | The column keys are used in internal jQuery selectors for many of the grid's features. Currently the selectors are not explicitly escaped so any special characters in the column key would break the selectors. | ![](../../images/images/positive.png)
 
 ## [igGrid – Data Binding](#data-binding)
 
@@ -324,6 +325,7 @@ Issue | Description | Status
 [Cell selection in iOS does not work properly](#selection-cell-ios) | In iOS, when wanting to scroll the `igGrid`, the user should first tap on a cell and then swipe in the desired direction. There is a difference when scrolling the `igGrid` under iOS and Android due to the way jQuery Mobile handles the events. | ![](../../images/images/negative.png)
 [Incorrect selection when selecting row/cell with continuous virtualization enabled](#selection-continuous-virtualization) | When selecting row/cell of the `igGrid` while continuous virtualization is enabled, the grid scrolls down and a different row/cell is selected due to a bug in jQuery version 1.6.4. This problem appears only in this version of the jQuery library. | ![](../../images/images/positive.png)
 Incorrect cell selection when selecting with mouse dragging and persistence is enabled|Selecting with mouse dragging when persistence is enabled and there are rows which cells are duplicated (the rows are visually the same) will select only the cells from the first row.|![](../../images/images/positive.png)
+[Text selection is not working when Selection feature is enabled](#text-selection) | The Selection feature disables text selection inside the grid by cancelling the selectstart event and as a result the cell's text cannot be selected. | ![](../../images/images/positive.png)
 
 
 
@@ -518,7 +520,33 @@ The use of `unshift`, `reverse` and `sort` observable array functions results in
 > 
 > In all cases, call the [`dataBind`](%%jQueryApiUrl%%/ui.iggrid#methods:dataBind) method to render the rows in the correct order.
 
+### <a id="special-chars"></a> igGrid does not support column keys containing special chars - [, ], \, (, ), etc.
+The column keys are used in internal jQuery selectors for many of the grid's features. Currently the selectors are not explicitly escaped so any special characters in the column key would break the selectors. 
 
+> **Workaround** 
+> 
+>Overwrite JQuery's find method and make sure that the selector is always escaped. 
+
+**In JavaScript:**
+
+```js
+(function (find) {
+		$.prototype.find = function () {
+			var sel = arguments[0], matches, i, newMatch;
+			if (typeof sel === 'string') {
+				matches = sel.match(/#.*[\(|\)]+/);
+				if (matches) {
+					for (i = 0; i < matches.length; i++) {
+						newMatch = matches[i].replace(/(\(|\))/g, "\\$1");
+						sel = sel.replace(matches[i], newMatch);
+					}
+					arguments[0] = sel;
+				}
+			}
+			return find.apply(this, arguments);
+		};
+})($.prototype.find);
+```
 
 ## <a id="data-binding"></a> igGrid – Data Binding
 
@@ -864,6 +892,24 @@ version of the jQuery library.
 > 
 > Use version of the jQuery library different from 1.6.4.
 
+### <a id="text-selection"></a> Text selection is not working when Selection feature is enabled
+
+The Selection feature disables text selection inside the grid by cancelling the selectstart event and as a result the cell's text cannot be selected. 
+For cell selection mode the following workaround can be applied:
+
+> **Workaround** 
+> 
+> Handle the selectstart event on a closer parent than the grid and stopping propagation (so that the grid never receives it to cancel it).
+
+**In JavaScript:**
+
+```js
+$("#grid td").on("selectstart",
+function (e) {
+e.stopPropagation();
+}
+```
+This workaround cannot be applied to row selection where there's additional custom logic that ensures that the whole row stays focused while it is selected. In this case the cells cannot take the focus and since text selection depends on the focused element the cell's text cannot be selected.
 
 ### Incorrect cell selection when selecting with mouse dragging and persistence is enabled
 
