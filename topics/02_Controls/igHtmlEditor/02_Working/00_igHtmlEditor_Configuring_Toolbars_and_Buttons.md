@@ -80,7 +80,7 @@ expanded/collapsed state.</td>
 			<td>              
             	<ul>
                   <li>toolbarSettings</li>
-                  <li>expanded</li>
+                  <li>isExpanded</li>
               	</ul>
             </td>
 		</tr>
@@ -238,7 +238,7 @@ $('#htmlEditor').igHtmlEditor({
 
 ### Overview
 
-In order to initially collapse the text toolbar, set the expanded option to false. You need to define an object literal in `toolbarSettings` and set its name option to the name of the toolbar. Then, use the expanded option to expand/collapse the toolbar.
+In order to initially collapse the text toolbar, set the isExpanded option to false. You need to define an object literal in `toolbarSettings` and set its name option to the name of the toolbar. Then, use the isExpanded option to expand/collapse the toolbar.
 
 Toolbar names:
 
@@ -256,11 +256,11 @@ The following table maps the desired configuration to property settings.
 
 In order to:|Use this property:|And set it to:
 ---|---|---
-Collapse text toolbar|expanded|false
-Collapse formatting toolbar|expanded|false
-Collapse insert object toolbar|expanded|false
-Collapse copy paste toolbar|expanded|false
-Collapse custom toolbar|expanded|false
+Collapse text toolbar|isExpanded|false
+Collapse formatting toolbar|isExpanded|false
+Collapse insert object toolbar|isExpanded|false
+Collapse copy paste toolbar|isExpanded|false
+Collapse custom toolbar|isExpanded|false
 
 
 
@@ -270,7 +270,7 @@ The screenshot below demonstrates how the `igHtmlEditor` looks as a result of th
 
 Property|Value
 ---|---
-expanded|false
+isExpanded|false
 
 
 
@@ -285,23 +285,23 @@ $('#htmlEditor').igHtmlEditor({
     toolbarSettings: [
     {
         name: "textToolbar",
-        expanded: false
+        isExpanded: false
     },
     {
         name: "formattingToolbar",
-        expanded: false
+        isExpanded: false
     },
     {
         name: "insertObjectToolbar",
-        expanded: false
+        isExpanded: false
     },
     {
         name: "copyPasteToolbar",
-        expanded: false
+        isExpanded: false
     }],
     customToolbars: [{
         name: "myCustomToolbar",
-        expanded: false,
+        isExpanded: false,
         // myCustomToolbar settings
     }]
 });
