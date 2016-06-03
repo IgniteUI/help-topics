@@ -22,7 +22,7 @@ This topic contains the following sections:
     -   [Load-on-demand details](#enable-load-on-demand-details)
     -   [Load-on-demand configuration settings](#load-on-demand-configuration-settings)
     -   [Example: basic load-on-demand](#load-on-demand-example)
-    -   [Load-on-demand property reference](#enable-load-on-demand-property-reference)
+    -   [Remote Load-on-demand](#enable-remote-load-on-demand)
 -   [**Configure load-on-demand for ASP.NET MVC**](#configure-load-on-demand-for-mvc)
     -   [Load-on-demand for ASP.NET MVC details](#configure-load-on-demand-mvc-details)
     -   [Load-on-demand for ASP.NET MVC property settings](#load-on-demand-mvc-property-settings)
@@ -62,14 +62,14 @@ The table below lists the configurable behaviors of the control.
 
 Configurable behavior | Configuration details | Configuration properties
 ---|---|---
-[Enable load-on-demand](#enable-load-on-demand) | Enabling load-on-demand instructs the tree to only create the necessary HTML elements of the tree when a node is expanded. | [loadOnDemand](%%jQueryApiUrl%%/ui.igTree#options:loadOnDemand) <br> 
+[Enable load-on-demand](#enable-load-on-demand) | Enabling load-on-demand instructs the tree to only create the necessary HTML elements of the tree when a node is expanded. | [loadOnDemand](%%jQueryApiUrl%%/ui.igTree#options:loadOnDemand) <br>  [dataSourceUrl](%%jQueryApiUrl%%/ui.igTree#options:dataSourceUrl)(optional)
 [Configure load-on-demand for ASP.NET MVC](#configure-load-on-demand-for-mvc) | By setting up an action method to return JSON in your ASP.NET MVC controller, new data can be fetched remotely when a node is expanded. | [loadOnDemand](%%jQueryApiUrl%%/ui.igTree#options:loadOnDemand) <br> [dataSourceUrl](%%jQueryApiUrl%%/ui.igTree#options:dataSourceUrl)
 [Configure load-on-demand for OData](#configure-load-on-demand-odata) | When supplying the `igTree` control with an OData data source, enabling load-on-demand instructs the `igTree` to make calls to the service to retrieve the next level of data. | [loadOnDemand](%%jQueryApiUrl%%/ui.igTree#options:loadOnDemand) <br>[dataSourceUrl](%%jQueryApiUrl%%/ui.igTree#options:dataSourceUrl) <br>[responseDataKey](%%jQueryApiUrl%%/ui.igTree#options:responseDataKey) <br>[responseDataType](%%jQueryApiUrl%%/ui.igTree#options:responseDataType)
 
 
 ## <a id="enable-load-on-demand"></a>Enable load-on-demand 
 ### <a id="enable-load-on-demand-details"></a>Load-on-demand details 
-Load-on-demand provides various performance enhancements to the behavior of the `igTree` control. By enabling load-on-demand on the client, the tree creates HTML elements on demand when necessary to display data. Nodes hidden from view initially have no HTML elements created for them. When enabling load-on-demand using the ASP.NET MVC helper, the data is retrieved on demand from the server.
+Load-on-demand provides various performance enhancements to the behavior of the `igTree` control. By enabling load-on-demand on the client, the tree creates HTML elements on demand when necessary to display data. Nodes hidden from view initially have no HTML elements created for them. When enabling load-on-demand using [`dataSourceUrl`](%%jQueryApiUrl%%/ui.igTree#options:dataSourceUrl), the data is retrieved on demand from the server.
 
 ### <a id="load-on-demand-configuration-settings"></a>Load-on-demand configuration settings 
 The table below maps the desired configurations to property settings. The properties are accessed through the `igTree`’s options.
@@ -77,7 +77,8 @@ The table below maps the desired configurations to property settings. The proper
 In order to… | Use this property: | And set it to…
 ---|---|---
 Enable load-on-demand|[loadOnDemand](%%jQueryApiUrl%%/ui.igTree#options:loadOnDemand)|true
-
+ |[dataSourceUrl](%%jQueryApiUrl%%/ui.igTree#options:dataSourceUrl) | Optionally set string Url of custom action method
+ 
 ### <a id="load-on-demand-example"></a>Example: basic load-on-demand 
 The following code demonstrates enabling load-on-demand as a result of the following settings:
 
@@ -98,10 +99,39 @@ loadOnDemand|true
 </script>
 ```
 
-### <a id="enable-load-on-demand-property-reference"></a>Load-on-demand property reference 
-For detailed information about these properties, refer to their listing in the property reference section:
+### <a id="enable-remote-load-on-demand"></a> Remote Load-on-demand
+In addition to the above configuration the [dataSourceUrl](%%jQueryApiUrl%%/ui.igTree#options:dataSourceUrl) option can also be set
+to a remote address. The `igTree` will then make async GET requests to that endpoint to populate children for expanding nodes.
+You can use the ASP.NET MVC TreeModel to handle most of the data response preparation automatically - see the [Example: load-on-demand with ASP.NET MVC](#load-on-demand-mvc-example) section.
 
--   `igTree` Options
+To handle the request manually regardless of platform you will need to process the three parameters the widget will send. 
+Those include a property `path`, `binding` information and a `depth` level of the hierarchy and can look something like the following:
+```
+<dataSourceUrl>?&path=CategoryID:8/@Products&binding=textKey:ProductName,primaryKey:ProductID,valueKey:ProductID,childDataProperty:Order_Details&depth=0
+```
+The first parameter is the `path` which consists of the primary key of the currently being expanded node and the child data field being requesting. 
+They can be split by '/' and the first part of the string can be split by ':' in order to get the name/value of the primary key. 
+The `@Property` in the second part of the string is the field (Navigation Property) we're looking for in the table.
+So the above example request would roughly translate to a basic query like this:
+```sql
+SELECT Products FROM Context WHERE CategoryID == 8
+```
+Where the actual 'Context' is determined solely from the `depth` parameter.
+In the example the '0' value would mean the first table in the hierarchy which is the "Categories" table.
+When one of its child nodes is expanded:
+```
+<dataSourceUrl>?&path=ProductID:1/@Order_Details&binding=textKey:OrderID,valueKey:OrderID&depth=1`
+```
+The `depth` would be '1' and the query should be made against the "Products" instead.
+
+> **Note:** It is recommended to use a primary key as not providing one will cause load on demand requests
+to use the node index as path instead, which is not reliable if the data source can change or is manipulated before reaching the client.
+
+Lastly, the `binding` parameter provides name/value pairs of the object properties expected by the control.
+Those are separated by ':' where the first part is the name of the respective [`bindings`](%%jQueryApiUrl%%/ui.igTree#options:bindings) option 
+and the second value matches the assigned field. 
+This can be used to both ensure all expected properties are sent to the client or transform the response to
+just the required fileds to reduce payload size.
 
 ## <a id="configure-load-on-demand-for-mvc"></a>Configure load-on-demand for ASP.NET MVC 
 ### <a id="configure-load-on-demand-mvc-details"></a>Load-on-demand for ASP.NET MVC details 
