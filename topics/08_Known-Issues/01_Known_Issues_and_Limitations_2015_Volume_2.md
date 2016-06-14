@@ -339,6 +339,23 @@ Using `new Date()` for the for the `minValue`, `maxValue` and the `value` option
 ![](../images/images/positive.png)
 			</td>
         </tr>
+
+        <tr>
+            <td>
+Exceeding Minimum and maximum values
+			</td>
+
+            <td>
+When you use the minValue and maxValue options in the igEditors, you should be aware that if yoe exceed the maxValue the editor will automatically revert the value to be ecual to the maxValue property value. If you enter value that is prior to the minValue, the editor will automatically revert it to the minValue property value. In both cases you will recieve a visual warning that explaince why the editor changes the value. 
+         <blockquote>
+**Note**: This limitation is not valid for the igTextEditor, igCheckboxEditor and igMaskEditor.
+        </blockquote>
+            </td>
+
+            <td>
+![](../images/images/negative.png)
+			</td>
+        </tr>
     </tbody>
 </table>
 
