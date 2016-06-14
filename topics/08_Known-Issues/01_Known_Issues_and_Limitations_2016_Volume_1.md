@@ -28,7 +28,7 @@ This topic contains the following sections:
     -   [igCombo](#combo)
     -   [igDataChart](#data-chart)
     -   [igDialog](#dialog)
-    -   [igUpload](#upload)
+	-   [igUpload](#upload)
     -   [igGrid – General](#grid)
     -   [igGrid – Data Binding](#grid-data-binding)
     -   [igGrid – Unbound Columns](#grid-unbound-columns)
@@ -333,7 +333,7 @@ Minimum and maximum values on date editors
 
             <td>
 Using `new Date()` for the for the `minValue`, `maxValue` and the `value` options can cause issues as it also has a time component that will be taken into account when evaluating limits (but not included and parsed from the default input format), so it's suggested to parse fixed dates or remove the time component.
-			</td>
+            </td>
 
             <td>
 ![](../images/images/positive.png)
@@ -360,6 +360,23 @@ All the numeric type editors should work as expected on android devices.
         </tr>
          
         
+
+        <tr>
+            <td>
+Exceeding Minimum and maximum values
+			</td>
+
+            <td>
+When you use the minValue and maxValue options in the igEditors, you should be aware that if yoe exceed the maxValue the editor will automatically revert the value to be ecual to the maxValue property value. If you enter value that is prior to the minValue, the editor will automatically revert it to the minValue property value. In both cases you will recieve a visual warning that explaince why the editor changes the value. 
+         <blockquote>
+**Note**: This limitation is not valid for the igTextEditor, igCheckboxEditor and igMaskEditor.
+        </blockquote>
+            </td>
+
+            <td>
+![](../images/images/negative.png)
+			</td>
+        </tr>
     </tbody>
 </table>
 
@@ -738,12 +755,12 @@ Status
         <td>RWD mode is not supported in IE8</td>
         <td>RWD is unable to determine the mode in IE8. This feature is mainly targeted at mobile compatibility so it is not supported under IE8.</td>
         <td>![](../images/images/negative.png)</td>
-        </tr>   
-	<tr>  
-	<td>RWD single column template is not supported with any of the grid features, excepts Paging.</td>  
-      <td>The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.</td>  
-      <td>![](../images/images/negative.png)</td>  
-      </tr>    	
+        </tr>     
+	<tr>
+        <td>RWD single column template is not supported with any of the grid features, excepts Paging.</td>  
+	<td>The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.</td> 
+        <td>![](../images/images/negative.png)</td>
+        </tr>  
     </tbody>
 </table>
 
@@ -850,9 +867,9 @@ When you have continuous virtualization enabled and you unfix a column, the grid
 ![](../images/images/negative.png)
 			</td>
         </tr>
-	<tr>
+		<tr>  
 <tr>
-            <td>
+        <td>  
 The [fixDataSkippedColumns](%%jQueryApiUrl%%/ui.iggrid#methods:fixDataSkippedColumns) and [unfixDataSkippedColumns](%%jQueryApiUrl%%/ui.iggrid#methods:unfixDataSkippedColumns) methods have been deprecated.
 	</td>
             <td>
@@ -875,15 +892,15 @@ This is a third party issue in Chrome and Safari. In those browsers the thead el
         </tr>
 <tr>  
 <td>  
-The grid height cannot be set in percentage units.  
- </td>  
-        <td>  
-Setting grid height in percentage units is not supported.  
-			</td>  
-            <td>  
-![](../images/images/negative.png)  
-	</td>  
-  </tr>   
+        The grid height cannot be set in percentage units.  
+        </td>  
+                <td>
+        Setting grid height in percentage units is not supported.  
+                    </td>  
+                    <td>  
+        ![](../images/images/negative.png)  
+            </td>  
+        </tr> 
 	<tr>
 		<td>
 Grid applies the focus to the unfixed part of the row when selecting is done through the row selectors.
