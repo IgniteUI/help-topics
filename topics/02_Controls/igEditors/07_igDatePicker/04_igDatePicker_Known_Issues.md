@@ -31,10 +31,6 @@
         }
     });
 	```
--  When you enter a value that exceeds the maxDate, you will recieve a warning and the date will be automatically converted to the maxDate. If you enter a date that is previous to the minDate value the date will be automatically changed to the minDate and you will see a notice showing that you entered unallowed date. 
- ![](images/igDatePicker_maxValue_exceeded.png)
-
-
 
 ## Related Links
 -   [igDatePicker Overview](igDatePicker-Overview.html)
