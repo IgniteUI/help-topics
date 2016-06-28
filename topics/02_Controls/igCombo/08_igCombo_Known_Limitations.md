@@ -30,8 +30,8 @@ Issue | Description | Status
 [In IE9 and lower versions placeHolder text is not previewed](#IE9PlaceHolder) | Input placeholders are simply ignored in IE9 and below|![](../../images/images/negative.png)
 [When virtualization is enabled, all ItemTemplate elements should have equal heights](#virtualizationAndItemTemplate) | Misalignment issues may occur with the scrollbar | ![](../../images/images/positive.png)
 [When Grouping and Virtualization are used some items are not rendered properly](#groupingWithVirtualization) | When scrolling down, some items are not properly added|![](../../images/images/negative.png)
-[When loadOnDemand is used, initialSelectedItems option won't work as expected"](#lodWithInitialSelectedItems) | Initial selection won't be reflected if the item is currently not present in the page loaded by the combo.|![](../../images/images/negative.png)
-
+[When loadOnDemand is used, initialSelectedItems option won't work as expected](#lodWithInitialSelectedItems) | Initial selection won't be reflected if the item is currently not present in the page loaded by the combo.|![](../../images/images/negative.png)
+[Autocomplete breaks the "Backspace" and "ESC" functionalities of Japanese IME composition in some browsers](#composition) | IgCombo provides composition functionality for Japanese characters, but in most browsers (excluding Firefox) there is a slight deviation from the standard behavior. |![](../../images/images/negative.png)
 
 ##Known Issues and Limitations Details
 
@@ -72,3 +72,6 @@ When scrolling up/down through the item list, while there are grouped items, som
 
 ###<a id="lodWithInitialSelectedItems"></a>When loadOnDemand is used, initialSelectedItems option won't work as expected
 Initial selection won't be reflected if the item is currently not present in the page loaded by the combo (e.g. first 16 initially loaded items). This is because the combo cannot extract the text of an item that is not yet loaded and thus cannot populate it in the combo input.
+
+###<a id="composition"></a>Autocomplete breaks the "Backspace" and "ESC" functionalities of Japanese IME composition in some browsers
+IgCombo provides composition functionality for Japanese characters, but in most browsers (excluding Firefox) there is a slight deviation from the standard behavior. When Autocomplete behavior of igCombo is activated, Japanese character is typed and needs to be confirmed, "Backspace" or "ESC" should delete the IME proposition. Instead of that, these keys confirm the IME proposition for Japanese character. The second use of the keys in this situation will work as expected.
