@@ -51,7 +51,9 @@ A brief description of each method follows:
 
 - `init` - constructor returning the provider instance on exit. The default implementation assigns passed options to the settings property.
 - `getBaseOpts` - igZoombar calls this to get a valid set of options the component its attached to is initialized with. The widget does not use the returned value itself but rather passes it for further processing back to the provider.
-- `cleanOptsForZoom` - After obtaining the base optionss igZoombar will call this method expecting it to modify them so that they can be used to render the clone component inside its own zoom UI. Example modifications are the removal of grid lines, axes, labels, tooltips, zoom actions. The width and height of the container the clone component should fit in is added by igZoombar as top level properties of the options object passed.  
+- `cleanOptsForZoom` - After obtaining the base optionss igZoombar will call this method expecting it to modify them so that they can be used to render the clone component inside its own zoom UI. Example modifications are the removal of grid lines, axes, labels, tooltips, zoom actions. The width and height of the container the clone component should fit in is added by igZoombar as top level properties of the options object passed.
+- `createClone` - Should initialize and render the clone component. igZoombar will call it with two parameters - container to initialize the clone on and the options that are first passed through the `getBaseOpts` and `cleanOptsForZoom` functions.  
+- `widgetName` - 
 
 ### <a id="assigning-a-provider"></a> Assigning a provider  
 
