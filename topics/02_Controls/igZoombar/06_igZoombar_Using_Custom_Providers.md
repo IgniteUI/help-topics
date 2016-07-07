@@ -1,9 +1,9 @@
 <!--
 |metadata|
 {
-    "fileName": "igzoombar-using-custom-providers",
-    "controlName": "igZoombar",
-    "tags": ["Charting","Data Presentation","Customization"]
+	"fileName": "igzoombar-using-custom-providers",
+	"controlName": "igZoombar",
+	"tags": ["Charting","Data Presentation","Customization"]
 }
 |metadata|
 -->
@@ -49,11 +49,14 @@ The custom provider should implement all methods available in the base class `$.
 
 A brief description of each method follows:
 
-- `init` - constructor returning the provider instance on exit. The default implementation assigns passed options to the settings property.
+- `init` - Constructor returning the provider instance on exit. The default implementation assigns passed options to the settings property.
+- `clean` - A method called just before Zoombar deletes the provider instance. Can be used to e.g. unbind jQuery events attached to the element of the zoomed component.
 - `getBaseOpts` - igZoombar calls this to get a valid set of options the component its attached to is initialized with. The widget does not use the returned value itself but rather passes it for further processing back to the provider.
 - `cleanOptsForZoom` - After obtaining the base optionss igZoombar will call this method expecting it to modify them so that they can be used to render the clone component inside its own zoom UI. Example modifications are the removal of grid lines, axes, labels, tooltips, zoom actions. The width and height of the container the clone component should fit in is added by igZoombar as top level properties of the options object passed.
 - `createClone` - Should initialize and render the clone component. igZoombar will call it with two parameters - container to initialize the clone on and the options that are first passed through the `getBaseOpts` and `cleanOptsForZoom` functions.  
-- `widgetName` - 
+- `widgetName` - Returns the name of the target component. Can be omitted in most cases.
+- `targetWidth` - Returns the width of the target component. This will be called if igZoombar's option [width](%%jQueryApiUrl%%/ui.igzoombar#options:width) is set to `auto` which makes igZoombar try to render with the same width as the component it's zooming.
+- `syncMinWidth` - Should sync the property of the target component that corresponds to the [minWidth](%%jQueryApiUrl%%/ui.igzoombar#options:minWidth) propert of igZoombar (if applicable). 
 
 ### <a id="assigning-a-provider"></a> Assigning a provider  
 
