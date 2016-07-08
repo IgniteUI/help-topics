@@ -88,7 +88,7 @@ When virtualization is enabled and mouse is over the virtual table, the followin
 The following topics provide additional information related to this topic.
 
 - [Enabling and Configuring Virtualization](igGrid-Enabling-and-Configuring-Virtualization.html): This topic explains, with code examples, how to enable and configure the Virtualization feature in the `igGrid`.
-
+- [Performance Guide](iggrid-performance-guide.html): This topic explains in more details the different grid settings that can further improve the performance.
 
 ### <a id="samples"></a> Samples
 
