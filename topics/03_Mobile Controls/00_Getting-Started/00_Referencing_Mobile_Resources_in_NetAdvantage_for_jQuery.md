@@ -379,7 +379,7 @@ The following topics provide additional information related to this topic.
 
 - [Referencing Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html): This topic explains how to manage the required resources for Ignite UI controls.
 
-- [igList Overview](igListView-Overview.html): This topic explains the features of `igListView`.
+- [igListView Overview](igListView-Overview.html): This topic explains the features of `igListView`.
 
 - [igRating Overview](igRating%28Mobile%29-Overview.html): The topic that introduces the user to the `igRating` main features and functionality.
 
