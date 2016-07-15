@@ -22,6 +22,7 @@ This topic contains the following sections:
 -   [Defining Widths and Height](#width-height)
 -   [Defining Columns](#defining-columns)
 -   [Column Formatting](#column-formatting)
+-   [Cell Text Alignment](#cell-text-alignment)
 -   [AutoGenerateColumns](#autoGenerateColumns)
 -   [Styling](#styling)
 -   [Rendering Checkboxes on a Column](#checkboxes)
@@ -184,7 +185,7 @@ Column formatting (rendering) is affected by several `igGrid` options. These are
  ```
  Raw `headerText` Value -> headerCssClass -> Header Text Value 
  ```
-
+## <a id="cell-text-alignment"></a> Cell Text Alignment
 
 By default the cell text in igGrid is left aligned. To customize the cell text alignment use [`columnCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.columnCssClass) option. Just create custom CSS classes to align the text to the desired direction and then apply them to the column using the `columnCssClass`.
 
