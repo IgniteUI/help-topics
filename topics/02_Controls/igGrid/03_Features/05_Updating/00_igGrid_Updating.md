@@ -45,7 +45,7 @@ This topic contains the following sections:
     -   [Setting the updating feature option after initialization](#setting-option)
 -   [**Keyboard Interactions**](#keyboard-interaction)
 -   [**Related Topics**](#topics)
-
+-   [**Related Samples**](#samples)
 
 ## <a id="overview"></a> Overview
 The `igGrid`™ control Updating feature includes three different interactions: updating, adding new rows, and deleting rows. By default all these features are enabled.
@@ -658,6 +658,9 @@ Following are some other topics you may find useful.
 
 -   [igGridUpdating API documentation](%%jQueryApiUrl%%/ui.igGridUpdating)
 
+## <a id="samples"></a> Related Samples 
+Following are some samples you may find useful.
+-   [Binding Real-Time Data](%%SamplesUrl%%/grid/binding-real-time-data)
  
 
  

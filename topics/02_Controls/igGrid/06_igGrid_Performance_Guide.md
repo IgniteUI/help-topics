@@ -32,6 +32,7 @@ This topic contains the following sections:
 -   [**Best practices**](#best-practices)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
+	-   [Samples](#samples)
 
 ## <a id="overview"></a> Overview
 
@@ -157,6 +158,11 @@ When a column is sorted, by default all cells in that column get a specific CSS 
 ### <a id="topics"></a> Topics
 
 -   [igGrid Overview](igGrid-Overview.html)
+
+### <a id="samples"></a> Samples
+
+-   [Performance Options](%%SamplesUrl%%/grid/grid-performance)
+
 
  
 
