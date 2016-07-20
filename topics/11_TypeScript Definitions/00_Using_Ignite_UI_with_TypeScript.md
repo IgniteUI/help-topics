@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 |metadata|
 {
     "fileName": "using-ignite-ui-with-typescipt",
@@ -55,7 +55,7 @@ When considering the required resources the same requirements and options apply 
 
 -   [jQuery](http://www.jquery.com/) 1.9 and later
 -   [jQuery UI](http://jqueryui.com/) 1.10 and later
--   [TypeScript](http://www.typescriptlang.org/) 1.0 and later
+-   [TypeScript](http://www.typescriptlang.org/) 1.4 and later
 -   [Ignite UI](http://www.igniteui.com/) 15.1 and later
 
 ### <a id="steps"></a>Steps

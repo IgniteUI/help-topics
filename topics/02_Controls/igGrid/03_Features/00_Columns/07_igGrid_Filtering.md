@@ -745,7 +745,7 @@ _Note_: There is a difference between the drop-down for selecting the column and
 
 ### <a id="samples"></a> Samples
 
--   [Filtering](%%SamplesUrl%%/grid/filtering)
+-   [Filtering](%%SamplesUrl%%/grid/simple-filtering)
 
  
 

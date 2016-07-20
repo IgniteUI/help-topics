@@ -23,6 +23,7 @@ This topic contains the following sections:
 -   [Defining Columns](#defining-columns)
 -   [Column Formatting](#column-formatting)
 -   [Cell Text Alignment](#cell-text-alignment)
+-   [Defining Mapper function for Column](#defining-mapper)
 -   [AutoGenerateColumns](#autoGenerateColumns)
 -   [Styling](#styling)
 -   [Rendering Checkboxes on a Column](#checkboxes)
@@ -221,6 +222,59 @@ $("#grid1").igGrid({
 });
 ``` 
 
+## <a id="defining-mapper"></a> Defining Mapper function for column
+
+The mapper function can be used in scenarios where you have a complex data object and you need to extract specific property from it, which will define both the display value and the value used for data operations on that column.
+For such scenarios the column dataType needs to be specified as "object" and a mapper function can be used to extract the desired data from the record. 
+The mapping is done on a data source level and will allow all data operations to be executed based on the mapped values.
+For instance if we have a complex object in each record in the data source as in the following example: 
+```js
+var data = [{ "ID": 0, "Name": "Bread", "Description": "Whole grain bread", "Category":  { "ID": 0, "Name": "Food", "Active": true }},
+{ "ID": 1, "Name": "Milk", "Description": "Low fat milk",  "Category":   { "ID": 1, "Name": "Beverages", "Active": true } },
+ ...
+ ];
+```
+and would like to display a specific property, or computed value from multiple properties of the 'Category' object( for example we'd like to map the value to contain the ID and Name sub-field values in a single string), we can do so via the `mapper` function.
+
+Example:
+
+**In Javascript:**
+```js
+	mapper: function(record){
+	//extracting data from complex object
+	return record.Category.ID + " : " + record.Category.Name;
+	}				
+
+```
+The function is defined via the [`mapper`](%%jQueryApiUrl%%/ui.iggrid#options:columns.mapper) column option as shown in Listing 2. It allows specifying values per data record to be used for all data operations related to the specific column. 
+The function accepts a single parameter, which contains the whole data record and should return a single simple value per record. 
+
+> **Note:** The function will be invoked each time the grid needs to extract data from the data source for this column. This includes any data rendering or data manupulation operations related to the column. Due to this note that if you have complex data extraction and/or calculation logic there will be a performance impact.
+
+Listing 2: Defining mapper function for a column in igGrid
+
+**In Javascript:**
+
+```js
+  $("#grid").igGrid({
+  columns: [
+                    { headerText: "", key: "ID", dataType: "number", width: "200px" },
+                    { headerText: "Name", key: "Name", dataType: "string", width: "200px" },
+                    { headerText: "Description", key: "Description", dataType: "string", width: "200px" },
+                    { headerText: "Category", key: "Category", dataType: "object", width: "200px",
+						mapper: function(record){
+								//extracting data from complex object
+								return record.Category.Name;
+							}					
+					}
+                ],
+                autoGenerateColumns: false,
+                dataSource: northwindProductsJSON,         
+               ...
+});
+
+```
+
 ## <a id="autoGenerateColumns"></a> AutoGenerateColumns
 
 Whenever `autoGenerateColumns` is set to *false*, you are required to manually define columns in the columns array. When `autoGenerateColumns` is *true* (default), you are not required to specify columns. In that case the grid will infer columns automatically from the data source (assuming there is at least one row in it) and add them to the columns collection. Header texts are automatically generated as well, and are equivalent to the keys in the data source. Setting column widths for auto-generated columns is done with `defaultColumnWidth` option, which will apply one and the same column width for all generated columns. When remote data binding is used, header texts are automatically generated only when data is available from the backend on the client. However, in most real-world scenarios it’s best to explicitly define columns.
@@ -383,9 +437,9 @@ $("#grid1").igGrid({
 ### Samples
 
 -   [Auto-Generate Columns](%%SamplesUrl%%/grid/auto-generate-columns)
+-   [Handling Complex Objects](%%SamplesUrl%%/grid/handling-complex-objects)
 -   [Column Formats](%%SamplesUrl%%/grid/column-formats)
 -   [Configure Text Alignment](%%SamplesUrl%%/grid/configure-text-alignment)
-
 
 ### Topic
 -   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)

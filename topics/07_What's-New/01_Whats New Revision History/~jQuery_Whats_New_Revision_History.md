@@ -18,6 +18,10 @@ The topics referred below provide information about what new controls and featur
 
 Detailed information regarding what new controls and features are introduced is covered in the following topics:
 
+- [What's New in 2015 Volume 2](Whats-New-In-2015-Volume2.html): This topic provides an overview of the new functionalities and components introduced with the Ignite UI™ 2015 Volume 2.
+
+- [What's New in 2015 Volume 1](Whats-New-In-2015-Volume1.html): This topic provides an overview of the new functionalities and components introduced with the Ignite UI™ 2015 Volume 1.
+
 - [What's New in 2014 Volume 2](Whats-New-In-2014-Volume2.html): This topic provides an overview of the new functionalities and components introduced with the Ignite UI™ 2014 Volume 2.
 
 - [What's New in 2014 Volume 1](Whats-New-In-2014-Volume1.html): This topic provides an overview of the new functionalities and components introduced with the Ignite UI™ 2014 Volume 1.
