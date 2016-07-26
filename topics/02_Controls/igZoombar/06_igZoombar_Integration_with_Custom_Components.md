@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# igZoombar Using Custom Providers
+# igZoombar Integration with Custom Components
 
 igZoombar can communicate to any data visualization component that supports zooming through an interface.
 
@@ -41,7 +41,7 @@ This topic contains the following sections:
 
 ## <a id="introduction"></a> Introduction
 
-igZoombar is designed with the ability to work with virtually every JavaScript component that provides zooming options. Initialization and communication is handled through an interface that can be extended to support custom controls. The interface is responsible for creating the clone widget (the smaller copy of the zoomable component that renders inside the Zoombar widget), send zoom actions to the component its attached to and receive notifications from it to update its UI when the zoom changes through the component's own UI or API. Such an interface or an extension to the basic `$.ig.igZoombarProviderDefault` (provider for short) can be initialized by the Zoombar or passed as an instance directly using the [provider](%%jQueryApiUrl%%/ui.igzoombar#options:provider) option.
+igZoombar is designed with the ability to work with virtually every JavaScript component that provides zooming options. Initialization and communication is handled through an interface that can be extended to support custom controls. The interface is responsible for creating the clone widget (the smaller copy of the zoomable component that renders inside the Zoombar widget), send zoom actions to the component it's attached to and receive notifications from it to update its UI when the zoom changes through the component's own UI or API. Such an interface or an extension to the basic `$.ig.igZoombarProviderDefault` (provider for short) can be initialized by the Zoombar or passed as an instance directly using the [provider](%%jQueryApiUrl%%/ui.igzoombar#options:provider) option.
 
 ## <a id="provider-structure"></a> Provider Structure
 
@@ -50,14 +50,14 @@ The custom provider should implement all methods available in the base class `$.
 A brief description of each method follows:
 
 - `init` - Constructor returning the provider instance on exit. The default implementation assigns passed options to the settings property.
-- `clean` - A method called just before Zoombar deletes the provider instance. Can be used to e.g. unbind jQuery events attached to the element of the zoomed component.
+- `clean` - A method called just before igZoombar deletes the provider instance. Can be used to execute necessary clean-up on the.
 - `getBaseOpts` - igZoombar calls this to get a valid set of options the component its attached to is initialized with. The widget does not use the returned value itself but rather passes it for further processing back to the provider.
-- `cleanOptsForZoom` - After obtaining the base optionss igZoombar will call this method expecting it to modify them so that they can be used to render the clone component inside its own zoom UI. Example modifications are the removal of grid lines, axes, labels, tooltips, zoom actions. The width and height of the container the clone component should fit in is added by igZoombar as top level properties of the options object passed.
+- `cleanOptsForZoom` - After obtaining the base options igZoombar will call this method expecting it to modify them so that they can be used to render the clone component inside its own zoom UI. Example modifications are the removal of grid lines, axes, labels, tooltips, zoom actions. The width and height of the container the clone component should fit in is added by igZoombar as top level properties of the options object passed.
 - `createClone` - Should initialize and render the clone component. igZoombar will call it with two parameters - container to initialize the clone on and the options that are first passed through the `getBaseOpts` and `cleanOptsForZoom` functions.  
 - `widgetName` - Returns the name of the target component. Can be omitted in most cases.
 - `targetWidth` - Returns the width of the target component. This will be called if igZoombar's option [width](%%jQueryApiUrl%%/ui.igzoombar#options:width) is set to `auto` which makes igZoombar try to render with the same width as the component it's zooming.
 - `syncMinWidth` - Should sync the property of the target component that corresponds to the [zoomWindowMinWidth](%%jQueryApiUrl%%/ui.igzoombar#options:zoomWindowMinWidth) propert of igZoombar (if applicable).
-- `setSize` - igZoombar calls this with parameters width and height to modify the clone components dimensions once its initialized and then everytime it reposponds to size changes from either API calls or RWD-related resizes.
+- `setSize` - igZoombar calls this with parameters width and height to modify the clone components dimensions once it's initialized and then everytime it reposponds to size changes from either API calls or Responsive Web Design-related resizes.
 - `targetObject` - Gets or sets the instance of the target component. igZoombar will not try to set the instance itself for custom providers. If it has to create the provider instance itself, handling the provider [providerCreated](%%jQueryApiUrl%%/ui.igzoombar#events:providerCreated) event can be used to set the target instance for future use.
 - `update` - Sets new zoom configuration to the target component. igZoombar passes two parameters - the left and right of the new zoom range as a number from 0 to 1 representing fractions of the total zoombar width.
 
@@ -77,8 +77,8 @@ The base provider has two properties in the settings object that gets assigned b
   ```
   The values should represent the fractions of the total width of the zoomed component with a number ranging from 0 to 1. Only the properties prefixed with `new` are mandatory. The rest are only used in the Zoombar's event arguments.
 
-### <a id="assigning-a-provider"></a> Assigning a provider  
-Assigning the custom provider is done through the [provider](%%jQueryApiUrl%%/ui.igzoombar#options:provider) option. The default value `auto` means igZoombar will try to find a supported component from the jQuery widgets initialized on the element set for the [target](%%jQueryApiUrl%%/ui.igzoombar#options:target) option. To use a custom provider you can set its name and let igZoombar initialize it itself (only works if it's defined in the `$.ig` namespace) or pass an instance. In the first case igZoombar will fire a [providerCreated](%%jQueryApiUrl%%/ui.igzoombar#events:providerCreated) event with the instance as part of the event arguments which allows for any user-specific code to be executed before the provider starts being utilized by the widget. In the second case no event fires and the provider is assumed ready. Only the callback function described above is assigned. 
+### <a id="assigning-a-provider"></a> Assigning a provider
+Assigning the custom provider is done through the [provider](%%jQueryApiUrl%%/ui.igzoombar#options:provider) option. By default igZoombar will create an instance of `$.ig.ZoombarProviderDataChart` to interface with an igDataChart initialized on the element passed to the [target](%%jQueryApiUrl%%/ui.igzoombar#options:target) option. To use a custom provider pass a reference to the interface class you created. When igZoombar creates an instance of it, it will fire a [providerCreated](%%jQueryApiUrl%%/ui.igzoombar#events:providerCreated) event with the instance as part of the event arguments which allows for any user-specific code to be executed before the provider starts being utilized by the widget.
 
 ## <a id="igzoombar-with-chartjs"></a> igZoombar with ChartJS
 
@@ -165,20 +165,20 @@ update: function (a, b) {
 ```
 The function will set the min and max time to be displayed in a ChartJS time axis.
 
-Finally create the chart to be zoomed, an instance of the provider and the zoombar.
+Finally create the chart to be zoomed, the zoombar and handle `providerCreated` to pass the options that are required.
 
 **In JavaScript:**
 ```js
 window.onload = function () {
-	var ctx = $("#canvas")[0].getContext("2d"), chartProvider;
+	var ctx = $("#canvas")[0].getContext("2d");
 	window.myLine = new Chart(ctx, config);
-	chartProvider = new $.ig.ZoombarProviderChartJS({
-		targetObject: window.myLine,
-		baseOptions: $.extend(true, {}, config)
-	});
 	$("#zoombar").igZoombar({
-		provider: chartProvider,
-		target: $("#canvas")
+		provider: $.ig.ZoombarProviderChartJS,
+		target: $("#canvas"),
+		providerCreated: function (evt, ui) {
+			ui.provider.settings.baseOptions = $.extend(true, {}, config);
+			ui.provider.settings.targetObject = window.myLine;
+		}
 	});
 };
 ```
