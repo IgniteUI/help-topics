@@ -61,7 +61,7 @@ By default, the validations priority is as follows:
 11. [Custom function](#custom)
 
 
-### <a id="#required"></a> Required
+### <a id="required"></a> Required
 
 The [`required`](%%jQueryApiUrl%%/ui.igValidator#options:required) rule validates that a value was entered. This applies to multiple scenarios - inputs and editors cannot have empty text as value, multiple choice targets (such as a checkbox group or an `igCombo`) are required to have at least one item selected. A single checkbox control will be required to be checked.
 
@@ -81,11 +81,11 @@ $('#editor').igValidator({
 });
 ```
 
-### <a id="#igcontrols"></a> Infragistics' editor (optional)
+### <a id="igcontrols"></a> Infragistics' editor (optional)
 
 This step is optional and is fired only when you use an `igEditor`. The validator will call `isValid` on the editor to check if its specific requirements (selection, required mask fields, etc.) are fulfilled. The `igValidator` will attempt to use an error-specific message from the editor, but if no such is available will revert to the generic "default" locale one. There are no additional options related to this functionality.
 
-### <a id="#number"></a> Number
+### <a id="number"></a> Number
 
 The [`number`](%%jQueryApiUrl%%/ui.igValidator#options:number) rule checks if the value is a valid number. The rule allows to specify decimals and thousands separators, so number formats beyond the native JavaScript parsing can be validated. Globally defined in the [defaults obejct](#defaults-obejct) separators for decimals and thousands are '.' and ',' respectively. Can be used help guide the [ValueRange](#value) validation.
 
@@ -104,7 +104,7 @@ $('#editor').igValidator({
 });
 ```
 
-### <a id="#date"></a> Date
+### <a id="date"></a> Date
 
 The [`date`](%%jQueryApiUrl%%/ui.igValidator#options:date) checks if a value (usually sting-based) can be successfully parsed as a JavaScript Date object. Can be used help guide the [ValueRange](#value) validation.
 			
@@ -124,7 +124,7 @@ $('#editor').igValidator({
 });
 ```
 
-### <a id="#length"></a> Length Range
+### <a id="length"></a> Length Range
 
 The [`lengthRange`](%%jQueryApiUrl%%/ui.igValidator#options:lengthRange) rule checks if the value length falls between a certain minimum, maximum or both. This applies equally to string values length and array values length.
 
@@ -148,7 +148,7 @@ $('#editor').igValidator({
 > **Note:** Only one of the `min` and `max` range values can be set, so shorthand configurations such as `lengthRange: [ 1 ]` or `lengthRange: [, 10]` are also valid as falsy (undefined, null or 0) values are ignored.
 
 
-### <a id="#value"></a> Value Range
+### <a id="value"></a> Value Range
 
 The [`valueRange`](%%jQueryApiUrl%%/ui.igValidator#options:valueRange) rule checks if the value is between a certain minimum, maximum or both. This applies equally to comparable values - numbers and dates. Since dates can also have a numeric representation, setting the `number` or `date` rules can help guide the validation. When working with numbers, this rule inherits the `number` rule parsing capabilities reusing either its separator options or the defaults.
 
@@ -170,7 +170,7 @@ $('#editor').igValidator({
 });
 ```
 
-### <a id="#equals"></a> EqualsTo
+### <a id="equals"></a> EqualsTo
 
 The [`equalTo`](%%jQueryApiUrl%%/ui.igValidator#options:equalTo) validation requires the value of the target and another field to be the same. The selector for the other field can point to different types of input and including elements on which other supported Ignite UI editor controls are initialized. This check is performed based on the `igValidator` triggers where the rule is defined.
 
@@ -189,7 +189,7 @@ $('#editor').igValidator({
 });
 ```
 
-### <a id="#email"></a> Email
+### <a id="email"></a> Email
 
 The [`email`](%%jQueryApiUrl%%/ui.igValidator#options:email) rule checks if the value is a valid email address. Note that the full email address specification allows for a very wide range of characters and format and is considered mostly impossible to fit in a rule and rarely applied, so the [default regular expression](#defaults-obejct) used for email validation closely follows the one defined in the [HTML5 specification for email input](https://www.w3.org/TR/html5/forms.html#e-mail-state-(type=email).
 
@@ -207,7 +207,7 @@ $('#editor').igValidator({
 });
 ```
 
-### <a id="#card"></a> Credit Card
+### <a id="card"></a> Credit Card
 
 The [`creditCard`](%%jQueryApiUrl%%/ui.igValidator#options:creditCard) verifies the given value is a valid payment card (often commonly referred to as credit card) number. This check does not depend or check on the card type as it uses the Luhn algorithm that can validate [all of the active issuers](https://en.wikipedia.org/wiki/Payment_card_number#Issuer_identification_number_.28IIN.29). Values can contain spaces and dashes and any number of digits. In case of specific type length and format requirements, those can be validated using the [Length Range](#length) in advance and [Pattern (regular expression)](#pattern) rule, which will pass after this one and .
 
@@ -227,7 +227,7 @@ $('#editor').igValidator({
 });
 ```
 
-### <a id="#pattern"></a> Pattern (regular expression)
+### <a id="pattern"></a> Pattern (regular expression)
 
 The [`pattern`](%%jQueryApiUrl%%/ui.igValidator#options:pattern) matches the value against a JavaScript regular expression. Accepts either a RegExp object or a valid string that can be passed to the `new RegExp()` constructor.
 
@@ -246,7 +246,7 @@ $('#editor').igValidator({
 });
 ```
 
-### <a id="#custom"></a> Custom function
+### <a id="custom"></a> Custom function
 
 The [`custom`](%%jQueryApiUrl%%/ui.igValidator#options:custom) rule allows to execute an external function to determine the validity of the value. The function can be provided as direct reference or by name as long as it's visible in the global scope (i.e. `window["name"]`). The function will be executed in the context of the control, so 'this' can be used as a reference the calling `igValidator` widget. Should accept value and optional field settings arguments to determine and return the state of the field as a boolean.
 
