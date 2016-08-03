@@ -66,7 +66,6 @@ The following table summarizes the properties of the categoryTooltipLayer layer.
 Property Name | Property Type | Description
 ---|---|---
 targetAxis | axis | This property specifies which axis should have an enabled category tooltip layer.
-toolTipStyle | style | This property specifies a style to apply to the displayed tooltip. By default the tooltip inherits its style from the chart, but setting this property overrides this default setting.
 useInterpolation | bool | This property specifies if the tooltip’s x position should be interpolated rather than snapping to the gridlines or the center spaces.
 toolTipPosition | categoryTooltipLayerPosition | This property specifies the location of the tooltip. It can be set to:<ul><li>Auto –A position is selected automatically</li><li>OutsideStart - Displays at the outside start of the axis</li><li>InsideStart - Displays at the inside start of the axis</li><li>InsideEnd - Displays at the inside end of the axis</li><li>OutsideEnd - Displays at the outside end of the axis</li></ul>
 
