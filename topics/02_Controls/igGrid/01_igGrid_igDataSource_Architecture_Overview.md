@@ -8,9 +8,22 @@
 |metadata|
 -->
 
+### In this topic
+
+This topic contains the following sections:
+
+-   [Overview](#overview)
+-   [The Data Source Control](#data-source-control)
+-   [The Grid Control](#grid-control)
+-   [Configuration](#configuration)
+-   [Features](#features)
+-   [Dependencies](#dependencies)
+-   [External References](#external-references)
+-   [Related Content](#related-content)
+
 # igGrid/igDataSource Architecture Overview
 
-## Overview
+## <a id="overview"></a>Overview
 
 The Ignite UI™ grid, or `igGrid`™, is a client-side grid control built entirely with JavaScript, HTML and CSS. The client-only nature of the control makes the grid agnostic to server-side technologies allowing seamless interaction with applications built in PHP, Ruby on Rails®, Java™, Python™, Microsoft® ASP.NET™ and more.
 
@@ -20,7 +33,7 @@ The grid is constructed using a modular architecture where the data source and o
 
 Features of the grid are added modularly making the associated script and style sheet files served to the client on demand and only when necessary. The grid itself does not take a dependency on any grid features.
 
-The grid extends the jQuery UI base widget and all the grid features are also implemented as jQuery widgets. The base grid code is implemented in `ig.ui.grid.framework.js` (this is the file name in the non-combined script instance). This script file contains code for the following building blocks of the grid:
+The grid extends the jQuery UI base widget and all the grid features are also implemented as jQuery widgets. The base grid code is implemented in `infragistics.ui.grid.framework.js` (this is the file name in the non-combined script instance). This script file contains code for the following building blocks of the grid:
 
 -   `igGrid` widget code
 -   Virtualization support
@@ -43,7 +56,7 @@ Figure 1: Infragistics jQuery grid architecture layout
 > **Note:** Due to the disconnected architecture surrounding the grid, you may choose to develop your own custom widgets that use the `igDataSource` control for data processing.
 
 
-## The Data Source Control
+## <a id="data-source-control"></a>The Data Source Control
 
 As discussed previously, the client-side data source serves as an intermediate layer between the client-side data bound components (such as the grid) and the actual data source. As opposed to the `igGrid` control, the data source control is implemented as a simple JavaScript class (not a widget or jQuery plugin). [John Resig](http://ejohn.org/blog/simple-javascript-inheritance/)’s simple inheritance approach is used in order to compose the control into separate classes.
 
@@ -140,14 +153,19 @@ Listing 2 depicts a more complex example that implements a data source customize
 }(jQuery));
 ```
 
-## The Grid Control
+## <a id="grid-control"></a>The Grid Control
 If the purpose of the data source control is to process and manage data, then the primary responsibility of the grid control is to act as the user interface layer for the data. Upon responding to events raised by the data source control, the grid is in charge of binding to the data and generating the required DOM elements in JavaScript to create the UI. As features are added, the grid consumes events raised by the features to further customize the UI in response to data source actions.
 
-## Configuration
+
+```js
+var igDs = $('#grid1').data('igGrid').dataSource;
+```
+
+## <a id="configuration"></a>Configuration
 
 The grid is configured by passing JSON objects as a parameters following standard jQuery practice. For more information on how to work with options parameters, refer to [Working with jQuery UI Widgets](http://wiki.jqueryui.com/w/page/12137708/How%20to%20use%20jQuery%20UI%20widgets) to get acquainted with how jQuery UI widgets are used in general.
 
-## Features
+## <a id="features"></a>Features
 
 Grid features are declared during grid initialization by providing JSON objects as grid parameters, as demonstrated in Listing 3.
 
@@ -206,7 +224,7 @@ $("#grid1").igGridSorting("sortColumn", … ) ;
 ```
 
 
-## Dependencies
+## <a id="dependencies"></a>Dependencies
 
 Since the `igGrid` control is built as jQuery widget, it is dependent on the jQuery core library as well as jQuery UI. While no specific version of jQuery UI supported, the following versions recommended for best results: 
 
@@ -217,7 +235,7 @@ Since the `igGrid` control is built as jQuery widget, it is dependent on the jQu
     
     > **Note:** If your enable jQuery templating (by setting the jQueryTemplating to true), you must include the jquery-tmpl JavaScript library in your application. You may download this library at: [https://github.com/jquery/jquery-tmpl](https://github.com/jquery/jquery-tmpl).
 
-## External References
+## <a id="external-references"></a>External References
 
 -   [jQuery UI](http://jqueryui.com/)
 -   [jQuery UI - Getting Started](http://docs.jquery.com/UI/Getting_Started)
