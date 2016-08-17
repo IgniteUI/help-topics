@@ -26,7 +26,8 @@ This topic contains the following sections:
 ## <a id="about-igScroll"></a>  About igScroll
 The igScroll is a stand-alone JQueryUI widget that allows enabling custom scrollbars with fluid scrolling functionality for desktop, hybrid and mobile environments.
 It allows you to create a consistent scrolling experience across all scrolling containers on all devices. 
-The igScroll allows specifying two differentd display types - native or custom, depending on whether you want the native scrollbars to be displayed or the custom ones.
+The igScroll allows specifying two differentd display types - native or custom, depending on whether you want the native scrollbars to be displayed or the custom ones. The option for setting this is the [scrollbarType](%%jQueryApiUrl%%/ui.iggrid#options:scrollbarType) option.
+
 For the custom scrollbars there are 3 possible states for the scrollbars:
 1) Hidden - the scrollbars are hidden when the user is not interacting in any way with the containers or the scrollbar.
 
@@ -36,7 +37,14 @@ For the custom scrollbars there are 3 possible states for the scrollbars:
    ![](images/igScroll_Thin.png)
 3) Desktop (big) scrollbars - the desktop(big) scrollbars are displayed when the user hovers over the thin scrollbars. They're bigger than the default ones and have arrows buttons and can be interacted with via the mouse.
    
-   ![](images/igScroll_Big.png)
+![](images/igScroll_Big.png)   
+   
+When the native scrollbars are enabled the default scrollbars for the specific browser and environment are displayed.
+   
+    ![](images/igScroll_Native.png)
+    
+The scrolling is still handled manually by the igScroll and can be configured via the igScroll's options.
+   
 	
 ## <a id="behavior-igScroll"></a> Behavior and Visualization
 
@@ -113,14 +121,16 @@ Initially if the DOM has the following structure:
  
  ```html
 	<body>
-		<div id="scrollContent_container" class="igscroll-container" style="width: 600px; height: 400px;">
-			<div id="scrollContent_content" class="igscroll-content">
-				<h1> Some Title </h1>
-				<p> Paragraph </p>
-				<table>...</table>
-				...
-			</div>
-		</div>
+    	<div id="scrollContent" style="width:600px; height: 400px; overflow:hidden;" class="igscroll-scrollable">
+          <div id="scrollContent_container" class="igscroll-container" style="width: 600px; height: 400px;">
+              <div id="scrollContent_content" class="igscroll-content">
+                  <h1> Some Title </h1>
+                  <p> Paragraph </p>
+                  <table>...</table>
+                  ...
+              </div>
+          </div>
+        </div>
 	</body>
  ```
 
