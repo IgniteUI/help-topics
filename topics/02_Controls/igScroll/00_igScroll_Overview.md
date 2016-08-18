@@ -224,10 +224,9 @@ First one positioned on the left:
 **In HTML:**
 
     ```html
-     <div style="width: 50%; float:left; position: relative;">
-	   <div id='scrContainerLeft' style="height:200px; overflow: hidden;">
-		<div id='scrContentLeft' style="width:800px">
-			<div>
+    <div style="width: 50%; float:left; position: relative;">
+		<div id='scrContainerLeft' style="height:200px; overflow: hidden;">	
+			<div style="width:900px; height: 400px;">
 				<p>
 				Lorem ipsum dolor sit amet, dicat maluisset urbanitas has id, consul admodum contentiones mel te. Nam paulo utinam qualisque in, lorem definiebas theophrastus mea ex. <br/>
 				Scripta sanctus definitionem qui at. Erat fugit dicit at sea, ne quo alia illud viris. <br/>
@@ -252,7 +251,6 @@ First one positioned on the left:
 				At lucilius deterruisset vis, omnis minimum complectitur ea his. <br/>
 				</p>
 			</div>
-			</div>
 		</div>
 	</div>
     ```
@@ -260,62 +258,57 @@ And one positioned on the right:
 **In HTML:**
 
     ```html
-	<div style="width: 50%; float:right; position: relative;">
-	    <div id="scrContainerRight" style="height:200px; overflow: hidden;">
-			<div id='scrContentRight' style="width:800px">
-
-				<table style="border: 1px solid #777777;">
-					<thead>
-					<th>Product ID</th>
-					<th>Name</th>
-					<th>Product Number</th>
-					<th>Make</th>
-					<th>Finished Goods</th>
-					<th>Color</th>
-					<th>Safety Stock Level</th>
-					<th>Reorder Point</th>
-					<th>Standard Const</th>
-					<th>List Price</th>
-					<th>Days to Manufacture</th>
-					<th>Modified Date</th>
-					</thead>
-					<tbody>
-						<tr><td>1</td><td>Adjustable Race</td><td>AR-5381</td><td>false</td><td>false</td><td>&nbsp;</td><td>1000</td><td>750</td><td>0</td><td>0</td><td>0</td><td>3/11/2004</td></tr>
-						<tr><td>2</td><td>Bearing Ball</td><td>BA-8327</td><td>false</td><td>false</td><td>&nbsp;</td><td>1000</td><td>750</td><td>0</td><td>0</td><td>0</td><td>3/11/2004</td></tr>
-						<tr><td>3</td><td>BB Ball Bearing</td><td>BE-2349</td><td>true</td><td>false</td><td>&nbsp;</td><td>800</td><td>600</td><td>0</td><td>0</td><td>1</td><td>3/11/2004</td></tr>
-						<tr><td>4</td><td>Headset Ball Bearings</td><td>BE-2908</td><td>false</td><td>false</td><td>&nbsp;</td><td>800</td><td>600</td><td>0</td><td>0</td><td>0</td><td>3/11/2004</td></tr>
-						<tr><td>316</td><td>Blade</td><td>BL-2036</td><td>true</td><td>false</td><td>&nbsp;</td><td>800</td><td>600</td><td>0</td><td>0</td><td>1</td><td>3/11/2004</td></tr>
-						<tr><td>317</td><td>LL Crankarm</td><td>CA-5965</td><td>false</td><td>false</td><td>Black</td><td>500</td><td>375</td><td>0</td><td>0</td><td>0</td><td>3/11/2004</td></tr>
-						<tr><td>318</td><td>ML Crankarm</td><td>CA-6738</td><td>false</td><td>false</td><td>Black</td><td>500</td><td>375</td><td>0</td><td>0</td><td>0</td><td>3/11/2004</td></tr>
-						<tr><td>319</td><td>HL Crankarm</td><td>CA-7457</td><td>false</td><td>false</td><td>Black</td><td>500</td><td>375</td><td>0</td><td>0</td><td>0</td><td>3/11/2004</td></tr>
-						<tr><td>320</td><td>Chainring Bolts</td><td>CB-2903</td><td>false</td><td>false</td><td>Silver</td><td>1000</td><td>750</td><td>0</td><td>0</td><td>0</td><td>3/11/2004</td></tr>	
-						<tr><td>321</td><td>Chainring Nut</td><td>CN-6137</td><td>false</td><td>false</td><td>Silver</td><td>1000</td><td>750</td><td>0</td><td>0</td><td>0</td><td>3/11/2004</td></tr>
-						<tr><td>322</td><td>Chainring</td><td>CR-7833</td><td>false</td><td>false</td><td>Black</td><td>1000</td><td>750</td><td>0</td><td>0</td><td>0</td><td>3/11/2004</td></tr>
-						<tr><td>323</td><td>Crown Race</td><td>CR-9981</td><td>false</td><td>false</td><td>&nbsp;</td><td>1000</td><td>750</td><td>0</td><td>0</td><td>0</td><td>3/11/2004</td></tr>				
-					</tbody>
-				</table>
+			<div style="width: 50%; float:right; position: relative;" >
+		<div id="scrContainerRight" style="height:200px;overflow: hidden;">
+			<table style="border: 1px solid #777777; width:900px;">
+				<thead>
+				<th>Product ID</th>
+				<th>Name</th>
+				<th>Product Number</th>
+				<th>Make</th>
+				<th>Finished Goods</th>
+				<th>Color</th>
+				<th>Safety Stock Level</th>
+				<th>Reorder Point</th>
+				<th>Standard Const</th>
+				<th>List Price</th>
+				<th>Days to Manufacture</th>
+				<th>Modified Date</th>
+				</thead>
+				<tbody>
+					<tr><td>1</td><td>Adjustable Race</td><td>AR-5381</td><td>false</td><td>false</td><td>&nbsp;</td><td>1000</td><td>750</td><td>0</td><td>0</td><td>0</td><td>3/11/2004</td></tr>
+					<tr><td>2</td><td>Bearing Ball</td><td>BA-8327</td><td>false</td><td>false</td><td>&nbsp;</td><td>1000</td><td>750</td><td>0</td><td>0</td><td>0</td><td>3/11/2004</td></tr>
+					<tr><td>3</td><td>BB Ball Bearing</td><td>BE-2349</td><td>true</td><td>false</td><td>&nbsp;</td><td>800</td><td>600</td><td>0</td><td>0</td><td>1</td><td>3/11/2004</td></tr>
+					<tr><td>4</td><td>Headset Ball Bearings</td><td>BE-2908</td><td>false</td><td>false</td><td>&nbsp;</td><td>800</td><td>600</td><td>0</td><td>0</td><td>0</td><td>3/11/2004</td></tr>
+					<tr><td>316</td><td>Blade</td><td>BL-2036</td><td>true</td><td>false</td><td>&nbsp;</td><td>800</td><td>600</td><td>0</td><td>0</td><td>1</td><td>3/11/2004</td></tr>
+					<tr><td>317</td><td>LL Crankarm</td><td>CA-5965</td><td>false</td><td>false</td><td>Black</td><td>500</td><td>375</td><td>0</td><td>0</td><td>0</td><td>3/11/2004</td></tr>
+					<tr><td>318</td><td>ML Crankarm</td><td>CA-6738</td><td>false</td><td>false</td><td>Black</td><td>500</td><td>375</td><td>0</td><td>0</td><td>0</td><td>3/11/2004</td></tr>
+					<tr><td>319</td><td>HL Crankarm</td><td>CA-7457</td><td>false</td><td>false</td><td>Black</td><td>500</td><td>375</td><td>0</td><td>0</td><td>0</td><td>3/11/2004</td></tr>
+					<tr><td>320</td><td>Chainring Bolts</td><td>CB-2903</td><td>false</td><td>false</td><td>Silver</td><td>1000</td><td>750</td><td>0</td><td>0</td><td>0</td><td>3/11/2004</td></tr>	
+					<tr><td>321</td><td>Chainring Nut</td><td>CN-6137</td><td>false</td><td>false</td><td>Silver</td><td>1000</td><td>750</td><td>0</td><td>0</td><td>0</td><td>3/11/2004</td></tr>
+					<tr><td>322</td><td>Chainring</td><td>CR-7833</td><td>false</td><td>false</td><td>Black</td><td>1000</td><td>750</td><td>0</td><td>0</td><td>0</td><td>3/11/2004</td></tr>
+					<tr><td>323</td><td>Crown Race</td><td>CR-9981</td><td>false</td><td>false</td><td>&nbsp;</td><td>1000</td><td>750</td><td>0</td><td>0</td><td>0</td><td>3/11/2004</td></tr>				
+				</tbody>
+			</table>
 			</div>
 		</div>
-	</div>
 	```
 3. Next intialize two igScrolls (for each scrollable conatiner) with the option [modifyDOM](%%jQueryApiUrl%%/ui.iggrid#options:modifyDOM) set to false and set the [syncedElemsV](%%jQueryApiUrl%%/ui.iggrid#options:syncedElemsV) and [syncedElemsH](%%jQueryApiUrl%%/ui.iggrid#options:syncedElemsH) properties for each of the scrolls as follows:
    
    **In Javascript:**
 	
 	    ```js
-	    $(function () {            
-			$("#scrContainerRight").igScroll({ 	
-				modifyDOM: false,
-				syncedElemsV: [$("#scrContentLeft")],
-				syncedElemsH: [$("#scrContentLeft")]
+	    $(function(){
+			$("#scrContainerRight").igScroll({
+				syncedElemsV: [$("#scrContainerLeft")],
+				syncedElemsH: [$("#scrContainerLeft")]
 			});
 			
 			$("#scrContainerLeft").igScroll({
-				modifyDOM: false,		
-				syncedElemsV: [$("#scrContentRight")],
-				syncedElemsH: [$("#scrContentRight")]
+				syncedElemsV: [$("#scrContainerRight")],
+				syncedElemsH: [$("#scrContainerRight")]
 			});
-        });
+		});
 	    ```
 
 With this both containers will have synched scrolling. If one is scrolled the other will also be scrolled with the same amount and in the same direction.
