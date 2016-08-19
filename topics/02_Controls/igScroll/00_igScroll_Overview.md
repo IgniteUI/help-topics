@@ -135,7 +135,34 @@ Initially if the DOM has the following structure:
  ```
 
  The DOM manipulation done by the igScroll can be disabled by setting the [modifyDOM]() property to false. 
- In that case you should build a similar DOM hierarchy in order for the igScroll to work as expected and initialize the igScrol on the content element.
+ In that case you should build a similar DOM hierarchy in order for the igScroll to work as expected and initialize the igScrol on the content element, for example:
+**In HTML:**
+
+ ```html
+	<body>
+	<div>
+	   <div id='containerWrapper'>
+			<div id='scrContainer' style="height:200px; overflow: hidden;">
+				<div id='scrollContent'>
+					  <h1> Some Title </h1>
+					  <p> Paragraph </p>
+					  <table>...</table>
+					  ...
+				</div>
+			</div>
+		</div>
+	</body>
+ ```
+ In this case the igScroll should be initialized on the "scrContainer" element, for example:
+ 	**In Javascript:**
+	
+	```js
+	$(function () {
+        $("#scrContainer").igScroll({
+        modifyDOM: false
+        });
+    });
+	```
  
 ## <a id="adding-igScroll"></a> Adding igScroll to a Web Page
 
@@ -297,7 +324,7 @@ And one positioned on the right:
    
    **In Javascript:**
 	
-	    ```js
+	  ```js
 	    $(function(){
 			$("#scrContainerRight").igScroll({
 				syncedElemsV: [$("#scrContainerLeft")],
@@ -309,13 +336,15 @@ And one positioned on the right:
 				syncedElemsH: [$("#scrContainerRight")]
 			});
 		});
-	    ```
+	  ```
 
 With this both containers will have synched scrolling. If one is scrolled the other will also be scrolled with the same amount and in the same direction.
 
 4.  Observe the result in your browser.
 
 	 ![](images/igScroll_Multiple_Containers.png)
+     
+     > **Note**: When implementing this with [`modifyDOM`](%%jQueryApiUrl%%/ui.iggrid#options:modifyDOM) set to false the target elements for the `syncedElemsV`/`syncedElemsH` options should be the container elements, not the container wrapper element. Refer to the example DOM structure with `modifyDOM`:false in the [DOM structure](#structure-igScroll) section of this topic.
 	
 ## <a id="keyaboard-interactions"></a> Keyboard Interactions
 
