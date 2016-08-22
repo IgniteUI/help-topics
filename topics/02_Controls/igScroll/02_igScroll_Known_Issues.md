@@ -36,7 +36,7 @@ The following table summarizes the known issues and limitations of the `igScroll
 Issue | Description | Status
 ------|-------------|-------
 [When initailizing igScroll on a initially hidden element scrolling does not work.](#initially-hidden) | When initializing the igScroll on a hidden element, after showing the element the scrollbars don't show and scrolling does not work| ![](../../images/images/positive.png)
-
+Keyboard Interaction don't work if the igScroll target element does not have tabIndex attribute set and is not focusable. | Keyboard interactions are only availble when the igScroll element is focused. If the element is not focusable (has no tabIndex attribute) no keyboard interactions can be invoked. | ![](../../images/images/negative.png)
 
 ## <a id="scroll-general"></a> igScroll – General
 

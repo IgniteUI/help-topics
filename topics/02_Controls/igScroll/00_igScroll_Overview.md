@@ -348,7 +348,9 @@ With this both containers will have synched scrolling. If one is scrolled the ot
 	
 ## <a id="keyaboard-interactions"></a> Keyboard Interactions
 
-While hovering over the content or scrollbar: 
+> **Note**: In order for the keyboard interactions to work the igScroll's main target element should have the tabIndex attribute set in order to be focusable.
+
+While focus is on the scrollbar element: 
 
 Arrow UP/DOWN: Scrolls up/down.
 
