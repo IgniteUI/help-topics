@@ -45,6 +45,7 @@
 -   [igUpload](igUpload-igUpload.html)
 -   [igVideoPlayer](VideoPlayer.html)
 -   [igPopover](igPopover-LandingPage.html)
+-   [igScroll](igScroll.html)
 
  
 
