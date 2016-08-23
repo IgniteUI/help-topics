@@ -1,7 +1,7 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "igscroll-overview",
+    "fileName": "igscroll-configuring",
     "controlName": "igScroll",
     "tags": ["Configuration","igScroll"]
 }
