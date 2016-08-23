@@ -180,7 +180,6 @@ ColumnMoving
             <td>
 In code, you can allow moving of column groups or individual columns by using their key property. <br />
 
-Users can move column groups as well as individual columns. <br />
 
 Moving indicators are rendered for every header cell (TH) so users can move column groups or individual columns in one click. Column groups are displayed in the column dialog and users can move column groups as well as individual columns.
 			</td>
