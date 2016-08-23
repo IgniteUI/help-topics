@@ -69,6 +69,7 @@ This topic contains the following sections:
     -   [Popup (mobile)](#popup-mobile)
     -   [SelectMenu (mobile)](#selectmenu-mobile)
     -   [Slider (mobile)](#slider-mobile)
+	-   [igScroll](#scroll)
 
 
 
@@ -1336,5 +1337,14 @@ Go up to [Known Issues and Limitations Summary](#summary)
 Issue | Description | Status
 ---|---|---
 Mobile Slider does not slide on Windows Phone 7 | Because Windows® Phone 7 does not support standard touch events, the slider is read-only. | ![](../images/images/positive.png)
+
+Go up to [Known Issues and Limitations Summary](#summary)
+
+###  <a id="scroll"></a>  [igScroll](igScroll-Known-Issues.html)
+
+Issue | Description | Status
+---|---|---
+When initailizing igScroll on a initially hidden element scrolling does not work.| When initializing the igScroll on a hidden element, after showing the element the scrollbars don't show and scrolling does not work| ![](../../images/images/positive.png)
+Keyboard Interaction don't work if the igScroll target element does not have tabIndex attribute set and is not focusable. | Keyboard interactions are only availble when the igScroll element is focused. If the element is not focusable (has no tabIndex attribute) no keyboard interactions can be invoked. | ![](../../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
