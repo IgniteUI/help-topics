@@ -20,6 +20,11 @@ This topic contains the following sections:
 
 - [Default configuration](#defaults)
 - [Configuration Summary](#summary)
+	- [Scrolling multiple containers at once vertically](#syncVertically)
+	- [Scrolling multiple containers at once horizontally](#syncHorizontally)
+	- [Set custom horizontal scrollbar](#customHorizontalScr)
+	- [Set custom vertical scrollbar](#customVerticalScr)
+	- [Set custom vertical scrollbar](#customVerticalScr)
 - [Related Content](#related)
 
 ## <a id="defaults"></a> Default configuration
