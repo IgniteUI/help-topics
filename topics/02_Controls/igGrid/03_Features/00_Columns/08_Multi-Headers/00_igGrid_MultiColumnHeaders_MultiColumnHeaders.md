@@ -180,7 +180,7 @@ ColumnMoving
             <td>
 In code, you can allow moving of column groups or individual columns by using their key property. <br />
 
-Users can move column groups as well as individual columns. <br />
+Users can move both column group or individual column, but the moving is only within the same level (user can re-arrange only sibling columns). For example an individual column cannot be moved between column groups or in a parent group. <br />
 
 Moving indicators are rendered for every header cell (TH) so users can move column groups or individual columns in one click. Column groups are displayed in the column dialog and users can move column groups as well as individual columns.
 			</td>
