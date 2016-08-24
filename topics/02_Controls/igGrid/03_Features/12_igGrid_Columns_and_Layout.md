@@ -172,13 +172,36 @@ Column formatting (rendering) is affected by several `igGrid` options. These are
  ```
 
 - [`columnCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.columnCssClass) - is a space-separated list of CSS classes that are applied to the TD element of the cell.  
- [`columnCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.columnCssClass) and [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template) options do not operate at the same time. When defined, [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template) option is considered with priority and [`columnCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.columnCssClass) is not applied. 
+ When the [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template) option defines the rendering of the TD element the [`columnCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.columnCssClass) option is ignored. 
  Here is the flow of column rendering when [`columnCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.columnCssClass) is used:
  
  ```
- Raw Value -> (autoFormat|format|formatter)* -> columnCssClass|template* -> Cell Value 
+ Raw Value -> (autoFormat|format|formatter)* -> columnCssClass -> template* -> Cell Value 
  * - optional setting
  ```
+
+Example:
+```js
+$("#grid1").igGrid({
+    autoGenerateColumns: false,
+    columns: [ {
+            headerText: "Product Number", 
+            key: "ProductNumber",
+            dataType: "number",
+            // NOTE: columnCssClass will be applied
+            columnCssClass: "align-right",
+            template: "<a href='/product/${ProductNumber}'>${ProductNumber}</a>"
+        }, {
+            headerText: "Modified Date",  
+            key: "ModifiedDate",  
+            dataType: "date",
+            // NOTE: columnCssClass will NOT be applied
+            columnCssClass: "align-center",
+            template: "<td style='font-weight: bold'>${ModifiedDate}</td>"
+        }
+    ]
+});
+```
 
 - [`headerCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.headerCssClass) - is a space-separated list of CSS classes that are applied to the TH element of the column header text configured by the [`headerText`](%%jQueryApiUrl%%/ui.iggrid#options:columns.headerText) option.   
  Here is the flow of column rendering when [`headerCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.headerCssClass) is used:
@@ -186,6 +209,7 @@ Column formatting (rendering) is affected by several `igGrid` options. These are
  ```
  Raw `headerText` Value -> headerCssClass -> Header Text Value 
  ```
+
 ## <a id="cell-text-alignment"></a> Cell Text Alignment
 
 By default the cell text in igGrid is left aligned. To customize the cell text alignment use [`columnCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.columnCssClass) option. Just create custom CSS classes to align the text to the desired direction and then apply them to the column using the `columnCssClass`.
