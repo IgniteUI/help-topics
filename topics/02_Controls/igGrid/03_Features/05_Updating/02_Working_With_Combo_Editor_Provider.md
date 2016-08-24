@@ -3,7 +3,7 @@
 {
     "fileName": "working-with-combo-editor-provider",
     "controlName": "igGrid",
-    "tags": ["Editing","Grids","Migration"]
+    "tags": ["Editing","Grids","Migration", "Editor Provider Combo"]
 }
 |metadata|
 -->
@@ -22,6 +22,8 @@ This topic contains the following sections:
 - 	[**Configuring the Combo editor provider in JavaScript**](#config)
 	- [**Basic Configuration**](#basicConfig)
 	- [**Configuring igCombo editor with multiple selection**](#multiSelectionConfig)
+- 	[**Related Topics**](#topics)
+- 	[**Related Samples**](#samples)
 
 ## <a id="config"></a> Configuring the Combo editor provider in JavaScript
 
@@ -85,16 +87,16 @@ This procedure guides you through the process of configuring an igCombo editor i
 	```
 
 	The basic options that need to be defined for the combo are the following:
-	-	[datasource](%%jQueryApiUrl%%/ui.igCombo#options:datasource) – the data source which the combo will use to create the items in the drop-down list.
+	-	[dataSource](%%jQueryApiUrl%%/ui.igCombo#options:dataSource) – the data source which the combo will use to create the items in the drop-down list.
 	-	[valueKey](%%jQueryApiUrl%%/ui.igCombo#options:valueKey) – the field in the data source, which will be used as the actual value of the drop-down item.
 	-	[textKey](%%jQueryApiUrl%%/ui.igCombo#options:textKey) (optional – if not set will be the same the valueKey) - the field in the data source, which will be used as the display value of the drop-down item.
 	-	[mode](%%jQueryApiUrl%%/ui.igCombo#options:mode) (optional – if not set defaults to “editable”)
 
-	The **textKey** and **valueKey** options correspond to the displayed and actual value of the items of the combo list. When both are set to use the same data field the displayed and actual value that will be saved in the grid data source will be the same.
+	The `textKey` and `valueKey` options correspond to the displayed and actual value of the items of the combo list. When both are set to use the same data field the displayed and actual value that will be saved in the grid data source will be the same.
 
-	However if the **textKey** points to a different field than the **valueKey** it’s important to note that the actual value saved in the data source after editing will be the value of the selected item. The text will be disregarded as it serves only a display purpose. 
+	However if the `textKey` points to a different field than the `valueKey` it’s important to note that the actual value saved in the data source after editing will be the value of the selected item. The text will be disregarded as it serves only a display purpose. 
 
-	If you’d like the text of the associated drop-down items to be displayed in the grid cells instead of the value an additional formatter function will need to be defined for the column in order for the value to be associated with the corresponding display text. A similar example can be found in the following related sample: [Grid with Combo Editor](%%NewSamplesUrl%%/combo/grid-with-combo-editor)
+	If you’d like the text of the associated drop-down items to be displayed in the grid cells instead of the value an additional [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) function will need to be defined for the column in order for the value to be associated with the corresponding display text. A similar example can be found in the following related sample: [Grid with Combo Editor](%%NewSamplesUrl%%/combo/grid-with-combo-editor)
 
 	**In JavaScript**
 	```
@@ -170,7 +172,7 @@ The following proceedure guides you through the process of creating a custom pro
 	});
 	```
 
-	In the above configuration the textKey and valueKey are set to use the same field and therefore there’s no need for specifying a formatter function.
+	In the above configuration the textKey and valueKey are set to use the same field and therefore there’s no need for specifying a [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) function.
 	Also note that multiselection with checkboxes is enabled.
 
 2. Create a custom editor provider that extends the default EditorProviderCombo and overwrite its default getValue and setValue methods.
@@ -212,7 +214,6 @@ The following proceedure guides you through the process of creating a custom pro
 
 	![](images/igGrid_Combo_Editor_Provider_MultiSelection_2.png)
 
-
 ## <a id="topics"></a> Related Topics 
 Following are some other topics you may find useful.
 
@@ -221,7 +222,7 @@ Following are some other topics you may find useful.
 -   [igGridUpdating API documentation](%%jQueryApiUrl%%/ui.igGridUpdating)
 -   [igCombo API documentation](%%jQueryApiUrl%%/ui.igCombo)
  
+## <a id="samples"></a> Related Samples 
 
- 
-
-
+-	[Basic Editing](%%NewSamplesUrl%%/grid/basic-editing)
+- 	[Grid with Combo Editor](%%NewSamplesUrl%%/combo/grid-with-combo-editor)

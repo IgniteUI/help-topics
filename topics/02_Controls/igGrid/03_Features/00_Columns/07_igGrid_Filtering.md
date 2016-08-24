@@ -237,7 +237,7 @@ allowFiltering | Whether filtering is enabled or disabled on the respective colu
 condition | The default filtering condition that will be used for the column.
 
 
-Listing 9: Example usage of columnSettings
+Listing 7: Example usage of columnSettings
 
 
 **In Javascript:**
@@ -262,16 +262,16 @@ Listing 9: Example usage of columnSettings
 
 ## <a id="client-side-events"></a> Client-Side events
 
-You can bind to Filtering client-side events in two ways, which are described in Listing 10 and Listing 11, respectively. If you would like to bind using the approach described in Listing 10, you must use the jQuery `delegate()` method instead of bind if filtering is not yet instantiated.
+You can bind to Filtering client-side events in two ways, which are described in Listing 8 and Listing 9, respectively. If you would like to bind using the approach described in Listing 8, you must use the jQuery `delegate()` method instead of `bind` if filtering is not yet instantiated.
 
-Listing 10: Binding to client-side events from anywhere in your application
+Listing 8: Binding to client-side events from anywhere in your application
 
 
 **In Javascript:**
 
     $("#grid1").bind("iggridfilteringdatafiltered", handler);
 
-Listing 11: Binding to client-side events by specifying the event name as an option when you initialize the filtering feature (case sensitive)
+Listing 9: Binding to client-side events by specifying the event name as an option when you initialize the filtering feature (case sensitive)
 
 **In Javascript:**
 
@@ -530,9 +530,9 @@ filter(expressions, updateUI)
 ```
 
 
-The expressions argument is an array of expression objects. Listing 12 gives an overview of the structure of each expression object. The updateUI argument is optional and it can be set explicitly to false so that the UI is not updated when the grid is filtered programmatically.
+The expressions argument is an array of expression objects. Listing 10 gives an overview of the structure of each expression object. The updateUI argument is optional and it can be set explicitly to false so that the UI is not updated when the grid is filtered programmatically.
 
-Listing 12: Filtering expression object structure
+Listing 10: Filtering expression object structure
 
 **In Javascript:**
 
@@ -540,9 +540,9 @@ Listing 12: Filtering expression object structure
 {expr: <filter expression string>, cond: <filtering condition>, fieldName: <name of column key>}
 ```
 
-Listing 7 and Listing 8 show examples of using the filter() function off the `igGridFiltering` widget.
+Listing 11 and Listing 12 show examples of using the filter() function off the `igGridFiltering` widget.
 
-Listing 7: Filter by ProductID = 1
+Listing 11: Filter by ProductID = 1
 
 **In Javascript:**
 
@@ -550,41 +550,76 @@ Listing 7: Filter by ProductID = 1
 $("#grid1").igGridFiltering('filter', ([{ fieldName: "ProductID", expr: 1, cond: "equals"}]));
 ```
 
-Listing 8: Filter by ProductID = 1 and ProductName startsWith “a”:
+Listing 12: Filter by ProductID = 1 and ProductName startsWith “a”:
 
 **In Javascript:**
 ```js
 $("#grid1").igGridFiltering('filter', ([{ fieldName: "ProductID", expr: 1, cond: "equals"}, {fieldName: "ProductName", expr: "a", cond: "startsWith"} ]));
 ```
 
-The following conditions are available to perform filtering on the grid:
 
--   startsWith
--   endsWith
--   greaterThan
--   lessThan
--   equals
--   doesNotEqual
--   contains
--   greaterThanOrEqualTo
--   lessThanOrEqualTo
--   null
--   notNull
--   empty
--   notEmpty
--   on
--   notOn
--   today
--   yesterday
--   lastMonth
--   nextMonth
--   thisMonth
--   last year
--   this year
--   tomorrow
--   true
--   false
+Listing 13: Retrieving the applied filtering expressions
 
+**In Javascript:**
+
+```js
+var expressions = $('#grid1').data('igGrid').dataSource.settings.filtering.expressions;
+```
+
+The following conditions (grouped by data type) are available to perform filtering on the grid:
+
+- String
+  -   startsWith
+  -   endsWith
+  -   contains
+  -   doesNotContain
+  -   equals
+  -   doesNotEqual
+  -   null
+  -   notNull
+  -   empty
+  -   notEmpty
+- Number
+  -   equals
+  -   doesNotEqual
+  -   greaterThan
+  -   lessThan
+  -   greaterThanOrEqualTo
+  -   lessThanOrEqualTo
+  -   null
+  -   notNull
+  -   empty
+  -   notEmpty
+- Boolean
+  -   true
+  -   false
+  -   null
+  -   notNull
+  -   empty
+  -   notEmpty
+- Date
+  -   on
+  -   notOn
+  -   after
+  -   before
+  -   today
+  -   yesterday
+  -   thisMonth
+  -   lastMonth
+  -   nextMonth
+  -   thisYear
+  -   lastYear
+  -   nextYear
+  -   null
+  -   notNull
+  -   empty
+  -   notEmpty
+- Object
+  -   null
+  -   notNull
+  -   empty
+  -   notEmpty
+  
 ## <a id="properties"></a> List of Filtering Options (Properties)
 
 Option and default value shows in brackets

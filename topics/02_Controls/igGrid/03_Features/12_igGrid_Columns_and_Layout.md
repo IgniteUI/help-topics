@@ -22,6 +22,7 @@ This topic contains the following sections:
 -   [Defining Widths and Height](#width-height)
 -   [Defining Columns](#defining-columns)
 -   [Column Formatting](#column-formatting)
+-   [Cell Text Alignment](#cell-text-alignment)
 -   [Defining Mapper function for Column](#defining-mapper)
 -   [AutoGenerateColumns](#autoGenerateColumns)
 -   [Styling](#styling)
@@ -144,7 +145,7 @@ Column formatting (rendering) is affected by several `igGrid` options. These are
  var formattedValue = $.ig.formatter(1000000); //formats the number according to the current regional settings.
  ```
 
- [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) and [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) options does not operate at the same time. When defined, [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) function is considered with priority and [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) is not used. However value from the [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) function is further decorated with a [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template).
+ [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) and [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) options do not operate at the same time. When defined, [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) function is considered with priority and [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) is not used. However value from the [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) function is further decorated with a [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template).
 
  Here is the flow of column rendering when formatter is used:
  ```
@@ -166,9 +167,60 @@ Column formatting (rendering) is affected by several `igGrid` options. These are
  Here is the flow of column rendering when [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template) is used:
  
  ```
- Raw Value -> (autoFormat|formatter|format)* -> template -> Cell Value 
+ Raw Value -> (autoFormat|format|formatter)* -> template -> Cell Value 
  * - optional setting
  ```
+
+- [`columnCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.columnCssClass) - is a space-separated list of CSS classes that are applied to the TD element of the cell.  
+ [`columnCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.columnCssClass) and [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template) options do not operate at the same time. When defined, [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template) option is considered with priority and [`columnCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.columnCssClass) is not applied. 
+ Here is the flow of column rendering when [`columnCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.columnCssClass) is used:
+ 
+ ```
+ Raw Value -> (autoFormat|format|formatter)* -> columnCssClass|template* -> Cell Value 
+ * - optional setting
+ ```
+
+- [`headerCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.headerCssClass) - is a space-separated list of CSS classes that are applied to the TH element of the column header text configured by the [`headerText`](%%jQueryApiUrl%%/ui.iggrid#options:columns.headerText) option.   
+ Here is the flow of column rendering when [`headerCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.headerCssClass) is used:
+ 
+ ```
+ Raw `headerText` Value -> headerCssClass -> Header Text Value 
+ ```
+## <a id="cell-text-alignment"></a> Cell Text Alignment
+
+By default the cell text in igGrid is left aligned. To customize the cell text alignment use [`columnCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.columnCssClass) option. Just create custom CSS classes to align the text to the desired direction and then apply them to the column using the `columnCssClass`.
+
+**In Html**
+```html
+<style>
+    .align-right {
+        text-align: right;
+    }
+    .align-center {
+        text-align: center;
+    }
+</style>
+```
+
+**In Javascript:**
+
+```js
+$("#grid1").igGrid({
+    autoGenerateColumns: false,
+    columns: [ {
+            headerText: "Product Number", 
+            key: "ProductNumber",
+            dataType: "number",
+            columnCssClass: "align-right"
+        }, {
+            headerText: "Modified Date",  
+            key: "ModifiedDate",  
+            dataType: "date",
+            columnCssClass: "align-center"
+        }
+    ]
+});
+``` 
 
 ## <a id="defining-mapper"></a> Defining Mapper function for column
 
@@ -222,34 +274,6 @@ Listing 2: Defining mapper function for a column in igGrid
 });
 
 ```
-
- **In Javascript:**
- ```js
- var formattedValue = $.ig.formatter(new Date()); //formats the date according to the current regional settings.
- var formattedValue = $.ig.formatter(1000000); //formats the number according to the current regional settings.
- ```
- `formatter` and `format` options does not operate at the same time. When defined, `formatter` function is considered with priority and `format` is not used. However value from the `formatter` function is further decorated with a `template`.
-
- Here is the flow of column rendering when formatter is used:
- ```
- Raw Value -> formatter -> (template)* -> Cell Value
- * - optional setting
- ```
-
--  `format` - is a string identifying a format patterns. Internally `format` option uses the `$.ig.formatter(rawValue, dataType, formatPattern)` function. When set, `format` overrides the setting of the `autoFormat` option and also the default regional settings.
-
- Here is the flow of column rendering when `format` is used:
- ```
- Raw Value -> format -> (template)* -> Cell Value 
- * - optional setting
- ```
-- `template` - is a templated string (templating engine used is defined in the `templatingEngine` option).  
- 
- Here is the flow of column rendering when `template` is used:
- ```
- Raw Value -> (autoFormat|formatter|format)* -> template -> Cell Value 
- * - optional setting
- ```
 
 ## <a id="autoGenerateColumns"></a> AutoGenerateColumns
 
@@ -338,13 +362,11 @@ $("#grid1").igGrid({
     columns: [ {
             // note: if primaryKey is set and data in primary column contains numbers,
             // then the dataType: "number" is required, otherwise, dataSource may misbehave
-            headerText: "(Grid_CheckboxColumn_ColumnHeader_ProductID)", 
-            key(Grid_CheckboxColumn_ColumnHeader_ProductNumber)", 
+            headerText: "Product Number", 
             key: "ProductNumber",
             dataType: "string"
         }, {
-            headerText: "(Grid_CheckboxColumn_ColumnHeader_MakeFlag)", 
-            key(Grid_CheckboxColumn_ColumnHeader_ModifiedDate)", 
+            headerText: "Modified Date", 
             key: "ModifiedDate",  
             dataType: "date"
         }
@@ -361,10 +383,10 @@ $("#grid1").igGrid({
             // get cell’s checkbox value when it is changed
             if (ui.update) {
                 if (ui.columnKey === 'MakeFlag' ) {
-                    logEvent("editCellEnded (Grid_EventFired) (Grid_ColumnKey) = " + 
-                    ui.columnKey + "; (Grid_RowIndex) = " + 
-                    ui.rowID + "; (Grid_CellValue) = " + 
-                    ui.value + "; $(Grid_Update) = " + 
+                    logEvent("editCellEnded event fired Column Key = " + 
+                    ui.columnKey + "; Row ID = " + 
+                    ui.rowID + "; Cell Value = " + 
+                    ui.value + "; Update = " + 
                     ui.update);
                 }
             }
@@ -393,10 +415,10 @@ $("#grid1").igGrid({
 ```csharp
 <%= Html.Infragistics().Grid(Model).ID("grid1").AutoGenerateColumns(false).PrimaryKey("ProductID").RenderCheckboxes(true).Columns(column =>
     {
-        column.For(x => x.ProductID).HeaderText(this.GetGlobalResourceObject("Grid", "PRODUCT_ID").ToString()).DataType("number");
-        column.For(x => x.ProductNumber).HeaderText(this.GetGlobalResourceObject("Grid", "PRODUCT_NUMBER").ToString()).DataType("string");
-        column.For(x => x.MakeFlag).HeaderText(this.GetGlobalResourceObject("Grid", "MAKE_FLAG").ToString()).DataType("bool");
-        column.For(x => x.ModifiedDate).HeaderText(this.GetGlobalResourceObject("Grid", "MODIFIED_DATE").ToString()).DataType("date");
+        column.For(x => x.ProductID).HeaderText("Product ID").DataType("number");
+        column.For(x => x.ProductNumber).HeaderText("Product Number").DataType("string");
+        column.For(x => x.MakeFlag).HeaderText("Make Flag").DataType("bool");
+        column.For(x => x.ModifiedDate).HeaderText("Modified Date").DataType("date");
         }).Features(features => {
             features.Selection().Mode(SelectionMode.Row);
             features.Updating().EnableAddRow(false).EditMode(GridEditMode.Row).EnableDeleteRow(false).ColumnSettings(columnSettings => {
@@ -416,6 +438,8 @@ $("#grid1").igGrid({
 
 -   [Auto-Generate Columns](%%SamplesUrl%%/grid/auto-generate-columns)
 -   [Handling Complex Objects](%%SamplesUrl%%/grid/handling-complex-objects)
+-   [Column Formats](%%SamplesUrl%%/grid/column-formats)
+-   [Configure Text Alignment](%%SamplesUrl%%/grid/configure-text-alignment)
 
 ### Topic
 -   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
