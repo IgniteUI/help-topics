@@ -16,6 +16,7 @@
 - [Initialization](#initialization)
 - [API in a Multi-Row Layout Grid](#api)
 - [Supported Features](#features)
+- [Features Integration](#features-integration)
 - [Related Content](#related-content)
 
 ## <a id="overview"></a> Overview
@@ -84,8 +85,15 @@ Finally, two arguments returned by two igGrid events received some clarification
 
 When igGrid is rendered in a multi-row layout mode the following features are supported: Sorting, Filtering, Paging and Updating, as well as virtualization in `continuous` mode. Enabling any of the other features native to igGrid will result in unexpected behavior or initialization exceptions. The supported features have certain limitations in this mode. They are listed below.
 
-* Updating is supported only in `dialog` edit mode. Attempting to enable `row` or `cell` edit modes will result in an initialization exception.
 * Filtering is supported only in `advanced` mode. Attempting to use it in `simple` mode will result in an initialization exception.
+
+## <a id="features-integration"></a> Features Integration
+
+The following table summarizes the integration between Grid Multi-Row Layout and other `igGrid` features.
+
+Feature | Description
+-------|-------------
+Updating | In inline editing (`editMode` is `row` or `cell` ) use [`navigationIndex`](%%jQueryApiUrl%%/ui.iggrid#options:columns.navigationIndex) option to configure the tab order of the editors. Note that the option has no effect when not in edit mode and the default browser tab navigation will be applied in this case. 
 
 ## <a id="related-content"></a> Related Content
 
@@ -96,4 +104,3 @@ When igGrid is rendered in a multi-row layout mode the following features are su
 ### <a id="samples"></a> Samples
 
 -   [Multi-Row Layout](%%SamplesUrl%%/grid/multi-row-layout)
-
