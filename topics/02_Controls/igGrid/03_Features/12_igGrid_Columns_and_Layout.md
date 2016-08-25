@@ -172,7 +172,7 @@ Column formatting (rendering) is affected by several `igGrid` options. These are
  ```
 
 - [`columnCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.columnCssClass) - is a space-separated list of CSS classes that are applied to the TD element of the cell.  
- When the [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template) option defines the rendering of the TD element the [`columnCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.columnCssClass) option is ignored. 
+ When the [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template) option defines the rendering of the TD element the [`columnCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.columnCssClass) option is ignored (see the example below). 
  Here is the flow of column rendering when [`columnCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.columnCssClass) is used:
  
  ```
