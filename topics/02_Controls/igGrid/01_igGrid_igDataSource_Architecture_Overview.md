@@ -8,6 +8,8 @@
 |metadata|
 -->
 
+# igGrid/igDataSource Architecture Overview
+
 ### In this topic
 
 This topic contains the following sections:
@@ -20,8 +22,6 @@ This topic contains the following sections:
 -   [Dependencies](#dependencies)
 -   [External References](#external-references)
 -   [Related Content](#related-content)
-
-# igGrid/igDataSource Architecture Overview
 
 ## <a id="overview"></a>Overview
 
