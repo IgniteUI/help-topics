@@ -31,10 +31,12 @@ The igScroll allows specifying two differentd display types - native or custom, 
 For the custom scrollbars there are 3 possible states for the scrollbars:
 1) Hidden - the scrollbars are hidden when the user is not interacting in any way with the containers or the scrollbar.
 
-    ![](images/igScroll_Hidden.png)
+![](images/igScroll_Hidden.png)
+
 2) Default (thin) scrollbars - the default(thin) scrollbars are displayed when the user is interacting with the scrollable content, for example when hovering the scrollable container or when using touch interactions. They have no horizontal or vertical arrows and are not interactable with mouse or touch.
    
-   ![](images/igScroll_Thin.png)
+![](images/igScroll_Thin.png)
+
 3) Desktop (big) scrollbars - the desktop(big) scrollbars are displayed when the user hovers over the thin scrollbars. They're bigger than the default ones and have arrows buttons and can be interacted with via the mouse.
    
 ![](images/igScroll_Big.png)   
@@ -366,7 +368,7 @@ SHIFT+SPACE: Scrolls down with a big increment.
 
 PAGE UP/ PAGE DOWN: Scrolls up/down with a big increment. 
 
-## <a id="related"> Related Content
+## <a id="related"></a> Related Content
 
 ### Topics
 
