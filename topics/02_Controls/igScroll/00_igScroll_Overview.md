@@ -43,7 +43,7 @@ For the custom scrollbars there are 3 possible states for the scrollbars:
    
 When the native scrollbars are enabled the default scrollbars for the specific browser and environment are displayed.
    
-    ![](images/igScroll_Native.png)
+![](images/igScroll_Native.png)
     
 The scrolling is still handled manually by the igScroll and can be configured via the igScroll's options.
    
@@ -371,9 +371,13 @@ PAGE UP/ PAGE DOWN: Scrolls up/down with a big increment.
 ## <a id="related"></a> Related Content
 
 ### Topics
-
+-   [Configuring igScroll](Configuring-igScroll.html)
 
 ### Samples
+-   [Basic Usage](%%SamplesUrl%%/scroll/basic-usage)
+-   [Configuration Options](%%SamplesUrl%%/scroll/configuration-options)
+-   [Scrolling multiple containers at once](%%SamplesUrl%%/scroll/scrolling-multiple-containers)
+
  
 
  

@@ -206,13 +206,9 @@ This section contains information on how to set a custom element as the vertical
 
 ## <a id="related"></a> Related Content
 
-
 ### Topics
--   [igScroll Overview](igScroll-Overview.html)
+-   [Accessibility Compliance (igScroll)](igScroll-Accessibility-Compliance.html)
+-   [Known Issues (igScroll)](igScroll-Known-Issues.html)
 
 ### Samples
- 
-
- 
-
-
+-   [Configuration Options](%%SamplesUrl%%/scroll/configuration-options)
