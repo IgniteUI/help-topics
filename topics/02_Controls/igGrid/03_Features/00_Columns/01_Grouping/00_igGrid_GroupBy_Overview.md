@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 |metadata|
 {
     "fileName": "iggrid-groupby-overview",
@@ -24,6 +24,7 @@ This topic contains the following sections:
 -   [Introduction](#introduction)
 -   [GroupBy Persistence](#groupBy-persistence)
 -   [Grouping Features Overview](#grouping-features)
+-   [API Usage](#api-usage) 
 -   [Keyboard Interactions](#keyboard-interaction) 
 -   [Related Content](#related-content)
 
@@ -170,7 +171,51 @@ the grouping action ends. **This event is fired also when group/ungroup from Gro
         </tr>
     </tbody>
 </table>
+## <a id="api-usage"></a> API Usage
 
+In order to group a column programmatically, you need to do this in the following way:
+
+**In JavaScript:**
+
+```js
+$('#grid1').igGridGroupBy('groupByColumn', 'ProductID');
+```
+
+
+The applied sorting expressions can be retrieved from the data source of the grid. In order to get them programmatically, you can use the following:
+
+**In JavaScript:**
+
+```js
+var expressions = $('#grid1').data('igGrid').dataSource.settings.sorting.expressions; // array of expressions
+// expression structure
+{compareFunc: <type="function" comparer function>, dir: <type="string" sort direction>, fieldName: <type="string" column key>, isGroupBy: <type="bool" is the expression created by the Group By widget>, layout: <type="string" the key of the layout if done in igHierarchicalGrid>}
+```
+
+Expressions created by the Group By widget have a property "isGroupBy" equals to "true" to distinguish them from the ones created by the Sorting widget.
+
+To get the grouped data (data rows and group rows) programmatically you need to do this:
+
+**In JavaScript:**
+
+```js
+var data = $('#grid1').data('igGrid').dataSource.groupByData();
+// group rows' structure
+{collapsed: <type="bool" collapsed state>, fieldName: <type="string" column key>, gbExpr: <type="object" group by expression object>, id: <type="string" identificator of the group row>, len: <type="number" the number of data rows in the group>, level: <type="number" level of grouping>, recs: <type="array" set of the data records in the group>, val: <type="string" the value of the group>}
+```
+
+The group rows in the group by data are objects which contain the generated ID of the physical group row. The ID can be used to [`collapse`](%%jQueryApiUrl%%/ui.iggridgroupby#methods:collapse) and [`expand`](%%jQueryApiUrl%%/ui.iggridgroupby#methods:expand) the row programmatically:
+
+**In JavaScript:**
+
+```js
+var data = $('#grid1').data('igGrid').dataSource.groupByData(), 
+	id = data[0].id; 
+// collapse
+$('#grid1').igGridGroupBy("collapse", id); 
+// expand
+$('#grid1').igGridGroupBy("expand", id);
+```
 ## <a id="keyboard-interaction"></a> Keyboard Interactions
 
 The following keyboard interactions are available.
@@ -205,6 +250,7 @@ The following topics provide additional information related to this topic.
 The following samples provide additional information related to this topic.
 
 - [Grouping with summaries](%%SamplesUrl%%/grid/grouping)
+- [Grouping API](%%SamplesUrl%%/grid/grouping-api)
 
  
 

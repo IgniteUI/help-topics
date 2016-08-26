@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 |metadata|
 {
     "fileName": "iggrid-known-issues",
@@ -314,7 +314,6 @@ Row count for a group stays unchanged when the grid is filtered | When Filtering
 [Values in a column grouped but not displayed correctly](#groupby-incorrect-values) | When [`autoGenerateColumns`](%%jQueryApiUrl%%/ui.iggrid#options:autoGenerateColumns) is set to true and a column is set to be grouped at initialization, the values in the column are grouped but not displayed correctly. | ![](../../images/images/positive.png)
 [The *groupedColumnsChanged* event input argument *ui.groupedColumns* may be empty](#groupedColumnsChanged) | The `ui.groupedColumns` input argument of the [`groupedColumnsChanged`](%%jQueryApiUrl%%/ui.iggridgroupby#events:groupedColumnsChanged) event may be empty when a column has been grouped by dragging it into the Group By area. | ![](../../images/images/positive.png)
 [Tapping the igTree inside the Group By modal dialog not working properly](#groupby-dialog-tree) | Tapping the drop-down inside the Group By modal dialog may lead to some layout problems on Android 4.0. The issue appears when the tree is shown partially, having a vertical or horizontal scroll. | ![](../../images/images/positive.png)
-Limitation when using GroupBy feature and continuous virtualization | When `igGrid`’s continuous virtualization is in use and the Group By feature is enabled, scrolling vertically causes the groups to revert to their initial state (expanded or collapsed depending on the [`initialExpand`](%%jQueryApiUrl%%/ui.iggridgroupby#options:initialExpand) option). | ![](../../images/images/negative.png)
 Grouping not working with fixed virtualization | The GroupBy feature of the `igGrid` doesn’t work with fixed virtualization. | ![](../../images/images/negative.png)
 [Hiding a column shrinks the grid in Firefox](#groupby-hide-firefox) | When the GroupBy feature is enabled and `igGrid` doesn’t have column widths defined, hiding a column shrinks the grid in Firefox browser. | ![](../../images/images/positive.png)
 
