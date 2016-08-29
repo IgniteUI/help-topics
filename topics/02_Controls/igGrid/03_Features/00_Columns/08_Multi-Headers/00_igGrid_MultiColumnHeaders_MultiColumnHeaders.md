@@ -29,6 +29,7 @@ The following topics are prerequisites to understanding this topic:
 This topic contains the following sections:
 
 -   [Introduction](#introduction)
+-	[Collapsible column groups](#collapsible-column-groups)
 -   [Multi-column headers Property Reference](#property-reference)
 -   [Multi-column headers Method Reference](#method-reference)
 -   [Other features integration reference](#features-integration)
@@ -63,6 +64,15 @@ In the following screenshot, you can see a multi-column header configured for th
 ![](images/igGrid_MultiColumnHeaders_1.png)
 
 
+## <a id="collapsible-column-groups"></a> Collapsible column groups
+
+Collapsible Column Groups is a part of the multi-column headers feature which provides a way to collapse/expand a column group to a smaller set of data. A column group usually consists of two or more columns. When a column group is collapsed, a subset of the columns will be shown to the end-user. This subset can be one or more of the previously shown columns, or an entirely new set of columns. Each collapsed/expanded column can be bound to the data source of the grid, or it may be unbound, thus calculated.
+
+A group can be expanded/collapsed by clicking on its expand/collapse header indicator.
+
+![](images/igGrid_Configure_MultiColumnHeaders_5.png)
+
+This functionality can be controlled by manipulating the `expanded`, `allowGroupCollapsing` and `hidden` properties of the `groupOptions` object.
 
 ## <a id="property-reference"></a> Multi-column headers Property Reference
 
@@ -70,8 +80,15 @@ This section describes the various properties of `igGridMultiColumnHeaders` feat
 
 The following table summarizes the purpose and functionality of the `igGridMultiColumnHeaders` control’s featured properties.
 
-
 - [group](%%jQueryApiUrl%%/ui.iggrid#options:columns.group): If a column has a `group` property this column is a group column and it’s not bound to data from the data source. Parent columns are for display purposes only, i.e. they are rendered only in the THEAD of the grid.
+
+- [groupOptions](%%jQueryApiUrl%%/ui.iggrid#options:columns.groupOptions): The options of the `group`.
+
+- [groupOptions.expanded](%%jQueryApiUrl%%/ui.iggrid#options:columns.groupOptions.expanded): Makes the `group` expanded or collapsed. This property is applied only if we have `allowGroupCollapsing` enabled.
+
+- [groupOptions.allowGroupCollapsing](%%jQueryApiUrl%%/ui.iggrid#options:columns.groupOptions.allowGroupCollapsing): Allows to collapse/expand a `group` and makes expansion indicators visible in the group header.
+
+- [groupOptions.hidden](%%jQueryApiUrl%%/ui.iggrid#options:columns.groupOptions.hidden): Controls when should the group be hidden. This property is applied only if we have `allowGroupCollapsing` enabled. There are four options for group hiding: never , always, when the parent group is collapsed and when the parent group is expanded.
 
 - [headerText](%%jQueryApiUrl%%/ui.iggrid#options:columns.headerText): The caption of the column.
 
@@ -117,7 +134,9 @@ Method | Description | Parameters
 -------|-------------|--------
 renderMultiColumnHeader | When called the method re-renders the whole grid (also rebinds to the data source) and renders the cols object.| -   cols - an array of column objects
 [getMultiColumnHeaders](%%jQueryApiUrl%%/ui.iggridmulticolumnheaders#methods:getMultiColumnHeaders) | Returns the multi-column headers array. If there are no multi-column headers defined it returns *undefined.* | N/A
-
+[expandGroup](%%jQueryApiUrl%%/ui.iggridmulticolumnheaders#methods:expandGroup) | Expands a group | group key, callback
+[collapseGroup](%%jQueryApiUrl%%/ui.iggridmulticolumnheaders#methods:collapseGroup) | Collapses a group | group key, callback
+[toggleGroup](%%jQueryApiUrl%%/ui.iggridmulticolumnheaders#methods:toggleGroup) | Toggles a group | group key, callback
 
 ## <a id="features-integration"></a> Other features integration reference
 
@@ -151,6 +170,9 @@ Hiding
 Through the API you can hide a column group or individual columns by using the key property. <br />
 
 Hiding indicators are rendered for every header cell (TH) so users can hide column group or single column in one click. However column groups are not displayed in the column chooser, so when users unhide columns they have to click on each data bound column. Nevertheless column grouping is restored correctly.
+                <blockquote>
+Note: The hiding feature is not integrated with multi-column headers with enabled collapsible column groups.
+                </blockquote>
 			</td>
         </tr>
 

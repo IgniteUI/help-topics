@@ -934,7 +934,7 @@ Erroneous Column Moving behavior of in Google Chrome | When the Column Moving fe
 Issue | Description | Status
 ------|-------------|-------
 Multi-column headers feature is not supported with `columnVirtualization` | When virtualization and multi-column headers features are enabled, only `rowVirtualization` is integrated. Column virtualization is not supported in this scenario. | ![](../images/images/negative.png)
-
+Multi-column headers feature with collapsible column groups is not supported with column hiding | When multi-column headers and collapsible column groups are enabled, column hiding is not integrated. | ![](../images/images/negative.png)
 Go up to [Known Issues and Limitations Summary](#summary)
 
 
