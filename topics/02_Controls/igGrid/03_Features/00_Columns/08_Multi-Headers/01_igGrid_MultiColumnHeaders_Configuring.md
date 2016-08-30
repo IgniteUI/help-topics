@@ -428,7 +428,7 @@ The following screenshot is a preview of the final result.
 To complete the procedure, you need the following:
 
 -   Microsoft ® Visual Studio 2010 or newer installed
--   ASP.NET MVC 3 Framework installed
+-   ASP.NET MVC 3 or newer Framework installed
 -   The Northwind Database installed
 -   A reference to the Infragistics.Web.Mvc.dll assembly
 -   Ignite UI JavaScript and theme resources
@@ -552,7 +552,7 @@ The following screenshot is a preview of the final result.
 To complete the procedure, you need the following:
 
 -   Microsoft ® Visual Studio 2010 or newer installed
--   ASP.NET MVC 3 Framework installed
+-   ASP.NET MVC 3 or newer Framework installed
 -   The Northwind Database installed
 -   A reference to the Infragistics.Web.Mvc.dll assembly
 -   Ignite UI JavaScript and theme resources
