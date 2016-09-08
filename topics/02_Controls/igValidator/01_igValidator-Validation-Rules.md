@@ -209,7 +209,7 @@ $('#editor').igValidator({
 
 ### <a id="card"></a> Credit Card
 
-The [`creditCard`](%%jQueryApiUrl%%/ui.igValidator#options:creditCard) verifies the given value is a valid payment card (often commonly referred to as credit card) number. This check does not depend or check on the card type as it uses the Luhn algorithm that can validate [all of the active issuers](https://en.wikipedia.org/wiki/Payment_card_number#Issuer_identification_number_.28IIN.29). Values can contain spaces and dashes and any number of digits. In case of specific type length and format requirements, those can be validated using the [Length Range](#length) in advance and [Pattern (regular expression)](#pattern) rule, which will pass after this one and .
+The [`creditCard`](%%jQueryApiUrl%%/ui.igValidator#options:creditCard) verifies the given value is a valid payment card (often commonly referred to as credit card) number. This check does not depend or check on the card type as it uses the Luhn algorithm that can validate [all of the active issuers](https://en.wikipedia.org/wiki/Payment_card_number#Issuer_identification_number_.28IIN.29). Values can contain spaces and dashes and any number of digits. In case of specific type length and format requirements, those can be validated using the [Length Range](#length) in advance and [Pattern (regular expression)](#pattern) rule, which will pass after this one.
 
 > **Note:** Keep in mind this validation only confirms the card number conforms to the algorithm and not that such card actually exists, as such numbers can be easily generated. 
 
