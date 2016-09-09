@@ -39,7 +39,7 @@ The column resizing functionality of the `igGrid` control allows the user to cha
 
 -   Enabling/disabling column resizing. This feature is managed through the [`allowResizing`](%%jQueryApiUrl%%/ui.igGridResizing#options:columnSettings.allowResizing) property.
 
--   Enabling resizing on double click – when enabled, resizes the column to the width of the widest cell that is currently visible. This feature is managed through the [`allowDoubleClickToResize`](%%jQueryApiUrl%%/ui.igGridResizing#options:allowDoubleClickToResize) option.
+-   Enabling auto-sizing on double click – when enabled, resizes the column to the width of the widest cell content (including header and footer cells) that is currently visible. This feature is managed through the [`allowDoubleClickToResize`](%%jQueryApiUrl%%/ui.igGridResizing#options:allowDoubleClickToResize) option.
 
 -   Maximum/minimum column width – the minimum/maximum width to which the user can change the width of a column when performing resizing. This feature is managed through the [`minimumWidth`](%%jQueryApiUrl%%/ui.igGridResizing#options:columnSettings.minimumWidth)/[`maximumWidth`](%%jQueryApiUrl%%/ui.igGridResizing#options:columnSettings.maximumWidth) properties, respectively.
 
