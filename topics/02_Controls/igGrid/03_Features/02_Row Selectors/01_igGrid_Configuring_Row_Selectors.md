@@ -118,7 +118,9 @@ $(function () {
 ## <a id="select-all-pages"></a> Enabling Selection across all pages
 
 By default the header checkbox, available in multiple selection mode, checks all rows from the current data view. Now the grid Row Selectors along with Paging feature provides the ability to select all records across all pages using the option "enableSelectAllForPaging" (set to true by default).
+In case of local Paging when header checkbox is clicked an overlay is displayed suggesting the end user to select/deselect the rows from all pages (see the screenshot below).
 
+> **Note:** "Select All" functionality does not work for remote Paging. Clicking on the header checkbox will only select the rows from the current page.
 
 ### <a id="selectall-preview"></a> Preview 
 The picture below demonstrates the "Select All" functionality.
@@ -131,9 +133,9 @@ The table below maps the desired configurations to property settings. The proper
 
 Property | Setting
 ---|---
-[enableSelectAllForPaging](%%jQueryApiUrl%%/ui.iggridrowselectors#options:enableSelectAllForPaging) | “true”
-[enableCheckBoxes](%%jQueryApiUrl%%/ui.iggridrowselectors#options:enableCheckBoxes) | “true”
-[multipleSelection](%%jQueryApiUrl%%/ui.iggridselection#options:multipleSelection) | “true”
+[enableSelectAllForPaging](%%jQueryApiUrl%%/ui.iggridrowselectors#options:enableSelectAllForPaging) | true
+[enableCheckBoxes](%%jQueryApiUrl%%/ui.iggridrowselectors#options:enableCheckBoxes) | true
+[multipleSelection](%%jQueryApiUrl%%/ui.iggridselection#options:multipleSelection) | true
 
 ### <a id="selectall-code"></a> Code 
 **In HTML:**
@@ -185,12 +187,13 @@ Property | Setting
 ## <a id="adding-selection-checkboxes"></a> Adding Selection Checkboxes 
 
 Selection checkboxes are added by setting the `enableCheckBoxes` property to true. It is recommended, if enabling the checkboxes feature, to use multiple-selection so the user won’t need to hold Ctrl key when selecting multiple rows.
+When multiple-selection is enabled a checkbox will display in the row selectors column header. This checkbox enables selection/deselection of all the rows at once (in case when Paging feature is enabled selects/deselects only the rows from the current page).
 
-> **Note:** Enabling checkboxes forces `igGridSelection` to use "row" selection mode
+> **Note:** Enabling checkboxes forces `igGridSelection` to use "row" selection mode.
 
 ### <a id="checkboxes-preview"></a> Preview 
 
-In the picture below demonstrates a grid with both checkboxes and paging enabled.
+In the picture below demonstrates a grid with both checkboxes and Paging enabled.
 
 ![](images/RowSelectors_Configure_Pic2.png)
 
@@ -200,7 +203,7 @@ The table below maps the desired configurations to property settings. The proper
 
 Property | Setting
 ---|---
-[enableCheckBoxes](%%jQueryApiUrl%%/ui.iggridrowselectors#options:enableCheckBoxes) | “true”
+[enableCheckBoxes](%%jQueryApiUrl%%/ui.iggridrowselectors#options:enableCheckBoxes) | true
 
 ### <a id="checkboxes-code"></a> Code 
 
@@ -243,21 +246,23 @@ Property | Setting
 
 ## <a id="row-numbering"></a> Enabling Row Numbering 
 
-The row selector column in the grid can be used to display the sequential numbers of the rows. This is managed through the `rowNumbering` option of the `rowSelectors` widget.
+The row selector column in the grid can be used to display the sequential numbers of the rows. This is managed through the `enableRowNumbering` option of the `RowSelectors` feature.
 
 ### <a id="row-numbering-preview"></a> Preview 
 
-In the picture demonstrates a grid with, `rowNumbering` enabled.
+In the picture demonstrates a grid with, row numbering enabled.
 
 ![](images/RowSelectors_Configure_Pic3.png)
 
 ### <a id="row-numbering-enabling"></a> Property settings for enabling row numbering 
 
 The table below maps the desired configurations to property settings. The properties are accessed through the `igGridRowSelectors` options.
+To set a start value different from 0 use the `rowNumberingSeed` option.  
 
 Property | Setting
 ---|---
-enableRowNumbering | “true”
+enableRowNumbering | true
+rowNumberingSeed| 0
 
 ### <a id="row-numbering-code"></a> Code 
 
