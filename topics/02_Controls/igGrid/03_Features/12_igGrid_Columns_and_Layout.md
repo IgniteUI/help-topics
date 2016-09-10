@@ -104,10 +104,12 @@ $("#grid1").igGrid({
 A column definition is a JavaScript object containing at least a key property. It may also contain:
 
 -   Header Text: via the `headerText` option
--   Width: via the `width` option (number or string – px or %)
+-   Width: via the `width` option (number or string – px or % or "*")
 -   Data Type: via the `dataType` option
 
-The format and `dataType` options may be configured a number of different ways.
+Defining column width to "*" will auto-size the column when the grid is initialized. Auto-sizing applies the width of the widest cell content (including header and footer cells) that is currently visible. Auto-sizing doesn't work when virtualization is enabled.
+
+The `format` and `dataType` options may be configured a number of different ways.
 
 -   The `dataType` can be a string, number, date, bool or object
 -   The `format` column property corresponding to dataType=”date” (Date objects) can be “date”, “dateLong” , “dateLong” , “dateTime” , “timeLong” or explicit pattern like “MM-dd-yyyy h:mm:ss tt”.
