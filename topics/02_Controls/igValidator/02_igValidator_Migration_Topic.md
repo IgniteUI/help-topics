@@ -3,7 +3,7 @@
 {
     "fileName": "igvalidator-migration-topic",
     "controlName": ["igValidator"],
-    "tags": ["Migration","Getting Started"]
+    "tags": ["Migration","Getting Started", "Validation"]
 }
 |metadata|
 -->
@@ -61,6 +61,7 @@ valueRange|Gets or sets minimum and maximum values.
 successMessage|Gets or sets text for success message.
 threshold|Determines the validation minimum input length.
 equalTo|Requires the value in this field to be the same as another input element or editor control.
+creditCard|Gets or sets option to validate if value is a Credit Card number. <br> Note: This rule will only validate the checksum of the number using Luhn algorithm irregardless of type.
 custom|Gets or sets a custom function to perform validation.
 fields|Determines a list of field items describing each field with validation options and a selector.
 notificationOptions|Sets the options for the `igNotifier` used to show error messages.

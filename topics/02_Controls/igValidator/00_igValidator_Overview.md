@@ -3,7 +3,7 @@
 {
     "fileName": "igvalidator-overview",
     "controlName": ["igValidator"],
-    "tags": ["Getting Started"]
+    "tags": ["Getting Started", "Validation", "ASP.NET MVC"]
 }
 |metadata|
 -->
@@ -16,7 +16,9 @@ The `igValidator` control provides new look and feel compared to the previous on
 
 - [Introduction](#introduction)
 - [Setting up the igValidator](#setting-up)
-- [Validations’ priority](#validation-priority)
+- [Validation triggers](#triggers)
+- [Validation rules](#validation-priority)
+- [ASP.NET MVC and Data Annotations](#mvc-annotations)
 - [Related Content](#related-content)
 
 ## <a id="introduction"></a> Introduction
@@ -73,7 +75,7 @@ $('#validator').igValidator({
 ```
 
 ### Standalone igValidator with multiple fields
-The control supports a [`fields`](%%jQueryApiUrl%%/ui.igvalidator#options:fields) collection describing each field with validation options and a selector. Fields must provide a valid selector jQuery selector and can contain any of the validation rules and triggers, but not other fields or event handlers. Rules from at the main options level will also be inherited by filed if no such option is provided.
+The control supports a [`fields`](%%jQueryApiUrl%%/ui.igvalidator#options:fields) collection describing each field with validation options and a selector. Fields must provide a valid jQuery [`selector`](%%jQueryApiUrl%%/ui.igvalidator#options:fields.selector) and can contain any of the validation rules and triggers, but not other fields or event handlers. Rules from the main options level will also be inherited by fields if no such option is provided.
 
 ```html
 <form id="validationForm">
@@ -131,25 +133,57 @@ $("#rating").igRating({
 
 > **Note:** Both standalone configurations support fields enhanced with Ignite UI Editor controls, however they must be initialized in advance for the validator to discover and handle them correctly. In case the timing cannot be controlled and the validator is initialized before other control(s) the [`updateField`](%%jQueryApiUrl%%/ui.igvalidator#methods:updateField) method can be used to update that field in the validator.
 
-## <a id="validation-priority"></a> Validations' priority
 
-In some scenarios you might need to use multiple validators on a single input in order to validate upon different criteria. In those cases it is important to mention that on a single input the validations are perform in a particular order. The simplest validations pass first and then the more sophisticated conditions are performed. Please note that if one of the validation rules fails, the following ones won't be evaluated and the current check will end as invalid.
+## <a id="triggers"></a> Validation triggers
 
-By default, the validations priority is as follows (first is most important, last is least important):
-1.	required
-2.	Infragistics' editor (optional)*
+Triggers allow specifying when validation should be performed and include three settings - [`onchange`](%%jQueryApiUrl%%/ui.igValidator#options:onchange), [`onblur`](%%jQueryApiUrl%%/ui.igValidator#options:onblur)  and [`onsubmit`](%%jQueryApiUrl%%/ui.igValidator#options:onsubmit). These options resemble the native DOM events that they relay to and allow to control how often should the value be checked based on standard user interactions. By default only `onchange` is disabled to accommodate most common scenarios. Note that the `onsubmit` trigger will have no effect unless there's a parent form for the target input or the validator is initialized on the form itself.
+
+### <a id="threshold"></a> Threshold
+While the [`threshold`](%%jQueryApiUrl%%/ui.igValidator#options:threshold) option is not technically a validation trigger, it is still an integral part of the validation cycle. When set, if the **length** of the value is less than the threshold then none of the validation rules will be run. This is most useful in scenarios where there's no value in showing an error message too early (for example when `onchange` is enabled) as the value cannot realistically fulfil the requirements under a certain length.
+
+> **Note:** Using the [`isValid`](%%jQueryApiUrl%%/ui.igvalidator#methods:isValid) and [`validate`](%%jQueryApiUrl%%/ui.igvalidator#methods:validate) methods or validation on submit will ignore the threshold option. This allows required fields to properly prevent submitting for example. API methods will also ignore trigger conditions.
+
+
+## <a id="validation-priority"></a> Validation rules
+
+The `igValidator` rules define a number of conditions for a value to be accepted and in some scenarios you might need to use multiple rules on a single input in order to validate upon different criteria. On a single input the rules are executed per validation and in a particular order. 
+
+Default validation rules include (by priority):
+
+1.	Required
+2.	Infragistics' editor (optional)
 3.	Number
 4.	Date
-2.	LengthRange
-3.	ValueRange
-4.	EqualsTo
-5.	Email
-6.	Pattern (regular expression)
-7.	Custom function
+5.	LengthRange
+6.	ValueRange
+7.	EqualsTo
+8.	Email
+9.  Credit Card
+10.	Pattern (regular expression)
+11.	Custom function
 
-\* This step is optional and is fired only when you use an `igEditor`. The validator will call `isValid` on the editor to check if its specific requirements (selection, required mask fields, etc.) are fulfilled.
+For detailed information for each rule, refer to the [**Validation Rules topic**](igValidator-Validation-Rules.html).
+
+
+## <a id="mvc-annotations"></a> ASP.NET MVC and Data Annotations
+
+To setup a validator in ASP.NET MVC the Infragistics HTML Helper [Validator()](Infragistics.Web.Mvc~Infragistics.Web.Mvc.InfragisticsSuite`1~Validator().html) extension can be used:
+
+**In Razor:**
+```csharp
+	@(Html.Infragistics().Validator()
+		.ID("firstName")
+		.Required(true)
+		.Render())
+```
+The helper can also be initialized with an [ValidatorModel](Infragistics.Web.Mvc~Infragistics.Web.Mvc.ValidatorModel.html). Model properties and helper methods follow the jQuery API of the control as closely as possible.  
+
+Besides configuring the validator through the dedicated wrapper, when using strongly-typed editors the Model will be automatically inspected for Data Annotations and the appropriate validation rules and their messages will be added to the control configuration. Additionally, the [ValidatorOptions()](Infragistics.Web.Mvc~Infragistics.Web.Mvc.BaseEditorWrapper`2~ValidatorOptions.html) helper method can still be used to add or override rules.
+
+For a step-by-step guide please refer to the [Configuring ASP.NET MVC Validation (Editors)](Configuring-ASP.NET-MVC-Validation.html) topic.
 
 ## <a id="related-content"></a> Related Content
 
 - [Validator Overview Sample](%%SamplesUrl%%/validator/overview)
+- [Data Annotation Validation Sample](%%SamplesUrl%%/editors/data-annotation-validation)
 -	[igValidator jQuery API](%%jQueryApiUrl%%/ui.igValidator)

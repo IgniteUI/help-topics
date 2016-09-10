@@ -2,7 +2,7 @@
 |metadata|
 {
     "fileName": "igvalidator",
-    "controlName": "igValidator",
+    "controlName": ["igValidator"],
     "tags": []
 }
 |metadata|
@@ -16,4 +16,5 @@ The `igValidator` control provides new look and feel compared to the previous on
 ## Topics
 
 -   [igValidator Overview](igValidator-Overview.html)
+-   [Validation Rules](igValidator-Validation-Rules.html)
 -   [Migrating to the new igValidator control](igValidator-Migration-Topic.html)
