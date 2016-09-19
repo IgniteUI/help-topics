@@ -1,20 +1,20 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "known-issues-and-limitations-2015-volume-2",
+    "fileName": "known-issues-and-limitations-2016-volume-1",
     "controlName": "",
     "tags": ["Breaking Changes","Known Issues"]
 }
 |metadata|
 -->
 
-# Known Issues and Limitations in 2015 Volume 2
+# Known Issues and Limitations in 2016 Volume 1
 
 ## Topic Overview
 
 ### Purpose
 
-This summarizes the known issues and limitations of the Ignite UI™ 2015 Volume 2 release. Information about previous releases can be found [here](Known-Issues-Revision-History.html).
+This summarizes the known issues and limitations of the Ignite UI™ 2016 Volume 1 release. Information about previous releases can be found [here](Known-Issues-Revision-History.html).
 
 ### In this topic
 
@@ -74,7 +74,7 @@ This topic contains the following sections:
 
 ## <a id="summary"></a> Known Issues and Limitations Summary
 
-The following table summarizes the known issues and limitations of the Ignite UI 2015 Volume 2 release. Detailed explanations of known issues and the possible workarounds are provided in the known issues topics for each control.
+The following table summarizes the known issues and limitations of the Ignite UI 2016 Volume 1 release. Detailed explanations of known issues and the possible workarounds are provided in the known issues topics for each control.
 <a id="legend"></a>
 
 Legend | 
@@ -339,6 +339,27 @@ Using `new Date()` for the for the `minValue`, `maxValue` and the `value` option
 ![](../images/images/positive.png)
 			</td>
         </tr>
+       
+               <tr>
+            <td>
+Android Web View (chrome mobile and android internet browser) doesn’t fire keypress event
+			</td>
+
+            <td>
+           Some features of the editors rely on keypress event for character recognition – which makes those features unsupported on some Android browsers during auto complete/suggest (IME) input. The alternatives in the new DOM3 UI events specification needs to be finalized in order to commit to fully supporting those features on android devices.
+
+Specific options affected in igTextEditor are excludeKeys, includeKeys, toLower and toUpper. 
+This also affects continuous character restriction functionality during typing in the igMaskEditor and the derived igDateEditor. Validation before the editor accepts the value (on enter or blur) should still work as expected.
+All the numeric type editors should work as expected on android devices.
+ 
+			</td>
+
+            <td>
+![](../images/images/negative.png)
+			</td>
+        </tr>
+         
+        
 
         <tr>
             <td>
@@ -811,7 +832,7 @@ Misalignment of fixed and unfixed parts of the rows in IE9+
 			</td>
 
             <td>
-In Internet Explorer 9 or higher, if you fix a column in an igGrid and scroll down to the middle of the grid, you will see misalignment between the fixed and unfixed parts of the rows. This issue is caused
+In Internet Explorer 9 or higher, if you fix a column in an igGrid with a large amount of records and scroll down to the middle of the grid, you will see misalignment between the fixed and unfixed parts of the rows. This issue is caused
                     by the IE9 engine.
 			</td>
 
@@ -847,7 +868,18 @@ When you have continuous virtualization enabled and you unfix a column, the grid
 			</td>
         </tr>
 		<tr>  
+<tr>
         <td>  
+The [fixDataSkippedColumns](%%jQueryApiUrl%%/ui.iggrid#methods:fixDataSkippedColumns) and [unfixDataSkippedColumns](%%jQueryApiUrl%%/ui.iggrid#methods:unfixDataSkippedColumns) methods have been deprecated.
+	</td>
+            <td>
+Use the [fixNonDataColumns](%%jQueryApiUrl%%/ui.iggrid#methods:fixNonDataColumns) and [unfixNonDataColumns](%%jQueryApiUrl%%/ui.iggrid#methods:unfixNonDataColumns) methods instead.
+	</td>
+        <td>
+![](../images/images/negative.png)
+	</td>
+</tr>
+            <td>
 In Chrome and Safari when there is a caption with long text defined for the grid, the fixed column header's width will stretch to the length of the caption and the unfix column button may not be visible.
 			</td>
 
@@ -869,6 +901,17 @@ This is a third party issue in Chrome and Safari. In those browsers the thead el
         ![](../images/images/negative.png)  
             </td>  
         </tr> 
+	<tr>
+		<td>
+Grid applies the focus to the unfixed part of the row when selecting is done through the row selectors.
+		</td>
+		<td>
+This is related to that the record is separated in two physical rows - for fixed and unfixed part. And only one element on the page can be focused.
+		</td>
+		<td>
+![](../images/images/negative.png)
+		</td>
+	</tr>
     </tbody>
 </table>
 
@@ -956,7 +999,7 @@ Row Selectors not working with column virtualization | Row Selectors are not sup
 The `igGridRowSelectors` widget requires the Selection feature enabled | The [`requireSelection`](%%jQueryApiUrl%%/ui.iggridrowselectors#options:requireSelection) option of the `igGridRowSelectors` widget is set to *true* by default and will throw an exception indicating that the Selection feature is required for using row selectors. | ![](../images/images/positive.png)
 Selecting not working correctly in IE 9 | In Internet Explorer 9, selecting using `RowSelectors` with or without checkboxes does not work correctly when the table is large enough to cause the page to have a vertical scrollbar and the user scrolls down. When the grid receives focus, Internet Explorer 9 scrolls the page back up and the selecting is either applied to the wrong row or not applied at all. | ![](../images/images/negative.png)
 The Selection feature cannot be enabled automatically | Automatically Enabling of the Selection feature does not work. The Selection widget is required for the `RowSelectors` to have full functionality. | ![](../images/images/positive.png)
-Text selection is not working when Selection feature is enabled | The Selection feature disables text selection inside the grid by cancelling the selectstart event and as a result the cell's text cannot be selected. | ![](../images/images/positive.png)
+["Select All"](igGrid-Configuring-Row-Selectors.html#select-all-pages) functionality does not work for remote Paging | The [`enableSelectAllForPaging`](%%jQueryApiUrl%%/ui.iggridrowselectors#options:enableSelectAllForPaging) option is not working for remote Paging scenario. | ![](../../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
@@ -967,6 +1010,7 @@ Issue | Description | Status
 ---|---|---
 Cell selection in iOS does not work properly | In iOS, when wanting to scroll the `igGrid`, the user should first tap on a cell and then swipe in the desired direction. There is a difference when scrolling the `igGrid` under iOS and Android due to the way jQuery Mobile handles the events. | ![](../images/images/negative.png)
 Incorrect selection when selecting row/cell with continuous virtualization enabled | When selecting row/cell of the `igGrid` while continuous virtualization is enabled, the grid scrolls down and a different row/cell is selected due to a bug in jQuery version 1.6.4. This problem appears only in this version of the jQuery library. | ![](../images/images/positive.png)
+Text selection is not working when Selection feature is enabled | The Selection feature disables text selection inside the grid by cancelling the selectstart event and as a result the cell's text cannot be selected. | ![](../images/images/positive.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
@@ -1006,10 +1050,8 @@ Go up to [Known Issues and Limitations Summary](#summary)
 Issue | Description | Status
 ---|---|---
 Adding a new row with Updating and Virtualization enabled requires immediate committing | Adding a new row is not supported when the Updating and Virtualization features are enabled while [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) is disabled. Virtualization is not aware of the newly added row when `autoCommit` is *false*. | ![](../images/images/positive.png)
-Excel Navigation mode supported only for Cell Edit and Row Edit modes. | When [excelNavigationMode](%%jQueryApiUrl%%/ui.iggridupdating#options:excelNavigationMode) is enabled, navigating with the arrows is only possible with *"cell"* or *"row"* [`editMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:editMode). Other Edit modes (*“rowedittemplate”*, *none*, *null*) are not supported with [`excelNavigationMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:excelNavigationMode). | ![](../images/images/negative.png)
+Excel Navigation mode supported only for Cell Edit mode. | When [`excelNavigationMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:excelNavigationMode) is enabled, navigating with the arrows is only possible with "cell" [`editMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:editMode). Other Edit modes (*row*, *dialog*, *none*, *null*) are not supported with  `excelNavigationMode`. | ![](../images/images/negative.png)
 Adding and updating a virtual grid doesn’t work if it is grouped | When using GroupBy and Updating in a virtual grid, updating or adding rows will not work when the grid is grouped. If you ungroup you will see the newly added record at the bottom of the grid records. | ![](../images/images/negative.png)
-`rowEditDialogMaxHeight` property renamed to [rowEditDialogContentHeight](%%jQueryApiUrl%%/ui.iggridupdating#options:rowEditDialogContentHeight) | This property is related to the Row Edit Template ([`editMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:editMode)=*“rowedittemplate”*). It is used to set the height of the row edit dialog content. This is a breaking change from the previous versions’ functionality. | ![](../images/images/negative.png)
-Column template including `<td>` tag attributes is ignored when updating rows | When updating rows, the `igGrid` correctly changes only the content of the `<td>` tags so that styles and/or attributes applied internally to the `<td>` elements are not lost. | ![](../images/images/positive.png)
 Updating rows/cells when the Updating and Continuous Virtualization features are enabled while [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) is disabled is not supported. | Editing rows/cells with Updating when the [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) grid option is set to false and Continuous Virtualization is enable will throw exception. | ![](../images/images/positive.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
@@ -1298,9 +1340,3 @@ Issue | Description | Status
 Mobile Slider does not slide on Windows Phone 7 | Because Windows® Phone 7 does not support standard touch events, the slider is read-only. | ![](../images/images/positive.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
-
-
-
- 
-
-

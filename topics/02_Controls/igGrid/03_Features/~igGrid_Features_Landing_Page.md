@@ -37,6 +37,7 @@
 -   [Knockout Support](igGrid-Configuring-Knockout-Support.html)
 -   [Columns and Layout](igGrid-Columns-and-Layout.html)
 -   [Virtualization](igGrid-Virtualization.html)
+-   [Grid Multi-Row Layout](igGrid-MultiRowLayout.html)
 
  
 

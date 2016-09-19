@@ -37,7 +37,7 @@ The names of the JavaScript files containing the combined scripts for all of Ign
 
 They can be found in the `js` folder (the root folder for the JavaScript files in the Ignite UI program installation).There is also a combined script version of the localization resources named, and it resides in the `i18n` folder.
 
-With the exception of the debug version all JavaScript files are minified. The non-minified files are used for debugging purposes. They expose the same folder structure as the minified files and have the same file names. The non-minified files are shipped in a .zip archive called `infragistics.jquery.debug.zip`.
+With the exception of the debug version all JavaScript files are minified. The non-minified files are used for debugging purposes. They expose the same folder structure as the minified files and have the same file names. The non-minified files are shipped in a .zip archive called `infragistics.IgniteUI.debug.zip`.
 
 You have a choice to use the combined JavaScript files or the Infragistics loader. The loader pulls separate modules from the modules folder.
 
