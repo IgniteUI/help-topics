@@ -23,7 +23,7 @@ Feature | Description
 ---|---
 Ignite UI OSS | A big part of the Ignite UI toolset is now open source. Checkout the repository on [GitHub](https://github.com/IgniteUI/ignite-ui)|
 Angular 2 Components (RTM) | Ignite UI widgets have component wrappers for Angular 2. For detailed information visit [Ignite UI Angular 2 GitHub](https://github.com/IgniteUI/igniteui-angular2) page.|
-ASP.NET Core 1.0 MVC Helpers | Ignite UI MVC Helpers now support ASP.NET Core 1.0.|
+ASP.NET Core 1.0 MVC Helpers | Ignite UI MVC Helpers now support ASP.NET Core 1.0. Checkout the [Using Ignite UI controls in ASP.NET Core 1.0](Using--IgniteUI-Controls-in-ASP.NET-Core-1.0-project.html) topic.|
 ASP.NET Core 1.0 MVC Tag Helpers | Ignite UI now provides Tag Helpers for ASP.NET Core 1.0.|
 
 ### igDataSource
@@ -55,7 +55,7 @@ Feature | Description
 
 Feature | Description
 ---|---
-Integration with Custom Components| The igZoombar now exposes a pluggable integration mechanism for third-party custom components.|
+Integration with Custom Components| The igZoombar now exposes a pluggable integration mechanism for third-party custom components. Checkout the [igZoombar Integration with Custom Components](igZoombar-Integration-with-Custom-Components.html) topic.|
 
 ## igGrid
 
@@ -87,11 +87,17 @@ Updating feature now works in row and cell edit mode when Multi-Row Layout is co
 
 ### <a id="igscroll"></a> New Control
 
+The igScroll is a stand-alone JQueryUI widget that allows enabling custom scrollbars with fluid scrolling functionality for desktop, hybrid and mobile environments.
+It allows you to create a consistent scrolling experience across all scrolling containers on all devices.
+
 ![](images/igscroll-basic.png)
 
 
 #### Related Topics
 -   [igScroll Overview](igScroll-Overview.html)
+-   [Configuring igScroll](Configuring-igScroll.html)
 
 #### Related Samples
 -   [Basic Usage](%%SamplesUrl%%/scroll/basic-usage)
+-   [Scrolling multiple containers at once](%%SamplesUrl%%/scroll/scrolling-multiple-containers)
+-   [Configuration Options](%%SamplesUrl%%/scroll/configuration-options)

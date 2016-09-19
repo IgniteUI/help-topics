@@ -179,7 +179,7 @@ The following table summarizes the supported scenarios of the `igGrid` Remotely 
 ---|---|---|---|---
 In View using `SetUnboundValues(` `string columnKey, List unboundValues)` | No | true | ![](../../../../../../../images/images/positive.png) | ![](../../../../../../../images/images/negative.png) Remote features are not applicable because DataSourceUrl is not set.
  |  | false |  | 
- | Yes Unbound columns are not populated with data, because the Grid configuration in View is not persisted. That is to say that the grid configuration is restored with the default values for all the settingsandMergeUnboundColumns are false by default). | true | ![](../../../../../../../images/images/negative.png) | ![](../../../../../../../images/images/negative.png) igGrid Disables Remote features for the unbound column as described in the [Known Issues and Limitations](igGrid-Known-Issues.html) topic.
+ | Yes Unbound columns are not populated with data, because the Grid configuration in View is not persisted. That is to say that the grid configuration is restored with the default values for all the settings and MergeUnboundColumns are false by default. | true | ![](../../../../../../../images/images/negative.png) | ![](../../../../../../../images/images/negative.png) igGrid Disables Remote features for the unbound column as described in the [Known Issues and Limitations](igGrid-Known-Issues.html) topic.
  |  | false |  | 
 In View using `SetUnboundValues( string columnKey, Dictionary unboundValues)` | No | true | ![](../../../../../../../images/images/positive.png) | ![](../../../../../../../images/images/negative.png) Remote features are not applicable because DataSourceUrl is not set.
  |  | false |  | 

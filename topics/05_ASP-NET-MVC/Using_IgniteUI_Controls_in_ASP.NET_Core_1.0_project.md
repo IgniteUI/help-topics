@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 |metadata|
 {
     "fileName": "mvc-aspnet-core",
@@ -8,11 +8,11 @@
 |metadata|
 -->
 
-# Configuring and using Ignite UI controls in ASP.NET Core 1.0
+# Using Ignite UI controls in ASP.NET Core 1.0
 
 ## Topic Overview
 
-This topic explains how to get started with Ignite UI� components in an ASP.NET MVC 6 application built with ASP.NET Core 1.0.
+This topic explains how to get started with Ignite UI™ components in an ASP.NET MVC 6 application built with ASP.NET Core 1.0.
 
 ### In this topic
 
@@ -24,15 +24,16 @@ This topic contains the following sections:
 
 ## <a id="nuget"></a> Referencing the Infragistics Web MVC NuGet package
 
-With the new ASP.NET most modules are now wrapped as NuGet packages. This allows you to retrieve and use only the specific modules you need for your app, without having to depend on a common assembly. All dependencies of the specific module will be restored out the box.
+With the new ASP.NET most modules are now wrapped as NuGet packages. This allows you to retrieve and use only the specific modules you need for your application, without having to depend on a common assembly. All dependencies of the specific module will be restored out of the box.
 
-As such our new MVC wrappers built on top of ASP.NET Core will also ship as NuGet package. 
-The NuGet package can be found in the installation directory of the IgniteUI product under MVC\MVC6\Bin\dotnetcore1.0.
+
+As such our new MVC wrappers built on top of ASP.NET Core will also ship as a NuGet package. 
+The NuGet package can be found in the installation directory of the Ignite UI product under MVC\MVC6\Bin\dotnetcore1.0.
 To add that directory as a package source for the NuGet package manager you can open the package manager and open the settings via the gear button.
 
 ![](images/packageSource.png)
 	 
-From the options window add a new package source and change the source path to point to the Nuget package in the installation directory. The result should look similar to the following screenshot.
+From the options window add a new package source and change the source path to point to the NuGet package in the installation directory. The result should look similar to the following screenshot.
 
 ![](images/packageSourceConfig.png)
 	 
