@@ -28,7 +28,7 @@ This topic contains the following sections:
     -   [igCombo](#combo)
     -   [igDataChart](#data-chart)
     -   [igDialog](#dialog)
-    -   [igUpload](#upload)
+	-   [igUpload](#upload)
     -   [igGrid – General](#grid)
     -   [igGrid – Data Binding](#grid-data-binding)
     -   [igGrid – Unbound Columns](#grid-unbound-columns)
@@ -333,10 +333,27 @@ Minimum and maximum values on date editors
 
             <td>
 Using `new Date()` for the for the `minValue`, `maxValue` and the `value` options can cause issues as it also has a time component that will be taken into account when evaluating limits (but not included and parsed from the default input format), so it's suggested to parse fixed dates or remove the time component.
-			</td>
+            </td>
 
             <td>
 ![](../images/images/positive.png)
+			</td>
+        </tr>
+
+        <tr>
+            <td>
+Exceeding Minimum and maximum values
+			</td>
+
+            <td>
+When you use the minValue and maxValue options in the igEditors, you should be aware that if you exceed the maxValue the editor will automatically revert the value to be equal to the maxValue property value. If you enter value that is prior to the minValue, the editor will automatically revert it to the minValue property value. In both cases you will recieve a visual warning that explains why the editor changes the value. 
+         <blockquote>
+**Note**: This limitation is not valid for the igTextEditor, igCheckboxEditor and igMaskEditor.
+        </blockquote>
+            </td>
+
+            <td>
+![](../images/images/negative.png)
 			</td>
         </tr>
     </tbody>
@@ -513,6 +530,7 @@ The id attribute is mandatory for the DOM control placeholder| The id attribute 
 Column keys which contain spaces are not supported|Column keys are used for generating some DOM elements IDs. Having spaces in an HTML id attribute is not allowed according to the <a href="http://www.w3.org/TR/html5/dom.html#the-id-attribute" target="_blank">HTML 5 specification</a>.| ![](../images/images/negative.png)
 The contextMenu event is renamed to cellRightClick|The event is renamed to be more self-explanatory.|![](../images/images/negative.png)
 Header text and  sorting/filtering/gear icons are misaligned in IE8  | This is a browser limitation due to IE8 not supporting css calc(). For details refer to: http://caniuse.com/#feat=calc| ![](../images/images/negative.png)
+igGrid does not support column keys containing special chars - [, ], \, (, ), etc. | The column keys are used in internal jQuery selectors for many of the grid's features. Currently the selectors are not explicitly escaped so any special characters in the column key would break the selectors. | ![](../images/images/positive.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
@@ -716,12 +734,12 @@ Status
         <td>RWD mode is not supported in IE8</td>
         <td>RWD is unable to determine the mode in IE8. This feature is mainly targeted at mobile compatibility so it is not supported under IE8.</td>
         <td>![](../images/images/negative.png)</td>
-        </tr>   
-	<tr>  
-	<td>RWD single column template is not supported with any of the grid features, excepts Paging.</td>  
-      <td>The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.</td>  
-      <td>![](../images/images/negative.png)</td>  
-      </tr>    	
+        </tr>     
+	<tr>
+        <td>RWD single column template is not supported with any of the grid features, excepts Paging.</td>  
+	<td>The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.</td> 
+        <td>![](../images/images/negative.png)</td>
+        </tr>  
     </tbody>
 </table>
 
@@ -828,8 +846,8 @@ When you have continuous virtualization enabled and you unfix a column, the grid
 ![](../images/images/negative.png)
 			</td>
         </tr>
-	<tr>
-            <td>
+		<tr>  
+        <td>  
 In Chrome and Safari when there is a caption with long text defined for the grid, the fixed column header's width will stretch to the length of the caption and the unfix column button may not be visible.
 			</td>
 
@@ -842,15 +860,15 @@ This is a third party issue in Chrome and Safari. In those browsers the thead el
         </tr>
 <tr>  
 <td>  
-The grid height cannot be set in percentage units.  
- </td>  
-        <td>  
-Setting grid height in percentage units is not supported.  
-			</td>  
-            <td>  
-![](../images/images/negative.png)  
-	</td>  
-  </tr>   
+        The grid height cannot be set in percentage units.  
+        </td>  
+                <td>
+        Setting grid height in percentage units is not supported.  
+                    </td>  
+                    <td>  
+        ![](../images/images/negative.png)  
+            </td>  
+        </tr> 
     </tbody>
 </table>
 
@@ -938,6 +956,7 @@ Row Selectors not working with column virtualization | Row Selectors are not sup
 The `igGridRowSelectors` widget requires the Selection feature enabled | The [`requireSelection`](%%jQueryApiUrl%%/ui.iggridrowselectors#options:requireSelection) option of the `igGridRowSelectors` widget is set to *true* by default and will throw an exception indicating that the Selection feature is required for using row selectors. | ![](../images/images/positive.png)
 Selecting not working correctly in IE 9 | In Internet Explorer 9, selecting using `RowSelectors` with or without checkboxes does not work correctly when the table is large enough to cause the page to have a vertical scrollbar and the user scrolls down. When the grid receives focus, Internet Explorer 9 scrolls the page back up and the selecting is either applied to the wrong row or not applied at all. | ![](../images/images/negative.png)
 The Selection feature cannot be enabled automatically | Automatically Enabling of the Selection feature does not work. The Selection widget is required for the `RowSelectors` to have full functionality. | ![](../images/images/positive.png)
+Text selection is not working when Selection feature is enabled | The Selection feature disables text selection inside the grid by cancelling the selectstart event and as a result the cell's text cannot be selected. | ![](../images/images/positive.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
@@ -978,6 +997,7 @@ Issue | Description | Status
 ---|---|---
 Saving exported file does not work in IE9 and earlier | GridExcelExporter uses a Blob object to keep the raw data of the exported worksheet, which is not supported in IE9 and earlier: https://developer.mozilla.org/en-US/docs/Web/API/Blob | ![](../images/images/negative.png)
 Only part of the data is exported in Append Rows on Demand or remote paging scenarios | The GridExcelExporter is entirely a client-side component and thus it deals only with data currently available on the client. In scenarios implementing Remote Paging and Append Rows on Demand when further sets of data are fetched through additional requests, this data is not exported. | ![](../images/images/positive.png)
+Custom filtering conditions are not applied in the exported worksheet | The custom filtering conditions available in igGrid expectedly are not available among the native Excel filtering conditions, so those are not applied in the exported worksheet. | ![](../images/images/negative.png)
 Go up to [Known Issues and Limitations Summary](#summary)
 
 

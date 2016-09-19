@@ -37,7 +37,7 @@ The igGridExcelExporter is dependent upon the following open source libraries:
 You can export the entire contents of a grid by passing the instance of the grid to the exporter's `export` static method. 
 
 ```javascript
-$.ig.GridExcelExporter.export($('#grid'), { 	
+$.ig.GridExcelExporter.exportGrid($('#grid'), { 	
 	fileName: 'igGrid',
 	worksheetName: 'Sheet1',
 	tableStyle: 'tableStyleLight13';
