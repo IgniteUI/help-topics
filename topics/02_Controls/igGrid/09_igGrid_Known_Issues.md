@@ -269,6 +269,28 @@ Use the [fixNonDataColumns](%%jQueryApiUrl%%/ui.iggrid#methods:fixNonDataColumns
 ![](../../images/images/negative.png)
 			</td>
         </tr>
+			<tr>
+		<td>
+On mobile devices when having Column Fixing, scrolling the fixed container doesn't display the scrollbars in the unfixed area.
+		</td>
+		<td>
+The custom scrollbars in the unfixed area are not displayed when the fixed area is scrolled.
+		</td>
+		<td>
+![](../images/images/negative.png)
+		</td>
+	</tr>
+	<tr>
+		<td>
+Scrolling both fixed and unfixed area on the same time while on touch devices is not supported.
+		</td>
+		<td>
+Only one of the two areas can be scrolled at a time while on touch environment.
+		</td>
+		<td>
+![](../images/images/negative.png)
+		</td>
+	</tr>
     </tbody>
 </table>
 
