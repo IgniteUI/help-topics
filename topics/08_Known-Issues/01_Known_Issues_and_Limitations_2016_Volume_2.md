@@ -914,6 +914,28 @@ This is related to that the record is separated in two physical rows - for fixed
 ![](../images/images/negative.png)
 		</td>
 	</tr>
+	<tr>
+		<td>
+On mobile devices when having Column Fixing, scrolling the fixed container doesn't display the scrollbars in the unfixed area.
+		</td>
+		<td>
+The custom scrollbars in the unfixed area are not displayed when the fixed area is scrolled.
+		</td>
+		<td>
+![](../images/images/negative.png)
+		</td>
+	</tr>
+	<tr>
+		<td>
+Scrolling both fixed and unfixed area on the same time while on touch devices is not supported.
+		</td>
+		<td>
+Only one of the two areas can be scrolled at a time while on touch environment.
+		</td>
+		<td>
+![](../images/images/negative.png)
+		</td>
+	</tr>
     </tbody>
 </table>
 
@@ -1347,5 +1369,6 @@ Issue | Description | Status
 ---|---|---
 When initailizing igScroll on a initially hidden element scrolling does not work.| When initializing the igScroll on a hidden element, after showing the element the scrollbars don't show and scrolling does not work| ![](../../images/images/positive.png)
 Keyboard Interaction don't work if the igScroll target element does not have tabIndex attribute set and is not focusable. | Keyboard interactions are only availble when the igScroll element is focused. If the element is not focusable (has no tabIndex attribute) no keyboard interactions can be invoked. | ![](../../images/images/negative.png)
+When two elements with igScroll instances are synced, scrolling one of the elements won't show the scrollbars on the other element. | If two elements are synched via the [syncedElemsH](%%jQueryApiUrl%%/ui.igscroll#options:syncedElemsH)/[syncedElemsV](%%jQueryApiUrl%%/ui.igscroll#options:syncedElemsV) properties and both have igScroll instances initialized on them, when one is scrolled the scrollbars of the other will not be displayed.| ![](../../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)

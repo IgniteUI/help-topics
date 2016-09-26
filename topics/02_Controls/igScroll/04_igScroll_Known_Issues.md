@@ -37,6 +37,7 @@ Issue | Description | Status
 ------|-------------|-------
 [When initailizing igScroll on a initially hidden element scrolling does not work.](#initially-hidden) | When initializing the igScroll on a hidden element, after showing the element the scrollbars don't show and scrolling does not work| ![](../../images/images/positive.png)
 Keyboard Interaction don't work if the igScroll target element does not have tabIndex attribute set and is not focusable. | Keyboard interactions are only availble when the igScroll element is focused. If the element is not focusable (has no tabIndex attribute) no keyboard interactions can be invoked. | ![](../../images/images/negative.png)
+When two elements with igScroll instances are synced, scrolling one of the elements won't show the scrollbars on the other element. | If two elements are synched via the [syncedElemsH](%%jQueryApiUrl%%/ui.igscroll#options:syncedElemsH)/[syncedElemsV](%%jQueryApiUrl%%/ui.igscroll#options:syncedElemsV) properties and both have igScroll instances initialized on them, when one is scrolled the scrollbars of the other will not be displayed.| ![](../../images/images/negative.png)
 
 ## <a id="scroll-general"></a> igScroll – General
 

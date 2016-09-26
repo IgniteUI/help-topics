@@ -100,6 +100,7 @@ To navigate to the required JavaScript files listing for the particular control,
 -   [igUpload](#igUpload)
 -   [igVideoPlayer](#igVideoPlayer)
 -   [igZoombar](#igZoombar)
+-   [igScroll](#igScroll)
 
 #### <a id="igBulletGraph"></a>igBulletGraph
 
@@ -1184,6 +1185,35 @@ JavaScript files in the page code.
 			<td>
 			    infragistics.ui.zoombar-en.js
 			    <br>infragistics.ui.zoombar.js
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+>**Note:** Localization scripts must be referenced before the actual
+JavaScript files in the page code.
+
+#### <a id="igScroll"></a>igScroll 
+<table class="table">
+	<thead>
+		<tr>
+			<th>Script Type</th>
+			<th>Script File Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Dependency Scripts</td>
+			<td>
+				infragistics.util.js
+				<br> modernizr.js
+			</td>
+		</tr>
+		<tr>
+			<td>Scripts</td>
+			<td>
+			    infragistics.ui.scroll-en.js
+			    <br>infragistics.ui.scroll.js
 			</td>
 		</tr>
 	</tbody>
