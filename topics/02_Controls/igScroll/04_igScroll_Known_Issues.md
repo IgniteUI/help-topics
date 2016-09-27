@@ -11,7 +11,7 @@
 # Known Issues and Limitations (igScroll)
 
 
-The following table summarizes the known issues and limitations of the `igScroll`™ control. Detailed explanations of some of the issues and the existing workarounds are provided after the summary table.
+The following table summarizes the known issues and limitations of the igScroll™ control. Detailed explanations of some of the issues and the existing workarounds are provided after the summary table.
 
 **Legend:**
 <table class="table">
@@ -35,19 +35,19 @@ The following table summarizes the known issues and limitations of the `igScroll
 
 Issue | Description | Status
 ------|-------------|-------
-[When initailizing igScroll on a initially hidden element scrolling does not work.](#initially-hidden) | When initializing the igScroll on a hidden element, after showing the element the scrollbars don't show and scrolling does not work| ![](../../images/images/positive.png)
-Keyboard Interaction don't work if the igScroll target element does not have tabIndex attribute set and is not focusable. | Keyboard interactions are only availble when the igScroll element is focused. If the element is not focusable (has no tabIndex attribute) no keyboard interactions can be invoked. | ![](../../images/images/negative.png)
-When two elements with igScroll instances are synced, scrolling one of the elements won't show the scrollbars on the other element. | If two elements are synched via the [syncedElemsH](%%jQueryApiUrl%%/ui.igscroll#options:syncedElemsH)/[syncedElemsV](%%jQueryApiUrl%%/ui.igscroll#options:syncedElemsV) properties and both have igScroll instances initialized on them, when one is scrolled the scrollbars of the other will not be displayed.| ![](../../images/images/negative.png)
+[When initializing igScroll on a initially hidden element scrolling does not work.](#initially-hidden) | When initializing the igScroll on a hidden element, after showing the element the scrollbars don't show and scrolling does not work| ![](../../images/images/positive.png)
+Keyboard Interaction don't work if the igScroll target element does not have `tabIndex` attribute set and is not focusable. | Keyboard interactions are only available when the igScroll element is focused. If the element is not focusable (has no `tabIndex` attribute) no keyboard interactions can be invoked. | ![](../../images/images/negative.png)
+When two elements with igScroll instances are synced, scrolling one of the elements won't show the scrollbars on the other element. | If two elements are synched via the [`syncedElemsH`](%%jQueryApiUrl%%/ui.igscroll#options:syncedElemsH)/[`syncedElemsV`](%%jQueryApiUrl%%/ui.igscroll#options:syncedElemsV) properties and both have igScroll instances initialized on them, when one is scrolled the scrollbars of the other will not be displayed.| ![](../../images/images/negative.png)
 
 ## <a id="scroll-general"></a> igScroll – General
 
-### <a id="initially-hidden"></a> When initailizing igScroll on a initially hidden element scrolling does not work.
+### <a id="initially-hidden"></a> When initializing igScroll on a initially hidden element scrolling does not work.
 
  When initializing the igScroll on a hidden element, after showing the element the scrollbars don't show and scrolling does not work.
  
 > **Workaround** 
 > 
-> The `scrollHeight`/`scrollWidth` options should be set to the related container height and width after the container is shown.
+> The [`scrollHeight`](%%jQueryApiUrl%%/ui.igscroll#options:scrollHeight)/[`scrollWidth`](%%jQueryApiUrl%%/ui.igscroll#options:scrollWidth) options should be set to the related container height and width after the container is shown.
 
 ## Related Content
 
@@ -55,5 +55,4 @@ When two elements with igScroll instances are synced, scrolling one of the eleme
 
 The following topics provide additional information related to this topic.
 
-- [igScroll](igScroll.html) - This is a group of topics containing the help content about the `igSCroll` control.
-
+- [igScroll](igScroll.html) - This is a group of topics containing the help content about the igScroll control.
