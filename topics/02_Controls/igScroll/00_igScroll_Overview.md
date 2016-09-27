@@ -67,7 +67,7 @@ For mobile devices the default (thin) scrollbars are used to visualize the scrol
 The way to scroll on mobile is via touch interactions. You can swipe in a direction to scroll the content in that direction and the scrollbar will be synced accordingly. 
 There is inertia enabled by default, so the content will be scrolled initially fast and then the speed will gradually decrease and the scrolling will stop. This behavior can be further modified via the [`inertiaDuration`](%%jQueryApiUrl%%/ui.igscroll#options:inertiaDuration) option.
 
-The scrollbar is displayed in the following scenarios:
+The scrollbars are displayed in the following scenarios:
 - When the page loads initially 
 	They'll be displayed for a short time to notify the users that the related areas are scrollable. After this, if the user does not further interact with them, they will hide.
 - When the user touches or swipes on the scrollable content area
@@ -82,7 +82,7 @@ If you're interacting with the scrollable content (hovering, scrolling via the m
 
 If you hover the actual scrollbar area the big scrollbars will be displayed and will allow you to further interact with them. 
 
-The following elements of the big scrollbar are interactable:
+The following elements of the big scrollbars are interactable:
 
 - the arrow buttons 
 
@@ -94,7 +94,7 @@ The following elements of the big scrollbar are interactable:
 
 	You can drag and drop the thumb in order to scroll the content. 
 
-The big scrollbars will remain visible while you interact with it. Once you no longer interact, it will hide. While you're still hovering over the content the thin scrollbars will be visible.
+The big scrollbars will remain visible while you interact with them. Once you no longer interact, they will hide and only the thin scrollbars will be visible. While you're still hovering over the content the thin scrollbars will stay visible.
 Once you're no longer interacting or hovering over the scrollable area all scrollbars will hide.
 
 ### igScroll on Hybrid
@@ -145,9 +145,9 @@ Initially if the DOM has the following structure:
  ```html
 <body>
 <div>
-   <div id='containerWrapper'>
-		<div id='scrContainer' style="height:200px; overflow: hidden;">
-			<div id='scrollContent'>
+   <div id='containerWrapper' style="width:600px; height:400px; overflow:hidden; position:relative;">
+		<div id='scrContainer' style="width:600px; height:400px; overflow:hidden; position:absolute;">
+			<div id='scrollContent' style="position:absolute;">
 				  <h1> Some Title </h1>
 				  <p> Paragraph </p>
 				  <table>...</table>
@@ -159,6 +159,7 @@ Initially if the DOM has the following structure:
  ```
  
  In this case the igScroll should be initialized on the "scrContainer" element, for example:
+ 
  **In JavaScript:**
 
 ```js
@@ -175,7 +176,7 @@ The following steps demonstrate how to create a basic implementation of the igSc
 
 To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) help topic.
 
-1.  On your HTML page, **reference the required JavaScript and CSS** files. 
+1.  On your HTML page, **reference the required JavaScript and CSS** files.
 
 **In HTML:**
 
@@ -187,6 +188,7 @@ To get started, include the required and localized resources for your applicatio
 <link href="css/themes/infragistics/infragistics.theme.css" rel="stylesheet" type="text/css" />
 <link href="css/structure/infragistics.css" rel="stylesheet" type="text/css" />
 ```
+
 2. Next, create a simple scrollable area. For this example we'll create a simple div DOM element with some long text inside to allow scrolling.
 
 
