@@ -68,10 +68,10 @@ Format specifier | Description
 "hh"| Hour number from 01 to 12 (12 hour format)|
 "H"| Hour number from 0 to 23 (24 hour format)|
 "HH"| Hour number from 00 to 23 (24 hour format)|
-"m"| Minute from 0 to 59|
-"mm"| Minute from 00 to 59|
-"s"| Second from 0 to 59|
-"ss"| Second from 00 to 59|
+"m"| Minutes from 0 to 59|
+"mm"| Minutes from 00 to 59|
+"s"| Seconds from 0 to 59|
+"ss"| Seconds from 00 to 59|
 "t"| The first character of AM or PM designator|
 "tt"| AM or PM designator|
 "f"| Tenths of a second|
@@ -97,9 +97,9 @@ List of supported format specifiers:
 
 Format specifier | Description
 --- | --- |
-"0"| Zero format character with rounding. Replaces "0" with the corresponding digit if available. Otherwise outputs "0".
-"#"| Digit format character with rounding. Replaces "#" with the corresponding digit if available. Otherwise outputs nothing.
-"."| Dot format character. Determines the location of the decimal separator in the result string.
+"0"| Zero format character with rounding. Replaces "0" with the corresponding digit if available. Otherwise outputs "0". Example: `$.ig.formatter(0.7, "number", "0.000")` outputs "0.700".
+"#"| Digit format character with rounding. Replaces "#" with the corresponding digit if available. Otherwise outputs nothing. Example: `$.ig.formatter(0.7, "number", "#.###")` outputs "0.7".
+"."| Dot format character. Determines the location of the decimal separator in the result string. Example: `$.ig.formatter(0.77, "number", "0.00")` outputs "0.77".
 "number"| Formats the number with 2 digits after the decimal separator with rounding.|
 "currency"| Formats the number as currency using the `$.ig.regional.defaults` settings.|
 "percent"| Formats the number as percent using the `$.ig.regional.defaults` settings.|
