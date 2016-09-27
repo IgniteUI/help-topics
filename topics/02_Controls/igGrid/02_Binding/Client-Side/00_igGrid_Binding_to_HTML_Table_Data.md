@@ -23,7 +23,7 @@ The Ignite UI® `igGrid`, allows binding to existing plain HTML tables, through 
 **In Javascript:**
 
 ```js
-dataSource: $(‘#myTable’)[0]
+dataSource: $('#myTable')[0]
 ```
 
 > **Note:** the indexer is needed in order to select the DOM element containing the data.
