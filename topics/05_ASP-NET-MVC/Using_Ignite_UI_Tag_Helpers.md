@@ -12,7 +12,7 @@
 
 ## Topic Overview
 
-This topic demonstrates how to configure Ignite UI™ components by using the Tag Helpers syntax introduced in the new ASP.NET Core MVC framework
+This topic demonstrates how to configure Ignite UI™ components by using the Tag Helpers syntax introduced in the new ASP.NET Core 1.0
 
 ### In this topic
 
@@ -118,17 +118,20 @@ and lets configure igGrid with updating feature with editor some editors:
 </script>
 ```
 
-As demonstrated all the hierarchy is pretty similar to the Html Helpers with the difference that options being set
-with lambda expression, are instead specified by using a child tag matching the option name. 
-For instance the columns with Html Helper are being set:
+As demonstrated, the control configuration is similar to what would be done using the Html Helpers.
+The control is declared as tag and options are set as tag attributes with expcetion of the options 
+that are set using lambda expression, which are declared as child tags.
+
+For example the columns with Html Helper are being set:
 
 ```csharp
 .Columns(column =>
 {
-	column.For(m => m.Id).HeaderText("ID").Width("150px");
-	column.For(m => m.Username).HeaderText("Username").Width("200px");
-	column.For(m => m.IsAdmin).HeaderText("IsAdmin").DataType("bool").Width("200px");
-	column.For(m => m.CountryId).HeaderText("Country").Width("200px");
+    column.For(m => m.Id).HeaderText("ID").Width("150px");
+    column.For(m => m.Username).Width("200px");
+    column.For(m => m.IsAdmin).HeaderText("Is аdmin").DataType("bool").Width("200px");
+    column.For(m => m.BirthDate).HeaderText("Is аdmin").DataType("bool").Width("200px");
+    column.For(m => m.CountryId).HeaderText("Country").Width("200px");
 })
 ```
 
@@ -136,11 +139,11 @@ and by using Tag Helpers:
 
 ```html
 <columns>
-	<column key="Id" header-text="ID" width="150px" />
-	<column key="Username" header-text="Username" width="200px" />
-	<column key="IsAdmin" header-text="IsAdmin" ig-data-type="bool" width="200px" />
-	<column key="BirthDate" header-text="BirthDate" ig-data-type="date" width="100px" />
-	<column key="CountryId" header-text="Country" width="200px" />
+    <column key="Id" header-text="ID" width="150px" />
+    <column key="Username" width="200px" />
+    <column key="IsAdmin" header-text="Is аdmin" ig-data-type="bool" width="200px" />
+    <column key="BirthDate" header-text="Birth date" ig-data-type="date" width="100px" />
+    <column key="CountryId" header-text="Country" width="200px" />
 </columns>
 ```
 
