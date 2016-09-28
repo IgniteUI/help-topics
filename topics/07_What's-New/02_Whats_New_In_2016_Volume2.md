@@ -547,3 +547,23 @@ It allows you to create a consistent scrolling experience across all scrolling c
 -   [Basic Usage](%%SamplesUrl%%/scroll/basic-usage)
 -   [Scrolling multiple containers at once](%%SamplesUrl%%/scroll/scrolling-multiple-containers)
 -   [Configuration Options](%%SamplesUrl%%/scroll/configuration-options)
+
+
+## igValidator
+
+### <a id="credit-card"></a> Adding Credit Card check
+
+Adding [`creditCard`](%%jQueryApiUrl%%/ui.igValidator#options:creditCard) option and validation rule.
+
+#### Related topics:
+[Validation Rules](igvalidator-validation-rules.html)
+
+
+## igEditors
+
+### <a id="editors"></a> Adding EmailAddress and Compare Data Annotation Validation Attributes
+
+Feature | Description
+---|---
+EmailAddress | Validate text editor against a standard MVC email pattern.|
+Compare | Use for comparison between linked editors. Often used in a password fields matching scenario.|
