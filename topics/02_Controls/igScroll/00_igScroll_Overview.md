@@ -46,7 +46,7 @@ For the custom scrollbars there are 3 possible states for the scrollbars:
 	
 	![](images/igScroll_Native.png)
 		
-	The scrolling is still handled manually by the igScroll and can be configured via the igScroll's options.
+The scrolling is still handled manually by the igScroll and can be configured via the igScroll's options.
    
 	
 ## <a id="behavior-igScroll"></a> Behavior and Visualization
@@ -229,7 +229,7 @@ To get started, include the required and localized resources for your applicatio
 
 	```js
 	$(function () {
-		$("#scrollableContent").igScroll({});
+		$("#scrollableContent").igScroll();
 	});
 	```
 
@@ -241,14 +241,13 @@ To get started, include the required and localized resources for your applicatio
 
 The igScroll allows linking multiple containers so that when one is scrolled the others will also be scrolled accordingly.
 There are two options for specifying synced elements:
-- [`syncedElemsV`](%%jQueryApiUrl%%/ui.igscroll#options:syncedElemsV) - Allows setting elements (could be html elements or jQuery elements) that will be linked to the main content container vertically. When the content is scrolled on the Yaxis, the linked elements will scroll up/down.
+- [`syncedElemsV`](%%jQueryApiUrl%%/ui.igscroll#options:syncedElemsV) - Allows setting elements (could be html elements or jQuery elements) that will be linked to the main content container vertically. When the content is scrolled on the Y axis, the linked elements will scroll up/down.
  
-- [`syncedElemsH`](%%jQueryApiUrl%%/ui.igscroll#options:syncedElemsH) - 
- Allows setting elements (could be html elements or jQuery elements) that will be linked to the main content container horizontally. When the content is scrolled on the X axis, the linked elements will scroll left/right.
+- [`syncedElemsH`](%%jQueryApiUrl%%/ui.igscroll#options:syncedElemsH) - Allows setting elements (could be html elements or jQuery elements) that will be linked to the main content container horizontally. When the content is scrolled on the X axis, the linked elements will scroll left/right.
 
 The following steps demonstrate how to create a basic implementation of the igScroll widget  which allows scrolling multiple containers at once.
 
-Steps 
+Steps:
 
 1. The same as the described in the [Adding igScroll to a Web Page](#adding-igScroll) section above. 
 
