@@ -85,13 +85,13 @@ and lets configure igGrid with updating feature with editor some editors:
          width="900px"
          id="grid"
          update-url="@Url.Action("Update")">
-    <columns>
-        <column key="Id" header-text="ID" width="150px" />
-        <column key="Username" header-text="Username" width="200px" />
-        <column key="IsAdmin" header-text="IsAdmin" ig-data-type="bool" width="200px" />
-        <column key="BirthDate" header-text="BirthDate" ig-data-type="date" width="100px" />
-        <column key="CountryId" header-text="Country" width="200px" />
-    </columns>
+	<columns>
+		<column key="Id" header-text="ID" width="150px" />
+		<column key="Username" width="200px" />
+		<column key="IsAdmin" header-text="Is аdmin" ig-data-type="bool" width="200px" />
+		<column key="BirthDate" header-text="Birth date" ig-data-type="date" width="100px" />
+		<column key="CountryId" header-text="Country" width="200px" />
+	</columns>
     <features>
         <updating>
             <updating-column-settings>
