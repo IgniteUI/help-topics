@@ -50,7 +50,7 @@ The custom provider should implement all methods available in the base class `$.
 A brief description of each method follows:
 
 - `init` - Constructor returning the provider instance on exit. The default implementation assigns passed options to the settings property.
-- `clean` - A method called just before igZoombar deletes the provider instance. Can be used to execute necessary clean-up on the.
+- `clean` - A method called just before igZoombar deletes the provider instance. Can be used to execute necessary clean-up on the clone or target components.
 - `getBaseOpts` - igZoombar calls this to get a valid set of options the component its attached to is initialized with. The widget does not use the returned value itself but rather passes it for further processing back to the provider.
 - `cleanOptsForZoom` - After obtaining the base options igZoombar will call this method expecting it to modify them so that they can be used to render the clone component inside its own zoom UI. Example modifications are the removal of grid lines, axes, labels, tooltips, zoom actions. The width and height of the container the clone component should fit in is added by igZoombar as top level properties of the options object passed.
 - `createClone` - Should initialize and render the clone component. igZoombar will call it with two parameters - container to initialize the clone on and the options that are first passed through the `getBaseOpts` and `cleanOptsForZoom` functions.  
@@ -184,7 +184,7 @@ window.onload = function () {
 ```
 Since ChartJS is not zoomable out of the box, no backwards zoom communication using the callback is needed for this specific use-case.
 
-A full sample containing the working chart and zoombar is available through the links at the end of the page.
+A full demo sample containing the working chart and zoombar is available through the links at the end of the page.
 
 ## <a id="related-content"></a>Related Content
 
@@ -201,7 +201,6 @@ The following topics provide additional information related to this topic.
 
 ### <a id="samples"></a>Samples
 
-The following samples provide additional information related to this topic.
-[//]: # (This sample is part of the GitHub repo demos and should link to github.io)
+The following sample provides additional information related to this topic.
 
-- [igZoombar with ChartJS](%%SamplesUrl%%/): This sample demonstrates integrating `igZoombar` with a `ChartJS` control.
+- [igZoombar with ChartJS](https://github.com/IgniteUI/ignite-ui/blob/master/demos/zoombar/zoombar-chartjs.html): This sample demonstrates integrating `igZoombar` with a `ChartJS` control.
