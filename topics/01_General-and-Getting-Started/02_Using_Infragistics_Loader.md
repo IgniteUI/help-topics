@@ -66,6 +66,26 @@ $.ig.loader(function () {
 
 Here, the resources for the igGrid are still immediately loaded, but you have a finer-grained control over where you are handling the notification when the files are loaded.
 
+Starting in version 2016.2 the loader is deferring notifications of the resources availability til jQuery's document ready. This allows for convenient event flow inline with jQuery standards. The following code snippet demonstrates this new capability:
+
+```javascript
+$.ig.loader({
+    scriptPath: 'http://localhost/igniteui/js/',
+    cssPath: 'http://localhost/igniteui/css/',
+    resources: 'igCombo'
+});
+
+$(function () {
+    // Document is ready and igCombo resources are loaded
+    $("#combo").igCombo({
+        dataSource: data,         
+        valueKey: "ID",
+        textKey: "Name"
+    });
+});
+```
+> **Note:** Deferring of the document ready event is only available in jQuery version 1.6 and above therefore this or newer version of the library is required to be used with Ignite UI 2016.2 and above.
+
 ### Load on Demand
 When you define resources up front as an option while initializing the loader, all files are immediately downloaded. An alternative to this approach, however, is to load scripts on demand. Loading on demand can help boost the performance of your pages by deferring the file loading until the moment they are needed on the page. The following code demonstrates how to initialize the loader without immediately loading any files.
 
@@ -200,11 +220,15 @@ Often when building a resource expression all you need to use is the name of the
 
 #### igDataChart
 - Category
+- RangeCategory
+- VerticalCategory
 - Financial
+- ExtendedFinancial
 - Polar
 - Radial
-- RangeCategory
 - Scatter
+- Stacked
+- Annotation
 
 For instance:
 
