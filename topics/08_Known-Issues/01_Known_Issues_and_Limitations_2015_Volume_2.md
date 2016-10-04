@@ -1,20 +1,20 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "known-issues-and-limitations-2016-volume-1",
+    "fileName": "known-issues-and-limitations-2015-volume-2",
     "controlName": "",
     "tags": ["Breaking Changes","Known Issues"]
 }
 |metadata|
 -->
 
-# Known Issues and Limitations in 2016 Volume 1
+# Known Issues and Limitations in 2015 Volume 2
 
 ## Topic Overview
 
 ### Purpose
 
-This summarizes the known issues and limitations of the Ignite UI™ 2016 Volume 1 release. Information about previous releases can be found [here](Known-Issues-Revision-History.html).
+This summarizes the known issues and limitations of the Ignite UI™ 2015 Volume 2 release. Information about previous releases can be found [here](Known-Issues-Revision-History.html).
 
 ### In this topic
 
@@ -74,7 +74,7 @@ This topic contains the following sections:
 
 ## <a id="summary"></a> Known Issues and Limitations Summary
 
-The following table summarizes the known issues and limitations of the Ignite UI 2016 Volume 1 release. Detailed explanations of known issues and the possible workarounds are provided in the known issues topics for each control.
+The following table summarizes the known issues and limitations of the Ignite UI 2015 Volume 2 release. Detailed explanations of known issues and the possible workarounds are provided in the known issues topics for each control.
 <a id="legend"></a>
 
 Legend | 
@@ -184,6 +184,21 @@ clone
 
             <td>
 ![](../images/images/negative.png)
+			</td>
+        </tr>
+        <tr>
+            <td>
+The Infragistics theme now includes a font icon set replacing the default [jQuery UI Icons](https://api.jqueryui.com/theming/icons/)
+			</td>
+            <td>
+This change allows font-based icons to scale for high resolution displays. 
+While it should work seamlessly, there is a chance that additional custom styling might need to be updated - for example icon dimensions now scale with `font-size`.
+To continue using background image instead an `!important` rule override might be required as well as hiding the `::before` pseudo element.
+
+Note that at this point the `igRating` and `igHtmlEditor` controls retain their custom icons. Furthermore, other available themes remain unchanged.
+            </td>
+            <td>
+![](../images/images/positive.png)
 			</td>
         </tr>
     </tbody>
@@ -333,34 +348,12 @@ Minimum and maximum values on date editors
 
             <td>
 Using `new Date()` for the for the `minValue`, `maxValue` and the `value` options can cause issues as it also has a time component that will be taken into account when evaluating limits (but not included and parsed from the default input format), so it's suggested to parse fixed dates or remove the time component.
-            </td>
+			</td>
 
             <td>
 ![](../images/images/positive.png)
 			</td>
         </tr>
-       
-               <tr>
-            <td>
-Android Web View (chrome mobile and android internet browser) doesn’t fire keypress event
-			</td>
-
-            <td>
-           Some features of the editors rely on keypress event for character recognition – which makes those features unsupported on some Android browsers during auto complete/suggest (IME) input. The alternatives in the new DOM3 UI events specification needs to be finalized in order to commit to fully supporting those features on android devices.
-
-Specific options affected in igTextEditor are excludeKeys, includeKeys, toLower and toUpper. 
-This also affects continuous character restriction functionality during typing in the igMaskEditor and the derived igDateEditor. Validation before the editor accepts the value (on enter or blur) should still work as expected.
-All the numeric type editors should work as expected on android devices.
- 
-			</td>
-
-            <td>
-![](../images/images/negative.png)
-			</td>
-        </tr>
-         
-        
-
         <tr>
             <td>
 Exceeding Minimum and maximum values
@@ -732,7 +725,6 @@ Column virtualization will not work when grid width is defined in percentage uni
 Fixed virtualization is not supported with RWD Mode | Fixed virtualization depends on the row's height being constant. If the row's height changes the fixed virtualization will not work as expected. RWD Mode changes the row's height as it adopts to the screen size so fixed virtualization will not work as expected with it. | ![](../images/images/positive.png)
 Column virtualization is not supported with continuous virtualization | Column virtualization is supported only with fixed virtualization. When column virtualization is enabled([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) then the virtualization mode must be set to "fixed"([virtualizationMode](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) = "fixed"). | ![](../images/images/negative.png)
 Virtualization and auto sizing of columns is not supported | Auto sizing columns by setting their width option to "*"  is not supported with virtualization. | ![](../images/images/negative.png)
-When fixed virtualization is enabled tabbing from outside of the grid's content into the rows will focus the first visible row as opposed to the actual first row in the grid. | When fixed virtualization is enabled and you tab from outside of the grid's content inside the rows the first visible row will take focus.  Same applies when Shift+Tab is used when focus is on an element after the grid - the focus will be set to the last visible cell.|![](../../images/images/negative.png)
 
 ### <a id="grid-responsive"></a> [igGrid – Responsive Web Design Mode](igGrid-Known-Issues.html)
 <table class="table table-striped">
@@ -758,10 +750,10 @@ Status
         <td>![](../images/images/negative.png)</td>
         </tr>     
 	<tr>
-        <td>RWD single column template is not supported with any of the grid features, excepts Paging.</td>  
-	<td>The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.</td> 
-        <td>![](../images/images/negative.png)</td>
-        </tr>  
+	<td>RWD single column template is not supported with any of the grid features, excepts Paging.</td>    
+	<td>The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.</td>    
+        <td>![](../images/images/negative.png)</td>    
+        </tr>
     </tbody>
 </table>
 
@@ -833,7 +825,7 @@ Misalignment of fixed and unfixed parts of the rows in IE9+
 			</td>
 
             <td>
-In Internet Explorer 9 or higher, if you fix a column in an igGrid with a large amount of records and scroll down to the middle of the grid, you will see misalignment between the fixed and unfixed parts of the rows. This issue is caused
+In Internet Explorer 9 or higher, if you fix a column in an igGrid and scroll down to the middle of the grid, you will see misalignment between the fixed and unfixed parts of the rows. This issue is caused
                     by the IE9 engine.
 			</td>
 
@@ -855,7 +847,7 @@ The column widths are mandatory and should be defined in pixels units (either ex
 			</td>
         </tr>
 
-        <tr>
+<tr>
             <td>
 The grid scrolls to the top, when a column is unfixed and continuous virtualization is enabled
 			</td>
@@ -868,18 +860,30 @@ When you have continuous virtualization enabled and you unfix a column, the grid
 ![](../images/images/negative.png)
 			</td>
         </tr>
-		<tr>  
-<tr>
-        <td>  
-The [fixDataSkippedColumns](%%jQueryApiUrl%%/ui.iggrid#methods:fixDataSkippedColumns) and [unfixDataSkippedColumns](%%jQueryApiUrl%%/ui.iggrid#methods:unfixDataSkippedColumns) methods have been deprecated.
-	</td>
+        <tr>
             <td>
-Use the [fixNonDataColumns](%%jQueryApiUrl%%/ui.iggrid#methods:fixNonDataColumns) and [unfixNonDataColumns](%%jQueryApiUrl%%/ui.iggrid#methods:unfixNonDataColumns) methods instead.
-	</td>
-        <td>
+In Chrome and Safari when there is a caption with long text defined for the grid, the fixed column header's width will stretch to the length of the caption and the unfix column button may not be visible.
+			</td>
+
+            <td>
+This is a third party issue in Chrome and Safari. In those browsers the thead element, which contains the fixed headers, stretches to the full width of the caption, which may lead to the unfix button going outside of the visible area of the header (in cases where the column width is smaller than the caption width). All other browsers retain the same column width in the fixed grid area and don't exhibit this behavior.	    </td>
+
+            <td>
 ![](../images/images/negative.png)
-	</td>
-</tr>
+			</td>
+        </tr>
+	<tr>
+            <td>
+The grid height cannot be set in percentage units.  
+			</td>
+            <td>
+Setting grid height in percentage units is not supported.  
+			</td>  
+            <td>
+![](../images/images/negative.png)
+			</td>
+        </tr>
+	<tr>
             <td>
 In Chrome and Safari when there is a caption with long text defined for the grid, the fixed column header's width will stretch to the length of the caption and the unfix column button may not be visible.
 			</td>
@@ -893,26 +897,15 @@ This is a third party issue in Chrome and Safari. In those browsers the thead el
         </tr>
 <tr>  
 <td>  
-        The grid height cannot be set in percentage units.  
-        </td>  
-                <td>
-        Setting grid height in percentage units is not supported.  
-                    </td>  
-                    <td>  
-        ![](../images/images/negative.png)  
-            </td>  
-        </tr> 
-	<tr>
-		<td>
-Grid applies the focus to the unfixed part of the row when selecting is done through the row selectors.
-		</td>
-		<td>
-This is related to that the record is separated in two physical rows - for fixed and unfixed part. And only one element on the page can be focused.
-		</td>
-		<td>
-![](../images/images/negative.png)
-		</td>
-	</tr>
+The grid height cannot be set in percentage units.  
+ </td>  
+        <td>  
+Setting grid height in percentage units is not supported.  
+			</td>  
+            <td>  
+![](../images/images/negative.png)  
+	</td>  
+  </tr>   
     </tbody>
 </table>
 
@@ -1000,7 +993,7 @@ Row Selectors not working with column virtualization | Row Selectors are not sup
 The `igGridRowSelectors` widget requires the Selection feature enabled | The [`requireSelection`](%%jQueryApiUrl%%/ui.iggridrowselectors#options:requireSelection) option of the `igGridRowSelectors` widget is set to *true* by default and will throw an exception indicating that the Selection feature is required for using row selectors. | ![](../images/images/positive.png)
 Selecting not working correctly in IE 9 | In Internet Explorer 9, selecting using `RowSelectors` with or without checkboxes does not work correctly when the table is large enough to cause the page to have a vertical scrollbar and the user scrolls down. When the grid receives focus, Internet Explorer 9 scrolls the page back up and the selecting is either applied to the wrong row or not applied at all. | ![](../images/images/negative.png)
 The Selection feature cannot be enabled automatically | Automatically Enabling of the Selection feature does not work. The Selection widget is required for the `RowSelectors` to have full functionality. | ![](../images/images/positive.png)
-["Select All"](igGrid-Configuring-Row-Selectors.html#select-all-pages) functionality does not work for remote Paging | The [`enableSelectAllForPaging`](%%jQueryApiUrl%%/ui.iggridrowselectors#options:enableSelectAllForPaging) option is not working for remote Paging scenario. | ![](../../images/images/negative.png)
+["Select All"](igGrid-Configuring-Row-Selectors.html#select-all-pages) functionality does not work for remote Paging | The [`enableSelectAllForPaging`](%%jQueryApiUrl%%/ui.iggridrowselectors#options:enableSelectAllForPaging) option is not working for remote Paging scenario. | ![](../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
@@ -1051,10 +1044,11 @@ Go up to [Known Issues and Limitations Summary](#summary)
 Issue | Description | Status
 ---|---|---
 Adding a new row with Updating and Virtualization enabled requires immediate committing | Adding a new row is not supported when the Updating and Virtualization features are enabled while [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) is disabled. Virtualization is not aware of the newly added row when `autoCommit` is *false*. | ![](../images/images/positive.png)
-Excel Navigation mode supported only for Cell Edit mode. | When [`excelNavigationMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:excelNavigationMode) is enabled, navigating with the arrows is only possible with "cell" [`editMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:editMode). Other Edit modes (*row*, *dialog*, *none*, *null*) are not supported with  `excelNavigationMode`. | ![](../images/images/negative.png)
+Excel Navigation mode supported only for Cell Edit and Row Edit modes. | When [excelNavigationMode](%%jQueryApiUrl%%/ui.iggridupdating#options:excelNavigationMode) is enabled, navigating with the arrows is only possible with *"cell"* or *"row"* [`editMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:editMode). Other Edit modes (*“rowedittemplate”*, *none*, *null*) are not supported with [`excelNavigationMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:excelNavigationMode). | ![](../images/images/negative.png)
 Adding and updating a virtual grid doesn’t work if it is grouped | When using GroupBy and Updating in a virtual grid, updating or adding rows will not work when the grid is grouped. If you ungroup you will see the newly added record at the bottom of the grid records. | ![](../images/images/negative.png)
+`rowEditDialogMaxHeight` property renamed to [rowEditDialogContentHeight](%%jQueryApiUrl%%/ui.iggridupdating#options:rowEditDialogContentHeight) | This property is related to the Row Edit Template ([`editMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:editMode)=*“rowedittemplate”*). It is used to set the height of the row edit dialog content. This is a breaking change from the previous versions’ functionality. | ![](../images/images/negative.png)
+Column template including `<td>` tag attributes is ignored when updating rows | When updating rows, the `igGrid` correctly changes only the content of the `<td>` tags so that styles and/or attributes applied internally to the `<td>` elements are not lost. | ![](../images/images/positive.png)
 Updating rows/cells when the Updating and Continuous Virtualization features are enabled while [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) is disabled is not supported. | Editing rows/cells with Updating when the [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) grid option is set to false and Continuous Virtualization is enable will throw exception. | ![](../images/images/positive.png)
-Keyboard navigation while in edit mode does not wrap-around if virtualization is enabled. | When virtualization is enabled keyboard navigation with Tab/Shift+Tab when edit mode is "cell" and keyboard navigation with Enter/Shift+Enter when edit mode is "row" will not wrap-around. When reaching the last row/cell and navigating to the next one the first row/cell will not enter edit mode and the same will happend when reaaching the first row/cell and navigating to the previous one - the last row/cell will not enter edit mode. | ![](../../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
