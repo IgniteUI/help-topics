@@ -29,6 +29,7 @@ This topic contains the following sections:
 -   [Client-Side events](#client-side-events)
 -   [API Usage](#api)
 -   [List of Filtering Options (Properties)](#properties)
+-	[Custom Filtering Conditions](#customCond)
 -   [Filtering CSS Classes](#css)
 -   [Keyboard Interactions](#keyboard-interaction)
 -   [Breaking Changes](#changes)
@@ -656,6 +657,63 @@ featureChooserText ("Hide Filter") | Feature chooser text when filter is shown a
 featureChooserTextHide ("Show Filter") | Feature chooser text when filter is hidden and filter mode is simple.
 featureChooserTextAdvancedFilter ("Advanced Filter") | Feature chooser text when filter mode is advanced.
 
+## <a id="customCond"></a> Custom Filtering Conditions
+
+The filtering feature allows the user to define custom filtering conditions per column.
+The custom conditions are automatically added to the conditions list for the specific column and allow you to specify a custom comparer filtering function to process the data.
+The condition needs to be defined in the column settings for the related column via the [`customConditions`](%%jQueryApiUrl%%/ui.iggridfiltering#options:columnSettings.customConditions) option.
+The assigned value should be an object, where each property name represents an unique condition key and the value represents the custom condition's declaration.
+
+There are additional options that further affect the behavior and visualization of the conditions:
+-	`requireExpr` - specifies whether this condition requires the user to input a filtering expression or not. 
+-	`labelText`  -  specifies the label text that will appear in the column's condition dropdown.
+- 	`expressionText` - specifies the text that will display in the editor if requireExpr is false and the condition is selected from the dropdown.
+-	`filterImgIcon` - specifies the css class applied to the dropdown item when in simple filtering mode.
+-	`filterFunc` - specifies the custom comparing filter function(or name of a function) that will be used when the condition is applied.
+ 
+ Listing 14: Example usage of custom conditions
+
+
+**In Javascript:**
+
+    $("#grid1").igGrid({
+       columns: [ 
+                    { headerText: "Employee ID", key: "EmployeeID", dataType: "string", hidden: true },
+                    { headerText: "First Name", key: "FirstName", dataType: "string" },
+                    { headerText: "Last Name", key: "LastName", dataType: "string" },
+                    { headerText: "Register Date", key: "RegistererDate", dataType: "date" },
+                    { headerText: "Country", key: "Country", dataType: "string" },
+                    { headerText: "Age", key: "Age", dataType: "number" },
+                    { headerText: "Is Active", key: "IsActive", dataType: "bool" }
+                ],
+        dataSource: employees,
+        width: '500px',
+        dataSource: products,
+        features: [
+            {
+                name: 'Filtering',
+                columnSettings: [
+                   {
+                         columnKey: "Country",
+                         customConditions: {
+                            USA: {
+                                 labelText: 'USA',
+                                 expressionText: "USA",
+                                 filterFunc: function(value, expression, dataType, ignoreCase, preciseDateFormat) {  return value === "USA";}
+                            },
+                            Canada:{
+                                  labelText: 'Canada',
+                                  expressionText: "Canada",
+                                  filterFunc: function(value, expression, dataType, ignoreCase, preciseDateFormat) {  return value === "Canada";}
+                            }
+                         }
+                    }
+                ]
+            }
+        ]
+    });
+
+ 
 
 ## <a id="css"></a> Filtering CSS Classes
 
@@ -781,6 +839,8 @@ _Note_: There is a difference between the drop-down for selecting the column and
 ### <a id="samples"></a> Samples
 
 -   [Filtering](%%SamplesUrl%%/grid/simple-filtering)
+-   [Custom Conditions Filtering](%%SamplesUrl%%/grid/custom-conditions-filtering)
+
 
  
 
