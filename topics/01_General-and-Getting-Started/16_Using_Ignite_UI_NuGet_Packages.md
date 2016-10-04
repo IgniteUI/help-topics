@@ -12,46 +12,46 @@ Infragistics Ignite UI is available to explore as a NuGet package and this is th
 There are two ways to install the Ignite UI NuGet package to your project, using the GUI or using the console, and we will follow both procedures below. All the steps and screenshots are taken in Visual Studio 2015 but if you are using an older version of Visual Studio, the differences are negligible. Don't worry if you haven't used NuGet before as this example will guide you step-by-step through the procedure.
 
  1. First create a new Ignite UI Web Application project. You can name it IgniteUIProject.
-![](images/IgniteUIProject.png)
+![](images/IgniteUIProject_NuGet_Packages.png)
  2. Select Empty project.
-![](images/EmptyProject.png)
+![](images/Empty_Project_for_NnuGet_Packages.png)
  3. After your project is created, your Solution Explorer will look like this:
- ![](images/SolutionExplorer.png)
+ ![](images/Solution_Explorer_View_NuGet_Packages.png)
  At the moment, your project contains only the three default nodes: Properties, References and Web.config.
 
  
 ### Installing Ignite UI packages via GUI
 
 To install the Ignite UI NuGet package using the GUI, you should right-click on the project name and select Manage NuGet Packages… from the context menu.
- ![](images/NuGetManager.png)
+ ![](images/NuGet_Manager.png)
 
 This will open the **Manage NuGet Packages** view. In this view you can see all the packages that are available for you to use in your project.
 
 Now you should change the package source to **Infragistics (Local)**.
-![](images/NuGetPackagesInfragistics.png)
+![](images/NuGet_Packages_Infragistics_IgniteUI.png)
 
 Navigate to the Browse tab and you will see the list of available Infragistics Ignite UI NuGet packages. 
 
 When you select a package, you will see more information of it in the right panel. The most important information in this panel is the list of dependencies for the selected package. Those are assemblies that will be installed automatically to your project and you don`t have to worry about those. 
 
 Click the Install button and the selected package will be added to your project. 
-![](images/InstallButton.png)
+![](images/Install_Button_for_NuGet_Packages.png)
 
 ### Installing Ignite UI packages via Package Manager Console
 
 Here we will describe how you can add Ignite UI package using the Package Manager Console. Using the Console may be a bit faster as you do not need to search for the package that you want to install.
 
 To show the Console, navigate to **Tools** in the Visual Studio`s menu and after hovering **NuGet Package Manager**, select **Package Manager Console**.
-![](images/NuGetManagerConsole.png)
+![](images/NuGet_Manager_Console.png)
 
 The **Package Manager Console** will be shown at the bottom of the screen and you just need to enter “Install-Package *name_of_the_package*” to initiate the installation. For example, if you want to install “IgniteUI.MVC”, you must enter Install-Package IgniteUI.MVC and the manager will install this assembly and all the assemblies it depends on. Note that in the console you should select Infragistics(local) from the Package source drop down.
 
 When the installation is finished, you will see a message in the Console that your Ignite UI package is successfully added to the project.
- ![](images/ConsoleInstallation.png)
+ ![](images/Console_Installation_of_NuGet_Packages.png)
 
 ## What is installed by the Ignite UI NuGet package
 
-![](images/addFiles.png)
+![](images/Added_Files_from_NuGet_packages.png)
 
 If you install the Ignite UI package a JavaScript and Content folder will be added to your project. Those folders will contain the Infrajistics JS and CSS resources. If you choose to install one of the MVC packages, you will also see that the needed assemblies will be added to the references.
 
@@ -61,13 +61,13 @@ You can uninstall any of the assemblies installed with the package. This can be 
 
 To remove an assembly right-click the project again and select **Manage NuGet Packages**. The view is opened and is showing all the installed assemblies. Select the one you want to uninstall and click the **Uninstall** button.
 
-![](images/UninstallPackage.png)
+![](images/Uninstall_NuGet_Package.png)
 
 Have in mind that this will uninstall only the assemblies you`ve selected and all other assemblies that were installed with the package as dependencies will be preserved. 
 
 In addition, you won`t be able to uninstall an assembly if another one depends on it. For example, if you have installed **IgniteUI.MVC** to your project and for some reason try to uninstall IgniteUI which was installed as a dependency, you will see an error saying you are not able to uninstall it because another assembly depends on it. If you want to uninstall it, you must first uninstall all the assemblies that depend on it. 
 
-![](images/Error.png)
+![](images/Error_When_uninstaling_depending_packages.png)
 
 To uninstall an assembly through the Console, enter “Uninstall-Package *name_of_the_package*”. For example, Uninstall-Package IgniteUI.MVC. 
 
