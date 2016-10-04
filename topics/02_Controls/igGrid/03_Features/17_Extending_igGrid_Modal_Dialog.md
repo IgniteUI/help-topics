@@ -53,12 +53,12 @@ grid.igGrid({
 
 ## <a id="requirements"></a> Requirements
 
-The custom dialog widget should include certain functions and fire certain events igGrid's features use during their lifecycle. All of these will be available if you choose to extend the existing `igGridModalDialog`, however, this section will also provide information which is useful if you need to use them as hooks for your custom logic safely.
+The custom dialog widget should include certain functions and fire certain events igGrid's features subscribe to during their lifecycle. All of these will be available if you choose to extend the existing `igGridModalDialog`, however, this section will also provide information which is useful if you need to use them as hooks for your custom logic safely.
 
 - Required methods
   - `openModalDialog` - called when the dialog should open. No parameters will be passed to this method.
-  - `closeModalDialog` - called when the dialog should close because of an user interaction specific to the feature or a method from the feature's API is called. User interactions specific to the dialog should be implemented seperately. The method should accept two parameters.
-    1. `accepted` - features may add a parameter showing if the end-user wants to apply the changes he made through the dialog's UI or not. This value should be available in the event arguments as explained later down the section.
+  - `closeModalDialog` - called when the dialog should close because of an user interaction specific to the feature or a method from the feature's API is executed. User interactions specific to the dialog should be implemented seperately. The method should accept two parameters.
+    1. `accepted` - if the feature recognizes between confirmed and declined state of the dialog it will send this parameter showing if the end-user wants to apply the changes he made through the dialog's UI or not. Features that don't distinguish between the two apply changes as the user interacts with the dialog. This value should be available in the event arguments as explained later down the section.
     2. `fromUI` - some features add UI to the dialog that contains logic to close it based on end-user interaction. This parameter is a boolean flag that tells the dialog if the close call comes from such interaction or from the feature's API. The value should be available in the event arguments to allow features handling the closing of the dialog to decide if feature specific events should be fired or not.
   - `getCaptionButtonContainer` - should return a jQuery object containing the element which represents the caption of the custom dialog. Features use this container to place an additional close button. The function may return a detached element to prevent features from adding this button, however, it's advisable to cache it for later removal reducing the possibility for memory leaks.
   - `getContent` - should return a jQuery object containing the element which represents the main content area of the dialog where features will render the main dialog UI. Features usually render the UI each time the dialog opens instead of using existing one.
