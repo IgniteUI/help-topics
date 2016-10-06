@@ -768,7 +768,7 @@ Chart-type-specific JavaScript resources
 
 		<tr>
 			<td>
-				Horizontal Area, Bar, Column, Line, all Spline charts, Waterfall
+				Area, Column, Line, all Spline charts, Waterfall
 			</td>
 			<td>
 				infragistics.datachart_category.js
@@ -777,7 +777,7 @@ Chart-type-specific JavaScript resources
 
 		<tr>
 			<td>
-				Vertical Area, Bar, Column, Line, all Spline charts, Waterfall
+				Bar
 			</td>
 			<td>
 				infragistics.datachart_verticalcategory.js
