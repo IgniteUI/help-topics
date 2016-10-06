@@ -453,12 +453,24 @@ The following table specifies resource names to be used with `igLoader`™ for d
 	</thead>
 	<tbody>
 		<tr>
-			<td>area, bar, column, line, spline, splineArea, stepArea, stepLine,waterfall</td>
+			<td>area, column, line, spline, splineArea, stepArea, stepLine, waterfall</td>
 			<td>igDataChart.Category</td>
 		</tr>
 		<tr>
-			<td>financial, typicalPriceIndicator, absoluteVolumeOscillatorIndicator, averageTrueRangeIndicator, accumulationDistributionIndicator, averageDirectionalIndexIndicator</td>
+			<td>bar</td>
+			<td>igDataChart.VerticalCategory</td>
+		</tr>
+		<tr>
+			<td>rangeArea, rangeColumn</td>
+			<td>igDataChart.RangeCategory</td>
+		</tr>
+		<tr>
+			<td>financial</td>
 			<td>igDataChart.Financial</td>
+		</tr>
+		<tr>
+			<td>typicalPriceIndicator, absoluteVolumeOscillatorIndicator, averageTrueRangeIndicator, accumulationDistributionIndicator, averageDirectionalIndexIndicator</td>
+			<td>igDataChart.ExtendedFinancial</td>
 		</tr>
 		<tr>
 			<td>polarArea, polarLine, polarScatter</td>
@@ -469,12 +481,28 @@ The following table specifies resource names to be used with `igLoader`™ for d
 			<td>igDataChart.Radial</td>
 		</tr>
 		<tr>
-			<td>rangeArea, rangeColumn</td>
-			<td>igDataChart.RangeCategory</td>
-		</tr>
-		<tr>
 			<td>scatter, scatterLine</td>
 			<td>igDataChart.Scatter</td>
+		</tr>
+		<tr>
+			<td>stackedBar, stacked100Bar, stackedArea, stacked100Area, stackedColumn, stacked100Column, stackedLine, stacked100Line, stackedSpline, stacked100Spline, stackedSplineArea, stacked100SplineArea</td>
+			<td>igDataChart.Stacked</td>
+		</tr>
+		<tr>
+			<td>crosshairLayer, categoryHighlightLayer, categoryItemHighlightLayer, itemToolTipLayer, categoryToolTipLayer</td>
+			<td>igDataChart.Annotation</td>
+		</tr>
+		<tr>
+			<td>Date-time axis</td>
+			<td>igDateTimeAxis</td>
+		</tr>
+		<tr>
+			<td>Chart legend</td>
+			<td>igChartLegend</td>
+		</tr>
+		<tr>
+			<td>Overview Plus Detail Pane</td>
+			<td>igOverviewPlusDetailPane</td>
 		</tr>
 	</tbody>
 </table>
