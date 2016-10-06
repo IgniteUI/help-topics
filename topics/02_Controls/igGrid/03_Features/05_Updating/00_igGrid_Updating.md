@@ -224,7 +224,7 @@ Each column is configurable with the `columnSettings` options as listed in the t
 Property name (default values in parenthesis) | Description
 ---|---
 [columnKey](%%jQueryApiUrl%%/ui.igGridUpdating#options:columnSettings.columnKey) (null) | Key of the column for which this column setting applies
-[editorProvider](%%jQueryApiUrl%%/ui.igGridUpdating#options:columnSettings.editorProvider) | Custom editor provider which should extend $.ig.EditorProviderDefault and implement its member methods.
+[editorProvider](%%jQueryApiUrl%%/ui.igGridUpdating#options:columnSettings.editorProvider) | Custom editor provider which should extend $.ig.EditorProvider or $.ig.EditorProviderBase and implement its member methods.
 [editorType](%%jQueryApiUrl%%/ui.igGridUpdating#options:columnSettings.editorType) (null) | Custom type of igEditor (‘text’, ‘numeric’, ‘datepicker’, ‘combo’,’rating’ etc.)
 [editorOptions](%%jQueryApiUrl%%/ui.igGridUpdating#options:columnSettings.editorOptions) (null) | Custom options supported by a specific igEditor or in case of combo and rating, it should provide options available for igCombo or igRating.
 [required](%%jQueryApiUrl%%/ui.igGridUpdating#options:columnSettings.required) (false) | Enables validation for required entry
@@ -662,9 +662,13 @@ When a row is selected (the Selection feature is enabled and its mode is row):
 Following are some other topics you may find useful.
 
 -   [igGridUpdating API documentation](%%jQueryApiUrl%%/ui.igGridUpdating)
+-   [Row Edit Dialog Overview (igGrid)](igGrid-Updating-RowEditDialog.html)
+-   [Implementing Custom Editor Provider](Implementing-Custom-Editor-Provider.html)
 
 ## <a id="samples"></a> Related Samples 
+
 Following are some samples you may find useful.
+-   [Basic Editing](%%SamplesUrl%%/grid/basic-editing)
 -   [Binding Real-Time Data](%%SamplesUrl%%/grid/binding-real-time-data)
  
 
