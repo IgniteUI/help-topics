@@ -90,5 +90,5 @@ Additional settings for the upload can be set in the ConfigureServices method. T
 ```
 
 
-## Related Content
+## <a id='related'></a> Related Content
 - [Adding Controls to an MVC Project](Adding-NetAdvantage-Controls-to-an-MVC-Project.html)
