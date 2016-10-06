@@ -471,6 +471,7 @@ Local grouping performance is optimized and now can be up to 10x faster.
 
 #### Related Samples
 -   [Continuous Virtualization](%%SamplesUrl%%/grid/virtualization-continuous)
+-   [Grouping API](%%SamplesUrl%%/grid/grouping-api)
 
 ### <a id="mrl-inline-editing"></a> Inline editing for Multi-Row Layout
 
@@ -482,7 +483,7 @@ Updating feature now works in row and cell edit mode when Multi-Row Layout is co
 -   [Grid Multi-Row Layout](igGrid-MultiRowLayout.html#features-integration)
 
 #### Related Samples
--   [Multi-Row Layout](%%SamplesUrl%%/grid/multi-row-layout)
+-   [Multi-Row Layout Inline Editing](%%SamplesUrl%%/grid/multi-row-layout-inline-editing)
 
 
 ## igPieChart

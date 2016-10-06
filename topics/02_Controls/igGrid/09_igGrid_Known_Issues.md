@@ -151,7 +151,7 @@ Column virtualization will not work when grid width is defined in percentage uni
 Column virtualization is not supported with continuous virtualization | Column virtualization is supported only with fixed virtualization. When column virtualization is enabled([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) then the virtualization mode must be set to "fixed"([virtualizationMode](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) = "fixed"). | ![](../../images/images/negative.png)
 Virtualization and auto sizing of columns is not supported | Auto sizing columns by setting their width option to "*"  is not supported with virtualization. | ![](../../images/images/negative.png)
 Column setter is not working with column virtualization | Using column setter ($(".selector").igGrid("option", "columns", [/*columns definition*/]);) will result in horizontal scrollbar disappearing. | ![](../../images/images/negative.png)
-
+When fixed virtualization is enabled tabbing from outside of the grid's content into the rows will focus the first visible row as opposed to the actual first row in the grid. | When fixed virtualization is enabled and you tab from outside of the grid's content inside the rows the first visible row will take focus.  Same applies when Shift+Tab is used when focus is on an element after the grid - the focus will be set to the last visible cell.|![](../../images/images/negative.png)
 
 ## igGrid – Responsive Web Design Mode
 Issue | Description | Status

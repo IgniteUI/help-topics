@@ -8,27 +8,34 @@
 |metadata|
 -->
 
-# Implementing custom editor provider
+# Implementing Custom Editor Provider
 
 ## Topic Overview
 
 ### Purpose
-This topic will guide you through the process of implementing a custom editor provider that extends the igEditorProviders.
+This topic will guide you through the process of implementing a custom editor provider that extends the igEditorProvider class.
 Implementing your own editor provider allows you to fully customize the editing experience, from the type of editor used to the visualization and validation logic for the editor.
 
 
 ### In this topic
 This topic contains the following sections:
 
+-   [**Overview**](#overview)
 -   [**Built-in Editor types**](#editors)
 - 	[**Implementing custom editor providers**](#customProviders)
 	- [**Example on how to wrap HTML 5 number INPUT into an editor provider**](#example)
 - 	[**Related Topics**](#topics)
 - 	[**Related Samples**](#samples)
 
+## <a id="overview"></a>Overview
+
+The Updating feature when in edit mode displays editors for the row or cell being edited. Those editors are implemented by an editor providers abstraction which provides a common editing communication interface with the Updating feature.
+
+Updating comes with a set of editor providers that wrap the [Ignite UI Editors](igEditors-LandingPage.html) to provide feature rich experience for the end user.
+
 ## <a id="editors"></a> Built-in editor types
 
-The Updating feature supports the following types of the editor providers out of the box: text, numeric, date/time, date picker, mask-editor, boolean, percentage, currency, combo and rating.
+The following types of the editor providers are supported out of the box: text, numeric, date/time, date picker, mask-editor, boolean, percentage, currency, combo and rating.
 
 > **Note**: All editor providers are defined in the infragistics.ui.grid.shared.js file.
 
@@ -96,67 +103,67 @@ The custom editor provider instance should either extend $.ig.EditorProvider/$.i
 **In JavaScript**
 
 ```
-		createEditor: function (callbacks, key, editorOptions, tabIndex, format, element) {
-			//Used to initialize the editor
-			
-			//Arguments:
-			//callbacks - list of callback methods - keyDown and textChanged
-			//key - the key of the column to which this editor belongs
-			//editorOptions - the editorOptions defined in the Updating feature's columnSettings for this column
-			//tabIndex - the tabIndex of the editor
-			//format - the format applied to the column
-			//element - the editor's main DOM element. When creating a custom editor a new DOM element should be assigned to this argument and the element should be returned as the result of the method.
-		},
-		attachErrorEvents: function (errorShowing, errorShown, errorHidden) {
-			//used to attach igvalidator error events
-		},
-		getEditor: function () {
-			//gets editor instance
-		},
-		refreshValue: function () {
-			//refreshes value - used in cases like MaskEditors where the value needs to be proccessed before being applied.
-		},
-		getValue: function () {
-			//gets value from editor. Updating uses this method to pass the current editor value as the new value for the cell when you exit edit mode for the cell.
-		},
-		setValue: function (val) {
-			//sets value to the editor. Updating uses this method to set the current cell value from the cell to the editor when you enter edit mode for a cell.
-		},
-		setSize: function (width, height) {
-			//sets current size(width and height) for the editor
-		},
-		setFocus: function () {
-			//sets focus to the editor
-		},
-		removeFromParent: function () {
-			//used to detach the editor from the current parent cell element. 
-		},
-		destroy: function () {
-			//destroys the editor.
-			//If there are any additional DOM elements or event handles associated with the editor they should also be removed.
-		},
-		validator: function () {
-			//If a validator (igValitor) should be used to validate the editor value, this method should return it. Otherwise return null.
-		},
-		validate: function (noLabel) {
-			//Triggered when validation is required. Should return the result from isValid method for the validator (if there is a validator), otherwise return true.
-		},
-		isValid: function () 
-			//returns if the validation is successful or not. If value is valid it should return true, otherwise it should return false.
-		},
-		keyDown: function(evt) {
-			//keydown handler is required for every editor
-			//Should notify Updating that a key has been pressed, so that DOM elements (like the Done/Cancel buttons) can be updated accordingly.
-		}
+createEditor: function (callbacks, key, editorOptions, tabIndex, format, element) {
+	//Used to initialize the editor
+	
+	//Arguments:
+	//callbacks - list of callback methods - keyDown and textChanged
+	//key - the key of the column to which this editor belongs
+	//editorOptions - the editorOptions defined in the Updating feature's columnSettings for this column
+	//tabIndex - the tabIndex of the editor
+	//format - the format applied to the column
+	//element - the editor's main DOM element. When creating a custom editor a new DOM element should be assigned to this argument and the element should be returned as the result of the method.
+},
+attachErrorEvents: function (errorShowing, errorShown, errorHidden) {
+	//used to attach igvalidator error events
+},
+getEditor: function () {
+	//gets editor instance
+},
+refreshValue: function () {
+	//refreshes value - used in cases like MaskEditors where the value needs to be proccessed before being applied.
+},
+getValue: function () {
+	//gets value from editor. Updating uses this method to pass the current editor value as the new value for the cell when you exit edit mode for the cell.
+},
+setValue: function (val) {
+	//sets value to the editor. Updating uses this method to set the current cell value from the cell to the editor when you enter edit mode for a cell.
+},
+setSize: function (width, height) {
+	//sets current size(width and height) for the editor
+},
+setFocus: function () {
+	//sets focus to the editor
+},
+removeFromParent: function () {
+	//used to detach the editor from the current parent cell element. 
+},
+destroy: function () {
+	//destroys the editor.
+	//If there are any additional DOM elements or event handles associated with the editor they should also be removed.
+},
+validator: function () {
+	//If a validator (igValitor) should be used to validate the editor value, this method should return it. Otherwise return null.
+},
+validate: function (noLabel) {
+	//Triggered when validation is required. Should return the result from isValid method for the validator (if there is a validator), otherwise return true.
+},
+isValid: function () 
+	//returns if the validation is successful or not. If value is valid it should return true, otherwise it should return false.
+},
+keyDown: function(evt) {
+	//keydown handler is required for every editor
+	//Should notify Updating that a key has been pressed, so that DOM elements (like the Done/Cancel buttons) can be updated accordingly.
+}
 ```
 When extending the existing igEditorProvider or the igEditorProviderBase the following methods should be override on the prototype object by specifying a method with the same name for the custom editor provider:
 
 ```
-		createEditor: function (callbacks, key, editorOptions, tabIndex, format, element) {},
-		getValue: function () {},
-		setValue: function (val) {},
-		keyDown: function(evt) {},
-		destroy: function() {}
+createEditor: function (callbacks, key, editorOptions, tabIndex, format, element) {},
+getValue: function () {},
+setValue: function (val) {},
+keyDown: function(evt) {},
+destroy: function() {}
 ```
     
 The createEditor method	allows you to create a new DOM element and assign it as the element to be used as an editor for the specific column. 
@@ -165,14 +172,14 @@ The keyDown event should be used to notify the Updating feature that a change ha
 The related callbacks should be invoked in order to notify the Updating feature for the change, for example:
 
 ```
-		keyDown: function(evt) {
-			var ui = {};
-			ui.owner = this.editor.element;
-			ui.owner.element = this.editor.element;
-			this.callbacks.keyDown(evt, ui, this.columnKey);
-			//if value is valid trigger textChanged
-			this.callbacks.textChanged(evt, ui, this.columnKey);
-		}
+keyDown: function(evt) {
+	var ui = {};
+	ui.owner = this.editor.element;
+	ui.owner.element = this.editor.element;
+	this.callbacks.keyDown(evt, ui, this.columnKey);
+	//if value is valid trigger textChanged
+	this.callbacks.textChanged(evt, ui, this.columnKey);
+}
 ```
 
 
@@ -215,7 +222,7 @@ This procedure demonstrates how to wrap a simple HTML 5 number INPUT into an edi
             columnSettings: [
                 {
                     columnKey: "Age",
-                    editorProvider: new $.ig.EditorProviderInput(),
+                    editorProvider: new $.ig.EditorProviderInput()
                 }												
             ]
         }
@@ -227,49 +234,49 @@ This procedure demonstrates how to wrap a simple HTML 5 number INPUT into an edi
 
 	**In JavaScript**
 	```
-	        $.ig.EditorProviderInput = $.ig.EditorProviderInput || $.ig.EditorProvider.extend({
-				createEditor: function (callbacks, key, editorOptions, tabIndex, format, element) {
-					element = element || $('<input/>');
-					element.attr("type", "number");
-					  
-					// call parent createEditor
-					this._super(callbacks, key, editorOptions, tabIndex, format, element);
-					
-					element.on("keydown", $.proxy(this.keyDown, this));
-			 
-					this.editor = {};
-					this.editor.element = element;
-					return element;
-				},
-				keyDown: function(evt) {
-					var ui = {};
-					ui.owner = this.editor.element;
-					ui.owner.element = this.editor.element;
-					this.callbacks.keyDown(evt, ui, this.columnKey);
-					
-					//// enable "Done" button only for numeric character
-					if ((evt.keyCode >= 48 && evt.keyCode <= 57) || (evt.keyCode >= 96 && evt.keyCode <= 105)) {
-						this.callbacks.textChanged(evt, ui, this.columnKey);
-					}
-				},			
-				setSize: function (width, height) {
-					this.editor.element.css({
-					width: width - 2,
-					height: height - 2,
-					borderWidth: "1px"
-				});
-				},
-				attachErrorEvents: function (errorShowing, errorShown, errorHidden) { },
-				getValue: function () {
-					return this.editor.element.val();
-				},
-				setValue: function (val) {
-					this.editor.element.val(val);
-				},
-				destroy: function () {
-					this.editor.remove();
-				}
-            });
+    $.ig.EditorProviderInput = $.ig.EditorProviderInput || $.ig.EditorProvider.extend({
+		createEditor: function (callbacks, key, editorOptions, tabIndex, format, element) {
+			element = element || $('<input/>');
+			element.attr("type", "number");
+			  
+			// call parent createEditor
+			this._super(callbacks, key, editorOptions, tabIndex, format, element);
+			
+			element.on("keydown", $.proxy(this.keyDown, this));
+	 
+			this.editor = {};
+			this.editor.element = element;
+			return element;
+		},
+		keyDown: function(evt) {
+			var ui = {};
+			ui.owner = this.editor.element;
+			ui.owner.element = this.editor.element;
+			this.callbacks.keyDown(evt, ui, this.columnKey);
+			
+			//// enable "Done" button only for numeric character
+			if ((evt.keyCode >= 48 && evt.keyCode <= 57) || (evt.keyCode >= 96 && evt.keyCode <= 105)) {
+				this.callbacks.textChanged(evt, ui, this.columnKey);
+			}
+		},			
+		setSize: function (width, height) {
+			this.editor.element.css({
+			width: width - 2,
+			height: height - 2,
+			borderWidth: "1px"
+		});
+		},
+		attachErrorEvents: function (errorShowing, errorShown, errorHidden) { },
+		getValue: function () {
+			return this.editor.element.val();
+		},
+		setValue: function (val) {
+			this.editor.element.val(val);
+		},
+		destroy: function () {
+			this.editor.remove();
+		}
+    });
 	```
 
 3. Observe the result.
@@ -282,6 +289,7 @@ This procedure demonstrates how to wrap a simple HTML 5 number INPUT into an edi
 Following are some other topics you may find useful.
 
 - 	[Updating Overview (igGrid)](igGrid-Updating.html)
+- 	[igEditors](igEditors-LandingPage.html)
 -   [igGridUpdating API documentation](%%jQueryApiUrl%%/ui.igGridUpdating)
  
 ## <a id="samples"></a> Related Samples 
