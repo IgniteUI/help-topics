@@ -188,7 +188,7 @@ Continuous Virtualization
 ![](../../../images/images/positive.png "Continuous Virtualization/Filtering")
 			</td>
             <td class="continuous-virtualization groupby">
-![](../../../images/images/plannedFix.png "Continuous Virtualization/GroupBy")
+![](../../../images/images/positive.png "Continuous Virtualization/GroupBy")
 			</td>
             <td class="continuous-virtualization hiding">
 ![](../../../images/images/positive.png "Continuous Virtualization/Hiding")
@@ -528,7 +528,7 @@ Group By
 ![](../../../images/images/negative.png "GroupBy/Fixed Virtualization")
 			</td>
             <td class="groupby continuous-virtualization">
-![](../../../images/images/plannedFix.png "GroupBy/Continuous Virtualization")
+![](../../../images/images/positive.png "GroupBy/Continuous Virtualization")
 			</td>
             <td class="groupby column-virtualization">
 ![](../../../images/images/negative.png "GroupBy/Column Virtualization")
@@ -1582,7 +1582,7 @@ Updating
 ![](../../../images/images/positive.png "Updating/Updating")
 			</td>
             <td class="updating multi-row-layout">
-![](../../../images/images/plannedFix.png "Updating/Multi-Row Layout")
+![](../../../images/images/positive.png "Updating/Multi-Row Layout")
 			</td>
         </tr>
         <tr>
@@ -1650,7 +1650,7 @@ Multi-Row Layout
 ![](../../../images/images/negative.png "Multi-Row Layout/Tooltips")
 			</td>
             <td class="multi-row-layout updating">
-![](../../../images/images/plannedFix.png "Multi-Row Layout/Updating")
+![](../../../images/images/positive.png "Multi-Row Layout/Updating")
 			</td>
             <td class="multi-row-layout multi-row-layout">
 ![](../../../images/images/positive.png "Multi-Row Layout/Multi-Row Layout")
