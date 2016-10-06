@@ -118,7 +118,7 @@ The following steps demonstrate how to add an `igDataChart` control to a web pag
 	    $.ig.loader({
 	        scriptPath: "Scripts/ig/",
 	        cssPath: "Content/ig/",
-	        resources: "igDataChart.Category"
+	        resources: "igDataChart.Category.Financial,igChartLegend"
 	    });
 	<script>
 	```
