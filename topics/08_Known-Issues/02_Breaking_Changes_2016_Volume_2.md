@@ -1,4 +1,14 @@
-﻿# Breaking Changes 2016 Volume 2
+﻿<!--
+|metadata|
+{
+    "fileName": "breaking-changes-2016-volume-2",
+    "controlName": "",
+    "tags": ["Breaking Changes","Known Issues"]
+}
+|metadata|
+-->
+
+# Breaking Changes 2016 Volume 2
 
 The following table summarizes the breaking changes of the 2016 Volume 2 release. Detailed explantations of the issues are provided after the summary table.
 
