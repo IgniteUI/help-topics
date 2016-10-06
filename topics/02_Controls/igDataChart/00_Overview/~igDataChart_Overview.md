@@ -679,12 +679,17 @@ The igDataSource control.
 
 						<tr>
 							<td>
-infragistics.dv.core.js
-			</td>
+infragistics.ext_core.js<br>
+infragistics.ext_collections.js<br>
+infragistics.ext_ui.js<br>
+infragistics.dv_core.js<br>
+infragistics.dv_geometry.js<br>
+infragistics.datachart_core.js
+							</td>
 
 							<td>
-Data visualization core functionality
-			</td>
+								Data visualization core functionality
+							</td>
 						</tr>
 
 						<tr>
@@ -703,7 +708,28 @@ infragistics.ui.chart.js
 			</td>
 
 							<td>
-Chart base functionality
+Chart UI widget
+			</td>
+						</tr>
+
+						<tr>
+							<td>
+infragistics.legend.js<br>
+infragistics.ui.chartlegend.js
+			</td>
+
+							<td>
+Chart legend functionality and UI widget
+			</td>
+						</tr>
+
+						<tr>
+							<td>
+infragistics.dv_opd.js
+			</td>
+
+							<td>
+Chart Overview Plus Detail Pane functionality
 			</td>
 						</tr>
 					</tbody>
@@ -719,81 +745,118 @@ Chart-type-specific JavaScript resources
 			<td>
 				In addition to the general charting resources listed above, you need to include references related to the respective chart type in use.
 
-				<table class="table table-bordered">
+<table class="table table-bordered">
 	<thead>
 		<tr>
-							<th>
-Chart Series Type
+			<th>
+				Chart Series Type
 			</th>
-
-							<th>
-JS Resource
+			<th>
+				JS Resource
 			</th>
-						</tr>
+		</tr>
 	</thead>
 	<tbody>
-						
-
-						<tr>
-							<td>
-Area, Bar, Column, Line, all Spline charts, Waterfall
+		<tr>
+			<td>
+				Common category functionality
 			</td>
-
-							<td>
-infragistics.chart_categorychart.js
+			<td>
+				infragistics.datachart_categorycore.js
 			</td>
-						</tr>
+		</tr>
 
-						<tr>
-							<td>
-Financial, Typical Price Indicator
+		<tr>
+			<td>
+				Horizontal Area, Bar, Column, Line, all Spline charts, Waterfall
 			</td>
+			<td>
+				infragistics.datachart_category.js
+			</td>
+		</tr>
 
-							<td>
-infragistics.chart_financialchart.js
+		<tr>
+			<td>
+				Vertical Area, Bar, Column, Line, all Spline charts, Waterfall
 			</td>
-						</tr>
+			<td>
+				infragistics.datachart_verticalcategory.js
+			</td>
+		</tr>
 
-						<tr>
-							<td>
-Polar Area, Polar Line, all Polar charts
+		<tr>
+			<td>
+				Financial, Typical Price Indicator
 			</td>
+			<td>
+				infragistics.datachart_financial.js<br>
+				infragistics.datachart_extendedfinancial.js
+			</td>
+		</tr>
 
-							<td>
-infragistics.chart_polarchart.js
+		<tr>
+			<td>
+				Polar Area, Polar Line, all Polar charts
 			</td>
-						</tr>
+			<td>
+				infragistics.datachart_polar.js
+			</td>
+		</tr>
 
-						<tr>
-							<td>
-all Radial charts
+		<tr>
+			<td>
+				all Radial charts
 			</td>
+			<td>
+				infragistics.datachart_radial.js
+			</td>
+		</tr>
 
-							<td>
-infragistics.chart_radialchart.js
+		<tr>
+			<td>
+				all Range charts
 			</td>
-						</tr>
+			<td>
+				infragistics.datachart_rangecategory.js
+			</td>
+		</tr>
 
-						<tr>
-							<td>
-all Range charts
+		<tr>
+			<td>
+				all Scatter charts
 			</td>
-
-							<td>
-infragistics.chart_rangecategorychart.js
+			<td>
+				infragistics.datachart_scatter.js
 			</td>
-						</tr>
-
-						<tr>
-							<td>
-all Scatter charts
+		</tr>
+	
+		<tr>
+			<td>
+				all Stacked charts
 			</td>
-
-							<td>
-infragistics.chart_scatterchart.js
+			<td>
+				infragistics.datachart_stacked.js
 			</td>
-						</tr>
-					</tbody>
+		</tr>
+	
+		<tr>
+			<td>
+				Tooltips, highlights, and other annotations
+			</td>
+			<td>
+				infragistics.datachart_annotation.js
+			</td>
+		</tr>
+	
+		<tr>
+			<td>
+				DateTime Axis
+			</td>
+			<td>
+				infragistics.datachart_extendedaxes.js
+			</td>
+		</tr>
+	</tbody>
 </table>
 			</td>
 		</tr>
