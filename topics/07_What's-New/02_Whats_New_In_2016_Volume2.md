@@ -28,6 +28,7 @@ ASP.NET Core 1.0 MVC Tag Helpers | Ignite UI now provides Tag Helpers for ASP.NE
 [New Javascript file breakdown](#javascript-file-breakdown) | The goal is to reduce the amount of code required in order to load a specific feature. |
 DPI Scaling | High DPI Scaling is enabled by default now which makes the components look much sharper and crisper than before. Components that have the DPI Scaling by default now are - igDataChart, igPieChart, igFunnelChart, igDoughnutChart, igRadialGauge, igLinearGauge, igBulletGraph, igSparkline, igRadialMenu. |
 Standard moduling support | All of IgniteUI JavaScript files contain AMD module definitions. Therefore these files can be loaded using standard module loaders such as Require.JS, System.JS etc.|
+[Ignite UI NuGet packages](#ignite-ui-nuget-packages) | New Ignite UI NuGet packages are available, including a package for creating .NET Core applications. |
 
 
 ### igCategoryChart
@@ -264,6 +265,17 @@ If you want to load the new igCategoryChart control you need everything you need
 * infragistics.ui.basechart.js
 
 * infragistics.ui.categorychart.js
+
+### <a id="ignite-ui-nuget-packages"></a>Ignite UI NuGet packages
+
+Three new Ignite UI NuGet packages are added in this 2016 volume 2 release. Those packages can boost your productivity allowing you to setup your application faster. They will automatically include the Ignite UI files and references you need to your project.
+
+With the new ASP.NET most modules are now wrapped as NuGet packages. Having this in mind our new MVC wrappers built on top of ASP.NET Core are also available as a NuGet package.
+
+The NuGet packages are installed with the product`s installer and during the installation a new local feed is created, meaning that you don`t need to setup your NuGet Package Manager. You will find the local NuGet feed Infragistics (Local) the next time you run your Visual Studio.
+
+#### Related Topic:
+- [Using Ignite UI NuGet packages](using-ignite-ui-nuget-packages.html)
 
 ## igDataChart
 
