@@ -1,3 +1,12 @@
+<!--
+|metadata|
+{
+    "fileName": "Using-Ignite-UI-NuGet-Packages",
+    "controlName": [],
+    "tags": ["NuGet"]
+}
+|metadata|
+-->
 # Using Ignite UI NuGet packages
 
 NuGet is a powerful ecosystem of tools and services. It was introduced in 2010 as an open source package manager for the Microsoft development platform including .NET.  NuGet is the easiest way to improve and automate your development practices.
