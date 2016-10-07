@@ -3,7 +3,7 @@
 NuGet is a powerful ecosystem of tools and services. It was introduced in 2010 as an open source package manager for the Microsoft development platform including .NET.  NuGet is the easiest way to improve and automate your development practices.
 
 When you install a package via NuGet, it copies the library files to your solution and automatically updates your project. That means adding references, changing config files, replacing old version script files, etc.
-NuGet is available since Visual Studio 2010 and since Visual Studio 2012, it is included by default. On more information on how to get going with it, read the official [Nuget documentation](http://docs.nuget.org/ndocs/guides/install-nuget).
+NuGet is available since Visual Studio 2010 and since Visual Studio 2012, it is included by default. On more information on how to get going with it, read the official [NuGet documentation](http://docs.nuget.org/ndocs/guides/install-nuget).
 
 Infragistics Ignite UI is available to explore as a NuGet package and this is the easiest and the fastest way to install the Infragistics files and assemblies required for your project. All you need to do to start using the Ignite UI NuGet packages is to run the NuGet installer. During the installation if you leave the product key field empty, the installer will install the trial version of the packages. The installer will automatically create a local feed named "Infragistics (Local)", which will display all the Ignite UI NuGet packages that are available.  
 
@@ -53,9 +53,9 @@ When the installation is finished, you will see a message in the Console that yo
 
 ![](images/Added_Files_from_NuGet_packages.png)
 
-If you install the Ignite UI package a JavaScript and Content folder will be added to your project. Those folders will contain the Infrajistics JS and CSS resources. If you choose to install one of the MVC packages, you will also see that the needed assemblies will be added to the references.
+If you install the Ignite UI package a JavaScript and Content folder will be added to your project. Those folders will contain the Infragistics JS and CSS resources. If you choose to install one of the MVC packages, you will also see that the needed assemblies will be added to the references.
 
-## Uninstalling the Ignite UI Nuget packages
+## Uninstalling the Ignite UI NuGet packages
 
 You can uninstall any of the assemblies installed with the package. This can be done either using the GUI or the Package Manager Console. You can use any of the approaches no matter if you`ve installed the package via the GUI or via the Console. 
 
