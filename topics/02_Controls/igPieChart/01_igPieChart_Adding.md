@@ -244,8 +244,8 @@ The following steps demonstrate how to add an `igPieChart` control to a web page
 	        width: "450px",
 	        height: "450px",
 	        dataSource: data,
-	        valueMemberPath: "Budget",
-	        labelMemberPath: "Department",
+	        dataValue: "Budget",
+	        dataLabel: "Department",
 	        radiusFactor: 0.8,
 	        explodedSlices: '0 1 2',
 	        legend: { element: "legend", type: "item"}
@@ -257,7 +257,7 @@ The following steps demonstrate how to add an `igPieChart` control to a web page
 
 	The option `radiusFactor` sets the size of the pie relative to the size of the container element set by width and height and by default it is 0.9. The option `explodedSlices` is a space delimited list of indices of slices and determines which slices are displayed detached from the main pie. Slices start from an imaginary line to the right from the center of the pie and are counted clockwise.
 
-	Note how the previously defined array data has been assigned to the `dataSource` option of the chart control. The options `valueMemberPath` and `labelMemberPath` are mandatory since they configure which members from the input data will be displayed on the chart. The option `valueMemberPath` is visualized in the form of slice size, i.e. the relative value (or percentage) of this member related to the sum of all members determines the slice size. The option `labelMemberPath` is visualized in the form of slice labels to denote each slice and also in the legend if such exists.
+	Note how the previously defined array data has been assigned to the `dataSource` option of the chart control. The options `dataValue` and `dataLabel` are mandatory since they configure which members from the input data will be displayed on the chart. The option `dataValue` is visualized in the form of slice size, i.e. the relative value (or percentage) of this member related to the sum of all members determines the slice size. The option `dataLabel` is visualized in the form of slice labels to denote each slice and also in the legend if such exists.
 
 	An important setting for the legend is the legend type specified by the type option in the legend object. The type item must be specified whenever a pie chart is used because this creates legend item for each data item in the data source depicted.
 
@@ -272,8 +272,8 @@ The following steps demonstrate how to add an `igPieChart` control to a web page
 	        .ID("chart")
 	        .Height("450px")
 	        .Width("450px")
-	        .ValueMemberPath(item => item.Budget)
-	        .LabelMemberPath(item => item.Department)
+	        .DataValue(item => item.Budget)
+	        .DataLabel(item => item.Department)
 	        .RadiusFactor(0.8)
 	        .ExplodedSlices("0 1 2")
 	        .Legend(legend => legend.ID("legend").LegendType(LegendType.Item))
@@ -312,13 +312,3 @@ The following material (available outside the Infragistics family of content) pr
 - [jQuery Home Page](http://jquery.com/): The home page of the jQuery library where more detailed information on installing and features of the library can be found.
 
 - [ASP.NET MVC Home Page](http://www.asp.net/mvc): The home page of ASP.NET MVC where more detailed information on installing and using ASP.NET MVC can be found.
-
-
-
-
-
- 
-
- 
-
-

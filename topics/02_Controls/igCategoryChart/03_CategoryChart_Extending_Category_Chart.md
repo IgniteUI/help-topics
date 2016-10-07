@@ -1,1 +1,1 @@
-﻿= AsciiDoc
+﻿# Extending igCategoryChart to use igDataChart

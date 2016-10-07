@@ -1,1 +1,1 @@
-﻿= AsciiDoc
+﻿# Configuring Chart Types
