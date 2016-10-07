@@ -158,7 +158,21 @@ Adding the `igFunnelChart` control to an HTML page requires referencing the reso
 
 						<tr>
 							<td>
-								infragistics.dv.simple.core.js
+								infragistics.templating.js
+							</td>
+
+							<td>
+								Ignite UI templating engine
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								infragistics.ext_core.js,<br>
+								infragistics.ext_collections.js,<br>
+								infragistics.ext_ui.js,<br>
+								infragistics.dv_core.js,<br>
+								infragistics.dv_geometry.js
 							</td>
 
 							<td>
@@ -168,17 +182,37 @@ Adding the `igFunnelChart` control to an HTML page requires referencing the reso
 
 						<tr>
 							<td>
-								infragistics.ui.basechart.js
+								infragistics.datachart_core.js
 							</td>
 
 							<td>
-								Common code for chart widgets
+								Core visuzlization logic for all chart widgets
 							</td>
 						</tr>
 
 						<tr>
 							<td>
-								infragistics.chart_funnelchart.js
+								infragistics.dvcommonwidget.js
+							</td>
+
+							<td>
+								Common UI code for data visualization widgets
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								infragistics.ui.basechart.js
+							</td>
+
+							<td>
+								Common UI code for chart widgets
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								infragistics.funnelchart.js
 							</td>
 
 							<td>
@@ -198,21 +232,21 @@ Adding the `igFunnelChart` control to an HTML page requires referencing the reso
 
 						<tr>
 							<td>
-								infragistics.ui.chartlegend.js
+								infragistics.legend.js
 							</td>
 
 							<td>
-								The `igChartLegend` control used by all chart controls in Ignite UI
+								Common code for visualizing chart legends
 							</td>
 						</tr>
 
 						<tr>
 							<td>
-								infragistics.templating.js
+								infragistics.ui.chartlegend.js
 							</td>
 
 							<td>
-								The Infragistics templating engine
+								The `igChartLegend` control used by all chart controls in Ignite UI
 							</td>
 						</tr>
 					</tbody>
@@ -298,7 +332,7 @@ The following steps demonstrate how to add a basic funnel chart control to a web
 		$.ig.loader({
 	        scriptPath: "/Script/ig/",
 	        cssPath: "/Content/ig/",
-	        resources: "igFunnelChart"
+	        resources: "igFunnelChart,igChartLegend"
 	    });
 		```
 
