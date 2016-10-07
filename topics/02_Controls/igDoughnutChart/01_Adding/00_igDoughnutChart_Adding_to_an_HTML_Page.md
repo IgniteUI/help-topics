@@ -98,7 +98,10 @@ The following table summarizes the requirements for using the `igDoughnutChart` 
 			</td>
 
 			<td>
-				Uses the styles from the following CSS file for rendering various elements of the control:&lt;IG CSS root&gt;/structure/modules/infragistics.ui.chart.css
+				Uses the styles from the following CSS file for rendering various elements of the control:<br>
+				&lt;IG CSS root&gt;/structure/modules/infragistics.ui.html5.css<br>
+				&lt;IG CSS root&gt;/structure/modules/infragistics.ui.shared.css<br>
+				&lt;IG CSS root&gt;/structure/modules/infragistics.ui.chart.css
 			</td>
 
 			<td></td>

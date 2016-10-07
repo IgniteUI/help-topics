@@ -276,21 +276,26 @@ Data source framework
 
                         <tr>
                             <td>
-`js/modules/infragistics.dv.simple.core.js`
-			</td>
-
-                            <td>
-A shared library for all data visualization components
-			</td>
-                        </tr>
-
-                        <tr>
-                            <td>
 `js/modules/infragistics.templating.js`
 			</td>
 
                             <td>
 `igTemplating` engine
+			</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+`js/modules/infragistics.ext_core.js`<br>
+`js/modules/infragistics.ext_collections.js`<br>
+`js/modules/infragistics.ext_ui.js`<br>
+`js/modules/infragistics.dv_core.js`<br>
+`js/modules/infragistics.dv_geometry.js`<br>
+`js/modules/infragistics.dv.simple.core.js`
+			</td>
+
+                            <td>
+A shared library for all data visualization components
 			</td>
                         </tr>
 
@@ -306,21 +311,21 @@ The base widget for all Ignite UI chart components
 
                         <tr>
                             <td>
-`js/modules/infragistics.ui.sparkline.js`
-			</td>
-
-                            <td>
-The `igSparkline` widget
-			</td>
-                        </tr>
-
-                        <tr>
-                            <td>
 `js/modules/infragistics.chart_sparkline.js`
 			</td>
 
                             <td>
 The internal core logic of the `igSparkline` widget
+			</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+`js/modules/infragistics.ui.sparkline.js`
+			</td>
+
+                            <td>
+The `igSparkline` widget
 			</td>
                         </tr>
                     </tbody>
