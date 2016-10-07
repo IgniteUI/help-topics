@@ -28,6 +28,7 @@ This topic contains the following sections:
 -   [Column Settings](#column-settings)
 -   [Client-Side events](#client-side-events)
 -   [API Usage](#api)
+-   [Default Conditions List](#default-conditions-list)
 -   [List of Filtering Options (Properties)](#properties)
 -	[Custom Filtering Conditions](#customCond)
 -   [Filtering CSS Classes](#css)
@@ -54,7 +55,7 @@ If you would like to retain the previous behavior of filtering being cleared aft
 ```js
 features: [
   { 
-     name: “Filtering”, 
+     name: "Filtering",
      persist: false 
   }
 ] 
@@ -143,7 +144,7 @@ Listing 3 shows sample code used to configure grid filtering.
 
 Listing 3: Sample grid code for filtering
 
-**In Javascript:**
+**In JavaScript:**
 
 ```js
 //Basic filtering on client
@@ -169,7 +170,7 @@ $("#myGrid").igGrid({
 
 Listing 4: Sample JSON response
 
-**In Javascript:**
+**In JavaScript:**
 
 ```js
 [
@@ -185,7 +186,7 @@ Listing 5: HTML element required to instantiate the grid
 **In HTML:**
 
 ```html
-<div id="myGrid"></div>
+<table id="myGrid"></table>
 ```
 
 Listing 6: ASPX or CSHTML markup for use with the ASP.NET MVC wrapper
@@ -233,34 +234,37 @@ Table 1: igGridFiltering columnSettings
 
 Property | Description
 ---|---
-columnKey | Key of the column for which this column setting applies
-allowFiltering | Whether filtering is enabled or disabled on the respective column. Default is true
-condition | The default filtering condition that will be used for the column.
-
+[`columnKey`](%%jQueryApiUrl%%/ui.iggridfiltering#options:columnSettings.columnKey) | Key of the column for which this column setting applies. The columnKey and columnIndex are mutually exclusive.
+[`columnIndex`](%%jQueryApiUrl%%/ui.iggridfiltering#options:columnSettings.columnIndex) | Index of the column for which this column setting applies. The columnKey and columnIndex are mutually exclusive.
+[`allowFiltering`](%%jQueryApiUrl%%/ui.iggridfiltering#options:columnSettings.allowFiltering) | Whether filtering is enabled or disabled on the respective column. Default is true.
+[`condition`](%%jQueryApiUrl%%/ui.iggridfiltering#options:columnSettings.condition) | The [default filtering condition](#default-conditions-list) that will be used for the column.
+[`conditionList`](%%jQueryApiUrl%%/ui.iggridfiltering#options:columnSettings.conditionList) | An array of strings that defines the available conditions for the column. When not set the default conditions by column data type are set plus the conditions defined in the `customConditions` option.
+[`customConditions`](%%jQueryApiUrl%%/ui.iggridfiltering#options:columnSettings.customConditions) | An object (with the following schema {labelText: "/*dataType='string'*/", expressionText: "/*dataType='string'*/", requireExpr: /*dataType='bool'*/, filterImgIcon: "/*dataType='string'*/", filterFunc: /*dataType='string or function'*/ }) defining a [custom filtering condition](#customCond).
+[`defaultExpressions`](%%jQueryApiUrl%%/ui.iggridfiltering#options:columnSettings.defaultExpressions) | An array of initial filtering expressions. A filtering expression object schema looks like this: {fieldName: "/*dataType='string'*/", cond: "/*dataType='string'*/" expr: "/*dataType='string'*/"}
 
 Listing 7: Example usage of columnSettings
 
 
-**In Javascript:**
-
-    $("#grid1").igGrid({
-        columns: [
-            { headerText: "Product ID", key: "ProductID", dataType: "number" },
-            { headerText: "Product Name", key: "Name", dataType: "string" },
-            { headerText: "Product Number", key: "ProductNumber", dataType: "string" },
-        ],
-        width: '500px',
-        dataSource: products,
-        features: [
-            {
-                name: 'Filtering',
-                columnSettings: [
-                    {columnKey: 'ProductID', condition: “startsWith” }
-                ]
-            }
-        ]
-    });
-
+**In JavaScript:**
+```
+$("#grid1").igGrid({
+    columns: [
+        { headerText: "Product ID", key: "ProductID", dataType: "number" },
+        { headerText: "Product Name", key: "Name", dataType: "string" },
+        { headerText: "Product Number", key: "ProductNumber", dataType: "string" },
+    ],
+    width: '500px',
+    dataSource: products,
+    features: [
+        {
+            name: 'Filtering',
+            columnSettings: [
+                {columnKey: 'ProductID', condition: "startsWith" }
+            ]
+        }
+    ]
+});
+```
 ## <a id="client-side-events"></a> Client-Side events
 
 You can bind to Filtering client-side events in two ways, which are described in Listing 8 and Listing 9, respectively. If you would like to bind using the approach described in Listing 8, you must use the jQuery `delegate()` method instead of `bind` if filtering is not yet instantiated.
@@ -268,14 +272,15 @@ You can bind to Filtering client-side events in two ways, which are described in
 Listing 8: Binding to client-side events from anywhere in your application
 
 
-**In Javascript:**
-
-    $("#grid1").bind("iggridfilteringdatafiltered", handler);
+**In JavaScript:**
+```
+$("#grid1").bind("iggridfilteringdatafiltered", handler);
+```
 
 Listing 9: Binding to client-side events by specifying the event name as an option when you initialize the filtering feature (case sensitive)
 
-**In Javascript:**
-
+**In JavaScript:**
+```
     $(function () {
         $("#grid1").igGrid({
             columns: [
@@ -298,6 +303,7 @@ Listing 9: Binding to client-side events by specifying the event name as an opti
     function handler(event, args) {
 
     }
+```
 
 > **Note:** All ‘ing’ events are cancellable. In order to cancel an ‘ing’ event, its respective event handler must return false.
 
@@ -535,17 +541,17 @@ The expressions argument is an array of expression objects. Listing 10 gives an 
 
 Listing 10: Filtering expression object structure
 
-**In Javascript:**
+**In JavaScript:**
 
 ```js
-{expr: <filter expression string>, cond: <filtering condition>, fieldName: <name of column key>}
+{expr: <filter expression string>, cond: [<filtering condition>](#default-conditions-list), fieldName: [<column key>](%%jQueryApiUrl%%/ui.iggrid#options:columns.key)}
 ```
 
 Listing 11 and Listing 12 show examples of using the filter() function off the `igGridFiltering` widget.
 
 Listing 11: Filter by ProductID = 1
 
-**In Javascript:**
+**In JavaScript:**
 
 ```js
 $("#grid1").igGridFiltering('filter', ([{ fieldName: "ProductID", expr: 1, cond: "equals"}]));
@@ -553,19 +559,20 @@ $("#grid1").igGridFiltering('filter', ([{ fieldName: "ProductID", expr: 1, cond:
 
 Listing 12: Filter by ProductID = 1 and ProductName startsWith “a”:
 
-**In Javascript:**
+**In JavaScript:**
 ```js
 $("#grid1").igGridFiltering('filter', ([{ fieldName: "ProductID", expr: 1, cond: "equals"}, {fieldName: "ProductName", expr: "a", cond: "startsWith"} ]));
 ```
 
-
 Listing 13: Retrieving the applied filtering expressions
 
-**In Javascript:**
+**In JavaScript:**
 
 ```js
 var expressions = $('#grid1').data('igGrid').dataSource.settings.filtering.expressions;
 ```
+
+## <a id="default-conditions-list"></a> Default Conditions List
 
 The following conditions (grouped by data type) are available to perform filtering on the grid:
 
@@ -659,8 +666,8 @@ featureChooserTextAdvancedFilter ("Advanced Filter") | Feature chooser text when
 
 ## <a id="customCond"></a> Custom Filtering Conditions
 
-The filtering feature allows the user to define custom filtering conditions per column.
-The custom conditions are automatically added to the conditions list for the specific column and allow you to specify a custom comparer filtering function to process the data.
+The Filtering feature when in local mode (type="local") allows the user to define custom filtering conditions per column.
+The custom conditions are appended to the conditions list (following the default conditions list based on the column data type) for the specific column and allow you to specify a custom comparer filtering function to process the data.
 The condition needs to be defined in the column settings for the related column via the [`customConditions`](%%jQueryApiUrl%%/ui.iggridfiltering#options:columnSettings.customConditions) option.
 The assigned value should be an object, where each property name represents an unique condition key and the value represents the custom condition's declaration.
 
@@ -674,45 +681,45 @@ There are additional options that further affect the behavior and visualization 
  Listing 14: Example usage of custom conditions
 
 
-**In Javascript:**
-
-    $("#grid1").igGrid({
-       columns: [ 
-                    { headerText: "Employee ID", key: "EmployeeID", dataType: "string", hidden: true },
-                    { headerText: "First Name", key: "FirstName", dataType: "string" },
-                    { headerText: "Last Name", key: "LastName", dataType: "string" },
-                    { headerText: "Register Date", key: "RegistererDate", dataType: "date" },
-                    { headerText: "Country", key: "Country", dataType: "string" },
-                    { headerText: "Age", key: "Age", dataType: "number" },
-                    { headerText: "Is Active", key: "IsActive", dataType: "bool" }
-                ],
-        dataSource: employees,
-        width: '500px',
-        dataSource: products,
-        features: [
-            {
-                name: 'Filtering',
-                columnSettings: [
-                   {
-                         columnKey: "Country",
-                         customConditions: {
-                            USA: {
-                                 labelText: 'USA',
-                                 expressionText: "USA",
-                                 filterFunc: function(value, expression, dataType, ignoreCase, preciseDateFormat) {  return value === "USA";}
-                            },
-                            Canada:{
-                                  labelText: 'Canada',
-                                  expressionText: "Canada",
-                                  filterFunc: function(value, expression, dataType, ignoreCase, preciseDateFormat) {  return value === "Canada";}
-                            }
-                         }
-                    }
-                ]
-            }
-        ]
-    });
-
+**In JavaScript:**
+```
+$("#grid1").igGrid({
+   columns: [ 
+                { headerText: "Employee ID", key: "EmployeeID", dataType: "string", hidden: true },
+                { headerText: "First Name", key: "FirstName", dataType: "string" },
+                { headerText: "Last Name", key: "LastName", dataType: "string" },
+                { headerText: "Register Date", key: "RegistererDate", dataType: "date" },
+                { headerText: "Country", key: "Country", dataType: "string" },
+                { headerText: "Age", key: "Age", dataType: "number" },
+                { headerText: "Is Active", key: "IsActive", dataType: "bool" }
+            ],
+    dataSource: employees,
+    width: '500px',
+    dataSource: products,
+    features: [
+        {
+            name: 'Filtering',
+            columnSettings: [
+               {
+                     columnKey: "Country",
+                     customConditions: {
+                        USA: {
+                             labelText: 'USA',
+                             expressionText: "USA",
+                             filterFunc: function(value, expression, dataType, ignoreCase, preciseDateFormat) {  return value === "USA";}
+                        },
+                        Canada:{
+                              labelText: 'Canada',
+                              expressionText: "Canada",
+                              filterFunc: function(value, expression, dataType, ignoreCase, preciseDateFormat) {  return value === "Canada";}
+                        }
+                     }
+                }
+            ]
+        }
+    ]
+});
+```
  
 
 ## <a id="css"></a> Filtering CSS Classes
@@ -838,11 +845,6 @@ _Note_: There is a difference between the drop-down for selecting the column and
 
 ### <a id="samples"></a> Samples
 
--   [Filtering](%%SamplesUrl%%/grid/simple-filtering)
+-   [Simple Filtering](%%SamplesUrl%%/grid/simple-filtering)
+-   [Advanced Filtering](%%SamplesUrl%%/grid/grid/advanced-filtering)
 -   [Custom Conditions Filtering](%%SamplesUrl%%/grid/custom-conditions-filtering)
-
-
- 
-
- 
-
