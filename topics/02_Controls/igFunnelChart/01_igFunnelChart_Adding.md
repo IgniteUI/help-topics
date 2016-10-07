@@ -138,21 +138,21 @@ Adding the `igFunnelChart` control to an HTML page requires referencing the reso
 
 						<tr>
 							<td>
-								infragistics.datasource.js
-							</td>
-
-							<td>
-								The `igDataSource`™ control
-							</td>
-						</tr>
-
-						<tr>
-							<td>
 								infragistics.util.js
 							</td>
 
 							<td>
 								Ignite UI utilities
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								infragistics.datasource.js
+							</td>
+
+							<td>
+								The `igDataSource`™ control
 							</td>
 						</tr>
 

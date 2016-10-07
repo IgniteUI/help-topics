@@ -156,11 +156,61 @@ The following table summarizes the requirements for using the `igDoughnutChart` 
 
 						<tr>
 							<td>
-								infragistics.dv.core.js
+								infragistics.templating.js
 							</td>
 
 							<td>
+								Template engine (igTemplate™)
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								infragistics.ext_core.js,<br>
+								infragistics.ext_collections.js,<br>
+								infragistics.ext_ui.js,<br>
+								infragistics.dv_core.js,<br>
+								infragistics.dv_geometry.js
+							<td>
 								Data visualization core functionality
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								infragistics.datachart_core.js
+							<td>
+								Common chart visualization functionality
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								infragistics.piechart.js
+							</td>
+
+							<td>
+								Pie chart visualization logic
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								infragistics.doughnutchart.js
+							</td>
+
+							<td>
+								Doughnut chart visualization logic
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								infragistics.legend.js
+							</td>
+
+							<td>
+								Common chart code for legend functionality
 							</td>
 						</tr>
 
@@ -171,16 +221,6 @@ The following table summarizes the requirements for using the `igDoughnutChart` 
 
 							<td>
 								Chart and map common widget
-							</td>
-						</tr>
-
-						<tr>
-							<td>
-								infragistics.templating.js
-							</td>
-
-							<td>
-								Template engine (igTemplate™)
 							</td>
 						</tr>
 
@@ -206,11 +246,11 @@ The following table summarizes the requirements for using the `igDoughnutChart` 
 
 						<tr>
 							<td>
-								infragistics.chart_piechart.js
+								infragistics.ui.chart.js
 							</td>
 
 							<td>
-								The igPieChart™ control
+								`igDataChart` widget UI code
 							</td>
 						</tr>
 
@@ -220,7 +260,7 @@ The following table summarizes the requirements for using the `igDoughnutChart` 
 							</td>
 
 							<td>
-								The igDoughnutChart widget
+								The `igDoughnutChart` widget UI code
 							</td>
 						</tr>
 					</tbody>
@@ -295,23 +335,33 @@ Follow these steps to add an `igDoughnutChart` to an HTML page.
 	<!DOCTYPE html>
     <html>
     <head>
-    <!-- Ignite UI Required CSS File -->
-    <link href="../../igniteui/css/structure/modules/infragistics.ui.chart.css" rel="stylesheet" />
-    <!-- Ignite UI IG Theme CSS File -->
-    <link href="../../igniteui/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
-    <!-- jQuery Files -->
-    <script src="../../js/jquery.min.js"></script>
-    <script src="../../js/jquery-ui.min.js"></script>
-    <!-- Ignite UI Required JavaScript Files -->
-    <script src="../../igniteui/js/modules/infragistics.util.js" type="text/javascript"></script>
-    <script src="../../igniteui/js/modules/infragistics.datasource.js" type="text/javascript"></script>
-    <script src="../../igniteui/js/modules/infragistics.dv.core.js" type="text/javascript"></script>
-    <script src="../../igniteui/js/modules/infragistics.dvcommonwidget.js" type="text/javascript"></script>
-    <script src="../../igniteui/js/modules/infragistics.templating.js" type="text/javascript"></script>
-    <script src="../../igniteui/js/modules/infragistics.ui.chartlegend.js" type="text/javascript"></script>
-    <script src="../../igniteui/js/modules/infragistics.ui.basechart.js" type="text/javascript"></script>
-    <script src="../../igniteui/js/modules/infragistics.chart_piechart.js" type="text/javascript"></script>
-    <script src="../../igniteui/js/modules/infragistics.ui.doughnutchart.js" type="text/javascript"></script>
+	<!-- Ignite UI IG Theme CSS File -->
+	<link href="../../igniteui/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+	<!-- Ignite UI Required CSS File -->
+	<link rel="stylesheet" type="text/css" href="../../igniteui/css/structure/modules/infragistics.ui.html5.css"/>
+	<link rel="stylesheet" type="text/css" href="../../igniteui/css/structure/modules/infragistics.ui.shared.css"/>
+	<link rel="stylesheet" type="text/css" href="../../igniteui/css/structure/modules/infragistics.ui.chart.css"/>
+	<!-- jQuery Files -->
+	<script src="../../js/jquery.min.js"></script>
+	<script src="../../js/jquery-ui.min.js"></script>
+	<!-- Ignite UI Required JavaScript Files -->
+	<script src="../../igniteui/js/modules/infragistics.util.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.datasource.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.templating.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.ext_core.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.ext_collections.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.ext_ui.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.dv_core.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.legend.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.dv_geometry.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.datachart_core.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.dvcommonwidget.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.ui.chartlegend.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.ui.chart.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.piechart.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.doughnutchart.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.ui.basechart.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.ui.doughnutchart.js" type="text/javascript"></script>
     </head>
     <body>
     </body>
@@ -399,25 +449,35 @@ Follow these steps to add an `igDoughnutChart` to an HTML page.
 <html>
 <head>
 <title>DoughnutChart</title>
-<!-- Ignite UI Required CSS File -->    
-<link href="../../igniteui/css/structure/modules/infragistics.ui.chart.css" rel="stylesheet" />
-<!-- Ignite UI IG Theme CSS File -->
-<link href="../../igniteui/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
-<!-- jQuery Files -->
-<script src="../../js/jquery.min.js"></script>
-<script src="../../js/jquery-ui.min.js"></script>
-<!-- Ignite UI Required JavaScript Files -->
-<script src="../../igniteui/js/modules/infragistics.util.js" type="text/javascript"></script>
-<script src="../../igniteui/js/modules/infragistics.datasource.js" type="text/javascript"></script>
-<script src="../../igniteui/js/modules/infragistics.dv.core.js" type="text/javascript"></script>
-<script src="../../igniteui/js/modules/infragistics.dvcommonwidget.js" type="text/javascript"></script>
-<script src="../../igniteui/js/modules/infragistics.templating.js" type="text/javascript"></script>
-<script src="../../igniteui/js/modules/infragistics.ui.chartlegend.js" type="text/javascript"></script>
-<script src="../../igniteui/js/modules/infragistics.ui.basechart.js" type="text/javascript"></script>
-<script src="../../igniteui/js/modules/infragistics.chart_piechart.js" type="text/javascript"></script>
-<script src="../../igniteui/js/modules/infragistics.ui.doughnutchart.js" type="text/javascript"></script>
-<script type="text/javascript">
-                  var data = [
+	<!-- Ignite UI IG Theme CSS File -->
+	<link href="../../igniteui/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+	<!-- Ignite UI Required CSS File -->
+	<link rel="stylesheet" type="text/css" href="../../igniteui/css/structure/modules/infragistics.ui.html5.css"/>
+	<link rel="stylesheet" type="text/css" href="../../igniteui/css/structure/modules/infragistics.ui.shared.css"/>
+	<link rel="stylesheet" type="text/css" href="../../igniteui/css/structure/modules/infragistics.ui.chart.css"/>
+	<!-- jQuery Files -->
+	<script src="../../js/jquery.min.js"></script>
+	<script src="../../js/jquery-ui.min.js"></script>
+	<!-- Ignite UI Required JavaScript Files -->
+	<script src="../../igniteui/js/modules/infragistics.util.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.datasource.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.templating.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.ext_core.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.ext_collections.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.ext_ui.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.dv_core.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.legend.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.dv_geometry.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.datachart_core.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.dvcommonwidget.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.ui.chartlegend.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.ui.chart.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.piechart.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.doughnutchart.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.ui.basechart.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.ui.doughnutchart.js" type="text/javascript"></script>
+	<script type="text/javascript">
+            var data = [
             { "ProductCategory": ' Footwear', "Index": 1498 },
                 { "ProductCategory": ' Clothing', "Index": 1389 },
                 { "ProductCategory": ' Books', "Index": 352 },
