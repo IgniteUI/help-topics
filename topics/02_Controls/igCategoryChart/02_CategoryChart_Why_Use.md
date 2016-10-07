@@ -1,1 +1,1 @@
-﻿= AsciiDoc
+﻿# Why Use igCategoryChart Instead of igDataChart
