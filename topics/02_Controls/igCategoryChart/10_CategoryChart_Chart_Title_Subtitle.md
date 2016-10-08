@@ -1,4 +1,14 @@
-﻿# Chart Title and Subtitle
+﻿<!--
+|metadata|
+{
+    "fileName": "categorychart-chart-title-subtitle",
+    "controlName": "igCategoryChart",
+    "tags": ["API", "CategoryChart", "Axes"]
+}
+|metadata|
+-->
+
+# Chart Title and Subtitle
 
 The title and subtitle feature of the igCategoryChart control allows you to add information to the top section of the chart control.
 

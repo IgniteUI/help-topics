@@ -1,4 +1,14 @@
-﻿# Configuring Axis Label 
+﻿<!--
+|metadata|
+{
+    "fileName": "categorychart-configuring-axis-label",
+    "controlName": "igCategoryChart",
+    "tags": ["API", "CategoryChart", "Axes"]
+}
+|metadata|
+-->
+
+# Configuring Axis Label 
 
 The igCategoryChart control allows you full control over configuring, formatting and styling the labels displayed on your chart. By default, you do not need to explicitly set the labels. The Category Chart will use the first appropriate string property that it finds within the data you provided and will use that for the labels. 
 

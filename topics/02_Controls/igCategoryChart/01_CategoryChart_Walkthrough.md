@@ -1,4 +1,14 @@
-﻿# Adding igCategoryChart
+﻿<!--
+|metadata|
+{
+    "fileName": "categorychart-walkthrough",
+    "controlName": "igCategoryChart",
+    "tags": ["API", "CategoryChart", "Axes"]
+}
+|metadata|
+-->
+
+# Adding igCategoryChart
 
 ### Purpose
 

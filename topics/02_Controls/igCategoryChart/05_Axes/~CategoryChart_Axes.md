@@ -1,6 +1,17 @@
-﻿# Axes
+﻿<!--
+|metadata|
+{
+    "fileName": "categorychart-axes",
+    "controlName": "igCategoryChart",
+    "tags": ["Charting","Data Presentation","Getting Started"]
+}
+|metadata|
+-->
 
-In theigCategoryChart control, an Axis provides base properties for specifying appearance of axis main lines, gridlines, tickmarks, titles, stripes, and axis labels. 
+# Axes
+
+
+In the igCategoryChart control, an Axis provides base properties for specifying appearance of axis main lines, gridlines, tickmarks, titles, stripes, and axis labels. 
 
 
 [Configuring Axis Gap and Overlap](configuring-axis-gap-and-overlap.html)

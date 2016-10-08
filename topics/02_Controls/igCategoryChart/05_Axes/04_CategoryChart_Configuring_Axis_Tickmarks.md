@@ -1,4 +1,14 @@
-﻿# Axis Tickmarks
+﻿<!--
+|metadata|
+{
+    "fileName": "categorychart-configuring-axis-tickmarks",
+    "controlName": "igCategoryChart",
+    "tags": ["API", "CategoryChart", "Axes"]
+}
+|metadata|
+-->
+
+# Axis Tickmarks
 
 Tick marks display points on the axes. They represent a certain numeric point on a scale or the value of the category in a category axis.
 

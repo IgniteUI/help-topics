@@ -1,4 +1,15 @@
-﻿# igCategoryChart
+﻿<!--
+|metadata|
+{
+    "fileName": "categorychart-landing-page",
+    "controlName": "igCategoryChart",
+    "tags": ["API", "CategoryChart", "Axes"]
+}
+|metadata|
+-->
+
+# igCategoryChart
+
 ### Introduction
 
 The igCategoryChart is a lightweight, highly performant chart. This chart can be easily configured to display category data using an extremely simple and intuitive API. All you need to do is bind your data (a collection or a collection of collections) and the chart takes care of everything else.
