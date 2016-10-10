@@ -38,7 +38,7 @@ $(function () {
         });
 ```
 
-![](images/categorychart_configuring_axis_ranges_01.png)
+![](images/categorychart-configuring-axis-ranges-01.png)
 
 ### <a id="relatedtopics"/> Related Topics:
 

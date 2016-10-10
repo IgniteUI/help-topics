@@ -46,7 +46,7 @@ $(function () {
         });
 ```
 
-![](images/categorychart_configuring_axis_tickmarks_01.png)
+![](images/categorychart-configuring-axis-tickmarks-01.png)
 
 ## <a id="relatedtopics"/> Related Topics:
 

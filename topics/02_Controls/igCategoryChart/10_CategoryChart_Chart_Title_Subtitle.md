@@ -65,7 +65,7 @@ $(function () {
 });
 ```
 
-![](images/categorychart_configuring_title_01.png)
+![](images/categorychart-configuring-title-01.png)
 
 ## <a id="relatedtopics"/>Related Topics:
 
