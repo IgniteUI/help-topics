@@ -799,7 +799,7 @@ Chart-type-specific JavaScript resources
 				Polar Area, Polar Line, all Polar charts
 			</td>
 			<td>
-				infragistics.datachart_polar.js
+				infragistics.datachart_polar.js (dendends on: infragistics.datachart_extendedaxes.js)
 			</td>
 		</tr>
 
@@ -808,7 +808,7 @@ Chart-type-specific JavaScript resources
 				all Radial charts
 			</td>
 			<td>
-				infragistics.datachart_radial.js
+				infragistics.datachart_radial.js (dendends on: infragistics.datachart_extendedaxes.js)
 			</td>
 		</tr>
 
@@ -835,7 +835,7 @@ Chart-type-specific JavaScript resources
 				all Stacked charts
 			</td>
 			<td>
-				infragistics.datachart_stacked.js
+				infragistics.datachart_stacked.js (dendends on: infragistics.datachart_verticalcategory.js, infragistics.datachart_extendedaxes.js)
 			</td>
 		</tr>
 	
