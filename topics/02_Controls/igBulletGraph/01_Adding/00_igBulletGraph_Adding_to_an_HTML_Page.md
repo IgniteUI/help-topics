@@ -136,7 +136,7 @@ A shared library for data visualization components
 						</tr>
 						<tr>
 							<td>
-*infragistics.gauge_bulletgraph.js*
+*infragistics.bulletgraph.js*
                             </td>
 							<td>
 The *igBulletGraph* control
@@ -219,7 +219,7 @@ To complete the procedure, you need the required JavaScript and CSS files refere
 	<script src="../../igniteui/js/modules/infragistics.ext_ui.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.dv_core.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.dv_geometry.js" type="text/javascript"></script>
-	<script src="../../igniteui/js/modules/infragistics.gauge_bulletgraph.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.bulletgraph.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.ui.bulletgraph.js" type="text/javascript"></script>
 </head>
 <body>
@@ -382,7 +382,7 @@ Following is the full code for this procedure.
 	<script src="../../igniteui/js/modules/infragistics.ext_ui.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.dv_core.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.dv_geometry.js" type="text/javascript"></script>
-	<script src="../../igniteui/js/modules/infragistics.gauge_bulletgraph.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.bulletgraph.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.ui.bulletgraph.js" type="text/javascript"></script>
         <script type="text/jscript">
         $(function () {             
