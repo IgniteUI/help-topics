@@ -1,1 +1,2 @@
 ﻿# Configuring Chart Types
+
