@@ -1,4 +1,14 @@
-﻿# Adding igCategoryChart
+﻿<!--
+|metadata|
+{
+    "fileName": "categorychart-walkthrough",
+    "controlName": "igCategoryChart",
+    "tags": ["API", "CategoryChart", "Axes"]
+}
+|metadata|
+-->
+
+# Adding igCategoryChart
 
 ### Purpose
 
@@ -30,7 +40,7 @@ The following procedure demonstrates adding the igCategoryChart to your applicat
 ### Preview
 
 The following is a screenshot of the igCategoryChart.
-![](images/categorychart_walkthrough_01.png)
+![](images/categorychart-walkthrough-01.png)
 
 <a id="Prerequisites"/>
 ### Requirements

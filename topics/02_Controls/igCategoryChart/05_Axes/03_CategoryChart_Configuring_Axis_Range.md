@@ -1,4 +1,14 @@
-﻿# Axis Range
+﻿<!--
+|metadata|
+{
+    "fileName": "categorychart-configuring-axis-range",
+    "controlName": "igCategoryChart",
+    "tags": ["API", "CategoryChart", "Axes"]
+}
+|metadata|
+-->
+
+# Axis Range
 
 In the igCategoryChart™ control, the range on numeric axes is the difference in numeric values from the beginning of the axis to the end or from the smallest to largest values in the data. The range minimum is the lowest value of the axis. The range maximum is the highest value of the axis.
 
@@ -28,11 +38,11 @@ $(function () {
         });
 ```
 
-![](images/categorychart_configuring_axis_ranges_01.png)
+![](images/categorychart-configuring-axis-ranges-01.png)
 
 ### <a id="relatedtopics"/> Related Topics:
 
-- [Walkthrough](categorychart-walkthrough.html)
+- [Adding igCategoryChart](categorychart-walkthrough.html)
 
 - [Binding to Data](categorychart-binding-to-data.html)
 

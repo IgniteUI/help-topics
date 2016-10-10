@@ -1,4 +1,14 @@
-﻿# Axis Titles
+﻿<!--
+|metadata|
+{
+    "fileName": "categorychart-configuring-axis-titles",
+    "controlName": "igCategoryChart",
+    "tags": ["API", "CategoryChart", "Axes"]
+}
+|metadata|
+-->
+
+# Axis Titles
 The axis title feature of the igCategoryChart control allows you to add contextual information to the x and y axes of the chart.
 
 ### In this topic
@@ -46,7 +56,7 @@ $(function () {
 });
 ```
 
-![](images/categorychart_configuring_axis_titles_01.png)
+![](images/categorychart-configuring-axis-title-01.png)
 
 ## <a id="relatedtopics"/>Related Topics:
 

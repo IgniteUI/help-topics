@@ -22,7 +22,7 @@ Legend |
 
 Feature | Description | Status
 ---|---|---
-Large js files are broken into smaller files |In order to reduce the file size of your application, we have modularized large files into smaller file | ![](../images/images/positive.png)
+Large js files are broken into smaller files |In order to reduce the file size of your application, we have modularized large files into smaller files | ![](../images/images/positive.png)
 
 
 ## [Redesigned Chart Defaults](#redesignedchartdefaults)
@@ -36,7 +36,7 @@ Feature | Description | Status
 The legend and the OPD pane must be explicitly loaded as a separate module if used in any of the charts on the page.|Previously, the legend and the OPD were dependencies of the chart in the module structure. Since the structure is updated in this release, they have to be explicitly loaded.|![](../images/images/negative.png)
 
 
-## [Bar Series requires VerticalCateogry module when using the loader](#barseries)
+## [Bar Series requires VerticalCategory module when using the loader](#barseries)
 Feature | Description | Status
 ---|---|---
 The VerticalCategory must be explicitly loaded as a separate module if it is used in any of the charts or maps on the page. |Previously, the bar series and associated axes were integrated into the chart. Since the structure is updated in this release, the VerticalCategory has to be explicitly loaded. |![](../images/images/negative.png)
@@ -166,9 +166,9 @@ $.ig.loader({
 ```
 
 
-## <a id="barseries"></a>Bar Series requires VerticalCateogry module is using the loader
+## <a id="barseries"></a>Bar Series requires VerticalCategory module when using the loader
 The bar series and associated axes used to be integrated into the chart in the old module structure. 
-With the new structure of modules the bar series and associated axes have to be explicitly loaded as a module if it is used in any of the charts or maps on the page. 
+With the new structure of modules the bar series and associated axes have to be explicitly loaded as a module when used in any of the charts or maps on the page. 
 
 **In Javascript:**
 

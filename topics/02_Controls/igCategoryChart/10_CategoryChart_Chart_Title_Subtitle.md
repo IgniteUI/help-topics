@@ -1,4 +1,14 @@
-﻿# Chart Title and Subtitle
+﻿<!--
+|metadata|
+{
+    "fileName": "categorychart-chart-title-subtitle",
+    "controlName": "igCategoryChart",
+    "tags": ["API", "CategoryChart", "Axes"]
+}
+|metadata|
+-->
+
+# Chart Title and Subtitle
 
 The title and subtitle feature of the igCategoryChart control allows you to add information to the top section of the chart control.
 
@@ -55,10 +65,10 @@ $(function () {
 });
 ```
 
-![](images/categorychart_configuring_title_01.png)
+![](images/categorychart-configuring-title-01.png)
 
 ## <a id="relatedtopics"/>Related Topics:
 
-- [Walkthrough](categorychart-walkthrough.html)
+- [Adding igCategoryChart](categorychart-walkthrough.html)
 
 - [Binding to Data](categorychart-binding-to-data.html)

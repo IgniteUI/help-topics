@@ -1,4 +1,14 @@
-﻿# Transition In Animations
+﻿<!--
+|metadata|
+{
+    "fileName": "categorychart-transition-in-animations",
+    "controlName": "igCategoryChart",
+    "tags": ["API", "CategoryChart", "Axes"]
+}
+|metadata|
+-->
+
+# Transition In Animations
 
 This feature allows you to animate the series as it loads a new data source. The available animation differs depending on the type of series involved. For example, the column series animates by rising from the x-axis, a line series animates by drawing from the y-axis.
 resizes allowing for the title and subtitle information.
@@ -79,6 +89,6 @@ $(function () {
 
 ## <a id="relatedtopics"/>Related Topics:
 
-- [Walkthrough](categorychart-walkthrough.html)
+- [Adding igCategoryChart](categorychart-walkthrough.html)
 
 - [Binding to Data](categorychart-binding-to-data.html)
