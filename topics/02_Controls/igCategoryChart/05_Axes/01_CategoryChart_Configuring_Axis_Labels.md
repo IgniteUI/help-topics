@@ -68,7 +68,7 @@ $(function () {
 
 The following screenshot demonstrates the igCategoryChart control with the x-axis label styled.
 
-![](images/categorychart_configuring_axis_labels_01.png)
+![](images/categorychart-configuring-axis-labels-01.png)
 
 ## <a id="relatedtopics"/>Related Topics:
 

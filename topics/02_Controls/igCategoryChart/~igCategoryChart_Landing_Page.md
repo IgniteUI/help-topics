@@ -16,7 +16,7 @@ The igCategoryChart is a lightweight, highly performant chart. This chart can be
 
 The following screenshot demonstrates the category chart displaying a column chart.
 
-![](images/categorychart_overview_01.png)
+![](images/categorychart-configuring-title-01.png)
 
 ### Topics
 The topics in this section provide detailed information regarding the igCategoryChart control.

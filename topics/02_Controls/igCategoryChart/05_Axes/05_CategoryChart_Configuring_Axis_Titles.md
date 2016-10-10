@@ -56,7 +56,7 @@ $(function () {
 });
 ```
 
-![](images/categorychart_configuring_axis_titles_01.png)
+![](images/categorychart-configuring-axis-title-01.png)
 
 ## <a id="relatedtopics"/>Related Topics:
 
