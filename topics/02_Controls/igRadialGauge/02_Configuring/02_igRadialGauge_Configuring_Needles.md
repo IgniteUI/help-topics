@@ -45,7 +45,7 @@ A gauge needle is a visual element used to signify a gauge set value and consist
 
 ### <a id="preview"></a>Preview
 
-The following image is a preview of the `igRadialGauge` control with the needle’s value property set to 60.
+The following image is a preview of the `igRadialGauge` control with the needle’s value property set to 60:
 
 ![](images/igRadialGauge_Needle_01.png)
 
@@ -54,7 +54,7 @@ The following image is a preview of the `igRadialGauge` control with the needle�
 ## <a id="needle-properties"></a>Needle Properties
 ### Needle properties summary
 
-The following table summarizes the properties the `igRadialGauge` control related to the needle.
+The following table summarizes the properties the `igRadialGauge` control related to the needle:
 
 <table class="table table-bordered">
 	<thead>
@@ -327,7 +327,7 @@ Property| Value
 
 ![](images/igRadialGauge_Needle_02.png)
 
-Following is the code that implements this example
+The following is the code that implements this example:
 
  **In JavaScript:**
 
@@ -362,7 +362,7 @@ The following topics provide additional information related to this topic:
 
 ### Samples
 
-The following samples provide additional information related to this topic.
+The following samples provide additional information related to this topic:
 
 - [API Usage](%%SamplesUrl%%/radial-gauge/api-usage): The buttons and api-viewer showcase some of `igRadialGauge`'s needle methods. You can change the value of the needle at runtime and obtain the current value of the needle by clicking the corresponding buttons.
 
@@ -379,13 +379,3 @@ The following samples provide additional information related to this topic.
 - [Scale Settings](%%SamplesUrl%%/radial-gauge/scale-settings): A scale defines a range of values in the Radial Gauge. Use the options pane below to set the Radial Gauge control’s Scale properties.
 
 - [Tick Marks](%%SamplesUrl%%/radial-gauge/tickmarks): Tick marks can be displayed at every user specified interval on a gauge. Use the options pane below to set the Radial Gauge control’s Tick Mark properties.
-
-
-
-
-
- 
-
- 
-
-
