@@ -89,6 +89,6 @@ $(function () {
 
 ## <a id="relatedtopics"/>Related Topics:
 
-- [Walkthrough](categorychart-walkthrough.html)
+- [Adding igCategoryChart](categorychart-walkthrough.html)
 
 - [Binding to Data](categorychart-binding-to-data.html)

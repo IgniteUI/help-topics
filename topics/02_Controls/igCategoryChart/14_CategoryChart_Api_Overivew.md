@@ -35,7 +35,7 @@ The `igCategoryChart` is built as a jQuery UI widget with an accompanying ASP.NE
 
 -	[igCategoryChart jQuery API](%%jQueryApiUrl%%/ui.igCategoryChart): The documentation contains an overview of the control and full list of options, events, and methods with code snippets.
 
--	[igCategoryChart ASP.NET MVC Helper API](Infragistics.Web.Mvc~Infragistics.Web.Mvc.DataChart`1.html) : The documentation contains the CategoryChart class description and a list of all of its members.
+-	[igCategoryChart ASP.NET MVC Helper API](Infragistics.Web.Mvc~Infragistics.Web.Mvc.categorychart`1.html) : The documentation contains the CategoryChart class description and a list of all of its members.
 
 ## Related Content
 
