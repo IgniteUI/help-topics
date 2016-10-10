@@ -345,32 +345,46 @@ The functionality of the igMap control is based on the HTML5 Canvas tag and its 
 			<td>
 				The functionality of the igMap control uses some utilities and the data visualization core from the Ignite UI library.
 
-				<table cellspacing="0" cellpadding="0">
-					<tbody>
+				<table class="table">
+					<thead>
 						<tr>
 							<th>JS Resource</th>
 
 							<th>Description</th>
 						</tr>
+					</thead>
+                    <tbody>
+						<tr>
+							<td>
+								`infragistics.util.js`
+							</td>
 
+							<td>
+								Ignite UI utilities
+							</td>
+						</tr>
+						
 						<tr>
 							<td>
 								`infragistics.datasource.js`
 							</td>
 
 							<td>
-								The igDataSource control.
+								The igDataSource control
 							</td>
 						</tr>
 
 						<tr>
-							<td>
-								`infragistics.dv.core.js`
-							</td>
-
-							<td>
-								Data visualization core functionality
-							</td>
+						    <td>
+						        `infragistics.ext_core.js`<br/>
+						        `infragistics.ext_collections.js`<br/>
+						        `infragistics.ext_ui.js`<br/>
+						        `infragistics.dv_core.js`<br/>
+						        `infragistics.dv_geo.js`<br/>
+						    </td>
+						    <td>
+						        Data visualization core functionality
+						    </td>
 						</tr>
 
 						<tr>
@@ -382,18 +396,19 @@ The functionality of the igMap control is based on the HTML5 Canvas tag and its 
 								Chart and map common widget
 							</td>
 						</tr>
-
+						
 						<tr>
 							<td>
-								`infragistics.geographicmap_core.js`
+								`infragistics.datachart_core.js`<br/>
+								`infragistics.datachart_scatter.js`<br/>
 							</td>
 
 							<td>
-								Core map visualization functionality
+								Chart series functionality
 							</td>
 						</tr>
 
-						<tr>
+                        <tr>
 							<td>
 								`infragistics.ui.map.js`
 							</td>
@@ -402,24 +417,14 @@ The functionality of the igMap control is based on the HTML5 Canvas tag and its 
 								Map widget
 							</td>
 						</tr>
-
+						
 						<tr>
 							<td>
-								`infragistics.util.js`
+								`infragistics.geographicmap_core.js`
 							</td>
 
 							<td>
-								Ignite UI utilities
-							</td>
-						</tr>
-
-						<tr>
-							<td>
-								`infragistics.templating.js`
-							</td>
-
-							<td>
-								The igTemplating engine
+								Core map visualization functionality
 							</td>
 						</tr>
 					</tbody>
@@ -769,13 +774,3 @@ The following topics provide additional information related to this topic.
 The following samples provide additional information related to this topic.
 
 -	[Map Tooltips](%%SamplesUrl%%/map/map-tooltips):This sample demonstrates how to set map tooltips in the `igMap` control.
-
-
-
-
-
- 
-
- 
-
-
