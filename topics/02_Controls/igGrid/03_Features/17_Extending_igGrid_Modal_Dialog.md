@@ -16,6 +16,8 @@
 - [Using Custom Dialogs](#using-custom-dialogs)
 - [Requirements](#requirements)
 - [Related Content](#related-content)
+    -   [Samples](#samples)
+    -   [Topics](#topics)
 
 ## <a id="overview"></a> Overview
 `igGridModalDialog` is a widget which comes with igGrid's scripts and builds all dialog-based UI for igGrid's features. These include the `dialog` edit mode for igGridUpdating, the advanced filter dialog for igGridFiltering, the column chooser for igGridHiding, etc. The main features of the widget include the ability to block user interaction on the grid while it is opened, drag & resize constrained by containment options and visualization settings. Each grid feature using the widget exposes a certain amount of options that are then passed to the dialog on initialization, however, these options are often limited to what would make most sense and not break the dialog's functionality for the specific purpose it is serving. Further customization of the dialog is possible through extensions.
@@ -72,6 +74,12 @@ The custom dialog widget should include certain functions and fire certain event
 **Note:** Since jQuery UI allows for any number of options to be passed on widgets' initialization without being available in the widget's `options` property, none of the options passed by igGrid's features is required. For custom dialogs most of them will not be applicable either. There is no mechanism that will allow for features to pass custom options.
 
 ## <a id="related-content"></a> Related Content
+
+### <a id="samples"></a>Samples
+
+The following sample shows a custom dialog being used to edit the grid.
+
+- [Custom Modal Dialog](%%SamplesUrl%%/grid/custom-modal-dialog)
 
 ### <a id="topics"></a> Topics
 
