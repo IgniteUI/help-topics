@@ -128,7 +128,7 @@ To navigate to the required JavaScript files listing for the particular control,
 		<tr>
 			<td>Scripts</td>
 			<td>
-			    infragistics.gauge_bulletgraph.js
+			    infragistics.bulletgraph.js
 			    <br>infragistics.ui.bulletgraph.js
 			</td>
 		</tr>
