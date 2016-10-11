@@ -64,14 +64,14 @@ type|Sets type of editor.|This option is removed. You can use the corresponding 
 
 Option| Description
 ---|---
-limitSpinToCurrentField|<a name='limitSpinToCurrentField'></a>Sets gets ability to modify only 1 date field on spin events.
-allowNullValue|<a name='allowNullValue'></a>If that option is false, and editor has no value, then value is set to an empty string.
-disabled|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#dateEditor').igDateEditor({ disabled: true })`.
-buttonType|<a name='buttonType'></a>Sets gets visibility of spin, clear and drop-down button.
-placeHolder|<a name='placeHolder'></a>Gets sets text which appears in editor when editor has no focus and "value" in editor is null or empty string.
-revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key.
-preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#dateEditor').igDateEditor({ preventSubmitOnEnter: true })`.
-suppressNotifications|<a name='suppressNotifications'></a>Disables default notifications for basic validation scenarios built in the editors such as required list selection, value wrapping around or spin limits.
+[limitSpinToCurrentField](%%jQueryApiUrl%%/ui.igdateeditor#options:limitSpinToCurrentField)|<a name='limitSpinToCurrentField'></a>Sets gets ability to modify only 1 date field on spin events.
+[allowNullValue](%%jQueryApiUrl%%/ui.igdateeditor#options:allowNullValue)|<a name='allowNullValue'></a>If that option is false, and editor has no value, then value is set to an empty string.
+[disabled](%%jQueryApiUrl%%/ui.igdateeditor#options:disabled)|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#dateEditor').igDateEditor({ disabled: true })`.
+[buttonType](%%jQueryApiUrl%%/ui.igdateeditor#options:buttonType)|<a name='buttonType'></a>Sets gets visibility of spin, clear and drop-down button.
+[placeHolder](%%jQueryApiUrl%%/ui.igdateeditor#options:placeHolder)|<a name='placeHolder'></a>Gets sets text which appears in editor when editor has no focus and "value" in editor is null or empty string.
+[revertIfNotValid](%%jQueryApiUrl%%/ui.igdateeditor#options:revertIfNotValid)|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key.
+[preventSubmitOnEnter](%%jQueryApiUrl%%/ui.igdateeditor#options:preventSubmitOnEnter)|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#dateEditor').igDateEditor({ preventSubmitOnEnter: true })`.
+[suppressNotifications](%%jQueryApiUrl%%/ui.igdateeditor#options:suppressNotifications)|<a name='suppressNotifications'></a>Disables default notifications for basic validation scenarios built in the editors such as required list selection, value wrapping around or spin limits.
 
 [See all options](%%jQueryApiUrl%%/ui.igdateeditor#options)
 
@@ -105,19 +105,19 @@ text|Used to get or set text in editor.|This is replaced by a getter method `dis
 
 Method|Description
 ---|---
-getSelectedDate|Gets selected date.
-selectDate|Sets selected date.
-inputName|<a name='inputName'></a>Gets sets name attribute applied to the editor element.
-displayValue|<a name='displayValue'></a>Returns a string with all the characters shown in the input.
-editorContainer|<a name='editorContainer'></a>Gets reference to jquery object which is used as top/outer element of igEditor.
-clearButton|<a name='clearButton'></a>Returns a reference to the clear button of the editor.
-getSelectionStart|<a name='getSelectionStart'></a>Gets start index of the selected text in editor.
-getSelectionEnd|<a name='getSelectionEnd'></a>Gets end index of the selected text in editor.
-insert|<a name='insert'></a>Paste text at location of caret.
-spinUp|<a name='spinUp'></a>Increase date-time period, depending on the cursor position.
-spinDown|<a name='spinDown'></a>Decrease date-time period, depending on the cursor position.
-spinUpButton|<a name='spinUpButton'></a>Returns a reference to the spin up button of the editor.
-spinDownButton|<a name='spinDownButton'></a>Returns a reference to the spin down button of the editor.
+[getSelectedDate](%%jQueryApiUrl%%/ui.igdateeditor#methods:getSelectedDate)|Gets selected date.
+[selectDate](%%jQueryApiUrl%%/ui.igdateeditor#methods:selectDate)|Sets selected date.
+[inputName](%%jQueryApiUrl%%/ui.igdateeditor#methods:inputName)|<a name='inputName'></a>Gets sets name attribute applied to the editor element.
+[displayValue](%%jQueryApiUrl%%/ui.igdateeditor#methods:displayValue)|<a name='displayValue'></a>Returns a string with all the characters shown in the input.
+[editorContainer](%%jQueryApiUrl%%/ui.igdateeditor#methods:editorContainer)|<a name='editorContainer'></a>Gets reference to jquery object which is used as top/outer element of igEditor.
+[clearButton](%%jQueryApiUrl%%/ui.igdateeditor#methods:clearButton)|<a name='clearButton'></a>Returns a reference to the clear button of the editor.
+[getSelectionStart](%%jQueryApiUrl%%/ui.igdateeditor#methods:getSelectionStart)|<a name='getSelectionStart'></a>Gets start index of the selected text in editor.
+[getSelectionEnd](%%jQueryApiUrl%%/ui.igdateeditor#methods:getSelectionEnd)|<a name='getSelectionEnd'></a>Gets end index of the selected text in editor.
+[insert](%%jQueryApiUrl%%/ui.igdateeditor#methods:insert)|<a name='insert'></a>Paste text at location of caret.
+[spinUp](%%jQueryApiUrl%%/ui.igdateeditor#methods:spinUp)|<a name='spinUp'></a>Increase date-time period, depending on the cursor position.
+[spinDown](%%jQueryApiUrl%%/ui.igdateeditor#methods:spinDown)|<a name='spinDown'></a>Decrease date-time period, depending on the cursor position.
+[spinUpButton](%%jQueryApiUrl%%/ui.igdateeditor#methods:spinUpButton)<a name='spinUpButton'></a>Returns a reference to the spin up button of the editor.
+[spinDownButton](%%jQueryApiUrl%%/ui.igdateeditor#methods:spinDownButton)|<a name='spinDownButton'></a>Returns a reference to the spin down button of the editor.
 
 >**Note:** One of the major changed in the new date editor is that it no longer supports Lists and DropDown. Note that if you try to use methods connected to dropdown and list, you will receive a notification pointing out that they are no longer available. 
 
@@ -139,9 +139,9 @@ mouseleave|Event is renamed to `mouseout` to better communicate what it does.
 
 Event|Description
 ---|---
-rendering|<a name='rendering'></a>Event which is raised before rendering of the editor completes.
-rendered|<a name='rendered'></a>Event which is raised after rendering of the editor completes.
-mouseout|<a name='mouseout'></a>Event which is raised on mouseleave at any part of editor including drop-down list.
+[rendering](%%jQueryApiUrl%%/ui.igdateeditor#events:rendering)|<a name='rendering'></a>Event which is raised before rendering of the editor completes.
+[rendered](%%jQueryApiUrl%%/ui.igdateeditor#events:rendered)|<a name='rendered'></a>Event which is raised after rendering of the editor completes.
+[mouseout](%%jQueryApiUrl%%/ui.igdateeditor#events:mouseout)|<a name='mouseout'></a>Event which is raised on mouseleave at any part of editor including drop-down list.
 
 [See all events](%%jQueryApiUrl%%/ui.igdateeditor#events)
 

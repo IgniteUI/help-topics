@@ -64,17 +64,17 @@ type|Sets type of editor.|This option is removed. You can use the corresponding 
 
 Option| Description
 ---|---
-limitSpinToCurrentField|<a name='limitSpinToCurrentField'></a>Sets gets ability to modify only 1 date field on spin events.
-allowNullValue|<a name='allowNullValue'></a>If that option is false, and editor has no value, then value is set to an empty string.
-disabled|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#datePicker').igDatePicker({ disabled: true })`.
-buttonType|<a name='buttonType'></a>Sets gets visibility of spin, clear and drop-down button.
-dropDownAttachedToBody|<a name='dropDownAttachedToBody'></a>Gets sets location of drop-down list.
-dropDownAnimationDuration|<a name='dropDownAnimationDuration'></a>Gets sets show/hide drop-down list animation duration in milliseconds.
-placeHolder|<a name='placeHolder'></a>Gets sets text which appears in editor when editor has no focus and "value" in editor is null or empty string.
-revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key. If set to false clear is called.
-preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#datePicker').igDatePicker({ preventSubmitOnEnter: true })`.
-dropDownOrientation|<a name='dropDownOrientation'></a>Use to set drop down opening orientation for the dorp down list when open button is clicked.
-suppressNotifications|<a name='suppressNotifications'></a>Disables default notifications for basic validation scenarios built in the editors such as required list selection, value wrapping around or spin limits.
+[limitSpinToCurrentField](%%jQueryApiUrl%%/ui.igdatepicker#options:limitSpinToCurrentField)|<a name='limitSpinToCurrentField'></a>Sets gets ability to modify only 1 date field on spin events.
+[allowNullValue](%%jQueryApiUrl%%/ui.igdatepicker#options:allowNullValue)|<a name='allowNullValue'></a>If that option is false, and editor has no value, then value is set to an empty string.
+[disabled](%%jQueryApiUrl%%/ui.igdatepicker#options:disabled)|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#datePicker').igDatePicker({ disabled: true })`.
+[buttonType](%%jQueryApiUrl%%/ui.igdatepicker#options:buttonType)|<a name='buttonType'></a>Sets gets visibility of spin, clear and drop-down button.
+[dropDownAttachedToBody](%%jQueryApiUrl%%/ui.igdatepicker#options:dropDownAttachedToBody)|<a name='dropDownAttachedToBody'></a>Gets sets location of drop-down list.
+[dropDownAnimationDuration](%%jQueryApiUrl%%/ui.igdatepicker#options:dropDownAnimationDuration)|<a name='dropDownAnimationDuration'></a>Gets sets show/hide drop-down list animation duration in milliseconds.
+[placeHolder](%%jQueryApiUrl%%/ui.igdatepicker#options:placeHolder)|<a name='placeHolder'></a>Gets sets text which appears in editor when editor has no focus and "value" in editor is null or empty string.
+[revertIfNotValid](%%jQueryApiUrl%%/ui.igdatepicker#options:revertIfNotValid)|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key. If set to false clear is called.
+[preventSubmitOnEnter](%%jQueryApiUrl%%/ui.igdatepicker#options:preventSubmitOnEnter)|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#datePicker').igDatePicker({ preventSubmitOnEnter: true })`.
+[dropDownOrientation](%%jQueryApiUrl%%/ui.igdatepicker#options:dropDownOrientation)|<a name='dropDownOrientation'></a>Use to set drop down opening orientation for the dorp down list when open button is clicked.
+[suppressNotifications](%%jQueryApiUrl%%/ui.igdatepicker#options:suppressNotifications)|<a name='suppressNotifications'></a>Disables default notifications for basic validation scenarios built in the editors such as required list selection, value wrapping around or spin limits.
 
 [See all options](%%jQueryApiUrl%%/ui.igdatepicker#options)
 
@@ -109,25 +109,24 @@ value|Used to get or set value in editor.|The parameter is renamed to `newValue`
 
 Method|Description
 ---|---
-getSelectedDate|Gets selected date.
-selectDate|Sets selected date.
-getCalendar|<a name='getCalendar'></a>Returns a reference to the jQuery calendar used as a picker selector.
-inputName|<a name='inputName'></a>Gets sets name attribute applied to the editor element.
-displayValue|<a name='displayValue'></a>Returns a string with all the characters shown in the input.
-editorContainer|<a name='editorContainer'></a>Gets reference to jquery object which is used as top/outer element of igEditor.
-showDropDown|<a name='showDropDown'></a>Show the dropdown list.
-hideDropDown|<a name='hideDropDown'></a>Hide the dropdown list.
-dropDownVisible|<a name='dropDownVisible'></a>Returns the visibility state of the drop down listing the items.
-dropDownButton|<a name='dropDownButton'></a>Returns a reference to the dropdown button of the editor.
-clearButton|<a name='clearButton'></a>Returns a reference to the clear button of the editor.
-getSelectionStart|<a name='getSelectionStart'></a>Gets start index of the selected text in editor.
-getSelectionEnd|<a name='getSelectionEnd'></a>Gets end index of the selected text in editor.
-insert|<a name='insert'></a>Paste text at location of caret.
-spinUp|<a name='spinUp'></a>Increase date-time period, depending on the cursor position.
-spinDown|<a name='spinDown'></a>Decrease date-time period, depending on the cursor position.
-spinUpButton|<a name='spinUpButton'></a>Returns a reference to the spin up button of the editor.
-spinDownButton|<a name='spinDownButton'></a>Returns a reference to the spin down button of the editor.
-spinDownButton|<a name='spinDownButton'></a>Returns a reference to the spin down button of the editor.
+[getSelectedDate](%%jQueryApiUrl%%/ui.igdatepicker#methods:getSelectedDate)|Gets selected date.
+[selectDate](%%jQueryApiUrl%%/ui.igdatepicker#methods:selectDate)|Sets selected date.
+[getCalendar](%%jQueryApiUrl%%/ui.igdatepicker#methods:getCalendar)|<a name='getCalendar'></a>Returns a reference to the jQuery calendar used as a picker selector.
+[inputName](%%jQueryApiUrl%%/ui.igdatepicker#methods:inputName)|<a name='inputName'></a>Gets sets name attribute applied to the editor element.
+[displayValue](%%jQueryApiUrl%%/ui.igdatepicker#methods:displayValue)|<a name='displayValue'></a>Returns a string with all the characters shown in the input.
+[editorContainer](%%jQueryApiUrl%%/ui.igdatepicker#methods:editorContainer)|<a name='editorContainer'></a>Gets reference to jquery object which is used as top/outer element of igEditor.
+[showDropDown](%%jQueryApiUrl%%/ui.igdatepicker#methods:showDropDown)|<a name='showDropDown'></a>Show the dropdown list.
+[hideDropDown](%%jQueryApiUrl%%/ui.igdatepicker#methods:hideDropDown)|<a name='hideDropDown'></a>Hide the dropdown list.
+[dropDownVisible](%%jQueryApiUrl%%/ui.igdatepicker#methods:dropDownVisible)|<a name='dropDownVisible'></a>Returns the visibility state of the drop down listing the items.
+[dropDownButton](%%jQueryApiUrl%%/ui.igdatepicker#methods:dropDownButton)|<a name='dropDownButton'></a>Returns a reference to the dropdown button of the editor.
+[clearButton](%%jQueryApiUrl%%/ui.igdatepicker#methods:clearButton)|<a name='clearButton'></a>Returns a reference to the clear button of the editor.
+[getSelectionStart](%%jQueryApiUrl%%/ui.igdatepicker#methods:getSelectionStart)|<a name='getSelectionStart'></a>Gets start index of the selected text in editor.
+[getSelectionEnd](%%jQueryApiUrl%%/ui.igdatepicker#methods:getSelectionEnd)|<a name='getSelectionEnd'></a>Gets end index of the selected text in editor.
+[insert](%%jQueryApiUrl%%/ui.igdatepicker#methods:insert)|<a name='insert'></a>Paste text at location of caret.
+[spinUp](%%jQueryApiUrl%%/ui.igdatepicker#methods:spinUp)|<a name='spinUp'></a>Increase date-time period, depending on the cursor position.
+[spinDown](%%jQueryApiUrl%%/ui.igdatepicker#methods:spinDown)|<a name='spinDown'></a>Decrease date-time period, depending on the cursor position.
+[spinUpButton](%%jQueryApiUrl%%/ui.igdatepicker#methods:spinUpButton)|<a name='spinUpButton'></a>Returns a reference to the spin up button of the editor.
+[spinDownButton](%%jQueryApiUrl%%/ui.igdatepicker#methods:spinDownButton)|<a name='spinDownButton'></a>Returns a reference to the spin down button of the editor.
 
 [See all API methods](%%jQueryApiUrl%%/ui.igdatepicker#methods)
 
@@ -147,12 +146,12 @@ mouseleave|Event is renamed to `mouseout` to better communicate what it does.
 
 Event|Description
 ---|---
-rendering|<a name='rendering'></a>Event which is raised before rendering of the editor completes.
-rendered|<a name='rendered'></a>Event which is raised after rendering of the editor completes.
-dropDownListOpening|<a name='dropDownListOpening'></a>Event which is raised when the drop down is opening.
-dropDownListOpened|<a name='dropDownListOpened'></a>Event which is raised when the drop down is already opened.
-dropDownListClosed|<a name='dropDownListClosed'></a>Event which is raised when the drop down is already closed.
-mouseout|<a name='mouseout'></a>Event which is raised on mouseleave at any part of editor including drop-down list.
+[rendering](%%jQueryApiUrl%%/ui.igdatepicker#events:rendering)|<a name='rendering'></a>Event which is raised before rendering of the editor completes.
+[rendered](%%jQueryApiUrl%%/ui.igdatepicker#events:rendered)|<a name='rendered'></a>Event which is raised after rendering of the editor completes.
+[dropDownListOpening](%%jQueryApiUrl%%/ui.igdatepicker#events:dropDownListOpening)|<a name='dropDownListOpening'></a>Event which is raised when the drop down is opening.
+[dropDownListOpened](%%jQueryApiUrl%%/ui.igdatepicker#events:dropDownListOpened)|<a name='dropDownListOpened'></a>Event which is raised when the drop down is already opened.
+[dropDownListClosed](%%jQueryApiUrl%%/ui.igdatepicker#events:dropDownListClosed)|<a name='dropDownListClosed'></a>Event which is raised when the drop down is already closed.
+[mouseout](%%jQueryApiUrl%%/ui.igdatepicker#events:mouseout)|<a name='mouseout'></a>Event which is raised on mouseleave at any part of editor including drop-down list.
 
 [See all events](%%jQueryApiUrl%%/ui.igdatepicker#events)
 
