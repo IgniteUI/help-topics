@@ -62,14 +62,14 @@ promptChar|Sets character which is used as prompt in edit mode for available ent
 
 Option| Description
 ---|---
-unfilledCharsPrompt|<a name='unfilledCharsPrompt'></a>Sets gets character which is used as prompt in edit mode for available entry position.
-allowNullValue|<a name='allowNullValue'></a>If that option is false, and editor has no value, then value is set to an empty string.
-disabled|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#maskEditor').igMaskEditor({ disabled: true })`.
-buttonType|<a name='buttonType'></a>Sets gets clear button.
-placeHolder|<a name='placeHolder'></a>Gets sets text which appears in editor when editor has no focus and "value" in editor is null or empty string.
-revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key.
-preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#maskEditor').igMaskEditor({ preventSubmitOnEnter: true })`.
-suppressNotifications|<a name='suppressNotifications'></a>Disables default notifications for basic validation scenarios built in the editors such as required list selection, value wrapping around.
+[unfilledCharsPrompt](%%jQueryApiUrl%%/ui.igmaskeditor#options:unfilledCharsPrompt)|<a name='unfilledCharsPrompt'></a>Sets gets character which is used as prompt in edit mode for available entry position.
+[allowNullValue](%%jQueryApiUrl%%/ui.igmaskeditor#options:allowNullValue)|<a name='allowNullValue'></a>If that option is false, and editor has no value, then value is set to an empty string.
+[disabled](%%jQueryApiUrl%%/ui.igmaskeditor#options:disabled)|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#maskEditor').igMaskEditor({ disabled: true })`.
+[buttonType](%%jQueryApiUrl%%/ui.igmaskeditor#options:buttonType)|<a name='buttonType'></a>Sets gets clear button.
+[placeHolder](%%jQueryApiUrl%%/ui.igmaskeditor#options:placeHolder)|<a name='placeHolder'></a>Gets sets text which appears in editor when editor has no focus and "value" in editor is null or empty string.
+[revertIfNotValid](%%jQueryApiUrl%%/ui.igmaskeditor#options:revertIfNotValid)|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key.
+[preventSubmitOnEnter](%%jQueryApiUrl%%/ui.igmaskeditor#options:preventSubmitOnEnter)|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#maskEditor').igMaskEditor({ preventSubmitOnEnter: true })`.
+[suppressNotifications](%%jQueryApiUrl%%/ui.igmaskeditor#options:suppressNotifications)|<a name='suppressNotifications'></a>Disables default notifications for basic validation scenarios built in the editors such as required list selection, value wrapping around.
 
 [See all options](%%jQueryApiUrl%%/ui.igmaskeditor#options)
 
@@ -105,13 +105,13 @@ text|Used to get or set text in editor.|This is replaced by a getter method `dis
 
 Method|Description
 ---|---
-inputName|<a name='inputName'></a>Gets sets name attribute applied to the editor element.
-displayValue|<a name='displayValue'></a>Returns a string with all the characters shown in the input.
-editorContainer|<a name='editorContainer'></a>Gets reference to jquery object which is used as top/outer element of igEditor.
-clearButton|<a name='clearButton'></a>Returns a reference to the clear button of the editor.
-getSelectionStart|<a name='getSelectionStart'></a>Gets start index of the selected text in editor.
-getSelectionEnd|<a name='getSelectionEnd'></a>Gets end index of the selected text in editor.
-insert|<a name='insert'></a>Paste text at location of caret.
+[inputName](%%jQueryApiUrl%%/ui.igmaskeditor#methods:inputName)|<a name='inputName'></a>Gets sets name attribute applied to the editor element.
+[displayValue](%%jQueryApiUrl%%/ui.igmaskeditor#methods:displayValue)|<a name='displayValue'></a>Returns a string with all the characters shown in the input.
+[editorContainer](%%jQueryApiUrl%%/ui.igmaskeditor#methods:editorContainer)|<a name='editorContainer'></a>Gets reference to jquery object which is used as top/outer element of igEditor.
+[clearButton](%%jQueryApiUrl%%/ui.igmaskeditor#methods:clearButton)|<a name='clearButton'></a>Returns a reference to the clear button of the editor.
+[getSelectionStart](%%jQueryApiUrl%%/ui.igmaskeditor#methods:getSelectionStart)|<a name='getSelectionStart'></a>Gets start index of the selected text in editor.
+[getSelectionEnd](%%jQueryApiUrl%%/ui.igmaskeditor#methods:getSelectionEnd)|<a name='getSelectionEnd'></a>Gets end index of the selected text in editor.
+[insert](%%jQueryApiUrl%%/ui.igmaskeditor#methods:insert)|<a name='insert'></a>Paste text at location of caret.
 
 [See all API methods](%%jQueryApiUrl%%/ui.igmaskeditor#methods)
 
@@ -131,9 +131,9 @@ mouseleave|Event is renamed to `mouseout` to better communicate what it does.
 
 Event|Description
 ---|---
-rendering|<a name='rendering'></a>Event which is raised before rendering of the editor completes.
-rendered|<a name='rendered'></a>Event which is raised after rendering of the editor completes.
-mouseout|<a name='mouseout'></a>Event which is raised on mouseleave at any part of editor including drop-down list.
+[rendering](%%jQueryApiUrl%%/ui.igmaskeditor#events:rendering)|<a name='rendering'></a>Event which is raised before rendering of the editor completes.
+[rendered](%%jQueryApiUrl%%/ui.igmaskeditor#events:rendered)|<a name='rendered'></a>Event which is raised after rendering of the editor completes.
+[mouseout](%%jQueryApiUrl%%/ui.igmaskeditor#events:mouseout)|<a name='mouseout'></a>Event which is raised on mouseleave at any part of editor including drop-down list.
 
 [See all events](%%jQueryApiUrl%%/ui.igmaskeditor#events)
 
