@@ -9,3 +9,11 @@
 -->
 
 # Configuring Chart Types
+
+
+
+## Related topics
+
+- [Walkthrough](categorychart-walkthrough.html)
+
+- [Chart Types](categorychart-chart-types.html)
