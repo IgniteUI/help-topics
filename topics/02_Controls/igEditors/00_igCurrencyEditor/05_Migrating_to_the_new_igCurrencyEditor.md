@@ -59,20 +59,20 @@ symbol|Used to set the currency symbol, which is used in display (no focus) stat
 
 Option| Description
 ---|---
-currencySymbol|Set custom currency symbol, different from the one in the regional settings.
-allowNullValue|<a name='allowNullValue'></a>If that option is false, and editor has no value, then value is set to an empty string.
-disabled|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#currencyEditor').igCurrencyEditor({ disabled: true })`.
-buttonType|<a name='buttonType'></a>Sets gets visibility of spin, clear and drop-down button.
-listItemHoverDuration|<a name='listItemHoverDuration'></a>Use to set the hover/unhover animation duration of items inside the dropdown list: `$('#currencyEditor').igCurrencyEditor({ listItems: ["A", "B", "C", "D"], listItemHoverDuration: 400 })`.
-dropDownAttachedToBody|<a name='dropDownAttachedToBody'></a>Gets sets location of drop-down list.
-dropDownAnimationDuration|<a name='dropDownAnimationDuration'></a>Gets sets show/hide drop-down list animation duration in milliseconds.
-visibleItemsCount|<a name='visibleItemsCount'></a>Use to set how many items should be shown at once: `$('#currencyEditor').igCurrencyEditor({ listItems: [10, 20, 30, 40], visibleItemsCount: 2 })`.
-isLimitedToListValues|<a name='isLimitedToListValues'></a>Use to set the ability to allow values only set into the list items. This validation is done only when the editor is blured, or enter key is pressed: `$('#currencyEditor').igCurrencyEditor({ listItems: [10, 20, 30, 40], isLimitedToListValues: true })`.
-placeHolder|<a name='placeHolder'></a>Gets sets text which appears in editor when editor has no focus and "value" in editor is null or empty string.
-revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key. If set to false clear is called: `$('#currencyEditor').igCurrencyEditor({ listItems: [10, 20, 30, 40], isLimitedToListValues: true, revertIfNotValid: false })`.
-preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#currencyEditor').igCurrencyEditor({ preventSubmitOnEnter: true })`.
-dropDownOrientation|<a name='dropDownOrientation'></a>Use to set drop down opening orientation for the dorp down list when open button is clicked: `$('#currencyEditor').igCurrencyEditor({ listItems: [10, 20, 30, 40], dropDownOrientation: 'top' })`.
-suppressNotifications|<a name='suppressNotifications'></a>Disables default notifications for basic validation scenarios built in the editors such as required list selection, value wrapping around or spin limits.
+[currencySymbol](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:currencySymbol)|Set custom currency symbol, different from the one in the regional settings.
+[allowNullValue](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:allowNullValue)|<a name='allowNullValue'></a>If that option is false, and editor has no value, then value is set to an empty string.
+[disabled](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:disabled)|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#currencyEditor').igCurrencyEditor({ disabled: true })`.
+[buttonType](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:buttonType)|<a name='buttonType'></a>Sets gets visibility of spin, clear and drop-down button.
+[listItemHoverDuration](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:listItemHoverDuration)|<a name='listItemHoverDuration'></a>Use to set the hover/unhover animation duration of items inside the dropdown list: `$('#currencyEditor').igCurrencyEditor({ listItems: ["A", "B", "C", "D"], listItemHoverDuration: 400 })`.
+[dropDownAttachedToBody](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:dropDownAttachedToBody)|<a name='dropDownAttachedToBody'></a>Gets sets location of drop-down list.
+[dropDownAnimationDuration](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:dropDownAnimationDuration)|<a name='dropDownAnimationDuration'></a>Gets sets show/hide drop-down list animation duration in milliseconds.
+[visibleItemsCount](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:visibleItemsCount)|<a name='visibleItemsCount'></a>Use to set how many items should be shown at once: `$('#currencyEditor').igCurrencyEditor({ listItems: [10, 20, 30, 40], visibleItemsCount: 2 })`.
+[isLimitedToListValues](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:isLimitedToListValues)|<a name='isLimitedToListValues'></a>Use to set the ability to allow values only set into the list items. This validation is done only when the editor is blured, or enter key is pressed: `$('#currencyEditor').igCurrencyEditor({ listItems: [10, 20, 30, 40], isLimitedToListValues: true })`.
+[placeHolder](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:placeHolder)|<a name='placeHolder'></a>Gets sets text which appears in editor when editor has no focus and "value" in editor is null or empty string.
+[revertIfNotValid](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:revertIfNotValid)|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key. If set to false clear is called: `$('#currencyEditor').igCurrencyEditor({ listItems: [10, 20, 30, 40], isLimitedToListValues: true, revertIfNotValid: false })`.
+[preventSubmitOnEnter](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:preventSubmitOnEnter)|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#currencyEditor').igCurrencyEditor({ preventSubmitOnEnter: true })`.
+[dropDownOrientation](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:dropDownOrientation)|<a name='dropDownOrientation'></a>Use to set drop down opening orientation for the dorp down list when open button is clicked: `$('#currencyEditor').igCurrencyEditor({ listItems: [10, 20, 30, 40], dropDownOrientation: 'top' })`.
+[suppressNotifications](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:suppressNotifications)|<a name='suppressNotifications'></a>Disables default notifications for basic validation scenarios built in the editors such as required list selection, value wrapping around or spin limits.
 
 
 [See all options](%%jQueryApiUrl%%/ui.igcurrencyeditor#options)
@@ -107,23 +107,23 @@ text|Used to get or set text in editor.|This is replaced by a getter method `dis
 
 Method|Description
 ---|---
-currencySymbol|<a name='currencySymbol'></a>Gets оr sets a string that is used as the currency symbol shown with the number in the input. The value provided as a parameter is propagated to the currencySymbol option and thus has the same priority as the option.
-inputName|<a name='inputName'></a>Gets sets name attribute applied to the editor element.
-displayValue|<a name='displayValue'></a>Returns a string with all the characters shown in the input.
-editorContainer|<a name='editorContainer'></a>Gets reference to jquery object which is used as top/outer element of igEditor.
-dropDownContainer|<a name='dropDownContainer'></a>Gets reference to jquery object which is used as container of drop-down.
-showDropDown|<a name='showDropDown'></a>Show the dropdown list.
-hideDropDown|<a name='hideDropDown'></a>Hide the dropdown list.
-dropDownVisible|<a name='dropDownVisible'></a>Returns the visibility state of the drop down listing the items.
-dropDownButton|<a name='dropDownButton'></a>Returns a reference to the dropdown button of the editor.
-selectListIndexUp|<a name='selectListIndexUp'></a>Moves the selection index to the item that appears above the current one in the list.
-selectListIndexDown|<a name='selectListIndexDown'></a>Moves the selection index to the item that appears above the current one in the list.
-clearButton|<a name='clearButton'></a>Returns a reference to the clear button of the editor.
-insert|<a name='insert'></a>Paste text at location of caret.
-spinUp|<a name='spinUp'></a>Increments value in editor according to the parameter.
-spinDown|<a name='spinDown'></a>Decrements  value in editor according to the parameter.
-spinUpButton|<a name='spinUpButton'></a>Returns a reference to the spin up button of the editor.
-spinDownButton|<a name='spinDownButton'></a>Returns a reference to the spin down button of the editor.
+[currencySymbol](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:currencySymbol)|<a name='currencySymbol'></a>Gets оr sets a string that is used as the currency symbol shown with the number in the input. The value provided as a parameter is propagated to the currencySymbol option and thus has the same priority as the option.
+[inputName](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:inputName)|<a name='inputName'></a>Gets sets name attribute applied to the editor element.
+[displayValue](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:displayValue)|<a name='displayValue'></a>Returns a string with all the characters shown in the input.
+[editorContainer](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:editorContainer)|<a name='editorContainer'></a>Gets reference to jquery object which is used as top/outer element of igEditor.
+[dropDownContainer](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:dropDownContainer)|<a name='dropDownContainer'></a>Gets reference to jquery object which is used as container of drop-down.
+[showDropDown](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:showDropDown)|<a name='showDropDown'></a>Show the dropdown list.
+[hideDropDown](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:hideDropDown)|<a name='hideDropDown'></a>Hide the dropdown list.
+[dropDownVisible](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:dropDownVisible)|<a name='dropDownVisible'></a>Returns the visibility state of the drop down listing the items.
+[dropDownButton](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:dropDownButton)|<a name='dropDownButton'></a>Returns a reference to the dropdown button of the editor.
+[selectListIndexUp](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:selectListIndexUp)|<a name='selectListIndexUp'></a>Moves the selection index to the item that appears above the current one in the list.
+[selectListIndexDown](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:selectListIndexDown)|<a name='selectListIndexDown'></a>Moves the selection index to the item that appears above the current one in the list.
+[clearButton](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:clearButton)|<a name='clearButton'></a>Returns a reference to the clear button of the editor.
+[insert](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:insert)|<a name='insert'></a>Paste text at location of caret.
+[spinUp](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:spinUp)|<a name='spinUp'></a>Increments value in editor according to the parameter.
+[spinDown](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:spinDown)|<a name='spinDown'></a>Decrements  value in editor according to the parameter.
+[spinUpButton](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:spinUpButton)|<a name='spinUpButton'></a>Returns a reference to the spin up button of the editor.
+[spinDownButton](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:spinDownButton)|<a name='spinDownButton'></a>Returns a reference to the spin down button of the editor.
 
 [See all API methods](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods)
 
@@ -143,15 +143,15 @@ mouseleave|Event is renamed to `mouseout` to better communicate what it does.
 
 Event|Description
 ---|---
-rendering|<a name='rendering'></a>Event which is raised before rendering of the editor completes.
-rendered|<a name='rendered'></a>Event which is raised after rendering of the editor completes.
-dropDownListOpening|<a name='dropDownListOpening'></a>Event which is raised when the drop down is opening.
-dropDownListOpened|<a name='dropDownListOpened'></a>Event which is raised when the drop down is already opened.
-dropDownListClosing|<a name='dropDownListClosing'></a>Event which is raised when the drop down is closing.
-dropDownListClosed|<a name='dropDownListClosed'></a>Event which is raised when the drop down is already closed.
-dropDownItemSelecting|<a name='dropDownItemSelecting'></a>Event which is raised when the drop down list item is selecting.
-dropDownItemSelected|<a name='dropDownItemSelected'></a>Event which is raised when the drop down list item is selected.
-mouseout|<a name='mouseout'></a>Event which is raised on mouseleave at any part of editor including drop-down list.
+[rendering](%%jQueryApiUrl%%/ui.igcurrencyeditor#events:rendering)|<a name='rendering'></a>Event which is raised before rendering of the editor completes.
+[rendered](%%jQueryApiUrl%%/ui.igcurrencyeditor#events:rendered)|<a name='rendered'></a>Event which is raised after rendering of the editor completes.
+[dropDownListOpening](%%jQueryApiUrl%%/ui.igcurrencyeditor#events:dropDownListOpening)|<a name='dropDownListOpening'></a>Event which is raised when the drop down is opening.
+[dropDownListOpened](%%jQueryApiUrl%%/ui.igcurrencyeditor#events:dropDownListOpened)|<a name='dropDownListOpened'></a>Event which is raised when the drop down is already opened.
+[dropDownListClosing](%%jQueryApiUrl%%/ui.igcurrencyeditor#events:dropDownListClosing)|<a name='dropDownListClosing'></a>Event which is raised when the drop down is closing.
+[dropDownListClosed](%%jQueryApiUrl%%/ui.igcurrencyeditor#events:dropDownListClosed)|<a name='dropDownListClosed'></a>Event which is raised when the drop down is already closed.
+[dropDownItemSelecting](%%jQueryApiUrl%%/ui.igcurrencyeditor#events:dropDownItemSelecting)|<a name='dropDownItemSelecting'></a>Event which is raised when the drop down list item is selecting.
+[dropDownItemSelected](%%jQueryApiUrl%%/ui.igcurrencyeditor#events:dropDownItemSelected)|<a name='dropDownItemSelected'></a>Event which is raised when the drop down list item is selected.
+[mouseout](%%jQueryApiUrl%%/ui.igcurrencyeditor#events:mouseout)|<a name='mouseout'></a>Event which is raised on mouseleave at any part of editor including drop-down list.
 
 [See all events](%%jQueryApiUrl%%/ui.igcurrencyeditor#events)
 
