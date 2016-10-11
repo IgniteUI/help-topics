@@ -59,19 +59,19 @@ type|Sets type of editor.|This option is removed. You can use the corresponding 
 
 Option| Description
 ---|---
-allowNullValue|<a name='allowNullValue'></a>If that option is false, and editor has no value, then value is set to an empty string.
-disabled|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#textEditor').igTextEditor({ disabled: true })`.
-buttonType|<a name='buttonType'></a>Sets gets visibility of spin, clear and drop-down button.
-listItemHoverDuration|<a name='listItemHoverDuration'></a>Use to set the hover/unhover animation duration of items inside the dropdown list: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], listItemHoverDuration: 400 })`.
-dropDownAttachedToBody|<a name='dropDownAttachedToBody'></a>Gets sets location of drop-down list.
-dropDownAnimationDuration|<a name='dropDownAnimationDuration'></a>Gets sets show/hide drop-down list animation duration in milliseconds.
-visibleItemsCount|<a name='visibleItemsCount'></a>Use to set how many items should be shown at once: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], visibleItemsCount: 2 })`.
-isLimitedToListValues|<a name='isLimitedToListValues'></a>Use to set the ability to allow values only set into the list items. This validation is done only when the editor is blured, or enter key is pressed: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], isLimitedToListValues: true })`.
-placeHolder|<a name='placeHolder'></a>Gets sets text which appears in editor when editor has no focus and "value" in editor is null or empty string.
-revertIfNotValid|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key. If set to false clear is called: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], isLimitedToListValues: true, revertIfNotValid: false })`.
-preventSubmitOnEnter|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#textEditor').igTextEditor({ preventSubmitOnEnter: true })`.
-dropDownOrientation|<a name='dropDownOrientation'></a>Use to set drop down opening orientation for the dorp down list when open button is clicked: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], dropDownOrientation: 'top' })`.
-suppressNotifications|<a name='suppressNotifications'></a>Disables default notifications for basic validation scenarios built in the editors such as required list selection, value wrapping around or spin limits.
+[allowNullValue](%%jQueryApiUrl%%/ui.igtexteditor#options:allowNullValue)|<a name='allowNullValue'></a>If that option is false, and editor has no value, then value is set to an empty string.
+[disabled](%%jQueryApiUrl%%/ui.igtexteditor#options:disabled)|<a name='disabled'></a>Use to set the disabled attribute. Does not allow editing. Disables all the buttons and iteracitons applied. On submit the current value is not sent into the request: `$('#textEditor').igTextEditor({ disabled: true })`.
+[buttonType](%%jQueryApiUrl%%/ui.igtexteditor#options:buttonType)|<a name='buttonType'></a>Sets gets visibility of spin, clear and drop-down button.
+[listItemHoverDuration](%%jQueryApiUrl%%/ui.igtexteditor#options:listItemHoverDuration)|<a name='listItemHoverDuration'></a>Use to set the hover/unhover animation duration of items inside the dropdown list: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], listItemHoverDuration: 400 })`.
+[dropDownAttachedToBody](%%jQueryApiUrl%%/ui.igtexteditor#options:dropDownAttachedToBody)|<a name='dropDownAttachedToBody'></a>Gets sets location of drop-down list.
+[dropDownAnimationDuration](%%jQueryApiUrl%%/ui.igtexteditor#options:dropDownAnimationDuration)|<a name='dropDownAnimationDuration'></a>Gets sets show/hide drop-down list animation duration in milliseconds.
+[visibleItemsCount](%%jQueryApiUrl%%/ui.igtexteditor#options:visibleItemsCount)|<a name='visibleItemsCount'></a>Use to set how many items should be shown at once: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], visibleItemsCount: 2 })`.
+[isLimitedToListValues](%%jQueryApiUrl%%/ui.igtexteditor#options:isLimitedToListValues)|<a name='isLimitedToListValues'></a>Use to set the ability to allow values only set into the list items. This validation is done only when the editor is blured, or enter key is pressed: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], isLimitedToListValues: true })`.
+[placeHolder](%%jQueryApiUrl%%/ui.igtexteditor#options:placeHolder)|<a name='placeHolder'></a>Gets sets text which appears in editor when editor has no focus and "value" in editor is null or empty string.
+[revertIfNotValid](%%jQueryApiUrl%%/ui.igtexteditor#options:revertIfNotValid)|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key. If set to false clear is called: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], isLimitedToListValues: true, revertIfNotValid: false })`.
+[preventSubmitOnEnter](%%jQueryApiUrl%%/ui.igtexteditor#options:preventSubmitOnEnter)|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#textEditor').igTextEditor({ preventSubmitOnEnter: true })`.
+[dropDownOrientation](%%jQueryApiUrl%%/ui.igtexteditor#options:dropDownOrientation)|<a name='dropDownOrientation'></a>Use to set drop down opening orientation for the dorp down list when open button is clicked: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], dropDownOrientation: 'top' })`.
+[suppressNotifications](%%jQueryApiUrl%%/ui.igtexteditor#options:suppressNotifications)|<a name='suppressNotifications'></a>Disables default notifications for basic validation scenarios built in the editors such as required list selection, value wrapping around or spin limits.
 
 [See all options](%%jQueryApiUrl%%/ui.igtexteditor#options)
 
@@ -105,22 +105,22 @@ text|Used to get or set text in editor.|This is replaced by a getter method `dis
 
 Method|Description
 ---|---
-inputName|<a name='inputName'></a>Gets sets name attribute applied to the editor element.
-displayValue|<a name='displayValue'></a>Returns a string with all the characters shown in the input.
-editorContainer|<a name='editorContainer'></a>Gets reference to jquery object which is used as top/outer element of igEditor.
-dropDownContainer|<a name='dropDownContainer'></a>Gets reference to jquery object which is used as container of drop-down.
-showDropDown|<a name='showDropDown'></a>Show the dropdown list.
-hideDropDown|<a name='hideDropDown'></a>Hide the dropdown list.
-dropDownVisible|<a name='dropDownVisible'></a>Returns the visibility state of the drop down listing the items.
-dropDownButton|<a name='dropDownButton'></a>Returns a reference to the dropdown button of the editor.
-clearButton|<a name='clearButton'></a>Returns a reference to the clear button of the editor.
-getSelectionStart|<a name='getSelectionStart'></a>Gets start index of the selected text in editor.
-getSelectionEnd|<a name='getSelectionEnd'></a>Gets end index of the selected text in editor.
-insert|<a name='insert'></a>Paste text at location of caret.
-spinUp|<a name='spinUp'></a>If editor has listItems, then this method increments the active index in the list, without setting the vew value.
-spinDown|<a name='spinDown'></a>If editor has listItems, then this method decrements the active index in the list, without setting the vew value.
-spinUpButton|<a name='spinUpButton'></a>Returns a reference to the spin up button of the editor.
-spinDownButton|<a name='spinDownButton'></a>Returns a reference to the spin down button of the editor.
+[inputName](%%jQueryApiUrl%%/ui.igtexteditor#methods:inputName)|<a name='inputName'></a>Gets sets name attribute applied to the editor element.
+[displayValue](%%jQueryApiUrl%%/ui.igtexteditor#methods:displayValue)|<a name='displayValue'></a>Returns a string with all the characters shown in the input.
+[editorContainer](%%jQueryApiUrl%%/ui.igtexteditor#methods:editorContainer)|<a name='editorContainer'></a>Gets reference to jquery object which is used as top/outer element of igEditor.
+[dropDownContainer](%%jQueryApiUrl%%/ui.igtexteditor#methods:dropDownContainer)|<a name='dropDownContainer'></a>Gets reference to jquery object which is used as container of drop-down.
+[showDropDown](%%jQueryApiUrl%%/ui.igtexteditor#methods:showDropDown)|<a name='showDropDown'></a>Show the dropdown list.
+[hideDropDown](%%jQueryApiUrl%%/ui.igtexteditor#methods:hideDropDown)|<a name='hideDropDown'></a>Hide the dropdown list.
+[dropDownVisible](%%jQueryApiUrl%%/ui.igtexteditor#methods:dropDownVisible)|<a name='dropDownVisible'></a>Returns the visibility state of the drop down listing the items.
+[dropDownButton](%%jQueryApiUrl%%/ui.igtexteditor#methods:dropDownButton)|<a name='dropDownButton'></a>Returns a reference to the dropdown button of the editor.
+[clearButton](%%jQueryApiUrl%%/ui.igtexteditor#methods:clearButton)|<a name='clearButton'></a>Returns a reference to the clear button of the editor.
+[getSelectionStart](%%jQueryApiUrl%%/ui.igtexteditor#methods:getSelectionStart)|<a name='getSelectionStart'></a>Gets start index of the selected text in editor.
+[getSelectionEnd](%%jQueryApiUrl%%/ui.igtexteditor#methods:getSelectionEnd)|<a name='getSelectionEnd'></a>Gets end index of the selected text in editor.
+[insert](%%jQueryApiUrl%%/ui.igtexteditor#methods:insert)|<a name='insert'></a>Paste text at location of caret.
+[spinUp](%%jQueryApiUrl%%/ui.igtexteditor#methods:spinUp)|<a name='spinUp'></a>If editor has listItems, then this method increments the active index in the list, without setting the vew value.
+[spinDown](%%jQueryApiUrl%%/ui.igtexteditor#methods:spinDown)|<a name='spinDown'></a>If editor has listItems, then this method decrements the active index in the list, without setting the vew value.
+[spinUpButton](%%jQueryApiUrl%%/ui.igtexteditor#methods:spinUpButton)|<a name='spinUpButton'></a>Returns a reference to the spin up button of the editor.
+[spinDownButton](%%jQueryApiUrl%%/ui.igtexteditor#methods:spinDownButton)|<a name='spinDownButton'></a>Returns a reference to the spin down button of the editor.
 
 [See all API methods](%%jQueryApiUrl%%/ui.igtexteditor#methods)
 
@@ -140,15 +140,15 @@ mouseleave|Event is renamed to `mouseout` to better communicate what it does.
 
 Event|Description
 ---|---
-rendering|<a name='rendering'></a>Event which is raised before rendering of the editor completes.
-rendered|<a name='rendered'></a>Event which is raised after rendering of the editor completes.
-dropDownListOpening|<a name='dropDownListOpening'></a>Event which is raised when the drop down is opening.
-dropDownListOpened|<a name='dropDownListOpened'></a>Event which is raised when the drop down is already opened.
-dropDownListClosing|<a name='dropDownListClosing'></a>Event which is raised when the drop down is closing.
-dropDownListClosed|<a name='dropDownListClosed'></a>Event which is raised when the drop down is already closed.
-dropDownItemSelecting|<a name='dropDownItemSelecting'></a>Event which is raised when the drop down list item is selecting.
-dropDownItemSelected|<a name='dropDownItemSelected'></a>Event which is raised when the drop down list item is selected.
-mouseout|<a name='mouseout'></a>Event which is raised on mouseleave at any part of editor including drop-down list.
+[rendering](%%jQueryApiUrl%%/ui.igtexteditor#events:rendering)|<a name='rendering'></a>Event which is raised before rendering of the editor completes.
+[rendered](%%jQueryApiUrl%%/ui.igtexteditor#events:rendered)|<a name='rendered'></a>Event which is raised after rendering of the editor completes.
+[dropDownListOpening](%%jQueryApiUrl%%/ui.igtexteditor#events:dropDownListOpening)|<a name='dropDownListOpening'></a>Event which is raised when the drop down is opening.
+[dropDownListOpened](%%jQueryApiUrl%%/ui.igtexteditor#events:dropDownListOpened)|<a name='dropDownListOpened'></a>Event which is raised when the drop down is already opened.
+[dropDownListClosing](%%jQueryApiUrl%%/ui.igtexteditor#events:dropDownListClosing)|<a name='dropDownListClosing'></a>Event which is raised when the drop down is closing.
+[dropDownListClosed](%%jQueryApiUrl%%/ui.igtexteditor#events:dropDownListClosed)|<a name='dropDownListClosed'></a>Event which is raised when the drop down is already closed.
+[dropDownItemSelecting](%%jQueryApiUrl%%/ui.igtexteditor#events:dropDownItemSelecting)|<a name='dropDownItemSelecting'></a>Event which is raised when the drop down list item is selecting.
+[dropDownItemSelected](%%jQueryApiUrl%%/ui.igtexteditor#events:dropDownItemSelected)|<a name='dropDownItemSelected'></a>Event which is raised when the drop down list item is selected.
+[mouseout](%%jQueryApiUrl%%/ui.igtexteditor#events:mouseout)|<a name='mouseout'></a>Event which is raised on mouseleave at any part of editor including drop-down list.
 
 [See all events](%%jQueryApiUrl%%/ui.igtexteditor#events)
 
