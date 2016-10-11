@@ -116,9 +116,9 @@ $(function(){
 
 The example above instructs the System.JS loader to load all of the modules that are required for the requested control. The dependency tree is analyzed and necessary files are loaded in the order of dependency.
 
-JSPM can also conveniently bundle all of the referenced modules along with their dependencies and css files into one js file. This helps to reduce time that is required by the browsers to request multiple individuala files from the server.
+JSPM can also conveniently bundle all of the referenced modules along with their dependencies and css files into one js file. This helps to reduce time that is required by the browsers to request multiple individual files from the server.
 
-To bundle all modules execute the following command:
+To bundle all modules, execute the following command:
 ```
 jspm bundle js/igsample.js --inject
 ``` 
@@ -137,4 +137,4 @@ http-server
 ```
 Open the browser and navigate to `http://localhost:8080` to see the application running.
 
-In this srticle we demonstrated how Ignite UI controls can be used along with JSPM and System.JS loader.
+In this article we demonstrated how Ignite UI controls can be used along with JSPM and System.JS loader.

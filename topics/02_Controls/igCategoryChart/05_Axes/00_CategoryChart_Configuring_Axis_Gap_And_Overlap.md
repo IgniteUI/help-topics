@@ -77,7 +77,7 @@ The property accepts a numeric float value between -1 and 1. The value represent
 
 Negative value (up to -1): the categories are pushed away from each other producing a gap between themselves.
 
-Positive value (up to 1): the categories are overlaping each other. Value of 1 directs the chart to render categories on top of each other.
+Positive value (up to 1): the categories are overlapping each other. Value of 1 directs the chart to render categories on top of each other.
 
 For the example, `xAxisOverlap` of 0.5 is a half of the available space is used to draw categories overlapping each other:<br>
 ![](images/categorychart-axis-overlap-00.png) 

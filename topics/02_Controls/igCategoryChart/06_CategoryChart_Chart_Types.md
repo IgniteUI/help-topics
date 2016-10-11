@@ -13,7 +13,7 @@
 ## Overview
 
 The Category Chart simplifies assignment of the type of rendering compared to the Data Chart.
-In order to select how data should be displayed it is enought to set the `chartType` property of this chart.
+In order to select how data should be displayed it is enough to set the `chartType` property of this chart.
 Below listed all of the types that the Category Chart supports.
 
 Special case is the `auto` setting of that property. If `auto` is used the chart will analyze assigned data and will assign the most suitable chart type.
