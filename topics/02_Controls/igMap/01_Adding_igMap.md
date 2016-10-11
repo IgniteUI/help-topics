@@ -199,7 +199,7 @@ The following steps demonstrate how to add a basic `igMap` control instance to a
 
 	The width and height options set the size of the map on the page. Due to the tight coupling between the map window position and its aspect ratio it is important to set a specific (for your application) aspect ratio when displaying a particular area of the World map.
 
-	The `backgroundContent` option sets, which map provider to use. This example uses the OpenStreetMap® provider. This is the default provider; use it if you omit the backgroundContent option. You can refer to the [Configuring Map Provider](igMap-Configuring-Map-Provider.html) topic for details on using Bing® Maps and CloudMade® Maps.
+	The `backgroundContent` option sets, which map provider to use. This example uses the OpenStreetMap provider. This is the default provider; use it if you omit the backgroundContent option. You can refer to the [Configuring Map Provider](igMap-Configuring-Map-Provider.html) topic for details on using Bing® Maps and OpenStreetMap.
 
 	The definition of the geographicSymbol series configures the visualization data series options. You must specify a name for the series, and a dataSource containing the visualization data. Additionally, you need to specify which attributes of the incoming data are the geographic coordinates with the `latitudeMemberPath` and `longitudeMemberPath` options. Finally, the `markerType` configures the control for automatically selecting which markers to use when  displaying the geographic points. For details on configuring other series types, refer to the [Creating Different Kinds of Maps](igMap-Creating-Different-Kinds-Maps.html) landing page and the topics linked from there.
 
@@ -389,7 +389,7 @@ The following steps demonstrate how to add a basic `igMap` control instance to a
 
 	The Width and Height calls set the size of the map on the page. Due to the tight coupling between the map window position and its aspect ratio, it is important to set a specific (for your application) aspect ratio when displaying a particular area of the World map.
 
-	The BackgroundContent call specifies which map provider your application uses. This example uses the OpenStreetMap provider. This is the default provider, used if you omit the `BackgroundContent()` call. You can refer to the [Configuring Map Provider](igMap-Configuring-Map-Provider.html) topic for details on using Bing Maps and CloudMade Maps.
+	The BackgroundContent call specifies which map provider your application uses. This example uses the OpenStreetMap provider. This is the default provider, used if you omit the `BackgroundContent()` call. You can refer to the [Configuring Map Provider](igMap-Configuring-Map-Provider.html) topic for details on using Bing® Maps and OpenStreetMap.
 
 	The Series call configures the definition of the `GeographicSymbol` series. Specify, within the call, the name “worldCities” for use in the series. You need to specify which attributes of the incoming data are the geographic coordinates using the `LatitudeMemberPath` and `LongitudeMemberPath` options. Finally, the `MarkerType` call  configures the control to select automatically what markers to use for the displayed geographic points. For details on configuring other series types, refer to the [Creating Different Kinds of Maps](igMap-Creating-Different-Kinds-Maps.html) landing page and the topics linked therein.
 
@@ -427,13 +427,3 @@ The following samples provide additional information related to this topic.
 -	[Map Tooltips](%%SamplesUrl%%/map/map-tooltips):This sample demonstrates how to set map tooltips in a map control and bind a View Model to the control.
 
 -	[Geographic Symbol Series](%%SamplesUrl%%/map/geo-symbol-series):This sample demonstrates how to create maps and visualize Geographic Symbol series.
-
-
-
-
-
- 
-
- 
-
-

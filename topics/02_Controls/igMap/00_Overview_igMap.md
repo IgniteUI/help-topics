@@ -30,7 +30,7 @@ The following table lists the topics, and concepts required as a prerequisite to
 
 **Topics**
 
-- [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)General information on the Ignite UI™ library.
+- [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html) General information on the Ignite UI™ library.
 
  
 
@@ -69,7 +69,7 @@ The `igMap` control is intended to facilitate drawing maps with custom overlays 
 
 ![](images/Overview_%28igMap%29_1.png)
 
-Maps rendered by the `igMap` control consist of a background content (the actual geographic map) delivered by a map provider (like Bing® Maps, CloudMade, or OpenStreetMap maps) and an overlay which represents the actual custom data you wish to visualize for the user. There are several types of overlays you can render on a map called “map series” or “map types” (see [Supported Map Types](#supported-map-types)).
+Maps rendered by the `igMap` control consist of a background content (the actual geographic map) delivered by a map provider (like Bing® Maps or OpenStreetMap maps) and an overlay which represents the actual custom data you wish to visualize for the user. There are several types of overlays you can render on a map called “map series” or “map types” (see [Supported Map Types](#supported-map-types)).
 
 A map can have an Overview Plus Detail (OPD) panel which serves the user to navigate and to give understanding about the exact location on the world map. The map supports user interactions like panning and zooming with keyboard, with keyboard and mouse actions, or by touch and drag action on touch-enabled devices. For details, see the [Main Features Summary](#main-features) section.
 
@@ -379,8 +379,13 @@ The functionality of the igMap control is based on the HTML5 Canvas tag and its 
 						        `infragistics.ext_core.js`<br/>
 						        `infragistics.ext_collections.js`<br/>
 						        `infragistics.ext_ui.js`<br/>
+						        `infragistics.ext_text.js`<br/>
+						        `infragistics.ext_io.js`<br/>
+						        `infragistics.ext_threading.js`<br/>
+						        `infragistics.ext_web.js`<br/>
 						        `infragistics.dv_core.js`<br/>
 						        `infragistics.dv_geo.js`<br/>
+						        `infragistics.dv_geometry.js`<br/>
 						    </td>
 						    <td>
 						        Data visualization core functionality
@@ -415,6 +420,16 @@ The functionality of the igMap control is based on the HTML5 Canvas tag and its 
 
 							<td>
 								Map widget
+							</td>
+						</tr>
+						
+						<tr>
+							<td>
+								`infragistics.ui.chart.js`
+							</td>
+
+							<td>
+								Chart widget
 							</td>
 						</tr>
 						
@@ -481,15 +496,14 @@ The `igMap` control supports the following map providers:
 
 -   OpenStreetMap
 -   Bing Maps
--   CloudMade Maps
 
 >**Note:** Bing Maps and CloudMade maps require you to provide your custom access key to access their content.
 
 The table below shows the same map area and geographic symbol series with the three available map providers.
 
-OpenStreetMap|Bing Maps|CloudMade Maps
+OpenStreetMap|Bing Maps
 ---|---|---
-![](images/Overview_%28igMap%29_7.png)|![](images/Overview_%28igMap%29_8.png)|![](images/Overview_%28igMap%29_9.png)
+![](images/Overview_%28igMap%29_7.png)|![](images/Overview_%28igMap%29_8.png)
 
 
 
