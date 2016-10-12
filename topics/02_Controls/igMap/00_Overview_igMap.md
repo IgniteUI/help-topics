@@ -487,7 +487,7 @@ The `igMap` control supports the following map providers:
 -   OpenStreetMap
 -   Bing Maps
 
->**Note:** Bing Maps and CloudMade maps require you to provide your custom access key to access their content.
+>**Note:** Bing Maps require you to provide your custom access key to access their content.
 
 The table below shows the same map area and geographic symbol series with the three available map providers.
 
