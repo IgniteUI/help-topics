@@ -115,53 +115,61 @@ The following table summarizes the requirements for using the `igLinearGauge` co
 
                 The following table lists the Ignite UI library dependences related to the igLinearGauge control. These resources need to be referred to explicitly if you chose not to use igLoader or the combined files.
 
-                <table cellspacing="0" cellpadding="0" class="table">
+                <table class="table">
                     <tbody>
                         <tr>
                             <th>
                                 JS Resource
                             </th>
-
                             <th>
                                 Description
                             </th>
                         </tr>
 
                         <tr>
-                            <td>infragistics.util.js</td>
-
+                            <td>
+                                `infragistics.util.js`
+                            </td>
                             <td>
                                 Ignite UI utilities
                             </td>
                         </tr>
 
                         <tr>
-                            <td>infragistics.templating.js</td>
-
+                            <td>
+                                `infragistics.templating.js`
+                            </td>
                             <td>
                                The Infragistics Templating Engine
                             </td>
                         </tr>
 
                         <tr>
-                            <td>infragistics.dv.simple.core.js</td>
-
                             <td>
-                                A shared library for data visualization components
+                                `infragistics.ext_core.js`
+                                `infragistics.ext_collections.js`
+                                `infragistics.ext_ui.js`
+                                `infragistics.dv_core.js`
+                                `infragistics.dv_geometry.js`
+                            </td>
+                            <td>
+                                Data visualization core functionality
                             </td>
                         </tr>
 
                         <tr>
-                            <td>infragistics.gauge_lineargauge.js</td>
-
+                            <td>
+                                `infragistics.lineargauge.js`
+                            </td>
                             <td>
                                 The igLinearGauge control
                             </td>
                         </tr>
 
                         <tr>
-                            <td>infragistics.ui.lineargauge.js</td>
-
+                            <td>
+                                `infragistics.ui.lineargauge.js`
+                            </td>
                             <td>
                                 The igLinearGauge widget
                             </td>
@@ -189,7 +197,7 @@ The following table summarizes the requirements for using the `igLinearGauge` co
 
 ### <a id="steps-overview"></a>Steps
 
-Following are the general conceptual steps for adding `igLinearGauge` to an HTML Page.
+Following are the general conceptual steps for adding `igLinearGauge` to an HTML Page:
 
 1. Creating the target element for storing the `igLinearGauge` control
 
@@ -201,7 +209,7 @@ Following are the general conceptual steps for adding `igLinearGauge` to an HTML
 
 5. Adding needle
 
-6. Adding comparative ranges.
+6. Adding comparative ranges
 
 
 
