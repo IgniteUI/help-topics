@@ -117,7 +117,7 @@ Method|Description
 [insert](%%jQueryApiUrl%%/ui.ignumericeditor#methods:insert)|<a name='insert'></a>Paste text at location of caret.
 [spinUp](%%jQueryApiUrl%%/ui.ignumericeditor#methods:spinUp)|<a name='spinUp'></a>Increments value in editor according to the parameter.
 [spinDown](%%jQueryApiUrl%%/ui.ignumericeditor#methods:spinDown)|<a name='spinDown'></a>Decrements  value in editor according to the parameter.
-[spinUpButton](%%jQueryApiUrl%%/ui.ignumericeditor#methods:spinUpButton)<a name='spinUpButton'></a>Returns a reference to the spin up button of the editor.
+[spinUpButton](%%jQueryApiUrl%%/ui.ignumericeditor#methods:spinUpButton)|<a name='spinUpButton'></a>Returns a reference to the spin up button of the editor.
 [spinDownButton](%%jQueryApiUrl%%/ui.ignumericeditor#methods:spinDownButton)|<a name='spinDownButton'></a>Returns a reference to the spin down button of the editor.
 
 [See all API methods](%%jQueryApiUrl%%/ui.ignumericeditor#methods)

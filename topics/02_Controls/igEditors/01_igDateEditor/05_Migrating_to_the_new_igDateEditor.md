@@ -116,7 +116,7 @@ Method|Description
 [insert](%%jQueryApiUrl%%/ui.igdateeditor#methods:insert)|<a name='insert'></a>Paste text at location of caret.
 [spinUp](%%jQueryApiUrl%%/ui.igdateeditor#methods:spinUp)|<a name='spinUp'></a>Increase date-time period, depending on the cursor position.
 [spinDown](%%jQueryApiUrl%%/ui.igdateeditor#methods:spinDown)|<a name='spinDown'></a>Decrease date-time period, depending on the cursor position.
-[spinUpButton](%%jQueryApiUrl%%/ui.igdateeditor#methods:spinUpButton)<a name='spinUpButton'></a>Returns a reference to the spin up button of the editor.
+[spinUpButton](%%jQueryApiUrl%%/ui.igdateeditor#methods:spinUpButton)|<a name='spinUpButton'></a>Returns a reference to the spin up button of the editor.
 [spinDownButton](%%jQueryApiUrl%%/ui.igdateeditor#methods:spinDownButton)|<a name='spinDownButton'></a>Returns a reference to the spin down button of the editor.
 
 >**Note:** One of the major changed in the new date editor is that it no longer supports Lists and DropDown. Note that if you try to use methods connected to dropdown and list, you will receive a notification pointing out that they are no longer available. 
