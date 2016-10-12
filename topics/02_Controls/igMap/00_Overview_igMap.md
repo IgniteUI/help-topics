@@ -425,16 +425,6 @@ The functionality of the igMap control is based on the HTML5 Canvas tag and its 
 						
 						<tr>
 							<td>
-								`infragistics.ui.chart.js`
-							</td>
-
-							<td>
-								Chart widget
-							</td>
-						</tr>
-						
-						<tr>
-							<td>
 								`infragistics.geographicmap_core.js`
 							</td>
 
