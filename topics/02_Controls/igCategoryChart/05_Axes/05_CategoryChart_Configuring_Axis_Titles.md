@@ -30,7 +30,7 @@ Property Name|Property Type|Description
 `xAxisTitleBottomMargin`,`yAxisTitleBottomMargin`|number|Determines the margin to be applied to the bottom of the x-axis or y-axis title
 `xAxisTitleExtent`,`yAxisTitleExtent`|number|Determines the extent to be applied to the x-axis or y-axis title
 `xAxisTitleLeftMargin`,`yAxisTitleLeftMargin`|number|Determines the margin to be applied to the left of the x-axis or y-axis title
-`xAxisTitleMargin`,`yAxisTitleMargin`|number|Determines the margin to be applied to the top of the x-axis or y-axis title
+`xAxisTitleMargin`,`yAxisTitleMargin`|number|Determines the margin to be applied to the x-axis or y-axis title
 `xAxisTitleRightMargin`,`yAxisTitleRightMargin`|number|Determines the margin to be applied to the right of the x-axis or y-axis title
 `xAxisTitleTextColor`, `yAxisTitleTextColor`|string|Determines the color for the x-axis or y-axis title
 `xAxisTitleTextStyle`,`yAxisTitleTextStyle`|string|Determines the font styles to be applied to the x-axis or y-axis title

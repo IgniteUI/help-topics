@@ -109,7 +109,7 @@ Another example of the intuitive behavior of the Category Chart control is that 
 Built to be easily configurable, it uses the igDataChart control as its engine, which means that it benefits from the high performing and powerful Data Chart features.
 
 #### Related Topic:
--   [igCategoryChart Overview](igCategoryChart-Overview.html)
+-   [igCategoryChart Overview](categorychart-overview.html)
 
 
 ### <a id="javascript-file-breakdown"></a>New Javascript File Breakdown

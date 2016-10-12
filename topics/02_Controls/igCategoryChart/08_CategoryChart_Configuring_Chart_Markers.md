@@ -11,7 +11,7 @@
 # Configuring Chart Markers
 
 Markers are visual elements that display the values of data points in the igCategoryChart™ control's plot area. Markers help your end-users immediately identify a data point's value even if the value falls between major or minor grid lines.
-This section provides you with useful information about task-based procedures on working with the igCategoryChart control's Markers.
+This section provides you with useful information about working with the igCategoryChart control's Markers.
 
 - [Customizing Markers](#customizingmarkers)
 - [Displaying Marker Values](#displayingmarkervalues)
@@ -21,7 +21,7 @@ This section provides you with useful information about task-based procedures on
 The appearance of chart markers is managed through the marker properties of the igCategoryChart class.
 
 #### Marker Appearance
-The following table lists all marker appearance properties: `markerSeries` object
+The following table lists all marker appearance properties.
 
 
 Property Name|Property Type|Description
@@ -66,7 +66,7 @@ The following screenshot displays the igCategoryChart control using the Line cha
 
 #### Marker Brush and Outline
 
-The code snippets below demonstrate how to change the MarkerBrushes and MarkerOutlines for the igCategoryChart.
+The code snippets below demonstrate how to change the markerBrushes and markerOutlines for the igCategoryChart.
 
 *In HTML:*
 

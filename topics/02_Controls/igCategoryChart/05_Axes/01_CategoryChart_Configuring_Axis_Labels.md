@@ -31,7 +31,7 @@ Property Name|Property Type|Description
 `xAxisLabelHorizontalAlignment`, `yAxisLabelHorizontalAlignment` |HorizontalAlignment |Determines horizontal alignment of the x-axis or y-axis labels 
 `xAxisLabelVerticalAlignment`, `yAxisLabelVerticalAlignment`|VerticalAlignment|Determines vertical alignment of the x-axis or y-axis labels
 `xAxisLabelVisibility`, `yAxisLabelVisibility`|Visibility bool|Determines whether or not x-axis or y-axis labels are visible
-`xAxisLabelLeftMargin`, `yAxisLabelLeftMargin`, `xAxisLabelRightMargin`, `yAxisLabelRightMargin`|Thickness|Determines the margin applied to each x-axis or y-axis labels
+`xAxisLabelLeftMargin`, `yAxisLabelLeftMargin`, `xAxisLabelRightMargin`, `yAxisLabelRightMargin`|Number|Determines the margin applied to each x-axis or y-axis labels
 
 
 ### <a id="labelstyling"/>Label Styling

@@ -39,9 +39,9 @@ The following code snippet demonstrates how to set the color, length and thickne
 $(function () {
             $("#chart").igCategoryChart({
                 dataSource: data,
-                xAxisLabelTextStyle: "16pt Verdona",
-                xAxisLabelRightMargin: "14",
-                xAxisLabelTextColor: "red"
+                xAxisTickLength: 10,
+                xAxisTickStrokeThickness: 3,
+                xAxisTickStroke: 'red'
             });
         });
 ```

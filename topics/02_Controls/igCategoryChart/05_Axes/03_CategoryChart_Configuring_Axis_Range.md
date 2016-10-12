@@ -33,7 +33,7 @@ $(function () {
             $("#chart").igCategoryChart({
                 dataSource: data,
                 yAxisMinimumValue: -200,
-                yAxisMaximumValue: 1600
+                yAxisMaximumValue: 1000
             });
         });
 ```
