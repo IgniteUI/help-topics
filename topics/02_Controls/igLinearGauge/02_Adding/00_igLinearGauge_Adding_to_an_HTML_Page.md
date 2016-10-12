@@ -137,15 +137,6 @@ The following table summarizes the requirements for using the `igLinearGauge` co
 
                         <tr>
                             <td>
-                                `infragistics.templating.js`
-                            </td>
-                            <td>
-                               The Infragistics Templating Engine
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
                                 `infragistics.ext_core.js`
                                 `infragistics.ext_collections.js`
                                 `infragistics.ext_ui.js`
@@ -244,10 +235,14 @@ To complete the procedure, you need the required JavaScript and CSS files refere
     <script type="text/javascript" src="../../js/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/jquery-ui.js"></script>
     <!-- Linear Gauge Required JavaScript Files -->
-    <script src="../../igniteui/js/modules/infragistics.util.js" type="text/javascript"></script>
-    <script src="../../igniteui/js/modules/infragistics.dv.simple.core.js" type="text/javascript"></script>
-    <script src="../../igniteui/js/modules/infragistics.gauge_lineargauge.js" type="text/javascript"></script>
-    <script src="../../igniteui/js/modules/infragistics.ui.lineargauge.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.util.js"></script>
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.ext_core.js"></script>
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.ext_collections.js"></script>
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.ext_ui.js"></script>
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_core.js"></script>
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_geometry.js"></script>
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.lineargauge.js"></script>
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.ui.lineargauge.js"></script>
 </head>
 <body>
 </body>
@@ -279,9 +274,9 @@ Follow these steps to add an `igLinearGauge` to an HTML page.
     **In HTML:**
 
     ```html
-    <script type="text/jscript">
+    <script type="text/javascript">
         $(function () {                        
-                  $("#linearGauge").igLinearGauge({
+            $("#linearGauge").igLinearGauge({
             });
         });
     </script>
@@ -389,11 +384,15 @@ Following is the full code for this procedure.
     <script type="text/javascript" src="../../js/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/jquery-ui.js"></script>
     <!-- Linear Gauge Required JavaScript Files -->
-    <script src="../../igniteui/js/modules/infragistics.util.js" type="text/javascript"></script>
-    <script src="../../igniteui/js/modules/infragistics.dv.simple.core.js" type="text/javascript"></script>
-    <script src="../../igniteui/js/modules/infragistics.gauge_lineargauge.js" type="text/javascript"></script>
-    <script src="../../Ignite UI /js/modules/infragistics.ui.lineargauge.js" type="text/javascript"></script>
-        <script type="text/jscript">
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.util.js"></script>
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.ext_core.js"></script>
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.ext_collections.js"></script>
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.ext_ui.js"></script>
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_core.js"></script>
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_geometry.js"></script>
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.lineargauge.js"></script>
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.ui.lineargauge.js"></script>
+    <script type="text/javascript">
         $(function () {             
             $("#linearGauge").igLinearGauge({
                 width: "300px",
