@@ -13,14 +13,13 @@
 Markers are visual elements that display the values of data points in the igCategoryChart™ control's plot area. Markers help your end-users immediately identify a data point's value even if the value falls between major or minor grid lines.
 This section provides you with useful information about working with the igCategoryChart control's Markers.
 
-- [Customizing Markers](#customizingmarkers)
-- [Displaying Marker Values](#displayingmarkervalues)
-
-### <a id="customizingmarkers"/>Customizing Markers
+- [Marker Appearance](#markerappearance)
+- [Marker Types](#markertypes)
+- [Marker Brushes and Outlines](#markerbrushesandoutlines)
 
 The appearance of chart markers is managed through the marker properties of the igCategoryChart class.
 
-#### Marker Appearance
+#### <a id="markerappearance"/> Marker Appearance
 The following table lists all marker appearance properties.
 
 
@@ -32,7 +31,7 @@ Property Name|Property Type|Description
 
 
 
-#### Marker Types
+#### <a id="markertypes"/> Marker Types
 Property Name|Property Type|Description
 ---|---|---
 `circleMarker`|MarkerType|Displays the Circle marker type.
@@ -64,7 +63,7 @@ The following screenshot displays the igCategoryChart control using the Line cha
 ![](images/categorychart-chart-markers-01.png)
 
 
-#### Marker Brush and Outline
+#### <a id="markerbrushesandoutlines"/> Marker Brush and Outline
 
 The code snippets below demonstrate how to change the markerBrushes and markerOutlines for the igCategoryChart.
 
@@ -85,6 +84,6 @@ The following screenshot displays the igCategoryChart control using the Line cha
 
 ## <a id="relatedtopics"/>Related Topics:
 
-- [Walkthrough](categorychart-walkthrough.html)
+- [Adding igCategoryChart](categorychart-walkthrough.html)
 
 - [Binding to Data](categorychart-binding-to-data.html)
