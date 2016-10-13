@@ -22,7 +22,8 @@ The following summarizes what’s new in 2016 Volume 2. Additional details follo
 Feature | Description
 ---|---
 Ignite UI OSS | A big part of the Ignite UI toolset is now open source. Checkout the repository on [GitHub](https://github.com/IgniteUI/ignite-ui)|
-Angular 2 Components (RTM) | Ignite UI widgets have component wrappers for Angular 2. For detailed information visit [Ignite UI Angular 2 GitHub](https://github.com/IgniteUI/igniteui-angular2) page.|
+Ignite UI directives for Angular 2 (RTM) | Ignite UI widgets have component wrappers for Angular 2. For detailed information visit [Ignite UI Angular 2 GitHub](https://github.com/IgniteUI/igniteui-angular2) page.|
+Ignite UI Components for React (CTP) | Ignite UI widgets have component wrappers for [React](https://facebook.github.io/react/). For detailed information visit [Ignite UI Components for React](https://github.com/IgniteUI/igniteui-react) page.|
 ASP.NET Core 1.0 MVC Helpers | Ignite UI MVC Helpers now support ASP.NET Core 1.0. Checkout the [Using Ignite UI controls in ASP.NET Core 1.0](Using-IgniteUI-Controls-in-ASP.NET-Core-1.0-project.html) topic.|
 ASP.NET Core 1.0 MVC Tag Helpers | Ignite UI now provides Tag Helpers for ASP.NET Core 1.0. Checkout the [Using Ignite UI Tag Helpers](Using-Ignite-UI-Tag-Helpers.html) topic.|
 [New Javascript file breakdown](#javascript-file-breakdown) | The goal is to reduce the amount of code required in order to load a specific feature. |
@@ -68,9 +69,9 @@ Sorting performance optimizations | Local sorting is now up to 10x faster. |
 [Inline editing for Multi-Row Layout](#mrl-inline-editing)| The Multi-Row Layout feature now supports inline row and cell editing. |
 Multi-Column Headers collapsible column groups | Collapsible Column Groups is a feature that provides an option to collapse/expand a Multi-Column Header to a smaller set of data. |
 Column setter | Column collection now can be changed at runtime. |
+igGrid Modal Dialog extensibility| Grid features that include dialogs (Updating, Filtering, Sorting, Hiding, GroupBy, Column Moving) now add a new `dialogWidget` option allowing for custom dialog implementations - [view sample](%%SamplesUrl%%/grid/custom-modal-dialog) and [topic](Extending_igGrid_Modal_Dialog.html). |
 Binding Real-Time Data sample| A new sample is added that demonstrates binding igGrid to real-time data - [view sample](%%SamplesUrl%%/grid/binding-real-time-data). |
 Performance Options sample| A new sample is added that demonstrates the performance options provided by the igGrid - [view sample](%%SamplesUrl%%/grid/grid-performance). |
-
 
 
 ### igPieChart
