@@ -94,7 +94,7 @@ Horizontal orientation|Vertical orientation
 Each of them serves different purpose related to some of the [visual elements](#config-visual-elements) of the `igLinearGauge` control.
 
 -  <a id="reserved-area"></a> Reserved area (1) – This area spreads:
-    -   Along the scale – the Reserved area begins at either edge of the control and ends at the opposing edge of the control.
+    -   Along the scale – the Reserved area begins at either edge of the control and ends to the opposing edge of the control.
     -   Across the scale –
         -   Horizontal Orientation: the Reserved area begins at the bottom edge of the control and extends upwards to the bottom margin of the gauge's scale.
         -   Vertical Orientation: the Reserved area begins at the left edge of the control and extends to the right, up to the left margin of the gauge's scale.
@@ -107,7 +107,7 @@ Another aspect in which the Reserved area is significant is the fact that its in
 
 Spread of the Graph area:
 
--   Along the scale – the Graph area begins at either edge of the control and ends at the opposing edge of the control. Both the starting and ending positions of the scale are measured against the starting edge of the Graph area (the left edge at horizontal orientation or bottom edge at vertical orientation).
+-   Along the scale – the Graph area begins either edge of the control and ends at the opposing edge of the control. Both the starting and ending positions of the scale are measured against the starting edge of the Graph area (the left edge at horizontal orientation or bottom edge at vertical orientation).
 -   Across the scale – the Graph area begins at the edge of the Reserved area (this is the bottom edge of the Graph area in the horizontal orientation or its left edge in the vertical orientation).  The edge of the Graph area that borders with the Reserved area serves as a reference point for the extent-related properties of some of the visual elements of the scale (for positioning these elements across the scale).
 
  
