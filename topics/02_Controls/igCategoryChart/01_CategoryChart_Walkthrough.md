@@ -53,9 +53,11 @@ The following is a screenshot of the igCategoryChart.
 
 Following is a conceptual overview of the process:
 
-1. Adding the igCategoryChart control to your application
+1. Add a data source 
 
-2. Verifying the results
+2. Adding the igCategoryChart control to your application
+
+3. Verifying the results
 
 <a id="Steps"/>
 
@@ -63,7 +65,8 @@ Following is a conceptual overview of the process:
 
 The following procedure takes you through the steps necessary for adding the igCategoryChart control to a page.
 
-1. Add a data source
+**Add a data source**
+
 In order to create an igCategoryChart control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source. For more information on binding to other data sources, please refer to the following topic, Binding to Data](categorychart-binding-to-data.html).
 
 **In HTML:**
@@ -78,7 +81,9 @@ var data = [
 
 ```
 
-2. Add the igCategoryChart control to the page and bind it to the above data.
+**Add igCategoryChart**
+
+Add the igCategoryChart control to the page and bind it to the above data.
 
 The following code demonstrates adding the igCategoryChart control with the minimum code and property settings required for display:
 
@@ -90,7 +95,7 @@ The following code demonstrates adding the igCategoryChart control with the mini
 });
 ```
 
-3. Verify the results.
+**Verify the results**
 
 Build and run your project to verify the result. If you have implemented the steps correctly, the displayed igCategoryChart should look like the one in the Preview section above.
 
