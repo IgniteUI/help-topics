@@ -13,7 +13,7 @@
 ## Overview
 
 While using the `igCategoryChart` it is important to remember a few rules that will make the data visualization better.
-This control will make an intelligent attempt to visualize any data that it is being assigned to it. However, there are still a few rules that need to be followed.
+This control will make an intelligent attempt to visualize any data that is assigned to it. However, there are still a few rules that need to be followed.
 
 This topics describes the rules that need to be applied to the data before it is assigned to the chart.
 
@@ -163,7 +163,7 @@ Unsupported data examples:
     }
 }
 ```
-Arrays (of any dimension) of values is also out of scope of supported data sources in the `igCategoryChart`.
+Arrays (of any dimension) of values is also out of scope of the currently supported data sources in the `igCategoryChart`.
 
 ```javascript
 [[100, 200], [200, 300], [300, 400], [400, 500], [50, 100]]
