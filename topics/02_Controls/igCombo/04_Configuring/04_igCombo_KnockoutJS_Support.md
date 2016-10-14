@@ -75,7 +75,7 @@ In addition to that, the Knockout extension for `igCombo` can be configured in a
 
 ### Configuring igCombo with knockout support summary chart
 
-The following table maps the configuration tasks of the `igCombo` control related to Knockout usage scenarios to the respective properties that manage those tasks. Code examples of some practical implementations are available after the table.
+The following table maps the `igCombo` control configuration tasks related to Knockout usage scenarios to the respective properties that manage those tasks. Code examples of some practical implementations are available after the table.
 
 
 <table class="table table-bordered">
@@ -89,34 +89,34 @@ The following table maps the configuration tasks of the `igCombo` control relate
 	</thead>
 	<tbody>
 		<tr>
-			<td>Binding the View-Model object’s field to the selected items of the igCombo control</td>
+			<td>Binding the View-Model object’s field to the igCombo selected items</td>
 			<td>Required</td>
-			<td>Array of the selected items in the igCombo. When binding to data using Knockout, the minimum requirement is to configure the selectedItems property. This enables the data exchange between the combo selected items and the View-Model.</td>
+			<td>Array of the selected items in the igCombo. Configuring the selectedItems property enables the data exchange between the combo selected items and the View-Model.</td>
 			<td><ul><li> `selectedItems` </li></ul><br>Possible values:<ul><li>array of primitives</li><li>array of objects</li></ul><br>**Note:** The value property is not available for the igCombo, but only for its Knockout extension.</td>
 		</tr>
 		<tr>
-			<td>Define the type of the selected items</td>
-			<td>Optional</td>
-			<td>Configuring the type of the selected items in the array, either to be "primitive" or "object". The extension itself, automatically defines the type of the selected items and that's why this option is not required. But there are cases, when the `selectedItems` property is an array of objects and when at certain state there isn't selected items, then the extension cannot define the type of the selected items. In such a situation the `selectedItemType` option can be used. </td>
-			<td><ul><li>`selectedItemType`</li></ul><br>Possible values:<ul><li>"primitive"</li><li>"object"</li></ul> <br>**Note:** The value property is not available for the igCombo, but only for its Knockout extension.</td>
-		</tr>
-		<tr>
-			<td>Specifying data source for the drop-down list of the combo box</td>
+			<td>Configuring data source for the igCombo</td>
 			<td>Required</td>
-			<td>The property for configuring the data source for the drop-down list is dataSource. </td>
+			<td>Sets a valid data source accepted by $.ig.DataSource, or an instance of an $.ig.DataSource itself.</td>
 			<td><ul><li> [`dataSource`](%%jQueryApiUrl%%/ui.igcombo#options:dataSource)</li></ul></td>
 		</tr>
 		<tr>
-			<td>Configuring the name of the display text field in the drop-down data source</td>
+			<td>Configuring the data source field that holds the items' display text</td>
 			<td>Required</td>
-			<td>The name of the display field from the drop-down list data source is required. This makes it possible for the combo to display the correct text when an item is selected. The same text is stored in the text option, too.</td>
+			<td>Sets the name of the data source field which contains the items' display text. The text for each item is displayed in the dropdown list and in the combo box when an item is selected. The same text is stored in the text option, too.</td>
 			<td><ul><li>[`textKey`](%%jQueryApiUrl%%/ui.igcombo#options:textKey)</li></ul></td>
 		</tr>
 		<tr>
-			<td>Setting the name of the value field in the drop-down data source</td>
+			<td>Configuring the data source field that holds the items' values</td>
 			<td>Required</td>
-			<td>The name of the value (or ID) field from the drop-down list data source is required. It enables the combo to provide the value of the selected item.</td>
+			<td>Sets the name of data source field (ID field) which contains the items' values. The igCombo items' values are mapped against this field.</td>
 			<td><ul><li>[`valueKey`](%%jQueryApiUrl%%/ui.igcombo#options:valueKey)</li></ul></td>
+		</tr>
+		<tr>
+			<td>Defining the type of the selected items</td>
+			<td>Optional</td>
+			<td>Setting the type of the selected items in the array, either to be "primitive" or "object". The extension itself automatically defines the type of the selected items if there are any and that's why this option is not required. The `selectedItemType` option can be used in scenarios where the extension is not able to define the type automatically because no item is selected.</td>
+			<td><ul><li>`selectedItemType`</li></ul><br>Possible values:<ul><li>"primitive"</li><li>"object"</li></ul> <br>**Note:** The value property is not available for the igCombo, but only for its Knockout extension.</td>
 		</tr>
 	</tbody>
 </table>
