@@ -19,7 +19,19 @@ This topics describes the rules that need to be applied to the data before it is
 
 ## Data source requirements
 
-Generally, the chart will attempt to treat the data that is provided to it as a collection of objects.
+Generally, the chart will attempt to treat the `data` that is provided to it as a collection of objects.
+
+Example of the `igCategoryChart` initialization code:
+```javascript
+$("#chart").igCategoryChart({
+    title: "Countries population",
+    subTitle: "1995 vs 2005",
+    xAxisTitle: "Countries",
+    yAxisTitle: "Population",
+    chartType: "auto",
+    dataSource: data
+});
+```
 
 ### Array of objects
 
@@ -35,12 +47,12 @@ While analyzing such a data source during data binding routine the chart makes s
 
 Example:
 ```javascript
-[
+var data = [
     { "Label": "1995", "Brazil": 161, "Indonesia": 197, "United States": 266, "India": 920, "China": 1297 },
     { "Label": "2005", "Brazil": 186, "Indonesia": 229, "United States": 295, "India": 1090, "China": 1216 },
     { "Label": "2015", "Brazil": 204, "Indonesia": 256, "United States": 322, "India": 1251, "China": 1361 },
     { "Label": "2025", "Brazil": 218, "Indonesia": 277, "United States": 351, "India": 1396, "China": 1394 }
-]
+];
 ```
 
 > **Note:** In some cases the chart will assign `yAxisMinimumValue` to be other than `0`. Setting this option to a value explicitly will prevent this behavior.
@@ -52,7 +64,7 @@ The rules of discovering data described above are also applicable in this scenar
 
 Example:
 ```javascript
-[
+var data = [
     [
         [
             { "AmountSold": 2, "Item": "Hat" },
@@ -74,7 +86,7 @@ Example:
             { "AmountSold": 3, "Item": "Shoes" }
         ]
     ]
-]
+];
 ```
 
 ### Data intents
@@ -137,15 +149,15 @@ Plain JSON object, or a dictionary in a form of JSON sub-objects is not currentl
 
 Unsupported data examples:
 ```javascript
-{
+var data = {
     "Shoes": 5,
     "Hats": 2,
     "Gloves": 1
-}
+};
 ```
 
 ```javascript
-{
+var data = {
     "Shoes": {
         "2014":5,
         "2015":7,
@@ -161,10 +173,10 @@ Unsupported data examples:
         "2015":4,
         "2016":3
     }
-}
+};
 ```
 Arrays (of any dimension) of values is also out of scope of the currently supported data sources in the `igCategoryChart`.
 
 ```javascript
-[[100, 200], [200, 300], [300, 400], [400, 500], [50, 100]]
+var data = [[100, 200], [200, 300], [300, 400], [400, 500], [50, 100]];
 ```
