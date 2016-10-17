@@ -159,22 +159,35 @@ Description
 
 						<tr>
 							<td>
-`infragistics.datasource.js`
+`infragistics.util.js`
 			</td>
 
 							<td>
-The igDataSource™ control
+Ignite UI utilities
 			</td>
 						</tr>
 
 						<tr>
 							<td>
-`infragistics.dv.core.js`
+`infragistics.datasource.js`
 			</td>
 
 							<td>
-Data visualization core functionality
+The igDataSource control
 			</td>
+						</tr>
+						
+						<tr>
+						    <td>
+						        `infragistics.ext_core.js`<br/>
+						        `infragistics.ext_collections.js`<br/>
+						        `infragistics.ext_ui.js`<br/>
+						        `infragistics.dv_core.js`<br/>
+						        `infragistics.dv_geometry.js`<br/>
+						    </td>
+						    <td>
+						        Data visualization core functionality
+						    </td>
 						</tr>
 
 						<tr>
@@ -196,20 +209,9 @@ Chart and map common widget
 Chart base functionality
 			</td>
 						</tr>
-
 						<tr>
 							<td>
-`infragistics.util.js`
-			</td>
-
-							<td>
-Ignite UI utilities
-			</td>
-						</tr>
-
-						<tr>
-							<td>
-`infragistics.chart_piechart.js`
+`infragistics.piechart.js`
 			</td>
 
 							<td>
@@ -369,13 +371,3 @@ The following topics provide additional information related to this topic.
 The following samples provide additional information related to this topic.
 
 - [JSON Binding](%%SamplesUrl%%/pie-chart/json-binding): This is a basic example of the pie chart bound to JSON data.
-
-
-
-
-
- 
-
- 
-
-

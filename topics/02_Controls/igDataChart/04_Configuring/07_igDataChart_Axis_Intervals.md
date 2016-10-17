@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 |metadata|
 {
     "fileName": "igdatachart-configuring-axis-intervals",
@@ -104,7 +104,7 @@ On date time axes, this value is represented as time span between axis minimum v
 		</tr>
 		<tr>
 			<td>MinorStroke</td>
-			<td>brush/td>
+			<td>brush</td>
 			<td>A color of axis minor gridlines.</td>
 		</tr>
 		<tr>
@@ -115,7 +115,7 @@ On date time axes, this value is represented as time span between axis minimum v
 	</tbody>
 </table>
 
-###<a id="numericxexample"></a> [NumericXExample]
+###<a id="numericxexample"></a> NumericXExample
 
 The screenshot, following the table, illustrates how the `igDataChart` control with the axis major and minor interval properties configured on the NumericXAxis will be displayed as a result of the following settings, (using the LineSeries):
 
@@ -313,13 +313,3 @@ The following samples provide additional information related to this topic.
 
 -	[NumericAxesIntervals](%%SamplesUrl%%/data-chart/numeric-xaxis-intervals) : This sample demonstrates the use of Major and Minor Axis Intervals on the ScatterLineSeries, using NumericX and NumericY Axes.
 -	[CategoryXAxisIntervals](%%SamplesUrl%%/data-chart/category-xaxis-intervals) : This sample demonstrates the use of Major and Minor Axis Intervals on the ColumnSeries, using CategoryXAxis.
-
-
-
-
-
- 
-
- 
-
-

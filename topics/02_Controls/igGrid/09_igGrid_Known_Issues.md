@@ -55,6 +55,10 @@ Column keys which contain spaces are not supported|Column keys are used for gene
 The contextMenu event is renamed to cellRightClick|The event is renamed to be more self-explanatory.|![](../../images/images/negative.png)
 Header text and sorting/filtering/gear icons are misaligned in IE8|This is a browser limitation due to IE8 not supporting css calc(). For details refer to: http://caniuse.com/#feat=calc| ![](../../images/images/negative.png)
 [igGrid does not support column keys containing special chars - [, ], \, (, ), etc.](#special-chars) | The column keys are used in internal jQuery selectors for many of the grid's features. Currently the selectors are not explicitly escaped so any special characters in the column key would break the selectors. | ![](../../images/images/positive.png)
+When grid's data source is remote the custom scrollbars don't show on touch environments. | When the data source is remote the custom scrollbars do not display on touch environments. | ![](../../images/images/plannedFix.png)
+The scrollable container height is not properly updated if the grid's records are deleted directly via the data source. | If the records are removed directly from the data source the scrollable container height is not properly updated and there may be blank space at the bottom of the grid. | ![](../../images/images/plannedFix.png)
+On touch only environments if the height/width of the container is changed, the custom scrollbars don't get updated. | This applies to changes triggered by different features of the grid as well, for example when hiding/unhiding summaries/filtering. | ![](../../images/images/plannedFix.png)
+If the grid is in a scrollable container but has no scrollbar on touch you cannot scroll the scrollable container while swiping on the grid. | If the grid has no scroll bars swiping on it should trigger scrolling for its container, however it currently does not. | ![](../../images/images/plannedFix.png)
 
 ## [igGrid – Data Binding](#data-binding)
 
@@ -158,6 +162,8 @@ Issue | Description | Status
 ---|---|---
 RWD mode is not supported in IE8|RWD is unable to determine the mode in IE8. This feature is mainly targeted at mobile compatibility so it is not supported under IE8.|![](../../images/images/negative.png)
 RWD single column template is not supported with any of the grid features, excepts Paging.| The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.|![](../../images/images/negative.png) 
+The custom scrollbars of the igGrid are not updated on mobile touch devices when Responsive feature is enabled and the device is rotated.| The custom scrollbars height/width are not properly updated if the Responsive feature is enabled and the device is rotated so that the height/width changes.| ![](../../images/images/plannedFix.png)
+
 
 ## [igGridColumnFixing](#column-fixing)
 
@@ -402,6 +408,11 @@ Issue | Description | Status
 ------|-------------|-------
 [Tooltips display issues when moving pointer too fast over the cells](#tooltips-fast-movement) | If the user moves the mouse quickly through the control, the tooltip fade animation slows down the process of showing and hiding tooltips and can create display issues when the values are very small. | ![](../../images/images/positive.png)
 
+## [igGridAppendRowsOnDemand](#appendRowsOnDemand)
+
+Issue | Description | Status
+------|-------------|-------
+AppendRowsOnDemand does not work on mobile touch only environments. | When on touch only environmenst when reaching the end of the loaded chunks (loadTrigger: "auto") no new data is loaded. If loadTrigger options is set to "button", on touch you cannot scroll to the "Load more data" button. | ![](../../images/images/plannedFix.png)
 
 ## [igGridUpdating](#updating)
 

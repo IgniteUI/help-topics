@@ -142,7 +142,7 @@ The following code snippet shows how to apply the declared Knockout bindings to 
 $.ig.loader({
     scriptPath: "http://localhost/ig_ui/js/",
     cssPath: "http://localhost/ig_ui/css/",
-    resources: "igDataChart,extensions/infragistics.ui.datachart.knockout-extensions.js",
+    resources: "igDataChart.Category,extensions/infragistics.ui.datachart.knockout-extensions.js",
     ready: function () {
         ko.applyBindings(viewModel);
     }
@@ -230,13 +230,3 @@ The following samples provide additional information related to this topic.
 The following information (available outside the Infragistics family of content) provides additional information related to this topic.
 
 -	[Knockout Web Site](http://knockoutjs.com/): This is the home page of the Knockout library where all the needed documentation and samples can be found.
-
-
-
-
-
- 
-
- 
-
-

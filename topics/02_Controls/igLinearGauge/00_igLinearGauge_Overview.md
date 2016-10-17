@@ -76,7 +76,7 @@ Feature|Description
 ---|---
 Configurable orientation and direction|The `igLinearGauge` control exposes an API for setting the state of its scale’s orientation and direction, so that the look of the gauge can be largely customized. (For details, see the [Configuring the Orientation and Direction (igLinearGauge)](igLinearGauge-Configuring-the-Orientation-and-Direction.html) topic.)
 Configurable visual elements|Each of the [visual elements](#config-visual-elements-related-prop) of the linear gauge can be configured in several aspects. (For details, see [Configurable Visual Elements of igLinearGauge and Related Properties](#config-visual-elements-related-prop).)
-Animated transitions|The `igLinearGauge` control provides built-in support for animation by its [transitionDuration](%%jQueryApiUrl%%/ui.igLinearGauge#options:transitionDuration) property. The animation effect occurs on loading the control as well as when the value of any of its properties is changed. By default, animated transitions are disabled. Providing a value in milliseconds for the `transitionDuration` property of the control determines the timeframe for swiping the control into view by smoothly visualizing all its visual elements through a slide effect (from bottom-left to top-right). Setting the value to 0 disables the animated transition. For a sample, demonstrating the animation transition effect, see the [Animated Transitions](%%SamplesUrl%%/linear-gauge/animated-transitions) sample.
+Animated transitions|The `igLinearGauge` control provides built-in support for animation by its [transitionDuration](%%jQueryApiUrl%%/ui.igLinearGauge#options:transitionDuration) property. The animation effect occurs on loading the control as well as when the value of any of its properties is changed. By default, animated transitions are disabled. Providing a value in milliseconds for the `transitionDuration` property of the control determines the timeframe for swiping the control into view by smoothly visualizing all of its visual elements through a slide effect (from bottom-left to top-right). Setting the value to 0 disables the animated transition. For a sample, demonstrating the animation transition effect, see the [Animated Transitions](%%SamplesUrl%%/linear-gauge/animated-transitions) sample.
 Support for tooltips|The built-in tooltips of the `igLinearGauge` control show the values used to create the needle, or the values, corresponding to the different ranges respectively. They are initially styled in accordance with the default look of the control, but their look can be customized by templates. By default, tooltips are disabled. (For details, see  [Configuring the Tooltips (igLinearGauge)](igLinearGauge-Configuring-the-Tooltips.html))
 
 
@@ -94,10 +94,10 @@ Horizontal orientation|Vertical orientation
 Each of them serves different purpose related to some of the [visual elements](#config-visual-elements) of the `igLinearGauge` control.
 
 -  <a id="reserved-area"></a> Reserved area (1) – This area spreads:
-    -   Along the scale – the Reserved area begins either at the edge of the control and ends at the edge of the control.
+    -   Along the scale – the Reserved area begins at either edge of the control and ends to the opposing edge of the control.
     -   Across the scale –
-        -   In horizontal orientation: the Reserved area begins at the bottom edge of the control and spreads upward as much as the height of the numbering labels is (depending on the size and the other formatting of the font used in the labels)
-        -   In vertical orientation: the Reserved area begins at the left edge of the control and spreads to the right as much as the width of the numbering labels is (depending on how large the numbers of the measurements of the scale are and the size and the other formatting of the font used in the labels).
+        -   Horizontal Orientation: the Reserved area begins at the bottom edge of the control and extends upwards to the bottom margin of the gauge's scale.
+        -   Vertical Orientation: the Reserved area begins at the left edge of the control and extends to the right, up to the left margin of the gauge's scale.
 
 The main purpose of the Reserved area is to provide enough space for the numbering labels of the scale at any orientation – horizontal or vertical (The Reserved area automatically re-sizes when the orientation changes in order to accommodate the specific space requirements for displaying the numbering labels in each of the orientations: in horizontal orientation, the area has to fit the labels’ height and in vertical orientation – their maximum width.) This doesn’t mean that you must necessarily place the numbering labels in the Reserved area: actually, you can position the label row across-the-scale anywhere within the [Graph area](#graph-area). However, even if you place the label row outside Reserved area, this will have no bearing on the spread and location of the Reserved area itself – it remains where it is, automatically defined through the height/width (depending on the orientation) of the numbering labels.
 
@@ -107,16 +107,16 @@ Another aspect in which the Reserved area is significant is the fact that its in
 
 Spread of the Graph area:
 
--   Along the scale – the Graph area begins either at the edge of the control and ends at the edge of the control. Both the starting and ending positions of the scale are measured against the starting edge of the Graph area (the left edge at horizontal orientation or bottom edge at vertical orientation).
--   Across the scale – the Graph area begins at the edge of the [Reserved area](#reserved-area) (this is the bottom edge of the Graph area at horizontal orientation or its left edge at vertical orientation). The edge of the Graph area that borders with the Reserved area serves as reference point for the extent-related properties of some of the visual elements of the scale (for positioning these elements across the scale).
+-   Along the scale – the Graph area begins either edge of the control and ends at the opposing edge of the control. Both the starting and ending positions of the scale are measured against the starting edge of the Graph area (the left edge at horizontal orientation or bottom edge at vertical orientation).
+-   Across the scale – the Graph area begins at the edge of the Reserved area (this is the bottom edge of the Graph area in the horizontal orientation or its left edge in the vertical orientation).  The edge of the Graph area that borders with the Reserved area serves as a reference point for the extent-related properties of some of the visual elements of the scale (for positioning these elements across the scale).
 
  
 
 ### <a id="config-visual-elements"></a>Configurable visual elements
 
-The `igLinearGauge` control features the following visual elements (See the picture below.):
+The `igLinearGauge` control features the following visual elements (See the picture below):
 
--   Needle (3) – This is the primary measure displayed by the control and is visualized as a bar.
+-   Needle (3) – This is the primary indicator displayed by the control and is visualized as a hovering bar element, which moves along the gauge's scale; its current position along the scale indicates the gauge's value.
 
 -   Comparative range(s) (4) – The ranges are visual elements that highlight a specified range of values on a scale. Their purpose is to visually communicate the qualitative state of the performance bar measure, illustrating at the same times the degree to which it resides within that state.
 -   Tick marks (5) –The tick marks serve as a visual division of the scale into intervals in order to increase the readability of the linear gauge.
@@ -960,13 +960,3 @@ The following samples provide additional information related to this topic.
 -	[Basic Configuration](%%SamplesUrl%%/linear-gauge/basic-configuration): This sample demonstrates a simple configuration of the `igLinearGauge` control.
 
 -	[Animated Transitions](%%SamplesUrl%%/linear-gauge/animated-transitions): This sample demonstrates animated transitions between different sets of settings in the `igLinearGauge` control.
-
-
-
-
-
- 
-
- 
-
-

@@ -45,7 +45,7 @@ A range highlights a set of continuous values bound by a specified minimum and m
 
 ### <a id="preview"></a>Preview
 
-The following image is a preview of the `igRadialGauge` control with the three ranges added to it (0-30; 30-70 and 70-100).
+The following image is a preview of the `igRadialGauge` control with the three ranges added to it (0-30; 30-70 and 70-100):
 
 ![](images/jQuery_Range_01.png)
 
@@ -54,7 +54,7 @@ The following image is a preview of the `igRadialGauge` control with the three r
 ## <a id="range-properties"></a>Range Properties
 ### Range properties summary
 
-The following table summarizes the properties of the `radialGaugeRange`.
+The following table summarizes the properties of the `radialGaugeRange`:
 
 Property Name| Property Type| Description
 ---|---|---
@@ -86,7 +86,7 @@ Property| Value
 
 ![](images/jQuery_Range_02.png)
 
-Following is the code that implements this example
+The following is the code that implements this example:
 
  **In JavaScript:**  
 
@@ -127,7 +127,7 @@ The following topics provide additional information related to this topic:
 
 ### Samples
 
-The following samples provide additional information related to this topic.
+The following samples provide additional information related to this topic:
 
 - [API Usage](%%SamplesUrl%%/radial-gauge/api-usage): The buttons and api-viewer showcase some of `igRadialGauge`'s needle methods. You can change the value of the needle at runtime and obtain the current value of the needle by clicking the corresponding buttons.
 
@@ -144,13 +144,3 @@ The following samples provide additional information related to this topic.
 - [Scale Settings](%%SamplesUrl%%/radial-gauge/scale-settings): A scale defines a range of values in the Radial Gauge. Use the options pane below to set the Radial Gauge control’s Scale properties.
 
 - [Tick Marks](%%SamplesUrl%%/radial-gauge/tickmarks): Tick marks can be displayed at every user specified interval on a gauge. Use the options pane below to set the Radial Gauge control’s Tick Mark properties.
-
-
-
-
-
- 
-
- 
-
-

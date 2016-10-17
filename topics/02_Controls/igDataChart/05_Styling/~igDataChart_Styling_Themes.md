@@ -574,16 +574,4 @@ The following third party material provides additional information related to th
 
 -	[jQuery Themeroller](http://jqueryui.com/themeroller/):  Provides jQuery UI themes for preview and download.
 
--	[Applying the New Style (igDataChart)](igDataChart-New-Default-Style.html):  This topic explains how to apply the new chart style and provides an overview of the changes it makes to the chart look.
-
 -	[Styling the Chart Series (igDataChart)](igDataChart-Styling-the-Chart-Series.html):  This topic provides a brief overview on how to style the series of the `igDataChart`™ control and demonstrates, as an example, how to apply drop-shadow effect to the series.
-
-
-
-
-
- 
-
- 
-
-

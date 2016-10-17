@@ -11,7 +11,7 @@
 # Adding igDataChart
 
 
-##Topic Overview
+## Topic Overview
 ### Purpose
 
 This topic demonstrates how to add the `igDataChart`™ control to a page and bind it to data.
@@ -118,7 +118,7 @@ The following steps demonstrate how to add an `igDataChart` control to a web pag
 	    $.ig.loader({
 	        scriptPath: "Scripts/ig/",
 	        cssPath: "Content/ig/",
-	        resources: "igDataChart.Category"
+	        resources: "igDataChart.Category.Financial,igChartLegend"
 	    });
 	<script>
 	```
@@ -453,12 +453,24 @@ The following table specifies resource names to be used with `igLoader`™ for d
 	</thead>
 	<tbody>
 		<tr>
-			<td>area, bar, column, line, spline, splineArea, stepArea, stepLine,waterfall</td>
+			<td>area, column, line, spline, splineArea, stepArea, stepLine, waterfall</td>
 			<td>igDataChart.Category</td>
 		</tr>
 		<tr>
-			<td>financial, typicalPriceIndicator, absoluteVolumeOscillatorIndicator, averageTrueRangeIndicator, accumulationDistributionIndicator, averageDirectionalIndexIndicator</td>
+			<td>bar</td>
+			<td>igDataChart.VerticalCategory</td>
+		</tr>
+		<tr>
+			<td>rangeArea, rangeColumn</td>
+			<td>igDataChart.RangeCategory</td>
+		</tr>
+		<tr>
+			<td>financial</td>
 			<td>igDataChart.Financial</td>
+		</tr>
+		<tr>
+			<td>typicalPriceIndicator, absoluteVolumeOscillatorIndicator, averageTrueRangeIndicator, accumulationDistributionIndicator, averageDirectionalIndexIndicator</td>
+			<td>igDataChart.ExtendedFinancial</td>
 		</tr>
 		<tr>
 			<td>polarArea, polarLine, polarScatter</td>
@@ -469,12 +481,28 @@ The following table specifies resource names to be used with `igLoader`™ for d
 			<td>igDataChart.Radial</td>
 		</tr>
 		<tr>
-			<td>rangeArea, rangeColumn</td>
-			<td>igDataChart.RangeCategory</td>
-		</tr>
-		<tr>
 			<td>scatter, scatterLine</td>
 			<td>igDataChart.Scatter</td>
+		</tr>
+		<tr>
+			<td>stackedBar, stacked100Bar, stackedArea, stacked100Area, stackedColumn, stacked100Column, stackedLine, stacked100Line, stackedSpline, stacked100Spline, stackedSplineArea, stacked100SplineArea</td>
+			<td>igDataChart.Stacked</td>
+		</tr>
+		<tr>
+			<td>crosshairLayer, categoryHighlightLayer, categoryItemHighlightLayer, itemToolTipLayer, categoryToolTipLayer</td>
+			<td>igDataChart.Annotation</td>
+		</tr>
+		<tr>
+			<td>Date-time axis</td>
+			<td>igDateTimeAxis</td>
+		</tr>
+		<tr>
+			<td>Chart legend</td>
+			<td>igChartLegend</td>
+		</tr>
+		<tr>
+			<td>Overview Plus Detail Pane</td>
+			<td>igOverviewPlusDetailPane</td>
 		</tr>
 	</tbody>
 </table>
@@ -513,13 +541,3 @@ The following material (available outside the Infragistics family of content) pr
 -	[jQuery Home Page](http://jquery.com/): This is a link to the main page of the jQuery library where more detailed information on installing and features of the library can be found.
 
 -	[ASP.NET MVC Home Page](http://www.asp.net/mvc): This is a link to the main page of ASP.NET MVC where more detailed information on installing and using ASP.NET MVC can be found.
-
-
-
-
-
- 
-
- 
-
-

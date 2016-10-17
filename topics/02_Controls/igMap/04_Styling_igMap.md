@@ -205,7 +205,7 @@ The following table summarizes the purpose and functionality of the `igMap` cont
 
 Property|Description|Relevant to
 ---|---|---
-[backgroundContent](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent)|Configures the background content provider to be used for plotting the map. Currently supported providers are Bing® Maps, CloudMade Maps, and OpenStreetMap. For details, see the [Configuring the Map Provider (igMap)](igMap-Configuring-Map-Provider.html) topic.|All series
+[backgroundContent](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent)|Configures the background content provider to be used for plotting the map. Currently supported providers are Bing® Maps and OpenStreetMap. For details, see the [Configuring the Map Provider (igMap)](igMap-Configuring-Map-Provider.html) topic.|All series
 [plotAreaBackground](%%jQueryApiUrl%%/ui.igMap#options:plotAreaBackground)|Configures the brush used for the background for the current plot area, i.e. the background of the map which is shown while some map tiles are still being downloaded.|All series
 [series[“key”].brush](%%jQueryApiUrl%%/ui.igMap#options:series.brush)|Configures the fill color for the main visual element of map series with name key.|Shape
 [series[“key”].outline](%%jQueryApiUrl%%/ui.igMap#options:series.outline)|Configures the outline color for the main visual element of map series with name key.|<ul><li>Shape</li><li>Polyline</li></ul>
@@ -675,13 +675,3 @@ The following samples provide additional information related to this topic.
 The following material (available outside the Infragistics family of content) provides additional information related to this topic.
 
 - [jQuery Themeroller](http://jqueryui.com/themeroller/): Provides jQuery UI themes for preview and download.
-
-
-
-
-
- 
-
- 
-
-

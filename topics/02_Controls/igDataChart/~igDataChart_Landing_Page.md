@@ -70,13 +70,3 @@ The following topics provide additional information related to this topic.
 -	[Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html):  This topic provides general information about the Ignite UI™ library.
 
 -	[igPieChart Overview](igPieChart-Overview.html): This topic provides conceptual information about the `igPieChart`™ control including its main features, minimum requirements, and user functionality.
-
-
-
-
-
- 
-
- 
-
-
