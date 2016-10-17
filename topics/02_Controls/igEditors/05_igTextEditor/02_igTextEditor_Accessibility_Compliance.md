@@ -86,33 +86,29 @@ In 2014 the W3C finalized their [WAI-ARIA specification](http://www.w3.org/TR/wa
 
 The list below provides details about what changes have been made to the `igTextEditor` to support WAI-ARIA. Please note that no special settings are  needed to leverage these changes, as they are all enabled by default.
 
-<ul>
-<li>The input element of the `igTextEditor` will render a <b>tabindex</b> attribute with a corresponding value from the <b>tabindex</b> option of the igTextEditor, which allows access to the elements through the use of <kbd>Tab</kbd> and <kbd>Shift</kbd>+<kbd>Tab</kbd> keys.
+- The input element of the `igTextEditor` will render a <b>tabindex</b> attribute with a corresponding value from the <b>tabindex</b> option of the igTextEditor, which allows access to the elements through the use of <kbd>Tab</kbd> and <kbd>Shift</kbd>+<kbd>Tab</kbd> keys.
 
->**Note:** If the tabindex option is not specified - tabindex equal to -1 is rendered as an attribute to the input element.</li>
+>**Note:** If the tabindex option is not specified - tabindex equal to -1 is rendered as an attribute to the input element.
 
-<li>The `igTextEditor` is decorated with a <b>textbox</b> role. In case there are defined listItems option and list is rendered the editor input is decorated with <b>combobox</b> role.</li>
+- The `igTextEditor` is decorated with a <b>textbox</b> role. In case there are defined listItems option and list is rendered the editor input is decorated with <b>combobox</b> role.
 
-<li>The `igTextEditor` is decorated with a <b>aria-label</b> attribute with the corresponding value depending on the locale. The default value is 'Text Editor'. </li>
+- The `igTextEditor` is decorated with a <b>aria-label</b> attribute with the corresponding value depending on the locale. The default value is 'Text Editor'. 
 
-<li>In case button is rendered
-<ul>
-<li>Every rendered button is decorated with <b>button</b> role
-<li>Every rendered button has id (generated from the id of the widget) 
-<li>Every rendered button has <b>aria-label</b> attribute rendered with value extracted from the loaded locale. </li>
-</ul>
-</li> 
+- In case button is rendered
 
-<li>In case list items are rendered
-<ul>
-<li>
-The editor input is decorated with <b>aria-owns</b> attribute equal to the id of the list container. 
-</li>
-<li>The dropdown list is decorated with <b>listbox</b> role. </li>
-<li>Every list item element has generated id and it's decorated with <b>option</b> role.</li>
-<li>Every list item element has <b>aria-posinset</b> attribute rendered with the corresponding order number in the list</li>
-<li>Every list item element has <b>aria-selected</b> attribute rendered by default false. The value is changed according to the selection into the drop down list.
-<li>Every list item has <b>title</b> attribute rendered equal to the text value of the item
+    - Every rendered button is decorated with <b>button</b> role
+    - Every rendered button has id (generated from the id of the widget) 
+    - Every rendered button has <b>aria-label</b> attribute rendered with value extracted from the loaded locale.
+
+
+- In case list items are rendered
+
+    - The editor input is decorated with <b>aria-owns</b> attribute equal to the id of the list container. 
+    - The dropdown list is decorated with <b>listbox</b> role.
+    - Every list item element has generated id and it's decorated with <b>option</b> role.
+    - Every list item element has <b>aria-posinset</b> attribute rendered with the corresponding order number in the list
+    - Every list item element has <b>aria-selected</b> attribute rendered by default false. The value is changed according to the selection into the drop down list.
+    - Every list item has <b>title</b> attribute rendered equal to the text value of the item
 
 
  
