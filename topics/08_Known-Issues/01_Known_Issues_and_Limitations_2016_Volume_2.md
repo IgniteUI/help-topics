@@ -779,6 +779,7 @@ Status
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
+## <a id="appendRowsOnDemand"></a> igGridAppendRowsOnDemand
 
 Issue | Description | Status
 ------|-------------|-------
