@@ -45,8 +45,7 @@ To read about which implementation to choose, see [Ignite UI Overview](NetAdvant
 1.  To get started, include the required and localized resources for your project or website. Details on which resources to include can be found in the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) help topic.
 2.  On your HTML page or ASP.NET MVC View, reference the required JavaScript files, CSS files, and ASP.NET MVC assemblies.
 
-    Client Code
-    ===========
+    ###Client Code
 
     **In HTML:**
 
@@ -58,8 +57,7 @@ To read about which implementation to choose, see [Ignite UI Overview](NetAdvant
     <script type="text/javascript" src="/Scripts/Samples/infragistics.core.js"></script><script type="text/javascript" src="/Scripts/Samples/infragistics.lob.js"></script>
     ```
 
-    Server Code
-    ===========
+    ###Server Code
 
     **In ASPX:**
 
@@ -89,8 +87,7 @@ To read about which implementation to choose, see [Ignite UI Overview](NetAdvant
 
 3.  For jQuery implementations, define a div as the target element in HTML. This step is optional for ASP.NET MVC implementations.
 
-    Client Code
-    ===========
+    ###Client Code
 
     **In HTML:**
 
@@ -100,8 +97,7 @@ To read about which implementation to choose, see [Ignite UI Overview](NetAdvant
 
 4.  Once the above setup is complete, begin to set options including ID, vote height, precision, and value presentation. Note that in ASP.NET MVC Views, the Render method must be called after all other options are set.
 
-    Client Code
-    ===========
+    ###Client Code
 
     **In jQuery:**
 
@@ -116,8 +112,7 @@ To read about which implementation to choose, see [Ignite UI Overview](NetAdvant
     </script>
     ```
 
-    Server Code
-    ===========
+    ###Server Code
 
     **In ASPX:**
 
