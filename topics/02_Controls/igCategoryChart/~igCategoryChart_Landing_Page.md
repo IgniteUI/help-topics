@@ -25,10 +25,6 @@ The topics in this section provide detailed information regarding the igCategory
 
 - [Walkthrough](categorychart-walkthrough.html)
 
-- [Why Use the Category Chart instead of the Data Chart](categorychart-why-use.html)
-
-- [Extending the Category Chart](categorychart-extending-category-chart.html)
-
 - [Binding to Data](categorychart-binding-to-data.html)
 
 - [Axes](categorychart-axes.html)

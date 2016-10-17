@@ -67,7 +67,7 @@ The following procedure takes you through the steps necessary for adding the igC
 
 **Add a data source**
 
-In order to create an igCategoryChart control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source. For more information on binding to other data sources, please refer to the following topic, Binding to Data](categorychart-binding-to-data.html).
+In order to create an igCategoryChart control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source. For more information on binding to other data sources, please refer to the following topic, [Binding to Data](categorychart-binding-to-data.html).
 
 **In HTML:**
 ```
@@ -107,9 +107,5 @@ Build and run your project to verify the result. If you have implemented the ste
 ### Topics
 
 - [Why Use the Category Chart instead of the Data Chart](categorychart-why-use.html)
-
-- [Extending the Category Chart](categorychart-extending-category-chart.html)
-
-- [Binding to Data](categorychart-binding-to-data.html)
 
 - [Axes](categorychart-axes.html)

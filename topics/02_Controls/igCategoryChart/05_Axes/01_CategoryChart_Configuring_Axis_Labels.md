@@ -78,8 +78,6 @@ The following screenshot demonstrates the igCategoryChart control with the x-axi
 
 - [Configuring Axis Gap and Overlap](configuring-axis-gap-and-overlap.html)
 
-- [Configuring Axis Labels](configuring-axis-labels.html)
-
 - [Configuring Axis Intervals](configuring-axis-intervals.html)
 
 - [Configuring Axis Range](configuring-axis-range.html)
