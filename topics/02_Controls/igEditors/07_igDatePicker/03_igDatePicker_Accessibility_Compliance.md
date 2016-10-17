@@ -61,10 +61,12 @@ In 2014 the W3C finalized their [WAI-ARIA specification](http://www.w3.org/TR/wa
 The list below provides details about what changes have been made to the `igDatePicker` to support WAI-ARIA. Please note that no special settings are  needed to leverage these changes, as they are all enabled by default.
 
 <ul>
-<li>The input element of the `igDatePicker` will render a <b>tabindex</b> attribute with a corresponding value from the <b>tabindex</b> option of the igDatePicker, which allows access to the elements through the use of TAB and SHIFT+TAB keys. <br />
+<li>The input element of the `igDatePicker` will render a <b>tabindex</b> attribute with a corresponding value from the <b>tabindex</b> option of the igDatePicker, which allows access to the elements through the use of TAB and SHIFT+TAB keys.
+
 >**Note:** If the tabindex option is not specified - tabindex equal to -1 is rendered as an attribute to the input element.</li>
 
 <li>The `igDatePicker` is decorated with a <b>combobox</b> role. 
+
 >**Note:** The `igDatePicker` relies on the jQuery UI datepicker as a calendar, so any aria related rendering inside the calendar is left to the datepicker rendering. </li>
 
 <li>The `igDatePicker` is decorated with a <b>aria-label</b> attribute with the corresponding value depending on the locale. The default value is 'Date Picker'. </li>

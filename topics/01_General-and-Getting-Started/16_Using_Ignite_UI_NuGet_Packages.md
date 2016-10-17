@@ -14,9 +14,27 @@ NuGet is a powerful ecosystem of tools and services. It was introduced in 2010 a
 When you install a package via NuGet, it copies the library files to your solution and automatically updates your project. That means adding references, changing config files, replacing old version script files, etc.
 NuGet is available since Visual Studio 2010 and since Visual Studio 2012, it is included by default. On more information on how to get going with it, read the official [NuGet documentation](http://docs.nuget.org/ndocs/guides/install-nuget).
 
-Infragistics Ignite UI is available to explore as a NuGet package and this is the easiest and the fastest way to install the Infragistics files and assemblies required for your project. All you need to do to start using the Ignite UI NuGet packages is to run the NuGet installer. During the installation if you leave the product key field empty, the installer will install the trial version of the packages. The installer will automatically create a local feed named "Infragistics (Local)", which will display all the Ignite UI NuGet packages that are available.  
+Infragistics Ignite UI controls are available to explore as a NuGet package and this is the easiest and the fastest way to install the Infragistics files and assemblies required for your project.
+There are two approaches to start using the NuGet packages. We suggest you to set up and use our private NuGet feed hosted on  [http://packages.infragistics.com/nuget/licensed](http://packages.infragistics.com/nuget/licensed) which will keep you up to date with all the NuGet packages Infragistics provide. Using this approach you will be able to get the latest version of the packages each time you create a new project or restore the packages of an existing one.
+The alternative approach to the Ignite UI NuGet packages is to install them locally by running the NuGet installer. The installer will automatically create a local feed named “Infragistics (Local)”, which will display all the Ignite UI NuGet packages that are available. During the installation if you leave the product key field empty, the installer will install the trial version of the packages. Have in mind that if you choose this way of working with the Ignite UI NuGet packages you will have to install a later version of the packages manually if you want to update the assemblies you use to the latest version available. 
 
-## Installing Ignite UI packages
+## Installing Ignite UI packages from the online private feed
+
+The first step is to add the Infragistics feed as a package source. To do that, the user needs go to Tools/Options/Package Sources. To do that the user needs to go to Tools/Options/NuGet Package Manager/Package Sources.
+
+Add a new package source using Add new source button and name it Infragistics feed (in fact, you can name it however you want). Set the Source to infragistics-online-feed and click OK to save the source.
+
+![](images/Infragistics_feed.jpg)
+
+After that you have several ways to add references to the packages. The most "visual" way is to right click on the project and select "Manage Nuget Packages".
+
+Inside the NuGet packages manager dialog you will need to select "Infragistics feed" as your Package Source and you will get prompted for a user/password where you will need to use your infragistics.com credentials:
+
+![](images/package_credentials.jpg)
+
+If you check the "Remember my password" checkbox the credentials will be stored in Windows and you will be able to manage them from the Credential Manager. After authenticating you will get a list of the packages that are available to install. When you pick a package, you get the required assemblies installed in the project and the packages.config is updated with the installed packages.
+
+## Installing Ignite UI packages from the local feed
 
 There are two ways to install the Ignite UI NuGet package to your project, using the GUI or using the console, and we will follow both procedures below. All the steps and screenshots are taken in Visual Studio 2015 but if you are using an older version of Visual Studio, the differences are negligible. Don't worry if you haven't used NuGet before as this example will guide you step-by-step through the procedure.
 

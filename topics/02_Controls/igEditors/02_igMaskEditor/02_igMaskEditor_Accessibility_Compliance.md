@@ -63,8 +63,9 @@ In 2014 the W3C finalized their [WAI-ARIA specification](http://www.w3.org/TR/wa
 The list below provides details about what changes have been made to the `igMaskEditor` to support WAI-ARIA. Please note that no special settings are  needed to leverage these changes, as they are all enabled by default.
 
 <ul>
-<li>The input element of the `igMaskEditor` will render a <b>tabindex</b> attribute with a corresponding value from the <b>tabindex</b> option of the igMaskEditor, which allows access to the elements through the use of TAB and SHIFT+TAB keys. <br />
-> **Note:** If the tabindex option is not specified - tabindex equal to -1 is rendered as an attribute to the input element.</li>
+<li>The input element of the `igMaskEditor` will render a <b>tabindex</b> attribute with a corresponding value from the <b>tabindex</b> option of the igMaskEditor, which allows access to the elements through the use of TAB and SHIFT+TAB keys.
+
+>**Note:** If the tabindex option is not specified - tabindex equal to -1 is rendered as an attribute to the input element.</li>
 
 <li>The `igMaskEditor` is decorated with a <b>textbox</b> role. 
 
