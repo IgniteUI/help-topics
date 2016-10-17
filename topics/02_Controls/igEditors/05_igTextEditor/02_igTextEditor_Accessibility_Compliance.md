@@ -87,7 +87,7 @@ In 2014 the W3C finalized their [WAI-ARIA specification](http://www.w3.org/TR/wa
 The list below provides details about what changes have been made to the `igTextEditor` to support WAI-ARIA. Please note that no special settings are  needed to leverage these changes, as they are all enabled by default.
 
 <ul>
-<li>The input element of the `igTextEditor` will render a <b>tabindex</b> attribute with a corresponding value from the <b>tabindex</b> option of the igTextEditor, which allows access to the elements through the use of TAB and SHIFT+TAB keys.
+<li>The input element of the `igTextEditor` will render a <b>tabindex</b> attribute with a corresponding value from the <b>tabindex</b> option of the igTextEditor, which allows access to the elements through the use of <kbd>Tab</kbd> and <kbd>Shift</kbd>+<kbd>Tab</kbd> keys.
 
 >**Note:** If the tabindex option is not specified - tabindex equal to -1 is rendered as an attribute to the input element.</li>
 
