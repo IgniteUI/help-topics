@@ -38,7 +38,7 @@ The list below provides details about what changes have been made to the `igPerc
 
 - The input element of the `igPercentEditor` will render a <b>tabindex</b> attribute with a corresponding value from the <b>tabindex</b> option of the igPercentEditor, which allows access to the elements through the use of <kbd>Tab</kbd> and <kbd>Shift</kbd>+<kbd>Tab</kbd> keys.
 
->**Note:** If the tabindex option is not specified - tabindex equal to -1 is rendered as an attribute to the input element.>
+>**Note:** If the tabindex option is not specified - tabindex equal to -1 is rendered as an attribute to the input element.
 
 - The `igPercentEditor` is decorated with a <b>textbox</b> role. In case there are defined listItems option and list is rendered the editor input is decorated with <b>combobox</b> role.
 
