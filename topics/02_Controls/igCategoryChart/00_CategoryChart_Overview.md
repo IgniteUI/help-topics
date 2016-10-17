@@ -38,6 +38,6 @@ Built to be easily configurable, it uses the Data Chart control as its engine, w
 
 *Related topics:* 
 
-- [Walkthrough](categorychart-walkthrough.html)
+- [Walkthrough](igcategorychart-adding.html)
 
 - [Binding to Data](categorychart-binding-to-data.html)

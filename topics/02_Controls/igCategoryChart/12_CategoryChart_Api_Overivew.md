@@ -23,7 +23,7 @@ The following topics are prerequisite to understanding this topic:
 
 -	[](categorychart-overview.html)[igCategoryChart Overview](categorychart-overview.html):  This topic provides conceptual information about the igCategoryChart control including its main features, minimum requirements for using charts and user functionality.
 
--	[](categorychart-walkthrough.html)[Adding igCategoryChart](categorychart-walkthrough.html): This topic demonstrates how to create add the `igCategoryChart` control and bind it to data.
+-	[](igcategorychart-adding.html)[Adding igCategoryChart](igcategorychart-adding.html): This topic demonstrates how to create add the `igCategoryChart` control and bind it to data.
 
 ##igCategoryChart API Reference
 

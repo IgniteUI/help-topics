@@ -84,6 +84,6 @@ The following screenshot displays the igCategoryChart control using the Line cha
 
 ## <a id="relatedtopics"/>Related Topics:
 
-- [Adding igCategoryChart](categorychart-walkthrough.html)
+- [Adding igCategoryChart](igcategorychart-adding.html)
 
 - [Binding to Data](categorychart-binding-to-data.html)

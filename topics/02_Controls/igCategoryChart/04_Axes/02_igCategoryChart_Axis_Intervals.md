@@ -1,7 +1,7 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "categorychart-configuring-axis-interval",
+    "fileName": "igcategorychart-axis-intervals",
     "controlName": "igCategoryChart",
     "tags": ["API", "CategoryChart", "Axes"]
 }
@@ -57,7 +57,7 @@ The following code snippet demonstrates how to configure the interval on the x-a
 
 ## <a id="relatedtopics"/>Related Topics:
 
-- [Walkthrough](categorychart-walkthrough.html)
+- [Walkthrough](igcategorychart-adding.html)
 
 - [Binding to Data](categorychart-binding-to-data.html)
 

@@ -1,7 +1,7 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "categorychart-configuring-axis-tickmarks",
+    "fileName": "igcategorychart-axis-tickmarks",
     "controlName": "igCategoryChart",
     "tags": ["API", "CategoryChart", "Axes"]
 }
@@ -50,7 +50,7 @@ $(function () {
 
 ## <a id="relatedtopics"/> Related Topics:
 
-- [Walkthrough](categorychart-walkthrough.html)
+- [Walkthrough](igcategorychart-adding.html)
 
 - [Binding to Data](categorychart-binding-to-data.html)
 

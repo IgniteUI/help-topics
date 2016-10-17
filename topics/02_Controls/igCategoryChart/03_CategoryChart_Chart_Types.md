@@ -37,6 +37,6 @@ Property Value|Description|Example
 
 ## Related topics
 
-- [Walkthrough](categorychart-walkthrough.html)
+- [Walkthrough](igcategorychart-adding.html)
 
 - [Configuring Chart Types](categorychart-configuring-chart-types.html)

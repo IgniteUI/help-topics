@@ -1,7 +1,7 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "categorychart-configuring-axis-label",
+    "fileName": "igcategorychart-axis-label",
     "controlName": "igCategoryChart",
     "tags": ["API", "CategoryChart", "Axes"]
 }
@@ -72,7 +72,7 @@ The following screenshot demonstrates the igCategoryChart control with the x-axi
 
 ## <a id="relatedtopics"/>Related Topics:
 
-- [Walkthrough](categorychart-walkthrough.html)
+- [Walkthrough](igcategorychart-adding.html)
 
 - [Binding to Data](categorychart-binding-to-data.html)
 

@@ -1,7 +1,7 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "categorychart-landing-page",
+    "fileName": "igcategorychart-landingpage",
     "controlName": "igCategoryChart",
     "tags": ["API", "CategoryChart", "Axes"]
 }
@@ -23,7 +23,7 @@ The topics in this section provide detailed information regarding the igCategory
 
 -  [Overview](categorychart-overview.html)
 
-- [Walkthrough](categorychart-walkthrough.html)
+- [Walkthrough](igcategorychart-adding.html)
 
 - [Binding to Data](categorychart-binding-to-data.html)
 

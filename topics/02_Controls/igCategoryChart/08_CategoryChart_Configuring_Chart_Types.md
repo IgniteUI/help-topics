@@ -65,7 +65,7 @@ And here is the result of running this code on a web page:
 
 ## Related topics
 
-- [Walkthrough](categorychart-walkthrough.html)
+- [Walkthrough](igcategorychart-adding.html)
 
 - [Chart Types](categorychart-chart-types.html)
 

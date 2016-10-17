@@ -19,7 +19,7 @@ This topic provides information on configuring axis gap and axis overlap in the 
 ### Required background
 
 The following topic is a prerequisite to understanding this topic:
-- [Walkthrough](categorychart-walkthrough.html)
+- [Walkthrough](igcategorychart-adding.html)
 
 This topic demonstrates how to add the `igCategoryChart`™ control to the page and bind it to data.
 
@@ -102,6 +102,6 @@ $("#chart").igCategoryChart({
 
 ## Related Topics:
 
-- [Walkthrough](categorychart-walkthrough.html)
+- [Walkthrough](igcategorychart-adding.html)
 
 - [Binding to Data](categorychart-binding-to-data.html)

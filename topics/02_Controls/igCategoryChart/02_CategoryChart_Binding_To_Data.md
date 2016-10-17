@@ -49,7 +49,7 @@ To complete the procedure, you need the following:
 -	An HTML5 web page
 -	All required JavaScript and CSS files added to your web site or web application project.
 
-For detailed information on instantiation and configuration of an igCategoryChart see - - [Adding igCategoryChart](categorychart-walkthrough.html). 
+For detailed information on instantiation and configuration of an igCategoryChart see - - [Adding igCategoryChart](igcategorychart-adding.html). 
 
 #### <a id="Preview"/> Preview
 
@@ -115,7 +115,7 @@ To complete the procedure, you need the following:
 - An HTML5 web page
 - All required JavaScript and CSS files added to your web site or web application project.
 
-For detailed information on instantiation and configuration of an igCategoryChart see [Adding igCategoryChart](categorychart-walkthrough.html). 
+For detailed information on instantiation and configuration of an igCategoryChart see [Adding igCategoryChart](igcategorychart-adding.html). 
 
 #### <a id="HPreview"/> Preview
 
@@ -196,6 +196,6 @@ To do this, assign the data array defined in the previous step to the dataSource
 
 ## <a id="relatedcontent"/>Related Topics:
 
-- [Walkthrough](categorychart-walkthrough.html)
+- [Walkthrough](igcategorychart-adding.html)
 
 - [Axes](categorychart-axes.html)
