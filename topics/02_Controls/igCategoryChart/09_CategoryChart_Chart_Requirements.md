@@ -122,6 +122,7 @@ data.__dataIntents = {
 ```
 
 Full list of supported metadata values:
+
 Metadata value|Application description
 --|--
 PrimarySeriesValue|Indicates which value to use as the primary category series value
