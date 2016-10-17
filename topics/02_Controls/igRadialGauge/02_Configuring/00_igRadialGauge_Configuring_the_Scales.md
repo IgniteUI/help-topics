@@ -55,7 +55,7 @@ The following image is a preview of the `igRadialGauge` control with the scale a
 ## <a id="scale-properties"></a>Scale Properties
 ### Scale properties summary
 
-The following table summarizes the properties of the `igRadialGauge` control related to the scale.
+The following table summarizes the properties of the `igRadialGauge` control related to the scale:
 
 <table class="table">
 	<thead>
@@ -252,7 +252,7 @@ Property| Value
 
 ![](images/igRadialGauge_Scale_01.png)
 
-Following is the code that implements this example.
+The following is the code that implements this example:
 
  **In JavaScript:**  
 
@@ -286,7 +286,7 @@ The following topics provide additional information related to this topic:
 
 ### Samples
 
-The following samples provide additional information related to this topic.
+The following samples provide additional information related to this topic:
 
 - [API Usage](%%SamplesUrl%%/radial-gauge/api-usage): The buttons and api-viewer showcase some of `igRadialGauge`'s needle methods. You can change the value of the needle at runtime and obtain the current value of the needle by clicking the corresponding buttons.
 
@@ -303,13 +303,3 @@ The following samples provide additional information related to this topic.
 - [Scale Settings](%%SamplesUrl%%/radial-gauge/scale-settings): A scale defines a range of values in the Radial Gauge. Use the options pane below to set the Radial Gauge control’s Scale properties.
 
 - [Tick Marks](%%SamplesUrl%%/radial-gauge/tickmarks): Tick marks can be displayed at every user specified interval on a gauge. Use the options pane below to set the Radial Gauge control’s Tick Mark properties.
-
-
-
-
-
- 
-
- 
-
-

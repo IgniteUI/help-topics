@@ -47,7 +47,7 @@ The gauge labels are visual elements displaying numeric values at a specified in
 
 ### <a id="preview"></a>Preview
 
-The following image is a preview of the `igRadialGauge` control displaying labels.
+The following image is a preview of the `igRadialGauge` control displaying labels:
 
 ![](../images/igRadialGauge_Getting_Started_01.png)
 
@@ -56,7 +56,7 @@ The following image is a preview of the `igRadialGauge` control displaying label
 ## <a id="lable-properties"></a>Label Properties and Events
 ### Label properties and events summary
 
-The following table summarizes the `igRadialGauge` control’s label properties.
+The following table summarizes the `igRadialGauge` control’s label properties:
 
 Property Name| Property Type| Description
 ---|---|---
@@ -87,7 +87,7 @@ labelExtent |0.44
 
 ![](images/igRadialGauge_Label_01.png)
 
-The following is the code for implementing this example
+The following is the code for implementing this example:
 
  **In JavaScript:**   
                                                                                                                                   
@@ -121,7 +121,7 @@ The following topics provide additional information related to this topic:
 
 ### Samples
 
-The following samples provide additional information related to this topic.
+The following samples provide additional information related to this topic:
 
 - [API Usage](%%SamplesUrl%%/radial-gauge/api-usage): The buttons and api-viewer showcase some of `igRadialGauge`'s needle methods. You can change the value of the needle at runtime and obtain the current value of the needle by clicking the corresponding buttons.
 
@@ -138,13 +138,3 @@ The following samples provide additional information related to this topic.
 - [Scale Settings](%%SamplesUrl%%/radial-gauge/scale-settings): A scale defines a range of values in the Radial Gauge. Use the options pane below to set the Radial Gauge control’s Scale properties.
 
 - [Tick Marks](%%SamplesUrl%%/radial-gauge/tickmarks): Tick marks can be displayed at every user specified interval on a gauge. Use the options pane below to set the Radial Gauge control’s Tick Mark properties.
-
-
-
-
-
- 
-
- 
-
-

@@ -19,10 +19,10 @@ This topic explains the `igDialog`™ accessibility features and provides advice
 The following topics are prerequisite to understanding this topic:
 
 -   [**Accessibility Compliance Reference**](#accessibility-compliance)
-	-   [Introduction](#accessibility-compliance-intro)
-    -   [Accessibility compliance reference summary](#accessibility-compliance-summary)
+-   [Introduction](#accessibility-compliance-intro)
+-   [Accessibility compliance reference summary](#accessibility-compliance-summary)
 -   [**Related Content**](#related-content)
-    -   [Topics](#topics)
+-   [Topics](#topics)
 
 
 
@@ -47,7 +47,7 @@ Rules | Rule Text | How We Comply
 (l) | When pages utilize scripting languages to display content or to create interface elements, the information provided by the script shall be identified with functional text that can be read by assistive technology. | When the control's scripts are changing the page markup, the new created content complies with the screen reader due to the attributes described in rule (c).
 
 
-* - control limitations
+\* - control limitations
 
 ## <a id="related-content"></a> Related Content
 

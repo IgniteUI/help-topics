@@ -122,11 +122,11 @@ $('#notifier').igNotifier({
 
 ![](images/igNotifier_basic.png)
 
-As every other control, the `igNotifier` has its own properties that allow the users to customize the way the notifications look. You can for example use the `direction` property to specify the position of the messages. It can be situated on either side of the editors input.
+As every other control, the `igNotifier` has its own properties that allow the users to customize the way the notifications look. You can for example use the [`direction`](%%jQueryApiUrl%%/ui.ignotifier#options:direction) property to specify the position of the messages. It can be situated on either side of the editors input.
 
 Another worth mentioning option is the [`mode`](%%jQueryApiUrl%%/ui.igNotifier#options:mode). You can choose between `popover` and `inline` display modes. The default value is auto. This means that the notifier sets popover mode for info and warning messages and inline for the success and the error messages.
 
-You can use the `messages` property to customize the default text that is going to be displayed for a specific state or provide it as a last parameter of the `notify` method.
+You can use the [`messages`](%%jQueryApiUrl%%/ui.ignotifier#options:messages) property to customize the default text that is going to be displayed for a specific state or provide it as a last parameter of the [`notify`](%%jQueryApiUrl%%/ui.ignotifier#methods:notify) method.
 
 The whole list of available options and detailed description can be found in the [igNotifier jQuery API](%%jQueryApiUrl%%/ui.igNotifier) API documentation.
 
@@ -135,4 +135,4 @@ The whole list of available options and detailed description can be found in the
 - [Notifier Basic Usage sample](%%SamplesUrl%%/notifier/basic-usage)
 - [Notifier Inline messages sample](%%SamplesUrl%%/notifier/inline-messages)
 - [Notifier with igEditors sample](%%SamplesUrl%%/editors/with-igEditors)
--	[igNotifier jQuery API](%%jQueryApiUrl%%/ui.igNotifier)
+- [igNotifier jQuery API](%%jQueryApiUrl%%/ui.igNotifier)

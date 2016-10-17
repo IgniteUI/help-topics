@@ -53,20 +53,20 @@ theme|Sets a selector for CSS classes.| This option is removed. You can use the 
 
 Option| Description
 ---|---
-number|Validate if value is a number.
-date|Validate if value is a date.
-email|Validate if value is an email.
-lengthRange|Gets or sets minimum and maximum length of text or number of selected items.
-valueRange|Gets or sets minimum and maximum values.
-successMessage|Gets or sets text for success message.
-threshold|Determines the validation minimum input length.
-equalTo|Requires the value in this field to be the same as another input element or editor control.
-creditCard|Gets or sets option to validate if value is a Credit Card number. <br> Note: This rule will only validate the checksum of the number using Luhn algorithm irregardless of type.
-custom|Gets or sets a custom function to perform validation.
-fields|Determines a list of field items describing each field with validation options and a selector.
-notificationOptions|Sets the options for the `igNotifier` used to show error messages.
-requiredIndication|Show an asterisks indication next to required fields.
-optionalIndication|Show an optinal label indication next to optional fields.
+[number](%%jQueryApiUrl%%/ui.igvalidator#options:number)|Validate if value is a number.
+[date](%%jQueryApiUrl%%/ui.igvalidator#options:date)|Validate if value is a date.
+[email](%%jQueryApiUrl%%/ui.igvalidator#options:email)|Validate if value is an email.
+[lengthRange](%%jQueryApiUrl%%/ui.igvalidator#options:lengthRange)|Gets or sets minimum and maximum length of text or number of selected items.
+[valueRange](%%jQueryApiUrl%%/ui.igvalidator#options:valueRange)|Gets or sets minimum and maximum values.
+[successMessage](%%jQueryApiUrl%%/ui.igvalidator#options:successMessage)|Gets or sets text for success message.
+[threshold](%%jQueryApiUrl%%/ui.igvalidator#options:threshold)|Determines the validation minimum input length.
+[equalTo](%%jQueryApiUrl%%/ui.igvalidator#options:equalTo)|Requires the value in this field to be the same as another input element or editor control.
+[creditCard](%%jQueryApiUrl%%/ui.igvalidator#options:creditCard)|Gets or sets option to validate if value is a Credit Card number. <br> Note: This rule will only validate the checksum of the number using Luhn algorithm irregardless of type.
+[custom](%%jQueryApiUrl%%/ui.igvalidator#options:custom)|Gets or sets a custom function to perform validation.
+[fields](%%jQueryApiUrl%%/ui.igvalidator#options:fields)|Determines a list of field items describing each field with validation options and a selector.
+[notificationOptions](%%jQueryApiUrl%%/ui.igvalidator#options:notificationOptions)|Sets the options for the `igNotifier` used to show error messages.
+[requiredIndication](%%jQueryApiUrl%%/ui.igvalidator#options:requiredIndication)|Show an asterisks indication next to required fields.
+[optionalIndication](%%jQueryApiUrl%%/ui.igvalidator#options:optionalIndication)|Show an optinal label indication next to optional fields.
 
 -	[See all igValidator options](%%jQueryApiUrl%%/ui.igvalidator#options)
 -	[See all igNotifier options](%%jQueryApiUrl%%/ui.ignotifier#options)
@@ -88,11 +88,11 @@ validate| This option return bool values only and takes optional field.
 
 Method|Description
 ---|---
-getErrorMessages|Gets all current error messages for invalid field(s).
-notifier|Gets the notifier for the `igValidator` or for a single filed.
-addField|Adds an new input to the fields collection and initializes it with the validator.
-removeField|Removes an input from the fields collection.
-updateField|Updates a field in the validator collection. Used to reiitialize field in case a control has been initialized after the validator or to pass in new options.
+[getErrorMessages](%%jQueryApiUrl%%/ui.igvalidator#methods:getErrorMessages)|Gets all current error messages for invalid field(s).
+[notifier](%%jQueryApiUrl%%/ui.igvalidator#methods:notifier)|Gets the notifier for the `igValidator` or for a single filed.
+[addField](%%jQueryApiUrl%%/ui.igvalidator#methods:addField)|Adds an new input to the fields collection and initializes it with the validator.
+[removeField](%%jQueryApiUrl%%/ui.igvalidator#methods:removeField)|Removes an input from the fields collection.
+[updateField](%%jQueryApiUrl%%/ui.igvalidator#methods:updateField)|Updates a field in the validator collection. Used to reiitialize field in case a control has been initialized after the validator or to pass in new options.
 
 [See all API methods](%%jQueryApiUrl%%/ui.igvalidatior#methods)
 
@@ -112,15 +112,15 @@ validation| This event is renamed to `validated` to better communicate what it d
 
 Event|Description
 ---|---
-success| Event raised for invalid field after value was validated but before any action takes effect.
-successShowing|Event which is raised before success message is displayed.
-successHiding|Event which is raised before success message is hidden.
-successShown|Event which is raised after success message was displayed.
-successHidden| Event which is raised after success message was hidden.
-formValidating|Event triggered on `igValidator` instance level before handling a form submit event.
-formValidated|Event triggered on igValidator instance level as it is about to handle a form submit event.
-formError|Event triggered when the form is submitted and an error occurs
-formSuccess|Event triggered when the form is submitted successfully
+[success](%%jQueryApiUrl%%/ui.igvalidator#events:success)| Event raised for invalid field after value was validated but before any action takes effect.
+[successShowing](%%jQueryApiUrl%%/ui.igvalidator#events:successShowing)|Event which is raised before success message is displayed.
+[successHiding](%%jQueryApiUrl%%/ui.igvalidator#events:successHiding)|Event which is raised before success message is hidden.
+[successShown](%%jQueryApiUrl%%/ui.igvalidator#events:successShown)|Event which is raised after success message was displayed.
+[successHidden](%%jQueryApiUrl%%/ui.igvalidator#events:successHidden)| Event which is raised after success message was hidden.
+[formValidating](%%jQueryApiUrl%%/ui.igvalidator#events:formValidating)|Event triggered on `igValidator` instance level before handling a form submit event.
+[formValidated](%%jQueryApiUrl%%/ui.igvalidator#events:formValidated)|Event triggered on igValidator instance level as it is about to handle a form submit event.
+[formError](%%jQueryApiUrl%%/ui.igvalidator#events:formError)|Event triggered when the form is submitted and an error occurs
+[success](%%jQueryApiUrl%%/ui.igvalidator#events:formSuccess)|Event triggered when the form is submitted successfully
 
 
 [See all events](%%jQueryApiUrl%%/ui.igvalidator#events)

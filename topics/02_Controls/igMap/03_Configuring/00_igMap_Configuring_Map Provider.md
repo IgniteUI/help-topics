@@ -37,11 +37,9 @@ This topic contains the following sections:
 -   [Map Imagery Reference](#map-reference)
     -   [Map imagery summary](#map-imagery-summary)
     -   [Bing Maps imagery sets](#bing-maps-imagery)
-    -   [CloudMade imagery sets](#cloud-made-imagery)
 -   [Code Examples](#code-examples)
     -   [Configuring OpenStreetMaps Background Content](#config-open-street-maps)
     -   [Configuring Bing Maps Background Content With Imagery Set](#config-bing-maps)
-    -   [Configuring CloudMade Maps Background Content With Imagery Set](#config-cloud-made-maps)
 -   [Related Content](#related-content)
     -   [Topics](#topics)
     -   [Samples](#samples)
@@ -57,17 +55,16 @@ The `igMap` control can use any of the following map providers:
 
 -   [OpenStreetMap](http://www.openstreetmap.org/)
 -   [Bing® Maps](http://www.bing.com/maps/)
--   [CloudMade](http://cloudmade.com/solutions/portals/)
 
 The map providers deliver the map images and the map series are plotted as overlays over this background content. The control supports plotting any geographic series on any background content. In addition to being able to select your map provider, you can also select between different imagery sets the providers deliver. An imagery set is a themed set of maps like satellite images, satellite images with name labels or road network.
 
->**Note:** Bing maps and CloudMade maps require you to provide your custom access key to access their content.
+>**Note:** Bing maps require you to provide your custom access key to access their content.
 
 The table below shows the same map area and geographic symbol series with the three available map providers.
 
-OpenStreetMap|Bing Maps|CloudMade Maps
+OpenStreetMap|Bing Maps
 ---|---
-![](images/Configuring_Map_Provider_1.png)|![](images/Configuring_Map_Provider_2.png)|![](images/Configuring_Map_Provider_3.png)
+![](images/Configuring_Map_Provider_1.png)|![](images/Configuring_Map_Provider_2.png)
 
 
 ##<a id="background-config"></a>Background Content Configuration
@@ -116,8 +113,6 @@ The following table lists the configurable aspects of the igMap control related 
 					<li><a href="Infragistics.Web.Mvc~Infragistics.Web.Mvc.BackgroundContentBuilder~OpenStreetMaps.html">BackgroundContentBuilder.OpenStreetMaps()</a></li>
 
 					<li><a href="Infragistics.Web.Mvc~Infragistics.Web.Mvc.BackgroundContentBuilder~BingMaps.html">BackgroundContentBuilder.BingMaps()</a></li>
-
-					<li><a href="Infragistics.Web.Mvc~Infragistics.Web.Mvc.BackgroundContentBuilder~CloudMadeMaps.html">BackgroundContentBuilder.CloudMadeMaps()</a></li>
 				</ul>
 			</td>
 		</tr>
@@ -148,30 +143,6 @@ The following table lists the configurable aspects of the igMap control related 
 
 		<tr>
 			<td>
-				Imagery set for CloudMade maps
-			</td>
-
-			<td width="376">
-				The imagery set when the background content provider is set to CloudMade, is configurable.
-			</td>
-
-			<td>
-				In JavaScript
-
-				<ul>
-					<li><a href="%%jQueryApiUrl%%/ui.igMap#options:backgroundContent.parameter" target="_blank">backgroundContent.parameter</a></li>
-				</ul>
-
-				In ASP.NET MVC
-
-				<ul>
-					<li><a href="Infragistics.Web.Mvc~Infragistics.Web.Mvc.CloudMadeMaps~Parameter.html">CloudMadeMaps.Parameter()</a></li>
-				</ul>
-			</td>
-		</tr>
-
-		<tr>
-			<td>
 				Configurable key for the map provider
 			</td>
 
@@ -190,8 +161,6 @@ The following table lists the configurable aspects of the igMap control related 
 
 				<ul>
 					<li><a href="Infragistics.Web.Mvc~Infragistics.Web.Mvc.BackgroundContentBuilder~BingMaps.html">BackgroundContentBuilder.BingMaps()</a></li>
-
-					<li><a href="Infragistics.Web.Mvc~Infragistics.Web.Mvc.BackgroundContentBuilder~CloudMadeMaps.html">BackgroundContentBuilder.CloudMadeMaps()</a></li>
 				</ul>
 			</td>
 		</tr>
@@ -230,19 +199,6 @@ collinsBart
 
 
 
-### <a id="cloud-made-imagery"></a>CloudMade imagery sets
-
-CloudMade Maps contains numerous map styles and allows you to develop custom styles. Configure the selected style by assigning a style code to the [backgroundContent.parameter](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent.parameter). A requirement for using **CloudMade Maps** is for you to specify a value for [backgroundContent.parameter](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent.parameter).
-
-The following table illustrates just some of the many standard **CloudMade map** styles. More themes are available online at .
-
-[parameter](%%jQueryApiUrl%%/ui.igMap#options:parameter)|Name|Screenshot
----|---|---
-1|The Original|![](images/Configuring_Map_Provider_8.png)
-2|Fine Line|![](images/Configuring_Map_Provider_9.png)
-7|Tourist|![](images/Configuring_Map_Provider_10.png)
-
-
 ##<a id="code-examples"></a>Code Examples
 
 ### Code examples summary
@@ -253,7 +209,6 @@ Example|Description
 ---|---
 [](#config-open-street-maps)[Configuring OpenStreetMaps Background Content](#config-open-street-maps)|This example shows how to configure a map control with an OpenStreetMaps background.
 [Configuring Bing Maps Background Content With Imagery Set](#config-bing-maps)|This example shows how to configure a map control with a  Bing Maps background and imagery.
-[Configuring CloudMade Maps Background Content With Imagery Set](#config-cloud-made-maps)|This example shows how to configure a map control with a  CloudMade Maps background and imagery.
 
 
 ##<a id="config-open-street-maps"></a>Code Example: Configuring OpenStreetMaps Background Content
@@ -338,49 +293,6 @@ The following code in ASP.NET MVC configures a map control to use Bing Maps. The
 
 
 
-##<a id="config-cloud-made-maps"></a>Code Example: Configuring CloudMade Maps Background Content With Imagery Set
-
-
-### Description
-
-This example shows how to configure a map control with CloudMade Maps background. It also configures the map style to display to Tourist.
-
-### Code
-
-The following code in JavaScript configures a map control to use CloudMade Maps. Assign the `backgroundContent` option an object with **"cloudMade"** specified for `type` and a `key` specified to enable access to the CloudMade Maps services. Select the “Tourist” map style by configuring the `parameter` option with value 7.
-
-**In JavaScript:**
-
-```js
-$("#map").igMap({
-    ...
-    backgroundContent: {
-        type: "cloudMade",
-        key: "123456789abcdef",
-        parameter: 7
-    },
-    ...
-});
-```
-
-The following code in ASP.NET MVC configures a map control to use **CloudMade** Maps. The `BackgroundContent()` function is passed a lambda expression which executes the `BackgroundContentBuilder.CloudMadeMaps()` static method with the CloudMade Maps services access key passed as a `parameter`. That action instantiates a CloudMadeMaps class instance that generates JavaScript code similar to the example above.
-
-**In ASPX:**
-
-```csharp
-<%= Html.Infragistics().Map(Model)
-        .ID("map")
-        ...
-        .BackgroundContent(bgr => bgr.CloudMadeMaps("123456789abcdef")
-                .Parameter(2))
-        ...
-        .DataBind()
-        .Render()
-%>
-```
-
-
-
 ##<a id="related-content"></a>Related Content
 
 ### <a id="topics"></a>Topics
@@ -399,8 +311,6 @@ The following samples provide additional information related to this topic.
 
 -	[Bing Maps](%%SamplesUrl%%/map/bing-maps): This sample demonstrates how to use Bing Maps to render a geographic series with the map control.
 
--	[CloudMade Maps](%%SamplesUrl%%/map/cloudmade-maps): This sample demonstrates how to use CloudMade maps to render a geographic series with the map control.
-
 
 ### <a id="resources"></a>Resources
 
@@ -409,15 +319,3 @@ The following material (available outside the Infragistics family of content) pr
 -	[OpenStreetMap](http://www.openstreetmap.org/):The home page of OpenStreetMap.
 
 -	[Bing Maps](http://www.bing.com/maps/): The home page of Bing Maps.
-
--	[CloudMade Maps](http://cloudmade.com/solutions/portals/): The home page of CloudMade.
-
-
-
-
-
- 
-
- 
-
-

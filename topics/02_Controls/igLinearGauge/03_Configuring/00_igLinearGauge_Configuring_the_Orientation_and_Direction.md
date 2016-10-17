@@ -52,7 +52,7 @@ This topic contains the following sections:
 
 ### <a id="scale-orientation-summary"></a>Scale orientation and direction configuration summary
 
-The `igLinearGauge` control supports vertical and horizontal orientations of the scale. By default, the scale orientation is horizontal. In vertical orientation, the scale values increase in upward direction and the numbering labels are positioned on its left.
+The `igLinearGauge` control supports both vertical and horizontal orientations of its scale. By default, the scale assumes the horizontal orientation. In the vertical orientation, the scale values increase in an upwards direction with its numbering labels positioned to the left.
 
 ![](images/igLinearGauge_Configuring_the_Orientation_and_Direction_1.png)
 
@@ -91,7 +91,7 @@ The following table maps the desired configuration to its respective property se
 In order to:|Use this property:|And set it to:
 ---|---|---
 Specify horizontal orientation|[orientation](%%jQueryApiUrl%%/ui.igLinearGauge#options:orientation)|"horizontal"
-Specify vertical orientation|orientation|"vertical"
+Specify vertical orientation|[orientation](%%jQueryApiUrl%%/ui.igLinearGauge#options:orientation)|"vertical"
 
 
 ### <a id="orientation-examples"></a>Example
@@ -218,13 +218,3 @@ $('#igLinearGauge').igLinearGauge({
 The following samples provide additional information related to this topic.
 
 -	[Vertical Orientation](%%SamplesUrl%%/linear-gauge/vertical-horizontal-orientation):This sample demonstrates how to change the orientation of the `igLinearGauge` and how to invert the scale.
-
-
-
-
-
- 
-
- 
-
-

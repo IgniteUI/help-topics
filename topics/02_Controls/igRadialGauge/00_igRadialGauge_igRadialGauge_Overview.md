@@ -24,9 +24,9 @@ The `igRadialGauge`™ control is a data visualization tool capable of displayin
 
 The gauge comes with a backing shape drawn behind the scale that acts as a background for the gauge. The backing can be circular, which turns the shape into a full circle, or it can be fitted, which makes it sweep the scale – only providing backing behind the scale portion of the gauge, for more information see the [Configuring the Background (igRadialGauge)](igRadialGauge-Configuring-the-Backing.html) topic.
 
-Gauge needle are available in one of the several predefined shapes. The needle can have a pivot shape, which is placed in the center of the gauge. The pivot shape also takes one of the predefined shapes. Pivot shapes that include an overlay or an underlay can have a separate pivot brush applied to the shape. For more information see the Configuring the Needle topic.
+The gauge needle is available in one of several predefined shapes. The needle can have a pivot shape, which is placed in the center of the gauge. The pivot shape also takes one of the predefined shapes. Pivot shapes that include an overlay or an underlay can have a separate pivot brush applied to the shape. For more information see the [Configuring the Needle (igRadialGauge)](igRadialGauge-Configuring-Needles.html) topic.
 
-This gauge supports only one scale, one needle, one set of tick marks and one set of labels. Practically all the changes made to the `igRadialGauge` control are animation enhancements. This animation highly customizable by setting the `transitionDuration` property. You can achieve numerous needle shapes by fine tuning its shape parameters.
+This gauge supports only one scale, one needle, one set of tick marks and one set of labels. Practically all the changes made to the `igRadialGauge` control are animation enhancements. These animations are highly customizable by setting the `transitionDuration` property. You can achieve numerous needle shapes by fine tuning its shape parameters.
 
 ### Preview
 
@@ -74,13 +74,3 @@ The following samples provide additional information related to this topic.
 - [Scale Settings](%%SamplesUrl%%/radial-gauge/scale-settings): A scale defines a range of values in the Radial Gauge. Use the options pane below to set the Radial Gauge control’s Scale properties.
 
 - [Tick Marks](%%SamplesUrl%%/radial-gauge/tickmarks): Tick marks can be displayed at every user specified interval on a gauge. Use the options pane below to set the Radial Gauge control’s Tick Mark properties.
-
-
-
-
-
- 
-
- 
-
-

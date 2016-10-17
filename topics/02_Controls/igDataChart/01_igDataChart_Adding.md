@@ -11,7 +11,7 @@
 # Adding igDataChart
 
 
-##Topic Overview
+## Topic Overview
 ### Purpose
 
 This topic demonstrates how to add the `igDataChart`™ control to a page and bind it to data.
@@ -541,13 +541,3 @@ The following material (available outside the Infragistics family of content) pr
 -	[jQuery Home Page](http://jquery.com/): This is a link to the main page of the jQuery library where more detailed information on installing and features of the library can be found.
 
 -	[ASP.NET MVC Home Page](http://www.asp.net/mvc): This is a link to the main page of ASP.NET MVC where more detailed information on installing and using ASP.NET MVC can be found.
-
-
-
-
-
- 
-
- 
-
-

@@ -68,15 +68,3 @@ The following samples provide additional information related to this topic.
 -	[Geographic Shapes Series](%%SamplesUrl%%/map/geo-shapes-series): This sample demonstrates how to bind shape files and database files to a map control and renders the Geographic shapes.
 
 -	[Bing Maps](%%SamplesUrl%%/map/bing-maps): This sample demonstrates how to use Bing® Maps to render a Geographic series with the map control.
-
--	[CloudMade Maps](%%SamplesUrl%%/map/cloudmade-maps): This sample demonstrates how to use CloudMadeMap maps to render a Geographic series with the map control.
-
-
-
-
-
- 
-
- 
-
-
