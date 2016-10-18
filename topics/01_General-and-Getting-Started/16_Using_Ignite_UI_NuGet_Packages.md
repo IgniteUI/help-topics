@@ -15,14 +15,14 @@ When you install a package via NuGet, it copies the library files to your soluti
 NuGet is available since Visual Studio 2010 and since Visual Studio 2012, it is included by default. On more information on how to get going with it, read the official [NuGet documentation](http://docs.nuget.org/ndocs/guides/install-nuget).
 
 Infragistics Ignite UI controls are available to explore as a NuGet package and this is the easiest and the fastest way to install the Infragistics files and assemblies required for your project.
-There are two approaches to start using the NuGet packages. We suggest you to set up and use our private NuGet feed hosted on  [http://packages.infragistics.com/nuget/licensed](http://packages.infragistics.com/nuget/licensed) which will keep you up to date with all the NuGet packages Infragistics provide. Using this approach you will be able to get the latest version of the packages each time you create a new project or restore the packages of an existing one.
+There are two approaches to start using the NuGet packages. We suggest you to set up and use our private NuGet feed hosted on  [https://packages.infragistics.com/nuget/licensed](https://packages.infragistics.com/nuget/licensed) which will keep you up to date with all the NuGet packages Infragistics provide. Using this approach you will be able to get the latest version of the packages each time you create a new project or restore the packages of an existing one.
 The alternative approach to the Ignite UI NuGet packages is to install them locally by running the NuGet installer. The installer will automatically create a local feed named “Infragistics (Local)”, which will display all the Ignite UI NuGet packages that are available. During the installation if you leave the product key field empty, the installer will install the trial version of the packages. Have in mind that if you choose this way of working with the Ignite UI NuGet packages you will have to install a later version of the packages manually if you want to update the assemblies you use to the latest version available. 
 
 ## Installing Ignite UI packages from the online private feed
 
 The first step is to add the Infragistics feed as a package source. To do that, the user needs go to Tools/Options/Package Sources. To do that the user needs to go to Tools/Options/NuGet Package Manager/Package Sources.
 
-Add a new package source using Add new source button and name it Infragistics feed (in fact, you can name it however you want). Set the Source to infragistics-online-feed and click OK to save the source.
+Add a new package source using Add new source button and name it Infragistics feed (in fact, you can name it however you want). Set the Source to [*https://packages.infragistics.com/nuget/licensed*](https://packages.infragistics.com/nuget/licensed) and click OK to save the source.
 
 ![](images/Infragistics_feed.jpg)
 
