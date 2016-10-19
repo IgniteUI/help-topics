@@ -120,7 +120,7 @@ The following steps demonstrate how to add an `igPieChart` control to a web page
 	    $.ig.loader({
 	        scriptPath: "Scripts/ig/",
 	        cssPath: "Content/ig/",
-	        resources: "igPieChart"
+	        resources: "igPieChart,igChartLegend"
 	    });
 	<script>
 	```
