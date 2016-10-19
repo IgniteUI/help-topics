@@ -40,7 +40,7 @@ The following procedure demonstrates adding the igCategoryChart to your applicat
 ### Preview
 
 The following is a screenshot of the igCategoryChart.
-![](images/igcategorychart-adding-01.png)
+![](images/categorychart-walkthrough-01.png)
 
 <a id="Prerequisites"/>
 ### Requirements
@@ -77,7 +77,7 @@ var data = [
  { "CountryName": "United States", "Pop1995": 266, "Pop2005": 295, "Pop2015": 322, "Pop2025": 351 },
  { "CountryName": "Indonesia", "Pop1995": 197, "Pop2005": 229, "Pop2015": 256, "Pop2025": 277 },
  { "CountryName": "Brazil", "Pop1995": 161, "Pop2005": 186, "Pop2015": 204, "Pop2025": 218 }
-;
+];
 
 ```
 
@@ -106,6 +106,6 @@ Build and run your project to verify the result. If you have implemented the ste
 
 ### Topics
 
-- [Why Use the Category Chart instead of the Data Chart](categorychart-why-use.html)
-
 - [Axes](categorychart-axes.html)
+
+- [Configuring Chart Types](categorychart-chart-types.html)
