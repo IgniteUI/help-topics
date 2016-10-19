@@ -23,22 +23,19 @@ In this topic you will define two sets of data collection (flat and hierarchical
 This topic contains the following sections:
 This topic contains the following sections:
 
-- [Binding to Data Sources](#BindingtoDataSources)
-    - [Supported data sources](#Supporteddatasources)
-    -  [Requirements for binding](#Requirementsforbinding)
-- [Binding a JavaScript Array](#BindingaJavaScriptArray)
+- [Binding to a JavaScript Array](#BindingJavaScriptArray)
     - [Introduction](#Introduction)
     - [Prerequisites](#Prerequisites)
     - [Preview](#Preview)
     - [Steps](#Steps)
-- [Binding a Hierarchical JavaScript Array](#BindingaHierarchicalJavaScriptArray)
+- [Binding to a Hierarchical JavaScript Array](#BindingHierarchicalJavaScriptArray)
     - [Introduction](#HIntroduction)
     - [Prerequisites](#HPrerequisites)
     - [Preview](#HPreview)
     - [Steps](#HSteps)
 - [Related Topics](#relatedcontent)
 
-### <a id="BindingtoaJavaScriptArray"/> Binding to a JavaScript Array
+### <a id="BindingJavaScriptArray"/> Binding to a JavaScript Array
 
 #### <a id="Introduction"/> Introduction
 This procedure demonstrates how to bind the igCategoryChart control to a JavaScript data array.
@@ -49,7 +46,7 @@ To complete the procedure, you need the following:
 -	An HTML5 web page
 -	All required JavaScript and CSS files added to your web site or web application project.
 
-For detailed information on instantiation and configuration of an igCategoryChart see - - [Adding igCategoryChart](igcategorychart-adding.html). 
+For detailed information on instantiation and configuration of an igCategoryChart see [Adding igCategoryChart](igcategorychart-adding.html). 
 
 #### <a id="Preview"/> Preview
 
@@ -104,7 +101,7 @@ $(function() {
 </script>
 ```
 
-### <a id="BindingtoaHierarchicalJavaScriptArray"/> Binding to a Hierarchical JavaScript Array
+### <a id="BindingHierarchicalJavaScriptArray"/> Binding to a Hierarchical JavaScript Array
 
 #### <a id="HIntroduction"/> Introduction
 This procedure demonstrates how to bind the igCategoryChart control to a “semi-nested” hierarchical JavaScript data array.
@@ -123,7 +120,7 @@ For detailed information on instantiation and configuration of an igCategoryChar
 ![](images/categorychart-data-binding-02.png)
 
 
-#### <a id="Steps"/> Steps 
+#### <a id="HSteps"/> Steps 
 The following steps demonstrate how to bind the igCategoryChart control to a JavaScript data array.
 
 **Define the data array**
