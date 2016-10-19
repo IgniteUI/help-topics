@@ -52,11 +52,7 @@ Example| Description
 ---|---
 [Adding igSparkline to an HTML Document](igSparkline-Adding-igSparkline-to-an-HTML-Document.html)|Add the `igSparkline` control to an HTML document using the JavaScript API.
 [Adding igSparkline to an ASP.NET MVC View](igSparkline-Adding-igSparkline-to-an-ASPNET-MVC-View.html)|Use the `igSparkline` ASP.NET MVC helper to render the `igSparkline` in an ASP.NET MVC view.
-Adding `igSparkline` to an igGrid Column|Add the `igSparkline` to an `igGrid` column template.
-
-#### Related Sample
-
-[Sparkline in Grid](%%SamplesUrl%%/sparkline/sparkline-in-grid)
+Adding `igSparkline` to an igGrid Column, refer to the following sample. [Sparkline in Grid](%%SamplesUrl%%/sparkline/sparkline-in-grid)|Add the `igSparkline` to an `igGrid` column template.
 
 
 ## Related Content
@@ -77,9 +73,3 @@ The following samples provide additional information related to this topic.
 - [Bind to JSON Data](%%SamplesUrl%%/sparkline/bind-json): This sample binds to JSON data contained in an external script file. It also shows binding with the ASP.NET MVC helper.
 
 - [Sparkline in Grid](%%SamplesUrl%%/sparkline/sparkline-in-grid): This sample demonstrates how to add an `igSparkline` to an `igGrid` column template.
-
- 
-
- 
-
-

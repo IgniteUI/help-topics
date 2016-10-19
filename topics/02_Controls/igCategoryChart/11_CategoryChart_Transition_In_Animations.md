@@ -11,7 +11,7 @@
 # Transition In Animations
 
 This feature allows you to animate the series as it loads a new data source. The available animation differs depending on the type of series involved. For example, the column series animates by rising from the x-axis, a line series animates by drawing from the y-axis.
-resizes allowing for the title and subtitle information.
+The chart resizes allowing for the title and subtitle information.
 
 ### In this topic
 
@@ -71,7 +71,7 @@ The easing function determines what way the animation initially eases in. Apply 
 ## <a id="configuringthetransitioninanimations"/>Configuring the Transition-In Animations
 The transition type is configured by setting the transitionInMode option to the desired transition name. Automatic selection of the transition type based on the series type is possible, too, by setting the property to “Auto” (default).
 
-The following example demonstrates how to enable transition in animations and have the column series accordion in from the right.
+The following example demonstrates how to enable transition in animations and have the chart accordion in from the right.
 
 *In HTML:*
 
