@@ -10,7 +10,7 @@
 
 # Selection
 
-This topic provides information for enabling and using the selection feature in the igPieChartName™ control. 
+This topic provides information for enabling and using the selection feature in the `igPieChart`™ control. 
 
 ### In this topic
 
