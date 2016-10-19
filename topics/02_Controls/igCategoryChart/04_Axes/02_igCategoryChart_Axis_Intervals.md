@@ -46,7 +46,7 @@ The following code snippet demonstrates how to configure the interval on the x-a
 $(function () {
    $("#chart").igCategoryChart({
        xAxisInterval:"1",
-       xAxisMinorInterval:"1", 
+       xAxisMinorInterval:"0.25", 
        xAxisMinorStroke:"Red",    
        xAxisMajorStroke:"Green",  
        xAxisMinorStrokeThickness:"1",
