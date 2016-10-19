@@ -381,7 +381,7 @@ The following topics provide additional information related to this topic.
 
 -	[igCategoryChart Overview](CategoryChart-Overview.html):  Conceptual information about the `igCategoryChart` control.
 
--	[Adding igCategoryChart](CategoryChart-walkthrough.html):  Demonstrates how to create the `igCategoryChart` control and bind it to data.
+-	[Adding igCategoryChart](igcategorychart-adding.html):  Demonstrates how to create the `igCategoryChart` control and bind it to data.
 
 ###<a id="resources"></a>Resources
 
