@@ -35,19 +35,15 @@ Property Name|Property Type|Description
 
 
 ### <a id="labelstyling"/>Label Styling
-The look and feel of the category chart's x-axis and y-axis labels can be styled in many aspects, the main of which are applying different font styles such as font type, font size and font weight to the labels. This can be achieved through the following properties:
+The look and feel of the category chart's x-axis and y-axis labels can be styled in many aspects, the main of which are applying different font styles such as font type, font size and text color. This can be achieved through the following properties:
 
 Property Name|Property Type|Description
 ---|---|---
 `xAxisLabelTextStyle`,`yAxisLabelTextStyle`|object|Determines the font family, size, style to be used for the x-axis or y-axis labels
-`xAxisLabelFontSize`, `yAxisLabelFontSize`|double|Determines the size of the font for the x-axis or y-axis labels 
-`xAxisLabelFontStretch`,`yAxisLabelFontStretch`|FontStretch|Determines the font stretch to applied to the x-axis or y-axis labels
-`xAxisLabelFontStyle`,`yAxisLabelFontStyle`|Visibility bool|Determines the font style of the x-axis or y-axis labels
-`xAxisLabelFontWeight`,`yAxisLabelFontWeight`|FontWeight|Determines the font weight of the x-axis or y-axis labels
-`xAxisLabelTextColor`,`yAxisLabelTextColor`|Brush|Determines the text color of the x-axis or y-axis labels 
+`xAxisLabelTextColor`,`yAxisLabelTextColor`|Brush|Determines the text color of the x-axis or y-axis labels
 
 
-### <a id="codensnippet"/>Code Snippet
+### <a id="codesnippet"/>Code Snippet
 The following code example shows how to style labels on the x-axis using style properties:
 
 *In HTML:*
@@ -56,7 +52,7 @@ The following code example shows how to style labels on the x-axis using style p
 $(function () {
             $("#chart").igCategoryChart({
                 dataSource: data,
-                xAxisLabelTextStyle: "16pt Verdona",
+                xAxisLabelTextStyle: "16pt Verdana",
                 xAxisLabelRightMargin: "14",
                 xAxisLabelTextColor: "red"
             });
@@ -76,12 +72,12 @@ The following screenshot demonstrates the igCategoryChart control with the x-axi
 
 - [Binding to Data](categorychart-binding-to-data.html)
 
-- [Configuring Axis Gap and Overlap](configuring-axis-gap-and-overlap.html)
+- [Configuring Axis Gap and Overlap](categorychart-configuring-axis-gap-and-overlap.html)
 
-- [Configuring Axis Intervals](configuring-axis-intervals.html)
+- [Configuring Axis Intervals](igcategorychart-axis-intervals.html)
 
-- [Configuring Axis Range](configuring-axis-range.html)
+- [Configuring Axis Range](categorychart-configuring-axis-range.html)
 
-- [Configuring Axis Tickmarks](configuring-axis-tickmarks.html)
+- [Configuring Axis Tickmarks](igcategorychart-axis-tickmarks.html)
 
-- [Configuring Axis Titles](configuring-axis-titles.html)
+- [Configuring Axis Titles](categorychart-configuring-axis-titles.html)

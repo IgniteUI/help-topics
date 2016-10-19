@@ -14,9 +14,9 @@
 In the igCategoryChart control, an Axis provides base properties for specifying appearance of axis main lines, gridlines, tickmarks, titles, stripes, and axis labels. 
 
 
-- [Configuring Axis Gap and Overlap](configuring-axis-gap-and-overlap.html)
-- [Configuring Axis Labels](configuring-axis-labels.html)
-- [Configuring Axis Intervals](configuring-axis-intervals.html)
-- [Configuring Axis Range](configuring-axis-range.html)
-- [Configuring Axis Tickmarks](configuring-axis-tickmarks.html)
-- [Configuring Axis Titles](configuring-axis-titles.html)
+- [Configuring Axis Gap and Overlap](categorychart-configuring-axis-gap-and-overlap.html)
+- [Configuring Axis Labels](igcategorychart-axis-labels.html)
+- [Configuring Axis Intervals](igcategorychart-axis-intervals.html)
+- [Configuring Axis Range](categorychart-configuring-axis-range.html)
+- [Configuring Axis Tickmarks](igcategorychart-axis-tickmarks.html)
+- [Configuring Axis Titles](categorychart-configuring-axis-titles.html)
