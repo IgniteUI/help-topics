@@ -249,7 +249,7 @@ The screenshot, following the table, illustrates how the `igDataChart` control w
 	<tbody>
 		<tr>
 			<td>MinorInterval</td>
-			<td>2</td>
+			<td>0.25</td>
 		</tr>
 		<tr>
 			<td>MinorStroke</td>
@@ -275,7 +275,7 @@ The screenshot, following the table, illustrates how the `igDataChart` control w
 	</tbody>
 </table>
 
-![](images/jQuery_AxisIntervals_CategoryX_01.png)
+![](images/jquery_axisintervals_categoryx_01.png)
 
 Following is the code that implements this example:
 
@@ -291,7 +291,7 @@ $("#container").igDataChart({
                     label: "CountryName",
                     majorStroke: "Green",
                     minorStroke: 'Red',
-                    minorInterval: 2,
+                    minorInterval: 0.25,
                     interval: 2,
                     majorStrokeThickness: 2,
                 }, …
