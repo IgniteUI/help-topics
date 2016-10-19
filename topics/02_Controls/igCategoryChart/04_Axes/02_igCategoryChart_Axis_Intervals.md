@@ -22,7 +22,7 @@ This topic contains the following sections:
 
 - [Configuring XAxis and YAxis Major and Minor Intervals](#ConfiguringXAxis)
 - [Code Snippet](#codesnippet)
-- [Related Topics](#relatedcontent)
+- [Related Topics](#relatedtopics)
 
 ### <a id="ConfiguringXAxis"/>Configuring XAxis and YAxis Major and Minor Intervals
 
@@ -45,12 +45,12 @@ The following code snippet demonstrates how to configure the interval on the x-a
 
 $(function () {
    $("#chart").igCategoryChart({
-       xAxisInterval:"1",
-       xAxisMinorInterval:"0.25", 
-       xAxisMinorStroke:"Red",    
-       xAxisMajorStroke:"Green",  
-       xAxisMinorStrokeThickness:"1",
-       xAxisMajorStrokeThickness:"1"
+       xAxisInterval: 1,
+       xAxisMinorInterval: 0.25 , 
+       xAxisMinorStroke: "Red",    
+       xAxisMajorStroke: "Green",  
+       xAxisMinorStrokeThickness: 1,
+       xAxisMajorStrokeThickness: 1
     });
 });
 ```
@@ -63,12 +63,12 @@ $(function () {
 
 - [Binding to Data](categorychart-binding-to-data.html)
 
-- [Configuring Axis Gap and Overlap](configuring-axis-gap-and-overlap.html)
+- [Configuring Axis Gap and Overlap](categorychart-configuring-axis-gap-and-overlap.html)
 
-- [Configuring Axis Labels](configuring-axis-labels.html)
+- [Configuring Axis Labels](igcategorychart-axis-labels.html)
 
-- [Configuring Axis Range](configuring-axis-range.html)
+- [Configuring Axis Range](categorychart-configuring-axis-range.html)
 
-- [Configuring Axis Tickmarks](configuring-axis-tickmarks.html)
+- [Configuring Axis Tickmarks](igcategorychart-axis-tickmarks.html)
 
-- [Configuring Axis Titles](configuring-axis-titles.html)
+- [Configuring Axis Titles](categorychart-configuring-axis-titles.html)
