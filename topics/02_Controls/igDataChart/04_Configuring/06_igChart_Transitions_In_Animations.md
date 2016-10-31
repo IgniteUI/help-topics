@@ -140,7 +140,7 @@ The following example demonstrates how to enable transition in animations and ha
 			<td>“true”</td>
 		</tr>
 		<tr>
-			<td>transitionInSpeedType</td>
+			<td>transitionInSpeed</td>
 			<td>“indexScaled”</td>
 		</tr>
 		<tr>
@@ -171,7 +171,9 @@ $("#chart").igDataChart({
          yAxis: "PopulationAxis",
          valueMemberPath: "Pop2005",
          isTransitionInEnabled: true,
-         transitionInSpeed: "indexSpeed"
+         transitionInSpeed: "indexSpeed",
+         transitionInEasingFunction: "cubicEase",
+         transitionInMode: "accordionFromRight
       }
    ]
 });
@@ -202,13 +204,3 @@ The following samples provide additional information related to this topic.
 -	[Transition Animation](%%SamplesUrl%%/data-chart/transition-animation): This sample demonstrates the animation feature that is displayed at the chart initialization.
 
 -	[Transition Animation (Financial)](%%SamplesUrl%%/data-chart/transition-animation-financial): This sample demonstrates the animation feature that is displayed at the financial charts initialization.
-
-
-
-
-
- 
-
- 
-
-

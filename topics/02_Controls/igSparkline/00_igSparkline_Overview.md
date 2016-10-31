@@ -477,7 +477,7 @@ The best-fitting curved line. Used when the rate of change in the data increases
 			</td>
 
             <td>
-Power Low trend line is a curved line that uses power function to draw a line. It is best to avoid zero (0) point as it is not valid for power function. Sparkline will not produce any errors, it will plot the o point, but from the power
+Power Low trend line is a curved line that uses power function to draw a line. It is best to avoid zero (0) point as it is not valid for power function. Sparkline will not produce any errors, it will plot the zero (0) point, but from the power
                     trend line prospective, the result will not be accurate. Power trend line uses data sets that compare measurements that increase at a specific rate.
 			</td>
 
@@ -663,13 +663,3 @@ The following samples provide additional information related to this topic.
 - [Tooltips and Markers](%%SamplesUrl%%/sparkline/tooltips-and-markers): This sample shows an example of enabling tooltips and markers in the `igSparkline`.
 
 - [Normal Range and Trend Lines](%%SamplesUrl%%/sparkline/normal-range-and-trend-lines): This sample shows the normal range and trend line functionality.
-
-
-
-
-
- 
-
- 
-
-

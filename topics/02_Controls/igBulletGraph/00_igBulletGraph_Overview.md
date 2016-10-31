@@ -101,7 +101,7 @@ Horizontal orientation | Vertical orientation
 
 
 -   Reserved area (1) – This area spreads:
-    -   Along the scale – the Reserved area begins either at the edge of the control) and ends at the edge of the control.
+    -   Along the scale – the Reserved area begins either at the edge of the control and ends at the edge of the control.
     -   Across the scale:
         -   In horizontal orientation: the Reserved area begins at the bottom edge of the control and spreads upward as much as the height of the numbering labels is (depending on the size and the other formatting of the font used in the labels)
         -   In vertical orientation: the Reserved area begins at the left edge of the control and spreads to the right as much as the width of the numbering labels is (depending on how large the numbers of the measurements of the scale are and the size and the other formatting of the font used in the labels).
@@ -1088,12 +1088,3 @@ The following samples provide additional information related to this topic.
 The following material (available outside the Infragistics family of content) provides additional information related to this topic.
 
 - [Bullet Graph Design Specification](http://www.perceptualedge.com/articles/misc/Bullet_Graph_Design_Spec.pdf): This is a PDF document explaining the bullet graph conceptually and providing design recommendations.
-
-
-
-
-
- 
-
- 
-

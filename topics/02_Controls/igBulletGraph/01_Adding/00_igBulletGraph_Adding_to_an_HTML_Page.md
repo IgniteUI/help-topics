@@ -176,12 +176,12 @@ A reference to the combined files and optionally to the file containing the enco
 
 Following are the general conceptual steps for adding `igBulletGraph` to an HTML Page.
 
-1. Creating the target element for storing the `igBulletGraph` control
-2. Instantiating the `igBulletGraph` control
-3. Configuring the basic rendering options
-4. Configuring the scale
-5. Adding performance bar
-6. Configuring the comparative marker
+1. Creating the target element for storing the `igBulletGraph` control.
+2. Instantiating the `igBulletGraph` control.
+3. Configuring the basic rendering options.
+4. Configuring the scale.
+5. Adding performance bar.
+6. Configuring the comparative marker.
 7. Adding comparative ranges.
 
 

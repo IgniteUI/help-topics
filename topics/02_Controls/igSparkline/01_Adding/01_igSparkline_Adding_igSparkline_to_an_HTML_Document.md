@@ -354,15 +354,15 @@ A reference to all the required JavaScript files (listed in the table on the lef
 
 Following are the general conceptual steps for adding an `igSparkline` to an HTML document.
 
-1. Reference the required JavaScript and CSS files
+1. Reference the required JavaScript and CSS files.
 
 2. Create a target element for the `igSparkline`.
 
 3. Define the JavaScript array.
 
-4. Instantiate the `igSparkline` in document ready
+4. Instantiate the `igSparkline` in document ready.
 
-5. Configure basic rendering options
+5. Configure basic rendering options.
 
 
 
@@ -559,13 +559,3 @@ The following topics provide additional information related to this topic.
 The following sample provides additional information related to this topic.
 
 - [Bind to JSON Data](%%SamplesUrl%%/sparkline/bind-json): This sample binds to JSON data contained in an external script file. It also shows binding with the ASP.NET MVC helper.
-
-
-
-
-
- 
-
- 
-
-

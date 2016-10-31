@@ -37,7 +37,7 @@ Defining a Normal Range | Defines a shaded area across the chart (horizontally).
 Configuring the Normal Range | Configures the various normal range aspects: top and bottom border, and color. | `normalRangeMinimum` `normalRangeMaximum` `normalRangeFill`
 Defining Markers | Defines markers to display on the following chart types: Line, Area and Column. | `markerVisibility` <br> `highMarkerVisibility` <br> `lowMarkerVisibility` <br> `firstMarkerVisibility` `lastMarkerVisibility` <br>  `negativeMarkerVisibility`
 Configuring the Markers | Configures the various marker aspects: brush size and color. | `markerSize` <br> `markerBrush`
-Adding a Trend Line | Specifies which, of the more than a dozen, trend line to superimpose over the chart. | `trendLineType`
+Adding a Trend Line | Specifies the type of trend line to place over the chart. | `trendLineType`
 Configuring the Trend Line | Configures the various trend line aspects: trend line brush, period, and type, and line thickness. | `trendLineBrush` <br>  `trendLinePeriod` `trendLineType` <br>  `trendLineThickness`
 Interpolating Unknown Values | Identifies an unknown value (null or NaN) and allows you to interpolate or view it as a blank point. | `unknownValuePlotting`
 Configuring the Tooltip | Enables a tooltip and displays the supplied HTML template with support for the following keys: Low, High, First, Last | `toolTipTemplate`
@@ -61,13 +61,3 @@ The following samples provide additional information related to this topic.
 - [Normal Range and Trend Lines](%%SamplesUrl%%/sparkline/normal-range-and-trend-lines): Sample demonstrating the normal range and trend line features.
 
 - [Tooltips and Markers](%%SamplesUrl%%/sparkline/tooltips-and-markers): Sample demonstrating the tooltip and marker features.
-
-
-
-
-
- 
-
- 
-
-
