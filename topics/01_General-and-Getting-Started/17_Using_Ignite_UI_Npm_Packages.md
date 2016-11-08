@@ -47,7 +47,7 @@ Finally, run the adduser command to log in to ProGet using npm:
 npm adduser
 ```
 
-You will be asked to provide your credentials (username and password) as well as an email. After this is done, you will be logged in and you will be able to install the latest version of Ignite UI into your project:
+You will be asked to provide the username and the password that you use for logging into your Infragistics account. You should also provide the email that is registered to your Infragistics profile. After this is done, you will be logged in and you will be able to install the latest version of Ignite UI into your project:
 
 ```js
 npm install ignite-ui
