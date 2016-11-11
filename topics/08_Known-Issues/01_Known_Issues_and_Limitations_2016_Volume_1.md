@@ -732,6 +732,7 @@ Column virtualization will not work when grid width is defined in percentage uni
 Fixed virtualization is not supported with RWD Mode | Fixed virtualization depends on the row's height being constant. If the row's height changes the fixed virtualization will not work as expected. RWD Mode changes the row's height as it adopts to the screen size so fixed virtualization will not work as expected with it. | ![](../images/images/positive.png)
 Column virtualization is not supported with continuous virtualization | Column virtualization is supported only with fixed virtualization. When column virtualization is enabled([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) then the virtualization mode must be set to "fixed"([virtualizationMode](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) = "fixed"). | ![](../images/images/negative.png)
 Virtualization and auto sizing of columns is not supported | Auto sizing columns by setting their width option to "*"  is not supported with virtualization. | ![](../images/images/negative.png)
+When fixed virtualization is enabled tabbing from outside of the grid's content into the rows will focus the first visible row as opposed to the actual first row in the grid. | When fixed virtualization is enabled and you tab from outside of the grid's content inside the rows the first visible row will take focus.  Same applies when Shift+Tab is used when focus is on an element after the grid - the focus will be set to the last visible cell.|![](../../images/images/negative.png)
 
 ### <a id="grid-responsive"></a> [igGrid – Responsive Web Design Mode](igGrid-Known-Issues.html)
 <table class="table table-striped">
@@ -999,7 +1000,7 @@ Row Selectors not working with column virtualization | Row Selectors are not sup
 The `igGridRowSelectors` widget requires the Selection feature enabled | The [`requireSelection`](%%jQueryApiUrl%%/ui.iggridrowselectors#options:requireSelection) option of the `igGridRowSelectors` widget is set to *true* by default and will throw an exception indicating that the Selection feature is required for using row selectors. | ![](../images/images/positive.png)
 Selecting not working correctly in IE 9 | In Internet Explorer 9, selecting using `RowSelectors` with or without checkboxes does not work correctly when the table is large enough to cause the page to have a vertical scrollbar and the user scrolls down. When the grid receives focus, Internet Explorer 9 scrolls the page back up and the selecting is either applied to the wrong row or not applied at all. | ![](../images/images/negative.png)
 The Selection feature cannot be enabled automatically | Automatically Enabling of the Selection feature does not work. The Selection widget is required for the `RowSelectors` to have full functionality. | ![](../images/images/positive.png)
-Text selection is not working when Selection feature is enabled | The Selection feature disables text selection inside the grid by cancelling the selectstart event and as a result the cell's text cannot be selected. | ![](../images/images/positive.png)
+["Select All"](igGrid-Configuring-Row-Selectors.html#select-all-pages) functionality does not work for remote Paging | The [`enableSelectAllForPaging`](%%jQueryApiUrl%%/ui.iggridrowselectors#options:enableSelectAllForPaging) option is not working for remote Paging scenario. | ![](../../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
@@ -1010,6 +1011,7 @@ Issue | Description | Status
 ---|---|---
 Cell selection in iOS does not work properly | In iOS, when wanting to scroll the `igGrid`, the user should first tap on a cell and then swipe in the desired direction. There is a difference when scrolling the `igGrid` under iOS and Android due to the way jQuery Mobile handles the events. | ![](../images/images/negative.png)
 Incorrect selection when selecting row/cell with continuous virtualization enabled | When selecting row/cell of the `igGrid` while continuous virtualization is enabled, the grid scrolls down and a different row/cell is selected due to a bug in jQuery version 1.6.4. This problem appears only in this version of the jQuery library. | ![](../images/images/positive.png)
+Text selection is not working when Selection feature is enabled | The Selection feature disables text selection inside the grid by cancelling the selectstart event and as a result the cell's text cannot be selected. | ![](../images/images/positive.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 

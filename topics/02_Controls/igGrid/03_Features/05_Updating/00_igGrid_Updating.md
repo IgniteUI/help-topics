@@ -45,7 +45,7 @@ This topic contains the following sections:
     -   [Setting the updating feature option after initialization](#setting-option)
 -   [**Keyboard Interactions**](#keyboard-interaction)
 -   [**Related Topics**](#topics)
-
+-   [**Related Samples**](#samples)
 
 ## <a id="overview"></a> Overview
 The `igGrid`™ control Updating feature includes three different interactions: updating, adding new rows, and deleting rows. By default all these features are enabled.
@@ -627,7 +627,8 @@ $('#grid1').igGridUpdating('option', 'editMode', 'cell');
 When editMode is row and a row is in edit mode, the following key interactions are available:
 
 -	TAB: Moves focus to the next editor in the row. When the last editor is reached the focus would move to the Done/Cancel buttons (if they are available).
--	ENTER: Changes are accepted and the next row enters edit mode. If the current row is the last row in the grid then the first row will enter edit mode.
+-	ENTER: Changes are accepted and the next row enters edit mode. The focus is in the same column. If the current row is the last row in the grid then the first row will enter edit mode.
+-   SHIFT + ENTER: Changes are accepted and the previous row enters edit mode. The focus is in the same column. If the current row is the first row in the grid then the last row will enter edit mode.
 -	ESCAPE: If any changes were made they are reverted. If there are no pending changes then the row exits edit mode.
 
 When editMode is cell and a cell is in edit mode, the following key interactions are available:
@@ -641,6 +642,10 @@ When editMode is rowEditTemplate and a cell is in edit mode, the following key i
 When the row edit template dialog is open:
 
 -	ESCAPE: Changes are discarded and the dialog is closed. 
+
+When in edit mode and there is multiline text editor, the following key interaction is available:
+
+-	ALT + ENTER: Enters new line in the editor.
 
 ###### When row adding is enabled the following keyboard interactions are available:
 When the adding row is in edit mode:
@@ -658,6 +663,9 @@ Following are some other topics you may find useful.
 
 -   [igGridUpdating API documentation](%%jQueryApiUrl%%/ui.igGridUpdating)
 
+## <a id="samples"></a> Related Samples 
+Following are some samples you may find useful.
+-   [Binding Real-Time Data](%%SamplesUrl%%/grid/binding-real-time-data)
  
 
  

@@ -274,6 +274,7 @@ The most common case includes controls that can consume and manipulate data, for
 -   igGrid
 -   igCombo
 -   igEditors
+-   igTree
 
 >**Note:** For some controls two-way binding requires enabling additional features, such as the Updating feature on the `igGrid`.
 
@@ -281,7 +282,7 @@ The most common case includes controls that can consume and manipulate data, for
 
 The other main group are controls that cannot edit their information (mostly consisting of Data Visualization controls), but will still reflect any changes in the data source to which they are bound. In this case the directives create a one-way connection which propagates data changes to the widget in the view. Controls in this group include:
 
--   igTree
+-   igHtmlEditor
 -   igDataChart
 -   igSparkline
 -   igFunnelChart
