@@ -336,6 +336,42 @@ The grid topmost container DIV is prefixed with the class `ui-iggrid`, so you ca
 
 By default for a column which contains Boolean data types, the `igGrid` shows a string saying true or false. You have, however, the option to make `igGrid` columns display Boolean data as checked or unchecked checkboxes to indicate, respectively, the true and false states of the data items. You render checkboxes on a column by setting the `renderCheckboxes` property to true. Rendering checkboxes requires setting the `dataType` property of the column to bool.
 
+Note that as of 16.1 an improvement in the visual styling of the checkbox is made. It's square box is not going to be rendered when the grid is in display mode. What would be provided is only a plain checkmark. This change is due to refinement of the experience for the end-users, who naturally perceived that this was an interactive element, which they can click to toggle. This is still the case when the `igGrid` enters in edit mode which means that the previous look and feel of checkboxes is preserved for this mode.
+Currently the classes are abstracted into the util property `$.ig.checkboxMarkupClasses` which is empty by default. Previous layout of the checkbox can be adopted by the usage of the following classes -
+`$.ig.checkboxMarkupClasses = "ui-state-default ui-corner-all ui-igcheckbox-small";`
+The property allows custom classes, but any kind of modification should be handled properly so it won't break the layout of the checkbox.
+
+Previous versions of igUpdating had two different behavioral cases for editing checkboxes. First one was when end-user clicks on the checkbox in the cell and the second one was when he clicks outside of the checkbox in the cell. The grid was entering in edit mode in both cases, but in the first one the checkbox value was changed.
+Currently there are no differences in behavior for editing checkboxes. It is all consistent. The end-user should enter edit mode first and after that is going to able to change the value of the checkbox.
+
+Here's a suggested workaround to achieve the previous behavior:
+
+-   Specify the following classes before the initialization of the grid:
+
+**In Javascript:**
+
+```js
+$.ig.checkboxMarkupClasses = "ui-state-default ui-corner-all ui-igcheckbox-small";
+```
+
+-   Add similar event handler for editCellStarted:
+
+**In Javascript:**
+
+```js
+features: [
+    {
+        name: "Updating",
+        editMode: "cell",
+        editCellStarting: function (evt, ui) {
+            if (ui.columnKey === "MakeFlag" && $(evt.originalEvent.target).hasClass("ui-icon-check")) {
+                ui.value = !ui.value;
+            }
+        }
+    }
+]
+```
+
 The example code that follows renders a checkbox on the Make Flag column as shown in the illustration on the right.
 
 <table class="table">
