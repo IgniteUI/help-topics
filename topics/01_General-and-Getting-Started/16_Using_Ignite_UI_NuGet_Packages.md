@@ -20,7 +20,7 @@ The alternative approach to the Ignite UI NuGet packages is to install them loca
 
 ## Installing Ignite UI packages from the online private feed
 
-The first step is to add the Infragistics feed as a package source. To do that, the user needs go to Tools/Options/Package Sources. To do that the user needs to go to Tools/Options/NuGet Package Manager/Package Sources.
+The first step is to add the Infragistics feed as a package source. To do that, the user needs to go to Tools/Options/Package Sources.
 
 Add a new package source using Add new source button and name it Infragistics feed (in fact, you can name it however you want). Set the Source to [*https://packages.infragistics.com/nuget/licensed*](https://packages.infragistics.com/nuget/licensed) and click OK to save the source.
 
