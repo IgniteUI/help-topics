@@ -381,25 +381,25 @@ The following screenshot is a preview of the result.
 
 ### <a id="html-page-prerequisites"></a>Prerequisites
 
-A blank HTML document
+A blank HTML document.
 
 ### <a id="html-page-overview"></a>Overview
 
-1. Reference the required JavaScript and CSS files
+1. Reference the required JavaScript and CSS files.
 
 2. Create a target element for the `igSparkline`.
 
 3. Define the JavaScript array.
 
-4. Instantiate the `igSparkline` in document ready
+4. Instantiate the `igSparkline` in document ready.
 
-5. Configure basic rendering options
+5. Configure basic rendering options.
 
 ### <a id="html-page-steps"></a>Steps
 
 Follow these steps to add an `igSparkline` to an HTML document.
 
-1. Referencing the required JavaScript and CSS files
+1. Referencing the required JavaScript and CSS files.
 
 	Setup the HTML document with the JavaScript and CSS file dependencies.
 	
@@ -441,7 +441,7 @@ Follow these steps to add an `igSparkline` to an HTML document.
 
 3. Defining the JavaScript array.
 
-	Define the JavaScript array..
+	Define the JavaScript array.
 	
 	**In HTML:**
 	
@@ -464,7 +464,7 @@ Follow these steps to add an `igSparkline` to an HTML document.
 	</body>
 	```
 
-4. Instantiate the `igSparkline` in document ready
+4. Instantiate the `igSparkline` in document ready.
 
 	Use the selector of the target element defined previously to instantiate the widget.
 	
@@ -479,7 +479,7 @@ Follow these steps to add an `igSparkline` to an HTML document.
 	</script>
 	```
 
-5. Configuring basic rendering options
+5. Configuring basic rendering options.
 
 	When instantiating the `igSparkline`, configure the dataSource, `valueMemberPath`, `labelMemberPath`, height, and width options.
 	
@@ -495,7 +495,7 @@ Follow these steps to add an `igSparkline` to an HTML document.
 	});
 	```
 
-Full Code
+Full Code:
 
 **In HTML:**
 
