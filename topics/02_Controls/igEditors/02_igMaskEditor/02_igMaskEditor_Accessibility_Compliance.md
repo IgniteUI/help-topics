@@ -65,7 +65,7 @@ The list below provides details about what changes have been made to the `igMask
 
 - The input element of the `igMaskEditor` will render a <b>tabindex</b> attribute with a corresponding value from the <b>tabindex</b> option of the igMaskEditor, which allows access to the elements through the use of <kbd>Tab</kbd> and <kbd>Shift</kbd>+<kbd>Tab</kbd> keys.
 
->**Note:** If the tabindex option is not specified - tabindex equal to -1 is rendered as an attribute to the input element.</li>
+> **Note:** If the tabindex option is not specified - tabindex equal to -1 is rendered as an attribute to the input element.</li>
 
 - The `igMaskEditor` is decorated with a <b>textbox</b> role. 
 

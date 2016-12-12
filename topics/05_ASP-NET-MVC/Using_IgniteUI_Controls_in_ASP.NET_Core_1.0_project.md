@@ -29,6 +29,7 @@ With the new ASP.NET most modules are now wrapped as NuGet packages. This allows
 
 As such our new MVC wrappers built on top of ASP.NET Core will also ship as a NuGet package. 
 The NuGet package can be found in the installation directory of the Ignite UI product under MVC\MVC6\Bin\dotnetcore1.0.
+
 To add that directory as a package source for the NuGet package manager you can open the package manager and open the settings via the gear button.
 
 ![](images/packageSource.png)

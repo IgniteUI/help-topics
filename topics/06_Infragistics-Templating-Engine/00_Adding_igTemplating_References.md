@@ -2,7 +2,7 @@
 |metadata|
 {
     "fileName": "adding-igtemplating-references",
-    "controlName": "igTemplating",
+    "controlName": "igTemplating Engine",
     "tags": ["Templating"]
 }
 |metadata|
