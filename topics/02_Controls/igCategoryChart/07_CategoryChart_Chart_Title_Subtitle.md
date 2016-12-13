@@ -27,21 +27,23 @@ You can customize the look and feel of the category chart's subtitle and title i
 Property Name|Property Type|Description
 ---|---|---
 `title`|string|Determines the text to be used for the title
+`titleTextColor`|string|Determines the color for the title
+`titleTextStyle`|string|Determines the font styles to be applied to the title
 `titleAlignment`|enumeration|Determines the alignment of the title 
 `titleBottomMargin`|number|Determines the margin to be applied to the bottom of the title
 `titleLeftMargin`|number|Determines the margin to be applied to the left of the title
 `titleRightMargin`|number|Determines the margin to be applied to the right of the title
-`titleTextColor`|string|Determines the color for the title
-`titleTextStyle`|string|Determines the font styles to be applied to the title
 `titleTopMargin`|number|Determines the margin to be applied to the top of title
 `subtitle`|string|Determines the text to be used for the subtitle
+`subtitleTextColor`|string|Determines the color for the subtitle
+`subtitleTextStyle`|string|Determines the font styles to be applied to the subtitle
 `subtitleAlignment`|enumeration|Determines the alignment of the subtitle 
 `subtitleBottomMargin`|number|Determines the margin to be applied to the bottom of the subtitle
 `subtitleLeftMargin`|number|Determines the margin to be applied to the left of the subtitle
 `subtitleRightMargin`|number|Determines the margin to be applied to the right of the subtitle
-`subtitleTextColor`|string|Determines the color for the subtitle
-`subtitleTextStyle`|string|Determines the font styles to be applied to the subtitle
 `subtitleTopMargin`|number|Determines the margin to be applied to the top of subtitle
+
+
 
 ### <a id="codesnippet"/>Code Snippet
 The following code example shows how to customize the title and subtitle:
