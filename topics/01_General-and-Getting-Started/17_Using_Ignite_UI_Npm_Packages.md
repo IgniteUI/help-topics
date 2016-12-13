@@ -13,7 +13,7 @@ npm is the most popular package manager and is also the default one for the runt
 
 Infragistics Ignite UI is available as a npm package and you can add it as a dependency to your project in few easy steps. There are two approaches to start using the Ignite UI npm package. We suggest you to use our private npm feed hosted on  [https://packages.infragistics.com/npm/js-licensed](https://packages.infragistics.com/npm/js-licensed). There you will find the latest available version of the Ignite UI package, which contains the latest features and improvements. If you have a valid Ignite UI license, you can use this private feed and you will have access to the full version of Ignite UI. 
 
-Another option is to use the official npm feed at [https://www.npmjs.com](https://www.npmjs.com/package/ignite-ui). Choosing this approach will not require configuring npm but there you will find the Ignite UI OSS version of the package. You can check which Ignite UI controls are included in the OSS version on the [package`s page](https://www.npmjs.com/package/ignite-ui).
+Another option is to use the official npm feed at [https://www.npmjs.com](https://www.npmjs.com/package/ignite-ui). Choosing this approach will not require configuring npm but there you will find the Ignite UI OSS version of the package. You can check which Ignite UI controls are included in the OSS version on the [package's page](https://www.npmjs.com/package/ignite-ui).
 
 ## Installing the Ignite UI npm package from npmjs.com
 
@@ -55,6 +55,6 @@ npm install ignite-ui
 
 Have in mind that even when you are using this private registry, you will still be able to install all the packages from npmjs.com without any additional configurations. 
 
-So, if you`ve already adopted npm and you have an Ignite UI license, don`t hesitate setting up the Infragistics private feed and boost your productivity, using the full potential of Ignite UI. 
+So, if you've already adopted npm and you have an Ignite UI license, don't hesitate setting up the Infragistics private feed and boost your productivity, using the full potential of Ignite UI. 
 
-And if you don`t have a licensed copy of Ignite UI yet, you can still use many of the great controls that Infragistics provide for free with the Ignite UI OSS package. Among those controls are the powerful igEditors, igCombo and igTree. So, go ahead and give it a try, installing the Ignite UI npm package from npmjs.com. 
+And if you don't have a licensed copy of Ignite UI yet, you can still use many of the great controls that Infragistics provide for free with the Ignite UI OSS package. Among those controls are the powerful igEditors, igCombo and igTree. So, go ahead and give it a try, installing the Ignite UI npm package from npmjs.com. 
