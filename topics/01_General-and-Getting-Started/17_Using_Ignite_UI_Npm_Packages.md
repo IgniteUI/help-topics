@@ -19,7 +19,7 @@ Another option is to use the official npm feed at [https://www.npmjs.com](https:
 
 If you choose to use the latest official release of Ignite UI you can install it the same way you are installing all the other packages that your project is depending on. You just need to type the following into the command line:
 
-```js
+```bash
 npm install ignite-ui
 ```
 
@@ -31,25 +31,25 @@ If you want to be sure that you will use the latest improvements in Ignite UI, y
 
 First you need to change the registry that npm is using. Do this by running the following command:
 
-```js
+```bash
 npm config set registry https://packages.infragistics.com/npm/js-licensed
 ```
 
 After that you need to force npm to always require authentication when accessing the registry:
 
-```js
+```bash
 npm config set always-auth true
 ```
 
 Finally, run the adduser command to log in to ProGet using npm:
 
-```js
+```bash
 npm adduser
 ```
 
 You will be asked to provide the username and the password that you use for logging into your Infragistics account. You should also provide the email that is registered to your Infragistics profile. After this is done, you will be logged in and you will be able to install the latest version of Ignite UI into your project:
 
-```js
+```bash
 npm install ignite-ui
 ```
 
