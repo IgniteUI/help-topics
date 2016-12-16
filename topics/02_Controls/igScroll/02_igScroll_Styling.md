@@ -51,7 +51,7 @@ It displays four different scenarios that the default custom scrollbar has and s
 
 ### <a id="container"></a> Styling the scrollbar container
 
-In order to style the container, have its position changed and etc. only the `igscroll-vcontainer` class
+In order to style the container, position it differently and etc. only the `igscroll-vcontainer` class
 needs to be changed. On the image above can be seen that the container wraps all elements composing the vertical custom scrollbar.
 Setting the background color of that element for example will mean that all elements will have the new background 
 and will be positioned on top of it.
@@ -69,8 +69,8 @@ and that is the area where the scroll thumb is moving along. This area can also 
     The classes applied are `igscroll-vdrag` and `igscroll-vdrag-thin`.
 
     The first class is responsible for the overall look of the scroll thumb like background color, border styles and etc. The second class
-    is responsible for how it will look when it should be displayed as thin scroll thumb. In general in this class are used to
-    set the width and the left offset relative to the element that it is child of.
+    is responsible for how it will look when the scroll thumb is its thin state. In general this class is used to
+    set the width and the left offset of the thumb relative to the parent element.
 
 2. Hovering over the scrollbar area
 
@@ -84,15 +84,15 @@ and that is the area where the scroll thumb is moving along. This area can also 
 3. Hovering over the scroll thumb
 
     When hovering the scroll thumb the `:hover` pseudo-selector is used on top of the `igscroll-vdrag` to change the color of the scrollbar.
-    That way it indicates that the scroll thumb is being hovered on. Everything else stays the same as without the `:hover` state. 
-    This can be seen on the third scenario shown.
+    That way it indicates that the scroll thumb is being hovered. Everything else stays the same as without the `:hover` state. 
+    This can be seen in the third scenario.
 
 4. Clicking on the scroll thumb
 
     Clicking on the scroll thumb will apply the `:active` pseudo-selector to it. Every other class still stays the same 
-    as when the scroll thumb is show and it is not being hovered on. The active selector for the `igscroll-vdrag` is 
-    responsible for changing the look of the thumb when it is being clicked on. Every other class still stays 
-    the same as when the big thumb is show and it is not being hovered on.
+    as when the scroll thumb is show and it is not being hovered. The active selector for the `igscroll-vdrag` is 
+    responsible for changing the look of the thumb when it is being clicked. Every other class still stays 
+    the same as when the big thumb is shown and it is not being hovered.
 
 ### <a id="arrow"></a>Styling the arrows
 
