@@ -27,10 +27,10 @@ This topic contains the following sections:
 - [Related Content](#related)
 
 ## <a id="summary"></a>Styling Summary
-The Ignite UI™ Scroll (or `igScroll`), like other jQuery widgets, provides different CSS classes that apply to
+The Ignite UI™ Scroll (or `igScroll`), like other jQuery widgets, provides a number of CSS classes that apply to
 specific UI elements. Each CSS class defines the look and feel of a DOM element that the igScroll renders.
 
-The list of the CSS classes that specifically apply to all elements regarding the vertical only custom scrollbars are:
+The list of CSS classes that apply to the vertical custom scrollbar are:
 
 * Most outer container wrapping all others: `igscroll-vcontainer`
 * Track area: `igscroll-vtrack`
@@ -44,7 +44,7 @@ The list of the CSS classes that specifically apply to all elements regarding th
 * Scroll thumb in big state: `igscroll-vdrag-big`
 
 
-To visualize which class for which element is being used refer to the following picture.
+To visualize which CSS class for which element is being used refer to the following picture.
 It displays four different scenarios that the default custom scrollbar has and shows each class applied:
 
 ![](./images/igScroll-style-default.jpg)
@@ -59,7 +59,7 @@ and will be positioned on top of it.
 ### <a id="track"></a>Styling the track area
 
 To style the track area only the `igscroll-vtrack` class needs to be modified. The track area is container of the scroll thumb
-and that is the area where the scroll thumb is moving along. This area can also be seen in the screenshots above. It is position between the Up and Down arrows.
+and that is the area where the scroll thumb is moving along. This area can also be seen in the screenshots above. It is positioned between the Up and Down arrows.
 
 ### <a id="thumbDrag"></a>Styling the scroll thumb
 
@@ -78,7 +78,7 @@ and that is the area where the scroll thumb is moving along. This area can also 
     This is reflected in the classes that are being applied on it as well.
     
     The first class `igscroll-vdrag` is the same as in the previous state. The `igscroll-vdrag-thin` is now removed and 
-    `igscroll-vdrag-big` is applied. The difference in this case is that now the width is higher and the left offset is 
+    `igscroll-vdrag-big` is applied. The difference in this case is that now the width is bigger and the left offset is 
     smaller in order to compensate for the difference in the size.
 
 3. Hovering over the scroll thumb
@@ -94,7 +94,7 @@ and that is the area where the scroll thumb is moving along. This area can also 
     responsible for changing the look of the thumb when it is being clicked. Every other class still stays 
     the same as when the big thumb is shown and it is not being hovered.
 
-### <a id="arrow"></a>Styling the arrows
+### <a id="arrows"></a>Styling the arrows
 
 1. Initial state
 
@@ -135,7 +135,7 @@ and that is the area where the scroll thumb is moving along. This area can also 
     in it the background image is changed. In the default custom scrollbars it is used as well to rotate
     the background image so the arrow points down.
 
-**Note:** Similar classes are used for the horizontal scrollbar. Their naming can be seen in the [igScroll API](%%jQueryApiUrl%%/ui.igscroll#theming).
+> **Note**: Similar classes are used for the horizontal scrollbar. Their naming can be seen in the [igScroll API](%%jQueryApiUrl%%/ui.igscroll#theming).
 
 ## <a id="example"></a>Styling example
 
@@ -198,7 +198,7 @@ arrows hidden to provide more minimalistic look:
 
 3. Styling the track area
 
-    To style the track area only the `igscroll-vtrack` class is used. The css for it is:
+    To style the track area only the `igscroll-vtrack` class is used. The CSS for it is:
 
     ```css
     .igscroll-vtrack {
@@ -210,8 +210,7 @@ arrows hidden to provide more minimalistic look:
     ```
 
     In that class we set the background color to be grey, round the edges using `border-radius` and add a box shadow.
-    The width is set to 12px in order to be the same size like the scroll thumb.
-
+    The width is set to 12px in order to be the same size as the scroll thumb.
 
 4. Styling the scroll thumb
 
@@ -220,7 +219,7 @@ arrows hidden to provide more minimalistic look:
     we specify the initial background color, set `border-radius` so that it matches the track area,
     add `box-shadow` and `border` to make it more distinguished.
 
-    The css for that class would look like:
+    The CSS for that class would look like:
 
     ```css
     .igscroll-vdrag {
@@ -266,7 +265,7 @@ arrows hidden to provide more minimalistic look:
 ## <a id="related"></a> Related Content
 
 ### Topics
--   [igScroll Overview](igScroll_Overview.html)
+-   [igScroll Overview](igScroll-Overview.html)
 -   [Configuring igScroll](Configuring-igScroll.html)
 
 ### Samples
