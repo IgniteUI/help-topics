@@ -69,7 +69,7 @@ and that is the area where the scroll thumb is moving along. This area can also 
     The classes applied are `igscroll-vdrag` and `igscroll-vdrag-thin`.
 
     The first class is responsible for the overall look of the scroll thumb like background color, border styles and etc. The second class
-    is responsible for how it will look when the scroll thumb is its thin state. In general this class is used to
+    is responsible for how it will look when the scroll thumb is in its thin state. In general this class is used to
     set the width and the left offset of the thumb relative to the parent element.
 
 2. Hovering over the scrollbar area
