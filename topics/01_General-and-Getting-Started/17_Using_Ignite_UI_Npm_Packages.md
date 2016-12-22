@@ -41,20 +41,22 @@ After that you need to set the registry to that one. Do this by running the foll
 npm config set registry https://packages.infragistics.com/npm/js-licensed
 ```
 
+Have in mind that instead of the command above, you can create a local [.npmrc](https://docs.npmjs.com/files/npmrc) file and set the registry inside it. If you use this approach the registry will not be set globally but just for the concrete project.
+
 After this is done, you will be logged in and you will be able to install the latest version of Ignite UI into your project:
 
 ```bash
 npm install ignite-ui-full
 ```
 
-Have in mind that npm has some registry limitations so that when you are using a private registry, you will need to change the registries if you want to install a package from npmjs.com. This shouldn`t frighten you as this is done by a single command and you don`t need any additional configurations. 
+Have in mind that npm has some registry limitations so that when you are using a private registry and if you haven`t created a local .npmrc file, you will need to change the registries if you want to install a package from npmjs.com. This shouldn`t frighten you as this is done by a single command and you don`t need any additional configurations. 
 You just need to use the following line:
 
 ```bash
 npm config set registry https://registry.npmjs.org/
 ```
 
-You can use the very same command to go back to the private feed if you want to. 
+You can use the very same command to go back to the private feed if you want to and, as we pointed out above, you don`t need to worry about changing the registries if you have created a .npmrc file locally. 
 
 So, if you've already adopted npm and you have an Ignite UI license, don't hesitate setting up the Infragistics private feed and boost your productivity, using the full potential of Ignite UI. 
 
