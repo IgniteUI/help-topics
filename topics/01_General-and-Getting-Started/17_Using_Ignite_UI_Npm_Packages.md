@@ -29,31 +29,32 @@ After executing this command, you will find the Ignite UI package inside the nod
 
 If you want to be sure that you will use the latest improvements in Ignite UI, you need to do some quick configurations of the npm. 
 
-First you need to change the registry that npm is using. Do this by running the following command:
+First you need to setup the private registry. You will be asked to provide the username and the password that you use for logging into your Infragistics account. You should also provide the email that is registered to your Infragistics profile. There is an important note that you must have in mind during this step! npm is disallowing the use of the "@" symbol inside your username as it is considered as being "not safe for the net". Because your username is actually the email that you use for your Infragistics account it always contains the symbol "@". That`s why you must escape this limitation by replacing the "@" symbol by "!!" (two exclamation marks). For example, if your username is "username@infragistics.com" when asked about your username you should provide the following input: "username!!infragistics.com".
+
+```bash
+npm adduser --registry=https://packages.infragistics.com/npm/js-licensed --always-auth
+```
+
+After that you need to set the registry to that one. Do this by running the following command:
 
 ```bash
 npm config set registry https://packages.infragistics.com/npm/js-licensed
 ```
 
-After that you need to force npm to always require authentication when accessing the registry:
+After this is done, you will be logged in and you will be able to install the latest version of Ignite UI into your project:
 
 ```bash
-npm config set always-auth true
+npm install ignite-ui-full
 ```
 
-Finally, run the adduser command to log in to ProGet using npm:
+Have in mind that npm has some registry limitations so that when you are using a private registry, you will need to change the registries if you want to install a package from npmjs.com. This shouldn`t frighten you as this is done by a single command and you don`t need any additional configurations. 
+You just need to use the following line:
 
 ```bash
-npm adduser
+npm config set registry https://registry.npmjs.org/
 ```
 
-You will be asked to provide the username and the password that you use for logging into your Infragistics account. You should also provide the email that is registered to your Infragistics profile. After this is done, you will be logged in and you will be able to install the latest version of Ignite UI into your project:
-
-```bash
-npm install ignite-ui
-```
-
-Have in mind that even when you are using this private registry, you will still be able to install all the packages from npmjs.com without any additional configurations. 
+You can use the very same command to go back to the private feed if you want to. 
 
 So, if you've already adopted npm and you have an Ignite UI license, don't hesitate setting up the Infragistics private feed and boost your productivity, using the full potential of Ignite UI. 
 
