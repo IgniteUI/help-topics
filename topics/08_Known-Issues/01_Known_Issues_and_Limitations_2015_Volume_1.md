@@ -1182,6 +1182,7 @@ Issue | Description | Status
 ---|---|---
 Cell selection in iOS does not work properly | In iOS, when wanting to scroll the `igGrid`, the user should first tap on a cell and then swipe in the desired direction. There is a difference when scrolling the `igGrid` under iOS and Android due to the way jQuery Mobile handles the events. | ![](../images/images/negative.png)
 Incorrect selection when selecting row/cell with continuous virtualization enabled | When selecting row/cell of the `igGrid` while continuous virtualization is enabled, the grid scrolls down and a different row/cell is selected due to a bug in jQuery version 1.6.4. This problem appears only in this version of the jQuery library. | ![](../images/images/positive.png)
+Selecting a row in IE scrolls the row to most left in a grid with horizontal scrollbar | Selecting a row in IE is applying focus to the row, which scrolls the `igGrid` all the way to the left. | ![](../images/images/positive.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
