@@ -345,7 +345,7 @@ Row count for a group stays unchanged when the grid is filtered | When Filtering
 [Tapping the igTree inside the Group By modal dialog not working properly](#groupby-dialog-tree) | Tapping the drop-down inside the Group By modal dialog may lead to some layout problems on Android 4.0. The issue appears when the tree is shown partially, having a vertical or horizontal scroll. | ![](../../images/images/positive.png)
 Grouping not working with fixed virtualization | The GroupBy feature of the `igGrid` doesn’t work with fixed virtualization. | ![](../../images/images/negative.png)
 [Hiding a column shrinks the grid in Firefox](#groupby-hide-firefox) | When the GroupBy feature is enabled and `igGrid` doesn’t have column widths defined, hiding a column shrinks the grid in Firefox browser. | ![](../../images/images/positive.png)
-
+Remote GroupBy does not work as expected with Remote Paging. | When remote Paging and remote GroupBy are enabled the page count and page size are incorrect.| ![](../../images/images/negative.png)
 
 
 ## [igGridPaging](#paging)
