@@ -1007,6 +1007,7 @@ The `groupedColumnsChanged` event input argument `ui.groupedColumns` may be empt
 Tapping the `igTree` inside the Group By modal dialog not working properly | Tapping the drop-down inside the Group By modal dialog may lead to some layout problems on Android 4.0. The issue appears when the tree is shown partially, having a vertical or horizontal scroll. | ![](../images/images/positive.png)
 Grouping not working with fixed virtualization | The GroupBy feature of the `igGrid` doesn’t work with fixed virtualization. | ![](../images/images/negative.png)
 Hiding a column shrinks the grid in Firefox | When the GroupBy feature is enabled and `igGrid` doesn’t have column widths defined, hiding a column shrinks the grid in Firefox browser. | ![](../images/images/positive.png)
+Remote GroupBy does not work as expected with Remote Paging. | When remote paging and remote groupBy are enabled the page count and page size are incorrect.| ![](../images/images/negative.png)
 
 
 Go up to [Known Issues and Limitations Summary](#summary)
