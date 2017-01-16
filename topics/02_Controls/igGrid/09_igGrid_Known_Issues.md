@@ -270,6 +270,7 @@ Use the [fixNonDataColumns](%%jQueryApiUrl%%/ui.iggrid#methods:fixNonDataColumns
         </tr>
         <tr>
             <td>
+Caption rendering differs whether there is height set for the grid or not.
 			</td>
             <td>
     1. When there is grid [caption](%%jQueryApiUrl%%/ui.iggrid#options:caption) and [height](%%jQueryApiUrl%%/ui.iggrid#options:height) set two captions are rendered, one for the fixed and one for the unfixed area.<br />
