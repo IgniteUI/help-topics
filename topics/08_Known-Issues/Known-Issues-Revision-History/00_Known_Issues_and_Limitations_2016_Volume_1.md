@@ -914,6 +914,19 @@ This is related to that the record is separated in two physical rows - for fixed
 ![](../images/images/negative.png)
 		</td>
 	</tr>
+        <tr>
+            <td>
+Caption rendering differs whether there is height set for the grid or not.
+			</td>
+            <td>
+    1. When there is grid [caption](%%jQueryApiUrl%%/ui.iggrid#options:caption) and [height](%%jQueryApiUrl%%/ui.iggrid#options:height) set two captions are rendered, one for the fixed and one for the unfixed area.<br />
+    2. When there is grid caption without height set only one caption is rendered for the grid.<br />
+    The difference is caused by the more complex DOM structure used when there is grid height set.<br />
+			</td>
+            <td>
+![](../../images/images/negative.png)
+			</td>
+        </tr>
     </tbody>
 </table>
 
@@ -1013,8 +1026,7 @@ Issue | Description | Status
 Cell selection in iOS does not work properly | In iOS, when wanting to scroll the `igGrid`, the user should first tap on a cell and then swipe in the desired direction. There is a difference when scrolling the `igGrid` under iOS and Android due to the way jQuery Mobile handles the events. | ![](../images/images/negative.png)
 Incorrect selection when selecting row/cell with continuous virtualization enabled | When selecting row/cell of the `igGrid` while continuous virtualization is enabled, the grid scrolls down and a different row/cell is selected due to a bug in jQuery version 1.6.4. This problem appears only in this version of the jQuery library. | ![](../images/images/positive.png)
 Text selection is not working when Selection feature is enabled | The Selection feature disables text selection inside the grid by cancelling the selectstart event and as a result the cell's text cannot be selected. | ![](../images/images/positive.png)
-Selecting a row in IE scrolls the row to most left in a grid with horizontal scrollbar | Selecting a row in IE is applying focus to the row, which scrolls the `igGrid` all the way to the left. | ![](../../images/images/positive.png)
-
+Selecting a row in IE scrolls the row to most left in a grid with horizontal scrollbar | Selecting a row in IE is applying focus to the row, which scrolls the `igGrid` all the way to the left. | ![](../images/images/positive.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
