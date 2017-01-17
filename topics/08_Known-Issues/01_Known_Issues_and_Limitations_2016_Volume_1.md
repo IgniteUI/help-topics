@@ -913,6 +913,19 @@ This is related to that the record is separated in two physical rows - for fixed
 ![](../images/images/negative.png)
 		</td>
 	</tr>
+        <tr>
+            <td>
+Caption rendering differs whether there is height set for the grid or not.
+			</td>
+            <td>
+    1. When there is grid [caption](%%jQueryApiUrl%%/ui.iggrid#options:caption) and [height](%%jQueryApiUrl%%/ui.iggrid#options:height) set two captions are rendered, one for the fixed and one for the unfixed area.<br />
+    2. When there is grid caption without height set only one caption is rendered for the grid.<br />
+    The difference is caused by the more complex DOM structure used when there is grid height set.<br />
+			</td>
+            <td>
+![](../../images/images/negative.png)
+			</td>
+        </tr>
     </tbody>
 </table>
 
