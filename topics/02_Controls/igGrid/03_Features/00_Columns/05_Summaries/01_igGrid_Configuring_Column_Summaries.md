@@ -278,7 +278,7 @@ Setting the compact mode using `igGridSummaries` options.
 
 ## <a id="button"></a> Configuring a Summary Button
 
-The `showSummaryButton` property enables you to show/hide a summary button in the header of a column. When set to *true* (the upper image), the user can click to hide/show the summaries in the grid. When the `showSummariesButton` option is set to false (the lower image) no buttons appear.
+The `showSummariesButton` property enables you to show/hide a summary button in the header of a column. When set to *true* (the upper image), the user can click to hide/show the summaries in the grid. When the `showSummariesButton` option is set to false (the lower image) no buttons appear.
 
 ### <a id="button-preview"></a> Preview 
 In the pictures below, the `showSummariesButton` option is set to *true* (the upper image) and *false* (the lower image).
@@ -486,10 +486,4 @@ Following is a conceptual overview of the process:
 Following are some other topics you may find useful.
 
 -   [Enabling Column Summaries (igGrid)](igGrid-Enabling--Column-Summaries.html)
--   [Column Summaries Events (igGrid)](igGrid-Column-Summaries-Events.html) 
-
- 
-
- 
-
-
+-   [Column Summaries Events (igGrid)](igGrid-Column-Summaries-Events.html)
