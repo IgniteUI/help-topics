@@ -81,7 +81,9 @@ There are two summary types – local and remote. This option specifies if the c
 
 In the picture below, the type is set to *local* (the image on the left) and type set to *remote* (the image on the right)
 
-![](images/igGrid_Configuration_Column_Summaries_01.png)   ![](images/igGrid_Configuration_Column_Summaries_02.png)
+<img style="float:left" src="images/igGrid_Configuration_Column_Summaries_01.png" />
+<img src="images/igGrid_Configuration_Column_Summaries_02.png" />
+
 
 ## <a id="type-property-settings"></a> Property settings 
 The table below maps the desired configurations to property settings. The properties are accessed through the *igGridSummaries* options.
@@ -136,9 +138,11 @@ There are two rendering modes defining how calculatins are performed. They are m
 ### <a id="calculation-preview"></a> Preview 
 
 In the pictures below, the option calculateRenderMode is set to "okcancelbuttons" (the image on the left) and “onselect” (the image on the right).
- 
 
-![](images/igGrid_Configuration_Column_Summaries_03.png)  ![](images/igGrid_Configuration_Column_Summaries_04.png)  
+<p style="display:inline-block">
+    <img style="float:left" src="images/igGrid_Configuration_Column_Summaries_03.png" />
+    <img src="images/igGrid_Configuration_Column_Summaries_04.png" />
+</p>
 
 ### <a id="calculation-property-settings"></a> Property settings for configuring the calculation mode 
 
@@ -486,10 +490,4 @@ Following is a conceptual overview of the process:
 Following are some other topics you may find useful.
 
 -   [Enabling Column Summaries (igGrid)](igGrid-Enabling--Column-Summaries.html)
--   [Column Summaries Events (igGrid)](igGrid-Column-Summaries-Events.html) 
-
- 
-
- 
-
-
+-   [Column Summaries Events (igGrid)](igGrid-Column-Summaries-Events.html)
