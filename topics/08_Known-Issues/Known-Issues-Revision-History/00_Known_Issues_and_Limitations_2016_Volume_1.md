@@ -914,6 +914,19 @@ This is related to that the record is separated in two physical rows - for fixed
 ![](../images/images/negative.png)
 		</td>
 	</tr>
+        <tr>
+            <td>
+Caption rendering differs whether there is height set for the grid or not.
+			</td>
+            <td>
+    1. When there is grid [caption](%%jQueryApiUrl%%/ui.iggrid#options:caption) and [height](%%jQueryApiUrl%%/ui.iggrid#options:height) set two captions are rendered, one for the fixed and one for the unfixed area.<br />
+    2. When there is grid caption without height set only one caption is rendered for the grid.<br />
+    The difference is caused by the more complex DOM structure used when there is grid height set.<br />
+			</td>
+            <td>
+![](../../images/images/negative.png)
+			</td>
+        </tr>
     </tbody>
 </table>
 
@@ -1013,6 +1026,7 @@ Issue | Description | Status
 Cell selection in iOS does not work properly | In iOS, when wanting to scroll the `igGrid`, the user should first tap on a cell and then swipe in the desired direction. There is a difference when scrolling the `igGrid` under iOS and Android due to the way jQuery Mobile handles the events. | ![](../images/images/negative.png)
 Incorrect selection when selecting row/cell with continuous virtualization enabled | When selecting row/cell of the `igGrid` while continuous virtualization is enabled, the grid scrolls down and a different row/cell is selected due to a bug in jQuery version 1.6.4. This problem appears only in this version of the jQuery library. | ![](../images/images/positive.png)
 Text selection is not working when Selection feature is enabled | The Selection feature disables text selection inside the grid by cancelling the selectstart event and as a result the cell's text cannot be selected. | ![](../images/images/positive.png)
+Selecting a row in IE scrolls the row to most left in a grid with horizontal scrollbar | Selecting a row in IE is applying focus to the row, which scrolls the `igGrid` all the way to the left. | ![](../images/images/positive.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
@@ -1055,6 +1069,7 @@ Adding a new row with Updating and Virtualization enabled requires immediate com
 Excel Navigation mode supported only for Cell Edit mode. | When [`excelNavigationMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:excelNavigationMode) is enabled, navigating with the arrows is only possible with "cell" [`editMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:editMode). Other Edit modes (*row*, *dialog*, *none*, *null*) are not supported with  `excelNavigationMode`. | ![](../images/images/negative.png)
 Adding and updating a virtual grid doesn’t work if it is grouped | When using GroupBy and Updating in a virtual grid, updating or adding rows will not work when the grid is grouped. If you ungroup you will see the newly added record at the bottom of the grid records. | ![](../images/images/negative.png)
 Updating rows/cells when the Updating and Continuous Virtualization features are enabled while [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) is disabled is not supported. | Editing rows/cells with Updating when the [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) grid option is set to false and Continuous Virtualization is enable will throw exception. | ![](../images/images/positive.png)
+Keyboard navigation while in edit mode does not wrap-around if virtualization is enabled. | When virtualization is enabled keyboard navigation with Tab/Shift+Tab when edit mode is "cell" and keyboard navigation with Enter/Shift+Enter when edit mode is "row" will not wrap-around. When reaching the last row/cell and navigating to the next one the first row/cell will not enter edit mode and the same will happend when reaaching the first row/cell and navigating to the previous one - the last row/cell will not enter edit mode. | ![](../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 

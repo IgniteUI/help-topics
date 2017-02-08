@@ -96,7 +96,7 @@ $('#editor').igValidator({
 });
 // OR
 $('#editor').igValidator({
-  required: {
+  number: {
     errorMessage : "Not a valid number",
     decimalSeparator: ".",
     thousandsSeparator: " "

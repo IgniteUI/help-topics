@@ -105,7 +105,7 @@ In order to… | Use this option: | And set it to…
 ---|---|---
 [Configure parent and leaf node images using a URL](#example_configure_using_url) | [parentNodeImageUrl](%%jQueryApiUrl%%/ui.igTree#options:parentNodeImageUrl)  <br> [leafNodeImageUrl](%%jQueryApiUrl%%/ui.igTree#options:leafNodeImageUrl) | string URL <br> string URL
 [Configure parent and leaf node images using CSS](#example_configure_using_css) | [parentNodeImageClass](%%jQueryApiUrl%%/ui.igTree#options:parentNodeImageClass)  <br> [leafNodeImageClass](%%jQueryApiUrl%%/ui.igTree#options:leafNodeImageClass) | string CSS class name <br> string CSS class name
-[Configure node images for individual data items through binding](#example_configure_through_binding) | [imageUrlKey](%%jQueryApiUrl%%/ui.igTree#options:bindings.imageUrlKey) <br> (for XML) <br> [imageUrlXPath](%%jQueryApiUrl%%/ui.igTree#options:bindings.imageUrlXPath) | string data member with URL to images `<br>` string XPath to the image URL when bound to XML
+[Configure node images for individual data items through binding](#example_configure_through_binding) | [imageUrlKey](%%jQueryApiUrl%%/ui.igTree#options:bindings.imageUrlKey) <br> (for XML) <br> [imageUrlXPath](%%jQueryApiUrl%%/ui.igTree#options:bindings.imageUrlXPath) | string data member with URL to images <br> string XPath to the image URL when bound to XML
 
 
 ### <a id="example_configure_using_url"></a>Example: configuring parent and leaf node images configured using a URL 

@@ -274,8 +274,8 @@ Use the [fixNonDataColumns](%%jQueryApiUrl%%/ui.iggrid#methods:fixNonDataColumns
             <td>
 ![](../../images/images/negative.png)
 			</td>
-        </tr>
-			<tr>
+    </tr>
+    <tr>
 		<td>
 On mobile devices when having Column Fixing, scrolling the fixed container doesn't display the scrollbars in the unfixed area.
 		</td>
@@ -297,6 +297,19 @@ Only one of the two areas can be scrolled at a time while on touch environment.
 ![](../images/images/negative.png)
 		</td>
 	</tr>
+        <tr>
+            <td>
+Caption rendering differs whether there is height set for the grid or not.
+			</td>
+            <td>
+    1. When there is grid [caption](%%jQueryApiUrl%%/ui.iggrid#options:caption) and [height](%%jQueryApiUrl%%/ui.iggrid#options:height) set two captions are rendered, one for the fixed and one for the unfixed area.<br />
+    2. When there is grid caption without height set only one caption is rendered for the grid.<br />
+    The difference is caused by the more complex DOM structure used when there is grid height set.<br />
+			</td>
+            <td>
+![](../../images/images/negative.png)
+			</td>
+        </tr>
     </tbody>
 </table>
 
@@ -345,7 +358,7 @@ Row count for a group stays unchanged when the grid is filtered | When Filtering
 [Tapping the igTree inside the Group By modal dialog not working properly](#groupby-dialog-tree) | Tapping the drop-down inside the Group By modal dialog may lead to some layout problems on Android 4.0. The issue appears when the tree is shown partially, having a vertical or horizontal scroll. | ![](../../images/images/positive.png)
 Grouping not working with fixed virtualization | The GroupBy feature of the `igGrid` doesn’t work with fixed virtualization. | ![](../../images/images/negative.png)
 [Hiding a column shrinks the grid in Firefox](#groupby-hide-firefox) | When the GroupBy feature is enabled and `igGrid` doesn’t have column widths defined, hiding a column shrinks the grid in Firefox browser. | ![](../../images/images/positive.png)
-
+Remote GroupBy does not work as expected with Remote Paging. | When remote Paging and remote GroupBy are enabled the page count and page size are incorrect.| ![](../../images/images/negative.png)
 
 
 ## [igGridPaging](#paging)
@@ -389,6 +402,7 @@ Issue | Description | Status
 [Incorrect selection when selecting row/cell with continuous virtualization enabled](#selection-continuous-virtualization) | When selecting row/cell of the `igGrid` while continuous virtualization is enabled, the grid scrolls down and a different row/cell is selected due to a bug in jQuery version 1.6.4. This problem appears only in this version of the jQuery library. | ![](../../images/images/positive.png)
 Incorrect cell selection when selecting with mouse dragging and persistence is enabled|Selecting with mouse dragging when persistence is enabled and there are rows which cells are duplicated (the rows are visually the same) will select only the cells from the first row.|![](../../images/images/positive.png)
 [Text selection is not working when Selection feature is enabled](#text-selection) | The Selection feature disables text selection inside the grid by cancelling the selectstart event and as a result the cell's text cannot be selected. | ![](../../images/images/positive.png)
+[Selecting a row in IE scrolls the row to most left in a grid with horizontal scrollbar](#selecting-rows-ie) | Selecting a row in IE is applying focus to the row, which scrolls the `igGrid` all the way to the left. | ![](../../images/images/positive.png)
 
 
 
@@ -422,7 +436,7 @@ Issue | Description | Status
 Excel Navigation mode supported only for Cell Edit mode. | When [`excelNavigationMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:excelNavigationMode) is enabled, navigating with the arrows is only possible with "cell" [`editMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:editMode). Other Edit modes (*row*, *dialog*, *none*, *null*) are not supported with  `excelNavigationMode`. | ![](../../images/images/negative.png)
 Adding and updating a virtual grid doesn’t work if it is grouped | When using `GroupBy` and `Updating` in a virtual grid, updating or adding rows will not work when the grid is grouped. If you ungroup you will see the newly added record at the bottom of the grid records. | ![](../../images/images/negative.png)
 [Updating rows/cells when the Updating and Continuous Virtualization features are enabled while [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) is disabled is not supported.](#updating-edit-virtualization) | Editing rows/cells with Updating when the [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) grid option is set to false and Continuous Virtualization is enable will throw exception. | ![](../../images/images/positive.png)
-
+Keyboard navigation while in edit mode does not wrap-around if virtualization is enabled. | When virtualization is enabled keyboard navigation with Tab/Shift+Tab when edit mode is "cell" and keyboard navigation with Enter/Shift+Enter when edit mode is "row" will not wrap-around. When reaching the last row/cell and navigating to the next one the first row/cell will not enter edit mode and the same will happend when reaaching the first row/cell and navigating to the previous one - the last row/cell will not enter edit mode. | ![](../../images/images/negative.png)
 
 ## <a id="feature-chooser"></a>Feature Chooser
 
@@ -984,6 +998,17 @@ Selecting with mouse dragging when persistence is enabled and there are rows whi
 
 >**Workaround**: Set persistence to false.
 
+### <a id="selecting-rows-ie"></a> Selecting a row in IE scrolls the row to most left in a grid with horizontal scrollbar
+
+Selecting a row in IE is applying focus to the row, which scrolls the `igGrid` all the way to the left.
+
+> **Workaround 1** 
+> 
+> Removе activation altogether (note that this will remove Selection's keyboard navigation)
+
+> **Workaround 2** 
+> 
+> Change the selection mode to "cell"
 
 ## <a id="summaries"></a> igGridSummaries
 

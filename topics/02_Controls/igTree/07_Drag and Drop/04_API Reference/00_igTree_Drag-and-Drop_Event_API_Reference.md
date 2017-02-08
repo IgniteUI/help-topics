@@ -349,7 +349,7 @@ Gets a reference to the position property.
 
         <tr>
             <td colspan="2">
-[nodeDropped](%%jQueryApiUrl%%/ui.igtree#events:dragStop)
+[nodeDropped](%%jQueryApiUrl%%/ui.igtree#events:nodeDropped)
 			</td>
 
             <td>
