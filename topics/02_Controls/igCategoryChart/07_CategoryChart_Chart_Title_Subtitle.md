@@ -30,8 +30,6 @@ Property Name|Property Type|Description
 `titleTextColor`|string|Determines the color for the title
 `titleTextStyle`|string|Determines the font styles to be applied to the title
 `titleAlignment`|enumeration|Determines the alignment of the title 
-`titleTextColor`|string|Determines the color for the title
-`titleTextStyle`|string|Determines the font styles to be applied to the title
 `titleBottomMargin`|number|Determines the margin to be applied to the bottom of the title
 `titleLeftMargin`|number|Determines the margin to be applied to the left of the title
 `titleRightMargin`|number|Determines the margin to be applied to the right of the title
