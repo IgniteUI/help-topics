@@ -1149,7 +1149,7 @@ Go up to [Known Issues and Limitations Summary](#summary)
 Issue | Description | Status
 ---|---|---
 Resizing not working with some jQuery versions | `igGrid` Resizing does not support jQuery versions 1.8.0 ÷ 1.8.5. | ![](../../images/images/positive.png)
-Resizing not working with fixed virtualization |The column resizing feature does not work when fixed virtualization is enabled.| ![](../../images/images/positive.png)
+Resizing not working with fixed and column virtualization |The column resizing feature does not work when fixed and/or column virtualization are enabled.| ![](../images/images/positive.png)
 Columns not resizing correctly, when column widths are not set (in Firefox) | Due to a bug in Firefox, the `igGrid` columns cannot be resized correctly when the column widths are not set. | ![](../../images/images/negative.png)
 Columns not resizing correctly when column widths are set relatively (in Firefox) | Due to a bug in Firefox, the `igGrid` columns cannot be resized correctly when the column widths are set relatively (in percentages). | ![](../../images/images/positive.png)
 Resizing a column occurs at an accelerated speed when the grid is scrolled to the far right.|The resizing speed is accelerated when the grid is scrolled to the far right and a column is resized by dragging from its right edge to the left. This specific behavior is caused by the browser’s layout engine.|![](../../images/images/negative.png)
