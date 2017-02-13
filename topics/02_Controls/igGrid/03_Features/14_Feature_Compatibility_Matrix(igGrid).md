@@ -286,7 +286,7 @@ Column Virtualization
 ![](../../../images/images/negative.png "Column Virtualization/Row-Selectors")
 			</td>
             <td class="column-virtualization selection">
-![](../../../images/images/positive.png "Column Virtualization/Selection")
+![](../../../images/images/plannedFix.png "Column Virtualization/Selection")
 			</td>
             <td class="column-virtualization sorting">
 ![](../../../images/images/positive.png "Column Virtualization/Sorting")
@@ -301,7 +301,7 @@ Column Virtualization
 ![](../../../images/images/positive.png "Column Virtualization/Tooltips")
 			</td>
             <td class="column-virtualization updating">
-![](../../../images/images/positive.png "Column Virtualization/Updating")
+![](../../../images/images/plannedFix.png "Column Virtualization/Updating")
 			</td>
             <td class="column-virtualization multi-row-layout">
 ![](../../../images/images/negative.png "Column Virtualization/Multi-Row Layout")
@@ -1170,7 +1170,7 @@ Selection
 ![](../../../images/images/positive.png "Selection/Continuous Virtualization")
 			</td>
             <td class="selection column-virtualization">
-![](../../../images/images/positive.png "Selection/Column Virtualization")
+![](../../../images/images/plannedFix.png "Selection/Column Virtualization")
 			</td>
             <td class="selection unbound-columns">
 ![](../../../images/images/positive.png "Selection/Unbound Columns")
@@ -1525,7 +1525,7 @@ Updating
 ![](../../../images/images/positive.png "Updating/Continuous Virtualization")
 			</td>
             <td class="updating column-virtualization">
-![](../../../images/images/positive.png "Updating/Column Virtualization")
+![](../../../images/images/plannedFix.png "Updating/Column Virtualization")
 			</td>
             <td class="updating unbound-columns">
 ![](../../../images/images/positive.png "Updating/Unbound Columns")
