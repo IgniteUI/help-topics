@@ -159,9 +159,3 @@ The `igGrid` has [known limitations](igGrid-Known-Issues.html) that should be ta
 ## Related topics
 
 -   [igGrid Overview](igGrid-Overview.html)
-
- 
-
- 
-
-
