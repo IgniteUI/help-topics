@@ -20,29 +20,19 @@ This topic explains, with code examples, how to enable and configure the Virtual
 
 This topic contains the following sections:
 
--   [**Enabling Virtualization Overview**](#overview)
 -   [**Configuring Virtualization Overview**](#configuring)
--   [**Enabling and Configuring Fixed Virtualization**](#fixed)
-	-   [Configuring the rows’ height and columns’ width](#fixed-configuring-rows-columns)
-    -   [Property settings](#fixed-property-settings)
-    -   [Fixed Row Virtualization Example](#fixed-row-example)
-    -   [Column Row Virtualization Example](#fixed-column-example)
--   [**Enabling and Configuring Continuous Virtualization**](#continuous)
+-   [**Enabling and Configuring Fixed Row Virtualization**](#fixed-row)
+    - [Configuring the rows’ height](#fixed-row-configuring)
+    - [Fixed Row Virtualization Example](#fixed-row-example)
+-   [**Enabling and Configuring Fixed Column Virtualization**](#fixed-column)
+	-   [Configuring the columns’ width](#fixed-configuring-rows-columns)
+    -   [Column Virtualization Example](#fixed-column-example)
+-   [**Enabling and Configuring Continuous Row Virtualization**](#continuous)
     -   [Property settings](#continuous-property-settings)
     -   [Example](#continuous-example)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
     -   [Samples](#samples)
-
-
-## <a id="overview"></a> Enabling Virtualization Overview
-
-Virtualization is enabled by setting the [`virtualization`](%%jQueryApiUrl%%/ui.iggrid#options:virtualization) property to true. The type of Virtualization is specified though setting the [`virtualizationMode`](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) property to fixed or continuous.
-
-Enabling virtualization without specifying its type sets it to Fixed (the default Virtualization type).
-
-The row virtualization feature cannot function without having height defined in the grid.
-The column virtualization feature cannot function without having width defined in the grid.
 
 
 ## <a id="configuring"></a> Configuring Virtualization Overview 
@@ -53,60 +43,34 @@ The following table lists the different configurable settings of the Virtualizat
 | -------------------| ------------------- |----------- 
 Row virtualization | [rowVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:rowVirtualization) | Enables/Disables virtualization for rows only.
 Column virtualization | [columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) | Enables/Disables column virtualization.When column virtualization is enable so is row virtualization. When enabled it also automatically sets virtualization mode to "fixed".
-Both row and column virtualization | [virtualization](%%jQueryApiUrl%%/ui.iggrid#options:virtualization) | Enables/Disables both row and column virtualization.
+Both row and column virtualization | [virtualization](%%jQueryApiUrl%%/ui.iggrid#options:virtualization) | Shorthand for setting rowVirtualization and columnVirtualization via a single option.
 Virtualization mode | [virtualizationMode](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) | Determines row virtualization mode.
 Average Row Height | [avgRowHeight](%%jQueryApiUrl%%/ui.iggrid#options:avgRowHeight) | Used for row virtualization in **fixed mode**. Determines the average value in pixels that will be used to calculate how many rows to render. All row heights will be automatically set to this value.
 Average Column Width| [avgColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:avgColumnWidth) | Used for column virtualization in **fixed mode**. This is the average value in pixels for the column widths.
 
-## <a id="fixed"></a> Enabling and Configuring Fixed Virtualization
+## <a id="fixed-row"></a> Enabling and Configuring Fixed Row Virtualization
 
-Fixed Virtualization is enabled by setting the virtualization option of the `igGrid` control to true and virtualization mode to Fixed. This enables virtualization for both rows and columns. Alternatively, you can enable virtualization on rows only by setting the respective property: [`rowVirtualization`](%%jQueryApiUrl%%/ui.iggrid#options:rowVirtualization).
+Fixed Row Virtualization is enabled by setting the [`rowVirtualization`](%%jQueryApiUrl%%/ui.iggrid#options:rowVirtualization) option of the `igGrid` control to true.
 
->**Note:** Fixed Row Virtualization requires avgRowHeight and grid height to be set. <br/> Fixed Column Virtualization requires the grid and all its columns to have width set (if columns don't have explicit width set then the defaultColumnWith option should be set). Also the avgColumnWidth should be set.
+It requires the following additional options to be set:
 
-When row virtualization is used, all rows have the same height. If average row height is not set correctly, the last rows may be cut off (not shown) in the grid. 
-This same issue exists with column widths, when column virtualization is used. For this reason, it's required to set manually the row height property for row virtualization and the column widths and average column widths for column virtualization. The correct value is established by calculating the average row height and the average column width, respectively. See Configuring the average rows’ height and columns’ width for details.
+- [height](%%jQueryApiUrl%%/ui.iggrid#options:height)
+- [avgRowHeight](%%jQueryApiUrl%%/ui.iggrid#options:avgRowHeight)
 
-### <a id="fixed-configuring-rows-columns"></a> Configuring the average rows’ height and average columns’ width 
+When row virtualization is used, all rows have the same height. That height is determined by the avgRowHeight option, which needs to be calculated and set by the user. Please refer to the 'Configuring the average rows’ height' section for more details on how this option should be calculated.
+Note that if average row height is not set correctly, the last rows may be cut off (not shown) in the grid.
 
-The average rows’ height and the columns’ average width are managed by the `avgRowHeight` and `avgColumnWidth` properties, respectively.
+### <a id="fixed-row-configuring"></a> Configuring the average rows’ height
 
-The `avgRowHeight` property determines the average height of the displayed rows in the grid.
-
-The `avgColumnWidth` property determines the average width of the displayed columns in the grid.
-
-The general rule is to always set an `avgRowHeight` to value that is evenly divisible by the value of the height of the grid. An important aspect of configuring Fixed virtualization configuration is the process of determining the value for the `avgRowHeight` property. By default, the grid tries to set a reasonable row height that will work for most data sources.
+An important aspect of configuring Fixed virtualization configuration is the process of determining the value for the `avgRowHeight` property. The `avgRowHeight` property determines the average height of the displayed rows in the grid.
+The general rule for setting this option is to always set an `avgRowHeight` to value that is evenly divisible by the value of the height of the grid. 
+By default, the grid sets a row height of 30px that would work for most data sources, however a greater `avgRowHeight` value may have to be set in order to accommodate word wrapping.
 
 Example:
 
 Grid Height: 600px => `avgRowHeight`: 30, or 15, or 60.
 
-A greater `avgRowHeight` value may be necessary in order to accommodate word wrapping.
 
-If you are using column virtualization you have to calculate `avgColumnWidth` similarly to `avgRowHeight`.
-
-Example:
-
-Grid Width: 300px, example column widths for 4 columns: 100px, 200px, 100px, 200px => `avgColumnWidth`: 150
-
->**Note:** Note that the columns visible widths must be equal to the igGrid’s width.
-
-
-### <a id="fixed-property-settings"></a> Property settings
-
-The following table maps the desired behaviors to property settings.
-
-In order to: | Use this property: | And set it to:
----|---|---
-Enable Virtualization | [virtualization](%%jQueryApiUrl%%/ui.iggrid#options:virtualization) | true
-Enable Fixed Virtualization | [virtualizationMode](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) | fixed
-Set the grid height (Required for row virtualization) | [height](%%jQueryApiUrl%%/ui.iggrid#options:height) | the desired grid height in pixels
-Enable only Row Virtualizaion | [rowVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:rowVirtualization) | true
-Set the average row height (Required for row virtualization) | [avgRowHeight](%%jQueryApiUrl%%/ui.iggrid#options:avgRowHeight) | the calculated row height in pixels
-Enable Column Virtualization | [columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) | true
-Set the grid width (Required for column virtualization) | [width](%%jQueryApiUrl%%/ui.iggrid#options:width) | the desired grid width in pixels
-Set the column width (Required for column virtualization) | [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth ) | The default column width that will be applied to all columns that don't have explictly set width.
-Set the average column width (Required for column virtualization)| [avgColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:avgColumnWidth) | the calculated column width in pixels
 
 ### <a id="fixed-row-example"></a> Fixed Row Virtualization Example
 
@@ -115,9 +79,9 @@ The following table demonstrates how to configure Fixed Row Virtualization.
 Property | Value
 ---|---
 [rowVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:rowVirtualization) | true
-[virtualizationMode](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) | fixed
+[virtualizationMode](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) (Optional) | fixed (Default value)
 [height](%%jQueryApiUrl%%/ui.iggrid#options:height) | 600px
-[avgRowHeight](%%jQueryApiUrl%%/ui.iggrid#options:avgRowHeight) | 30px
+[avgRowHeight](%%jQueryApiUrl%%/ui.iggrid#options:avgRowHeight) (Optional)| 30px (Default value)
 
 #### Code
 
@@ -130,7 +94,7 @@ $("#grid1").igGrid({
         rowVirtualization: true,
         virtualizationMode: ‘fixed’,
         height: ‘600px’,
-        avgRowHeight: ‘30px’,
+        avgRowHeight: ‘30px’
 });
 ```
 
@@ -139,21 +103,43 @@ $("#grid1").igGrid({
 ```csharp
 <%=Html.Infragistics().Grid(Model).ID("grid1").LoadOnDemand(false).AutoGenerateColumns(false).AutoGenerateLayouts(false).PrimaryKey("ProjectID").Columns(column => 
     {
-        column.For(x => x.ProjectID)
-			.HeaderText("ProjectID").ToString());
-        column.For(x => x.Name)
-			.HeaderText("Name"));
-        column.For(x => x.StartDate)
-			.HeaderText("StartDate");
-        column.For(x => x.EndDate)
-			.HeaderText("EndDate"));
+        column.For(x => x.ProjectID).HeaderText("ProjectID");
+        column.For(x => x.Name).HeaderText("Name");
+        column.For(x => x.StartDate).HeaderText("StartDate");
+        column.For(x => x.EndDate).HeaderText("EndDate");
     })
     .Height("600px")
-	.RowVirtualization(true)
-	.VirtualizationMode(VirtualizationMode.Fixed)
+    .RowVirtualization(true)
+    .VirtualizationMode(VirtualizationMode.Fixed)
     .AvgRowHeight("30px")
 }).DataBind().Render() %>
 ```
+## <a id="fixed-column"></a> Enabling and Configuring Fixed Column Virtualization
+
+Fixed Column Virtualization is enabled by setting the [`columnVirtualization`](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) option of the `igGrid` control to true. 
+When enabled it also **enables fixed row virtualization**.
+
+It requires the following additional options to be set:
+
+- [width](%%jQueryApiUrl%%/ui.iggrid#options:width)
+- [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) or column [width](%%jQueryApiUrl%%/ui.iggrid#options:columns.width) for each column.
+- [avgColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:avgColumnWidth)
+- [height](%%jQueryApiUrl%%/ui.iggrid#options:height)(due to auto enabling row virtualization)
+- [avgRowHeight](%%jQueryApiUrl%%/ui.iggrid#options:avgRowHeight)(due to auto enabling row virtualization)
+
+When fixed column virtualization is enabled the sum of the visible column widths should be equal to the grid width so that the currentlt visible columns are fully visible in the view port.
+The avgColumnWidth option should also be calculated and set in order for the horizontal scrollbar width to be correct and to allow scrolling to the last visible column.
+Please refer to the 'Configuring the average columns' width’ section for more details on how it should be calculated.
+
+### <a id="fixed-configuring-columns"></a> Configuring the average columns' width
+
+The 'avgColumnWidth' option determines the average width of the columns defined in the grid. This option should be set to the average width of the columns in the current grid configuration in pixels.
+
+Example:
+
+Grid Width: 300px, example column widths for 4 columns: 100px, 200px, 100px, 200px => `avgColumnWidth`: 150
+
+
 ### <a id="fixed-column-example"></a> Fixed Column Virtualization Example
 
 The following table demonstrates how to configure Fixed Column Virtualization.
@@ -161,10 +147,12 @@ The following table demonstrates how to configure Fixed Column Virtualization.
 Property | Value
 ---|---
 [columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) | true
-[virtualizationMode](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) | fixed
+[virtualizationMode](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) (Optional)| fixed (Default Value)
 [width](%%jQueryApiUrl%%/ui.iggrid#options:width) | 400px
 [defaultColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:defaultColumnWidth) | 200px
-[avgColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:avgColumnWidth) | 200px
+[avgColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:avgColumnWidth)| 200px
+[height](%%jQueryApiUrl%%/ui.iggrid#options:height) | 600px
+[avgRowHeight](%%jQueryApiUrl%%/ui.iggrid#options:avgRowHeight) (Optional) | 30px (Default Value)
 
 >**Note:** Note that instead of defaultColumnWidth you can instead define specific width for each column.
 
@@ -177,10 +165,11 @@ The following code configures the setting in the Example.
 ```js
 $("#grid1").igGrid({
         columnVirtualization: true,
-        virtualizationMode: ‘fixed’,
         width: ‘400px’,
+        height: ‘600px’,
         defaultColumnWidth: ‘200px’,
-        avgColumnWidth: ‘200px’
+        avgColumnWidth: ‘200px’,
+        avgRowHeight: ‘30px’        
 });
 ```
 
@@ -195,9 +184,10 @@ $("#grid1").igGrid({
         column.For(x => x.EndDate).HeaderText("EndDate");
     })
     .Width("400px")
+    .Height("600px")
     .DefaultColumnWidth("200px")
 	.ColumnVirtualization(true)
-	.VirtualizationMode(VirtualizationMode.Fixed)
+    .AvgRowHeight("30px")
     .AvgColumnWidth("200px")
 }).DataBind().Render() %>
 ```
@@ -206,20 +196,13 @@ As a result you'll have only two columns rendered in the current data view at a 
 
 ## <a id="continuous"></a> Enabling and Configuring Continuous Virtualization
 
-Continuous Virtualization is enabled by setting the virtualization option of the igGrid control to true and virtualization mode to continuous. The height of the grid is configurable.
+Continuous Virtualization is enabled by setting the [rowVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:rowVirtualization) option of the igGrid control to "true" and [virtualizationMode](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) to continuous.
+
+It requires the following additional options to be set:
+
+- [height](%%jQueryApiUrl%%/ui.iggrid#options:height)
+
 > **Note:** Column virtualization is not supported with continuous virtualization.
-
-
-### <a id="continuous-property-settings"></a> Property settings
-
-The following table maps the desired behaviors to property settings.
-
-In order to: | Use this property: | And set it to:
----|---|---
-Enable Virtualization | [virtualization](%%jQueryApiUrl%%/ui.iggrid#options:virtualization) | true
-Enable Continues Virtualization | [virtualizationMode](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) | continuous
-Set height | [height](%%jQueryApiUrl%%/ui.iggrid#options:height) | the desired grid height in pixels
-
 
 ### <a id="continuous-example"></a> Example
 
@@ -227,7 +210,7 @@ The following table demonstrates how to configure Continuous Virtualization for 
 
 Property | Value
 ---|---
-[virtualization](%%jQueryApiUrl%%/ui.iggrid#options:virtualization) | true
+[rowVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:rowVirtualization) | true
 [virtualizationMode](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) | continuous
 [height](%%jQueryApiUrl%%/ui.iggrid#options:height) | 400px
 
@@ -241,7 +224,7 @@ The following code configures the setting in the Example.
 
 ```js
 $("#grid1").igGrid({
-        virtualization: true,
+        rowVirtualization: true,
         virtualizationMode: ‘continuous’,
         height: ‘400px’
 });
@@ -252,18 +235,16 @@ $("#grid1").igGrid({
 ```csharp
 <%=Html.Infragistics().Grid(Model).ID("grid1").LoadOnDemand(false).AutoGenerateColumns(false).AutoGenerateLayouts(false).PrimaryKey("ProjectID").Columns(column => 
     {
-        column.For(x => x.ProjectID)
-			.HeaderText(this.GetGlobalResourceObject("Grid", "ProjectID").ToString());
-        column.For(x => x.Name)
-			.HeaderText(this.GetGlobalResourceObject("Grid", "Name").ToString());
-        column.For(x => x.StartDate)
-			.HeaderText(this.GetGlobalResourceObject("Grid", "StartDate").ToString());
-        column.For(x => x.EndDate)\
-			.HeaderText(this.GetGlobalResourceObject("Grid", "EndDate").ToString());
+        column.For(x => x.ProjectID).HeaderText("ProjectID");
+        column.For(x => x.Name).HeaderText("Name");
+        column.For(x => x.StartDate).HeaderText("StartDate");
+        column.For(x => x.EndDate).HeaderText("EndDate");
     })
-	.Virtualization(true)
-	.VirtualizationMode(VirtualizationMode.Continuous)
-}).DataBind().Height("400px").Render() %>
+    .RowVirtualization(true)
+    .VirtualizationMode(VirtualizationMode.Continuous)
+    .Height("400px")
+    .DataBind().Render()
+ %>
 ```
 
 
@@ -275,7 +256,7 @@ $("#grid1").igGrid({
 The following topics provide additional information related to this topic.
 
 - [Virtualization Overview](igGrid-Virtualization-Overview.html): This topic introduces the Virtualization feature of the `igGrid` control.
-
+- [Feature Compatibility Matrix (igGrid)](Feature-Compatibility-Matrix(igGrid).html): This topic shows the compatibility between `igGrid` features when enabled at the same time.
 
 ### <a id="samples"></a> Samples
 
