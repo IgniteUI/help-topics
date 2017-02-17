@@ -116,7 +116,7 @@ When you use a string value for the `minValue`, `maxValue` and the `value` optio
 
 ## <a id="date-time-formats"></a> Date and Time Formats
 
-The [`dateInputFormat`](%%jQueryApiUrl%%/ui.igdateeditor#options:dateInputFormat) and [`dateDisplayFormat`](%%jQueryApiUrl%%/ui.igdateeditor#options:dateDisplayFormat) options control how dates are formatted when the when the control is being edited or is simply displaying a value. Display format will match the input one if not provided. 
+The [`dateInputFormat`](%%jQueryApiUrl%%/ui.igdateeditor#options:dateInputFormat) and [`dateDisplayFormat`](%%jQueryApiUrl%%/ui.igdateeditor#options:dateDisplayFormat) options control how dates are formatted when the control is being edited or is simply displaying a value. Display format will match the input one if not provided. 
 
 Supported formats follow the general patterns for [Formatting Dates](Formatting-Dates-Numbers-and-Strings.html) where presets like `"date"`(default) or `"dateTime"` map to the patterns defined by the regional options. The format can also be defined using a common set of date specifiers - for example a format of `"dd/MM/yyyy HH:mm"` would display a date similar to "25/01/2017 16:35" where `"MM"` displays the month number (`"MMM"` would be a short name instead), `"HH"` displays the hour number in 24 hour format and `"mm"` the minute numbers. Characters besides the date parts (such as a space or ":") are used as is and the flags themselves can be escaped to be used as literals as well.
 
