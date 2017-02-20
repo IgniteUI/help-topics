@@ -147,10 +147,6 @@ The following table maps the desired configuration to the property settings that
 </table>
 
 ###<a id="example"></a> Example
-
-The title and subtitle feature of the igChart control allows you to add information to the top section of the chart control.
-When adding a title and/or subtitle to the chart control, the content of the chart is automatically resized to allow for the title and/or subtitle information.
-
 Following are a chart title settings' table and an example that implements this configuration:
 
 <table class="table">
