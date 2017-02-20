@@ -307,10 +307,10 @@ The following topics provide additional information related to this topic.
 
 ### <a id="samples"></a> Samples
 
-The following sample provides additional information related to this topic.
-
-- [Grid Knockout Integration](%%SamplesUrl%%/grid/bind-grid-with-ko): This sample demonstrates support of knockout.js bindings with the `igGrid` widget. In this implementation, the selected row of the grid is bound using a standard two-way binding.
-
+This sample demonstrates support of knockout.js bindings with the `igGrid` widget. In this implementation, the selected row of the grid is bound using a standard two-way binding:
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/grid/bind-grid-with-ko](%%SamplesEmbedUrl%%/grid/bind-grid-with-ko)
+</div>
 
 
 ### <a id="resources"></a> Resources
