@@ -118,6 +118,8 @@ As noted previously the feature was renamed from “Load on Demand” to “Appe
    -   In Controller – the GridLoadOnDemand class is renamed to [GridAppendRowsOnDemand](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridAppendRowsOnDemand.html)
     -   In View – the GridLoadOnDemand method is renamed to [GridAppendRowsOnDemand](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridFeatureBuilder`1~AppendRowsOnDemand.html)
 
+
+
 ## <a id="related-content"></a>Related Content
 
 ### <a id="topics"></a>Topics
@@ -128,7 +130,9 @@ The following topics provide additional information related to this topic.
 
 ### <a id="samples"></a>Samples
 
-The following samples provide additional information related to this topic.
+The igGrid Append Rows On Demand feature adds functionality to append data to the grid. It works in two modes: Automatic and Button. Use the upper grid to experience the Automatic mode. Scroll to the bottom of the grid to see that the new data will be appended to the grid. Use the bottom grid to experience the Button mode. Scroll to the bottom of the grid and then press the "Load more data" button to append new data.
 
-- [Append Rows on Demand](%%NewSamplesUrl%%/grid/append-rows-on-demand)
-                    
+
+<div class="embed-sample">
+    [Append Rows on Demand](%%SamplesEmbedUrl%%/grid/append-rows-on-demand)
+</div>

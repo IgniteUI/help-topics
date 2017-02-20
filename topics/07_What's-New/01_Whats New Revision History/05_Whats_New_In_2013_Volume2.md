@@ -660,7 +660,7 @@ With the `igGrid` Load-on-Demand feature, currently in CTP, the data is not load
 
 #### Related Sample
 
--   [Load-on-Demand](%%SamplesUrl%%/grid/append-rows-on-demand)
+-   [Load-on-Demand](%%SamplesEmbedUrl%%/grid/append-rows-on-demand)
 
 
 
