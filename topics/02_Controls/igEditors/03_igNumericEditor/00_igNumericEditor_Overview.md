@@ -98,14 +98,13 @@ The `igNumericEditor` includes the following characteristics:
          .DataMode(NumericEditorDataMode.Int)
          .MinValue(0)
          .Value(0)
-         .ButtonType(TextEditorButtonType.Spin)
          .Width(120)
          .Render())
-    ```
+    ``` 
 
 5.  Run the web page to view the basic setup of the `igNumericEditor` control.
 
-##Specific options
+## Specific options
 
 Although the `igNumericEditor` shares a lot of properties with the other editors it possesses quite a number of unique ones. Let's start with the `dataMode` property. This property can be used to set or get the type of  the editor's input value. The default value is "double", but you can choose between int, float, byte and other. The full list of values can be seen in the [igNumericEditor jQuery API](%%jQueryApiUrl%%/ui.igNumericEditor). 
 
@@ -113,15 +112,83 @@ Another specific option is the `decimalSeparator` which allows you to choose wha
 
 ```js
 $('#divEditor').igNumericEditor({
-	width: "300",
-	groups: [1,2,3],
-	groupSeparator:"-"
+    width: "300",
+    groups: [1,2,3],
+    groupSeparator:"-"
 });
 ```
 
 ![](images/igNumericEditor_numericGroups.png)
 
- 
+### Configure drop-down list
+
+In case you want to have a drop-down list with predefined values to work with, you can populate it via `listItems` option. Items in the list can be of type string, number or object. The items are directly rendered without any casting, or manipulation. You can go further and limit the values igNumericEditor allows, to the ones contained in the list of items. This can be achieved setting `isLimitedToListValues` option.
+
+**HTML:**
+
+```html
+<input id="federalTax"/>
+```
+
+**Javascript:**
+
+```js
+<script type="text/javascript">
+    $("#federalTax").igNumericEditor({
+        listItems: [10, 15, 25, 28, 33, 35],
+        value:10,
+        isLimitedToListValues: true
+    });
+</script>
+```
+
+**In Razor:**
+
+```csharp
+@(Html.Infragistics().NumericEditor()
+    .ID("federalTax")
+    .Value(10)
+    .ListItems(new List<object>() { 10, 15, 25, 28, 33, 35 })
+    .IsLimitedToListValues(true)
+    .Render())
+```
+
+### Configure spin functionality
+
+In order to make the editor more user friendly, we expose several buttons via `buttonType` option. These include spin, clear and drop-down button. Notice this option can be set only on initialization. Combinations like 'dropdown, spin' or 'spin, clear' are supported too. In case you are using spin button, consider configuring `spinDelta` option as well. It will specify what step should be used when the values are edited via the spin button. Notice the `spinDelta` value can not be negative. Non integer value is supported only for dataMode double and float.	 
+
+**HTML:**
+
+```html
+<input id="stateTax"/>
+```
+
+**Javascript:**
+
+```js
+<script type="text/javascript">
+    $("#stateTax").igNumericEditor({
+        buttonType: 'spin',
+        spinDelta:0.01,
+        minValue:-5.53,
+        maxValue:5.52,
+        value:-5.00
+});
+</script>
+```
+
+**In Razor:**
+
+```csharp
+@(Html.Infragistics().NumericEditor()
+    .ID("stateTax")
+    .ButtonType(TextEditorButtonType.Spin)
+    .SpinDelta(0.01)
+    .MinValue(-5.53)
+    .MaxValue(5.53)
+    .Value(-5.00)
+    .Render())
+```
 
 >**Note:** Full list of properties can be found in the [API documentation](%%jQueryApiUrl%%/ui.igNumericEditor)
 
