@@ -20,7 +20,7 @@ This topic introduces the Virtualization feature of the `igGrid`™ control.
 
 ## Introduction
 
-Virtualization is a feature of the `igGrid` that boosts performance when displaying large data sets containing thousands of records. It works by reducing the number of the DOM objects in-memory and reusing them while user scrolls and operates with the data. Virtualization is local feature, which means that it works on the data, already available on the browser side.
+Virtualization is a feature of the `igGrid` that boosts performance when displaying large data sets containing thousands of records. It works by reducing the number of the DOM objects in-memory and reusing them while user scrolls and operates with the data. Virtualization is a local feature, which means that it works on the data, already available on the client side.
 The `igGrid` supports two virtualization types – fixed and continuous. They are described in details in the following sections.
 
 ## Supported Virtualization Types
@@ -51,7 +51,7 @@ The picture on the left demonstrates a grid with 500 records. The picture on the
 
 **Related Topics:**
 
--   [Enabling and Configuring Virtualization (Fixed)](igGrid-Enabling-and-Configuring-Virtualization.html#fixed)
+-   [Enabling and Configuring Virtualization (Fixed)](igGrid-Enabling-and-Configuring-Virtualization.html#fixed-row)
 
 ### <a id="fixed-column"></a> Fixed Column Virtualization 
 
@@ -72,7 +72,7 @@ The picture on the left demonstrates a grid with 25 columns and 500 records load
 
 **Related Topics:**
 
--   [Enabling and Configuring Virtualization (Column)](igGrid-Enabling-and-Configuring-Virtualization.html#column)
+-   [Enabling and Configuring Virtualization (Column)](igGrid-Enabling-and-Configuring-Virtualization.html#fixed-column)
 
 ### <a id="continuous"></a> Continuous Row Virtualization 
 
@@ -114,7 +114,7 @@ The following samples provide additional information related to this topic.
 
 - [Virtualization (Fixed)](%%SamplesUrl%%/grid/virtualization-fixed): This sample demonstrates the HTML virtualization capabilities of the `igGrid` using fixed number of rows.
 
-- [Continuous Virtualization](%%SamplesUrl%%/grid/virtualization-continuous): This sample demonstrates the Continuous Virtualization capabilities of the `igGrid` control.
+- [Virtualization (Continuous)](%%SamplesUrl%%/grid/virtualization-continuous): This sample demonstrates the Continuous Virtualization capabilities of the `igGrid` control.
 
 
 
