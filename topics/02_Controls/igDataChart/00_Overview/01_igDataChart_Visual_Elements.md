@@ -193,8 +193,14 @@ Tooltip
     </tbody>
 </table>
 
+### Example
 
+This sample configures several of the elements, available in the igDataChart control.
+Chart elements such as axis, labels, grid lines, grid stripes, zoom bars, series, trend lines, indicators and crosshairs are all available to enhance the control's presentation.
 
+<div class="embed-sample">
+   [Chart Elements](%%SamplesEmbedUrl%%/data-chart/chart-elements)
+</div>
 
 
 ##Related Content
