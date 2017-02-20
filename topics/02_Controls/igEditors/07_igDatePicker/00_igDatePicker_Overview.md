@@ -119,6 +119,14 @@ The last scenario that we are going to pay attention to is the wrong value. If y
 When you use a string value for the `minValue`, `maxValue` and the `value` options, the editors will use the JavaScript Date Object constructor to create date object out of it and use it as a value for the corresponding option.
  >**Note:** These properties don't use the `displayInputFormat` setting to extract the date. 
 
+
+### Configuration examples:
+The sample below shows to configure `igDatePicker` with different [`dataMode`](%%jQueryApiUrl%%/ui.igdatepicker#options:dataMode) settings and the expected submitted values.
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/editors/date-picker](%%SamplesEmbedUrl%%/editors/date-picker)
+</div>
+
 ## Related Links
 
 -   [igDatePicker Sample](%%SamplesUrl%%/editors/date-picker-overview)
