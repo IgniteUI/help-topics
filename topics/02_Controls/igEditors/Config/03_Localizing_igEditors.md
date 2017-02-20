@@ -31,3 +31,8 @@ If you set the 'regional' option when using the igNumericEditor, igCurrencyEdito
 <div class="embed-sample">
    [<link text>](%%SamplesEmbedUrl%%/editors/localizing-editors)
 </div>
+
+##<a id="_Related_Topics"></a>Related Topics
+
+-   [Editors Help Overview](igeditors-landingpage.html)
+-   [Customizing the Localization of Ignite UI Controls](customizing-the-localization-of-netadvantage-for-jquery-controls.html)
