@@ -112,9 +112,9 @@ Figure 1 shows the data source state after it is data-bound.
 ![](../../../04_Data-Sources/igDataSource/images/Binding_to_XML_01.png)
 
 
-## Related Samples
-
--   [XML Binding](%%SamplesUrl%%/grid/xml-binding)
+<div class="embed-sample">
+   [XML Binding](%%SamplesEmbedUrl%%/grid/xml-binding)
+</div>
 
 ## Related Topics
 
