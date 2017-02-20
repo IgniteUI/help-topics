@@ -171,7 +171,7 @@ Following are a chart title settings' table and an example that implements this 
 		</tr>
 		<tr>
 			<td>titleTextStyle</td>
-			<td>“20pt Verdona”</td>
+			<td>“20pt Arial</td>
 		</tr>
 		<tr>
 			<td>subtitle</td>
@@ -179,11 +179,11 @@ Following are a chart title settings' table and an example that implements this 
 		</tr>
 		<tr>
 			<td>subtitleTextColor</td>
-			<td>“#7446b9”</td>
+			<td>“#2e9ca6”</td>
 		</tr>
 		<tr>
 			<td>subtitleTextStyle</td>
-			<td>“14pt Verdona”</td>
+			<td>“14pt Arial</td>
 		</tr>
 	</tbody>
 </table>
