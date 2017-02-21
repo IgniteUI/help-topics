@@ -34,11 +34,11 @@ The Ignite UI™ grid, or `igGrid`, Paging feature allows you to divide your dat
 
 **Figure 1: Typical grid paging UI**
 
-![](images/igGrid_Paging_01.png)
+![](images/footer_pager.png)
 
 **Figure 2: Paging with a dropdown selector**
 
-![](images/igGrid_Paging_02.png)
+![](images/footer_pager_dropdown.png)
 
 > **Note:** The grid’s Paging feature is implemented as a jQuery UI widget, and therefore follows the standard lifecycle typical of a jQuery UI widget.
 
@@ -313,7 +313,7 @@ pagerRendered | Fired after the pager renders its elements. | Same as the `pager
 
 **Figure 1: Location of paging UI elements**
 
-![](images/igGrid_Paging_03.png)
+![](images/paging_areas.png)
 
 
 
@@ -429,9 +429,12 @@ When focus is on the page index drop down the list of available page indexes wil
 -   [Filtering (igGrid)](igGrid-Filtering.html)
 -   [Sorting Overview (igGrid)](igGrid-Sorting-Overview.html)
 
-### <a id="samples"></a> Samples
+### <a id="samples"></a> Demo
 
--   [Paging](%%SamplesUrl%%/grid/paging)
+<div class="embed-sample">
+   [igGrid Paging](%%SamplesEmbedUrl%%/grid/paging)
+</div>
+
 
  
 
