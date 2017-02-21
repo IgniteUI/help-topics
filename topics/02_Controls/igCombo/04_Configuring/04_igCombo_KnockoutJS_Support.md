@@ -219,7 +219,8 @@ The following topics provide additional information related to this topic.
 
 -	[Knockout Support (Editors)](Configuring-Knockout-Support-%28Editors%29.html): This topic explains how to configure Ignite UI editor controls to bind to View-Model objects managed by the [Knockout library](http://knockoutjs.com/).
 
->**Note:**  The Knockout extensions do not work with the ASP.NET MVC Helpers.
+-	[Migrating to the New Combo](igCombo-Migrating-To-The-New-Combo.html#ko_changes): This topic aims to help with migration from old combo to the new one. The document includes the changes in the Knockout integration of the igCombo.
+
 
 ### <a id="samples"></a> Samples
 
@@ -231,8 +232,7 @@ The following samples provide additional information related to this topic.
    [%%SamplesEmbedUrl%%/combo/bind-combo-with-ko](%%SamplesEmbedUrl%%/combo/bind-combo-with-ko)
 </div>
 
-
--	[Migrating to the New Combo](igCombo-Migrating-To-The-New-Combo.html#ko_changes): This topic aims to help with migration from old combo to the new one. The document includes the changes in the Knockout integration of the igCombo.
+>**Note:**  The Knockout extensions do not work with the ASP.NET MVC Helpers.
 
 ### <a id="resources"></a> Resources
 
