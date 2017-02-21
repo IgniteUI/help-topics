@@ -47,6 +47,7 @@ This topic contains the following sections:
 -   [**Controls with HTML content**](#controls-with-html-content)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
+    -   [Samples](#samples)
 
 ## <a id="introduction"></a>Introduction
 
@@ -361,6 +362,11 @@ The following topics provide additional information related to this topic.
 
 -   [Conditional and Advanced Templating with AngularJS](Conditional-and-Advanced-Templating-with-AngularJS.html)
 
+### <a id="samples"></a>Samples
 
+The following samples provide additional information related to this topic.
+
+-   [Ignite UI directives for AngularJS samples](http://igniteui.github.io/igniteui-angular/)
+-   [All Ignite UI control samples](%%SamplesUrl%%)
 
                     
