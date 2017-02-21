@@ -280,7 +280,7 @@ Column Virtualization
 ![](../../../images/images/positive.png "Column Virtualization/Responsive")
 			</td>
             <td class="column-virtualization resizing">
-![](../../../images/images/positive.png "Column Virtualization/Resizing")
+![](../../../images/images/negative.png "Column Virtualization/Resizing")
 			</td>
             <td class="column-virtualization row-selectors">
 ![](../../../images/images/negative.png "Column Virtualization/Row-Selectors")
@@ -1028,7 +1028,7 @@ Resizing
 ![](../../../images/images/positive.png "Resizing/Continuous Virtualization")
 			</td>
             <td class="resizing column-virtualization">
-![](../../../images/images/positive.png "Resizing/Column Virtualization")
+![](../../../images/images/negative.png "Resizing/Column Virtualization")
 			</td>
             <td class="resizing unbound-columns">
 ![](../../../images/images/positive.png "Resizing/Unbound Columns")
