@@ -373,7 +373,7 @@ The following table summarizes the properties of the     `assigningCategoryMarke
 
 ### <a id="event-example"></a>Example
 
-The following example shows using the `assigningCategoryStyle` event to change the highlighting feature to fade non highlighting columns instead of changing the highlighting column.
+The following example shows the usage of the `assigningCategoryStyle` event to change the highlighting feature to fade non highlighting columns instead of changing the highlighting column.
 
 <div class="embed-sample">
    [Custom Series Highlighting](%%SamplesEmbedUrl%%/data-chart/custom-series-highlighting)
