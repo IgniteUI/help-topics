@@ -195,7 +195,7 @@ Tooltip
 
 ### Sample
 
-This sample configures several of the elements, available in the igDataChart control.
+This sample configures several of the elements, available in the `igDataChart` control.
 Chart elements such as axis, labels, grid lines, grid stripes, zoom bars, series, trend lines, indicators and crosshairs are all available to enhance the control's presentation.
 
 <div class="embed-sample">
