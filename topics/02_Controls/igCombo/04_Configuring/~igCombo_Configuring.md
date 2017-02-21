@@ -33,12 +33,13 @@ The topics in this group explain how to configure Ignite UI® combo control.
 
 -	[Optimizing Performance (igCombo)](igCombo-Optimize-Performance.html): This topic demonstrates how to enable item virtualization for maximum performance while scrolling the `igCombo` control.
 
+-	[ASP.NET MVC configuration (igCombo)](configuring-asp.net-mvc): This topic shows how the `igCombo` is used in a basic ASP.NET MVC scenario.
 
 
 
 
- 
 
- 
+
+
 
 
