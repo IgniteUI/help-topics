@@ -16,23 +16,17 @@ Localization resources for the controls are in Bulgarian, Russian, Japanese, Ger
 
 The regional settings, on the other hand, provide region specific formats for dates, numbers, as well as currency symbols, floating point symbols, decimal separators, default decimal rounding, etc. These reside in the ../js/modules/i18n/regional (where js is the root folder for the JavaScript files in the Ignite UI program installation path).
 
-## Topic Overview
-
-In this sample we show how a culture can be set to the editors' `regional` option to change the default formatting of dates, numbers and currencies. Three regions are configured here (United States, Japan and Tamil, India) and there are many more to choose from in the infragistics.ui.regional-i18n.js files. 
-
 ## Use cases
 
 The `regional` option allows you to provide great experience to your users if you are targeting a specific geographic region or culture. 
 
-The `igDatePicker` and the `igDateEditor` are the two editors which look is affected the most by the `regional` option. If you need to be sure that your users from a specific region will see the editors in the context they are expecting to see it, just set the desired regional value and the editors will show the month names and the day names in the language the region is using. This will also update the labels of the buttons that your users can interact with - the next and previous month buttons as well as the 'open calendar' button in the `igDatePicker` control. 
+The `igDatePicker` and the `igDateEditor` are the two editors which look is affected the most by the `regional` option. If you need to be sure that your users from a specific region will see the editors in the context they are expecting to see it, just set the desired regional value and the editors will show the date format appropriate for the culture.
 
-The `regional` option guarantees you that not only the language that the controls will use is correct but also the culture. This means that you shouldn't worry what is the date format that your users are used to, what day is considered to be the first of the week or if the language of your users is written right-to-left. You just need to set the option and the editors will be setup correctly.
-
-The other editors also have their own specifics when they need to be shown to users from another culture. 
+For the `igDatePicker` the `regional` option sets the month names and the day names in the language, what day is considered to be the first of the week or if the language of your users is written right-to-left. This will also update the `igDatePicker` calendar labels like the next and previous month buttons. 
 
 If you set the `regional` option when using the `igNumericEditor`, `igCurrencyEditor` or `igPercentEditor`, the component will use the correct negative pattern, decimal separator and group separator for the given culture. It will also show the correct currency symbol and will provide the expected context to your users. 
 
-Here is an example how to initialize a datepicker control with Bulgarian regional settings:
+Here is an example how to initialize a `igDatePicker` control with Bulgarian regional settings:
 `$('#editor').igDatePicker({ regional: "bg" });`
 
 ## Editors' options affected by the `regional` setting
@@ -41,7 +35,7 @@ Below is the list of options that are changed by the `regional` setting:
 `igDatePicker`
 Option | Description
 --- | --- |
-"closeText"|The text of the `close` button of the datepicker. Have in mind that you must enable the `showButtonPanel` option in `datepickerOptions` option in order to show the button.|
+"closeText"|The text of the `close` button of the `igDatePicker` calendar. Have in mind that you must enable the `showButtonPanel` option in `datepickerOptions` option in order to show the button.|
 "prevText"|The text of the button that navigates to the previous month|
 "nextText"|The text of the button that navigates to the next month|
 "currentText"|The text of the button that selects the current day in the calendar. Have in mind that you must enable the `showButtonPanel` option in `datepickerOptions` option in order to show the button.|
@@ -97,6 +91,10 @@ Option | Description
 "percentGroupSeparator"|The character that is used as separator for groups (like thousands)|
 
 >This is the full list of all supported regions: "af", "ar", "az", "bg", "bs", "ca", "cs", "da", "de", "el", "en", "en-GB", "es", "es-419", "es-MX", "et", "fa", "fi", "fo", "fr", "fr-CH", "he", "hr", "hu", "hy", "id", "is", "it", "ja", "ko", "lt", "lv", "ms", "nl", "no", "pl", "pt-BR", "ro", "ru", "sk", "sl", "sq", "sr", "sr-SR", "sv", "ta", "th", "tr", "uk", "vi", "zh-CN", "zh-HK", "zh-TW"
+
+## Example
+
+In this sample we show how a culture can be set to the editors' `regional` option to change the default formatting of dates, numbers and currencies. Three regions are configured here (United States, Japan and Tamil, India) and there are many more to choose from in the infragistics.ui.regional-i18n.js file. 
 
 <div class="embed-sample">
    [%%SamplesEmbedUrl%%/editors/localizing-editors](%%SamplesEmbedUrl%%/editors/localizing-editors)
