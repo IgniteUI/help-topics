@@ -477,8 +477,8 @@ This feature allows the series to animate during the initialization of the `igDa
 
 #### Related Samples
 
--   [Transition Animations](%%SamplesUrl%%/data-chart/transition-animation)
--   [Transition Animations (Financial)](%%SamplesUrl%%/data-chart/transition-animation-financial)
+-   [Transition Animations](%%SamplesUrl%%/data-chart/)
+-   [Transition Animations (Financial)](igchart-transitions-in-animations.html#transition-example)
 
 ### <a id="hover-interactions"></a>Hover interactions
 
