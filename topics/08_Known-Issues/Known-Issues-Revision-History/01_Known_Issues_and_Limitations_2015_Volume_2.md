@@ -728,35 +728,13 @@ Virtualization and auto sizing of columns is not supported | Auto sizing columns
 Column setter is not working with column virtualization | Using column setter ($(".selector").igGrid("option", "columns", [/*columns definition*/]);) will result in horizontal scrollbar disappearing. | ![](../../images/images/negative.png)
 
 ### <a id="grid-responsive"></a> [igGrid – Responsive Web Design Mode](igGrid-Known-Issues.html)
-<table class="table table-striped">
-	<thead>
-		<tr>
-            <th>
-Issue
-			</th>
 
-            <th>
-Description
-			</th>
-
-            <th>
-Status
-			</th>
-        </tr>
-	</thead>
-	<tbody>   
-        <tr>
-        <td>RWD mode is not supported in IE8</td>
-        <td>RWD is unable to determine the mode in IE8. This feature is mainly targeted at mobile compatibility so it is not supported under IE8.</td>
-        <td>![](../../images/images/negative.png)</td>
-        </tr>     
-	<tr>
-	<td>RWD single column template is not supported with any of the grid features, excepts Paging.</td>    
-	<td>The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.</td>    
-        <td>![](../../images/images/negative.png)</td>    
-        </tr>
-    </tbody>
-</table>
+Issue | Description | Status
+------|-------------|-------
+RWD mode is not supported in IE8|RWD is unable to determine the mode in IE8. This feature is mainly targeted at mobile compatibility so it is not supported under IE8.|![](../../images/images/negative.png)
+RWD single column template is not supported with any of the grid features, excepts Paging.| The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.|![](../../images/images/negative.png) 
+The custom scrollbars of the igGrid are not updated on mobile touch devices when Responsive feature is enabled and the device is rotated.| The custom scrollbars height/width are not properly updated if the Responsive feature is enabled and the device is rotated so that the height/width changes.| ![](../../images/images/plannedFix.png)
+RWD mode is not supported with Fixed Row Virtualization and Column Virtualization | RWD mode only supports Continuous Virtualization |![](../../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 

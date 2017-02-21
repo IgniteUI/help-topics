@@ -742,40 +742,13 @@ Column setter is not working with column virtualization | Using column setter ($
 When fixed virtualization is enabled tabbing from outside of the grid's content into the rows will focus the first visible row as opposed to the actual first row in the grid. | When fixed virtualization is enabled and you tab from outside of the grid's content inside the rows the first visible row will take focus.  Same applies when Shift+Tab is used when focus is on an element after the grid - the focus will be set to the last visible cell.|![](../../images/images/negative.png)
 
 ### <a id="grid-responsive"></a> [igGrid – Responsive Web Design Mode](igGrid-Known-Issues.html)
-<table class="table table-striped">
-	<thead>
-		<tr>
-            <th>
-Issue
-			</th>
 
-            <th>
-Description
-			</th>
-
-            <th>
-Status
-			</th>
-        </tr>
-	</thead>
-	<tbody>   
-        <tr>
-        <td>RWD mode is not supported in IE8</td>
-        <td>RWD is unable to determine the mode in IE8. This feature is mainly targeted at mobile compatibility so it is not supported under IE8.</td>
-        <td>![](../images/images/negative.png)</td>
-        </tr>     
-	<tr>
-        <td>RWD single column template is not supported with any of the grid features, excepts Paging.</td>  
-	<td>The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.</td> 
-        <td>![](../images/images/negative.png)</td>
-        </tr>
-		<tr>
-        <td>The custom scrollbars of the igGrid are not updated on mobile touch devices when Responsive feature is enabled and the device is rotated.</td>  
-	<td>The custom scrollbars height/width are not properly updated if the Responsive feature is enabled and the device is rotated so that the height/width changes.</td> 
-        <td>![](../images/images/plannedFix.png)</td>
-        </tr>
-    </tbody>
-</table>
+Issue | Description | Status
+------|-------------|-------
+RWD mode is not supported in IE8|RWD is unable to determine the mode in IE8. This feature is mainly targeted at mobile compatibility so it is not supported under IE8.|![](../../images/images/negative.png)
+RWD single column template is not supported with any of the grid features, excepts Paging.| The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.|![](../../images/images/negative.png) 
+The custom scrollbars of the igGrid are not updated on mobile touch devices when Responsive feature is enabled and the device is rotated.| The custom scrollbars height/width are not properly updated if the Responsive feature is enabled and the device is rotated so that the height/width changes.| ![](../../images/images/plannedFix.png)
+RWD mode is not supported with Fixed Row Virtualization and Column Virtualization | RWD mode only supports Continuous Virtualization |![](../../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
