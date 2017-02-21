@@ -256,7 +256,7 @@ Column Virtualization
 ![](../../../images/images/negative.png "Column Virtualization/Column Moving")
 			</td>
             <td class="column-virtualization filtering">
-![](../../../images/images/positive.png "Column Virtualization/Filtering")
+![](../../../images/images/plannedFix.png "Column Virtualization/Filtering")
 			</td>
             <td class="column-virtualization groupby">
 ![](../../../images/images/negative.png "Column Virtualization/GroupBy")
@@ -460,7 +460,7 @@ Filtering
 ![](../../../images/images/positive.png "Filtering/Continuous Virtualization")
 			</td>
             <td class="filtering column-virtualization">
-![](../../../images/images/positive.png "Filtering/Column Virtualization")
+![](../../../images/images/plannedFix.png "Filtering/Column Virtualization")
 			</td>
             <td class="filtering unbound-columns">
 ![](../../../images/images/plannedFix.png "Filtering/Unbound Columns")

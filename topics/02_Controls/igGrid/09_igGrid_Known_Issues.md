@@ -337,6 +337,7 @@ Multi-column headers feature is not supported with [`columnVirtualization`](%%jQ
 Issue | Description | Status
 ------|-------------|-------
 [Simple Filtering does not work with column virtualization](#simple-filtering)| Filtering mode = "simple" does not work with column virtualization ([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) | ![](../../images/images/positive.png)
+Advanced Filtering not working with OR filtering expressions | The oData protocol does not support OR filtering expressions, therefore, advanced Filtering can be used with AND filtering expressions only. | ![](../images/images/negative.png)
 
 
 

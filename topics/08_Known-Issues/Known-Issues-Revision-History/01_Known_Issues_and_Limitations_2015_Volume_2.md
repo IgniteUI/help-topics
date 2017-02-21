@@ -927,7 +927,8 @@ Go up to [Known Issues and Limitations Summary](#summary)
 
 Issue | Description | Status
 ------|-------------|-------
-Advanced filtering not working with OR filtering expressions | The oData protocol does not support OR filtering expressions, therefore, advanced filtering can be used with AND filtering expressions only. | ![](../../images/images/negative.png)
+Simple Filtering does not work with Column Virtualization| Filtering mode = "simple" does not work with column virtualization ([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) | ![](../../images/images/positive.png)
+Advanced Filtering not working with OR filtering expressions | The oData protocol does not support OR filtering expressions, therefore, advanced Filtering can be used with AND filtering expressions only. | ![](../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
