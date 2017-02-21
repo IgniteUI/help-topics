@@ -38,7 +38,6 @@ This topic contains the following sections:
 -   [**Code Example: Grid Bound to a Knockout View-Model Object**](#view-model-bound)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
     -   [Resources](#resources)
 
 
@@ -182,6 +181,7 @@ To complete the procedure, you need the following:
 1.  Create the View-Model object
 2.  Apply the declared Knockout bindings to the page
 3.  Declare the binding properties for `igGrid` in the View
+4.  Result
 
 ### Steps
 
@@ -290,7 +290,11 @@ Following are the general conceptual steps for binding `igGrid` to a Knockout ob
 	    }">
 	</table>
 	```
-
+	
+4. **Result**
+<div class="embed-sample">
+   [KnockoutJS Configuration](%%SamplesEmbedUrl%%/grid/bind-grid-with-ko)
+</div>
 
 ## <a id="related-content"></a> Related Content
 
@@ -303,15 +307,6 @@ The following topics provide additional information related to this topic.
 - [Knockout Support (Editors)](Configuring-Knockout-Support-%28Editors%29.html): This topic explains how to configure Ignite UI editor controls to bind to View-Model objects managed by the Knockout library.
 
 - [Configuring Knockout Support (igTree)](igTree-KnockoutJS-Support.html): This topic explains how to configure the `igTree` control to bind to View-Model objects managed by the Knockout library.
-
-
-### <a id="samples"></a> Samples
-
-The following sample provides additional information related to this topic.
-
-- [Grid Knockout Integration](%%SamplesUrl%%/grid/bind-grid-with-ko): This sample demonstrates support of knockout.js bindings with the `igGrid` widget. In this implementation, the selected row of the grid is bound using a standard two-way binding.
-
-
 
 ### <a id="resources"></a> Resources
 
