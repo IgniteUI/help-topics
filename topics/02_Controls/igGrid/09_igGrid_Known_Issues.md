@@ -321,6 +321,7 @@ Issue | Description | Status
 ------|-------------|-------
 [Column Moving not working in IE 9](#column-moving-ie9) | Column Moving does not work in Internet Explorer 9. This is caused by a bug in the jQuery UI draggable introduced in version 1.7.2 and resolved in 1.8.6. For more information on the bug, see [jQuery UI Bug 5370](http://bugs.jqueryui.com/ticket/5370). | ![](../../images/images/positive.png)
 [Erroneous Column Moving behavior of in Google Chrome](#column-moving-chrome) | When the Column Moving feature is used with a jQuery UI version lower than 1.8.6, it causes the grid to be selected in Google Chrome™. | ![](../../images/images/positive.png)
+Column Moving is not working with Column Virtualization | Column Moving is supported only with Row Virtualization | ![](../../images/images/negative.png)
 
 
 
