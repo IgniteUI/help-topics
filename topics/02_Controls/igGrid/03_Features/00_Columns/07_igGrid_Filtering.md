@@ -92,19 +92,19 @@ $(document).delegate("#grid1", "iggridfilteringdatafiltering", function (evt, ui
 ```
 
 
-![](images/igGrid_Filtering_01.png)
+![](images/simple.png)
 
 Figure 1: Simple Filtering (mode: “simple”)
 
-![](images/igGrid_Filtering_02.png)
+![](images/advanced.png)
 
 Figure 2: Advanced Filtering (mode: “advanced”)
 
-![](images/igGrid_Filtering_03.png)
+![](images/dialog.png)
 
 Figure 3: Advanced Filtering dialog
 
-![](images/igGrid_Filtering_04.png)
+![](images/tooltip.png)
 
 Figure 4: Filtering tooltips (mode: “advanced”)
 
@@ -678,7 +678,7 @@ There are additional options that further affect the behavior and visualization 
 -	`filterImgIcon` - specifies the css class applied to the dropdown item when in simple filtering mode.
 -	`filterFunc` - specifies the custom comparing filter function(or name of a function) that will be used when the condition is applied.
  
- Listing 14: Example usage of custom conditions
+ Listing 14: Example usage of custom conditions with running sample
 
 
 **In JavaScript:**
@@ -720,7 +720,11 @@ $("#grid1").igGrid({
     ]
 });
 ```
- 
+ **Demo:**
+ <div class="embed-sample">
+   [igGrid Filtering Custom Conditions](%%SamplesEmbedUrl%%/grid/custom-conditions-filtering)
+</div>
+
 
 ## <a id="css"></a> Filtering CSS Classes
 
