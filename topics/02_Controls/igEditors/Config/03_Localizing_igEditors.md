@@ -14,11 +14,11 @@ There are two types of localization. First is for the localization resources in 
 
 Localization resources for the controls are in Bulgarian, Russian, Japanese, German, Spanish and French languages. These reside in js/modules/i18n (where js is the root folder for the JavaScript files in the Ignite UI program installation path). To get more into using the localization resources you can read the ["Customizing the Localization of Ignite UI Controls"](customizing-the-localization-of-netadvantage-for-jquery-controls.html) topic.
 
-The regional settings, on the other hand, provide localized formats including dates, numbers, and currency symbols for the editors. These reside in the ../js/modules/i18n/regional (where js is the root folder for the JavaScript files in the Ignite UI program installation path).
+The regional settings, on the other hand, provide region specific formats for dates, numbers, as well as currency symbols, floating point symbols, decimal separators, default decimal rounding, etc. These reside in the ../js/modules/i18n/regional (where js is the root folder for the JavaScript files in the Ignite UI program installation path).
 
 ## Topic Overview
 
-In this sample we show how a culture can be set to the editors' `regional` option to change the format of dates, times, numbers and currencies. Three regions are configured here (United States, Japan and Tamil, India) and there are many more to choose from in the infragistics.ui.regional-i18n.js files. 
+In this sample we show how a culture can be set to the editors' `regional` option to change the default formatting of dates, numbers and currencies. Three regions are configured here (United States, Japan and Tamil, India) and there are many more to choose from in the infragistics.ui.regional-i18n.js files. 
 
 ## Use cases
 
