@@ -43,7 +43,6 @@ This topic contains the following sections:
     -   [Example – drop-shadow effect with Compound shadow](#example-drop-shadow-effect)
 -   [Related Content](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
 
 
 
@@ -64,7 +63,10 @@ In addition to managing the styling described above, [drop-shadow effect can be 
 
 With the drop-shadow effect, the series appear as if casting a shadow.
 
-![](images/igDataChart_Styling_the_Chart_Series_1.png)
+<div class="embed-sample">
+   [Drop Shadows](%%SamplesEmbedUrl%%/data-chart/drop-shadows)
+   ![](images/igDataChart_Styling_the_Chart_Series_1.png)
+</div>
 
 Applying the drop-shadow effect to the series is done by setting the [`isDropShadowEnabled`](%%jQueryApiUrl%%/ui.igDataChart#options:series.isDropShadowEnabled) property of the series to “true”. Customization of the effect in terms of [configurable shadow type](#shadow-types), blur radius, color, direction, and opacity is supported through the respective shadow-related properties of the [series](igDataChart-Series-Types.html) (See [Drop-shadow effect configuration summary chart](#drop-shadow-effect-chart), [Property settings](#property-settings), and the examples.).
 
@@ -351,13 +353,6 @@ The following topics provide additional information related to this topic.
 -   [Styling and Theming in Ignite UI](Deployment-Guide-Styling-and-Theming.html)
 
 General information and a procedure for updating styles and themes in Ignite UI™ library.
-
-
-### <a id="samples"></a>Samples
-
-The following samples provide additional information related to this topic.
-
--   [Drop Shadows](%%SamplesUrl%%/data-chart/drop-shadows): This sample demonstrates applying a drop-shadow effect to the data series in the `igDataChart` control.
 
 
 
