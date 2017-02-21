@@ -109,7 +109,7 @@ A catalog of the Infragistics Motion Network supported configurable chart animat
 	</tbody>
 </table>
 
-### Sample
+###<a id="motion-framework-sample"></a> Sample
 
 This following sample demonstrates how to use the Motion Framework™ with the jQuery chart to build highly engaging visualizations and provide smooth playback of changes in data over time.
 
