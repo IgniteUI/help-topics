@@ -500,13 +500,6 @@ $("#grid1").igGrid({
 
 ## <a id="related-content"></a> Related Content
 
-### Samples
-
--   [Auto-Generate Columns](%%SamplesUrl%%/grid/auto-generate-columns)
--   [Handling Complex Objects](%%SamplesUrl%%/grid/handling-complex-objects)
--   [Column Formats](%%SamplesUrl%%/grid/column-formats)
--   [Configure Text Alignment](%%SamplesUrl%%/grid/configure-text-alignment)
-
 ### Topic
 -   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
 -   [Formatting Dates, Numbers and Strings](Formatting-Dates-Numbers-and-Strings.html)
