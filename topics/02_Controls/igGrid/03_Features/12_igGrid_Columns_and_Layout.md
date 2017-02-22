@@ -318,7 +318,10 @@ You can also specify widths for every individual column separately. If you have 
 
 > **Note:** Updating feature requires `dataType` property to be set when `autoGenerateColumns` is set to false. That's because Updating feature uses primary key to synchronize records between the grid and the underlying data source and the primary key is compared by value and type.
 
-
+The sample below shows the auto-generate columns functionality of igGrid. When columns are auto-generated their header captions are taken from the data source field names. The autoGenerateColumns option is used in combination with defaultColumnWidth option.
+<div class="embed-sample">
+   [igGrid Auto-Generate Columns](%%SamplesEmbedUrl%%/grid/auto-generate-columns)
+</div>
 
 ## <a id="styling"></a> Styling
 
