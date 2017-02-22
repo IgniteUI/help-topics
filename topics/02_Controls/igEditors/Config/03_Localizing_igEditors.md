@@ -20,20 +20,39 @@ The regional settings, on the other hand, provide region specific formats for da
 
 The `regional` option allows you to provide great experience to your users if you are targeting a specific geographic region or culture. 
 
-The `igDatePicker` and the `igDateEditor` are the two editors which look is affected the most by the `regional` option. If you need to be sure that your users from a specific region will see the editors in the context they are expecting to see it, just set the desired regional value and the editors will show the date format appropriate for the culture.
+The `igDatePicker` and the `igDateEditor` are the two editors which look is affected the most by the `regional` option. If you need to be sure that your users from a specific region will see the editors in the context they are expecting to see it, just set the desired regional value and the editors will show the date format appropriate for the culture. This includes localized month and day names as well as default date and time formatting patterns. 
 
-For the `igDatePicker` the `regional` option sets the month names and the day names in the language, what day is considered to be the first of the week or if the language of your users is written right-to-left. This will also update the `igDatePicker` calendar labels like the next and previous month buttons. 
+For the `igDatePicker` the `regional` option sets the calendar month names and the day names in the language, what day is considered to be the first of the week or if the language of your users is written right-to-left. This will also update the `igDatePicker` calendar labels like the next and previous month buttons. 
 
 If you set the `regional` option when using the `igNumericEditor`, `igCurrencyEditor` or `igPercentEditor`, the component will use the correct negative pattern, decimal separator and group separator for the given culture. It will also show the correct currency symbol and will provide the expected context to your users. 
 
 Here is an example how to initialize a `igDatePicker` control with Bulgarian regional settings:
-`$('#editor').igDatePicker({ regional: "bg" });`
+```js
+$('#editor').igDatePicker({ regional: "bg" });
+```
 
-## Editors' options affected by the `regional` setting
+## Editors' options affected by the regional settings
 
-Below is the list of options that are changed by the `regional` setting:
-`igDatePicker`
+Below is the list of `regional` settings and how they apply to the editors:
+
+### Date Editor & Picker
+
 Option | Description
+--- | --- |
+"monthNames"|The full names of the months in the calendar|
+"monthNamesShort"|The abbreviated month names, as used in the month header on the datepicker and as requested via the `dateFormat` option|
+"dayNames"|The long day names for use as requested via the `dateFormat` option|
+"dayNamesShort"|The abbreviated day names for use as requested via the `dateFormat` option|
+"dayNamesMin"|The minimised day names for use as column headers within the datepicker|
+"datePattern"|The format for displayed dates when `dateDisplayFormat: "date"` is set|
+"dateLongPattern"|The format for displayed dates when `dateDisplayFormat: "dateLong"` is set|
+"dateTimePattern"|The format for displayed dates when `dateDisplayFormat: "dateTime"` is set|
+"timePattern"|The format for displayed date when `dateDisplayFormat: "time"` is set|
+"timeLongPattern"|The format for displayed date when `dateDisplayFormat: "timeLong"` is set|
+
+### Date Picker
+
+Option | Description 
 --- | --- |
 "closeText"|The text of the `close` button of the `igDatePicker` calendar. Have in mind that you must enable the `showButtonPanel` option in `datepickerOptions` option in order to show the button.|
 "prevText"|The text of the button that navigates to the previous month|
@@ -51,21 +70,8 @@ Option | Description
 "showMonthAfterYear"|Whether to show the month after the year in the header|
 "yearSuffix"|Additional text to display after the year in the month headers|
 
-`igDateEditor`
-Option | Description
---- | --- |
-"monthNames"|The full names of the months in the calendar|
-"monthNamesShort"|The abbreviated month names, as used in the month header on the datepicker and as requested via the `dateFormat` option|
-"dayNames"|The long day names for use as requested via the `dateFormat` option|
-"dayNamesShort"|The abbreviated day names for use as requested via the `dateFormat` option|
-"dayNamesMin"|The minimised day names for use as column headers within the datepicker|
-"datePattern"|The format for displayed dates when `dateDisplayFormat: "date"` is set|
-"dateLongPattern"|The format for displayed dates when `dateDisplayFormat: "dateLong"` is set|
-"dateTimePattern"|The format for displayed dates when `dateDisplayFormat: "dateTime"` is set|
-"timePattern"|The format for displayed date when `dateDisplayFormat: "time"` is set|
-"timeLongPattern"|The format for displayed date when `dateDisplayFormat: "timeLong"` is set|
+### Numeric Editor
 
-`igNumericEditor`
 Option | Description
 --- | --- |
 "numericNegativePattern"|The pattern that is used to show a negative value|
@@ -73,7 +79,8 @@ Option | Description
 "numericGroupSeparator"|The character that is used as separator for groups (like thousands)|
 "numericMaxDecimals"|The maximum number of decimal places which are used in display mode|
 
-`igCurrencyEditor`
+### Currency Editor
+
 Option | Description
 --- | --- |
 "currencyPositivePattern"|The pattern that is used to show a positive value|
@@ -82,7 +89,8 @@ Option | Description
 "currencyDecimalSeparator"|The character that is used as decimal separator|
 "currencyGroupSeparator"|The character that is used as separator for groups (like thousands)|
 
-`igPercentEditor`
+### Percent Editor
+
 Option | Description
 --- | --- |
 "percentPositivePattern"|The pattern that is used to show a positive value|
