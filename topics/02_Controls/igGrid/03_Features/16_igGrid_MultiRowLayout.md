@@ -108,7 +108,3 @@ Updating | In inline editing (`editMode` is `row` or `cell` ) use [`navigationIn
 ### <a id="topics"></a> Topics
 
 -   [igGrid Overview](igGrid-Overview.html)
-
-### <a id="samples"></a> Samples
-
--   [Multi-Row Layout](%%SamplesUrl%%/grid/multi-row-layout)
