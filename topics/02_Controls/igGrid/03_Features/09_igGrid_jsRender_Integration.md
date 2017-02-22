@@ -117,21 +117,25 @@ Following are the general conceptual steps for Binding `igGrid` to DataTable wit
 	**In JavaScript:**
 	
 	```js
-	$("#grid1").igGrid({
-	    width: "100%",
-	    height: "600px",
-	    autoGenerateColumns: false,
-	    columns: [
-	    { headerText: "ID", key: "ID", dataType: "number", width: "40px" },
-	    { headerText: "Name", key: "Name", dataType: "string", width: "100px" },
-	    { headerText: "Country", key: "Country", dataType: "string", width: "80px" },
-	    { headerText: "Birth Date", key: "BirthDate", dataType: "date", width: "100px" }
-	    ],
-	    dataSource: northwindEmployees,
-	    dataSourceType: 'json',
-	    primaryKey: "ID",
-	    templatingEngine: "jsrender”
-	});
+	 $("#grid12").igGrid({
+                width: "100%",
+                height: "600px",
+                autoGenerateColumns: false,
+                autoCommit:true,
+                columns: [
+                        { headerText: "Employee ID", key: "ID", dataType: "number" },
+                        { headerText: "Name", key: "Name", dataType: "string" },
+                        { headerText: "Image", key: "ImageUrl", dataType: "object" },
+                        { headerText: "Title", key: "Title", dataType: "string" },
+						{ headerText: "Languages", key: "Languages", dataType: "object" },
+                        { headerText: "Phone", key: "Phone", dataType: "string" },
+                        { headerText: "Country", key: "Country", dataType: "string" },
+                        { headerText: "Birth Date", key: "BirthDate", dataType: "date" }
+                    ],
+                dataSource: northwindEmployees,
+                primaryKey: "ID",
+                templatingEngine: "jsrender"
+        });
 	```
 
 2. **Declare a helper function specific to the template**
@@ -143,12 +147,20 @@ Following are the general conceptual steps for Binding `igGrid` to DataTable wit
 	**In JavaScript:**
 	
 	```js
-	$.views.helpers(
-	    {
-	        toDate: function (val) {
-	            return new Date(val);
-	        }
-	    });
+	 $.views.helpers(
+            {
+                toDate: function (val) {
+                    return new Date(val);
+                }
+           });
+
+            $.views.helpers(
+            {
+                toFullName: function (val) {
+                    var name = val.split(',').reverse().join(" ");
+                    return name;
+                }
+            });
 	```
 
 3. **Create string column templates**
@@ -160,6 +172,8 @@ Following are the general conceptual steps for Binding `igGrid` to DataTable wit
 	**In JavaScript:**
 	
 	```js
+	<img width='100' height='90' src={{>ImageUrl}}></img>
+
 	<img width='20' height='15' src='{Images folder root}/ {{>Country}}.gif'></img>{{>Country}}
 	
 	<span style='color:{{if #view.hlp('toDate')(BirthDate) > #view.hlp('toDate')('1950-01-01T00:00:00.000')}} blue {{else}} red {{/if}};'>{{>BirthDate}}</span>
@@ -172,23 +186,43 @@ Following are the general conceptual steps for Binding `igGrid` to DataTable wit
 	**In JavaScript:**
 	
 	```js
-	$("#grid1").igGrid({
-	    width: "100%",
-	    height: "600px",    autoGenerateColumns: false,                    columns: [
-	       { headerText: "ID", key: "ID", dataType: "number", width: "40px" },
-	       { headerText: "Name", key: "Name", dataType: "string", width: "100px" },
-	       { headerText: "Country", key: "Country", dataType: "string", width: "80px" ,
-			 template: "<img width='20' height='15' src='{Images folder root}/ {{>Country}}.gif'></img>{{>Country}}" },
-	       { headerText: "Birth Date", key: "BirthDate", dataType: "date", width: "100px" ,
-			 template:  "<span style='color:{{if #view.hlp('toDate')(BirthDate) > #view.hlp('toDate')('1950-01-01T00:00:00.000')}} blue {{else}} red {{/if}};'>{{>BirthDate}}</span>" }
-	    ],
-	    dataSource: northwindEmployees,
-	    dataSourceType: 'json',
-	    primaryKey: "ID",
-	    templatingEngine: "jsrender
-	});
-	```
+	 $("#grid12").igGrid({
+                width: "100%",
+                height: "600px",
+                autoGenerateColumns: false,
+                autoCommit:true,
+                columns: [
+                        { headerText: "Employee ID", key: "ID", dataType: "number" },
+                        { headerText: "Name", key: "Name", dataType: "string", template: "{{>#view.hlp('toFullName')(Name)}}" },
+                        {
+                            headerText: "Image", key: "ImageUrl", dataType: "object",
+                            template: "<img width='100' height='90' src={{>ImageUrl}}></img>"
+                        },
+                        { headerText: "Title", key: "Title", dataType: "string" },
+                        {
+                            headerText: "Languages", key: "Languages", dataType: "object",
+                            template: "{{for Languages}}<div>{{:name}}</div>{{/for}}"
+                        },
+                        { headerText: "Phone", key: "Phone", dataType: "string" },
+                        {
+                            headerText: "Country", key: "Country", dataType: "string",
+                            template: "<img width='26' height='15' src='http://www.igniteui.com/images/samples/nw/countries/{{>Country}}.gif'></img> <span style='display: table-cell;vertical-align: middle;'>{{>Country}}</span>"
+                        },
+                        {
+                            headerText: "Birth Date", key: "BirthDate", dataType: "date",
+                            template: "<span style='color:{{if #view.hlp('toDate')(BirthDate) > #view.hlp('toDate')('1980-01-01T00:00:00.000')}}#4573D6{{else}}#F75F4F{{/if}};'>{{>BirthDate}}</span>"
+                        }
+                    ],
+                dataSource: northwindEmployees,
+                primaryKey: "ID",
+                templatingEngine: "jsrender"
+        });
 
+	```
+5. **Working sample**
+<div class="embed-sample">
+   [igGrid JsRender Integration](%%SamplesEmbedUrl%%/grid/jsrender-integration)
+</div>
 
 ## <a id="row-edit-filter"></a> Integration with Row Edit Template and advanced filtering
 
@@ -208,12 +242,6 @@ The following topics provide additional information related to this topic.
 
 - [Configuring Column Templates (igGrid, RWD Mode)](igGrid-Responsive-Web-Design-Mode-Configuring-Row-and-Column-Templates.html): This topic explains, with code examples, how to define column templates for the individual Responsive Web Design (RWD) mode configurations of the `igGrid`™ control and how to configure automatic change of template when switching the active RWD mode configuration.
 
-
-### <a id="samples"></a> Samples
-
-The following sample provides additional information related to this topic.
-
-- [jsRender integration](%%SamplesUrl%%/grid/jsRender-integration): This sample demonstrates how to use the jsRender templating engine in the `igGrid`™ control.
 
 
 
