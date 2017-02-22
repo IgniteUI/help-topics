@@ -11,11 +11,11 @@
 # Configuring ASP.NET MVC Combo
 
 ## Topic Overview
-This topic shows how to use the combo in a basic ASP.NET MVC scenario.
+This topic shows how to use the igCombo in a basic ASP.NET MVC scenario.
 
 ### Purpose
 
-The ASP.NET MVC helper is used to instantiate the combo in the view. In addition, the ComboDataSourceAction attribute is used to process the remote request for the collection of employees as well as process the remote filtering parameters. Finally, you can see how the combo is used in a form to update a field in the model.
+The igCombo ASP.NET MVC helper is used to instantiate the combo in the View. In addition, the `ComboDataSourceAction` attribute is used to process the remote request for the collection of employees as well as process the remote filtering parameters. Finally, you can see how the combo is used in a form to update a field in the model.
 
 #### Concepts
 
@@ -44,29 +44,29 @@ The following screenshot is a preview of the final result.
 
 ### <a id="_Requirements"></a> Requirements
 
-To complete the procedure, you need the an ASP.NET MVC Project with the following:
+To complete the procedure, you need an ASP.NET MVC Project with the following:
 
 -   The required Ignite UI JavaScript and CSS files
 -   The Infragistics.Web.Mvc.dll assembly referenced
 
 ### <a id="_Requirements_Overview"></a> Overview
 
-This topic takes you step-by-step toward creating a model, view and controller.
+This topic takes you step-by-step toward creating a Model, View and Controller.
 
-1.  Creating a Order class
-2.  Creating the Controller and View
+1.  Creating the `Order` class
+2.  Creating the Controller and the View
 
 ### <a id="_Steps"></a>Steps
 
-​<a id="_create_order_class"></a>Create a Order class
+​<a id="_create_order_class"></a>Create an `Order` class
 
-1. Add a Order class
+1. Add the `Order` class
 
-	Add a Order class to your Models folder.
+	Add the `Order` class to your `Models` folder.
 
 2. Create class members
 
-	Open the Order.cs file and add the following members to the class:
+	Open the `Order.cs` file and add the following members to the class:
 
 	**In C#:**
 
@@ -96,15 +96,15 @@ This topic takes you step-by-step toward creating a model, view and controller.
     }
 	```
 
-​<a id="_add_controler_and_view"></a>Add the Controller and View
+​<a id="_add_controler_and_view"></a>Add the Controller and the View
 
-1. Create a ComboController
+1. Create a `ComboController`
 
-	Create a new controller in the Controllers folder of your ASP.NET MVC application named ComboController.cs
+	Create a new controller in the `Controllers` folder of your ASP.NET MVC application named `ComboController.cs`
 
-2. Create the ActionMethods
+2. Create the Action methods
 
-	Add two ActionMethods to the Controller for the purposes of creating a Order.
+	Add two Action methods to the Controller for the purposes of creating an `Order`.
 
 	**In C#:**
 
@@ -155,7 +155,7 @@ This topic takes you step-by-step toward creating a model, view and controller.
 	```
 3. Create the View
 
-	Create a strongly-typed View and use the Order class as the Model.
+	Create a strongly-typed View and use the `Order` class as the Model.
 
 	**In ASPX:**
 
@@ -198,7 +198,7 @@ This topic takes you step-by-step toward creating a model, view and controller.
     </style>
 	```
 
-5. Create a form for the Order object.
+5. Create a form for the `Order` object.
 
 	**In ASPX:**
 
@@ -234,12 +234,10 @@ This topic takes you step-by-step toward creating a model, view and controller.
 ​<a id="_run_the_sample"></a>Run the sample.
 
 
-Run the sample and select some item from the dropdown. After that click on "Update" button in order to update the current employee value.
+Run the sample and select an item from the dropdown. After that click on "Update" button in order to update the current employee value.
 
 ![](images/igCombo_updated_MVC_example.png)
 
 ### <a id="_Related_Content"></a>Related Content
-
-The following topics provide additional information related to this topic.
 
 -	[Binding igCombo to Data Overview](igCombo-Data-Binding.html): This topic discusses the different ways to data bind the `igCombo` control as well as other details related to data binding.
