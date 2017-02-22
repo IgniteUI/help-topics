@@ -135,7 +135,6 @@ Following are the general conceptual steps for Binding `igGrid` to DataTable wit
                 dataSource: northwindEmployees,
                 primaryKey: "ID",
                 templatingEngine: "jsrender"
-            });
         });
 	```
 
@@ -217,7 +216,6 @@ Following are the general conceptual steps for Binding `igGrid` to DataTable wit
                 dataSource: northwindEmployees,
                 primaryKey: "ID",
                 templatingEngine: "jsrender"
-            });
         });
 
 	```
