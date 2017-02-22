@@ -434,44 +434,14 @@ $("#grid1").igGrid({
             dataType: "date"
         }
     ],
-    features: [ {
-        name: "Selection",
-        mode: "row"
-    }, {
-        name: "Updating",
-        enableAddRow: false,
-        editMode: "row",
-        // event raised after end row editing but before dataSource was updated
-        editCellEnding: function (evt, ui) {
-            // get cell’s checkbox value when it is changed
-            if (ui.update) {
-                if (ui.columnKey === 'MakeFlag' ) {
-                    logEvent("editCellEnded event fired Column Key = " + 
-                    ui.columnKey + "; Row ID = " + 
-                    ui.rowID + "; Cell Value = " + 
-                    ui.value + "; Update = " + 
-                    ui.update);
-                }
-            }
-        },
-        enableDeleteRow: false,
-        columnSettings: [ {
-            columnKey: "ProductID",
-            readOnly: true
-        }, {
-            columnKey: "ProductNumber"
-        }, {
-            columnKey: "MakeFlag"
-        }, {
-            columnKey: "OrderDate",
-            editorType: "datepicker",
-            validation: true
-        } ]
-    } ],
     dataSource: gridData,
     height: "300px"
 });
 ```
+The sample below demonstrates how to enable checkboxes in a boolean column instead of the true/false values.
+<div class="embed-sample">
+   [igGrid Checkbox Column](%%SamplesEmbedUrl%%/grid/checkbox-column)
+</div>
 
 **In ASPX:**
 
@@ -482,27 +452,11 @@ $("#grid1").igGrid({
         column.For(x => x.ProductNumber).HeaderText("Product Number").DataType("string");
         column.For(x => x.MakeFlag).HeaderText("Make Flag").DataType("bool");
         column.For(x => x.ModifiedDate).HeaderText("Modified Date").DataType("date");
-        }).Features(features => {
-            features.Selection().Mode(SelectionMode.Row);
-            features.Updating().EnableAddRow(false).EditMode(GridEditMode.Row).EnableDeleteRow(false).ColumnSettings(columnSettings => {
-                columnSettings.ColumnSetting().ColumnKey("ProductID").ReadOnly(true);
-                columnSettings.ColumnSetting().ColumnKey("ProductNumber");
-                columnSettings.ColumnSetting().ColumnKey("MakeFlag");
-                columnSettings.ColumnSetting().ColumnKey("ModifiedDate").EditorType(ColumnEditorType.DatePicker).Validation(true);
-        });
-    }).DataBind().Height("300px").Render()
+        })
+        .DataBind().Height("300px").Render()
 %>
 ```
-
-
 ## <a id="related-content"></a> Related Content
-
-### Samples
-
--   [Auto-Generate Columns](%%SamplesUrl%%/grid/auto-generate-columns)
--   [Handling Complex Objects](%%SamplesUrl%%/grid/handling-complex-objects)
--   [Column Formats](%%SamplesUrl%%/grid/column-formats)
--   [Configure Text Alignment](%%SamplesUrl%%/grid/configure-text-alignment)
 
 ### Topic
 -   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
