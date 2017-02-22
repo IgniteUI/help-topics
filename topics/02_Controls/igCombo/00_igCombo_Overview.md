@@ -370,7 +370,7 @@ In ASP.NET MVC, supply an IQueryable as the igCombo’s datasource and the colle
         </tr>
         <tr>
             <td>
-[KnockoutJS](%%SamplesUrl%%/combo/bind-combo-with-ko)
+[KnockoutJS](igcombo-knockoutjs-support.html)
 			</td>
             <td>
 The support for the Knockout library in the `igCombo` control is intended to provide easy means for developers to use the Knockout library and its declarative syntax to instantiate and configure combo controls.
