@@ -24,7 +24,7 @@ This topic contains the following sections:
 -   [**Enabling and Configuring Fixed Row Virtualization**](#fixed-row)
     - [Configuring the rows’ height](#fixed-row-configuring)
     - [Fixed Row Virtualization Example](#fixed-row-example)
--   [**Enabling and Configuring Fixed Column Virtualization**](#fixed-column)
+-   [**Enabling and Configuring Column Virtualization**](#fixed-column)
 	-   [Configuring the columns’ width](#fixed-configuring-rows-columns)
     -   [Column Virtualization Example](#fixed-column-example)
 -   [**Enabling and Configuring Continuous Row Virtualization**](#continuous)
@@ -42,11 +42,11 @@ The following table lists the different configurable settings of the Virtualizat
 |Setting | Property | Description
 | -------------------| ------------------- |----------- 
 Row virtualization | [rowVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:rowVirtualization) | Enables/Disables virtualization for rows only.
-Column virtualization | [columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) | Enables/Disables Column Virtualization. Fixed Column Virtualization depends on Fixed Row Virtualization and will enable it implicitly if it is not enabled explicitly.
-Both row and column virtualization | [virtualization](%%jQueryApiUrl%%/ui.iggrid#options:virtualization) | Shorthand for setting `rowVirtualization` and `columnVirtualization` via a single option.
+Column virtualization | [columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) | Enables/Disables Column Virtualization. Column Virtualization depends on Fixed Row Virtualization and will enable it implicitly if it is not enabled explicitly.
+Both Row and Column virtualization | [virtualization](%%jQueryApiUrl%%/ui.iggrid#options:virtualization) | Shorthand for setting `rowVirtualization` and `columnVirtualization` via a single option.
 Virtualization mode | [virtualizationMode](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) | Determines Row Virtualization mode.
 Average Row Height | [avgRowHeight](%%jQueryApiUrl%%/ui.iggrid#options:avgRowHeight) | Used for Fixed Row Virtualization. Determines the average value in pixels that will be used to calculate how many rows to render. All row heights will be automatically set to this value.
-Average Column Width| [avgColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:avgColumnWidth) | Used for Fixed Column Virtualization. This is the average value in pixels for the column widths.
+Average Column Width| [avgColumnWidth](%%jQueryApiUrl%%/ui.iggrid#options:avgColumnWidth) | Used for Column Virtualization. This is the average value in pixels for the column widths.
 
 ## <a id="fixed-row"></a> Enabling and Configuring Fixed Row Virtualization
 
@@ -114,9 +114,9 @@ $("#grid1").igGrid({
     .AvgRowHeight("30px")
 }).DataBind().Render() %>
 ```
-## <a id="fixed-column"></a> Enabling and Configuring Fixed Column Virtualization
+## <a id="fixed-column"></a> Enabling and Configuring Column Virtualization
 
-Fixed Column Virtualization is enabled by setting the [`columnVirtualization`](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) option of the `igGrid` control to true. When enabled it also **enables Fixed Row Virtualization**.
+Column Virtualization is enabled by setting the [`columnVirtualization`](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) option of the `igGrid` control to true. When enabled it also **enables Fixed Row Virtualization**.
 
 It requires the following additional options to be set:
 
@@ -126,7 +126,7 @@ It requires the following additional options to be set:
 - [height](%%jQueryApiUrl%%/ui.iggrid#options:height) (due to auto enabling row virtualization)
 - [avgRowHeight](%%jQueryApiUrl%%/ui.iggrid#options:avgRowHeight) (due to auto enabling row virtualization)
 
-When fixed column virtualization is enabled the sum of the visible column widths should be equal to the grid width so that the currentlt visible columns are fully visible in the view port.
+When Column virtualization is enabled the sum of the visible column widths should be equal to the grid width so that the currentlt visible columns are fully visible in the view port.
 The avgColumnWidth option should also be calculated and set in order for the horizontal scrollbar width to be correct and to allow scrolling to the last visible column.
 Please refer to the 'Configuring the average columns' width’ section for more details on how it should be calculated.
 
@@ -139,9 +139,9 @@ Example:
 Grid Width: 300px, example column widths for 4 columns: 100px, 200px, 100px, 200px => `avgColumnWidth`: 150
 
 
-### <a id="fixed-column-example"></a> Fixed Column Virtualization Example
+### <a id="fixed-column-example"></a> Column Virtualization Example
 
-The following table demonstrates how to configure Fixed Column Virtualization.
+The following table demonstrates how to configure Column Virtualization.
 
 Property | Value
 ---|---
