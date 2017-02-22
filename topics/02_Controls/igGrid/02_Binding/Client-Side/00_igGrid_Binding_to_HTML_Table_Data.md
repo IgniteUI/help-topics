@@ -90,10 +90,7 @@ $("#t1").igGrid({
         <tr><td>321</td><td>Chainring Nut</td><td>CN-6137</td></tr>
     </tbody>
 </table>
-```
-
-## Binding to a New Table
-
+```## Binding to a New Table
 Listing 3 shows how to bind the grid to a new HTML table and override the default data type of string when Table data is parsed when the jQuery Grid is bound to HTML all keys are named 1 to n, where "n" is the number of cells in a table row.
 
 **Listing 3:** Binding to a new HTML Table
@@ -115,9 +112,6 @@ $("#t2").igGrid({
      dataSource: $("#t1")[0]
 }); 
 ```
-
-
-
 **In HTML:**
 
 ```html
@@ -151,11 +145,11 @@ $("#t2").igGrid({
   
 <table id="t2"></table>
 ```
-
+The sample below demonstrates how to bind our jQuery Grid to a table's DOM element.
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/grid/html-binding](%%SamplesEmbedUrl%%/grid/html-binding)
+</div>
 ## Known Issues and Limitations
-
 The `igGrid` has [known limitations](igGrid-Known-Issues.html) that should be taken into account.
-
 ## Related topics
-
--   [igGrid Overview](igGrid-Overview.html)
+[igGrid Overview](igGrid-Overview.html)
