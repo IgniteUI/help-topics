@@ -116,6 +116,12 @@ For the purpose of this example only:
     $("#grid").igGrid({
         autoGenerateColumns: false,
         dataSource: adventureWorks,
+        columns: [
+                    { headerText: "Product Name", key: "Name", dataType: "string", width: "40%" },
+                    { headerText: "Product Number", key: "ProductNumber", dataType: "string", width: "20%" },
+                    { headerText: "List Price", key: "ListPrice", dataType: "number", width: "20%" },
+                    { headerText: "Standard Cost", key: "StandardCost", dataType: "number", width: "20%" }
+        ],
         features: [
                    {
                      name: 'Summaries'
