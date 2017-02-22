@@ -92,7 +92,7 @@ The `igTextEditor` includes the following characteristics:
 5.  Run the web page to view the basic setup of the `igTextEditor` control.
 
 ## Specific options
-`igTextEditor` exposes a robust API whith many options providing flexibility in both functionality and appearence. Let's start with the `placeHolder` option. It is the text which appears in the editor when it has no focus and the "value" is null or empty string.
+`igTextEditor` exposes a robust API whith many options providing flexibility in both functionality and appearence. Let's start with the `placeHolder` option. It is the text which appears in the editor when it has no focus and the `value` is null or empty string.
 
 ### Configure PlaceHolder
 
@@ -122,9 +122,9 @@ The `igTextEditor` includes the following characteristics:
     .Render()
 )
 ```
-### Configure editor type
+### Configure editor mode
 
-`igTextEditor` has several specific inbuilt types, based on the purpose it is going to serve. These are exposed trough the `textMode` option as it sets the text mode of the editor such as: single-line text editor, password editor or multiline editor. That option has effect only on initialization. If based element (selector) is TEXTAREA, then it is used as input-field.
+The `igTextEditor` has several specific inbuilt modes, based on the purpose it is going to serve. These are exposed trough the `textMode` option that sets the text mode of the editor such as: single-line text editor, password editor or multiline editor. That option has effect only on initialization. If the base element (selector) is TEXTAREA, then "multiline" mode is required.
 
 #### Configure password
 
