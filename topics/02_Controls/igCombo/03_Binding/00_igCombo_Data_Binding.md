@@ -32,6 +32,7 @@ This topic contains the following sections:
 -   Class diagram for binding to data sources
 -   [Binding igCombo Data – Procedure](#basicig-combo-data-binding)
 -	[Demos](#demos)
+	-	[JSON Binding](#json-binding)
 	-	[HTML Binding](#html-binding)
 	-	[XML Binding](#xml-binding)
 -   [Related Topics](#related-topics)
@@ -272,6 +273,14 @@ Following is a conceptual overview of the process:
 
 ## <a id="demos"></a>Demos
 Online Combo binding examples
+
+### <a id="json-binding"></a>JSON Binding
+The combo easily binds to a JavaScript array or JSON data. This sample contains a basic example of client-side binding.
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/combo/json-binding](%%SamplesEmbedUrl%%/combo/json-binding)
+</div>
+
 ### <a id="html-binding"></a>HTML Binding
 
 igCombo can bind directly to an HTML SELECT element.
