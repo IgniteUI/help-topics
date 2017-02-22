@@ -135,8 +135,10 @@ Listing 2: Minimal set of CSS and JavaScript references (not minified and combin
 <script type="text/javascript" src="infragistics.util.js"></script>
 <script type="text/javascript" src="infragistics.dataSource.js"></script>
 <script type="text/javascript" src="infragistics.ui.shared.js"></script>
+<script type="text/javascript" src="infragistics.ui.popover.js"></script>
 <script type="text/javascript" src="infragistics.ui.editors.js"></script>
 <script type="text/javascript" src="infragistics.ui.grid.framework.js"></script>
+<script type="text/javascript" src="infragistics.ui.grid.shared.js"></script>
 <script type="text/javascript" src="infragistics.ui.grid.filtering.js"></script>
 ```
 
@@ -188,6 +190,10 @@ Listing 5: HTML element required to instantiate the grid
 ```html
 <table id="myGrid"></table>
 ```
+**Running sample with advanced filtering**
+<div class="embed-sample">
+   [igGrid Advanced Filtering](%%SamplesEmbedUrl%%/grid/advanced-filtering)
+</div>
 
 Listing 6: ASPX or CSHTML markup for use with the ASP.NET MVC wrapper
 

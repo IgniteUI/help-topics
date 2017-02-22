@@ -87,6 +87,7 @@ In order to enable Paging, you first need to include the necessary JavaScript an
 	```html
 	<script type="text/javascript" src="infragistics.util.js"></script><script type="text/javascript" src="infragistics.dataSource.js"></script>
 	<script type="text/javascript" src="infragistics.ui.shared.js"></script>
+	<script type="text/javascript" src="infragistics.ui.popover.js"></script>
 	<script type="text/javascript" src="infragistics.ui.editors.js"></script>
 	<script type="text/javascript" src="infragistics.ui.grid.framework.js"></script>
 	<script type="text/javascript" src="infragistics.ui.grid.paging.js"></script>
@@ -141,6 +142,12 @@ In order to enable Paging, you first need to include the necessary JavaScript an
 	    ]
 	}
 	```
+
+- **Running sample** 
+
+<div class="embed-sample">
+   [igGrid Paging](%%SamplesEmbedUrl%%/grid/paging)
+</div>
 
 
 ## <a id="mvc"></a> ASP.NET MVC Code
@@ -429,11 +436,7 @@ When focus is on the page index drop down the list of available page indexes wil
 -   [Filtering (igGrid)](igGrid-Filtering.html)
 -   [Sorting Overview (igGrid)](igGrid-Sorting-Overview.html)
 
-### <a id="samples"></a> Demo
 
-<div class="embed-sample">
-   [igGrid Paging](%%SamplesEmbedUrl%%/grid/paging)
-</div>
 
 
  
