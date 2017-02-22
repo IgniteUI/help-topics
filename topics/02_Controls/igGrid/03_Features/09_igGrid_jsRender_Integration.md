@@ -219,7 +219,10 @@ Following are the general conceptual steps for Binding `igGrid` to DataTable wit
         });
 
 	```
-
+5. **Working sample**
+<div class="embed-sample">
+   [igGrid JsRender Integration](%%SamplesEmbedUrl%%/grid/jsrender-integration)
+</div>
 
 ## <a id="row-edit-filter"></a> Integration with Row Edit Template and advanced filtering
 
@@ -238,14 +241,6 @@ The following topics provide additional information related to this topic.
 - [Creating a Basic Column Template](Creating-a-Basic-Column-Template-in-the-igGrid.html): This topic demonstrates how to create basic column template for the `igGrid`.
 
 - [Configuring Column Templates (igGrid, RWD Mode)](igGrid-Responsive-Web-Design-Mode-Configuring-Row-and-Column-Templates.html): This topic explains, with code examples, how to define column templates for the individual Responsive Web Design (RWD) mode configurations of the `igGrid`™ control and how to configure automatic change of template when switching the active RWD mode configuration.
-
-
-### <a id="samples"></a> Samples
-
-The following sample provides additional information related to this topic.
-<div class="embed-sample">
-   [igGrid JsRender Integration](%%SamplesEmbedUrl%%/grid/jsrender-integration)
-</div>
 
 
 
