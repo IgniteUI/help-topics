@@ -334,7 +334,9 @@ The following samples provide additional information related to this topic.
 - [Funnel Chart](%%SamplesUrl%%/funnel-chart/funnel-chart): This sample demonstrates using the Funnel Chart control to render data as slices from the largest value to the smallest value with the capability to invert the positions of the slices.
 
 
-
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/editors/date-picker](%%SamplesEmbedUrl%%/funnel-chart/xml-binding)
+</div>
 
 
  
