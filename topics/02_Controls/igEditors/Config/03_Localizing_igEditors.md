@@ -50,7 +50,7 @@ Option | Description
 "timeLongPattern"|The format for displayed date when `dateDisplayFormat: "timeLong"` is set|
 
 ### Date Picker
-The following list defines the options of the jQuery UI datepicker that are localized, when including a specific regional file, and are used by igDatePicker to customize date picker appearance.
+The `regional` option also applies the respecitve jQuery UI datepicker localization attributes. Each regional file defines the complete set for the locale (e.g. `$.datepicker.regional['fr']`) and the following list contains the ones applicable to the `igDatePicker` to customize calendar appearance.
 
 Option | Description 
 --- | --- |
@@ -65,16 +65,6 @@ Option | Description
 "isRTL"|Whether the current language is drawn from right to left|
 "showMonthAfterYear"|Whether to show the month after the year in the header|
 "yearSuffix"|Additional text to display after the year in the month headers|
-
-The following list defines the options of the jQuery UI datepicker that are localized, when including a specific regional file, but are not used by the igDatePicker. If a pure jQuery UI datepicker is initialized on the page then it will use the following options to customize the date format, displayed in its input.
-
-Option | Description 
---- | --- |
-"dateFormat"|The format for parsed and displayed dates|
-"monthNames"|The list of full month names, for use as requested via the dateFormat option|
-"monthNamesShort"|The abbreviated month names requested via the `dateFormat` option|
-"dayNames"|The long day names for use as requested via the `dateFormat` option|
-"dayNamesShort"|The abbreviated day names for use as requested via the `dateFormat` option|
 
 ### Numeric Editor
 
