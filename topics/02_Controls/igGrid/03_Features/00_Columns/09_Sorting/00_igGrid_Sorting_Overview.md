@@ -66,7 +66,8 @@ Sorting can be configured to operate either locally or remotely. In the first ca
 -   Once the sorting widget is instantiated, it modifies the column header by injecting markup that allows for the various active, focus and sorted styles to be applied, including the sort indicator.
 -   Sorting is implemented as a jQuery UI widget, which follows the lifecycle of any jQuery UI widget.
 -   The grid framework is responsible of creating and destroying the sorting widget.
--   All sortable columns can be sorted and navigated through the keyboard using the TAB and Shift+TAB keys. ![](images/igGrid_Single_and_Multiple_Column_Sorting_01.png)
+-   All sortable columns can be sorted and navigated through the keyboard using the TAB and Shift+TAB keys. 
+    ![](images/igGrid_Single_and_Multiple_Column_Sorting_01.png)
 
 Figure 1: The igGrid control sorting UI
 
@@ -107,22 +108,29 @@ Listing 3: Sample grid code for sorting
 **In Javascript:**
 
 ```js
-$("#grid1").igGrid({
-    columns: [
-        { headerText: "Product ID", key: "ProductID", dataType: "number" },
-        { headerText: "Product Name", key: "Name", dataType: "string" },
-        { headerText: "ProductNumber", key: "ProductNumber", dataType: "string" }
-    ],
-    dataSource: “adventureWorks.php”,
-    responseDataKey: 'Records',
-    features: [
-        {
-            name : 'Sorting',
-            type: "local",
-            columnSettings: [
-            ]
-        }
-    ]
+$(function () {
+    $("#grid").igGrid({
+        autoGenerateColumns: false,
+        width: "100%",
+        columns: [
+            { headerText: "Employee ID", key: "EmployeeID", dataType: "number", width: "15%" },
+            { headerText: "First Name", key: "FirstName", dataType: "string", width: "20%" },
+            { headerText: "Last Name", key: "LastName", dataType: "string", width: "20%" },
+            { headerText: "Birth Date", key: "BirthDate", dataType: "date", width: "15%" },
+            { headerText: "City", key: "City", dataType: "string", width: "15%" },
+            { headerText: "Postal Code", key: "PostalCode", dataType: "string", width: "15%" }
+        ],
+        dataSource: northwind,
+        responseDataKey: "results",
+        features: [
+            {
+                name: "Sorting",
+                type: "local",
+                columnSettings: [
+                ]
+            }
+        ]
+    });
 });
 ```
 
@@ -137,9 +145,12 @@ $("#grid1").igGrid({
 ```csharp
 <%= Html.Infragistics().Grid(Model).ID("grid1").Columns(column =>
     {
-        column.For(x => x.ProductID).HeaderText("Product ID").Width("100px");
-        column.For(x => x.Name).HeaderText("Product Name").Width("200px");
-        column.For(x => x.ProductNumber).HeaderText("Product Number").Width("200px");
+        column.For(x => x.EmployeeID).HeaderText("Employee ID").Width("15%");
+        column.For(x => x.FirstName).HeaderText("First Name").Width("20%");
+        column.For(x => x.LastName).HeaderText("Last Name").Width("20%");
+        column.For(x => x.BirthDate).HeaderText("Birth Date").Width("15%");
+        column.For(x => x.City).HeaderText("City").Width("15%");
+        column.For(x => x.PostalCode).HeaderText("Postal Code").Width("15%");
     }).Features(features => {
         features.Sorting().Type(OpType.Local).CaseSensitive(true);
     })
@@ -150,6 +161,12 @@ $("#grid1").igGrid({
 ```
 
 If you would like to provide a custom sorting function, please refer to the “customSortFunction” option.
+
+The sample below demonstrates how to enable the Sorting feature:
+
+<div class="embed-sample">
+   [Sorting](%%SamplesEmbedUrl%%/grid/sorting-local)
+</div>
 
 ## <a id="column-settings"></a> Column Settings
 
@@ -472,11 +489,6 @@ sortIndicatorDescending | Same as sortIndicatorAscending but when descending | u
 
 
 ## <a id="related-content"></a> Related Content
-
-### <a id="samples"></a> Samples
-
--   [Local Sorting](%%SamplesUrl%%/grid/sorting-local)
--   [Remote Sorting](%%SamplesUrl%%/grid/sorting-remote)
 
 ### <a id="topics"></a> Topics
 

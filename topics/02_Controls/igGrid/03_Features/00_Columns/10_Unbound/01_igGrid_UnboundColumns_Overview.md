@@ -273,16 +273,8 @@ The following topics provide additional information related to this topic.
 
 ### <a id="samples"></a> Samples
 
-The following samples provide additional information related to this topic.
+The sample demonstrates adding and configuring unbound columns in the `igGrid` control.
 
-- [Unbound Column](%%SamplesUrl%%/grid/unbound-column): The sample demonstrates adding and configuring unbound columns in the `igGrid` control.
-
-- [HierarchicalGrid Unbound Column](%%SamplesUrl%%/hierarchical-grid/unbound-column): The sample demonstrates adding and configuring unbound columns in the `igHierarchicalGrid` control.
-
-
-
- 
-
- 
-
-
+<div class="embed-sample">
+   [Unbound Column](%%SamplesEmbedUrl%%/grid/unbound-column)
+</div>

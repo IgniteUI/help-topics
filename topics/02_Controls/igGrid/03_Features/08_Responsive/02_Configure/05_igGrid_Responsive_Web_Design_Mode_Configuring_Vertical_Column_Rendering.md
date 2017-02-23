@@ -336,9 +336,11 @@ The following topics provide additional information related to this topic.
 
 ### <a id="samples"></a> Samples
 
-The following samples provide additional information related to this topic.
+This sample demonstrates the `igGrid`’s Responsive Web Design feature in vertical mode. Responsive vertical rendering mode renders the grid data in two columns. The left column holds the columns captions and the right column holds the data.
 
-- [Responsive Vertical Rendering](%%SamplesUrl%%/grid/responsive-vertical-rendering): This sample demonstrates the `igGrid`’s Responsive Web Design feature in vertical mode. Responsive vertical rendering mode renders the grid data in two columns. The left column holds the columns captions and the right column holds the data.
+<div class="embed-sample">
+   [Responsive Vertical Rendering](%%SamplesEmbedUrl%%/grid/responsive-vertical-rendering)
+</div>
 
 
 

@@ -92,4 +92,6 @@ The following topics provide additional information related to this topic.
 ### Samples
 The following samples provide additional information related to this topic.
 
-- [Feature Chooser](%%SamplesUrl%%/grid/feature-chooser)
+<div class="embed-sample">
+    [Feature Chooser](%%SamplesEmbedUrl%%/grid/feature-chooser)
+</div>

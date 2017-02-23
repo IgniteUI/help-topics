@@ -332,11 +332,11 @@ The following topics provide additional information related to this topic.
 
 ### <a id="samples"></a> Samples
 
-The following samples provide additional information related to this topic.
+This sample demonstrates the `igGrid`’s Responsive Web Design mode feature. Responsive Web Design mode allows you to support multiple screen sizes and form factors with single code base and design.
 
-- [Responsive Web Design Mode](%%SamplesUrl%%/grid/responsive-web-design-mode): This sample demonstrates the `igGrid`’s Responsive Web Design mode feature. Responsive Web Design mode allows you to support multiple screen sizes and form factors with single code base and design.
-
-- [Responsive Vertical Rendering](%%SamplesUrl%%/grid/responsive-vertical-rendering): This sample demonstrates the `igGrid`’s Responsive Web Design feature in vertical mode. Responsive vertical rendering mode renders the grid data in two columns. The left column holds the columns captions and the right column holds the data.
+<div class="embed-sample">
+   [Responsive Web Design Mode](%%SamplesEmbedUrl%%/grid/responsive-web-design-mode)
+</div>
 
 
 

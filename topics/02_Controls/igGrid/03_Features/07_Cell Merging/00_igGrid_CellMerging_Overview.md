@@ -190,11 +190,12 @@ The following topics provide additional information related to this topic.
 
 ### <a id="samples"></a> Samples
 
-The following samples provide additional information related to this topic.
+This sample shows how to configure a Cell Merging in the `igGrid`.
 
-- [Cell Merging](%%SamplesUrl%%/grid/cell-merging): This sample shows how to configure a Cell Merging in the `igGrid`.
+<div class="embed-sample">
+   [Cell Merging](%%SamplesEmbedUrl%%/grid/cell-merging)
+</div>
 
-- [HierarchicalGrid Cell Merging](%%SamplesUrl%%/hierarchical-grid/cell-merging): This sample shows how to configure a Cell Merging in the `igHierarchicalGrid`.
 
 
 
