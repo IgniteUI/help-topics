@@ -50,6 +50,12 @@ When you enable `igGridGroupBy` you are already using it in a [`persist`](%%jQue
 
 GroupBy persistence is implemented for `igHierarchicalGrid` too.
 
+The following sample demonstrates the persistance capabilities of the GroupBy feature.
+
+<div class="embed-sample">
+   [Feature Persistence](%%SamplesEmbedUrl%%/grid/feature-persistence)
+</div>
+
 If you would like to retain the previous behavior of group by being cleared after user re-binds the `igGrid`, you can do this by disabling the feature through the [`persist`](%%jQueryApiUrl%%/ui.iggridgroupby#options:persist) option as shown in the code snippet below:
 
 **In JavaScript:**
