@@ -78,7 +78,7 @@ The `igMap` control supports the following data sources:
 Data Source|Binding
 ---|---
 [JavaScript array](#binding-js-array)|Geographic Symbol series map can be bound to a local JavaScript array of data with geographic coordinates of points to be visualized.
-[JSON](#binding-json)|The igMap control can be configured to request remote data and receive a JSON response which, in turn, can be bound to a Geographic Symbol series instance.
+[JSON](#binding-json)|The igMap control can be configured to use local JSON data or to request remote data and receive a JSON response which, in turn, can be bound to a Geographic Symbol series instance.
 [Shape files](#binding-shape-datasource)|The Geographic Shape and Geographic Polyline series require a shape ([DBF files](#binding-shape-database)) file or a custom shape data source to be provided for visualization.
 [DBF files](#binding-shape-database)|The Geographic Shape and Geographic Polyline series require a DBF database file or a custom data source to be provided to bind additional data attributes to the shapes and polylines.
 [Triangulation (ITF) files](#binding-triangulation-datasource)|The Geographic Scatter Area and Geographic Contour Line series require a triangulation (ITF) files or a custom triangulation data source for visualization.
