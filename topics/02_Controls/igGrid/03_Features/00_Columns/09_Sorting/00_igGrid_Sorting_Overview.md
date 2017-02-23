@@ -40,7 +40,7 @@ When you enable `igGridSorting` you are already using it in a [`persist`](%%jQue
 
 Sorting persistence is implemented for `igHierarchicalGrid` too.
 
-The following sample demonstrates the persistance capabilities of the Selection feature.
+The following sample demonstrates the persistance capabilities of the Sorting feature.
 
 <div class="embed-sample">
    [Feature Persistence](%%SamplesEmbedUrl%%/grid/feature-persistence)
