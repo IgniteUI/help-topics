@@ -125,9 +125,7 @@ $(function () {
         features: [
             {
                 name: "Sorting",
-                type: "local",
-                columnSettings: [
-                ]
+                type: "local"
             }
         ]
     });
