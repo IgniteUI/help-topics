@@ -314,7 +314,7 @@ The following topics provide additional information related to this topic.
 
 The following samples provide additional information related to this topic.
 
--	[Motion Framework](%%SamplesUrl%%/data-chart/motion-framework) : This sample demonstrates how column series charts are animated with the help of the Motion Framework.
+-	[Motion Framework](igDataChart-Motion-Framework.html#motion-framework-sample) : This sample demonstrates how column series charts are animated with the help of the Motion Framework.
 
 
 

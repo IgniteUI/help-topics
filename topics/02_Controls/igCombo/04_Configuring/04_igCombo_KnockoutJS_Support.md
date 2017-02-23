@@ -12,7 +12,7 @@
 
 
 
-##Topic Overview
+## Topic Overview
 
 
 ### Purpose
@@ -53,7 +53,7 @@ This topic contains the following sections:
 
 
 
-##<a id="introduction"></a>Introduction
+## <a id="introduction"></a>Introduction
 
 
 ### Knockout support summary
@@ -122,7 +122,7 @@ The following table maps the `igCombo` control configuration tasks related to Kn
 </table>
 
 
-##<a id="code-examples"></a>Code Examples
+## <a id="code-examples"></a>Code Examples
 
 
 ### Code examples summary
@@ -132,7 +132,7 @@ The following table lists the code examples included in this topic.
 
 -	[Basic Combo Box Bound to a Knockout View-Model Object](#basic-combo-box-bound) :This example demonstrates the basic configuration of an `igCombo` control bound to a Knockout observable View-Model object.
 
-##<a id="basic-combo-box-bound"></a>Code Example: Basic Combo Box Bound to a Knockout View-Model Object
+## <a id="basic-combo-box-bound"></a>Code Example: Basic Combo Box Bound to a Knockout View-Model Object
 
 
 This example demonstrates the basic configuration of an `igCombo` control bound to a Knockout observable View-Model object. Using the declarative syntax of Knockout, the combo is instantiated from the data-bind attribute of a span element and bound to the View-Model observable properties.
@@ -160,7 +160,7 @@ function ViewModel(actorsList) {
     //  Select the first actor, using his id.
     this.selectedActor = ko.observableArray([self.actors()[0].id]);
     // Alternative way to select an actor, using the whole object, containing value and text
-    // this.selectedActor = ko.observableArray([self.actors()[0]]);    
+    // this.selectedActor = ko.observableArray([self.actors()[0]]);
     this.isVisible = true;
 }
 ```
@@ -190,7 +190,7 @@ The following code demonstrates how to declare the binding properties for `igCom
 **In HTML:**
 
 ```html
-<span id="comboActors" data-bind="igCombo: { 
+<span id="comboActors" data-bind="igCombo: {
         dataSource: actors,
         textKey: 'name',
         valueKey: 'id',
@@ -210,30 +210,38 @@ The following code demonstrates how to declare the `igComboVisible` binding, whi
 
 The `igCombo` control is displayed in a HTML element with inline-block property, and because Knockout visible binding sets the display of the element to block, this breaks the `igCombo` appearance. Use the custom `igComboVisible` binding to display `igCombo` properly and in the same time to use the Knockout visible binding functionality.
 
-##<a id="related-content"></a>Related Content
+## <a id="related-content"></a>Related Content
 
 
-###<a id="topics"></a> Topics
+### <a id="topics"></a> Topics
 
 The following topics provide additional information related to this topic.
 
 -	[Knockout Support (Editors)](Configuring-Knockout-Support-%28Editors%29.html): This topic explains how to configure Ignite UI editor controls to bind to View-Model objects managed by the [Knockout library](http://knockoutjs.com/).
 
-###<a id="samples"></a> Samples
+-	[Migrating to the New Combo](igCombo-Migrating-To-The-New-Combo.html#ko_changes): This topic aims to help with migration from old combo to the new one. The document includes the changes in the Knockout integration of the igCombo.
+
+
+### <a id="samples"></a> Samples
 
 The following samples provide additional information related to this topic.
 
--	[KnockoutJS Binding](%%SamplesUrl%%/combo/bind-combo-with-ko): This sample demonstrates how to bind `igCombo` to data managed by KO data bindings.
--	[Migrating to the New Combo](igCombo-Migrating-To-The-New-Combo.html#ko_changes): This topic aims to help with migration from old combo to the new one. The document includes the changes in the Knockout integration of the igCombo.
+-	The sample below demonstrates how to bind igCombo to data managed by KO data bindings. Binding an array to combo's drop-down and model property to the combo selected items is implemented.
 
-###<a id="resources"></a> Resources
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/combo/bind-combo-with-ko](%%SamplesEmbedUrl%%/combo/bind-combo-with-ko)
+</div>
+
+>**Note:**  The Knockout extensions do not work with the ASP.NET MVC Helpers.
+
+### <a id="resources"></a> Resources
 
 The following material (available outside the Infragistics family of content) provides additional information related to this topic.
 
 -	[Knockout](http://knockoutjs.com/): This is the home page of the Knockout library. The library contains complete documentation and samples.
 
- 
 
- 
+
+
 
 

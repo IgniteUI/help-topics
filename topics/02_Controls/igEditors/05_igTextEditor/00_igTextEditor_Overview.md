@@ -91,6 +91,103 @@ The `igTextEditor` includes the following characteristics:
 
 5.  Run the web page to view the basic setup of the `igTextEditor` control.
 
+## Specific options
+`igTextEditor` exposes a robust API whith many options providing flexibility in both functionality and appearence. Let's start with the `placeHolder` option. It is the text which appears in the editor when it has no focus and the `value` is null or empty string.
+
+### Configure PlaceHolder
+
+**HTML:**
+
+```html
+<input id="email"/>
+```
+
+**Javascript:**
+
+```js
+<script type="text/javascript">
+    $("#email").igTextEditor({
+        placeHolder:"John_Doe@email.com"
+    });
+</script>
+```
+
+**In Razor:**
+
+```csharp
+@(Html.Infragistics().TextEditor()
+    .ID("email")
+    .InputName("email")
+    .PlaceHolder("John_Doe@email.com")
+    .Render()
+)
+```
+### Configure editor mode
+
+The `igTextEditor` has several specific inbuilt modes, based on the purpose it is going to serve. These are exposed trough the `textMode` option that sets the text mode of the editor such as: single-line text editor, password editor or multiline editor. That option has effect only on initialization. If the base element (selector) is TEXTAREA, then "multiline" mode is required.
+
+#### Configure password
+
+**HTML:**
+
+```html
+<input id="password"/>
+```
+
+**Javascript:**
+
+```js
+<script type="text/javascript">
+    $("#password").igTextEditor({
+        placeHolder:"********"
+    });
+</script>
+```
+
+**In Razor:**
+
+```csharp
+@(Html.Infragistics().TextEditor()
+    .ID("password")
+    .InputName("password")
+    .TextMode(TextEditorTextMode.Password)
+    .PlaceHolder("********")
+    .Render()
+)
+```
+
+#### Configure Multiline
+
+**HTML:**
+
+```html
+<textarea id="note"></textarea>
+```
+
+**Javascript:**
+
+```js
+<script type="text/javascript">
+    $('#note').igTextEditor({
+        inputName: "note",
+        textMode: "multiline",
+        height:"100px"
+});
+</script>
+```
+
+**In Razor:**
+
+```csharp
+@(Html.Infragistics().TextEditor()
+    .ID("note")
+    .InputName("note")
+    .TextMode(TextEditorTextMode.Multiline)
+    .Height(100)
+    .Render()
+)
+```
+
 ## Related Links
 -   [Basic Usage Sample](%%SamplesUrl%%/editors/basic-usage)
 -   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)

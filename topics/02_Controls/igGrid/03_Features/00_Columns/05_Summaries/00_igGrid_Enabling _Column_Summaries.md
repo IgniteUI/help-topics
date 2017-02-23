@@ -41,7 +41,7 @@ The example below configures an `igGrid` with the summaries feature enabled.
 ## <a id="preview"></a> Preview
 Following is a preview of the final result.
 
-![](images/Enabling_Column_Summaries_01.png)
+![](images/summaries.png)
 
 ## <a id="requirements"></a> Requirements
 
@@ -96,11 +96,12 @@ For the purpose of this example only:
 
     ```html
     <script type="text/javascript">
-    source = [
-             { "ProductID": 1, "Name": "Adjustable Race", "SafetyStockLevel": 1000, "ReorderPoint": 750, "StandardCost": 0.0000 }, 
-             { "ProductID": 2, "Name": "Bearing Ball", "SafetyStockLevel": 1000, "ReorderPoint": 750, "StandardCost": 0.0000 }, 
-             { "ProductID": 3, "Name": "BB Ball Bearing", "SafetyStockLevel": 800, "ReorderPoint": 600, "StandardCost": 0.0000 },
-             { "ProductID": 4, "Name": "Headset Ball Bearings", "SafetyStockLevel": 800, "ReorderPoint": 600, "StandardCost": 0.0000 }]
+    var adventureWorks = [
+{ "ProductID": 1, "Name": "Adjustable Race", "ProductNumber": "AR-5381", "StandardCost": 0.0000, "ListPrice": 0.0000 }, 
+{ "ProductID": 2, "Name": "Bearing Ball", "ProductNumber": "BA-8327", "StandardCost": 0.0000, "ListPrice": 0.0000 }, 
+{ "ProductID": 3, "Name": "BB Ball Bearing", "ProductNumber": "BE-2349", "StandardCost": 0.0000, "ListPrice": 0.0000 },
+    ...
+    ]
 
     </script>
     ```
@@ -113,8 +114,14 @@ For the purpose of this example only:
 
     ```js
     $("#grid").igGrid({
-        autoGenerateColumns: true,
-        dataSource: source,
+        autoGenerateColumns: false,
+        dataSource: adventureWorks,
+        columns: [
+                    { headerText: "Product Name", key: "Name", dataType: "string", width: "40%" },
+                    { headerText: "Product Number", key: "ProductNumber", dataType: "string", width: "20%" },
+                    { headerText: "List Price", key: "ListPrice", dataType: "number", width: "20%" },
+                    { headerText: "Standard Cost", key: "StandardCost", dataType: "number", width: "20%" }
+        ],
         features: [
                    {
                      name: 'Summaries'
@@ -127,6 +134,11 @@ For the purpose of this example only:
 4.  (Optional) Verify the result.
 
     To verify the result, open the file. The result should look as shown in the Preview above.
+5. Running sample
+    <div class="embed-sample">
+        [igGrid Summaries](%%SamplesEmbedUrl%%/grid/summaries)
+    </div>
+
 
 ## <a id="enabling-mvc"></a> Enabling Column Summaries in MVC
 

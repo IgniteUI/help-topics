@@ -147,8 +147,7 @@ The following table maps the desired configuration to the property settings that
 </table>
 
 ###<a id="example"></a> Example
-
-The screenshot below demonstrates how the title and subtitle of a chart look as a result of the following settings:
+Following are a chart title settings' table and an example that implements this configuration:
 
 <table class="table">
 	<thead>
@@ -160,48 +159,37 @@ The screenshot below demonstrates how the title and subtitle of a chart look as 
 	<tbody>
 		<tr>
 			<td>title</td>
-			<td>“Energy Use Per Country”</td>
+			<td>“Energy Production Per Country”</td>
 		</tr>
 		<tr>
 			<td>titleTextColor</td>
-			<td>“Red”</td>
+			<td>“#2e9ca6”</td>
 		</tr>
 		<tr>
 			<td>titleTextStyle</td>
-			<td>“24pt Verdona”</td>
+			<td>“20pt Arial</td>
 		</tr>
 		<tr>
 			<td>subtitle</td>
-			<td>“Results over a two year period”</td>
+			<td>“The top five Total Primary Energy producers”</td>
 		</tr>
 		<tr>
 			<td>subtitleTextColor</td>
-			<td>“Blue”</td>
+			<td>“#2e9ca6”</td>
 		</tr>
 		<tr>
 			<td>subtitleTextStyle</td>
-			<td>“16pt Verdona”</td>
+			<td>“14pt Arial</td>
 		</tr>
 	</tbody>
 </table>
 
-![](images/igDataChart_Chart_Title_02.png)
 
-Following is the code that implements this example:
+<div class="embed-sample">
+   [Chart Title and Subtitle](%%SamplesEmbedUrl%%/data-chart/chart-title)
+   ![](images/igDataChart_Chart_Title_02.png)
+</div>
 
-**In HTML:**
-
-```html
-$("#container").igDataChart({
-	…
-    title: "Energy Use Per Country",
-    titleTextColor: "red",
-    titleTextStyle: "24pt Verdona",
-    subtitle:"Results over a two year period",
-    subtitleTextColor: "blue",
-    subtitleTextStyle: "16pt Verdona",
-});
-```
 
 ##<a id="related-content"></a>Related Content
 
@@ -212,14 +200,6 @@ The following topic provides additional information related to this topic:
 
 
 -	[Adding igDataChart](igDataChart-Adding.html):  This topic demonstrates how to add the `igDataChart` control to a page and bind it to data.
-
-
-
-### <a id="samples"></a>Samples
-
-The following sample provides additional information related to this topic.
-
--	[Chart Title and Subtitle](%%SamplesUrl%%/data-chart/chart-title):  The title and subtitle feature of the `igDataChart` control allows you to add information to the top section of the `igDataChart` control
 
 
 

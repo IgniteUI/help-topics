@@ -98,30 +98,97 @@ The `igNumericEditor` includes the following characteristics:
          .DataMode(NumericEditorDataMode.Int)
          .MinValue(0)
          .Value(0)
-         .ButtonType(TextEditorButtonType.Spin)
          .Width(120)
          .Render())
-    ```
+    ``` 
 
 5.  Run the web page to view the basic setup of the `igNumericEditor` control.
 
-##Specific options
+## Specific options
 
-Although the `igNumericEditor` shares a lot of properties with the other editors it possesses quite a number of unique ones. Let's start with the `dataMode` property. This property can be used to set or get the type of  the editor's input value. The default value is "double", but you can choose between int, float, byte and other. The full list of values can be seen in the [igNumericEditor jQuery API](%%jQueryApiUrl%%/ui.igNumericEditor). 
+The `igNumericEditor` has a set of specialized options for handling numeric input. Let's start with the `dataMode` property which defines the range that editor's value can accept based on well-known data types. The default is "double", but you can choose between "int", "float", "byte" and others. The full list of values can be seen in the [igNumericEditor jQuery API](%%jQueryApiUrl%%/ui.igNumericEditor#options). 
 
-Another specific option is the `decimalSeparator` which allows you to choose what character to be displayed as a decimal separator. The `groupSeparator` has similar functionality but it allows you to choose a character that will be displayed between the digits in a large number like thousands or more. Below you can see an example of how to use it, but before that let take a look at one more property. The `groups` takes an array as a value. This property can be used to determine after how many digits you would like to have a separator. Note that count on groups start from right to left and the option affects only in display mode.
+Another specific option is the `decimalSeparator` which allows you to choose what character to be displayed as a decimal separator. The `groupSeparator` has similar functionality but it allows you to choose a character that will be displayed between groups of digits in a large number (like thousands or more). Below you can see an example of how to use it, but before that let take a look at one more property. The `groups` takes an array as a value. This property can be used to determine after how many digits you would like to have a separator. Note that count on groups start from right to left and the option affects only display mode.
 
 ```js
 $('#divEditor').igNumericEditor({
-	width: "300",
-	groups: [1,2,3],
-	groupSeparator:"-"
+    width: "300",
+    groups: [1,2,3],
+    groupSeparator:"-"
 });
 ```
 
 ![](images/igNumericEditor_numericGroups.png)
 
- 
+### Configure drop-down list
+
+In case you want to have a drop-down list with predefined values to work with, you can provide an array of numeric values via the `listItems` option. You can go further and limit the values igNumericEditor allows, to the ones contained in the list of items. This can be achieved setting `isLimitedToListValues` option.
+
+**HTML:**
+
+```html
+<input id="federalTax"/>
+```
+
+**Javascript:**
+
+```js
+<script type="text/javascript">
+    $("#federalTax").igNumericEditor({
+        listItems: [10, 15, 25, 28, 33, 35],
+        value:10,
+        isLimitedToListValues: true
+    });
+</script>
+```
+
+**In Razor:**
+
+```csharp
+@(Html.Infragistics().NumericEditor()
+    .ID("federalTax")
+    .Value(10)
+    .ListItems(new List<object>() { 10, 15, 25, 28, 33, 35 })
+    .IsLimitedToListValues(true)
+    .Render())
+```
+
+### Configure spin functionality
+
+While the spin functionality is always available through [keyboard intearcation](igNumericEditor-Keyboard-Navigation.html) it can be enhanced and controled with additional options. The editor supports several buttons via the `buttonType` option. These include spin, clear and drop-down button. Notice this option can be set only on initialization. Combinations like `'dropdown, spin'` or `'spin, clear'` are supported too. The `spinDelta` option will specify the increment/decrement step that should be used when the values are edited via spin action. Notice the `spinDelta` value cannot be negative. Non integer value is supported only for `dataMode` "double" and "float". 
+
+**HTML:**
+
+```html
+<input id="stateTax"/>
+```
+
+**Javascript:**
+
+```js
+<script type="text/javascript">
+    $("#stateTax").igNumericEditor({
+        buttonType: 'spin',
+        spinDelta:0.01,
+        minValue:-5.53,
+        maxValue:5.52,
+        value:-5.00
+});
+</script>
+```
+
+**In Razor:**
+
+```csharp
+@(Html.Infragistics().NumericEditor()
+    .ID("stateTax")
+    .ButtonType(TextEditorButtonType.Spin)
+    .SpinDelta(0.01)
+    .MinValue(-5.53)
+    .MaxValue(5.53)
+    .Value(-5.00)
+    .Render())
+```
 
 >**Note:** Full list of properties can be found in the [API documentation](%%jQueryApiUrl%%/ui.igNumericEditor)
 

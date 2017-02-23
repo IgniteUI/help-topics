@@ -146,8 +146,8 @@ Issue | Description | Status
 ------|-------------|-------
 Fixed headers always enabled (limitation) | When virtualization is enabled, there is a limitation in the form of the [`fixedHeaders`](%%jQueryApiUrl%%/ui.iggrid#options:fixedHeaders) option being unchangeable and always set to true. | ![](../../images/images/negative.png)
 Grid height settings limitation | The height of the `igGrid` must always be exactly divisible by the average row height. (The remainder of the division must be 0.) | ![](../../images/images/negative.png)
-Columns visible width settings limitation | The columns visible width must be equal to the `igGrid`’s width (for horizontal virtualization) | ![](../../images/images/negative.png)
-Keyboard navigation not supported for horizontal virtualization (limitation) | Keyboard navigation is not supported for horizontal virtualization. | ![](../../images/images/negative.png)
+Columns visible width settings limitation | The columns visible width must be equal to the `igGrid`’s width (for column virtualization) | ![](../../images/images/negative.png)
+Keyboard navigation not supported for column virtualization (limitation) | Keyboard navigation is not supported for column virtualization. | ![](../../images/images/negative.png)
 Limitation to applying cell classes | Applying a specific cell class to every cell that is in a sorted column is not supported, i.e. [`applySortedColumnCss`](%%jQueryApiUrl%%/ui.iggridsorting#options:applySortedColumnCss) is automatically set to false. | ![](../../images/images/negative.png)
 When virtualization is enabled the autofitLastColumn is not effective|When virtualization is enabled the [autofitLastColumn](%%jQueryApiUrl%%/ui.iggrid#options:autofitLastColumn) has no effect, which will result in columns expanding to take up the whole grid width when the sum of the columns widths is less than the width of the grid (it will act as autofitLastColumn = true).|![](../../images/images/negative.png)
 Column virtualization will not work when grid width is defined in percentage units|When grid width is defined in percentage units and column virtualization is enabled ([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) horizontal scrollbar will not render.|![](../../images/images/negative.png)
@@ -163,7 +163,7 @@ Issue | Description | Status
 RWD mode is not supported in IE8|RWD is unable to determine the mode in IE8. This feature is mainly targeted at mobile compatibility so it is not supported under IE8.|![](../../images/images/negative.png)
 RWD single column template is not supported with any of the grid features, excepts Paging.| The RWD single column template feature is supported only with the Paging grid features. All other grid features are currently not supported with this mode.|![](../../images/images/negative.png) 
 The custom scrollbars of the igGrid are not updated on mobile touch devices when Responsive feature is enabled and the device is rotated.| The custom scrollbars height/width are not properly updated if the Responsive feature is enabled and the device is rotated so that the height/width changes.| ![](../../images/images/plannedFix.png)
-
+RWD mode is not supported with Fixed Row Virtualization and Column Virtualization | RWD mode only supports Continuous Virtualization |![](../../images/images/negative.png)
 
 ## [igGridColumnFixing](#column-fixing)
 
@@ -321,6 +321,7 @@ Issue | Description | Status
 ------|-------------|-------
 [Column Moving not working in IE 9](#column-moving-ie9) | Column Moving does not work in Internet Explorer 9. This is caused by a bug in the jQuery UI draggable introduced in version 1.7.2 and resolved in 1.8.6. For more information on the bug, see [jQuery UI Bug 5370](http://bugs.jqueryui.com/ticket/5370). | ![](../../images/images/positive.png)
 [Erroneous Column Moving behavior of in Google Chrome](#column-moving-chrome) | When the Column Moving feature is used with a jQuery UI version lower than 1.8.6, it causes the grid to be selected in Google Chrome™. | ![](../../images/images/positive.png)
+Column Moving is not working with Column Virtualization | Column Moving is supported only with Row Virtualization | ![](../../images/images/negative.png)
 
 
 
@@ -336,6 +337,7 @@ Multi-column headers feature is not supported with [`columnVirtualization`](%%jQ
 Issue | Description | Status
 ------|-------------|-------
 [Simple Filtering does not work with column virtualization](#simple-filtering)| Filtering mode = "simple" does not work with column virtualization ([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) | ![](../../images/images/positive.png)
+Advanced Filtering not working with OR filtering expressions | The oData protocol does not support OR filtering expressions, therefore, advanced Filtering can be used with AND filtering expressions only. | ![](../images/images/negative.png)
 
 
 
@@ -375,7 +377,7 @@ Issue | Description | Status
 Issue | Description | Status
 ------|-------------|-------
 [Resizing not working with some jQuery versions](#resizing-jquery-versions) | `igGrid` Resizing does not support jQuery versions 1.8.0 ÷1.8.5. | ![](../../images/images/positive.png)
-[Resizing not working with fixed virtualization](#resizing-virtualization) |The column resizing feature does not work when fixed virtualization is enabled.| ![](../../images/images/positive.png)
+[Resizing not working with fixed and column virtualization](#resizing-virtualization) |The column resizing feature does not work when fixed and/or column virtualization are enabled.| ![](../../images/images/positive.png)
 [Columns not resizing correctly, when column widths are not set (in Firefox)](#resizing-column-width-firefox) | Due to a bug in Firefox®, the `igGrid` columns cannot be resized correctly when the column widths are not set. | ![](../../images/images/negative.png)
 [Columns not resizing correctly when column widths are set relatively (in Firefox)](#resizing-column-relative-firefox) | Due to a bug in Firefox, the `igGrid` columns cannot be resized correctly when the column widths are set relatively (in percentages). | ![](../../images/images/positive.png)
 Resizing a column occurs at an accelerated speed when the grid is scrolled to the far right.|The resizing speed is accelerated when the grid is scrolled to the far right and a column is resized by dragging from its right edge to the left. This specific behavior is caused by the browser’s layout engine.|![](../../images/images/negative.png)
@@ -403,7 +405,7 @@ Issue | Description | Status
 Incorrect cell selection when selecting with mouse dragging and persistence is enabled|Selecting with mouse dragging when persistence is enabled and there are rows which cells are duplicated (the rows are visually the same) will select only the cells from the first row.|![](../../images/images/positive.png)
 [Text selection is not working when Selection feature is enabled](#text-selection) | The Selection feature disables text selection inside the grid by cancelling the selectstart event and as a result the cell's text cannot be selected. | ![](../../images/images/positive.png)
 [Selecting a row in IE scrolls the row to most left in a grid with horizontal scrollbar](#selecting-rows-ie) | Selecting a row in IE is applying focus to the row, which scrolls the `igGrid` all the way to the left. | ![](../../images/images/positive.png)
-
+Keyboard navigation not supported for column virtualization | Keyboard navigation is not supported for column virtualization. | ![](../../images/images/negative.png)
 
 
 ## [igGridSummaries](#summaries)
@@ -437,6 +439,7 @@ Excel Navigation mode supported only for Cell Edit mode. | When [`excelNavigatio
 Adding and updating a virtual grid doesn’t work if it is grouped | When using `GroupBy` and `Updating` in a virtual grid, updating or adding rows will not work when the grid is grouped. If you ungroup you will see the newly added record at the bottom of the grid records. | ![](../../images/images/negative.png)
 [Updating rows/cells when the Updating and Continuous Virtualization features are enabled while [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) is disabled is not supported.](#updating-edit-virtualization) | Editing rows/cells with Updating when the [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) grid option is set to false and Continuous Virtualization is enable will throw exception. | ![](../../images/images/positive.png)
 Keyboard navigation while in edit mode does not wrap-around if virtualization is enabled. | When virtualization is enabled keyboard navigation with Tab/Shift+Tab when edit mode is "cell" and keyboard navigation with Enter/Shift+Enter when edit mode is "row" will not wrap-around. When reaching the last row/cell and navigating to the next one the first row/cell will not enter edit mode and the same will happend when reaaching the first row/cell and navigating to the previous one - the last row/cell will not enter edit mode. | ![](../../images/images/negative.png)
+Keyboard navigation not supported for column virtualization | Keyboard navigation is not supported for column virtualization. | ![](../../images/images/negative.png)
 
 ## <a id="feature-chooser"></a>Feature Chooser
 

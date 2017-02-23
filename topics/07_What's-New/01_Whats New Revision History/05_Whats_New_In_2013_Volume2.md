@@ -478,7 +478,7 @@ This feature allows the series to animate during the initialization of the `igDa
 #### Related Samples
 
 -   [Transition Animations](%%SamplesUrl%%/data-chart/transition-animation)
--   [Transition Animations (Financial)](%%SamplesUrl%%/data-chart/transition-animation-financial)
+-   [Transition Animations (Financial)](igchart-transitions-in-animations.html#transition-example)
 
 ### <a id="hover-interactions"></a>Hover interactions
 
@@ -660,7 +660,7 @@ With the `igGrid` Load-on-Demand feature, currently in CTP, the data is not load
 
 #### Related Sample
 
--   [Load-on-Demand](%%SamplesUrl%%/grid/append-rows-on-demand)
+-   [Load-on-Demand](%%SamplesEmbedUrl%%/grid/append-rows-on-demand)
 
 
 
