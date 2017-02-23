@@ -10,63 +10,71 @@
 
 # Virtualization Overview (igGrid)
 
-## Topic Overview
 
-### Purpose
+## In this topic
 
-This topic introduces the Virtualization feature of the `igGrid`™ control.
+This topic contains the following sections:
 
+-   [**Introduction**](#introduction)
+-   [**Supported Virtualization Types**](#supported_virtualization_types)
+	-   [Fixed Row Virtualization](#fixed-row)
+	-   [Column Virtualization](#column)
+	-   [Continuous Row Virtualization](#continuous)
+-   [**Keyboard Interactions**](#keyboard-interactions)
+-   [**Related Content**](#related-content)
+    -   [Topics](#topics)
+	-   [Samples](#samples)
 
+## <a id="introduction"></a> Introduction
 
-## Introduction
+Virtualization is a feature of the `igGrid` that boosts performance when displaying large data sets containing thousands of records. It works by reducing the number of the DOM objects in-memory and reusing them while user scrolls and operates with the data. Virtualization is a local feature, which means that it works on the data, already available on the client side.
 
-Virtualization is a feature of the `igGrid` control that reduces the number of the active in-memory DOM objects.
+Due to its nature Virtualization feature cannot and doesn't aim to achieve functional parity with the default non-virtualized grid. For example all APIs that accept or return DOM objects do not work the same way as with non-virtualized grid. This is because there are DOM objects only for the visible cells. 
 
-The `igGrid` support two virtualization types – fixed and continuous.
+> **Note**: Virtualization feature supports a subset of the functionality and features of a non-virtualized grid and should be considered only for very specific scenarios when performance is a must and other performance features like remote Paging are not suitable for the application.
 
-Using Virtualization, you can easily bind data to sources that contain millions of records and still render a large portion of data once on the client.
+The `igGrid` supports two virtualization types – row and column. Row Virtualization can be fixed and continuous. They are described in details in the following sections.
 
-
-
-## Supported Virtualization Types
+## <a id="supported_virtualization_types"></a>Supported Virtualization Types
 
 The following provides a brief explanation of the Virtualization types supported by the `igGrid` control.
 
 - [Fixed Row Virtualization](#fixed-row): Only the visible rows are rendered in the grid.
-- [Fixed Column Virtualization](#fixed-column): Only the visible columns are rendered in the grid.
+- [Column Virtualization](#column): Only the visible columns are rendered in the grid.
 - [Continuous Row Virtualization](#continuous): A pre-defined number of rows is rendered in the grid.
-
-
 
 ### <a id="fixed-row"></a> Fixed Row Virtualization 
 
-With Fixed Row Virtualization, only the visible rows are rendered in the grid and these rendered rows are used later as a container for the generated data. As users start to scroll the grid, and data in the pool of rows is updated and the rows DOM elements are reused.
+With Fixed Row Virtualization, only the visible rows are rendered in the grid and these rendered rows are later reused (when user scrolls the grid) to display the subsequent data from the data source.
 
 Reuse of existing DOM elements translates to constant rendering speed and a very low memory footprint. For example, whether you load 100 or 10,000 records into the grid, the memory and CPU consumption is exactly the same (excluding overhead for data binding).
 
-Achieving grid virtualization is possible by implementing client side logic to reuse DOM elements. Therefore, a virtualized grid does not make server requests to fetch additional data. The grid works with the data already available on the client. If you prefer not to load the entire data set to the client at once (which in some circumstances may not be optimal, particularly when you have a very large set of data), you can still combine virtualization with paging, and set your grid to have a large page size.
+As noted in the introduction the Virtualization works with the data already available on the client. If you prefer not to load the entire data set to the client at once (which in some circumstances may not be optimal, particularly when you have a very large set of data), you can still combine Virtualization with Paging, and set your grid to have a large page size.
 
-With Fixed Row Virtualization, all `igGrid` features except the Grouping features (i.e. Paging, Sorting, Filtering, and Selecting), work as expected.
+Specific to the Fixed Row Virtualization is that all visible rows share the same height. You should accomodate for a row height that can hold the cell with the largest data (especially when the data will span multiple lines).
 
-The picture on the left demonstrates a grid with 80 records loaded on the client. The picture on the right shows the actual HTML table elements that exist in the DOM to support the virtualized grid.
+Checkout the [Feature Compatibility Matrix (igGrid)](Feature-Compatibility-Matrix(igGrid).html) for the list of the grid features that work in combination with Fixed Row Virtualization.
+
+The picture on the left demonstrates a grid with 500 records. The picture on the right shows the actual HTML table elements that exist in the DOM to support the virtualized grid.
 
 ![](images/igGrid_Virtualization_Overview_01.png)
 
 **Related Topics:**
 
--   [Enabling and Configuring Virtualization](igGrid-Enabling-and-Configuring-Virtualization.html)
+-   [Enabling and Configuring Virtualization (Fixed)](igGrid-Enabling-and-Configuring-Virtualization.html#fixed-row)
 
-### <a id="fixed-column"></a> Fixed Column Virtualization 
+### <a id="column"></a> Column Virtualization 
 
-With Fixed Column Virtualization only the visible columns are rendereding in the grid.
+With Column Virtualization only the visible columns are rendereding in the grid.
 As users start scrolling horizontally in the grid the currently visible columns are updated and the related DOM elements are reused to display the column data of the new visible columns.
 
-Similarly to fixed row virtualization, column virtualization also only works with the data already available on the client and does not make server requests to fetch any additional data.
+Column Virtualization depends on Fixed Row Virtualization and will enable it implicitly if it is not enabled explicitly.
 
-It currently does not work in combination with the following features: GroupBy, Append Rows On Demand, Multi-Column Headers, Column Fixing and Multi-Row Layout features.
-You can find more details on the Feature Compatibilities in the following topic:
+Similarly to Fixed Row Virtualization, Column Virtualization also only works with the data already available on the client and does not make server requests to fetch any additional data.
 
-- [Feature Compatibility Matrix (igGrid)](Feature-Compatibility-Matrix(igGrid).html): This topic shows the compatibility between `igGrid` features when enabled at the same time.
+Setting different column widths have little to no effect, because the content is shifted between columns during horizontal scrolling, but the visible columns width stays intact.
+
+Checkout the [Feature Compatibility Matrix (igGrid)](Feature-Compatibility-Matrix(igGrid).html) for the list of the grid features that work in combination with Column Virtualization.
 
 The picture on the left demonstrates a grid with 25 columns and 500 records loaded on the client. The picture on the right shows the actual HTML table elements that exist in the DOM to support the virtualized grid.
 
@@ -74,25 +82,27 @@ The picture on the left demonstrates a grid with 25 columns and 500 records load
 
 **Related Topics:**
 
--   [Enabling and Configuring Virtualization](igGrid-Enabling-and-Configuring-Virtualization.html)
+-   [Enabling and Configuring Virtualization (Column)](igGrid-Enabling-and-Configuring-Virtualization.html#column)
 
 ### <a id="continuous"></a> Continuous Row Virtualization 
 
-Continuous Virtualization uses a pre-defined number of rows. As the user scrolls down/up the virtualization determines whether the currently rendered rows are sufficient to display the next/previous portion of rows. If not, the current portion of rows is being disposed and the required portion of rows is recreated. Thus, having 1000 data rows will be displayed by only say 30 as opposed to 1000 row tables which significantly loads the DOM structure.
+Continuous Virtualization uses a pre-defined number of rows. As the user scrolls vertically the Virtualization determines whether the currently rendered rows are sufficient to display the next/previous chunk of records. If not, the current chunk of rows is being disposed and the required chunk of records is loaded. Thus, having 1000 data rows will be displayed by only say 30 as opposed to 1000 row tables which significantly loads the DOM structure.
 
-Each row in the `igGrid` control could span on several lines. Thus, row height may vary from row to row. To determine which rows should be displayed after a scroll takes place, the virtualization calculates the average row height. However, this average row height is just an approximate estimation, because its calculation based on the currently rendered rows and not on all available rows. From here, each time when it is being scrolled, the rows about to be displayed are estimated. This might lead to incorrect scroller position when the scroller is at the top/end positions. The virtualization checks for such situations after each scroll and corrects scroller’s position if necessary.
+Continuous Virtualization supports variable row height. To determine which rows should be displayed after a scroll takes place, the virtualization calculates the average row height. However, this average row height is just an approximate estimation, because its calculation based on the currently rendered rows and not on all available rows. From here, each time when it is being scrolled, the rows about to be displayed are estimated. This might lead to incorrect scroller position when the scroller is at the top/end positions. The Virtualization checks for such situations after each scroll and corrects scroller’s position if necessary.
+
+Checkout the [Feature Compatibility Matrix (igGrid)](Feature-Compatibility-Matrix(igGrid).html) for the list of the grid features that work in combination with Continuous Row Virtualization.
 
 The picture on the left demonstrates a grid with 500 records loaded at on the client. The picture on the right shows the actual HTML table elements that exist in the DOM to support the virtualized grid.
 
 ![](images/igGrid_Virtualization_Overview_2.png)
 
-> **Note**: Continuous virtualization enjoys the widest support among controls in Ignite UI and should be your first choice when selecting a virtualization mode. You may find fixed virtualization necessary when attempting to implement column virtualization, but otherwise continuous virtualization is recommended.
+> **Note**: Continuous Virtualization enjoys the widest support among features in `igGrid` and should be your first choice when selecting a virtualization mode. However it does not support Column Virtualization, so if you want Column Virtualization you should stick with Fixed Virtualization instead.
 
 **Related Topics:**
 
--   [Enabling and Configuring Virtualization](igGrid-Enabling-and-Configuring-Virtualization.html)
+-   [Enabling and Configuring Virtualization (Continuous)](igGrid-Enabling-and-Configuring-Virtualization.html#continuous)
 
-### Keyboard Interactions
+### <a id="keyboard-interactions"></a>Keyboard Interactions
 
 When virtualization is enabled and mouse is over the virtual table, the following key interactions are available:
 
@@ -106,6 +116,7 @@ The following topics provide additional information related to this topic.
 
 - [Enabling and Configuring Virtualization](igGrid-Enabling-and-Configuring-Virtualization.html): This topic explains, with code examples, how to enable and configure the Virtualization feature in the `igGrid`.
 - [Performance Guide](iggrid-performance-guide.html): This topic explains in more details the different grid settings that can further improve the performance.
+- [Feature Compatibility Matrix (igGrid)](Feature-Compatibility-Matrix(igGrid).html): This topic show the compatible feature combinations in `igGrid`.
 
 ### <a id="samples"></a> Samples
 
@@ -113,7 +124,7 @@ The following samples provide additional information related to this topic.
 
 - [Virtualization (Fixed)](%%SamplesUrl%%/grid/virtualization-fixed): This sample demonstrates the HTML virtualization capabilities of the `igGrid` using fixed number of rows.
 
-- [Continuous Virtualization](%%SamplesUrl%%/grid/virtualization-continuous): This sample demonstrates the continuous virtualization capabilities of the `igGrid` control.
+- [Virtualization (Continuous)](%%SamplesUrl%%/grid/virtualization-continuous): This sample demonstrates the Continuous Virtualization capabilities of the `igGrid` control.
 
 
 
