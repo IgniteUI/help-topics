@@ -38,8 +38,6 @@ This topic contains the following sections:
     -   [Example](#initial-example)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
-
 
 
 ## <a id="introduction"></a> Introduction
@@ -136,31 +134,17 @@ Enable merged initial state | initialState | "merged"
 
 ### <a id="initial-example"></a> Example
 
-The screenshot below demonstrates how the `igGrid` looks as a result of the following settings:
-
 Property | Value
 ---------|------
 initialState | "merged"
 
-
-![](images/igGrid_CellMerging_Overview.png)
-
-The following code snippets demonstrate how to set the cell merging’s initial state in code:
+The following sample demonstrates how to set the cell merging’s initial state in code:
 
 **In JavaScript:**
 
-```js
-$("#grid").igGrid({
-    dataSource: adventureWorks,
-    autoGenerateColumns: true,
-    features: [
-        {
-            name: "CellMerging",
-            initialState: "merged"
-        }
-    ]
-});
-```
+<div class="embed-sample">
+   [Cell Merging](%%SamplesEmbedUrl%%/grid/cell-merging)
+</div>
 
 **In ASPX:**
 
@@ -186,20 +170,3 @@ The following topics provide additional information related to this topic.
 - [Event Reference (Cell Merging, igGrid)](igGrid-CellMerging-Event-Reference.html): This topic provides reference information on the `igGrid` control’s Cell Merging feature’s events.
 
 - [CSS Classes Reference (Cell Merging, igGrid)](igGrid-CellMerging-CSS-Classes-Reference.html): This topic provides reference information on the `igGrid` control’s Cell Merging feature’s CSS classes.
-
-
-### <a id="samples"></a> Samples
-
-The following samples provide additional information related to this topic.
-
-- [Cell Merging](%%SamplesUrl%%/grid/cell-merging): This sample shows how to configure a Cell Merging in the `igGrid`.
-
-- [HierarchicalGrid Cell Merging](%%SamplesUrl%%/hierarchical-grid/cell-merging): This sample shows how to configure a Cell Merging in the `igHierarchicalGrid`.
-
-
-
- 
-
- 
-
-

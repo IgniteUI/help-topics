@@ -433,14 +433,6 @@ The following topics provide additional information related to this topic.
 
 The following samples provide additional information related to this topic.
 
-- [Row Edit Dialog](%%SamplesUrl%%/grid/row-edit-dialog): This sample shows how to configure a Row Edit Dialog in the `igGrid`
-
-- [HierarchicalGrid Row Edit Dialog](%%SamplesUrl%%/hierarchical-grid/row-edit-dialog): This sample shows how to configure a Row Edit Dialog in the `igHierarchicalGrid`
-
-
-
- 
-
- 
-
-
+<div class="embed-sample">
+   [Row Edit Dialog](%%SamplesEmbedUrl%%/grid/row-edit-dialog)
+</div>

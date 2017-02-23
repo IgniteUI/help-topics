@@ -171,6 +171,14 @@ the grouping action ends. **This event is fired also when group/ungroup from Gro
         </tr>
     </tbody>
 </table>
+
+The following sample demonstrates how to use the [compareFunc](%%jQueryApiUrl%%/ui.iggridgroupby#options:columnSettings.compareFunc) 
+to customize the grouping: 
+
+<div class="embed-sample">
+   [Grouping Customization](%%SamplesEmbedUrl%%/grid/grouping-customization)
+</div>
+
 ## <a id="api-usage"></a> API Usage
 
 In order to group a column programmatically, you need to do this in the following way:
@@ -216,6 +224,14 @@ $('#grid1').igGridGroupBy("collapse", id);
 // expand
 $('#grid1').igGridGroupBy("expand", id);
 ```
+
+The following sample provides additional information related to the API usage: 
+
+<div class="embed-sample">
+   [Grouping API](%%SamplesEmbedUrl%%/grid/grouping-api)
+</div>
+
+
 ## <a id="keyboard-interaction"></a> Keyboard Interactions
 
 The following keyboard interactions are available.

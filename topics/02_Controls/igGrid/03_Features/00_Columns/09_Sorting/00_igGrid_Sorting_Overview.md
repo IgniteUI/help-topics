@@ -47,7 +47,7 @@ If you would like to retain the previous behavior of sorting being cleared after
 ```js
 features: [
   { 
-     name: “Sorting”, 
+     name: "Sorting", 
      persist: false 
   }
 ] 
@@ -66,80 +66,32 @@ Sorting can be configured to operate either locally or remotely. In the first ca
 -   Once the sorting widget is instantiated, it modifies the column header by injecting markup that allows for the various active, focus and sorted styles to be applied, including the sort indicator.
 -   Sorting is implemented as a jQuery UI widget, which follows the lifecycle of any jQuery UI widget.
 -   The grid framework is responsible of creating and destroying the sorting widget.
--   All sortable columns can be sorted and navigated through the keyboard using the TAB and Shift+TAB keys. ![](images/igGrid_Single_and_Multiple_Column_Sorting_01.png)
+-   All sortable columns can be sorted and navigated through the keyboard using the TAB and Shift+TAB keys. 
+    ![](images/igGrid_Single_and_Multiple_Column_Sorting_01.png)
 
 Figure 1: The igGrid control sorting UI
 
 ## <a id="enable"></a> Enabling Sorting
 
-In order to get started with Sorting, you first need to include the necessary JavaScript and CSS dependencies. The easiest way to do that is to use the combined / minified version of the scripts and styles.
+The sample below demonstrates how to enable the Sorting feature:
 
-Listing 1: Necessary CSS and JavaScript references you need to include in your application
+<div class="embed-sample">
+   [Sorting](%%SamplesEmbedUrl%%/grid/sorting-local)
+</div>
 
-
-**In HTML:**
-
-```html
-<link type="text/css" href="infragistics.theme.css" rel="stylesheet" />
-<link type="text/css" href="infragistics.css" rel="stylesheet" />
-<script type="text/javascript" src="jquery.min.js"></script>
-<script type="text/javascript" src="jquery-ui.min.js"></script>
-<script type="text/javascript" src="infragistics.core.js"></script>
-<script type="text/javascript" src="infragistics.lob.js"></script>
-```
-
-Listing 2: Minimal set of CSS and JavaScript references (not minified and combined) – needed only for sorting
-
-
-
-**In HTML:**
-
-```html
-<script type="text/javascript" src="infragistics.util.js"></script>
-<script type="text/javascript" src="infragistics.dataSource.js"></script>
-<script type="text/javascript" src="infragistics.ui.shared.js"></script>
-<script type="text/javascript" src="infragistics.ui.grid.framework.js"></script>
-<script type="text/javascript" src="infragistics.ui.grid.sorting.js"></script>
-```
-
-Listing 3: Sample grid code for sorting
-
-**In Javascript:**
-
-```js
-$("#grid1").igGrid({
-    columns: [
-        { headerText: "Product ID", key: "ProductID", dataType: "number" },
-        { headerText: "Product Name", key: "Name", dataType: "string" },
-        { headerText: "ProductNumber", key: "ProductNumber", dataType: "string" }
-    ],
-    dataSource: “adventureWorks.php”,
-    responseDataKey: 'Records',
-    features: [
-        {
-            name : 'Sorting',
-            type: "local",
-            columnSettings: [
-            ]
-        }
-    ]
-});
-```
-
-**In HTML:**
-
-```html
-<table id="grid1"></table>
-```
+The following code snippet shows how to enable Sorting in ASPX (MVC)
 
 **In ASPX (MVC):**
 
 ```csharp
 <%= Html.Infragistics().Grid(Model).ID("grid1").Columns(column =>
     {
-        column.For(x => x.ProductID).HeaderText("Product ID").Width("100px");
-        column.For(x => x.Name).HeaderText("Product Name").Width("200px");
-        column.For(x => x.ProductNumber).HeaderText("Product Number").Width("200px");
+        column.For(x => x.EmployeeID).HeaderText("Employee ID").Width("15%");
+        column.For(x => x.FirstName).HeaderText("First Name").Width("20%");
+        column.For(x => x.LastName).HeaderText("Last Name").Width("20%");
+        column.For(x => x.BirthDate).HeaderText("Birth Date").Width("15%");
+        column.For(x => x.City).HeaderText("City").Width("15%");
+        column.For(x => x.PostalCode).HeaderText("Postal Code").Width("15%");
     }).Features(features => {
         features.Sorting().Type(OpType.Local).CaseSensitive(true);
     })
@@ -149,7 +101,7 @@ $("#grid1").igGrid({
 	.Render()%>
 ```
 
-If you would like to provide a custom sorting function, please refer to the “customSortFunction” option.
+If you would like to provide a custom sorting function, please refer to the `customSortFunction` option.
 
 ## <a id="column-settings"></a> Column Settings
 
@@ -159,13 +111,13 @@ Each column is configurable with the columnSettings options as listed in Table 1
 
 Property name (default values in parenthesis) | Description
 ---|---
-columnKey( string col name) | Data key of the column
-allowSorting (true) | Specifies if this column is allowed to participate in sorting
-firstSortDirection (undefined) | Sorting direction when the column is first clicked
-currentSortDirection (undefined) | Initial (default) sorting direction. When invoked at runtime, gives the current direction of sorting for the particular column.
+`columnKey`( string col name) | Data key of the column
+`allowSorting` (true) | Specifies if this column is allowed to participate in sorting
+`firstSortDirection` (undefined) | Sorting direction when the column is first clicked
+`currentSortDirection` (undefined) | Initial (default) sorting direction. When invoked at runtime, gives the current direction of sorting for the particular column.
 
 
-**In Javascript:**
+**In JavaScript:**
 
 ```js
 $("#grid1").igGrid({
@@ -199,7 +151,7 @@ In order to sort a column programmatically, you can do this in the following way
 
 Listing 5: Programatically sorting a column
 
-**In Javascript:**
+**In JavaScript:**
 
 ```js
 $('#grid1').igGridSorting('sortColumn', 'ProductID', 'asc');
@@ -209,7 +161,7 @@ The applied sorting expressions can be retrieved from the data source of the gri
 
 Listing 6: Retrieving the applied sorting expressions
 
-**In Javascript:**
+**In JavaScript:**
 
 ```js
 var expressions = $('#grid1').data('igGrid').dataSource.settings.sorting.expressions;
@@ -218,7 +170,7 @@ var expressions = $('#grid1').data('igGrid').dataSource.settings.sorting.express
 Listing 7: Retrieving the `columnSettings` object
 
 
-**In Javascript:**
+**In JavaScript:**
 
 ```js
 var sorting = $('#grid1').data('igGridSorting');
@@ -231,18 +183,18 @@ You can bind to client-side events to the Sorting feature in two ways, which are
 
 Listing 8: Binding to client-side events from anywhere in your application
 
-**In Javascript:**
+**In JavaScript:**
 
 ```js
 $("#grid1").bind("iggridsortingcolumnsorted", handler);
 ```
 
-> **Note:** If you would like to bind using the approach described in Listing 8, you must use the jQuery delegate() method instead of bind if sorting is not yet instantiated.
+> **Note:** If you would like to bind using the approach described in Listing 8, you must use the jQuery `delegate` method instead of bind if Sorting is not yet instantiated.
 
-Listing 9: Binding to client-side events by specifying the event name as an option when you initialize the sorting feature (case sensitive)
+Listing 9: Binding to client-side events by specifying the event name as an option when you initialize the Sorting feature (case sensitive)
 
 
-**In Javascript:**
+**In JavaScript:**
 
 ```js
 $("#grid1").igGrid({
@@ -267,23 +219,23 @@ function handler(event, args) {
 }
 ```
 
-> **Note:** All ‘ing’ events are cancellable. In order to cancel an ‘ing’ event, its respective event handler must return false.
+> **Note:** All "ing" events are cancellable. In order to cancel an "ing" event, its respective event handler must return false.
 
 The grid Sorting feature exposes the client-side events as detailed in Table 2.
 
 > **Note:** In the following Table 2, the events specific to the Multiple Sorting Dialog are not listed. They are available in the [Multiple Sorting Dialog](igGrid-Multiple-Sorting-Dialog.html) topic.
 
-**Table 2**: Argument object definitions for the columnSorting feature
+**Table 2**: Argument object definitions for the Sorting feature events
 
 Event Name | Args
 ---|---
-columnSorting | columnKey: Column key <br /> owner: Reference to the instance of igGridSorting widget  <br /> direction: New sorting direction
-columnSorted | Same as columnSorting
+`columnSorting` | columnKey: Column key <br /> owner: Reference to the instance of `igGridSorting` widget  <br /> direction: New sorting direction
+`columnSorted` | Same as columnSorting
 
 
 ## <a id="properties"></a> Sorting options
 
-The table in Listing 3 summarizes all sorting options available to instantiate the sorting widget.
+The table in Listing 3 summarizes all sorting options available to instantiate the Sorting widget.
 
 > **Note:** In the following Table 3, the properties specific to the Multiple Sorting Dialog are not listed. They are available in the [Multiple Sorting Dialog](igGrid-Multiple-Sorting-Dialog.html) topic.
 
@@ -306,7 +258,7 @@ Description
 
         <tr>
             <td>
-type (“remote”)
+type ("remote")
 			</td>
 
             <td>
@@ -321,7 +273,7 @@ applySortedColumnCss (true)
 			</td>
 
             <td>
-If false, the sort will not apply a special “sorted” style to all TD cells of the sorted column.
+If false, the sort will not apply a special "sorted" style to all TD cells of the sorted column.
 			</td>
         </tr>
 
@@ -351,7 +303,7 @@ sortUrlKeyAscValue (null)
 			</td>
 
             <td>
-Delegates to the `igDataSource` control – states how the URL value for “ascending” state is encoded
+Delegates to the `igDataSource` control – states how the URL value for "ascending" state is encoded
 			</td>
         </tr>
 
@@ -367,7 +319,7 @@ Same as sortUrlKeyAscValue
 
         <tr>
             <td>
-mode (“single”)
+mode ("single")
 			</td>
 
             <td>
@@ -377,7 +329,7 @@ Sorting can be multiple or single (default). When it is single, all previous sor
 
         <tr>
             <td>
-firstSortDirection (‘ascending’)
+firstSortDirection ("ascending")
 			</td>
 
             <td>
@@ -391,7 +343,7 @@ sortedColumnTooltip ('sorted ${direction}')
 			</td>
 
             <td>
-Format of the tooltip “title” attribute applied on the TH
+Format of the tooltip "title" attribute applied on the TH
 			</td>
         </tr>
 
@@ -432,7 +384,7 @@ customSortFunction (null)
 					</li>
 
                     <li>
-3. The sorting direction, “asc” or “desc”.
+3. The sorting direction, "asc" or "desc".
 					</li>
                 </ul>
                 Should return the sorted data array.
@@ -452,7 +404,7 @@ customSortFunction (null)
 
 ## <a id="css"></a> List of Sorting CSS classes
 
-Table 4 specifies all CSS classes applied to various parts of the sorting UI. Note that ui-state-default, ui-state-active, ui-state-hover, ui-state-focus are classes defined by the jQuery UI CSS framework.
+Table 4 specifies all CSS classes applied to various parts of the Sorting UI. Note that `ui-state-default`, `ui-state-active`, `ui-state-hover`, `ui-state-focus` are classes defined by the jQuery UI CSS framework.
 
 **Table 4**: CSS classes applied to the Sorting UI
 
@@ -473,16 +425,6 @@ sortIndicatorDescending | Same as sortIndicatorAscending but when descending | u
 
 ## <a id="related-content"></a> Related Content
 
-### <a id="samples"></a> Samples
-
--   [Local Sorting](%%SamplesUrl%%/grid/sorting-local)
--   [Remote Sorting](%%SamplesUrl%%/grid/sorting-remote)
-
 ### <a id="topics"></a> Topics
 
 -   [igGrid Overview](igGrid-Overview.html)
-
- 
-
- 
-
