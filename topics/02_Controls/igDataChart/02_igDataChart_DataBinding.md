@@ -28,6 +28,7 @@ The following table lists the materials required as a prerequisite to understand
 
 -   Data Binding
 -   JSON
+-	XML
 -   Web Services
 -   WCF Services
 -   ASP.NET MVC
@@ -57,6 +58,9 @@ This topic contains the following sections:
     -   [Prerequisites](#js-array-prerequisites)
     -   [Preview](#js_preview)
     -   [Steps](#js_steps)
+-	[Binding to an XML string](#binding-to-xml)
+	-   [Introduction](#xml-introduction)
+	-	[Example](#xml-example)
 -   [Binding to an IQueryable&lt;T&gt; in ASP.NET MVC](#binding-to-iqueryable)
    -   [Introduction](#mvc-introduction)
     -   [Prerequisites](#mvc_prerequisites)
@@ -248,8 +252,24 @@ The following steps demonstrate how to bind the `igDataChart` control to a JavaS
         });
     </script>
 	```
+	
+This is a basic example of the data chart bound to JSON data:
 
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/data-chart/json-binding](%%SamplesEmbedUrl%%/data-chart/json-binding)
+</div>
 
+###<a id="binding-to-xml"></a>Binding to to an XML string
+
+###<a id="xml-introduction"></a> Introduction
+
+This example demonstrates how to bind the `igDataChart` control to an XML string.
+
+###<a id="xml-example"></a> Example
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/data-chart/xml-binding](%%SamplesEmbedUrl%%/data-chart/xml-binding)
+</div>
 
 ##<a id="binding-to-iqueryable"></a>Binding to an IQueryable&lt;T&gt; in ASP.NET MVC
 
