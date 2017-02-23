@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# TypeScript support (igCombo)
+# TypeScript Support (igCombo)
 
 ## Topic Overview
 This topic shows how to configure `igCombo` with TypeScript data source. We can define a TypeScript class, create a data source with instances from our class and bind the data source to the `igCombo`.

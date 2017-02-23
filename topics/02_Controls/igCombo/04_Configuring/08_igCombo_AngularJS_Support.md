@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# AngularJS support (igCombo)
+# AngularJS Support (igCombo)
 
 ## Topic Overview
 This topic shows how to configure `igCombo` with AngularJS. Each of our controls has a corresponding AngularJS directive, `igCombo` as well. This is an overview of the AngularJS `igCombo` directive.
