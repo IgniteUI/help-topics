@@ -60,6 +60,18 @@ Yes | Yes | Headers are rendered in a separate table, inside of a DIV (so that i
 No | Yes | The header’s element is rendered inside of a single table – where the data is hosted. There is no separate TABLE or DIV.
 
 
+<div class="embed-sample">
+    [Grid Layout](%%SamplesEmbedUrl%%/grid/grid-layout)
+</div>
+
+This sample demonstrates how to set up different layout properties of the igGrid. The following properties are exposed: 
+caption – caption text that will be shown above the grid header.
+fixed headers - the column headers can be fixed so they are visible while scrolling.
+default column width - when columns don’t have width assigned in the columns collection.
+width (columns) – the width that is applied to the column.
+width - the width of the grid. If a column’s width exceeds the grid’s width then a horizontal scroll bar appears.
+
+
 ## <a id="defining-columns"></a> Defining Columns
 
 Grid columns are defined by adding objects to the columns grid option as shown in Listing 1.
