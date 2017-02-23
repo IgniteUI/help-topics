@@ -41,9 +41,8 @@ Option | Description
 --- | --- |
 "monthNames"|The full names of the months in the calendar|
 "monthNamesShort"|The abbreviated month names, as used in the month header on the datepicker and as requested via the `dateFormat` option|
-"dayNames"|The long day names for use as requested via the `dateFormat` option|
-"dayNamesShort"|The abbreviated day names for use as requested via the `dateFormat` option|
-"dayNamesMin"|The minimised day names for use as column headers within the datepicker|
+"dayNames"|The long day names for use as requested via the `dateDisplayFormat` option|
+"dayNamesShort"|The abbreviated day names for use as requested via the `dateDisplayFormat` option|
 "datePattern"|The format for displayed dates when `dateDisplayFormat: "date"` is set|
 "dateLongPattern"|The format for displayed dates when `dateDisplayFormat: "dateLong"` is set|
 "dateTimePattern"|The format for displayed dates when `dateDisplayFormat: "dateTime"` is set|
@@ -51,6 +50,7 @@ Option | Description
 "timeLongPattern"|The format for displayed date when `dateDisplayFormat: "timeLong"` is set|
 
 ### Date Picker
+The following list defines the options of the jQuery UI datepicker that are localized, when including a specific regional file, and are used by igDatePicker to customize date picker appearance.
 
 Option | Description 
 --- | --- |
@@ -58,17 +58,23 @@ Option | Description
 "prevText"|The text of the button that navigates to the previous month|
 "nextText"|The text of the button that navigates to the next month|
 "currentText"|The text of the button that selects the current day in the calendar. Have in mind that you must enable the `showButtonPanel` option in `datepickerOptions` option in order to show the button.|
-"monthNames"|The full names of the months in the calendar|
-"monthNamesShort"|The abbreviated month names, as used in the month header on the datepicker and as requested via the `dateFormat` option|
-"dayNames"|The long day names for use as requested via the `dateFormat` option|
-"dayNamesShort"|The abbreviated day names for use as requested via the `dateFormat` option|
+"monthNamesShort"|The abbreviated month names, as used in the month header on the datepicker |
 "dayNamesMin"|The minimised day names for use as column headers within the datepicker|
 "weekHeader"|The text to display for the week of the year column heading. Have in mind that you must enable the `showWeek` option in `datepickerOptions` option to display this column.|
-"dateFormat"|The format for parsed and displayed dates|
 "firstDay"|The option is setting the first day of the week in the calendar|
 "isRTL"|Whether the current language is drawn from right to left|
 "showMonthAfterYear"|Whether to show the month after the year in the header|
 "yearSuffix"|Additional text to display after the year in the month headers|
+
+The following list defines the options of the jQuery UI datepicker that are localized, when including a specific regional file, but are not used by the igDatePicker. If a pure jQuery UI datepicker is initialized on the page then it will use the following options to customize the date format, displayed in its input.
+
+Option | Description 
+--- | --- |
+"dateFormat"|The format for parsed and displayed dates|
+"monthNames"|The list of full month names, for use as requested via the dateFormat option|
+"monthNamesShort"|The abbreviated month names requested via the `dateFormat` option|
+"dayNames"|The long day names for use as requested via the `dateFormat` option|
+"dayNamesShort"|The abbreviated day names for use as requested via the `dateFormat` option|
 
 ### Numeric Editor
 
