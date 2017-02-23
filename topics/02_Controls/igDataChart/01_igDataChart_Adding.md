@@ -176,12 +176,12 @@ The following steps demonstrate how to add an `igDataChart` control to a web pag
 	```html
 	<script type="text/javascript">
 	    var data = [
-	        { "DateString": "2.1.2010", "Open": 1000, "High": 1028.75, "Low": 985.25, "Close": 1020, "Volume": 1995 },            
-			{ "DateString": "3.1.2010", "Open": 1020, "High": 1032.5, "Low": 999.5, "Close": 1021, "Volume": 1964.5 },            
-			{ "DateString": "4.1.2010", "Open": 1021, "High": 1033.5, "Low": 996, "Close": 1033, "Volume": 1974.75 },            
-			{ "DateString": "5.1.2010", "Open": 1033, "High": 1062, "Low": 1018.75, "Close": 1042, "Volume": 1978.5 },            
-			{ "DateString": "6.1.2010", "Open": 1042, "High": 1058.5, "Low": 1019.75, "Close": 1029, "Volume": 1979 },            
-			{ "DateString": "7.1.2010", "Open": 1029, "High": 1050.75, "Low": 1006, "Close": 1042, "Volume": 1990 }        
+	        { "DateString": "1/2", "Open": 1000, "High": 1028.75, "Low": 985.25, "Close": 1020, "Volume": 1995 },            
+			{ "DateString": "1/3", "Open": 1020, "High": 1032.5, "Low": 999.5, "Close": 1021, "Volume": 1964.5 },            
+			{ "DateString": "1/4", "Open": 1021, "High": 1033.5, "Low": 996, "Close": 1033, "Volume": 1974.75 },            
+			{ "DateString": "1/5", "Open": 1033, "High": 1062, "Low": 1018.75, "Close": 1042, "Volume": 1978.5 },            
+			{ "DateString": "1/6", "Open": 1042, "High": 1058.5, "Low": 1019.75, "Close": 1029, "Volume": 1979 },            
+			{ "DateString": "1/7", "Open": 1029, "High": 1050.75, "Low": 1006, "Close": 1042, "Volume": 1990 }        
 		];
 	</script>
 	```
@@ -201,7 +201,7 @@ The following steps demonstrate how to add an `igDataChart` control to a web pag
 	    public double Close { get; set; }
 	    public double Volume { get; set; }
 	    public DateTime Date { get; set; }
-	    public string DateString { get { return Date.ToShortDateString(); } }
+	    public string DateString { get { return string.Format("{0:M/d}", Date); } }
 	}
 	```
 	
@@ -355,7 +355,7 @@ The following steps demonstrate how to add an `igDataChart` control to a web pag
 	    type: "financial",
 	    name: "finSeries",
 	    title: "Price Movements",
-	    brush: "rgba(0, 255, 255, 1)",
+	    brush: "rgba(116, 70, 185, 1)",
 	    negativeBrush: "rgba(0, 0, 0, 0.7)",
 	    xAxis: "xAxis",
 	    yAxis: "priceAxis",
@@ -407,7 +407,7 @@ The following steps demonstrate how to add an `igDataChart` control to a web pag
 					.CloseMemberPath(item => item.Close)
 					.LowMemberPath(item => item.Low)
 					.HighMemberPath(item => item.High)
-					.Brush("rgba(0, 255, 255, 1)")
+					.Brush("rgba(116, 70, 185, 1)")
 					.NegativeBrush("rgba(0, 0, 0, 0.7)")
 					.Legend(legend => legend.ID("legend"));
 	
