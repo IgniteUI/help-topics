@@ -218,35 +218,34 @@ By default the cell text in igGrid is left aligned. To customize the cell text a
 
 **In Html**
 ```html
-<style>
-    .align-right {
-        text-align: right;
-    }
-    .align-center {
-        text-align: center;
-    }
-</style>
+ <style>
+        .numericAlignment {
+            text-align: right;
+        }
+    </style>
 ```
 
 **In Javascript:**
 
 ```js
-$("#grid1").igGrid({
-    autoGenerateColumns: false,
-    columns: [ {
-            headerText: "Product Number", 
-            key: "ProductNumber",
-            dataType: "number",
-            columnCssClass: "align-right"
-        }, {
-            headerText: "Modified Date",  
-            key: "ModifiedDate",  
-            dataType: "date",
-            columnCssClass: "align-center"
-        }
-    ]
-});
+ $("#grid").igGrid({
+                autoGenerateColumns: false,
+                width: "100%",
+                height: "500px",
+                columns: [
+                    { headerText: "Product ID", key: "ProductID", dataType: "number", width: "15%", columnCssClass: "numericAlignment" },
+                    { headerText: "Product Name", key: "Name", dataType: "string", width: "40%" },
+                    { headerText: "Product Number", key: "ProductNumber", dataType: "string", width: "30%" },
+                    { headerText: "Reorder Point", key: "ReorderPoint", dataType: "number", width: "15%", columnCssClass: "numericAlignment" }
+                ],
+                dataSource: adventureWorks
+            });
 ``` 
+The sample below demonstrates how to customize the grid column text alignment. The grid's "Product ID" and "Reorder Point" numeric columns text is aligned to the right. This is done by applying a custom CSS class to the column cells. The CSS class is configured in the grid column's columnCssClass property.
+<div class="embed-sample">
+   [igGrid Configure Text Alignment](%%SamplesEmbedUrl%%/grid/configure-text-alignment)
+</div>
+
 
 ## <a id="defining-mapper"></a> Defining Mapper function for column
 
