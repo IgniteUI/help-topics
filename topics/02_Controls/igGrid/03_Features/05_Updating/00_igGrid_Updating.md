@@ -563,7 +563,7 @@ $("#grid").igGridUpdating("deleteRow", pkValue);
 ```js
 $('#grid1').igGridUpdating('updateRow', 1, { 'FirstName': 'Alex' });
 ```
-The sample below demonstrates how many of the grid options for editing data are interacting together.
+The sample below demonstrates many of the grid options for editing data interacting together.
 <div class="embed-sample">
    [igGrid Editing API and Events](%%SamplesEmbedUrl%%/grid/editing-api-events)
 </div>
