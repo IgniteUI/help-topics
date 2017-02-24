@@ -91,14 +91,3 @@ The following topics provide additional information related to this topic.
 -	[Configurable Visual Elements (igDataChart)](igDataChart-Visual-Elements.html): This topic lists all configurable visual elements of the `igDataChart` control and the properties that manage them.
 
 -	[Series Types (igDataChart)](igDataChart-Series-Types.html): This topic shows all kinds of charts that can be produced with the help of the `igDataChart` control.
-
-
-
-
-
-
- 
-
- 
-
-
