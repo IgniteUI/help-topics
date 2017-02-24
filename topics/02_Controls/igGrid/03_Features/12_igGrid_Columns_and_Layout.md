@@ -197,7 +197,8 @@ The sample below demonstrates the grid column formatting capabilities. The Sell 
  ```
  Raw Value -> (autoFormat|format|formatter)* -> columnCssClass -> template* -> Cell Value 
  * - optional setting
-
+ ```
+ 
 Example:
 ```js
 $("#grid1").igGrid({
