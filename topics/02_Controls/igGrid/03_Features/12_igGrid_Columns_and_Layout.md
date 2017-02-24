@@ -161,6 +161,7 @@ Column formatting (rendering) is affected by several `igGrid` options. These are
  [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) is not used. However value from the [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) function is further decorated with a [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template).
 
  Here is the flow of column rendering when formatter is used:
+ 
  ```
  Raw Value -> formatter -> (template)* -> Cell Value
  * - optional setting
@@ -180,6 +181,12 @@ This sample below shows how to format column values before displaying them in th
  * - optional setting
  ```
 
+The sample below demonstrates the grid column formatting capabilities. The Sell Start Date and Modified Date columns use different date formatting. The List Price number column uses the currency format.
+
+<div class="embed-sample">
+   [igGrid Column Formats](%%SamplesEmbedUrl%%/grid/column-formats)
+</div>
+
 - [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template) - is a templated string (templating engine used is defined in the `templatingEngine` option). See [Templating Engine Overview](igTemplating-Overview.html) topic for details on template syntax. 
  
  Here is the flow of column rendering when [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template) is used:
@@ -197,7 +204,7 @@ This sample below shows how to format column values before displaying them in th
  Raw Value -> (autoFormat|format|formatter)* -> columnCssClass -> template* -> Cell Value 
  * - optional setting
  ```
-
+ 
 Example:
 ```js
 $("#grid1").igGrid({
