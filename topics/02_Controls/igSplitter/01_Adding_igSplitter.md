@@ -42,6 +42,10 @@ This topic contains the following sections:
     -   [Introduction](#mvc-introduction)
     -   [Preview](#mvc-preview)
     -   [Steps](#mvc-steps)
+-   [Adding igSplitter using TypeScript ](#ts-procedure)
+    -   [Introduction](#ts-introduction)
+    -   [Preview](#ts-preview)
+    -   [Steps](#ts-steps)
 -   [Related Content](#related-content)
     -   [Topics](#topics)
     -   [Samples](#samples)
@@ -78,7 +82,7 @@ What you need to do
         </tr>
 	</thead>
 	<tbody>
-        
+
 
         <tr>
             <td>
@@ -162,7 +166,7 @@ Description
                         </tr>
 	</thead>
 	<tbody>
-                        
+
 
                         <tr>
                             <td>
@@ -251,7 +255,7 @@ Add `style` reference to the file in your page.
 
 
 
->**Note:**It is recommended to use the igLoader component to load JavaScript and CSS resources. For information on how to do this, refer to the [Using Infragistics Loader](Using-Infragistics-Loader.html) topic. In addition to that, in the online [Ignite UI Samples Browser](%%SamplesUrl%%), you can find some specific examples on how to use the igLoader with the igSplitter component.
+>**Note:** It is recommended to use the igLoader component to load JavaScript and CSS resources. For information on how to do this, refer to the [Using Infragistics Loader](Using-Infragistics-Loader.html) topic. In addition to that, in the online [Ignite UI Samples Browser](%%SamplesUrl%%), you can find some specific examples on how to use the igLoader with the igSplitter component.
 
 ### <a id="steps"></a>Steps
 
@@ -278,41 +282,41 @@ The following steps demonstrate how to add a basic `igSplitter` control to a web
 
 1. Add references to required resources.
 
-	1. Organize the required files.	
-	
+	1. Organize the required files.
+
 		A. Add the jQuery, jQueryUI, and Modernizr JavaScript resources to a folder named Scripts in the directory where your web page resides.
 
 		B. Add the Ignite UI CSS files to a folder named Content/ig (For details, see the [Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html) topic).
 
-		C. Add the Ignite UI JavaScript files to a folder named Scripts/ig 
+		C. Add the Ignite UI JavaScript files to a folder named Scripts/ig
 		in your web site or application (For details, see the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) topics).
 
 	2. Add the references to the required JavaScript libraries.
-	
+
 		Add references to the jQuery, jQuery UI and Modernizr libraries to the `<head>` section of your page:
-		
+
 		**In HTML:**
-		
+
 		```html
 		<script  type="text/javascript" src="Scripts/jquery.js"></script>
 		<script  type="text/javascript" src="Scripts/jquery-ui.js"></script>
 		<script  type="text/javascript" src="Scripts/modernizr.js"></script>
 		```
-	
+
 	3. Add a reference to `igLoader`.Include the `igLoader` script in the page:
-	
+
 		**In HTML:**
-		
+
 		```html
 		<script  type="text/javascript" src="Scripts/ig/infragistics.loader.js"></script>
 		```
-	
+
 	4. Load the required resources.
-	
+
 		Instantiate `igLoader`:
-		
+
 		**In HTML:**
-		
+
 		```html
 		<script type="text/javascript">
 		    $.ig.loader({
@@ -326,11 +330,11 @@ The following steps demonstrate how to add a basic `igSplitter` control to a web
 2. Add the `igSplitter` control.
 
 	1. Add an HTML element to host `igSplitter`.
-	
+
 		Add an HTML div element to host `igSplitter` on the HTML page.
-		
+
 		**In HTML:**
-		
+
 		```html
 		<div id="splitter">
 		<div>Some content</div>
@@ -341,11 +345,11 @@ The following steps demonstrate how to add a basic `igSplitter` control to a web
 	2. Instantiate `igSplitter`.
 
 		Add the initialization code to a script element in the HTML page. The initialization code creates `igSplitter` instance in the div element added earlier.
-		
+
 		The following code creates an instance of the `igSplitter` control without specifying its container’s size.
-		
+
 		**In JavaScript:**
-		
+
 		```js
 		$.ig.loader(function () {
 		// Create a basic igSplitter control
@@ -353,21 +357,21 @@ The following steps demonstrate how to add a basic `igSplitter` control to a web
 		});
 		});
 		```
-		
+
 		In most cases, you might want to specify the size of the instance. The following code configures the `igSplitter` container to be 400 x 600 pixels (width x height).
-		
+
 		```
-		$.ig.loader(function () { 
-		 // Create a basic igSplitter control 
-		 $("#splitter").igSplitter({ 
-		     width: 400, 
-		     height: 600 }); 
+		$.ig.loader(function () {
+		 // Create a basic igSplitter control
+		 $("#splitter").igSplitter({
+		     width: 400,
+		     height: 600 });
 		 });
 		```
 
 
 
-##<a id="mvc-procedure"></a>Adding igSplitter in ASP.NET MVC – Procedure 
+## <a id="mvc-procedure"></a>Adding igSplitter in ASP.NET MVC – Procedure
 
 ### <a id="mvc-introduction"></a>Introduction
 
@@ -386,7 +390,7 @@ The following steps demonstrate how to add a basic `igSplitter` control to an AS
 1. Add references to required resources.
 
 	1. Organize the required files.
-	
+
 		 A. Add the jQuery, jQueryUI, and Modernizr JavaScript resources to a folder named Scripts in the directory where   your web page resides.
 
 		 B. Add the Ignite UI CSS files to a folder named Content/ig (For details, see the [Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html) topic).
@@ -395,29 +399,29 @@ The following steps demonstrate how to add a basic `igSplitter` control to an AS
 		topics).
 
 	2. Add the references to the required JavaScript libraries.Add references to the jQuery, jQuery UI and Modernizr libraries to the `<head>` section of your page:
-	
+
 		**In HTML:**
-		
+
 		```html
 		<script  type="text/javascript" src="Scripts/jquery.js"></script>
 		<script  type="text/javascript" src="Scripts/jquery-ui.js"></script>
 		<script  type="text/javascript" src="Scripts/modernizr.js"></script>
 		```
-	
+
 	3. Add a reference to `igLoader`.Include the `igLoader` script in the page:
-	
+
 		**In HTML:**
-		
+
 		```html
 		<script  type="text/javascript" src="Scripts/ig/infragistics.loader.js"></script>
 		```
 
 	4. Adding the Loader MVC helper configuration for `igSplitter`.
-	
+
 		Add the following code to your ASP.NET MVC view.
-		
+
 		**In ASPX:**
-		
+
 		```csharp
 		@(Html.Infragistics()
 		    .Loader()
@@ -430,30 +434,30 @@ The following steps demonstrate how to add a basic `igSplitter` control to an AS
 2. Add the `igSplitter` control.
 
 	1. Add an HTML element to host `igSplitter`.
-	
+
 		Add an HTML div element to host `igSplitter` on the HTML page.
-		
+
 		**In HTML:**
-		
+
 		```html
 		<div id="splitter">
 		<div>Some content</div>
 		<div>Other content</div>
 		</div>
 		```
-	
+
 	2. Instantiate `igSplitter`. The following code creates an instance of the `igSplitter` control without specifying its container’s size.
-	
+
 		```
 		@(Html.Infragistics()
 		    .ID("splitter")
 		    .Render()
 		)
 		```
-		
-		
+
+
 		 In most cases, you might want to specify the size of the instance. The following code configures the `igSplitter` container to be 400 x 600 pixels (width x height).
-		
+
 		```
 		@(Html.Infragistics()
 		    .ID("splitter")
@@ -462,6 +466,134 @@ The following steps demonstrate how to add a basic `igSplitter` control to an AS
 		    .Render()
 		)
 		```
+
+
+## <a id="ts-procedure"></a>Adding igSplitter using TypeScript – Procedure
+
+### <a id="ts-introduction"></a>Introduction
+
+The sample will demonstrate how to use the vertical `igSplitter` control to manage page's layout in TypeScript.
+The first container contains a `igTree` control with countries and continents defined as TypeScript classes.
+When a node is clicked, the description for the selected item is shown in the right panel.
+
+### <a id="ts-preview"></a>Preview
+
+The following screenshot is a preview of the final result.
+
+![](images/Adding_igSplitter_TypeScript_1.png)
+
+### <a id="ts-steps"></a>Steps
+
+The following steps demonstrate how to add a basic `igSplitter` control using TypeScript.
+
+1. Add references to required resources.
+
+	1. Include the Ignite UI theme and structural files:
+
+		**In HTML:**
+		```html
+		<!-- Ignite UI Required Combined CSS Files -->
+		<link href="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+		<link href="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/css/structure/infragistics.css" rel="stylesheet" />
+		```
+	2. Add the JavaScript libraries ([modernizr](http://modernizr.com/) is optional):
+
+		**In HTML:**
+		```html
+		<!-- JavaScript Library Dependencies -->
+		<script src="http://modernizr.com/downloads/modernizr-latest.js"></script>
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+		```
+
+	3. Include Ignite UI scripts. Preferably use a custom download, but you can also check ["Using JavaScript Resources in Ignite UI"](Deployment-Guide-JavaScript-Resources.html) topic for other methods.
+
+		**In HTML:**
+		```html
+		<!-- Ignite UI Required Combined JavaScript Files -->
+		<script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.core.js"></script>
+		<script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.lob.js"></script>
+		<!-- Required by the data vizualization controls -->
+		<script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.dv.js"></script>
+		```
+	4. Add reference path to where the TypeScript file for your application is located or external resources:
+
+		**In HTML:**
+		```html
+		<script src="./TypeScript/sampleApp.js"></script>
+		```
+		**In HTML:**
+		```html
+		<script src="http://www.igniteui.com/data-files/continents-with-countries-and-cities.js"></script>
+    	<script src="http://www.igniteui.com/TypeScriptSamples/splitter/typescript.js"></script>
+		```
+
+2. Add the `igSplitter` control.
+
+	1. Add an HTML element to host `igSplitter`.
+
+		Add an HTML div element to host `igSplitter` on the HTML page.
+
+		**In HTML:**
+
+		```html
+		<div id="splitter">
+			<div style="overflow: auto">
+				<ul id="tree"></ul>
+			</div>
+			<div><p>Select a destination from tree.</p></div>
+		</div>
+		```
+
+	2. Add data source
+		```javascript
+		var continentsWithCountries = [{
+			"Text": "Europe",
+			"Description": "Europe is..",
+			"Countries": [{ "Text": "Bulgaria", "Description": "Bulgaria, officially .." }]
+		}, {
+			"Text": "Asia",
+			"Description": "Asia is the world's largest..",
+			"Countries": [{ "Text": "Japan", "Description": "Japan is an island.." }, { .. }]
+		}, {
+			"Text": "North America",
+			"Description": "North America..",
+			"Countries": [{ "Text": "United States", "Description": "The United States.." }]
+		}];
+		```
+	3. Add ts implementation code and include the reference paths to the Ignite UI and jQuery type definitions for TypeScript:
+
+		**In TypeScript:**
+		```typescript
+		/// <reference path="http://www.igniteui.com/js/typings/jquery.d.ts" />
+		/// <reference path="http://www.igniteui.com/js/typings/jqueryui.d.ts" />
+		/// <reference path="http://www.igniteui.com/js/typings/igniteui.d.ts" />
+		declare var continentsWithCountries;
+
+		$(function () {
+			$("#splitter").igSplitter({
+				height: "300px",
+				panels: [{ size: 160, min: 100, max: 250 }]
+			});
+			$("#tree").igTree({
+				dataSource: continentsWithCountries,
+				bindings: {
+					textKey: "Text",
+					valueKey: "Text",
+					childDataProperty: "Countries"
+				}
+			});
+			$("#tree").on("igtreeselectionchanged", function (sender, eventArgs) {
+				var node = eventArgs.selectedNodes[0];
+				if (node.data.Description) {
+					(<JQuery>$("#splitter").igSplitter("secondPanel")).html(node.data.Description);
+				} else {
+					(<JQuery>$("#splitter").igSplitter("secondPanel")).html("No information found.");
+				}
+			});
+		});
+		```
+
 
 ## <a id="related-content"></a>Related Content
 ### <a id="topics"></a>Topics
@@ -496,8 +628,8 @@ The following samples provide additional information related to this topic.
 
 
 
- 
 
- 
+
+
 
 
