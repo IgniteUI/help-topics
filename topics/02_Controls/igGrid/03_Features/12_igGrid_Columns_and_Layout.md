@@ -155,11 +155,11 @@ Column formatting (rendering) is affected by several `igGrid` options. These are
  Raw Value -> formatter -> (template)* -> Cell Value
  * - optional setting
  ```
-
- <div class="embed-sample">
+ 
+This sample below shows how to format column values before displaying them in the grid. The "Make Flag" boolean column has a `formatter` function which transforms the true/false values into Yes/No values.
+<div class="embed-sample">
    [Column Format Function](%%SamplesEmbedUrl%%/grid/column-format-function)
- </div>
-This sample shows how to format column values before displaying them in the grid. The Make Flag boolean column has a formatter function which transforms the true/false values into Yes/No values.
+</div>
 
 -  [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) - is a string identifying a format patterns. Internally [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) option uses the `$.ig.formatter(rawValue, dataType, formatPattern)` function. When set, [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) overrides the setting of the [`autoFormat`](%%jQueryApiUrl%%/ui.iggrid#options:autoFormat) option and also the default regional settings.
 
