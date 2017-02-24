@@ -27,7 +27,9 @@ This topic contains the following sections:
 
 ## <a id="introduction"></a> Introduction
 
-Virtualization is a feature of the `igGrid` that boosts performance when displaying large data sets containing thousands of records. It works by reducing the number of the DOM objects in-memory and reusing them while user scrolls and operates with the data. Virtualization is a local feature, which means that it works on the data, already available on the client side.
+Virtualization is a feature of the `igGrid` that boosts performance when displaying large data sets containing thousands of records. It improves both rendering time and scrolling as well as memory footprint. It works by reducing the number of the DOM objects in-memory and reusing them while user scrolls and operates with the data. 
+
+Virtualization is a local feature and requires all the data to be fetched on the client initially. This can affect network traffic so it's recommended that you consider enabling web server's Gzip compression for the page that contains `igGrid` with Virtualization enabled.
 
 Due to its nature Virtualization feature cannot and doesn't aim to achieve functional parity with the default non-virtualized grid. For example all APIs that accept or return DOM objects do not work the same way as with non-virtualized grid. This is because there are DOM objects only for the visible cells. 
 
@@ -117,6 +119,8 @@ The following topics provide additional information related to this topic.
 - [Enabling and Configuring Virtualization](igGrid-Enabling-and-Configuring-Virtualization.html): This topic explains, with code examples, how to enable and configure the Virtualization feature in the `igGrid`.
 - [Performance Guide](iggrid-performance-guide.html): This topic explains in more details the different grid settings that can further improve the performance.
 - [Feature Compatibility Matrix (igGrid)](Feature-Compatibility-Matrix(igGrid).html): This topic show the compatible feature combinations in `igGrid`.
+- [IIS HTTP Compression](https://www.iis.net/configreference/system.webserver/httpcompression?showTreeNavigation=true)
+- [Apache Enable Compression](http://httpd.apache.org/docs/current/mod/mod_deflate.html#enable)
 
 ### <a id="samples"></a> Samples
 
