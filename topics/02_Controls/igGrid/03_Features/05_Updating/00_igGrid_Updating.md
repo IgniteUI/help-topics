@@ -535,17 +535,7 @@ When adding a row programmatically, a primary key value is not required. If you 
 **In Javascript:**
 
 ```js
-var rowObj = {
-                        "EmployeeID": $("#grid").igGrid("rows").length + 1,
-                        "FirstName": $("#firstName").val(),
-                        "LastName": $("#lastName").val(),
-                        "Title": $("#title").val(),
-                        "BirthDate": $("#birthDate").val(),
-                        "PostalCode": $("#postCode").val(),
-                        "Country": $("#country").val()
-                    };
-
-                    $("#grid").igGridUpdating("addRow", rowObj);
+$('#grid1').igGridUpdating('addRow', { 'Code': 'ABC', 'Name': 'Alex' });
 ```
 
 ### <a id="api-delete-row"></a> Deleting a row programmatically 
@@ -554,7 +544,8 @@ When deleting a row programmatically, a primary key value is required. You can p
 **In Javascript:**
 
 ```js
-$("#grid").igGridUpdating("deleteRow", pkValue);
+$('#grid1').igGridUpdating('deleteRow', "AFG");  
+$('#grid1').igGridUpdating('deleteRow', 1, $('#grid1').igGrid("rowAt", 0));
 ```
 
 ### <a id="api-update-row"></a> Updating a row programmatically 
@@ -563,7 +554,7 @@ $("#grid").igGridUpdating("deleteRow", pkValue);
 ```js
 $('#grid1').igGridUpdating('updateRow', 1, { 'FirstName': 'Alex' });
 ```
-The sample below demonstrates many of the grid options for editing data interacting together.
+The sample below demonstrates the Updating API and events.
 <div class="embed-sample">
    [igGrid Editing API and Events](%%SamplesEmbedUrl%%/grid/editing-api-events)
 </div>
