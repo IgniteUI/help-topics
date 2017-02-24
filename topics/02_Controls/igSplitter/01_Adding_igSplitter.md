@@ -68,9 +68,9 @@ The following table summarizes the requirements for `igSplitter` control.
 <table class="table">
 	<thead>
 		<tr>
-            <th> Requirement / Required Resource </th>
-            <th> Description </th>
-            <th> What you need to do </th>
+            <th style="text-align:center;width:15%;"> Requirement / Required Resource </th>
+            <th style="text-align:center;width:55%;"> Description </th>
+            <th style="text-align:center;width:30%;"> What you need to do </th>
         </tr>
 	</thead>
 	<tbody>
@@ -146,7 +146,6 @@ The igSplitter control
                         </tr>
                     </tbody>
 </table>
-                <br>
             </td>
             <td>
                 Add one of the following:
