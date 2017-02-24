@@ -298,6 +298,12 @@ Listing 2: Defining mapper function for a column in igGrid
 
 ```
 
+The below sample demonstrates how to handle complex data objects via the column's mapper function. In it Sorting and Filtering will be executed based on the values returned by the mapper function and Updating via the combo editor provider will allow updating the whole complex object with the selected combo item's record data.
+
+<div class="embed-sample">
+   [Handling Complex Objects](%%SamplesEmbedUrl%%/grid/handling-complex-objects)
+</div>
+
 ## <a id="autoGenerateColumns"></a> AutoGenerateColumns
 
 Whenever `autoGenerateColumns` is set to *false*, you are required to manually define columns in the columns array. When `autoGenerateColumns` is *true* (default), you are not required to specify columns. In that case the grid will infer columns automatically from the data source (assuming there is at least one row in it) and add them to the columns collection. Header texts are automatically generated as well, and are equivalent to the keys in the data source. Setting column widths for auto-generated columns is done with `defaultColumnWidth` option, which will apply one and the same column width for all generated columns. When remote data binding is used, header texts are automatically generated only when data is available from the backend on the client. However, in most real-world scenarios it’s best to explicitly define columns.
