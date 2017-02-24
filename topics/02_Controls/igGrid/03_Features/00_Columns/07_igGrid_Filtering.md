@@ -48,6 +48,12 @@ When you enable `igGridFiltering` you are already using it in a [`persist`](%%jQ
 
 Filtering persistence is implemented for `igHierarchicalGrid` too.
 
+The following sample demonstrates the persistance capabilities of the Filtering feature.
+
+<div class="embed-sample">
+   [Feature Persistence](%%SamplesEmbedUrl%%/grid/feature-persistence)
+</div>
+
 If you would like to retain the previous behavior of filtering being cleared after user re-binds the *igGrid*, you can do this by disabling the feature through the [`persist`](%%jQueryApiUrl%%/ui.iggridfiltering#options:persist) option as shown in the code snippet below:
 
 **In JavaScript:**

@@ -31,6 +31,7 @@ This topic contains the following sections:
 -   [**Configuring a Custom Tooltip Position**](#custom)
     -   [Property settings](#custom-settings)
     -   [Code example](#custom-code)
+-   [**Running sample**](#demo)
 -   [**Related Topics**](#topics)
 
 
@@ -170,6 +171,10 @@ $("#grid1").igGrid({
 
 > **Note:** For information on how to do the same with MVC, see the [Enable Tooltips for an igGrid](igGrid-Enabling-Tooltips.html) topic.
 
+## <a id="demo"></a> Running sample
+<div class="embed-sample">
+   [igGrid Tooltips](%%SamplesEmbedUrl%%/grid/tooltips)
+</div>
 
 ## <a id="topics"></a> Related Topics 
 Following are some other topics you may find useful.
