@@ -198,6 +198,29 @@ The sample below demonstrates the grid column formatting capabilities. The Sell 
  Raw Value -> (autoFormat|format|formatter)* -> columnCssClass -> template* -> Cell Value 
  * - optional setting
 
+Example:
+```js
+$("#grid1").igGrid({
+    autoGenerateColumns: false,
+    columns: [ {
+            headerText: "Product Number", 
+            key: "ProductNumber",
+            dataType: "number",
+            // NOTE: columnCssClass will be applied
+            columnCssClass: "align-right",
+            template: "<a href='/product/${ProductNumber}'>${ProductNumber}</a>"
+        }, {
+            headerText: "Modified Date",  
+            key: "ModifiedDate",  
+            dataType: "date",
+            // NOTE: columnCssClass will NOT be applied
+            columnCssClass: "align-center",
+            template: "<td style='font-weight: bold'>${ModifiedDate}</td>"
+        }
+    ]
+});
+```
+
 - [`headerCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.headerCssClass) - is a space-separated list of CSS classes that are applied to the TH element of the column header text configured by the [`headerText`](%%jQueryApiUrl%%/ui.iggrid#options:columns.headerText) option.   
  Here is the flow of column rendering when [`headerCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.headerCssClass) is used:
  
