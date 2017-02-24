@@ -536,7 +536,7 @@ Default tooltips are now available meaning that a tooltip is displayed for the s
 
 #### Related Sample
 
--   [Series Tooltips](%%SamplesUrl%%/data-chart/series-tooltips)
+-   [Series Tooltips](igDataChart-Visual-Elements.html#samples)
 
 ### <a id="drop-shadow"></a>Drop shadow
 
