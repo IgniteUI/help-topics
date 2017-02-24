@@ -14,7 +14,7 @@
 
 #### Purpose
 
-This topic explains, with code examples, how to enable the tooltips in the `igBulletGraph`™ control and configure the delay with which they are displayed.
+This topic explains, with code examples, how to enable the tooltips in the `igBulletGraph`™ control and configure the delay with which they are displayed as well as creating custom tooltips templates and a code sample ilustrating it.
 
 ### Required background
 
@@ -445,16 +445,11 @@ The following topics provide additional information related to this topic.
 
 ### <a id="samples"></a> Samples
 
-The following samples provide additional information related to this topic.
+This sample demonstrates what can be achieved when combining all of the custom tooltips mentioned above. It includes templates for all of the configurable areas where you can have a tooltip - the [performance bar](%%jQueryApiUrl%%/ui.igbulletgraph#options:valueToolTipTemplate), [comparative marker](%%jQueryApiUrl%%/ui.igbulletgraph#options:targetValueToolTipTemplate) and [ranges](%%jQueryApiUrl%%/ui.igbulletgraph#options:rangeToolTipTemplate). 
+While the first `igBulletGraph` used for visualizing the Development Task and has default tooltips enabled and configured only via the options API, the second one illustrating the Quality Assurance Task is taking advantage of the custom tooltip templates used and has more unique look when key areas are hovered.
 
--  [Tooltip Settings](%%SamplesUrl%%/bullet-graph/tooltip-settings): This sample demonstrates configuring of various tooltips (default, semi-templated, and fully templated) for the `igBulletGraph` control.
+In the sample's context, even though these tasks are executed simultaneously at the course of three weeks, initially more time has been spent on development. This is demonstrated by the progress bars’ placement amongst the three different ranges (“Low, “Medium” and “High”), that represent the level of confidence for delivering the needed results.
 
-
-
-
-
- 
-
- 
-
-
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/bullet-graph/tooltip-settings](%%SamplesEmbedUrl%%/bullet-graph/tooltip-settings)
+</div>
