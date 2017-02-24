@@ -40,6 +40,12 @@ When you enable `igGridSorting` you are already using it in a [`persist`](%%jQue
 
 Sorting persistence is implemented for `igHierarchicalGrid` too.
 
+The following sample demonstrates the persistance capabilities of the Sorting feature.
+
+<div class="embed-sample">
+   [Feature Persistence](%%SamplesEmbedUrl%%/grid/feature-persistence)
+</div>
+
 If you would like to retain the previous behavior of sorting being cleared after user re-binds the `igGrid`, you can do this by disabling the feature through the [`persist`](%%jQueryApiUrl%%/ui.iggridsorting#options:persist) option as shown in the code snippet below:
 
 **In JavaScript:**
