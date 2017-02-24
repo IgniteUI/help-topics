@@ -82,7 +82,7 @@ The following table summarizes the requirements for `igSplitter` control.
                     <li> jQuery UI </li>
                 </ul>
             </td>
-            <td> Add script references to both libraries in the `<head>` section of your page. </td>
+            <td> Add script references to both libraries in the `head` section of your page. </td>
         </tr>
         <tr>
             <td> Modernizr library (Optional) </td>
@@ -93,7 +93,7 @@ The following table summarizes the requirements for `igSplitter` control.
                     <li> Modernizr </li>
                 </ul>
             </td>
-            <td> Add a script reference to the library in the `<head>` section of your page. </td>
+            <td> Add a script reference to the library in the `head` section of your page. </td>
         </tr>
         <tr>
             <td>
@@ -223,7 +223,7 @@ The following steps demonstrate how to add a basic `igSplitter` control to a web
 
 	2. Add the references to the required JavaScript libraries.
 
-		Add references to the jQuery, jQuery UI and Modernizr libraries to the `<head>` section of your page:
+		Add references to the jQuery, jQuery UI and Modernizr libraries to the `head` section of your page:
 
 		**In HTML:**
 
@@ -328,7 +328,7 @@ The following steps demonstrate how to add a basic `igSplitter` control to an AS
 		 C. Add the Ignite UI JavaScript files to a folder named Scripts/ig in your web site or application (For details, see the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
 		topics).
 
-	2. Add the references to the required JavaScript libraries.Add references to the jQuery, jQuery UI and Modernizr libraries to the `<head>` section of your page:
+	2. Add the references to the required JavaScript libraries.Add references to the jQuery, jQuery UI and Modernizr libraries to the `head` section of your page:
 
 		**In HTML:**
 
