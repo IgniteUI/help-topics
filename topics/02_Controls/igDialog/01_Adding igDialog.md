@@ -3,7 +3,7 @@
 {
     "fileName": "adding-igdialog",
     "controlName": "igDialog",
-    "tags": ["Getting Started"]
+    "tags": ["Getting Started", "TypeScript", "AngularJS"]
 }
 |metadata|
 -->
@@ -152,6 +152,26 @@ The following code demonstrates how to initialize `igDialog` control, with full 
 > `Dialog.ID(“igDialog1”)` – the same as the `ContentID(“igDialog1”)`
 
 > **Note**: If you want to define the HTML DIV Placeholder code using the MVC wrapper, then the Dialog Helper suggests the following method. Assume that you want to achieve the same effect as defining an DIV HTML placeholder, then use:  `Dialog.ContentHTML("<div id="igDialog1"> igDialog Content </div>")`
+
+- **Instantiate in TypeScript**
+
+The following example demonstrates how to create modal Dialog Window with icons and external content using TypeScript:
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/dialog-window/typescript](%%SamplesEmbedUrl%%/dialog-window/typescript)
+</div>
+
+> More information on how to use the Ignite UI definitions for TypeScript can be found in ["Using Ignite UI with TypeScript" topic](using-ignite-ui-with-typescript.html).
+
+- **Instantiate in AngularJS**
+
+The following example demonstrates how to declare a Dialog Window with an AngularJS directive:
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/dialog-window/angular](%%SamplesEmbedUrl%%/dialog-window/angular)
+</div>
+
+> More information on how to use the Ignite UI directives for AngularJS can be found in ["Using Ignite UI with AngularJS" topic](using-ignite-ui-with-angularjs.html).
 
 ## Destroy igDialog
 

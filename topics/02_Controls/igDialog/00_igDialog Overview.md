@@ -160,7 +160,7 @@ You can set the position of the `igDialog` using coordinates and also using the 
 
 **Related Samples:**
 
--   [API and Events](%%SamplesUrl%%/dialog-window/api-and-events)
+-   [API and Events](igdialog-event-reference.html#attaching-handlers-jquery)
 
 ### <a id="header-footer"></a> Header and Footer
 
