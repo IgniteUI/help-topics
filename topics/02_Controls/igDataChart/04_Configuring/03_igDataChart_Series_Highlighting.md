@@ -113,15 +113,14 @@ The following table summarizes the properties used for series highlighting. Thes
 
 
 ### <a id="series-highlighting-examples"></a>Examples
-This sample demonstrates the series highlighting feature which allows you to highlight either an entire series or individual items within a series.
-This is possible by configuring the `isHighlightingEnabled` and  `highlightingTransitionDuration` chart properties of the `columnSeries`.
+This sample demonstrates the series highlighting feature on different series types by configuring the `isHighlightingEnabled` and `highlightingTransitionDuration` series properties.
 
 <div class="embed-sample">
    [Series Highlighting](%%SamplesEmbedUrl%%/data-chart/series-highlighting)
    ![](images/jQuery_Series_Highlighting_01.png)
 </div>
 
-Following example shows the same functionality, applied to a financial chart.
+The following example shows the same functionality, applied to a financial chart.
 <div class="embed-sample">
    [Series Highlighting (Financial)](%%SamplesEmbedUrl%%/data-chart/series-highlighting-financial)
 </div>
