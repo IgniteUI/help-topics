@@ -118,34 +118,34 @@ Load the required resources manually. You need to use the dependencies listed in
                             <th> JS Resource </th>
                             <th> Description </th>
                         </tr>
-	</thead>
-	<tbody>
-                        <tr>
-                            <td>
-infragistics.ui.splitter-en.js
-			</td>
-                            <td>
-The igSplitter control’s language file
-			</td>
-                        </tr>
-                        <tr>
-                            <td>
-infragistics.util.js
-			</td>
-                            <td>
-Ignite UI utilities
-			</td>
-                        </tr>
-                        <tr>
-                            <td>
-infragistics.ui.splitter.js
-			</td>
-                            <td>
-The igSplitter control
-			</td>
-                        </tr>
-                    </tbody>
-</table>
+					</thead>
+					<tbody>
+										<tr>
+											<td>
+				infragistics.ui.splitter-en.js
+							</td>
+											<td>
+				The igSplitter control’s language file
+							</td>
+										</tr>
+										<tr>
+											<td>
+				infragistics.util.js
+							</td>
+											<td>
+				Ignite UI utilities
+							</td>
+										</tr>
+										<tr>
+											<td>
+				infragistics.ui.splitter.js
+							</td>
+											<td>
+				The igSplitter control
+							</td>
+										</tr>
+									</tbody>
+				</table>
             </td>
             <td>
                 Add one of the following:
