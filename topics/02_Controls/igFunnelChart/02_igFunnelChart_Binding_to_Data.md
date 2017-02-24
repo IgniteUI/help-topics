@@ -216,9 +216,10 @@ $("#chartNormal").igFunnelChart({
 });
 ```
 
-### Sample: Binding igFunnelChart to XML data
+### Sample: This sample shows how to bind an igFunnelChart to data available in XML structure. For that purpose the XML data is passed to an igDataSource which provides the data to the funnel chart.
+
 <div class="embed-sample">
-   [%%SamplesEmbedUrl%%/editors/date-picker](%%SamplesEmbedUrl%%/funnel-chart/xml-binding)
+   [%%SamplesEmbedUrl%%/funnel-chart/xml-binding](%%SamplesEmbedUrl%%/funnel-chart/xml-binding)
 </div>
 
 ## <a id="mvc-model"></a> Code Example: Binding *igFunnelChart* in a Strongly Typed MVC View
