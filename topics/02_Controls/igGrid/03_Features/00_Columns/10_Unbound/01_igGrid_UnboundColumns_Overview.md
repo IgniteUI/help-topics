@@ -38,8 +38,6 @@ This topic contains the following sections:
 -   [**Configuring Unbound Columns**](#configure)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
-
 
 
 ## <a id="introduction"></a> Introduction
@@ -47,8 +45,6 @@ This topic contains the following sections:
 The Unbound Columns feature of the `igGrid` control enables defining of columns that are not directly bound to a field in the underlying data source.Unbound columns can display either arbitrary lists of items or calculated values (usually based on other columns’ values). This can be used for creating summaries on per row basis (rather than out-of-the-box summaries) for columns. Other typical uses of unbound columns involve cases when one data model is either not enough and out of your control or when you need data from different sources.
 
 Unbound columns have the same properties as normal (bound to a data source) columns. The Unbound Columns feature supports and works with all grid features – Sorting, Filtering, and so on. This includes also the standard column enhancements like column templates and formatters.
-
-
 
 ## <a id="set-unbound"></a> Setting a Column as Unbound
 
@@ -58,7 +54,11 @@ Just like with normal (bound) columns unbound columns needs to be uniquely ident
 
 You can populate unbound column values in several ways. If column values are pre-defined, use the column's [`unboundValues`](%%jQueryApiUrl%%/ui.iggrid#options:columns.unboundValues) property or the grid’s [`setUnboundValues`](%%jQueryApiUrl%%/ui.iggrid#methods:setUnboundValues) method. If a column values are to be calculated, use the column's [`formula`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formula) or [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template) properties.
 
+The sample bellow demonstrates configuring unbound columns in the `igGrid` control.
 
+<div class="embed-sample">
+   [Unbound Column](%%SamplesEmbedUrl%%/grid/unbound-column)
+</div>
 
 ## <a id="configure"></a> Configuring Unbound Columns
 
@@ -269,20 +269,3 @@ The following topics provide additional information related to this topic.
 - [API Reference (igGrid, Unbound Columns)](igGrid-UnboundColumns-API-Reference-LandingPage.html): This is a group of topics providing reference information about the properties and methods related to the Unbound Columns feature of the `igGrid` control.
 
 - [Column Summaries (igGrid)](igGrid-Column-Summaries.html): This is a group of topics explaining how to create column summaries in the `igGrid`.
-
-
-### <a id="samples"></a> Samples
-
-The following samples provide additional information related to this topic.
-
-- [Unbound Column](%%SamplesUrl%%/grid/unbound-column): The sample demonstrates adding and configuring unbound columns in the `igGrid` control.
-
-- [HierarchicalGrid Unbound Column](%%SamplesUrl%%/hierarchical-grid/unbound-column): The sample demonstrates adding and configuring unbound columns in the `igHierarchicalGrid` control.
-
-
-
- 
-
- 
-
-

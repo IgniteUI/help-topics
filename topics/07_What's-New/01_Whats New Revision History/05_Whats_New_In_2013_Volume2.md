@@ -465,7 +465,7 @@ Series highlighting is supported for the following series types:
 
 #### Related Sample
 
--   [Series Highlighting](%%SamplesUrl%%/data-chart/series-highlighting)
+-   [Series Highlighting](igDataChart-Series-Highlighting.html#series-highlighting-examples)
 
 ### <a id="animation-transition"></a>Animated transitions
 

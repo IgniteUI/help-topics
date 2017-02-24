@@ -92,12 +92,13 @@ $(function () {
                     name: 'RowSelectors'
                 },
                 {
-                    name: 'Selection',
-					mode: "cell",
+                    name: 'Selection',				
+                    mode: "cell",
                     multipleSelection: true
                 }
             ]
-     });    });
+        });    
+     });
 </script>
 ```
 
@@ -110,8 +111,8 @@ $(function () {
         feature.Selection().MultipleSelection(true);
         feature.RowSelectors();
     })
-	.DataBind()
-	.Render()
+    .DataBind()
+    .Render()
 %>
 ```
 
@@ -374,6 +375,14 @@ Following are some other topics you may find useful.
 
 -   [Enabling Row Selectors](igGrid-Enabling-Row-Selectors.html)
 -   [Row Selectors Events](igGrid-RowSelectors-Events.html)
+
+### <a id="samples"></a> Samples
+
+This sample shows how to configure a Row Selectors in the `igGrid`.
+
+<div class="embed-sample">
+   [Configuring Row Selectors](%%SamplesEmbedUrl%%/grid/iggrid-configuring-row-selectors)
+</div>
 
  
 
