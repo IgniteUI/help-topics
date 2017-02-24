@@ -278,16 +278,19 @@ The following steps demonstrate how to bind an XML string to an `igPieChart` con
 					width: "435px",
 					height: "435px",
 					dataSource: ds, //$.ig.DataSource defined above
-					dataValue: "Pop2008",
-					dataLabel: "CountryName",
+					dataValue: "Population",
+					dataLabel: "Name",
 					labelsPosition: "bestFit",
-					radiusFactor: 0.8,
-					explodedSlices: [0,2,3,4],	
+					explodedSlices: [0,2,3,4]
 		        });
 		    });
 		</script>
 		```
 
+The following sample implements the above steps.
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/pie-chart/xml-binding](%%SamplesEmbedUrl%%/pie-chart/xml-binding)
+</div>
 
 
 ##<a id="bind-iqueryable-mvc"></a>Bind to an IQueryable&lt;T&gt; in ASP.NET MVC
