@@ -54,7 +54,7 @@ Following is a preview of the final result.
     **In HTML:**
 
     ```html
-    <table id="grid1">
+    <table id="hierarchicalGrid">
     </table>
     ```
 
@@ -84,38 +84,7 @@ The following code sample demonstrates the scripts as added to the header code o
 ### Database Requirements 
 For the purpose of this example only:
 
--   jQuery – Hierarchical Data source variable `ds` is following the format below:
-
-    **In Javascript:**
-
-    ```js
-    {
-        "d" : {
-            "results": [
-            {
-                "CategoryID": 1, 
-                "CategoryName": "Beverages", 
-                "Description": "Soft drinks, coffees, teas, beers, and ales", 
-                "Products": {
-                    "results": [
-                    {
-                        "ProductID": 1,
-                        "ProductName": "Chai", 
-                        "QuantityPerUnit": "10 boxes x 20 bags"
-                    },
-                    // ...
-                    // Product 2
-                    // ...
-                    ]
-                }
-            },
-            // ...
-            // Category 2
-            // ...
-            ]
-        }
-    }
-    ```
+-   jQuery – Northwind database
 
 -   MVC – Adventure Works database.
 
@@ -125,40 +94,138 @@ Inside the `$(document).ready()` event handler you can create a igHierarchicalGr
 **In Javascript:**
 
 ```js
-$("#grid1").igHierarchicalGrid({
-    initialDataBindDepth: 1,
-    dataSource: ds,
-    dataSourceType: 'json',
-    responseDataKey: 'd.results',
-    width: "700px",
+ $("#hierarchicalGrid").igHierarchicalGrid({
+                width: "100%",
+                autoGenerateColumns: false,
+                dataSource: northwind,
+                responseDataKey: "results",
+                dataSourceType: "json",
+                caption: "Orders By Employee",
+                features: [
+                    {
+                        name: "Responsive",
+                        enableVerticalRendering: false,
+                        columnSettings: [
+                            {
+                                columnKey: "Title",
+                                classes: "ui-hidden-phone"
+                            },
+                            {
+                                columnKey: "Address",
+                                classes: "ui-hidden-phone"
+                            }
+                        ]
+                    },
+                    {
+                        name: "Sorting",
+                        inherit: true
+                    },
+                    {
+                        name: "Paging",
+                        pageSize: 5,
+                        type: "local",
+                        inherit: true
+                    }
+                ],
+                columns: [
+                   { key: "EmployeeID", headerText: "Employee ID", dataType: "number", width: "0%", hidden: true },
+                    { key: "FirstName", headerText: "First Name", dataType: "string", width: "20%" },
+                   { key: "LastName", headerText: "Last Name", dataType: "string", width: "20%" },
+                   { key: "Title", headerText: "Title", dataType: "string", width: "20%" },
+                   { key: "Address", headerText: "Address", dataType: "string", width: "25%" },
+                   { key: "City", headerText: "City", dataType: "string", width: "15%" }
+                ],
+                autoGenerateLayouts: false,
+                columnLayouts: [
+                    {
+                        key: "Orders",
+                        responseDataKey: "results",
+                        width: "100%",
+                        autoGenerateColumns: false,
+                        primaryKey: "OrderID",
+                        columns: [
+                            { key: "OrderID", headerText: "Order ID", dataType: "number", width: "20%" },
+                            { key: "CustomerID", headerText: "Customer ID", dataType: "string", width: "0%", hidden: true },
+                            { key: "ShipName", headerText: "Ship Name", dataType: "string", width: "20%" },
+                            { key: "ShipAddress", headerText: "Ship Address", dataType: "string", width: "20%" },
+                            { key: "ShipCity", headerText: "Ship City", dataType: "string", width: "20%" },
+                            { key: "ShipCountry", headerText: "Ship Country", dataType: "string", width: "20%" }
+                        ],
+                        features: [
+                             {
+                                 name: "Responsive",
+                                 enableVerticalRendering: false,
+                                 columnSettings: [
+                                     {
+                                         columnKey: "ShipAddress",
+                                         classes: "ui-hidden-phone"
+                                     },
+                                     {
+                                         columnKey: "ShipCity",
+                                         classes: "ui-hidden-phone"
+                                     }
+                                 ]
+                             },
+                             {
+                                 name: "Summaries",
+                                 columnSettings: [
+                                      {
+                                          columnKey: "OrderID",
+                                          summaryOperands: [
+                                              {
+                                                  rowDisplayLabel: "Orders Count",
+                                                  type: "count",
+                                                  decimalDisplay: 3
+                                              }
+                                          ]
 
-    autoGenerateColumns: false,
-    primaryKey: "CategoryID",
-    columns: [
-      { key: "CategoryID", headerText: "Category ID", dataType: "number" },
-      { key: "CategoryName", headerText: "Category Name", dataType: "string" },
-      { key: "Description", headerText: "Description", dataType: "string" }
-    ],
-            
-    autoGenerateLayouts: false,
-    columnLayouts: [
-        {
-            key: "Products",
-            responseDataKey: 'results',
-            autoGenerateColumns: false,
-            primaryKey: "ProductID",
-            foreignKey: "CategoryID",
-            columns: [
-                { key: "ProductID", dataType: "number" },
-                { key: "ProductName", dataType: "string" },
-                { key: "QuantityPerUnit", dataType: "string" }
-            ]
-        }
-    ]    
-});
+                                      },
+                                     {
+                                         columnKey: "ShipName",
+                                         allowSummaries: false
+                                     },
+                                     {
+                                          columnKey: "ShipAddress",
+                                          allowSummaries: false
+                                     },
+                                     {
+                                         columnKey: "ShipCity",
+                                         summaryOperands: [
+                                             {
+                                                 rowDisplayLabel: "Sao Paulo Orders",
+                                                 type: "custom1",
+                                                 summaryCalculator: $.proxy(countSaoPauloValues, this),
+                                                 order: 5,
+                                                 decimalDisplay: 1
+                                             },
+                                              {
+                                                  rowDisplayLabel: "Bergamo Orders",
+                                                  type: "custom2",
+                                                  summaryCalculator: $.proxy(countBergamoValues, this),
+                                                  order: 6,
+                                                  decimalDisplay: 1
+                                              }
+                                         ]
+                                     },
+                                      {
+                                          columnKey: "ShipCountry",
+                                          allowSummaries: false
+                                      },
+
+                                     
+                                 ]
+
+                             }
+                        ]
+                    }
+                ]
+            });
 ```
 
-To verify the result, open the HTML file in your browser. You should see the igHierarchicalGrid (as shown in the Preview above).
+The sample below demonstrates how to bind igHierarchicalGrid to JSON data source. You should see the igHierarchicalGrid (as shown in the Preview above).
+<div class="embed-sample">
+   [igHierarchicalGrid JSON Binding](%%SamplesEmbedUrl%%/hierarchical-grid/json-binding)
+</div>
 
 ## <a id="initializing-mvc"></a>Initializing a MVC igHierarchicalGrid 
 1.  Create the LINQ to SQL model. ![](images/igHierarchicalGrid_Initializing_02.png)
