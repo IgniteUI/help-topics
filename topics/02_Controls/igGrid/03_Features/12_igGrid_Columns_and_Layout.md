@@ -160,6 +160,7 @@ Column formatting (rendering) is affected by several `igGrid` options. These are
  [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) and [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) options do not operate at the same time. When defined, [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) function is considered with priority and [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) is not used. However value from the [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) function is further decorated with a [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template).
 
  Here is the flow of column rendering when formatter is used:
+ 
  ```
  Raw Value -> formatter -> (template)* -> Cell Value
  * - optional setting
@@ -173,6 +174,12 @@ Column formatting (rendering) is affected by several `igGrid` options. These are
  Raw Value -> format -> (template)* -> Cell Value 
  * - optional setting
  ```
+
+The sample below demonstrates the grid column formatting capabilities. The Sell Start Date and Modified Date columns use different date formatting. The List Price number column uses the currency format.
+
+<div class="embed-sample">
+   [igGrid Column Formats](%%SamplesEmbedUrl%%/grid/column-formats)
+</div>
 
 - [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template) - is a templated string (templating engine used is defined in the `templatingEngine` option). See [Templating Engine Overview](igTemplating-Overview.html) topic for details on template syntax. 
  
@@ -197,25 +204,6 @@ Column formatting (rendering) is affected by several `igGrid` options. These are
  ```
  Raw `headerText` Value -> headerCssClass -> Header Text Value 
  ```
-The sample below demonstrates the grid column formatting capabilities. The Sell Start Date and Modified Date columns use different date formatting. The List Price number column uses the currency format.
-```js
-$("#grid").igGrid({
-                autoGenerateColumns: false,
-                width: "100%",
-                height: "500px",
-                columns: [
-                    { headerText: "Product Name", key: "Name", dataType: "string", width: "20%" },
-                    { headerText: "Product Number", key: "ProductNumber", dataType: "string", width: "20%" },
-                    { headerText: "Sell Start Date", key: "SellStartDate", dataType: "date", width: "20%", format: "ddd, MMM-d-yy HH:mm" },
-                    { headerText: "Modified Date", key: "ModifiedDate", dataType: "date", width: "20%", format: "dateTime" },
-                    { headerText: "List Price", key: "ListPrice", dataType: "number", width: "15%", format: "currency" }
-                ],
-                dataSource: adventureWorks
-            });
-```
-<div class="embed-sample">
-   [igGrid Column Formats](%%SamplesEmbedUrl%%/grid/column-formats)
-</div>
 
 ## <a id="cell-text-alignment"></a> Cell Text Alignment
 
