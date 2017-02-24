@@ -49,9 +49,10 @@ This topic contains the following sections:
 -   [**Configuring a Custom Tooltip for the Comparative Ranges**](#comparative-ranges)
     -   [Property settings](#comparative-ranges-property)
     -   [Example](#comparative-ranges-example)
+-   [**Configuring tooltips sample**](#configuring-tooltips-sample)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
+
 
 
 
@@ -289,7 +290,6 @@ Following is the code that implements this example.
 ```
 
 
-
 ## <a id="comparative-marker"></a> Configuring a Custom Tooltip for the Comparative Marker
 
 The tooltip for the comparative marker displays the value set for the marker using the default system font and styled by default in accordance with the look of the control. To specify custom settings, set the tooltip value to a custom template.
@@ -400,7 +400,7 @@ Following is the code that implements this example.
             valueToolTipTemplate: "valueToolTipTemplate",
             rangeToolTipTemplate: 'rangeToolTipTemplate',
             value: 26,
-            targetValue: 82,
+            targetValue: 73,
             height: "70px",
             width: "300px",
             ranges: [
@@ -424,7 +424,7 @@ Following is the code that implements this example.
 </script>
 ```
 
-### <a id="samples"></a> Configuring tooltip 
+### <a id="configuring-tooltips-sample"></a> Configuring tooltips sample 
 
 This sample demonstrates what can be achieved when combining all of the custom tooltips mentioned above. It includes templates for all of the configurable areas where you can have a tooltip - the [performance bar](%%jQueryApiUrl%%/ui.igbulletgraph#options:valueToolTipTemplate), [comparative marker](%%jQueryApiUrl%%/ui.igbulletgraph#options:targetValueToolTipTemplate) and [ranges](%%jQueryApiUrl%%/ui.igbulletgraph#options:rangeToolTipTemplate). 
 While the first `igBulletGraph` used for visualizing the Development Task and has default tooltips enabled and configured only via the options API, the second one illustrating the Quality Assurance Task is taking advantage of the custom tooltip templates used and has more unique look when key areas are hovered.
