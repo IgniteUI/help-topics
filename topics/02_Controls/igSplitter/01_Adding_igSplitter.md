@@ -68,131 +68,78 @@ The following table summarizes the requirements for `igSplitter` control.
 <table class="table">
 	<thead>
 		<tr>
-            <th>
-Requirement / Required Resource
-			</th>
-
-            <th>
-Description
-			</th>
-
-            <th>
-What you need to do
-			</th>
+            <th> Requirement / Required Resource </th>
+            <th> Description </th>
+            <th> What you need to do </th>
         </tr>
 	</thead>
 	<tbody>
-
-
         <tr>
-            <td>
-jQuery and jQuery UI JavaScript resources
-			</td>
-
-            <td>
-                Ignite UI is built on top of these frameworks:
-
+            <td> jQuery and jQuery UI JavaScript resources </td>
+            <td> Ignite UI is built on top of these frameworks:
                 <ul>
-                    <li>
-jQuery
-					</li>
-
-                    <li>
-jQuery UI
-					</li>
+                    <li> jQuery </li>
+                    <li> jQuery UI </li>
                 </ul>
             </td>
-
-            <td>
-Add script references to both libraries in the `<head>` section of your page.
-			</td>
+            <td> Add script references to both libraries in the `<head>` section of your page. </td>
         </tr>
-
         <tr>
-            <td>
-Modernizr library
-
-                (Optional)
-			</td>
-
+            <td> Modernizr library (Optional) </td>
             <td>
                 The Modernizr library is used by the igSplitter to detect browser and device capabilities. It is not mandatory and if not included the control will behave as if it works in a normal desktop environment with
                     HTML5 compatible browser.
-
                 <ul>
-                    <li>
-Modernizr
-					</li>
+                    <li> Modernizr </li>
                 </ul>
             </td>
-
-            <td>
-Add a script reference to the library in the `<head>` section of your page.
-			</td>
+            <td> Add a script reference to the library in the `<head>` section of your page. </td>
         </tr>
-
         <tr>
             <td>
 igSplitter JavaScript resources
 			</td>
-
             <td>
                 The igSplitter functionality of the Ignite UI library is distributed across several files. You can load the required resources in one of the following ways:
-
                 <ul>
                     <li>
 (Recommended)  [Use the Infragistics® Loader](Using-Infragistics-Loader.html) (igLoader™). You only need to include a script reference to
                         igLoader on your page.
 					</li>
-
                     <li>
 Load the required resources manually. You need to use the dependencies listed in the table below.
 					</li>
                 </ul>
-
                 The following table lists the Ignite UI library dependences related to the igSplitter control. These resources need to be referred to explicitly if you chose to load resources manually (i.e. not to use
                     igLoader).
-
                 <table class="table">
-	<thead>
-		<tr>
-                            <th>
-JS Resource
-			</th>
-
-                            <th>
-Description
-			</th>
+					<thead>
+						<tr>
+                            <th> JS Resource </th>
+                            <th> Description </th>
                         </tr>
 	</thead>
 	<tbody>
-
-
                         <tr>
                             <td>
 infragistics.ui.splitter-en.js
 			</td>
-
                             <td>
 The igSplitter control’s language file
 			</td>
                         </tr>
-
                         <tr>
                             <td>
 infragistics.util.js
 			</td>
-
                             <td>
 Ignite UI utilities
 			</td>
                         </tr>
-
                         <tr>
                             <td>
 infragistics.ui.splitter.js
 			</td>
-
                             <td>
 The igSplitter control
 			</td>
@@ -201,59 +148,43 @@ The igSplitter control
 </table>
                 <br>
             </td>
-
             <td>
                 Add one of the following:
-
                 <ul>
                     <li>
 A reference to igLoader
 					</li>
-
                     <li>
 A reference to all the required JavaScript files (listed in the table on the left).
 					</li>
                 </ul>
             </td>
         </tr>
-
         <tr>
             <td>
-IG theme
-
-                (Optional)
+IG theme (Optional)
 			</td>
-
             <td>
 This theme contains the visual styles for the Ignite UI library. The theme file is:
-
                 {IG CSS root}/themes/Infragistics/infragistics.theme.css
 			</td>
-
             <td>
-
 			</td>
         </tr>
-
         <tr>
             <td>
 igSplitter structure
 			</td>
-
             <td>
 The styles from the following CSS file are used for rendering various elements of the control:
-
                 {IG CSS root}/structure/modules/infragistics.ui.splitter.css
 			</td>
-
             <td>
 Add `style` reference to the file in your page.
 			</td>
         </tr>
     </tbody>
 </table>
-
-
 
 >**Note:** It is recommended to use the igLoader component to load JavaScript and CSS resources. For information on how to do this, refer to the [Using Infragistics Loader](Using-Infragistics-Loader.html) topic. In addition to that, in the online [Ignite UI Samples Browser](%%SamplesUrl%%), you can find some specific examples on how to use the igLoader with the igSplitter component.
 
@@ -352,15 +283,15 @@ The following steps demonstrate how to add a basic `igSplitter` control to a web
 
 		```js
 		$.ig.loader(function () {
-		// Create a basic igSplitter control
-		$("#splitter").igSplitter({
-		});
+			// Create a basic igSplitter control
+			$("#splitter").igSplitter({
+			});
 		});
 		```
 
 		In most cases, you might want to specify the size of the instance. The following code configures the `igSplitter` container to be 400 x 600 pixels (width x height).
 
-		```
+		```js
 		$.ig.loader(function () {
 		 // Create a basic igSplitter control
 		 $("#splitter").igSplitter({
@@ -441,22 +372,28 @@ The following steps demonstrate how to add a basic `igSplitter` control to an AS
 
 		```html
 		<div id="splitter">
-		<div>Some content</div>
-		<div>Other content</div>
+			<div>Some content</div>
+			<div>Other content</div>
 		</div>
 		```
 
 	2. Instantiate `igSplitter`. The following code creates an instance of the `igSplitter` control without specifying its container’s size.
 
-		```
+		```csharp
 		@(Html.Infragistics()
-		    .ID("splitter")
-		    .Render()
-		)
+        	.Splitter()
+        	.ID("splitter")
+			.Height("100px")
+			.SplitterPanelSettings(p =>
+			{
+				p.AddPanel().Size("150px").Min("30px").Max("280px");
+				p.AddPanel().Size("150px").Collapsible(true);
+			})
+			.Render()
+    	)
 		```
 
-
-		 In most cases, you might want to specify the size of the instance. The following code configures the `igSplitter` container to be 400 x 600 pixels (width x height).
+		In most cases, you might want to specify the size of the instance. The following code configures the `igSplitter` container to be 400 x 600 pixels (width x height).
 
 		```
 		@(Html.Infragistics()
@@ -466,6 +403,7 @@ The following steps demonstrate how to add a basic `igSplitter` control to an AS
 		    .Render()
 		)
 		```
+
 
 
 ## <a id="ts-procedure"></a>Adding igSplitter using TypeScript – Procedure
@@ -513,8 +451,6 @@ The following steps demonstrate how to add a basic `igSplitter` control using Ty
 		<!-- Ignite UI Required Combined JavaScript Files -->
 		<script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.core.js"></script>
 		<script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.lob.js"></script>
-		<!-- Required by the data vizualization controls -->
-		<script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.dv.js"></script>
 		```
 	4. Add reference path to where the TypeScript file for your application is located or external resources:
 
