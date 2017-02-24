@@ -13,7 +13,7 @@
 ## Topic Overview
 
 ## Purpose
-This topic will explain how to configure the the igHierarchicalGrid™ in order to bind to local data - json or xml.
+This topic explains how to configure the the igHierarchicalGrid™ in order to bind to local data - JSON or XML.
 
 ### In this topic
 
@@ -24,7 +24,7 @@ This topic contains the following sections:
 
 ## <a id="json"></a> Binding to JSON data
 
-The igHierarchicalGrid can be bound to a json object with hierarchical structure in order to display the specified layout.
+The igHierarchicalGrid can be bound to a JSON object with hierarchical structure in order to display the specified layout.
 
 For example:
 
@@ -55,57 +55,16 @@ For example:
     }
 ```
 
-In order to properly configure the hierarchical grid to use this example json the following options shouls be set:
+In order to properly configure the hierarchical grid to use this example JSON data the following options should be set:
 
 |Option | Description | Set to:|
 --------|-------------|--------
 [dataSource](%%jQueryApiUrl%%/ui.igGrid#options:dataSource)| The source of the data, that the grid will use when displaying data. | A valid json object similar to the above example.
 [responseDataKey](%%jQueryApiUrl%%/ui.igGrid#options:responseDataKey)| Applicable only if the response is wrapped. This is the property in the responses where data records are held.| "results"
 [columnLayouts](%%jQueryApiUrl%%/ui.igHierarchicalGrid#options:dataSource) | List of columnLayout objects that specify the structure of the child grids. | List of the column layouts. The options of the column layout object are the same as in an igGrid with the exception of the "key" property.| 
-columnLayouts.[key](%%jQueryApiUrl%%/ui.igHierarchicalGrid:columnLayouts.key) | This is the property that holds the data records for the current column layout.| columnLayouts: [{  key: "Orders", ... }]
+[columnLayouts.key](%%jQueryApiUrl%%/ui.igHierarchicalGrid:columnLayouts.key) | This is the property that holds the data records for the current column layout.| columnLayouts: [{  key: "Orders", ... }]
 
-Instead of defining the columnLayouts you could set the autoGenerateLayouts to `true` in order to let the igHierarchicalGrid generate the layouts based on the data.
-
-Example configuration:
-
-```js
-
-        $("#hierarchicalGrid").igHierarchicalGrid({
-                width: "100%",
-                autoGenerateColumns: false,
-                dataSource: northwind,
-                responseDataKey: "results",
-                dataSourceType: "json",
-                caption: "Orders By Employee",
-                autoGenerateLayouts: false,
-                columns: [
-                    { key: "EmployeeID", headerText: "Employee ID", dataType: "number", width: "0%", hidden: true },
-                    { key: "FirstName", headerText: "First Name", dataType: "string", width: "20%" },
-                    { key: "LastName", headerText: "Last Name", dataType: "string", width: "20%" },
-                    { key: "Title", headerText: "Title", dataType: "string", width: "20%" },
-                    { key: "Address", headerText: "Address", dataType: "string", width: "25%" },
-                    { key: "City", headerText: "City", dataType: "string", width: "15%" }
-  
-                ],
-                columnLayouts: [
-                    {
-                        key: "Orders",
-                        responseDataKey: "results",
-                        width: "100%",
-                        autoGenerateColumns: false,
-                        primaryKey: "OrderID",
-                        columns: [
-                            { key: "OrderID", headerText: "Order ID", dataType: "number", width: "20%" },
-                            { key: "CustomerID", headerText: "Customer ID", dataType: "string", width: "0%", hidden: true },
-                            { key: "ShipName", headerText: "Ship Name", dataType: "string", width: "20%" },
-                            { key: "ShipAddress", headerText: "Ship Address", dataType: "string", width: "20%" },
-                            { key: "ShipCity", headerText: "Ship City", dataType: "string", width: "20%" },
-                            { key: "ShipCountry", headerText: "Ship Country", dataType: "string", width: "20%" }
-                        ]
-                    }]
-                    ...
-    });
-```
+Instead of defining the `columnLayouts` you could set the `autoGenerateLayouts` to `true` in order to let the igHierarchicalGrid generate the layouts based on the data.
 
 You can refer to the below sample that demonstrates the end result.
 
@@ -115,7 +74,7 @@ You can refer to the below sample that demonstrates the end result.
 
 ## <a id="xml"></a> Binding to XML data
 
-The igHierarchicalGrid can be bound to a xml data with hierarchical structure in order to display the specified layout.
+The igHierarchicalGrid can be bound to a XML data with hierarchical structure in order to display the specified layout.
 
 Example:
 
@@ -137,11 +96,11 @@ var xmlDoc = '<OrgChart Name="All Employees">' +
 ```
 
 
-The same options and settings apply as with the json data, excluding the dataSource option setting.
-Instead of setting the dataSource option directly to the xml data the data should first be defined in an igDataSource instance and that instance can then be assigned to the dataSource option.
-When using xml data the dataSource's schema needs to be specified in order to define the data fields.
+The same options and settings apply as with the JSON data, excluding the `dataSource` option setting.
+Instead of setting the `dataSource` option directly to the XML data the data should first be defined in an igDataSource instance and that instance can then be assigned to the `dataSource` option.
+When using XML data the `dataSource`'s schema needs to be specified in order to define the data fields.
 
-So the first step is to defined the schema for the igDataSource. The schema requires teh following options to be set:
+So the first step is to define the schema for the igDataSource. The schema requires teh following options to be set:
 
 |Option | Description | Set to:|
 --------|-------------|--------
@@ -184,7 +143,7 @@ You can then assign this data source to the dataSource of the igHierarchicalGrid
     }):
 ```
 
-You can refer to the below example that demonstrates the result of this configuration.
+You can refer to the below sample that demonstrates the result of this configuration.
 
 <div class="embed-sample">
    [Hierarchical Grid XML Binding](%%SamplesEmbedUrl%%/hierarchical-grid/xml-binding)
