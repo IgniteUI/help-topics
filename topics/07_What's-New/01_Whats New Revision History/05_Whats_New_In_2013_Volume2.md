@@ -494,11 +494,11 @@ Hover interaction layers are actually series that are added to the series collec
 
 #### Related Samples
 
--   [**Category Highlight Layer**](%%SamplesUrl%%/data-chart/category-highlight-layer)
--   [**Category Item Highlight Layer**](%%SamplesUrl%%/data-chart/category-item-highlight-layer)
--   [**Category Tooltip Layer**](%%SamplesUrl%%/data-chart/category-tooltip-layer)
--   [**Crosshair Layer**](%%SamplesUrl%%/data-chart/crosshair-layer)
--   [**Item Tooltip Layer**](%%SamplesUrl%%/data-chart/item-tooltip-layer)
+-   [**Category Highlight Layer**](HoverInteractions-Crosshair-Layer.html#example)
+-   [**Category Item Highlight Layer**](HoverInteractions-Category-Item-Highlight-Layer.html#example)
+-   [**Category Tooltip Layer**](HoverInteractions-Category-Tooltip-Layer.html#example)
+-   [**Crosshair Layer**](HoverInteractions-Item-Tooltip-Layer.html#example)
+-   [**Item Tooltip Layer**](HoverInteractions-Crosshair-Layer.html#example)
 
 ### <a id="axis-ticks"></a>Axis ticks
 
