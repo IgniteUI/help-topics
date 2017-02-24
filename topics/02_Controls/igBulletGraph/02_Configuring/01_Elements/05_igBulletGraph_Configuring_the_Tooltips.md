@@ -424,7 +424,7 @@ Following is the code that implements this example.
 </script>
 ```
 
-### <a id="configuring-tooltips-sample"></a> Configuring tooltips sample 
+## <a id="configuring-tooltips-sample"></a> Configuring tooltips sample 
 
 This sample demonstrates what can be achieved when combining all of the custom tooltips mentioned above. It includes templates for all of the configurable areas where you can have a tooltip - the [performance bar](%%jQueryApiUrl%%/ui.igbulletgraph#options:valueToolTipTemplate), [comparative marker](%%jQueryApiUrl%%/ui.igbulletgraph#options:targetValueToolTipTemplate) and [ranges](%%jQueryApiUrl%%/ui.igbulletgraph#options:rangeToolTipTemplate). 
 While the first `igBulletGraph` used for visualizing the Development Task and has default tooltips enabled and configured only via the options API, the second one illustrating the Quality Assurance Task is taking advantage of the custom tooltip templates used and has more unique look when key areas are hovered.
