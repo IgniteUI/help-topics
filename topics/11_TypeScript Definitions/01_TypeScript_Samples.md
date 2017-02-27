@@ -29,13 +29,15 @@ In order to run these samples, you need to have:
 -   The required Ignite UI JavaScript and CSS files
 -   The required Ignite UI TypeScript definitions
 
-### <a id="tile_manager_sample"></a>Tile Manager Sample
-​<a id="tile_manager_steps_html"></a>Create the HTML - we are going to have three tabs with car brands and an `igTileManager` which will load photos of the selected car brand.
+### <a id="tile_manager_sample"></a>Tile Manager Sample​
+This sample will demonstrate how we can use `igTileManager` with TypeScript.
 
-### <a id="tile_manager_sample_preview"></a>Preview
+#### <a id="tile_manager_sample_preview"></a>Preview
 The following screenshot is a preview of the final result.
 
 ![](images/igTileManager_TypeScript.png)
+
+<a id="tile_manager_steps_html"></a>Create the HTML - we are going to have three tabs with car brands and an `igTileManager` which will load photos of the selected car brand.
 
 **In HTML:**
 ```html
