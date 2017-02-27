@@ -49,6 +49,10 @@ This topic contains the following sections:
    -   [Introduction](#js-introduction)
     -   [Preview](#js-preview)
     -   [Steps](#js-steps)
+-   [**Bind to XML**](#bind-xml)
+   -   [Introduction](#xml-introduction)
+    -   [Preview](#xml-preview)
+    -   [Steps](#xml-steps)
 -   [**Bind to an `IQueryable<T>` in ASP.NET MVC**](#bind-iqueryable-mvc)
   -   [Introduction](#mvc-introduction)
     -   [Preview](#mvc-preview)
@@ -180,9 +184,9 @@ Data binding for `igPieChart` is done identically to binding for other controls 
 
 
 
-##<a id="bind-js"></a>Bind to XML
+##<a id="bind-xml"></a>Bind to XML
 
-### <a id="js-introduction"></a>Introduction
+### <a id="xml-introduction"></a>Introduction
 
 This procedure shows in several steps how to bind an XML string to an `igPieChart` control.
 
@@ -193,13 +197,13 @@ To complete the procedure, you need the following:
 -   An HTML5 web page
 -   All required JavaScript and CSS files added to your web site or web application project. For detailed information on instantiation and configuration of an `igPieChart` see [Adding an igPieChart](igPieChart-Adding.html).
 
-### <a id="js-preview"></a>Preview
+### <a id="xml-preview"></a>Preview
 
 The following screenshot is a preview of the final result.
 
 ![](images/Data_Binding_in_igPieChartXML_4.png)
 
-### <a id="js-steps"></a>Steps
+### <a id="xml-steps"></a>Steps
 
 The following steps demonstrate how to bind an XML string to an `igPieChart` control. In order to link the XML data to the chart it will require to specify a `DataSchema` as well and pass both to an instance of `igDataSource`. The main role of this data component is to output data in a readable for IgniteUI widgets format.
 
