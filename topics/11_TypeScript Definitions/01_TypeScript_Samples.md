@@ -311,7 +311,7 @@ var actors: Actor[] = [];
 actors.push(new Actor("Denzel", "Washington", { key: "USA", value: "USA" }, moviesDWashington));
 ```
 
-After that we are initialize the `igGrid` and the `igTree` controls
+After that we initialize the `igGrid` and the `igTree` controls
 
 **In TypeScript:**
 ```typescript
