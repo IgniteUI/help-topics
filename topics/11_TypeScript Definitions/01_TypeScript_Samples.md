@@ -19,9 +19,10 @@ This topic contains the following sections:
 -   [Requirements](#requirements)
 -   [Tile Manager Sample](#tile_manager_sample)
     -   [Preview](#tile_manager_sample_preview)
-    -   [Create the HTML](#tile_manager_steps_html)
-    -   [Create the Data Source](#tile_manager_steps_ds)
-    -   [Create the igTileManager](#tile_manager_steps_tm)
+    -   [Details](#tile_manager_steps_html)
+-   [Pie Chart Sample](#pie_chart_sample)
+    -   [Preview](#pie_chart_preview)
+    -   [Details](#pie_chart_details)
 -   [Related Content](#related_content)
 
 ### <a id="requirements"></a>Requirements
@@ -37,7 +38,9 @@ The following screenshot is a preview of the final result.
 
 ![](images/igTileManager_TypeScript.png)
 
-<a id="tile_manager_steps_html"></a>Create the HTML - we are going to have three tabs with car brands and an `igTileManager` which will load photos of the selected car brand.
+
+#### <a id="tile_manager_steps_html"></a>Details
+Create the HTML - we are going to have three tabs with car brands and an `igTileManager` which will load photos of the selected car brand.
 
 **In HTML:**
 ```html
@@ -155,6 +158,150 @@ $(function () {
     }
 
     $('#car-tabs').tabs(tabOptions);
+});
+```
+
+### <a id="pie_chart_sample"></a>Pie Chart Sample
+This sample will demonstrate the use of TypeScript for creating Pie Chart control with a legend and different options for the layout.
+#### <a id="pie_chart_preview"></a>Preview
+The following screenshot is a preview of the final result.
+
+![](images/igPieChart_TypeScript.png)
+
+#### <a id="pie_chart_details"></a></a>Details
+
+Create the HTML - we are going to create Pie Chart with the ability to set different options for the layout, which includes label positions, lines, angles, radius and legend.
+
+**In HTML:**
+```html
+<div id="pieChart"></div>
+    <div id="legend"></div>
+
+    <table class="options">
+        <tr>
+            <td>Start Angle:</td>
+            <td>
+                <div id="angle" class="slider"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Radius:</td>
+            <td>
+                <div id="radius" class="slider"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Label Position:</td>
+            <td>
+                <div class="comboContainer">
+                    <select id="labelPosition">
+                        <option value="none">None</option>
+                        <option value="center">Center</option>
+                        <option value="insideEnd">Inside End</option>
+                        <option value="outsideEnd" selected="selected">Outside End</option>
+                        <option value="bestFit">Best Fit</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Leader Line:</td>
+            <td>
+                <div class="comboContainer">
+                    <select id="leaderLine">
+                        <option value="straight" selected="selected">Straight</option>
+                        <option value="arc">Arc</option>
+                        <option value="spline">Spline</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+    </table>
+```
+
+Create the Data Source - we are adding the class `PieChartCountryPopulation`, and initialize the country population data data. We are storing everything in the `PieChartCountryPopulation` array.
+
+**In TypeScript:**
+```typescript
+/// <reference path="../../js/typings/jquery.d.ts" />
+/// <reference path="../../js/typings/jqueryui.d.ts" />
+/// <reference path="../../js/typings/igniteui.d.ts" />
+
+class PieChartCountryPopulation {
+    countryName: string;
+    population2008: number;
+    constructor(inName: string, populationIn2008: number) {
+        this.countryName = inName;
+        this.population2008 = populationIn2008;
+    }
+}
+
+var pieChartSample: PieChartCountryPopulation[] = [];
+pieChartSample.push(new PieChartCountryPopulation("China", 1333));
+pieChartSample.push(new PieChartCountryPopulation("India", 1140));
+pieChartSample.push(new PieChartCountryPopulation("United States", 304));
+pieChartSample.push(new PieChartCountryPopulation("Indonesia", 228));
+pieChartSample.push(new PieChartCountryPopulation("Brazil", 192));
+```
+
+Create the igPieChart - we are creating the `igPieChart` and all other relevant controls like `igCombo` and `slider` in order to configure the layout.
+
+```typescript
+$(function () {
+    $('#pieChart').igPieChart({
+        dataSource: pieChartSample,
+        width: "430px",
+        height: "430px",
+        dataLabel: 'countryName',
+        dataValue: 'population2008',
+        explodedSlices: [2, 3, 4],
+        radiusFactor: .6,
+        startAngle: -30,
+        labelsPosition: "outsideEnd",
+        leaderLineType: "straight",
+        labelExtent: 40,
+        legend: { element: 'legend', type: "item" }
+    });
+
+    $("#angle").slider({
+        slide: function (event, ui) {
+            $("#pieChart").igPieChart("option", "startAngle", ui.value);
+        },
+        min: 0,
+        max: 360
+    });
+
+    $("#radius").slider({
+        slide: function (event, ui) {
+            $("#pieChart").igPieChart("option", "radiusFactor", ui.value / 1000.0);
+        },
+        min: 0,
+        max: 1000,
+        value: 600
+    });
+
+    $("#labelPosition").igCombo({
+        enableClearButton: false,
+        mode: "dropdown",
+        selectionChanged: function (evt, ui) {
+            if ($.isArray(ui.items) && ui.items[0] != undefined) {
+                $("#pieChart").igPieChart("option", "labelsPosition", ui.items[0].data.value);
+
+                $("#labelExtent").slider("option", "disabled", ui.items[0].data.value != "outsideEnd");
+                $("#leaderLine").igCombo("option", "disabled", ui.items[0].data.value != "outsideEnd" ? true : false);
+            }
+        }
+    });
+
+    $("#leaderLine").igCombo({
+        enableClearButton: false,
+        mode: "dropdown",
+        selectionChanged: function (evt, ui) {
+            if ($.isArray(ui.items) && ui.items[0] != undefined) {
+                $("#pieChart").igPieChart("option", "leaderLineType", ui.items[0].data.value);
+            }
+        }
+    });
 });
 ```
 
