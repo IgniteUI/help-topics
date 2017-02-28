@@ -26,6 +26,9 @@ This topic contains the following sections:
 -   [Pie Chart Sample](#pie_chart_sample)
     -   [Preview](#pie_chart_preview)
     -   [Details](#pie_chart_details)
+-   [Barcode Sample](#barcode_sample)
+    -   [Preview](#barcode_preview)
+    -   [Details](#barcode_details)
 -   [Related Content](#related_content)
 
 ### <a id="requirements"></a>Requirements
@@ -270,7 +273,7 @@ Create the HTML - we are going to create Pie Chart with the ability to set diffe
     </table>
 ```
 
-Create the Data Source - we are adding the class `PieChartCountryPopulation`, and initialize the country population data data. We are storing everything in the `PieChartCountryPopulation` array.
+Create the Data Source - we are adding the class `PieChartCountryPopulation`, and initialize the country population data. We are storing everything in the `PieChartCountryPopulation` array.
 
 **In TypeScript:**
 ```typescript
@@ -355,6 +358,136 @@ $(function () {
     });
 });
 ```
+
+### <a id="barcode_sample"></a>Barcode Sample
+This sample will demonstrate how to use TypeScript for creating Barcode and how to configure specific settings for it.
+#### <a id="barcode_preview"></a>Preview
+The following screenshot is a preview of the final result.
+
+![](images/igBarcode_TypeScript.png)
+
+#### <a id="barcode_details"></a></a>Details
+
+Create the HTML - we are going to create barcode based on some data (in our case hyperlinks to Infragistics website). `Encoding mode` and `Eci Header Display Mode` could be used in order to manipulate the barcode modes.
+
+**In HTML**
+```html
+<table class="options">
+    <tr>
+        <td style="text-align:left;">
+            <div id="barcode"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>Data:</td>
+        <td>
+            <input id='combo' dir="ltr"></input>
+        </td>
+        <td>
+            <input id="setButton" type="button" value="Set" style="width:50px; float: left;" />
+        </td>
+    </tr>
+    <tr>
+        <td>Encoding Mode:</td>
+        <td>
+            <div class="comboContainer">
+                <select id="encodingMode">
+                    <option value="undefined">Undefined</option>
+                    <option value="numeric">Numeric</option>
+                    <option value="alphanumeric">Alphanumeric</option>
+                    <option value="byte" selected="selected">Byte</option>
+                    <option value="anji">Kanji</option>
+                </select>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>Eci Header Display Mode:</td>
+        <td>
+            <div class="comboContainer">
+                <select id="eciHeaderDisplayMode">
+                    <option value="hide" selected="selected">Hide</option>
+                    <option value="show">Show</option>
+                </select>
+            </div>
+        </td>
+    </tr>
+</table>
+```
+Create the Data Source - we are adding the class `IGProducts` and initialize the Infragistics Products data. Everything is stored in the `igProductsData` array.
+
+**In TypeScript**
+```typescript
+/// <reference path="../../js/typings/jquery.d.ts" />
+/// <reference path="../../js/typings/jqueryui.d.ts" />
+/// <reference path="../../js/typings/igniteui.d.ts" />
+
+class IGProducts {
+    id: number;
+    name: string;
+    constructor(productId: number, productName: string) {
+        this.id = productId;
+        this.name = productName;
+    }
+}
+
+var igProductsData: IGProducts[] = [];
+igProductsData.push(new IGProducts(1, "http://www.infragistics.com/products/ultimate"));
+igProductsData.push(new IGProducts(2, "http://www.infragistics.com/products/professional"));
+igProductsData.push(new IGProducts(3, "http://www.infragistics.com/products/jquery"));
+
+```
+Create the igBarcode - we are creating the `igBarcode` and all other relevant controls like `igCombo` in order to help with the layout configuration.
+
+```typescript
+$(function () {
+    $("#barcode").igQRCodeBarcode({
+        height: "300px",
+        width: "100%",
+        data: "http://www.infragistics.com/products/jquery/samples",
+    });
+
+    $("#dataInput").igTextEditor({
+        width: "300px",
+        value: "http://www.infragistics.com/products/jquery/help"
+    });
+
+    $("#setButton").click(function () {
+        $("#barcode").igQRCodeBarcode("option", "data", $("#dataInput").igTextEditor("value"));
+    });
+
+	$('#combo').igCombo({
+		dataSource: igProductsData,
+		textKey: 'Name',
+		valueKey: 'ID',
+		width: "500px",
+		initialSelectedItems: [{
+			index: 0
+		}]
+	});
+
+    $("#encodingMode").igCombo({
+        enableClearButton: false,
+        mode: "dropdown",
+        selectionChanged: function (evt, ui) {
+            if ($.isArray(ui.items) && ui.items[0] != undefined) {
+                $("#barcode").igQRCodeBarcode("option", "encodingMode", ui.items[0].data.value);
+            }
+        }
+    });
+
+    $("#eciHeaderDisplayMode").igCombo({
+        enableClearButton: false,
+        mode: "dropdown",
+        selectionChanged: function (evt, ui) {
+            if ($.isArray(ui.items) && ui.items[0] != undefined) {
+                $("#barcode").igQRCodeBarcode("option", "eciHeaderDisplayMode", ui.items[0].data.value);
+            }
+        }
+    });
+});
+```
+
 
 ### <a id="related_content"></a>Related Content
 The following topic provides additional information related to this one:
