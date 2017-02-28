@@ -20,9 +20,12 @@ This topic contains the following sections:
 -   [Tile Manager Sample](#tile_manager_sample)
     -   [Preview](#tile_manager_sample_preview)
     -   [Details](#tile_manager_sample_details)
--   [Dialog Window](#dialog_window_sample)
+-   [Dialog Window Sample](#dialog_window_sample)
     -   [Preview](#dialog_window_sample_preview)
     -   [Details](#dialog_window_sample_details)
+-   [Tree Sample](#tree_sample)
+    -   [Preview](#tree_sample_preview)
+    -   [Details](#tree_sample_details)
 -   [Related Content](#related_content)
 
 ### <a id="requirements"></a>Requirements
@@ -43,7 +46,7 @@ The following is a preview of the final result.
 #### <a id="tile_manager_sample_details"></a>Details
 In this sample we use the `igTileManager` AngularJS directive. Firstly we introduce a `data` variable in our controller which holds the data source. Then we declare an `igTileManager` AngularJS directive and bind it to the `data` variable.
 
-### <a id="dialog_window_sample"></a>Dialog Window Sample​
+### <a id="dialog_window_sample"></a>Dialog Window Sample
 This sample will demonstrate how we can use `igDialog` with AngularJS.
 
 #### <a id="dialog_window_sample_preview"></a>Preview
@@ -55,6 +58,19 @@ The following is a preview of the final result.
 
 #### <a id="dialog_window_sample_details"></a>Details
 In this sample we use the `igDialog` AngularJS directive. The Dialog Window is initialized with `headerText` and `height` options set.
+
+### <a id="tree_sample"></a>Tree Sample
+This sample will demonstrate how we can use `igTree` with AngularJS.
+
+#### <a id="tree_sample_preview"></a>Preview
+The following is a preview of the final result.
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/tree/angular](%%SamplesEmbedUrl%%/tree/angular)
+</div>
+
+#### <a id="tree_sample_details"></a>Details
+In this sample we use the `igTree` AngularJS directive. Firstly we introduce a `data` variable in our controller which holds the data source. Then we declare an `igTree` AngularJS directive and bind it to the `data` variable.
 
 ### <a id="related_content"></a>Related Content
 The following topics provide additional information related to this one:
