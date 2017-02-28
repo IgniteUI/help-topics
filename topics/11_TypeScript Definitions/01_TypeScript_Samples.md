@@ -22,6 +22,10 @@ This topic contains the following sections:
     -   [Create the HTML](#tile_manager_steps_html)
     -   [Create the Data Source](#tile_manager_steps_ds)
     -   [Create the igTileManager](#tile_manager_steps_tm)
+-   [Dialog Window Sample](#dialog_window_sample)
+	    -   [Preview](#dialog_window_sample_preview)
+		-   [Create the HTML](#dialog_window_steps_html)
+		-   [Create the Dialog Window](#dialog_window_steps_ts)
 -   [Related Content](#related_content)
 
 ### <a id="requirements"></a>Requirements
@@ -155,6 +159,54 @@ $(function () {
     }
 
     $('#car-tabs').tabs(tabOptions);
+});
+```
+
+### <a id="dialog_window_sample"></a>Dialog Window Sample​
+This sample will demonstrate how we can use `igDialog` with TypeScript
+
+#### <a id="dialog_window_sample_preview"></a>Preview
+The following screenshot is a preview of the final result.
+
+![](images/igDialog_TypeScript.png)
+
+<a id="dialog_window_steps_html"></a>Create the HTML - we are going to show the Infragistics' site inside the `igDialog`.
+
+**In HTML:**
+```html
+<button id="openDialog"></button>
+
+    <div id="dialog">
+            <iframe src="http://www.infragistics.com" frameborder="0" width= "100%" height="100%"></iframe>
+    </div>
+```
+
+<a id="dialog_window_steps_ts"></a>Create the igDialog - we are creating the `igDialog` in closed state. Then we attach an event handler function for the `click` event to the button so that the modal dialog window will open when the button is clicked.
+
+**In TypeScript:**
+```typescript
+$(function () {
+
+    // Initialize the open button with igButton
+    $("#openDialog").igButton({ labelText: "Open Dialog" });
+
+    // Initialize the igDialog
+    $("#dialog").igDialog({
+        state: "closed",
+        modal: true,
+        draggable: false,
+        resizable: false,
+        height: 500,
+        width: 400
+    });
+
+    $("#openDialog").on({
+        click: function (e) {
+            // Open the igDialog
+            $("#dialog").igDialog("open");
+        }
+    });
+
 });
 ```
 
