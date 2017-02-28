@@ -206,7 +206,6 @@ $(function () {
             $("#dialog").igDialog("open");
         }
     });
-
 });
 ```
 
