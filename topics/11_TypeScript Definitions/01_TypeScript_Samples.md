@@ -19,16 +19,19 @@ This topic contains the following sections:
 -   [Requirements](#requirements)
 -   [Tile Manager Sample](#tile_manager_sample)
     -   [Preview](#tile_manager_sample_preview)
-    -   [Details](#tile_manager_steps_html)
+    -   [Details](#tile_manager_sample_details)
 -   [Dialog Window Sample](#dialog_window_sample)
-	  -   [Preview](#dialog_window_sample_preview)
-	  -   [Details](#dialog_window_steps_html)
+    -   [Preview](#dialog_window_sample_preview)
+    -   [Details](#dialog_window_sample_details)
 -   [Pie Chart Sample](#pie_chart_sample)
     -   [Preview](#pie_chart_preview)
     -   [Details](#pie_chart_details)
 -   [Barcode Sample](#barcode_sample)
     -   [Preview](#barcode_preview)
     -   [Details](#barcode_details)
+-   [Tree Sample](#tree_sample)
+    -   [Preview](#tree_sample_preview)
+    -   [Details](#tree_sample_details)
 -   [Related Content](#related_content)
 
 ### <a id="requirements"></a>Requirements
@@ -44,8 +47,7 @@ The following screenshot is a preview of the final result.
 
 ![](images/igTileManager_TypeScript.png)
 
-
-#### <a id="tile_manager_steps_html"></a>Details
+#### <a id="tile_manager_sample_details"></a>Details
 Create the HTML - we are going to have three tabs with car brands and an `igTileManager` which will load photos of the selected car brand.
 
 **In HTML:**
@@ -175,7 +177,7 @@ The following screenshot is a preview of the final result.
 
 ![](images/igDialog_TypeScript.png)
 
-####<a id="dialog_window_steps_html"></a>Details
+####<a id="dialog_window_sample_details"></a>Details
 Create the HTML - we are going to show the Infragistics' site inside the `igDialog`.
 
 **In HTML:**
@@ -356,6 +358,112 @@ $(function () {
             }
         }
     });
+});
+```
+
+### <a id="tree_sample"></a>Tree Sample
+This sample will demonstrate how we can use `igTree` with TypeScript.
+
+#### <a id="tree_sample_preview"></a>Preview
+The following screenshot is a preview of the final result.
+
+![](images/igTree_TypeScript.png)
+
+#### <a id="tree_sample_details"></a>Details
+Create the HTML - we are going to create an `igTree` will represent a file explorer consisting of folders and files.
+
+**In HTML:**
+```html
+<div id="tree"></div>
+```
+
+Create the Data Source - we are creating a hierarchical structure consisting of folders, subfolders and files.
+
+**In TypeScript:**
+```typescript
+/// <reference path="../../js/typings/jquery.d.ts" />
+/// <reference path="../../js/typings/jqueryui.d.ts" />
+/// <reference path="../../js/typings/igniteui.d.ts" />
+
+class FileType {
+    name: string;
+    type: string;
+    imageUrl: string;
+    folder: FileType[];
+    constructor(inName: string, inType: string, inImageUrl: string, inFolder: FileType[]) {
+        this.name = inName;
+        this.type = inType;
+        this.imageUrl = inImageUrl;
+        this.folder = inFolder;
+    }
+}
+
+function createSubfolderFiles(parentFolder: FileType, subFolders: string[], files: string[][],
+    folderPicture: string, filePicture: string) {
+    var fileIndex, subFolderIndex;
+    for (subFolderIndex = 0; subFolderIndex < subFolders.length; subFolderIndex++) {
+        parentFolder.folder.push(new FileType(subFolders[subFolderIndex], "Folder", folderPicture, []));
+
+        for (fileIndex = 0; fileIndex < files[subFolderIndex].length; fileIndex++) {
+            parentFolder.folder[subFolderIndex].folder.push(new FileType(files[subFolderIndex][fileIndex], "File", filePicture, []));
+        }
+    }
+}
+
+var folderMusic = new FileType("Music", "Folder", "../../images/samples/tree/book.png", []);
+var musicSubFolders = ["Y.Malmsteen", "WhiteSnake", "AC/DC", "Rock"];
+var musicFiles = [["Making Love", "Rising Force", "Fire and Ice"], ["Trouble", "Bad Boys", "Is This Love"],
+    ["ThunderStruck", "T.N.T.", "The Jack"], ["Bon Jovi - Always"]];
+createSubfolderFiles(folderMusic, musicSubFolders, musicFiles, "../../images/samples/tree/book.png", "../../images/samples/tree/music.png");
+
+...
+
+var folderDeleted = new FileType("Deleted", "Folder", "../../images/samples/tree/bin_empty.png", []);
+var folderComputer = new FileType("Computer", "Folder", "../../images/samples/tree/computer.png", []);
+folderComputer.folder.push(folderMusic);
+folderComputer.folder.push(folderDocuments);
+folderComputer.folder.push(folderPictures);
+folderComputer.folder.push(folderNetwork);
+folderComputer.folder.push(folderDeleted);
+
+var files = [folderComputer];
+```
+
+Create the `igTree` - we are creating the `igTree` and binding it to the generated data source.
+
+**In TypeScript:**
+```typescript
+$(function () {
+    var options: IgTree = {
+        checkboxMode: 'triState',
+        singleBranchExpand: true,
+        dataSource: $.extend(true, [], files),
+        initialExpandDepth: 0,
+        pathSeparator: '.',
+        bindings: {
+            textKey: 'name',
+            valueKey: 'type',
+            imageUrlKey: 'imageUrl',
+            childDataProperty: 'folder'
+        },
+        dragAndDrop: true,
+        dragAndDropSettings: {
+            allowDrop: true,
+            customDropValidation: function (element) {
+                // Validates the drop target
+                var valid = true,
+                    droppableNode = $(this);
+
+                if (droppableNode.is('a') && droppableNode.closest('li[data-role=node]').attr('data-value') === 'File') {
+                    valid = false;
+                }
+
+                return valid;
+            }
+        }
+    }
+
+    $("#tree").igTree(options);
 });
 ```
 
