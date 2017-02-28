@@ -23,6 +23,9 @@ This topic contains the following sections:
 -   [Dialog Window Sample](#dialog_window_sample)
 	  -   [Preview](#dialog_window_sample_preview)
 	  -   [Details](#dialog_window_steps_html)
+-   [Templating Engine Sample](#templating_engine_sample)
+      -   [Preview](#templating_engine_preview)
+      -   [Details](#templating_engine_steps)
 -   [Pie Chart Sample](#pie_chart_sample)
     -   [Preview](#pie_chart_preview)
     -   [Details](#pie_chart_details)
@@ -209,6 +212,154 @@ $(function () {
             $("#dialog").igDialog("open");
         }
     });
+});
+```
+
+### <a id="templating_engine_sample"></a>Templating Engine Sample
+This sample will demonstrate how we can use the `igTemplatingEngine` with TypeScript
+
+#### <a id="templating_engine_preview"></a>Preview
+The following screenshot is a preview of the final result.
+
+![](images/igTemplating_TypeScript.png)
+
+####<a id="templating_engine_steps"></a>Details
+Create the HTML - This sample demonstrates how to use nested templates using the Infragistics Templating Engine in TypeScript. In this example the movies collection for each actor is iterated through and a Tree is used to display the movies data.
+
+**In HTML:**
+```html
+<script id="colTmpl" type="text/template">
+    <div class='tree'>
+        <ul>
+            {{each ${movies} }}
+            <li>
+                ${movies.name}
+                <ul>
+                    <li>Genre: ${movies.genre}</li>
+                    <li>Year: ${movies.year}</li>
+                    <li>
+                        <a>
+                            <span class='ratingLabel' style='float:left'>Rating:</span>
+                            <span class='rating'>${movies.rating}</span>
+                        </a>
+                    </li>
+                    <li class='clear'>Languages: ${movies.languages}</li>
+                    <li>Subtitles: ${movies.subtitles}</li>
+                </ul>
+            {{/each}}
+        </ul>
+    </div>
+</script>
+
+<div id="resultGrid"></div>
+```
+
+We are adding the classes `Movie` and `Actor`, and initialize the movies and actors data. 
+
+**In TypeScript:**
+```typescript
+/// <reference path="http://www.igniteui.com/js/typings/jquery.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/jqueryui.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/igniteui.d.ts" />
+
+class Movie {
+    name: string;
+    year: number;
+    genre: string;
+    rating: number;
+    languages: string;
+    subtitles: string;
+    constructor(inName: string, inYear: number, inGenre: string, inRating: number, inLanguage: string, inSubs: string) {
+        this.name = inName;
+        this.year = inYear;
+        this.genre = inGenre;
+        this.rating = inRating;
+        this.languages = inLanguage;
+        this.subtitles = inSubs;
+    }
+}
+
+class Actor {
+    firstName: string;
+    lastName: string;
+    nationality: Object;
+    movies: Movie[];
+    constructor(inFirstName: string, inLastName: string, inNationality: Object, inMoviesArray: Movie[]) {
+        this.firstName = inFirstName;
+        this.lastName = inLastName;
+        this.nationality = inNationality;
+        this.movies = inMoviesArray;
+    }
+}
+
+var moviesDWashington: Movie[] = [];
+moviesDWashington.push(new Movie("American Gangster", 2007, "Biography, Crime, Drama", 7.9, "English, German", "Japanese, English"));
+
+var moviesAJolie: Movie[] = [];
+moviesAJolie.push(new Movie("In the Land of Blood and Honey", 2011, "Drama, Romance, War", 3.2, "English", "English, French"));
+
+var moviesPCruz: Movie[] = [];
+moviesPCruz.push(new Movie("Sahara", 2005, "Action, Adventure, Comedy", 5.9, "English, Spanish", "Japanese, French"));
+
+var moviesGClooney: Movie[] = [];
+moviesGClooney.push(new Movie("Ocean's Thirteen", 2007, "Crime, Thriller", 6.9, "English", "Spanish, French"));
+
+var moviesJRoberts: Movie[] = [];
+moviesJRoberts.push(new Movie("Eat Pray Love", 2010, "Drama, Romance", 5.3, "English, German", "Spanish, French"));
+
+var actors: Actor[] = [];
+actors.push(new Actor("Denzel", "Washington", { key: "USA", value: "USA" }, moviesDWashington));
+```
+
+After that we are initialize the `igGrid` and the `igTree` controls
+
+**In TypeScript:**
+```typescript
+$(function () {
+    var i = 0, currentValue, limit,
+        imagesRoot = "http://www.igniteui.com/images/samples/templating-engine/multiConditionalColTemplate";
+
+    $("#resultGrid").igGrid({
+        dataSource: actors,
+        width: "100%",
+        autoGenerateColumns: false, 
+        columns: [
+            { headerText: "First Name", key: "firstName", width: 100 },
+            { headerText: "Last Name", key: "lastName", width: 200 },
+            { headerText: "Nationality", key: "nationality", width: 100, template: "<img width='20' height='15' src='" + imagesRoot + "/${nationality.key}.gif' /> ${nationality.value} " },
+            { headerText: "Movies", key: "movies", width: 500, template: $("#colTmpl").html() },
+        ],
+        rendered: function () {
+            initializeInnerControls();
+        },
+        features: [
+            {
+                name: "Paging",
+                type: "local",
+                pageSize: 3,
+                pageSizeChanged: function () {
+                    initializeInnerControls();
+                },
+                pageIndexChanged: function () {
+                    initializeInnerControls();
+                }
+            }
+        ]
+    }); 
+
+    function initializeInnerControls() {
+        $(".tree").igTree({ hotTracking: false });
+        limit = $('.rating').length;
+        for (i = 0; i < limit; i++) {
+            currentValue = parseFloat($($('.rating')[i]).html());
+            $($('.rating')[i]).igRating({
+                voteCount: 10,
+                value: currentValue,
+                valueAsPercent: false,
+                precision: "exact"
+            });
+        }
+    }
 });
 ```
 
