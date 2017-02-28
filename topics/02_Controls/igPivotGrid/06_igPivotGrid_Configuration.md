@@ -3,7 +3,7 @@
 {
     "fileName": "igpivotgrid-configuration",
     "controlName": "igPivotGrid",
-    "tags": ["Getting Started, "Configuring","Pivot Grid"]
+    "tags": ["Getting Started", "Configuring","Pivot Grid"]
 }
 |metadata|
 -->

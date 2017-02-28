@@ -20,6 +20,9 @@ This topic contains the following sections:
 -   [Tile Manager Sample](#tile_manager_sample)
     -   [Preview](#tile_manager_sample_preview)
     -   [Details](#tile_manager_steps_html)
+-   [Dialog Window Sample](#dialog_window_sample)
+	  -   [Preview](#dialog_window_sample_preview)
+	  -   [Details](#dialog_window_steps_html)
 -   [Pie Chart Sample](#pie_chart_sample)
     -   [Preview](#pie_chart_preview)
     -   [Details](#pie_chart_details)
@@ -62,7 +65,7 @@ Create the HTML - we are going to have three tabs with car brands and an `igTile
 </div>
 ```
 
-​<a id="tile_manager_steps_ds"></a>Create the Data Source - we are adding the classes `CarData` and `Info`, and initialize the three car brands data. We are storing everything in the `Cars` array.
+<a id="tile_manager_steps_ds"></a>Create the Data Source - we are adding the classes `CarData` and `Info`, and initialize the three car brands data. We are storing everything in the `Cars` array.
 
 **In TypeScript:**
 ```typescript
@@ -116,7 +119,7 @@ Cars.push(Hoida);
 Cars.push(Paushe);
 ```
 
-​<a id="tile_manager_steps_tm"></a>Create the igTileManager - we are creating the `igTileManager` and the tabs. Then we preselect the first car brand and set the tabs to update the `igTileManager` data source when a tab is selected.
+<a id="tile_manager_steps_tm"></a>Create the igTileManager - we are creating the `igTileManager` and the tabs. Then we preselect the first car brand and set the tabs to update the `igTileManager` data source when a tab is selected.
 
 **In TypeScript:**
 ```typescript
@@ -161,6 +164,54 @@ $(function () {
     }
 
     $('#car-tabs').tabs(tabOptions);
+});
+```
+
+### <a id="dialog_window_sample"></a>Dialog Window Sample
+This sample will demonstrate how we can use `igDialog` with TypeScript
+
+#### <a id="dialog_window_sample_preview"></a>Preview
+The following screenshot is a preview of the final result.
+
+![](images/igDialog_TypeScript.png)
+
+####<a id="dialog_window_steps_html"></a>Details
+Create the HTML - we are going to show the Infragistics' site inside the `igDialog`.
+
+**In HTML:**
+```html
+<button id="openDialog"></button>
+
+    <div id="dialog">
+            <iframe src="http://www.infragistics.com" frameborder="0" width= "100%" height="100%"></iframe>
+    </div>
+```
+
+<a id="dialog_window_steps_ts"></a>Create the igDialog - we are creating the `igDialog` in closed state. Then we attach an event handler function for the `click` event to the button so that the modal dialog window will open when the button is clicked.
+
+**In TypeScript:**
+```typescript
+$(function () {
+
+    // Initialize the open button with igButton
+    $("#openDialog").igButton({ labelText: "Open Dialog" });
+
+    // Initialize the igDialog
+    $("#dialog").igDialog({
+        state: "closed",
+        modal: true,
+        draggable: false,
+        resizable: false,
+        height: 500,
+        width: 400
+    });
+
+    $("#openDialog").on({
+        click: function (e) {
+            // Open the igDialog
+            $("#dialog").igDialog("open");
+        }
+    });
 });
 ```
 
