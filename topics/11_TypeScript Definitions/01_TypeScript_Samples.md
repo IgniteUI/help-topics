@@ -22,7 +22,7 @@ This topic contains the following sections:
     -   [Details](#tile_manager_steps_html)
 -   [Dialog Window Sample](#dialog_window_sample)
 	  -   [Preview](#dialog_window_sample_preview)
-		-   [Details](#dialog_window_steps_html)
+	  -   [Details](#dialog_window_steps_html)
 -   [Pie Chart Sample](#pie_chart_sample)
     -   [Preview](#pie_chart_preview)
     -   [Details](#pie_chart_details)
