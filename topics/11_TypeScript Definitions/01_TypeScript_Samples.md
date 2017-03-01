@@ -17,6 +17,9 @@ This topic covers samples with Ignite UI controls and TypeScript.
 
 This topic contains the following sections:
 -   [Requirements](#requirements)
+-   [Editors Sample](#editors_sample)
+    -   [Preview](#editors_sample_preview)
+    -   [Details](#editors_sample_details)
 -   [Tile Manager Sample](#tile_manager_sample)
     -   [Preview](#tile_manager_sample_preview)
     -   [Details](#tile_manager_sample_details)
@@ -29,7 +32,6 @@ This topic contains the following sections:
 -   [Barcode Sample](#barcode_sample)
     -   [Preview](#barcode_preview)
     -   [Details](#barcode_details)
-
 -   [Layout Manager Sample](#layout_manager_sample)
     -   [Preview](#layout_manager_preview)
     -   [Details](#layout_manager_details)
@@ -42,6 +44,108 @@ This topic contains the following sections:
 In order to run these samples, you need to have:
 -   The required Ignite UI JavaScript and CSS files
 -   The required Ignite UI TypeScript definitions
+
+### <a id="editors_sample"></a>Editors Sample​
+This sample will demonstrate how we can use `igEditors` with TypeScript.
+
+#### <a id="editors_sample_preview"></a>Preview
+The following screenshot is a preview of the final result.
+
+![](images/igEditors_TypeScript.png)
+
+#### <a id="editors_sample_details"></a>Details
+Create the HTML - we are going to have different editors - Text Editor, Date Editor, Date Picker with Localization, Mask Editor, Currency Editor and Percent Editor.
+
+**In HTML:**
+```html
+<div id="editors">
+	<div>
+		<h4>
+			Text Editor
+		</h4>
+		<div id="textEditor"></div>
+	</div>
+	<div>
+		<h4>
+			Date Picker with Japan localization
+		</h4>
+		<div id="jaDatePicker"></div>
+	</div>
+	<div>
+		<h4>
+			Date and Time editor
+		</h4>
+		<div id="dateTimeEditor"></div>
+	</div>
+	<div>
+		<h4>
+			Mask editor
+		</h4>
+		<div id="maskEditor"></div>
+	</div>
+	<div>
+		<h4>
+			Currency editor
+		</h4>
+		<div id="currencyEditor"></div>
+	</div>
+	<div>
+		<h4>
+			Percent editor
+		</h4>
+		<div id="percentEditor"></div>
+	</div> 
+</div>
+```
+We initialize the editors in TypeScript.
+**In TypeScript:**
+```typescript
+/// <reference path="http://www.igniteui.com/js/typings/jquery.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/jqueryui.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/igniteui.d.ts" />
+
+$(function () {
+    $("#textEditor").igTextEditor({
+        width: "200",
+        value: "John"
+    });
+
+    $("#dateTimeEditor").igDateEditor({
+        width: "200",
+        dateInputFormat: "dateTime",
+        value: new Date()
+    });
+
+    $("#jaDatePicker").igDatePicker({
+        width: "200",
+        value: new Date(),
+        readOnly: true,
+        dropDownOnReadOnly: true,
+        dateDisplayFormat: "dateLong",
+        regional: "ja"
+    });
+
+    $("#currencyEditor").igCurrencyEditor({
+        width: "200",
+        value: -8709.98,
+        negativePattern: "$ -n",
+        positivePattern: "$ n",
+        regional: "en-US"
+    });
+
+    $("#maskEditor").igMaskEditor({
+        width: "200",
+        inputMask: 'AaaL/aa',
+        dataMode: 'rawTextWithRequiredPromptsAndLiterals'
+    });
+
+    $("#percentEditor").igPercentEditor({
+        width: "200",
+        value: "42",
+        displayFactor: 1
+    });
+});
+```
 
 ### <a id="tile_manager_sample"></a>Tile Manager Sample​
 This sample will demonstrate how we can use `igTileManager` with TypeScript.
