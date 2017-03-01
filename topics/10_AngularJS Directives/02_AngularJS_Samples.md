@@ -17,6 +17,9 @@ This topic covers samples with Ignite UI directives for AngularJS.
 
 This topic contains the following sections:
 -   [Requirements](#requirements)
+-   [Editors Sample](#editors_sample)
+    -   [Preview](#editors_sample_preview)
+    -   [Details](#editors_sample_details)
 -   [Tile Manager Sample](#tile_manager_sample)
     -   [Preview](#tile_manager_sample_preview)
     -   [Details](#tile_manager_sample_details)
@@ -32,6 +35,19 @@ This topic contains the following sections:
 In order to run this sample, you need to have:
 -   The required Ignite UI JavaScript and CSS files
 -   The Ignite UI AngularJS directives
+
+### <a id="editors_sample"></a>Editors Sample​
+This sample will demonstrate how we can use `igEditors` with AngularJS.
+
+#### <a id="editors_sample_preview"></a>Preview
+The following is a preview of the final result.
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/editors/angular](%%SamplesEmbedUrl%%/editors/angular)
+</div>
+
+#### <a id="editors_sample_details"></a>Details
+This sample demonstrates how to create a number of different editors using AngularJS directives.
 
 ### <a id="tile_manager_sample"></a>Tile Manager Sample​
 This sample will demonstrate how we can use `igTileManager` with AngularJS.
