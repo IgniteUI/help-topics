@@ -21,24 +21,26 @@ This topic contains the following sections:
     -   [Preview](#tile_manager_sample_preview)
     -   [Details](#tile_manager_sample_details)
 -   [Dialog Window Sample](#dialog_window_sample)
-	  -   [Preview](#dialog_window_sample_preview)
-	  -   [Details](#dialog_window_steps_html)
+    -   [Preview](#dialog_window_sample_preview)
+    -   [Details](#dialog_window_steps_html)
 -   [Templating Engine Sample](#templating_engine_sample)
-      -   [Preview](#templating_engine_preview)
-      -   [Details](#templating_engine_steps)
+    -   [Preview](#templating_engine_preview)
+    -   [Details](#templating_engine_steps)
 -   [Pie Chart Sample](#pie_chart_sample)
     -   [Preview](#pie_chart_preview)
     -   [Details](#pie_chart_details)
--   [Barcode Sample](#barcode_sample)
-    -   [Preview](#barcode_preview)
-    -   [Details](#barcode_details)
-
--   [Layout Manager Sample](#layout_manager_sample)
-    -   [Preview](#layout_manager_preview)
-    -   [Details](#layout_manager_details)
 -   [Tree Sample](#tree_sample)
     -   [Preview](#tree_sample_preview)
     -   [Details](#tree_sample_details)
+-   [Barcode Sample](#barcode_sample)
+    -   [Preview](#barcode_preview)
+    -   [Details](#barcode_details)
+-   [Layout Manager Sample](#layout_manager_sample)
+    -   [Preview](#layout_manager_preview)
+    -   [Details](#layout_manager_details)
+-   [Pivot View Sample](#pivot_view_sample)
+    -   [Preview](#pivot_view_preview)
+    -   [Details](#pivot_view_details)
 -   [Related Content](#related_content)
 
 ### <a id="requirements"></a>Requirements
@@ -263,7 +265,7 @@ Create the HTML - This sample demonstrates how to use nested templates using the
 <div id="resultGrid"></div>
 ```
 
-We are adding the classes `Movie` and `Actor`, and initialize the movies and actors data. 
+We are adding the classes `Movie` and `Actor`, and initialize the movies and actors data.
 
 **In TypeScript:**
 ```typescript
@@ -331,7 +333,7 @@ $(function () {
     $("#resultGrid").igGrid({
         dataSource: actors,
         width: "100%",
-        autoGenerateColumns: false, 
+        autoGenerateColumns: false,
         columns: [
             { headerText: "First Name", key: "firstName", width: 100 },
             { headerText: "Last Name", key: "lastName", width: 200 },
@@ -354,7 +356,7 @@ $(function () {
                 }
             }
         ]
-    }); 
+    });
 
     function initializeInnerControls() {
         $(".tree").igTree({ hotTracking: false });
@@ -838,6 +840,157 @@ $(function () {
 
 ```
 
+### <a id="pivot_view_sample"></a>Pivot View Sample
+This sample will demonstrate how to use TypeScript to create igPivotView and how to assign the data using the class-based approach.
+#### <a id="pivot_view_preview"></a>Preview
+The following screenshot is a preview of the final result.
+
+![](images/igPivotView_TypeScript.png)
+
+#### <a id="pivot_view_details"></a></a>Details
+
+Create the HTML - we are going to create Pivot Grid View composed of three components `igPivotGrid`, `igPivotDataSelector` and `igSplitter`.
+
+**In HTML:**
+```html
+<div id="pivotView"></div>
+```
+Create the `igPivotView` - provides in one place needed tools for manipulating multidimensional (OLAP data) in a pivot grid.
+
+**In TypeScript:**
+```typescript
+/// <reference path="../../js/typings/jquery.d.ts" />
+/// <reference path="../../js/typings/jqueryui.d.ts" />
+/// <reference path="../../js/typings/igniteui.d.ts" />
+
+class SelectorProduct {
+    ProductCategory: string;
+    SellerName: string;
+    Country: string;
+    City: string;
+    Date: string;
+    UnitPrice: number;
+    UnitsSold: number;
+    constructor(public category, public sellerName, public country, public city,
+        public date, public unitPrice, public unitsSold) {
+        this.ProductCategory = category;
+        this.SellerName = sellerName;
+        this.Country = country;
+        this.City = city;
+        this.Date = date;
+        this.UnitPrice = unitPrice;
+        this.UnitsSold = unitsSold;
+    }
+}
+
+var dataView: SelectorProduct[] = [];
+dataView.push(new SelectorProduct("Clothing", "Stanley Brooker", "Bulgaria", "Plovdiv", "01/01/2012", 12.81, 282));
+dataView.push(new SelectorProduct("Clothing", "Elisa Longbottom", "US", "New York", "01/05/2013", 49.57, 296));
+dataView.push(new SelectorProduct("Bikes", "Lydia Burson", "Uruguay", "Ciudad de la Costa", "01/06/2011", 3.56, 68));
+dataView.push(new SelectorProduct("Accessories", "David Haley", "UK", "London", "04/07/2012", 85.58, 293));
+dataView.push(new SelectorProduct("Components", "John Smith", "Japan", "Yokohama", "12/08/2012", 18.13, 240));
+dataView.push(new SelectorProduct("Clothing", "Larry Lieb", "Uruguay", "Ciudad de la Costa", "05/12/2011", 68.33, 456));
+dataView.push(new SelectorProduct("Components", "Walter Pang", "Bulgaria", "Sofia", "02/19/2013", 16.05, 492));
+
+function saleValueCalculator(items, cellMetadata) {
+        var sum = 0;
+        $.each(items, function (index, item) {
+            sum += item.UnitPrice * item.UnitsSold;
+        });
+        return (Math.round(sum * 10) / 10).toFixed(2);
+};
+
+dataSource = new $.ig.OlapFlatDataSource({
+    dataSource: dataView,
+    metadata: {
+        cube: {
+            name: "Sales",
+            caption: "Sales",
+            measuresDimension: {
+                caption: "Measures",
+                measures: [ //for each measure, name and aggregator are required
+                    {
+                        caption: "Units Sold", name: "UnitsSold",
+                        aggregator: $.ig.OlapUtilities.prototype.sumAggregator('UnitsSold')
+                    },
+                    {
+                        caption: "Unit Price", name: "UnitPrice",
+                        aggregator: $.ig.OlapUtilities.prototype.sumAggregator('UnitPrice')
+                    },
+                    {
+                        caption: "Sale Value", name: "SaleValue", aggregator: saleValueCalculator
+                    }]
+            },
+            dimensions: [ // for each dimension
+                {
+                    caption: "Date", name: "Date", /*displayFolder: "Folder1\\Folder2",*/ hierarchies: [
+                        $.ig.OlapUtilities.prototype.getDateHierarchy(
+                            "Date", // the source property name
+                            ["year", "quarter", "month", "date"], // the date parts for which levels will be generated (optional)
+                            "Dates", // The name for the hierarchy (optional)
+                            "Date", // The caption for the hierarchy (optional)
+                            ["Year", "Quarter", "Month", "Day"], // the captions for the levels (optional)
+                            "All Periods") // the root level caption (optional)
+                    ]
+                },
+                {
+                    caption: "Location", name: "Location", hierarchies: [{
+                        caption: "Location", name: "Location", levels: [
+                            {
+                                name: "AllLocations", caption: "All Locations",
+                                memberProvider: function (item) { return "All Locations"; }
+                            },
+                            {
+                                name: "Country", caption: "Country",
+                                memberProvider: function (item) { return item.Country; }
+                            },
+                            {
+                                name: "City", caption: "City",
+                                memberProvider: function (item) { return item.City; }
+                            }]
+                    }]
+                },
+                {
+                    caption: "Product", name: "Product", hierarchies: [{
+                        caption: "Product", name: "Product", levels: [
+                            {
+                                name: "AllProducts", caption: "All Products",
+                                memberProvider: function (item) { return "All Products"; }
+                            },
+                            {
+                                name: "ProductCategory", caption: "Category",
+                                memberProvider: function (item) { return item.ProductCategory; }
+                            }]
+                    }]
+                },
+                {
+                    caption: "Seller", name: "Seller", hierarchies: [{
+                        caption: "Seller", name: "Seller", levels: [
+                            {
+                                name: "AllSellers", caption: "All Sellers",
+                                memberProvider: function (item) { return "All Sellers"; }
+                            },
+                            {
+                                name: "SellerName", caption: "Seller",
+                                memberProvider: function (item) { return item.SellerName; }
+                            }]
+                    }]
+                }]
+        }
+    },
+
+    rows: "[Date].[Dates]",
+    columns: "[Product].[Product]",
+    measures: "[Measures].[UnitsSold]"
+});
+
+$(function () {
+    $("#pivotView").igPivotView({
+        dataSource: dataSource
+    });
+});
+
+```
 
 
 ### <a id="related_content"></a>Related Content
