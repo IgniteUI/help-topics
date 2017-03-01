@@ -19,7 +19,7 @@ This topic contains the following sections:
 -   [Requirements](#requirements)
 -   [Tile Manager Sample](#tile_manager_sample)
     -   [Preview](#tile_manager_sample_preview)
-    -   [Details](#tile_manager_steps_html)
+    -   [Details](#tile_manager_sample_details)
 -   [Dialog Window Sample](#dialog_window_sample)
 	  -   [Preview](#dialog_window_sample_preview)
 	  -   [Details](#dialog_window_steps_html)
@@ -29,6 +29,16 @@ This topic contains the following sections:
 -   [Pie Chart Sample](#pie_chart_sample)
     -   [Preview](#pie_chart_preview)
     -   [Details](#pie_chart_details)
+-   [Barcode Sample](#barcode_sample)
+    -   [Preview](#barcode_preview)
+    -   [Details](#barcode_details)
+
+-   [Layout Manager Sample](#layout_manager_sample)
+    -   [Preview](#layout_manager_preview)
+    -   [Details](#layout_manager_details)
+-   [Tree Sample](#tree_sample)
+    -   [Preview](#tree_sample_preview)
+    -   [Details](#tree_sample_details)
 -   [Related Content](#related_content)
 
 ### <a id="requirements"></a>Requirements
@@ -44,8 +54,7 @@ The following screenshot is a preview of the final result.
 
 ![](images/igTileManager_TypeScript.png)
 
-
-#### <a id="tile_manager_steps_html"></a>Details
+#### <a id="tile_manager_sample_details"></a>Details
 Create the HTML - we are going to have three tabs with car brands and an `igTileManager` which will load photos of the selected car brand.
 
 **In HTML:**
@@ -175,7 +184,7 @@ The following screenshot is a preview of the final result.
 
 ![](images/igDialog_TypeScript.png)
 
-####<a id="dialog_window_steps_html"></a>Details
+####<a id="dialog_window_sample_details"></a>Details
 Create the HTML - we are going to show the Infragistics' site inside the `igDialog`.
 
 **In HTML:**
@@ -421,7 +430,7 @@ Create the HTML - we are going to create Pie Chart with the ability to set diffe
     </table>
 ```
 
-Create the Data Source - we are adding the class `PieChartCountryPopulation`, and initialize the country population data data. We are storing everything in the `PieChartCountryPopulation` array.
+Create the Data Source - we are adding the class `PieChartCountryPopulation`, and initialize the country population data. We are storing everything in the `PieChartCountryPopulation` array.
 
 **In TypeScript:**
 ```typescript
@@ -506,6 +515,330 @@ $(function () {
     });
 });
 ```
+
+### <a id="tree_sample"></a>Tree Sample
+This sample will demonstrate how we can use `igTree` with TypeScript.
+
+#### <a id="tree_sample_preview"></a>Preview
+The following screenshot is a preview of the final result.
+
+![](images/igTree_TypeScript.png)
+
+#### <a id="tree_sample_details"></a>Details
+Create the HTML - we are going to create an `igTree` will represent a file explorer consisting of folders and files.
+
+**In HTML:**
+```html
+<div id="tree"></div>
+```
+
+Create the Data Source - we are creating a hierarchical structure consisting of folders, subfolders and files.
+
+**In TypeScript:**
+```typescript
+/// <reference path="../../js/typings/jquery.d.ts" />
+/// <reference path="../../js/typings/jqueryui.d.ts" />
+/// <reference path="../../js/typings/igniteui.d.ts" />
+
+class FileType {
+    name: string;
+    type: string;
+    imageUrl: string;
+    folder: FileType[];
+    constructor(inName: string, inType: string, inImageUrl: string, inFolder: FileType[]) {
+        this.name = inName;
+        this.type = inType;
+        this.imageUrl = inImageUrl;
+        this.folder = inFolder;
+    }
+}
+
+function createSubfolderFiles(parentFolder: FileType, subFolders: string[], files: string[][],
+    folderPicture: string, filePicture: string) {
+    var fileIndex, subFolderIndex;
+    for (subFolderIndex = 0; subFolderIndex < subFolders.length; subFolderIndex++) {
+        parentFolder.folder.push(new FileType(subFolders[subFolderIndex], "Folder", folderPicture, []));
+
+        for (fileIndex = 0; fileIndex < files[subFolderIndex].length; fileIndex++) {
+            parentFolder.folder[subFolderIndex].folder.push(new FileType(files[subFolderIndex][fileIndex], "File", filePicture, []));
+        }
+    }
+}
+
+var folderMusic = new FileType("Music", "Folder", "../../images/samples/tree/book.png", []);
+var musicSubFolders = ["Y.Malmsteen", "WhiteSnake", "AC/DC", "Rock"];
+var musicFiles = [["Making Love", "Rising Force", "Fire and Ice"], ["Trouble", "Bad Boys", "Is This Love"],
+    ["ThunderStruck", "T.N.T.", "The Jack"], ["Bon Jovi - Always"]];
+createSubfolderFiles(folderMusic, musicSubFolders, musicFiles, "../../images/samples/tree/book.png", "../../images/samples/tree/music.png");
+
+...
+
+var folderDeleted = new FileType("Deleted", "Folder", "../../images/samples/tree/bin_empty.png", []);
+var folderComputer = new FileType("Computer", "Folder", "../../images/samples/tree/computer.png", []);
+folderComputer.folder.push(folderMusic);
+folderComputer.folder.push(folderDocuments);
+folderComputer.folder.push(folderPictures);
+folderComputer.folder.push(folderNetwork);
+folderComputer.folder.push(folderDeleted);
+
+var files = [folderComputer];
+```
+
+Create the `igTree` - we are creating the `igTree` and binding it to the generated data source.
+
+**In TypeScript:**
+```typescript
+$(function () {
+    var options: IgTree = {
+        checkboxMode: 'triState',
+        singleBranchExpand: true,
+        dataSource: $.extend(true, [], files),
+        initialExpandDepth: 0,
+        pathSeparator: '.',
+        bindings: {
+            textKey: 'name',
+            valueKey: 'type',
+            imageUrlKey: 'imageUrl',
+            childDataProperty: 'folder'
+        },
+        dragAndDrop: true,
+        dragAndDropSettings: {
+            allowDrop: true,
+            customDropValidation: function (element) {
+                // Validates the drop target
+                var valid = true,
+                    droppableNode = $(this);
+
+                if (droppableNode.is('a') && droppableNode.closest('li[data-role=node]').attr('data-value') === 'File') {
+                    valid = false;
+                }
+
+                return valid;
+            }
+        }
+    }
+
+    $("#tree").igTree(options);
+});
+```
+
+### <a id="barcode_sample"></a>Barcode Sample
+This sample will demonstrate how to use TypeScript for creating Barcode and how to configure specific settings for it.
+#### <a id="barcode_preview"></a>Preview
+The following screenshot is a preview of the final result.
+
+![](images/igBarcode_TypeScript.png)
+
+#### <a id="barcode_details"></a></a>Details
+
+Create the HTML - we are going to create barcode based on some data (in our case hyperlinks to Infragistics website). `Encoding mode` and `Eci Header Display Mode` could be used in order to manipulate the barcode modes.
+
+**In HTML**
+```html
+<table class="options">
+    <tr>
+        <td style="text-align:left;">
+            <div id="barcode"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>Data:</td>
+        <td>
+            <input id='combo' dir="ltr"></input>
+        </td>
+        <td>
+            <input id="setButton" type="button" value="Set" style="width:50px; float: left;" />
+        </td>
+    </tr>
+    <tr>
+        <td>Encoding Mode:</td>
+        <td>
+            <div class="comboContainer">
+                <select id="encodingMode">
+                    <option value="undefined">Undefined</option>
+                    <option value="numeric">Numeric</option>
+                    <option value="alphanumeric">Alphanumeric</option>
+                    <option value="byte" selected="selected">Byte</option>
+                    <option value="anji">Kanji</option>
+                </select>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>Eci Header Display Mode:</td>
+        <td>
+            <div class="comboContainer">
+                <select id="eciHeaderDisplayMode">
+                    <option value="hide" selected="selected">Hide</option>
+                    <option value="show">Show</option>
+                </select>
+            </div>
+        </td>
+    </tr>
+</table>
+```
+Create the Data Source - we are adding the class `IGProducts` and initialize the Infragistics Products data. Everything is stored in the `igProductsData` array.
+
+**In TypeScript**
+```typescript
+/// <reference path="../../js/typings/jquery.d.ts" />
+/// <reference path="../../js/typings/jqueryui.d.ts" />
+/// <reference path="../../js/typings/igniteui.d.ts" />
+
+class IGProducts {
+    id: number;
+    name: string;
+    constructor(productId: number, productName: string) {
+        this.id = productId;
+        this.name = productName;
+    }
+}
+
+var igProductsData: IGProducts[] = [];
+igProductsData.push(new IGProducts(1, "http://www.infragistics.com/products/ultimate"));
+igProductsData.push(new IGProducts(2, "http://www.infragistics.com/products/professional"));
+igProductsData.push(new IGProducts(3, "http://www.infragistics.com/products/jquery"));
+
+```
+Create the igBarcode - we are creating the `igBarcode` and all other relevant controls like `igCombo` in order to help with the layout configuration.
+
+```typescript
+$(function () {
+    $("#barcode").igQRCodeBarcode({
+        height: "300px",
+        width: "100%",
+        data: "http://www.infragistics.com/products/jquery/samples",
+    });
+
+    $("#dataInput").igTextEditor({
+        width: "300px",
+        value: "http://www.infragistics.com/products/jquery/help"
+    });
+
+    $("#setButton").click(function () {
+        $("#barcode").igQRCodeBarcode("option", "data", $("#dataInput").igTextEditor("value"));
+    });
+
+	$('#combo').igCombo({
+		dataSource: igProductsData,
+		textKey: 'Name',
+		valueKey: 'ID',
+		width: "500px",
+		initialSelectedItems: [{
+			index: 0
+		}]
+	});
+
+    $("#encodingMode").igCombo({
+        enableClearButton: false,
+        mode: "dropdown",
+        selectionChanged: function (evt, ui) {
+            if ($.isArray(ui.items) && ui.items[0] != undefined) {
+                $("#barcode").igQRCodeBarcode("option", "encodingMode", ui.items[0].data.value);
+            }
+        }
+    });
+
+    $("#eciHeaderDisplayMode").igCombo({
+        enableClearButton: false,
+        mode: "dropdown",
+        selectionChanged: function (evt, ui) {
+            if ($.isArray(ui.items) && ui.items[0] != undefined) {
+                $("#barcode").igQRCodeBarcode("option", "eciHeaderDisplayMode", ui.items[0].data.value);
+            }
+        }
+    });
+});
+```
+
+### <a id="layout_manager_sample"></a>Layout Manager Sample
+This sample will demonstrate how to configure Layout Manager's Grid Layout and it's ability to have items with arbitrary position in a grid with a predefined size.
+#### <a id="layout_manager_preview"></a>Preview
+The following screenshot is a preview of the final result.
+
+![](images/igLayoutManager_TypeScript.png)
+
+#### <a id="layout_manager_details"></a></a>Details
+
+Create the HTML - we are going to create layout manager with Grid layout which can be use to organize content and set different container layout.
+
+**In HTML:**
+```html
+..
+<style type="text/css">
+        ul {
+            list-style-type: none;
+            font-family: Verdana;
+        }
+
+        #layout {
+            position: relative;
+        }
+
+        .ig-layout-item {
+            font-size: 20px;
+        }
+
+        @media all and (max-width: 480px) {
+            .ig-layout-item {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="layout"></div>
+</body>
+..
+```
+Create the `igLayoutManager` - different structure of the layout could be configured by changing `items` and `gridLayout` options.
+
+**In TypeScript:**
+```typescript
+/// <reference path="../../js/typings/jquery.d.ts" />
+/// <reference path="../../js/typings/jqueryui.d.ts" />
+/// <reference path="../../js/typings/igniteui.d.ts" />
+
+$(function () {
+	options: IgLayoutManager = {
+		layoutMode: "grid",
+        width: "100%",
+        height: "600px",
+        gridLayout: { cols: 3, rows: 3 },
+        items: [
+            { rowSpan: 2, colSpan: 2, colIndex: 0, rowIndex: 0 },
+            { rowSpan: 1, colSpan: 1, rowIndex: 0, colIndex: 2 },
+            { rowSpan: 1, colSpan: 1, rowIndex: 1, colIndex: 2 },
+            { rowSpan: 1, colSpan: 3, colIndex: 0, rowIndex: 2 }
+        ],
+		itemRendered: function(evt, ui){
+			args.item.append("<ul><li>colspan: " + args.itemData.colSpan + "</li><li>rowspan: " + args.itemData.rowSpan + "</li></ul></span>");
+
+			// get the element
+			if (args.itemData.colSpan == 2 && args.itemData.rowSpan == 2) {
+				args.item.css("background-color", "#eee");
+				args.item.css("color", "#555");
+			} else if (args.itemData.rowSpan == 1 && args.itemData.colSpan == 1) {
+				if (args.itemData.rowIndex == 0) {
+					args.item.css("background-color", "#2CBDF9");
+					args.item.css("color", "#FFF");
+				} else {
+					args.item.css("background-color", "#FFA72D");
+					args.item.css("color", "#FFF");
+				}
+			} else {
+				args.item.css("background-color", "#2CBDF9");
+				args.item.css("color", "#FFF");
+			}
+		}
+	};
+
+    $('#layout').igLayoutManager(options);
+});
+
+```
+
+
 
 ### <a id="related_content"></a>Related Content
 The following topic provides additional information related to this one:

@@ -85,6 +85,13 @@ $('#treegrid').igTreeGrid({
 });
 ```
 
+The tree grid below is bound to a flat data source:
+
+<div class="embed-sample">
+   [JSON Binding](%%SamplesEmbedUrl%%/tree-grid/json-binding)
+</div>
+
+
 ### <a id="hierarchical-data"></a> Hierarchical Data Source
 
 Hierarchical data sources have a nested relationship where child data exists as an array member of the parent data object. An example of a hierarchical data source looks like this:
@@ -120,6 +127,12 @@ $('#treegrid').igTreeGrid({
   ...
 });
 ```
+
+The tree grid below is bound to a hierarchical data source:
+
+<div class="embed-sample">
+   [File Explorer](%%SamplesEmbedUrl%%/tree-grid/file-explorer)
+</div>
 
 ## <a id="feature-differences-iggrid"></a> Feature differences from igGrid
 
