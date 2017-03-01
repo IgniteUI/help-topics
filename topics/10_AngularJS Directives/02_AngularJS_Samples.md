@@ -29,6 +29,9 @@ This topic contains the following sections:
 -   [Tree Sample](#tree_sample)
     -   [Preview](#tree_sample_preview)
     -   [Details](#tree_sample_details)
+-   [Map Sample](#map_sample)
+    -   [Preview](#map_sample_preview)
+    -   [Details](#map_sample_details)
 -   [Related Content](#related_content)
 
 ### <a id="requirements"></a>Requirements
@@ -87,6 +90,19 @@ The following is a preview of the final result.
 
 #### <a id="tree_sample_details"></a>Details
 In this sample we use the `igTree` AngularJS directive. Firstly we introduce a `data` variable in our controller which holds the data source. Then we declare an `igTree` AngularJS directive and bind it to the `data` variable.
+
+### <a id="map_sample"></a>Map Sample
+This sample will demonstrate how we can use `igMap` with AngularJS.
+
+#### <a id="map_sample_preview"></a>Preview
+The following is a preview of the final result.
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/map/angular](%%SamplesEmbedUrl%%/map/angular)
+</div>
+
+#### <a id="map_sample_details"></a>Details
+In the sample above we show how a zoomable map can be initialized using an AngularJS directive.
 
 ### <a id="related_content"></a>Related Content
 The following topics provide additional information related to this one:
