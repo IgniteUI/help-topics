@@ -29,6 +29,10 @@ This topic contains the following sections:
 -   [Barcode Sample](#barcode_sample)
     -   [Preview](#barcode_preview)
     -   [Details](#barcode_details)
+
+-   [Layout Manager Sample](#layout_manager_sample)
+    -   [Preview](#layout_manager_preview)
+    -   [Details](#layout_manager_details)
 -   [Tree Sample](#tree_sample)
     -   [Preview](#tree_sample_preview)
     -   [Details](#tree_sample_details)
@@ -595,6 +599,94 @@ $(function () {
     });
 });
 ```
+
+### <a id="layout_manager_sample"></a>Layout Manager Sample
+This sample will demonstrate how to configure Layout Manager's Grid Layout and it's ability to have items with arbitrary position in a grid with a predefined size.
+#### <a id="layout_manager_preview"></a>Preview
+The following screenshot is a preview of the final result.
+
+![](images/igLayoutManager_TypeScript.png)
+
+#### <a id="layout_manager_details"></a></a>Details
+
+Create the HTML - we are going to create layout manager with Grid layout which can be use to organize content and set different container layout.
+
+**In HTML:**
+```html
+..
+<style type="text/css">
+        ul {
+            list-style-type: none;
+            font-family: Verdana;
+        }
+
+        #layout {
+            position: relative;
+        }
+
+        .ig-layout-item {
+            font-size: 20px;
+        }
+
+        @media all and (max-width: 480px) {
+            .ig-layout-item {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="layout"></div>
+</body>
+..
+```
+Create the `igLayoutManager` - different structure of the layout could be configured by changing `items` and `gridLayout` options.
+
+**In TypeScript:**
+```typescript
+/// <reference path="../../js/typings/jquery.d.ts" />
+/// <reference path="../../js/typings/jqueryui.d.ts" />
+/// <reference path="../../js/typings/igniteui.d.ts" />
+
+$(function () {
+	options: IgLayoutManager = {
+		layoutMode: "grid",
+        width: "100%",
+        height: "600px",
+        gridLayout: { cols: 3, rows: 3 },
+        items: [
+            { rowSpan: 2, colSpan: 2, colIndex: 0, rowIndex: 0 },
+            { rowSpan: 1, colSpan: 1, rowIndex: 0, colIndex: 2 },
+            { rowSpan: 1, colSpan: 1, rowIndex: 1, colIndex: 2 },
+            { rowSpan: 1, colSpan: 3, colIndex: 0, rowIndex: 2 }
+        ],
+		itemRendered: function(evt, ui){
+			args.item.append("<ul><li>colspan: " + args.itemData.colSpan + "</li><li>rowspan: " + args.itemData.rowSpan + "</li></ul></span>");
+
+			// get the element
+			if (args.itemData.colSpan == 2 && args.itemData.rowSpan == 2) {
+				args.item.css("background-color", "#eee");
+				args.item.css("color", "#555");
+			} else if (args.itemData.rowSpan == 1 && args.itemData.colSpan == 1) {
+				if (args.itemData.rowIndex == 0) {
+					args.item.css("background-color", "#2CBDF9");
+					args.item.css("color", "#FFF");
+				} else {
+					args.item.css("background-color", "#FFA72D");
+					args.item.css("color", "#FFF");
+				}
+			} else {
+				args.item.css("background-color", "#2CBDF9");
+				args.item.css("color", "#FFF");
+			}
+		}
+	};
+
+    $('#layout').igLayoutManager(options);
+});
+
+```
+
 
 
 ### <a id="related_content"></a>Related Content
