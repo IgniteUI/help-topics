@@ -32,6 +32,9 @@ This topic contains the following sections:
 -   [Map Sample](#map_sample)
     -   [Preview](#map_sample_preview)
     -   [Details](#map_sample_details)
+-   [Layout Manager Sample](#lm_sample)
+    -   [Preview](#lm_preview)
+    -   [Details](#lm_details)
 -   [Related Content](#related_content)
 
 ### <a id="requirements"></a>Requirements
@@ -85,7 +88,7 @@ This sample will demonstrate how we can use `igTree` with AngularJS.
 The following is a preview of the final result.
 
 <div class="embed-sample">
-   [%%SamplesEmbedUrl%%/tree/angular](%%SamplesEmbedUrl%%/tree/angular)
+   [%%SamplesEmbedUrl%%/tree-control/angular](%%SamplesEmbedUrl%%/tree-control/angular)
 </div>
 
 #### <a id="tree_sample_details"></a>Details
@@ -103,6 +106,19 @@ The following is a preview of the final result.
 
 #### <a id="map_sample_details"></a>Details
 In the sample above we show how a zoomable map can be initialized using an AngularJS directive.
+
+### <a id="lm_sample"></a>Layout Manager Sample
+This sample demonstrates how `AngularJS` directives are used to instantiate `igLayoutManager`.
+
+#### <a id="lm_preview"></a>Preview
+The following is a preview of the final result.
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/layout-manager/angular](%%SamplesEmbedUrl%%/layout-manager/angular)
+</div>
+
+#### <a id="lm_details"></a>Details
+In this sample we use the `igLayoutManager` AngularJS directive.
 
 ### <a id="related_content"></a>Related Content
 The following topics provide additional information related to this one:
