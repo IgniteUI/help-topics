@@ -1,7 +1,7 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "configuring-asp.net-mvc",
+    "fileName": "configuring-asp-net-mvc",
     "controlName": [],
     "tags": []
 }
