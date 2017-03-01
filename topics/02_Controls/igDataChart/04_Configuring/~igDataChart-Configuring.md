@@ -24,6 +24,8 @@ This is a group of topics explaining how to configure the various aspects of the
 
 -	[Animating Charts (Motion Framework for Charts)](igDataChart-Animating-Charts.html): The Infragistics® Motion Framework™ is a framework for animating data changes in Ignite UI™ chart controls.
 
+-   [Configuring the Navigation Features (igDataChart)](igDataChart-Configuring-Navigation-Features.html): This topic explains, with code examples, how to configure navigation features of the `igDataChart`™ control and how to use its API to define the position and size of the visible portion of the chart.
+
 -	[Configuring the Chart Title and Subtitle (igDataChart)](igDataChart-Chart-Titles-and-Subtitles.html): This topic provides information on using the chart title and subtitle feature of the `igDataChart`™ control.
 
 -	[Configuring the Axis Title (igDataChart)](igDataChart-Axis-Title.html): This topic provides information on setting an axis title on the `igDataChart`™ control.
