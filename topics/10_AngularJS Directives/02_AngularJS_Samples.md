@@ -29,6 +29,9 @@ This topic contains the following sections:
 -   [Tree Sample](#tree_sample)
     -   [Preview](#tree_sample_preview)
     -   [Details](#tree_sample_details)
+-   [Layout Manager Sample](#lm_sample)
+    -   [Preview](#lm_preview)
+    -   [Details](#lm_details)
 -   [Related Content](#related_content)
 
 ### <a id="requirements"></a>Requirements
@@ -87,6 +90,21 @@ The following is a preview of the final result.
 
 #### <a id="tree_sample_details"></a>Details
 In this sample we use the `igTree` AngularJS directive. Firstly we introduce a `data` variable in our controller which holds the data source. Then we declare an `igTree` AngularJS directive and bind it to the `data` variable.
+
+
+### <a id="lm_sample"></a>Layout Manager Sample​
+This sample demonstrates how `AngularJS` directives are used to instantiate `igLayoutManager`.
+
+#### <a id="lm_preview"></a>Preview
+The following is a preview of the final result.
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/layout-manager/angular](%%SamplesEmbedUrl%%/layout-manager/angular)
+</div>
+
+#### <a id="lm_details"></a>Details
+In this sample we use the `igLayoutManager` AngularJS directive.
+
 
 ### <a id="related_content"></a>Related Content
 The following topics provide additional information related to this one:
