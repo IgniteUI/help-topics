@@ -552,8 +552,14 @@ $('#grid1').igGridUpdating('deleteRow', 1, $('#grid1').igGrid("rowAt", 0));
 **In Javascript:**
 
 ```js
-$('#grid1').igGridUpdating('updateRow', 1, { 'Name': 'Alex' });
+$('#grid1').igGridUpdating('updateRow', 1, { 'FirstName': 'Alex' });
 ```
+The sample below demonstrates the Updating API and events.
+<div class="embed-sample">
+   [igGrid Editing API and Events](%%SamplesEmbedUrl%%/grid/editing-api-events)
+</div>
+
+
 
 ## <a id="client-events"></a> Client-Side Events 
 You can handle client-side events to the Updating feature in two ways, both of which are described below.

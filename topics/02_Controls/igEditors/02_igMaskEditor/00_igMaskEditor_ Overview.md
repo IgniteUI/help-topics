@@ -87,6 +87,58 @@ The `igMaskEditor` includes the following characteristics:
 
 5.  Run the web page to view the basic setup of the `igMaskEditor` control.
 
+## Specific options
+
+### Input mask
+
+In this section, we will take a look at several key options for the `igMaskEditor`, starting with [`inputMask`](%%jQueryApiUrl%%/ui.igmaskeditor#options:inputMask). It represents the input mask and is a key option for the igMaskEditor as much of its functionality is depending on it. It basically lets you specify what is allowed for typing in the editor's input or in other words restrict the end user input based on the expected format and your requirements. Additionally, it makes the editor more "user friendly" as the `inputMask` set displays the required positions when in edit mode.
+
+For example, to have a phone number typed in a specific format, you can specify the required digits ("9" flags) as well as the format itself (literal characters like spaces, dashes, etc.). With the mask set to `"(999) 999-999"`, upon entering edit mode the following mask `(___) ___-___` will appear for the end user and hint on what to type in. 
+
+The mask may include filter-flags and literal characters. Literal characters are part of the mask, which cannot be modified by the end user. In order to use a filter-flag as a literal character, the escape "\\" character should be used. Default one is "CCCCCCCCCC" and allows any keyboard characters and these are optional at the same time. Please notice this option can not be set runtime.
+The full list of `inputMask` option values can be seen in the [API documentation](%%jQueryApiUrl%%/ui.igmaskeditor#options:inputMask). 
+
+### Data Mode
+
+Next we will take a look at [`dataMode`](%%jQueryApiUrl%%/ui.igmaskeditor#options:dataMode) and several of its available values. It affects the value of the control (`value` method and submitted in forms). You can choose from a total of 6 different `dataMode` settings, which simply put let you choose what the value should contain from text, unfilled prompts and literals. The default is `allText` and when used value method returns the text entered, all prompts (positions) and literals. Notice `dataMode` indirectly depends on the `inputMask` option as well. In case you want to get only the text from the user input disregarding the unfilled prompts and literals `rawText` is the way to go. When using `rawTextWithLiterals` you will get only the text entered and literals while unfilled prompts will be ignored (removed). For example, given `inputMask` of `(999) 999-999` and `dataMode` of `rawTextWithLiterals` if you type `1234567` in the input, the value will be `(123) 456-7`. 
+
+A complete list of the option's values can be found in [API documentation](%%jQueryApiUrl%%/ui.igmaskeditor#options:dataMode). 
+
+
+### Configure 
+
+**HTML:**
+
+```html
+<input id="phoneNumber"/>
+```
+
+**Javascript:**
+
+```js
+<script type="text/javascript">
+    $('#phoneNumber').igMaskEditor({
+        inputMask: '(999) 999-999',
+        dataMode: 'rawTextWithLiterals',
+        value:123456789
+    });
+});
+</script>
+```
+
+**In Razor:**
+
+```csharp
+@(Html.Infragistics().MaskEditor()
+    .ID("phoneNumber")
+    .InputName("phoneNumber")
+    .InputMask("(999) 999-999")
+    .DataMode(MaskEditorDataMode.RawTextWithLiterals)
+    .Value(123456789)
+    .Render()
+)
+```
+
 ##Related Links
 
 -   [Mask Editor Basic Sample](%%SamplesUrl%%/editors/mask-editor-basic)
