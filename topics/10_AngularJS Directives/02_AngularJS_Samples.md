@@ -82,7 +82,7 @@ This sample will demonstrate how we can use `igTree` with AngularJS.
 The following is a preview of the final result.
 
 <div class="embed-sample">
-   [%%SamplesEmbedUrl%%/tree/angular](%%SamplesEmbedUrl%%/tree/angular)
+   [%%SamplesEmbedUrl%%/tree-control/angular](%%SamplesEmbedUrl%%/tree-control/angular)
 </div>
 
 #### <a id="tree_sample_details"></a>Details
