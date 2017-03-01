@@ -63,7 +63,7 @@ This topic contains the following sections:
 
 The `igLayoutManager` initializes on an unordered list (`<ul>`) element with list items (`<li>`) elements or `<div>` elements. The list can be created in any of the following ways:
 
--   Directly in the HTML markup The `<li>` or `<div>` elements can be defined in the HTML markup of the host element, and upon initialization, the control will add the respective CSS classes
+-   Directly in the HTML markup the `<li>` or `<div>` elements can be defined in the HTML markup of the host element, and upon initialization, the control will add the respective CSS classes
 -   As an array of item objects in the control options
 
 With this approach, an [items](%%jQueryApiUrl%%/ui.iglayoutmanager#options) collection and the [itemCount](%%jQueryApiUrl%%/ui.iglayoutmanager#options) property are used and the `igLayoutManager` generates the corresponding markup.
@@ -256,9 +256,9 @@ The required resources added and properly referenced. (For a conceptual overview
         $.ig.loader({
             scriptPath: "Scripts/ig/",
             cssPath: "Content/ig/",
-            resources: “igLayoutManager"
+            resources: "igLayoutManager"
         });
-    <script>
+    </script>
     ```
 
 ### <a id="html-markup-steps"></a>Steps
@@ -353,9 +353,9 @@ The required resources added and properly referenced. (For a conceptual overview
         $.ig.loader({
             scriptPath: "Scripts/ig/",
             cssPath: "Content/ig/",
-            resources: “igLayoutManager"
+            resources: "igLayoutManager"
         });
-    <script>
+    </script>
     ```
 
 ### <a id="js-steps"></a>Steps
@@ -391,6 +391,14 @@ The following steps demonstrate how to add a basic `igLayoutManager` control wit
         });
     });
 	```
+
+#### Sample ilustrating an alternative approach when using itemRendered event:
+
+The following sample demonstrates initializing the Layout Manager control's Border layout from JavaScript, by handling [`itemRendered`](%%jQueryApiUrl%%/ui.iglayoutmanager#events:itemRendered) events and assigning content to the created regions.
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/layout-manager/border-layout](%%SamplesEmbedUrl%%/layout-manager/border-layout)
+</div>
 
 
 ##<a id="mvc-procedure"></a>Adding igLayoutManager in the ASP.NET MVC – Procedure 
@@ -500,8 +508,6 @@ The following samples provide additional information related to this topic.
 -	[ASP.NET MVC Basic Usage](%%SamplesUrl%%/layout-manager/aspnet-mvc-helper): This sample demonstrates using the ASP.NET MVC helper for the Layout Manager control.
 
 -	[Border Layout from HTML Markup](%%SamplesUrl%%/layout-manager/border-layout-markup): This sample demonstrates initializing the `igLayoutManager` control’s Border layout from the HTML markup by assigning *"center"*/*"left"*/*"right"*/*"header"*/*"footer"* CSS classes.
-
--	[Border Layout – Initializing with JavaScript](%%SamplesUrl%%/layout-manager/border-layout): This sample demonstrates initializing the `igLayoutManager` control’s Border layout from JavaScript, by handling `itemrendered` events and assigning content to the created regions.
 
 -	[Responsive Column Layout](%%SamplesUrl%%/layout-manager/column-layout-markup):This sample demonstrates how the `igLayoutManager` control’s Column layout can be used by assigning classes to items thus specifying the area their content will span over. This sample does not use JavaScript initialization code: it is done with CSS and HTML only.
 
