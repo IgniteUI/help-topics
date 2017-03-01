@@ -394,7 +394,7 @@ The following steps demonstrate how to add a basic `igLayoutManager` control wit
 
 #### Sample ilustrating an alternative approach when using itemRendered event:
 
-The following sample demonstrates initializing the Layout Manager control's Border layout from JavaScript, by handling [itemRendered](%%jQueryApiUrl%%/ui.iglayoutmanager#events:itemRendered) events and assigning content to the created regions.
+The following sample demonstrates initializing the Layout Manager control's Border layout from JavaScript, by handling [`itemRendered`](%%jQueryApiUrl%%/ui.iglayoutmanager#events:itemRendered) events and assigning content to the created regions.
 
 <div class="embed-sample">
    [%%SamplesEmbedUrl%%/layout-manager/border-layout](%%SamplesEmbedUrl%%/layout-manager/border-layout)
