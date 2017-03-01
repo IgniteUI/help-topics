@@ -196,21 +196,32 @@ $("#grid1").igGrid({
 **In ASPX:**
 
 ```csharp
-<%=Html.Infragistics().Grid(Model).ID("grid1").LoadOnDemand(false).AutoGenerateColumns(false).AutoGenerateLayouts(false).PrimaryKey("ProjectID").Columns(column => 
+<%=Html.Infragistics().Grid(Model).ID("grid1")
+    .LoadOnDemand(false)
+    .AutoGenerateColumns(false)
+    .AutoGenerateLayouts(false)
+    .PrimaryKey("ProductID")
+    .Columns(column => 
     {
-        column.For(x => x.ProjectID)
-			.HeaderText(this.GetGlobalResourceObject("Grid", "ProjectID").ToString());
+        column.For(x => x.ProductID)
+			.HeaderText(this.GetGlobalResourceObject("Grid", "ProductID").ToString());
         column.For(x => x.Name)
 			.HeaderText(this.GetGlobalResourceObject("Grid", "Name").ToString());
-        column.For(x => x.StartDate)
-			.HeaderText(this.GetGlobalResourceObject("Grid", "StartDate").ToString());
-        column.For(x => x.EndDate)\
-			.HeaderText(this.GetGlobalResourceObject("Grid", "EndDate").ToString());
+        column.For(x => x.ProductNumber)
+			.HeaderText(this.GetGlobalResourceObject("Grid", "ProductNumber").ToString());
+        column.For(x => x.MakeFlag)
+			.HeaderText(this.GetGlobalResourceObject("Grid", "MakeFlag").ToString());
     })
-	.Virtualization(true)
-	.VirtualizationMode(VirtualizationMode.Fixed)
+    .Virtualization(true)
+    .VirtualizationMode(VirtualizationMode.Fixed)
 }).DataBind().Height("400px").Render() %>
 ```
+
+The sample below demonstrates how the fixed virtualization works:
+
+<div class="embed-sample">
+   [Virtualization (Fixed)](%%SamplesEmbedUrl%%/grid/virtualization-fixed)
+</div>
 
 ## <a id="continuous"></a> Enabling and Configuring Continuous Virtualization
 
@@ -258,23 +269,32 @@ $("#grid1").igGrid({
 **In ASPX:**
 
 ```csharp
-<%=Html.Infragistics().Grid(Model).ID("grid1").LoadOnDemand(false).AutoGenerateColumns(false).AutoGenerateLayouts(false).PrimaryKey("ProjectID").Columns(column => 
+<%=Html.Infragistics().Grid(Model).ID("grid1")
+    .LoadOnDemand(false)
+    .AutoGenerateColumns(false)
+    .AutoGenerateLayouts(false)
+    .PrimaryKey("ProductID")
+    .Columns(column => 
     {
-        column.For(x => x.ProjectID)
-			.HeaderText(this.GetGlobalResourceObject("Grid", "ProjectID").ToString());
+        column.For(x => x.ProductID)
+			.HeaderText(this.GetGlobalResourceObject("Grid", "ProductID").ToString());
         column.For(x => x.Name)
 			.HeaderText(this.GetGlobalResourceObject("Grid", "Name").ToString());
-        column.For(x => x.StartDate)
-			.HeaderText(this.GetGlobalResourceObject("Grid", "StartDate").ToString());
-        column.For(x => x.EndDate)\
-			.HeaderText(this.GetGlobalResourceObject("Grid", "EndDate").ToString());
+        column.For(x => x.ProductNumber)
+			.HeaderText(this.GetGlobalResourceObject("Grid", "ProductNumber").ToString());
+        column.For(x => x.MakeFlag)
+			.HeaderText(this.GetGlobalResourceObject("Grid", "MakeFlag").ToString());
     })
-	.Virtualization(true)
-	.VirtualizationMode(VirtualizationMode.Continuous)
+    .Virtualization(true)
+    .VirtualizationMode(VirtualizationMode.Continuous)
 }).DataBind().Height("400px").Render() %>
 ```
 
+The sample below demonstrates how the continuous virtualization works:
 
+<div class="embed-sample">
+   [Virtualization (Continuous)](%%SamplesEmbedUrl%%/grid/virtualization-continuous)
+</div>
 
 ## <a id="related-content"></a> Related Content
 
@@ -283,16 +303,6 @@ $("#grid1").igGrid({
 The following topics provide additional information related to this topic.
 
 - [Virtualization Overview](igGrid-Virtualization-Overview.html): This topic introduces the Virtualization feature of the `igGrid` control.
-
-
-### <a id="samples"></a> Samples
-
-The following samples provide additional information related to this topic.
-
-- [Virtualization (Fixed)](%%SamplesUrl%%/grid/virtualization-fixed): This sample demonstrates the HTML virtualization capabilities of the `igGrid` using fixed number of rows.
-
-- [Continuous Virtualization](%%SamplesUrl%%/grid/virtualization-continuous): This sample demonstrates the continuous virtualization capabilities of the `igGrid` control.
-
 
 
 
