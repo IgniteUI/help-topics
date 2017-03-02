@@ -44,6 +44,9 @@ This topic contains the following sections:
 -   [Pivot View Sample](#pivot_view_sample)
     -   [Preview](#pivot_view_preview)
     -   [Details](#pivot_view_details)
+  -   [Map Sample](#map_sample)
+    -   [Preview](#map_sample_preview)
+    -   [Details](#map_sample_details)
 -   [Related Content](#related_content)
 
 ### <a id="requirements"></a>Requirements
@@ -1097,6 +1100,99 @@ $(function () {
 
 ```
 
+### <a id="map_sample"></a>Map Sample
+This sample demonstrates how to use TypeScript to bind database and shape files with countries of the world to the Map control using a geographic shapes series.
+
+#### <a id="map_sample_preview"></a>Preview
+The following screenshot is a preview of the final result.
+
+![](images/igMap_TypeScript.png)
+
+#### <a id="map_sample_details"></a></a>Details
+
+Create the HTML - we are going to create a map that is showing a tooltip when a country is hovered.
+
+**In HTML:**
+```html
+<script id="geoShapeTooltip" type="text/x-jquery-tmpl">
+	<table id="tooltipTable">
+		<tr>
+			<th colspan="2">
+				${item.fieldValues.NAME}, ${item.fieldValues.REGION}
+			</th>
+		</tr>
+		<tr>
+			<td>Population:</td>
+			<td>${item.fieldValues.POP2005}</td>
+		</tr>
+	</table>
+</script>
+
+<div id="map"></div>
+```
+Initialize the `igMap` and define the geographic shapes series.
+
+**In TypeScript:**
+```typescript
+/// <reference path="http://www.igniteui.com/js/typings/jquery.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/jqueryui.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/igniteui.d.ts" />
+
+class ColorPicker {
+    brushes: string[];
+    interval: number;
+    constructor(_min: number, _max: number) {
+        this.brushes = ["#d9c616", "#d96f17", "#d1150c"];
+        this.interval = (_max - _min) / (this.brushes.length - 1);
+    }
+
+    getColorByIndex(val) {
+        var index = Math.round(val / this.interval);
+        if (index < 0) {
+            index = 0;
+        } else if (index > (this.brushes.length - 1)) {
+            index = this.brushes.length - 1;
+        }
+        return this.brushes[index];
+    }
+}
+
+var colorPicker = new ColorPicker(100000, 500000000);
+
+$(function () {
+    $("#map").igMap({
+        width: "700px",
+        height: "500px",
+        windowRect: { left: 0.1, top: 0.1, height: 0.7, width: 0.7 },
+        overviewPlusDetailPaneVisibility: "visible",
+        overviewPlusDetailPaneBackgroundImageUri: "http://www.igniteui.com/images/samples/maps/world.png",
+        series: [{
+            type: "geographicShape",
+            name: "worldCountries",
+            markerType: "none",
+            shapeMemberPath: "points",
+            shapeDataSource: 'http://www.igniteui.com/data-files/shapes/world_countries_reg.shp',
+            databaseSource: 'http://www.igniteui.com/data-files/shapes/world_countries_reg.dbf',
+            opacity: 0.8,
+            outlineThickness: 1,
+            showTooltip: true,
+            tooltipTemplate: "geoShapeTooltip",
+            shapeStyleSelector: {
+                selectStyle: function (s, o) {
+                    var pop = s.fields.item("POP2005");
+                    var popInt = parseInt(pop);
+                    var colString = colorPicker.getColorByIndex(popInt); //getColorValue(popInt);
+                    return {
+                        fill: colString,
+                        stroke: "gray"
+                    };
+                }
+            }
+        }]
+    });
+    $("#map").find(".ui-widget-content").append("<span class='copyright-notice'><a href='http://www.openstreetmap.org/copyright'>© OpenStreetMap contributors</a></span>");
+});
+```
 
 ### <a id="related_content"></a>Related Content
 The following topic provides additional information related to this one:
