@@ -44,7 +44,7 @@ This topic contains the following sections:
 -   [Pivot View Sample](#pivot_view_sample)
     -   [Preview](#pivot_view_preview)
     -   [Details](#pivot_view_details)
-  -   [Map Sample](#map_sample)
+-   [Map Sample](#map_sample)
     -   [Preview](#map_sample_preview)
     -   [Details](#map_sample_details)
 -   [Related Content](#related_content)
@@ -103,7 +103,7 @@ Create the HTML - we are going to have different editors - Text Editor, Date Edi
 			Percent editor
 		</h4>
 		<div id="percentEditor"></div>
-	</div> 
+	</div>
 </div>
 ```
 We initialize the editors in TypeScript.
