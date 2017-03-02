@@ -29,6 +29,9 @@ This topic contains the following sections:
 -   [Templating Engine Sample](#templating_engine_sample)
     -   [Preview](#templating_engine_preview)
     -   [Details](#templating_engine_steps)
+-   [Data Chart Sample](#data_chart_sample)
+    -   [Preview](#data_chart_preview)
+    -   [Details](#data_chart_details)
 -   [Pie Chart Sample](#pie_chart_sample)
     -   [Preview](#pie_chart_preview)
     -   [Details](#pie_chart_details)
@@ -482,8 +485,123 @@ $(function () {
 });
 ```
 
+### <a id="data_chart_sample"></a>Data Chart Sample
+This sample demonstrates how to create Data Chart in TypeScript using class-based approach for configuring data.
+#### <a id="data_chart_preview"></a>Preview
+The following screenshot is a preview of the final result.
+
+![](images/igDataChart_TypeScript.png)
+
+#### <a id="data_chart_details"></a></a>Details
+
+Create the HTML
+**In HTML:**
+```html
+<div id="data-chart"></div>
+
+<div class="USCensus-attribution">
+	Population data from:<br>
+	<a href="http://www.census.gov/" target="_blank">U.S. Census Bureau</a>
+</div>
+```
+
+Create the Data Source abd the `igPieChart` in TypeScript
+**In TypeScript:**
+```typescript
+/// <reference path="http://www.igniteui.com/js/typings/jquery.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/jqueryui.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/igniteui.d.ts" />
+
+class CountryPopulation {
+    countryName: string;
+    population2005: number;
+    population1995: number;
+    constructor(inName: string, populationIn1995: number, populationIn2005: number) {
+        this.countryName = inName;
+        this.population2005 = populationIn2005;
+        this.population1995 = populationIn1995;
+    }
+
+}
+
+var samplePopulation: CountryPopulation[] = [];
+samplePopulation.push(new CountryPopulation("China", 1216,  1297));
+samplePopulation.push(new CountryPopulation("India", 920, 1090));
+samplePopulation.push(new CountryPopulation("United States", 266, 295));
+samplePopulation.push(new CountryPopulation("Indonesia", 197, 229));
+samplePopulation.push(new CountryPopulation("Brazil", 161, 186));
+
+$(function () {
+    $("#data-chart").igDataChart({
+        width: "80%",
+        height: "400px",
+        title: "Population per Country",
+        subtitle: "Five largest projected populations for 1995 and 2005",
+        dataSource: samplePopulation,
+        axes: [
+            {
+                name: "NameAxis",
+                type: "categoryX",
+                title: "Country",
+                label: "countryName"
+            },
+            {
+                name: "PopulationAxis",
+                type: "numericY",
+                minimumValue: 0,
+                title: "Millions of People",
+            }
+        ],
+        series: [
+            {
+                name: "1995Population",
+                title: "1995",
+                type: "column",
+                isDropShadowEnabled: true,
+                useSingleShadow: false,
+                shadowColor: "#666666",
+                isHighlightingEnabled: true,
+                isTransitionInEnabled: true,
+                xAxis: "NameAxis",
+                yAxis: "PopulationAxis",
+                valueMemberPath: "population1995",
+                showTooltip: true
+            },
+            {
+                name: "2005Population",
+                title: "2005",
+                type: "column",
+                isDropShadowEnabled: true,
+                useSingleShadow: false,
+                shadowColor: "#666666",
+                isHighlightingEnabled: true,
+                isTransitionInEnabled: true,
+                xAxis: "NameAxis",
+                yAxis: "PopulationAxis",
+                valueMemberPath: "population2005",
+                showTooltip: true
+            },
+            {
+                name: "categorySeries",
+                type: "categoryToolTipLayer",
+                useInterpolation: false,
+                transitionDuration: 150
+            },
+            {
+                name: "crosshairLayer",
+                title: "crosshair",
+                type: "crosshairLayer",
+                useInterpolation: false,
+                transitionDuration: 500
+            }
+        ]
+    });
+})
+```
+
 ### <a id="pie_chart_sample"></a>Pie Chart Sample
 This sample will demonstrate the use of TypeScript for creating Pie Chart control with a legend and different options for the layout.
+
 #### <a id="pie_chart_preview"></a>Preview
 The following screenshot is a preview of the final result.
 
