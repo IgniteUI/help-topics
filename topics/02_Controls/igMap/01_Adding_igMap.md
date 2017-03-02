@@ -424,6 +424,6 @@ The following topics provide additional information related to this topic.
 
 The following samples provide additional information related to this topic.
 
--	[Map Tooltips](%%SamplesUrl%%/map/map-tooltips):This sample demonstrates how to set map tooltips in a map control and bind a View Model to the control.
+-	[Map Tooltips](igmap-configuring-visual-features.html#map-tooltips-sample):This sample demonstrates how to set map tooltips in a map control and bind a View Model to the control.
 
 -	[Geographic Symbol Series](%%SamplesUrl%%/map/geo-symbol-series):This sample demonstrates how to create maps and visualize Geographic Symbol series.
