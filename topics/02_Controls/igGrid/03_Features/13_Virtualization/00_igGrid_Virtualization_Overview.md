@@ -29,6 +29,7 @@ This topic contains the following sections:
 
 Virtualization is a feature of the `igGrid` that boosts performance when displaying large data sets containing thousands of records. It improves both rendering time and scrolling as well as memory footprint. It works by reducing the number of the DOM objects in-memory and reusing them while user scrolls and operates with the data. 
 
+Virtualization is a local feature and requires all the data to be fetched on the client initially. This can affect network traffic so it's recommended that you consider enabling web server's Gzip compression for the web page that contains `igGrid` with Virtualization enabled. Virtualization is optimal for scenarios handling 1000 - 10000 records. If you prefer not to load the entire data set to the client at once use remote Paging instead.
 
 Scrolling performance is affected by the grid `height` (and the number of the columns). Larger grid `height` means more visible records and more time to re-render them with new data. Re-rendering of the cells is blocking the browser UI and may result in scrolling performance degradation. It's recommended that you experiment with the grid `height` setting and try to find the balance that best suits your application.
 
