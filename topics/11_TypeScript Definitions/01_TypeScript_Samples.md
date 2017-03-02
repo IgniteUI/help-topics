@@ -47,6 +47,9 @@ This topic contains the following sections:
 -   [Map Sample](#map_sample)
     -   [Preview](#map_sample_preview)
     -   [Details](#map_sample_details)
+-   [Loader Sample](#loader_sample)
+    -   [Preview](#loader_sample_preview)
+    -   [Details](#loader_sample_details)
 -   [Related Content](#related_content)
 
 ### <a id="requirements"></a>Requirements
@@ -1191,6 +1194,143 @@ $(function () {
         }]
     });
     $("#map").find(".ui-widget-content").append("<span class='copyright-notice'><a href='http://www.openstreetmap.org/copyright'>© OpenStreetMap contributors</a></span>");
+});
+```
+
+### <a id="loader_sample"></a>Loader Sample
+This sample demonstrates how to use TypeScript to load multiple components and features with the Infragistics Loader. Using a Combo Box can be chosen what is the type for the Data Chart that will be displayed. A legend for the Data Chart is included as well.
+
+#### <a id="loader_sample_preview"></a>Preview
+The following screenshot is a preview of the final result.
+
+![](images/igLoader_TypeScript.png)
+
+#### <a id="loader_sample_details"></a></a>Details
+
+Create the HTML.
+
+**In HTML:**
+```html
+<div class="selectionOptions">
+	<select id="seriesType">
+		<option value="radialLine" selected="selected">Radial Line</option>
+		<option value="radialColumn">Radial Column</option>
+		<option value="radialPie">Radial Pie</option>
+	</select>
+</div>
+
+<div id="chart"></div>
+<div id="legend"></div>
+```
+
+In TypeScript we create the Data, the `igLoader`, 'igDataChart' and 'igCombo'.
+**In TypeScript:**
+```typescript
+/// <reference path="http://www.igniteui.com/js/typings/jquery.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/jqueryui.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/igniteui.d.ts" />
+
+class DepartmentData {
+    label: string;
+    budget: number;
+    spending: number;
+    constructor(_label: string, _budget: number, _spending: number) {
+        this.label = _label;
+        this.budget = _budget;
+        this.spending = _spending;
+    }
+}
+
+var companyData: DepartmentData[] = [];
+companyData.push(new DepartmentData("Administration", 75, 35));
+companyData.push(new DepartmentData("Sales", 30, 80));
+companyData.push(new DepartmentData("IT", 60, 20));
+companyData.push(new DepartmentData("Marketing", 50, 70));
+companyData.push(new DepartmentData("Development", 80, 40));
+companyData.push(new DepartmentData("Support", 20, 45));
+
+$.ig.loader({
+    scriptPath: "http://www.igniteui.com/igniteui/js/",
+    cssPath: "http://www.igniteui.com/igniteui/css/",
+    resources: "igDataChart.Radial,igCombo, igChartLegend"
+});
+
+// jQuery's ready event can be used with the loader.
+// The loader calls holdReady until all JS and CSS files are loaded.
+$(function () {
+
+    $("#chart").igDataChart({
+        width: "500px",
+        height: "500px",
+        dataSource: companyData,
+        legend: { element: "legend" },
+        axes: [{
+            name: "angleAxis",
+            type: "categoryAngle",
+            label: "label",
+            interval: 1
+        }, {
+                name: "radiusAxis",
+                type: "numericRadius",
+                innerRadiusExtentScale: .1,
+                maximumValue: 100,
+                minimumValue: 0,
+                interval: 25,
+                radiusExtentScale: .6
+            }],
+        series: [{
+            name: "series1",
+            title: 'Budget',
+            type: "radialLine",
+            angleAxis: "angleAxis",
+            valueAxis: "radiusAxis",
+            valueMemberPath: "budget",
+            thickness: 5,
+            markerType: "circle"
+        }, {
+                name: "series2",
+                title: 'Spending',
+                type: "radialLine",
+                angleAxis: "angleAxis",
+                valueAxis: "radiusAxis",
+            valueMemberPath: "spending",
+                thickness: 5,
+                markerType: "circle"
+            }],
+        horizontalZoomable: true,
+        verticalZoomable: true,
+        windowResponse: "immediate"
+    });
+
+    $("#seriesType").igCombo({
+        selectionChanged: function (evt, ui) {
+            if (ui.items[0].data.value != undefined) {
+                $("#chart").igDataChart("option", "series", [{
+                    name: "series1", remove: true
+                }, {
+					name: "series2", remove: true
+				}, {
+					name: "series1",
+					title: "Budget",
+					type: ui.items[0].data.value,
+					angleAxis: "angleAxis",
+					valueAxis: "radiusAxis",
+					valueMemberPath: "budget",
+					thickness: 5,
+					markerType: "circle"
+				}, {
+					name: "series2",
+					title: 'Spending',
+					type: ui.items[0].data.value,
+					angleAxis: "angleAxis",
+					valueAxis: "radiusAxis",
+					valueMemberPath: "spending",
+					thickness: 5,
+					markerType: "circle"
+				}]);
+            }
+        }
+    });
 });
 ```
 
