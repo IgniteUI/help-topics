@@ -217,6 +217,12 @@ $("#map").igMap({
 });
 ```
 
+###<a id="map-tooltips-sample">Sample
+This sample demonstrates how to set map tooltips in the igMap control and bind a view model to the control. The locations of a set of cities around the world are provided by the server in a list of objects which is bound to a geographic symbol series in the map control. The tooltip template that displays city and country name, and geographic coordinates is assigned to the series and displayed when the mouse pointer hovers over the city marker on the map. Zoom in to reveal more detail using both the mouse scroll wheel and, on touch devices, the pinch gesture.
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/map/map-tooltips](%%SamplesEmbedUrl%%/map/map-tooltips)
+</div>
 
 
 ##<a id="config-marker-template-js"></a>Code Example: Configuring the Marker Template in JavaScript
@@ -420,8 +426,6 @@ The following topics provide additional information related to this topic.
 ### <a id="samples"></a>Samples
 
 The following samples provide additional information related to this topic.
-
--	[Map Tooltips](%%SamplesUrl%%/map/map-tooltips): This sample demonstrates how to set map tooltips in a map control and bind a view model to the control.
 
 -	[Marker Template](%%SamplesUrl%%/map/marker-template):This sample demonstrates how to create a custom marker template in a map control.
 
