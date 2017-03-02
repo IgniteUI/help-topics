@@ -81,7 +81,7 @@ The following section describes in detail each of the `igGrid` widget options an
 
 ### <a id="options-virtualization"></a> virtualization (default: false)
 
-Virtualization is a unique feature of the `igGrid` control that is simply stated as a technique that only renders visible parts of the grid to the user. Existing DOM elements are reused as the user scrolls the grid. When the grid is scrolling to view more data, new data is added to the grid in real time. “Real time” refers to the fact that no server-side requests are involved as all the data is waiting on the client not just the data shown upon initial rendering.
+Virtualization is a unique feature of the `igGrid` control that is simply stated as a technique that only renders visible parts of the grid to the user. Existing DOM elements are reused as the user scrolls the grid. When the grid is scrolling to view more data, new data is added to the grid in real time. "Real time" refers to the fact that no server-side requests are involved as all the data is waiting on the client not just the data shown upon initial rendering.
 
 Using this approach, the rendering overhead, both time and memory usage, remains constant regardless of the number of records that are data-bound. The user experience still remains the same as if users are viewing all data at once. By enabling [`virtualization`](%%jQueryApiUrl%%/ui.iggrid#options:virtualization), a significant performance boost is available in terms of speed, CPU utilization, and memory.
 
@@ -95,6 +95,8 @@ Usually the `avgRowHeight` defines the number of visible records on the grid. Fo
 Usually the grid is smart enough to render and fit the virtual UI without an explicit need for an `avgRowHeight`, but the details are important to consider.
 
 Therefore consider that the bigger your grid height and the larger amount of visible records you have loaded at a time, the greater the likelihood that real-time scrolling performance will suffer. On the contrary, the smaller the height of the grid combined with a smaller number of visible records at a time results in faster scrolling.
+
+Virtualization is optimal for scenarios handling 1000 - 10000 records (per page if Paging feature is enabled).
 
 > **Note:** Scrolling performance is also affected by the browser in which the grid is loaded. Chrome, WebKit, Opera, FireFox and IE9 all tend to demonstrate better results with the grid than IE7 and IE8.
 
@@ -148,7 +150,7 @@ When a column is sorted, by default all cells in that column get a specific CSS 
 -   If you do not need custom templates, then do not set columns.template options, because they are implicilty using the Infragistics Templating Engine.
 -   If you must configure the grid with more than 20 columns, consider enabling Column Virtualization. By default, when `virtualization` is set to true it applies to both rows and columns.
 -   If you have grid Filtering enabled in simple mode, and your grid renders more than 20 columns, consider using the Advanced Filtering mode. Advanced Filtering only renders filtering editors on demand.
--   If your data source contains thousands or millions of records and you would like to render all currently bound local data at once, the best way to achieve this is to enable Paging.
+-   If your data source contains thousands or millions of records and you would like to render all currently bound local data at once, the best way to achieve this is to enable remote Paging.
 -   Even if you enable Virtualization, be careful about the amount of data you transfer to the client. Large data sets sent to the client may turn out to be the bottleneck of your page. For example, the rough JSON size for 10,000 records for 5 columns is over 2 MB of uncompressed data for a single request. To accommodate this type of configuration you can enable Paging with a large page size (ex: 1,000 records per page) and enable Virtualization. This approach ensures that large amounts of JSON data are not transferred to the client at once. Additionally you benefit from having Virtualization enabled on a per-page level basis.
 -   As often as possible enable gzip compression in your web server. This is a general guideline that will affect both download times, and bandwidth consumption.
 -   If your application does not impose specific height constraints on the grid, to set the `autoAdjustHeight` option to false as often as possible. Disabling this option guarantees that no additional reflows are required by the browser to calculate and size the inner containers of the grid.
