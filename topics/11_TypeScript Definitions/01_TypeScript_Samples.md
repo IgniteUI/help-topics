@@ -70,7 +70,7 @@ This sample will demonstrate how we can use `igGrid` with TypeScript.
 #### <a id="grid_sample_preview"></a>Preview
 The following screenshot is a preview of the final result.
 
-![](images/igGrid_TypeScript.png)
+![](images/igGrid_TypeScript.PNG)
 
 #### <a id="grid_sample_details"></a>Details
 This sample will demonstrate how to use TypeScript for creating igGrid and features like Paging, Filtering and Sorting.
