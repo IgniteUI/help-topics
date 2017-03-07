@@ -643,7 +643,7 @@ When binding grids to a `DataTable` or a `DataSet`, local configuration for the 
 > 
 > Remote sorting and/or filtering can be implemented by processing the request and performing the filtering and/or sorting on the server before returning the data.
 
-For more details how to implement remote *sorting* by processing the request and sorting the data on `DataTable` level before returning it, you can take a look at the [`DataTable Binding`](%%SamplesUrl%%/grid/datatable-binding) sample.
+For more details how to implement remote *sorting* by processing the request and sorting the data on `DataTable` level before returning it, you can take a look at the [`DataTable Binding`](iggrid-binding-to-datatable.html#dataTable_example) sample.
 
 
 
