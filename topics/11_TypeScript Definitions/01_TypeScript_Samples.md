@@ -17,6 +17,9 @@ This topic covers samples with Ignite UI controls and TypeScript.
 
 This topic contains the following sections:
 -   [Requirements](#requirements)
+-   [Grid Sample](#grid_sample)
+    -   [Preview](#grid_sample_preview)
+    -   [Details](#grid_sample_details)
 -   [Editors Sample](#editors_sample)
     -   [Preview](#editors_sample_preview)
     -   [Details](#editors_sample_details)
@@ -59,6 +62,64 @@ This topic contains the following sections:
 In order to run these samples, you need to have:
 -   The required Ignite UI JavaScript and CSS files
 -   The required Ignite UI TypeScript definitions
+
+
+### <a id="grid_sample"></a>Grid Sample​
+This sample will demonstrate how we can use `igGrid` with TypeScript.
+
+#### <a id="grid_sample_preview"></a>Preview
+The following screenshot is a preview of the final result.
+
+![](images/igGrid_TypeScript.PNG)
+
+#### <a id="grid_sample_details"></a>Details
+This sample will demonstrate how to use TypeScript for creating igGrid and features like Paging, Filtering and Sorting.
+
+**In HTML:**
+```html
+	<table id="grid1"></table>
+```
+We use the adventureWorks data source to populate the igGrid.
+
+```js
+var adventureWorks = [
+    { "ProductID": 1, "Name": "Adjustable Race", "ProductNumber": "AR-5381", "MakeFlag": false, "FinishedGoodsFlag": false, "Color": null, "SafetyStockLevel": 1000, "ReorderPoint": 750, "StandardCost": 0.0000, "ListPrice": 0.0000, "Size": null, "SizeUnitMeasureCode": null, "WeightUnitMeasureCode": null, "Weight": null, "DaysToManufacture": 0, "ProductLine": null, "Class": null, "Style": null, "ProductSubcategoryID": null, "ProductModelID": null, "SellStartDate": "\/Date(896648400000)\/", "SellEndDate": null, "DiscontinuedDate": null, "rowguid": "694215b7-08f7-4c0d-acb1-d734ba44c0c8", "ModifiedDate": "\/Date(1078992096827)\/" }, 
+    { "ProductID": 2, "Name": "Bearing Ball", "ProductNumber": "BA-8327", "MakeFlag": false, "FinishedGoodsFlag": false, "Color": null, "SafetyStockLevel": 1000, "ReorderPoint": 750, "StandardCost": 0.0000, "ListPrice": 0.0000, "Size": null, "SizeUnitMeasureCode": null, "WeightUnitMeasureCode": null, "Weight": null, "DaysToManufacture": 0, "ProductLine": null, "Class": null, "Style": null, "ProductSubcategoryID": null, "ProductModelID": null, "SellStartDate": "\/Date(896648400000)\/", "SellEndDate": null, "DiscontinuedDate": null, "rowguid": "58ae3c20-4f3a-4749-a7d4-d568806cc537", "ModifiedDate": "\/Date(1078992096827)\/" } ...
+]
+```
+
+We initialize the grid in TypeScript.
+
+**In TypeScript:**
+```typescript
+/// <reference path="http://www.igniteui.com/js/typings/jqueryui.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/jquery.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/igniteui.d.ts" />
+declare var adventureWorks: any;
+$(function () {
+    $("#grid1").igGrid({
+        width: "100%",
+        columns: [
+            { headerText: "Product ID", key: "ProductID", dataType: "number", width: "15%" },
+            { headerText: "Product Name", key: "Name", dataType: "string", width: "40%" },
+            { headerText: "Product Number", key: "ProductNumber", dataType: "string", width: "30%" },
+            { headerText: "Make Flag", key: "MakeFlag", dataType: "bool", width: "15%" }
+        ],
+        dataSource: adventureWorks,
+        features: [
+            {
+                name: "Paging"
+            },
+            {
+                name: "Sorting"
+            },
+            {
+                name: "Filtering"
+            }
+        ],
+	});
+});
+```
 
 ### <a id="editors_sample"></a>Editors Sample​
 This sample will demonstrate how we can use `igEditors` with TypeScript.
