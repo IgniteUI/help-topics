@@ -9,7 +9,7 @@
 -->
 
 # Grid Excel Exporter Overview
-The `igGridExcelExporter` component allows you to export data from the igGrid into a Microsoft Excel document. The export can support themes and workbook customization while reflecting data manipulated in the grid through features sorting, filtering, paging, etc. The following screenshot demonstrates what an exported igGrid looks like in Excel.
+The `igGridExcelExporter` component allows you to export data from the `igGrid` into a Microsoft Excel document. The export can support themes and workbook customization while reflecting data manipulated in the grid through features Sorting, Filtering, Paging, etc. The following screenshot demonstrates what an exported `igGrid` looks like in Excel.
 
 ![igGridExcelExporter](images/igGridExcelExporter.jpg "igGridExcelExporter") 
 
@@ -21,7 +21,7 @@ The `igGridExcelExporter` includes the following characteristics:
  - Supports reflecting the data and layout manipulations caused by the `igGrid`’s `Filtering`, `Hiding`, `Paging`, `Sorting`, `Summaries` and `Column Fixing` features
  - Supports `igGrid`’s Header and Alternate Row Styles
  - Supports defining `igGrid` columns to be skipped and columns that will not get applied any filtering
- - Supports exporting all sublevel data from igHierarchicalGrid or just data under expanded rows
+ - Supports exporting all sublevel data from `igHierarchicalGrid` or just data under expanded rows
  - Provides callbacks (events) throughout the export process.
 
 ## Required Background
@@ -30,7 +30,7 @@ The `igGridExcelExporter` includes the following characteristics:
 
 ## Dependencies
 
-The `igGridExcelExporter` is dependent upon the Infragistics Javascript Excel library, so we need to add references to the library js files and the `igGridExcelExporter` js file:
+The `igGridExcelExporter` is dependent upon the Infragistics JavaScript Excel library, so we need to add references to the library js files and the `igGridExcelExporter` js file:
 
 ```html
 <script src="igniteui/js/modules/infragistics.documents.core.js" type="text/javascript"></script>
@@ -48,7 +48,7 @@ $.ig.loader({
 });
 ```
 
-The igGridExcelExporter is also dependent upon the following open source libraries:
+The `igGridExcelExporter` is also dependent upon the following open source libraries:
 
 - [FileSaver.js](https://github.com/eligrey/FileSaver.js/): A polyfill of the W3C `saveAs` specification
 - [Blob.js](https://github.com/eligrey/Blob.js/): A polyfill of the W3C [`Blob`](https://developer.mozilla.org/en-US/docs/Web/API/Blob) interface.
