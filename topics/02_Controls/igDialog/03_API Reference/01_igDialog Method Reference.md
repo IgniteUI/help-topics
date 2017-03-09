@@ -63,7 +63,7 @@ The following topics provide additional information related to this topic:
 
 The following samples provide additional information related to this topic:
 
-- [API and Events](%%SamplesUrl%%/dialog-window/api-and-events): This sample demonstrates how to handle events in the Dialog Window control and API usage.
+- [API and Events](igdialog-event-reference.html#attaching-handlers-jquery): This sample demonstrates how to handle events in the Dialog Window control and API usage.
 - [Modal Dialog](%%SamplesUrl%%/dialog-window/modal-dialog): This sample shows you how to create a modal dialog.
 
 

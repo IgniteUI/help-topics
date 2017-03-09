@@ -26,7 +26,6 @@ This topic contains the following sections:
     -   [Attaching Event Handlers in MVC](#attaching-handlers-mvc)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
 
 
 
@@ -60,6 +59,12 @@ $("#igDialog1").igDialog({
 });
 ```
 
+The following example shows how this is done and it also demonstrates the use of the jQuery's [`on`](http://api.jquery.com/on/) method to attach an event handler to a selected element:
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/dialog-window/api-and-events](%%SamplesEmbedUrl%%/dialog-window/api-and-events)
+</div>
+
 ### <a id="attaching-handlers-mvc"></a> Attaching Event Handlers in MVC
 
 When you attach a handler in MVC, use the jQuery User Interface (UI) pattern for attaching handlers to widget events. This means you should use jQuery’s [`on`](http://api.jquery.com/on/), [`bind`](http://api.jquery.com/bind/) or [`live`](http://api.jquery.com/live/) functions and pass the event’s name to them. The event name should be a lowercase string that is a concatenation of the name of the control and the event. You can do the same with the jQuery widget as well, but this would not be necessary because you can attach the event handlers directly when initializing the control. For more information, see the [jQuery widget factory](http://wiki.jqueryui.com/w/page/12138135/Widget%20factory). The code bellow demonstrates how to attach handlers to igDialog events when implementing a MVC solution.
@@ -83,21 +88,4 @@ The following topics provide additional information related to this topic:
 - [Property Reference (*igDialog*)](igDialog-Property-Reference.html): The topic that introduces the user to the `igDialog` control’s properties.
 - [Method Reference (*igDialog*)](igDialog-Method-Reference.html): The topic that introduces the user to the `igDialog` control’s methods.
 - [CSS Classes Reference (*igDialog*)](igDialog-Css-Classes-Reference.html): The topic that introduces the user to the `igDialog` control’s CSS classes.
-
-
-
-#### <a id="samples"></a>Samples
-
-The following samples provide additional information related to this topic:
-
-- [API and Events](%%SamplesUrl%%/dialog-window/api-and-events): This sample demonstrates how to handle events in the Dialog Window control and API usage.
-
-
-
-
-
- 
-
- 
-
 

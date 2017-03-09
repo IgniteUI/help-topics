@@ -157,13 +157,20 @@ Column formatting (rendering) is affected by several `igGrid` options. These are
  var formattedValue = $.ig.formatter(1000000); //formats the number according to the current regional settings.
  ```
 
- [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) and [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) options do not operate at the same time. When defined, [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) function is considered with priority and [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) is not used. However value from the [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) function is further decorated with a [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template).
+ [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) and [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) options do not operate at the same time. When defined, [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) function is considered with priority and 
+ [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) is not used. However value from the [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) function is further decorated with a [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template).
 
  Here is the flow of column rendering when formatter is used:
+ 
  ```
  Raw Value -> formatter -> (template)* -> Cell Value
  * - optional setting
  ```
+ 
+This sample below shows how to format column values before displaying them in the grid. The "Make Flag" boolean column has a `formatter` function which transforms the true/false values into Yes/No values.
+<div class="embed-sample">
+   [Column Format Function](%%SamplesEmbedUrl%%/grid/column-format-function)
+</div>
 
 -  [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) - is a string identifying a format patterns. Internally [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) option uses the `$.ig.formatter(rawValue, dataType, formatPattern)` function. When set, [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) overrides the setting of the [`autoFormat`](%%jQueryApiUrl%%/ui.iggrid#options:autoFormat) option and also the default regional settings.
 
@@ -173,6 +180,12 @@ Column formatting (rendering) is affected by several `igGrid` options. These are
  Raw Value -> format -> (template)* -> Cell Value 
  * - optional setting
  ```
+
+The sample below demonstrates the grid column formatting capabilities. The Sell Start Date and Modified Date columns use different date formatting. The List Price number column uses the currency format.
+
+<div class="embed-sample">
+   [igGrid Column Formats](%%SamplesEmbedUrl%%/grid/column-formats)
+</div>
 
 - [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template) - is a templated string (templating engine used is defined in the `templatingEngine` option). See [Templating Engine Overview](igTemplating-Overview.html) topic for details on template syntax. 
  
@@ -191,7 +204,7 @@ Column formatting (rendering) is affected by several `igGrid` options. These are
  Raw Value -> (autoFormat|format|formatter)* -> columnCssClass -> template* -> Cell Value 
  * - optional setting
  ```
-
+ 
 Example:
 ```js
 $("#grid1").igGrid({
@@ -226,37 +239,11 @@ $("#grid1").igGrid({
 
 By default the cell text in igGrid is left aligned. To customize the cell text alignment use [`columnCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.columnCssClass) option. Just create custom CSS classes to align the text to the desired direction and then apply them to the column using the `columnCssClass`.
 
-**In Html**
-```html
-<style>
-    .align-right {
-        text-align: right;
-    }
-    .align-center {
-        text-align: center;
-    }
-</style>
-```
+The sample below demonstrates how to customize the grid cell text alignment. The grid's "Product ID" and "Reorder Point" numeric columns text is aligned to the right. This is done by applying a custom CSS class to the column cells. The CSS class is configured in the grid column's `columnCssClass` property.
 
-**In Javascript:**
-
-```js
-$("#grid1").igGrid({
-    autoGenerateColumns: false,
-    columns: [ {
-            headerText: "Product Number", 
-            key: "ProductNumber",
-            dataType: "number",
-            columnCssClass: "align-right"
-        }, {
-            headerText: "Modified Date",  
-            key: "ModifiedDate",  
-            dataType: "date",
-            columnCssClass: "align-center"
-        }
-    ]
-});
-``` 
+<div class="embed-sample">
+   [igGrid Configure Text Alignment](%%SamplesEmbedUrl%%/grid/configure-text-alignment)
+</div>
 
 ## <a id="defining-mapper"></a> Defining Mapper function for column
 
@@ -310,6 +297,12 @@ Listing 2: Defining mapper function for a column in igGrid
 });
 
 ```
+
+The below sample demonstrates how to handle complex data objects via the column's mapper function. In it Sorting and Filtering will be executed based on the values returned by the mapper function and Updating via the combo editor provider will allow updating the whole complex object with the selected combo item's record data.
+
+<div class="embed-sample">
+   [Handling Complex Objects](%%SamplesEmbedUrl%%/grid/handling-complex-objects)
+</div>
 
 ## <a id="autoGenerateColumns"></a> AutoGenerateColumns
 

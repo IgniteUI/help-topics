@@ -89,7 +89,7 @@ The following samples provide additional information related to this topic.
 
 - [Drag and Drop - Multiple Trees](%%SamplesUrl%%/tree/drag-and-drop-multiple-trees): This sample demonstrates how to drag-and-drop nodes between two `igTrees`.
 
-- [API and Events](%%SamplesUrl%%/tree/api-and-events): This sample demonstrates how to use `igTree` API.
+- [API and Events](igtree-event-reference.html#attaching-handlers-jquery): This sample demonstrates how to use `igTree` API.
 
 
 

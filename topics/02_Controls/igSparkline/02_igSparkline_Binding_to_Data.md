@@ -115,7 +115,6 @@ Date
     </tbody>
 </table>
 
-
 #### Data sources summary
 
 The `igSparkline` control’s data binding is identical to that of the other controls in the Ignite UI™ library. The way to bind data is either by assigning a data source to the `dataSource` option or by providing a URL in the `dataSourceUrl` in the event that data is provided by a web or WCF service.
@@ -124,8 +123,12 @@ Data structure|Related Topic/Sample
 ---|---
 Data binding to a JavaScript Array|**Related Topic**<br>[Adding igSparkline to an HTML Document](igSparkline-Adding-igSparkline-to-an-HTML-Document.html)
 Data binding to an IEnumerable<T>|**Related Topic**<br>[Adding igSparkline to an ASP.NET MVC View](igSparkline-Adding-igSparkline-to-an-ASPNET-MVC-View.html)
-Data binding to a remote URL|**Related Sample**<br>[Bind to Remote Data](%%SamplesUrl%%/sparkline/bind-to-remote-data)
+Data binding to remote Data|**Refer to the sample below** <br>
 
+#### Bind to Remote Data
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/sparkline/bind-to-remote-data](%%SamplesEmbedUrl%%/sparkline/bind-to-remote-data)
+</div>
 
 ## Related Content
 ### Topics
@@ -140,7 +143,6 @@ The following topic provides additional information related to this topic.
 The following samples provide additional information related to this topic.
 
 - [Bind to JSON Data](%%SamplesUrl%%/sparkline/bind-json): This sample shows a basic implementation of the `igSparkline` bound to a JavaScript array.
-
 
 
 

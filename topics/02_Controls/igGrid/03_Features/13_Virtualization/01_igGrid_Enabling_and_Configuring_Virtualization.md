@@ -32,7 +32,6 @@ This topic contains the following sections:
     -   [Example](#continuous-example)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
 
 
 ## <a id="configuring"></a> Configuring Virtualization Overview 
@@ -101,7 +100,12 @@ $("#grid1").igGrid({
 **In ASPX:**
 
 ```csharp
-<%=Html.Infragistics().Grid(Model).ID("grid1").LoadOnDemand(false).AutoGenerateColumns(false).AutoGenerateLayouts(false).PrimaryKey("ProjectID").Columns(column => 
+<%=Html.Infragistics().Grid(Model).ID("grid1")
+    .LoadOnDemand(false)
+    .AutoGenerateColumns(false)
+    .AutoGenerateLayouts(false)
+    .PrimaryKey("ProjectID")
+    .Columns(column => 
     {
         column.For(x => x.ProjectID).HeaderText("ProjectID");
         column.For(x => x.Name).HeaderText("Name");
@@ -114,6 +118,13 @@ $("#grid1").igGrid({
     .AvgRowHeight("30px")
 }).DataBind().Render() %>
 ```
+
+The sample below demonstrates how the fixed virtualization works:
+
+<div class="embed-sample">
+    [Virtualization (Fixed)](%%SamplesEmbedUrl%%/grid/virtualization-fixed)
+ </div>
+
 ## <a id="fixed-column"></a> Enabling and Configuring Column Virtualization
 
 Column Virtualization is enabled by setting the [`columnVirtualization`](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) option of the `igGrid` control to `true`. When enabled it also **enables Fixed Row Virtualization**.
@@ -175,7 +186,12 @@ $("#grid1").igGrid({
 **In ASPX:**
 
 ```csharp
-<%=Html.Infragistics().Grid(Model).ID("grid1").LoadOnDemand(false).AutoGenerateColumns(false).AutoGenerateLayouts(false).PrimaryKey("ProjectID").Columns(column => 
+<%=Html.Infragistics().Grid(Model).ID("grid1")
+    .LoadOnDemand(false)
+    .AutoGenerateColumns(false)
+    .AutoGenerateLayouts(false)
+    .PrimaryKey("ProjectID")
+    .Columns(column => 
     {
         column.For(x => x.ProjectID).HeaderText("ProjectID");
         column.For(x => x.Name).HeaderText("Name");
@@ -232,7 +248,12 @@ $("#grid1").igGrid({
 **In ASPX:**
 
 ```csharp
-<%=Html.Infragistics().Grid(Model).ID("grid1").LoadOnDemand(false).AutoGenerateColumns(false).AutoGenerateLayouts(false).PrimaryKey("ProjectID").Columns(column => 
+<%=Html.Infragistics().Grid(Model).ID("grid1")
+    .LoadOnDemand(false)
+    .AutoGenerateColumns(false)
+    .AutoGenerateLayouts(false)
+    .PrimaryKey("ProjectID")
+    .Columns(column => 
     {
         column.For(x => x.ProjectID).HeaderText("ProjectID");
         column.For(x => x.Name).HeaderText("Name");
@@ -246,7 +267,11 @@ $("#grid1").igGrid({
  %>
 ```
 
+The sample below demonstrates how the continuous virtualization works:
 
+<div class="embed-sample">
+   [Virtualization (Continuous)](%%SamplesEmbedUrl%%/grid/virtualization-continuous)
+</div>
 
 ## <a id="related-content"></a> Related Content
 
@@ -256,11 +281,3 @@ The following topics provide additional information related to this topic.
 
 - [Virtualization Overview](igGrid-Virtualization-Overview.html): This topic introduces the Virtualization feature of the `igGrid` control.
 - [Feature Compatibility Matrix (igGrid)](Feature-Compatibility-Matrix(igGrid).html): This topic shows the compatibility between `igGrid` features when enabled at the same time.
-
-### <a id="samples"></a> Samples
-
-The following samples provide additional information related to this topic.
-
-- [Virtualization (Fixed)](%%SamplesUrl%%/grid/virtualization-fixed): This sample demonstrates the HTML virtualization capabilities of the `igGrid` using fixed number of rows.
-
-- [Virtualization (Continuous)](%%SamplesUrl%%/grid/virtualization-continuous): This sample demonstrates the continuous virtualization capabilities of the `igGrid` control.

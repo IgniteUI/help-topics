@@ -59,23 +59,10 @@ To get started, include the required and localized resources for your applicatio
     <link href="css/structure/infragistics.css" rel="stylesheet" type="text/css" />
     ```
 
-2. Next, **create a JSON array** which serves as a data source for the grid.
-
-    **In Javascript:**
-
-    ```js
-    var products = [  
-		{ "ProductID": 1, "Name": "Adjustable Race", "ProductNumber": "AR-5381" },  
-		{ "ProductID": 2, "Name": "Bearing Ball", "ProductNumber": "BA-8327" },  
-		{ "ProductID": 3, "Name": "BB Ball Bearing", "ProductNumber": "BE-2349" },  
-		{ "ProductID": 4, "Name": "Headset Ball Bearings", "ProductNumber": "BE-2908" },  
-		{ "ProductID": 316, "Name": "Blade", "ProductNumber": "BL-2036" },  
-		{ "ProductID": 317, "Name": "LL Crankarm", "ProductNumber": "CA-5965" },  
-		{ "ProductID": 318, "Name": "ML Crankarm", "ProductNumber": "CA-6738" },  
-		{ "ProductID": 319, "Name": "HL Crankarm", "ProductNumber": "CA-7457" },  
-		{ "ProductID": 320, "Name": "Chainring Bolts", "ProductNumber": "CB-2903" },  
-		{ "ProductID": 321, "Name": "Chainring Nut", "ProductNumber": "CN-6137" }
-	];
+2. Next, reference **the JSON array** which serves as a data source for the grid is added.
+    ```html
+    <!--Sample JSON Data-->
+    <script src="http://www.igniteui.com/data-files/northwind.js"></script>
     ```
 
 3. **Define a table DOM element**, that *igGrid* will use to render the given data.
@@ -83,7 +70,7 @@ To get started, include the required and localized resources for your applicatio
     **In HTML:**
 
     ```html
-    <table id=”grid1”></table>
+    <table id="grid"></table>
     ```
 
 4. Once the above setup is complete, begin to **set options** including *ID*, *columns* and *dataSource*.
@@ -104,14 +91,54 @@ To get started, include the required and localized resources for your applicatio
 	
 	    ```js
 	    $(function () {
-            $("#grid1").igGrid({
-                columns: [
-                    { headerText: "Product ID", key: "ProductID", dataType: "number" },
-                    { headerText: "Product Name", key: "Name", dataType: "string" },
-                    { headerText: "Product Number", key: "ProductNumber", dataType: "string" },
+            $("#grid").igGrid({
+                autoGenerateColumns: false,
+                renderCheckboxes: true,
+                primaryKey: "EmployeeID",
+                columns: [{
+                    // note: if primaryKey is set and data in primary column contains numbers,
+                    // then the dataType: "number" is required, otherwise, dataSource may misbehave
+                    headerText: "Employee ID", key: "EmployeeID", dataType: "number"
+                },
+                {
+                    headerText: "First Name", key: "FirstName", dataType: "string"
+                },
+                {
+                    headerText: "Last Name", key: "LastName", dataType: "string"
+                },
+                {
+                    headerText: "Title", key: "Title", dataType: "string"
+                },
+                {
+                    headerText: "Birth Date", key: "BirthDate", dataType: "date"
+                },
+                {
+                    headerText: "Postal Code", key: "PostalCode", dataType: "string"
+                },
+                {
+                    headerText: "Country", key: "Country", dataType: "string"
+                }
                 ],
-                width: '500px',
-                dataSource: products
+                dataSource: northwind,
+                dataSourceType: "json",
+                responseDataKey: "results",
+                height: "100%",
+                width: "100%",
+                tabIndex: 1,
+                features: [
+                    {
+                        name: "Selection",
+                        mode: "row",
+                        multipleSelection: true
+                    },
+                    {
+                        name: "Paging",
+                        pageSize: 5
+                    },
+                    {
+                        name: "Filtering"
+                    }
+                ]
             });
         });
 	    ```
@@ -120,6 +147,10 @@ To get started, include the required and localized resources for your applicatio
 
      ![](images/igGrid_Overview_02.png)
 
+6. Working sample
+    <div class="embed-sample">
+        [igGrid Grid API and Events](%%SamplesEmbedUrl%%/grid/grid-api-events)
+    </div>
 ## Related Content
 
 ### Topics
@@ -128,9 +159,7 @@ To get started, include the required and localized resources for your applicatio
 -   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html) 
 -   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
 
-### Samples
 
--   [igGrid Overview Sample](%%SamplesUrl%%/grid/overview) 
 
  
 

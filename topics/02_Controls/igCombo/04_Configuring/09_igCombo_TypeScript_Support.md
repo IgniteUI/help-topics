@@ -35,6 +35,7 @@ The following screenshot is a preview of the final result.
 ### <a id="Requirements"></a>Requirements
 In order to run this sample, you need to have:
 -   The required Ignite UI JavaScript and CSS files
+-   The required Ignite UI TypeScript definitions
 
 ### <a id="Overview"></a>Overview
 This topic takes you step-by-step toward creating a TypeScript class, data source and `igCombo`.
@@ -68,6 +69,9 @@ This topic takes you step-by-step toward creating a TypeScript class, data sourc
 
 **In TypeScript:**
 ```typescript
+/// <reference path="http://www.igniteui.com/js/typings/jquery.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/jqueryui.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/igniteui.d.ts" />
 class MountainTop {
     id: number;
     mountainName: string;

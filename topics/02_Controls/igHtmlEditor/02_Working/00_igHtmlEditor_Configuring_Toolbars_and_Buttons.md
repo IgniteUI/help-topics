@@ -583,7 +583,7 @@ The following samples provide additional information related to this topic.
 
 -	[Custom Toolbars and Buttons](%%SamplesUrl%%/html-editor/custom-toolbars-and-buttons): This sample demonstrates how the HtmlEditor control works as an email client. This implementation features a custom toolbar where you can add a signature to the message.
 
--	[API and Events](%%SamplesUrl%%/html-editor/api-and-events): This sample demonstrates how to handle events in the Html Editor control and API usage.
+-	[API and Events](ightmleditor-modifying-contents-programmatically#api-and-events-demo): This sample demonstrates how to handle events in the Html Editor control and API usage.
 
 
 

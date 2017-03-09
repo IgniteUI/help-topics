@@ -243,7 +243,7 @@ The following samples provide additional information related to this topic.
 
 -	[Border Layout from HTML Markup](%%SamplesUrl%%/layout-manager/border-layout-markup): This sample demonstrates initializing the `igLayoutManager` control’s Border layout from the HTML markup by assigning *"center"*/*"left"*/*"right"*/*"header"*/*"footer"* CSS classes.
 
--	[Border Layout – Initializing with JavaScript](%%SamplesUrl%%/layout-manager/border-layout): This sample demonstrates initializing the `igLayoutManager` control’s Border layout from JavaScript, by handling `itemrendered` events and assigning content to the created regions.
+-	[Border Layout – Initializing with JavaScript](help/iglayoutmanager-adding.html#js-steps): This sample demonstrates initializing the `igLayoutManager` control’s Border layout from JavaScript, by handling [`itemRendered`](%%jQueryApiUrl%%/ui.iglayoutmanager#events:itemRendered) events and assigning content to the created regions.
 
 -	[Responsive Column Layout](%%SamplesUrl%%/layout-manager/column-layout-markup): This sample demonstrates how the `igLayoutManager` control’s Column layout can be used by assigning classes to items thus specifying the area their content will span over. This sample does not use JavaScript initialization code: it is done with CSS and HTML only.
 

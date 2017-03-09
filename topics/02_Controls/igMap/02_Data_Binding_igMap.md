@@ -59,6 +59,7 @@ This topic contains the following sections:
 -   [Code Examples Summary](#code-example-summary)
 -   [Code Example: Binding Geographic Symbol Series to a JavaScript Array](#example-js-array)
 -   [Code Example: Binding Geographic Symbol Series to a Model Object in ASP.NET MVC](#example-mvc-model-object)
+-   [Code Example: Binding Geographic Symbol Series to a JSON Database](#example-json-local)
 -   [Code Example: Binding Geographic Symbol Series to a JSON Database from a Remote Service](#example-json-database)
 -   [Code Example: Binding Geographic Shape Series to a Shape/DBF File Pair](#example-bdf-file-pair)
 -   [Code Example: Binding Geographic Scatter Area Series to a Triangulation File](#example-triangulation-file)
@@ -77,7 +78,7 @@ The `igMap` control supports the following data sources:
 Data Source|Binding
 ---|---
 [JavaScript array](#binding-js-array)|Geographic Symbol series map can be bound to a local JavaScript array of data with geographic coordinates of points to be visualized.
-[JSON](#binding-json)|The igMap control can be configured to request remote data and receive a JSON response which, in turn, can be bound to a Geographic Symbol series instance.
+[JSON](#binding-json)|The igMap control can be configured to use local JSON data or to request remote data and receive a JSON response which, in turn, can be bound to a Geographic Symbol series instance.
 [Shape files](#binding-shape-datasource)|The Geographic Shape and Geographic Polyline series require a shape ([DBF files](#binding-shape-database)) file or a custom shape data source to be provided for visualization.
 [DBF files](#binding-shape-database)|The Geographic Shape and Geographic Polyline series require a DBF database file or a custom data source to be provided to bind additional data attributes to the shapes and polylines.
 [Triangulation (ITF) files](#binding-triangulation-datasource)|The Geographic Scatter Area and Geographic Contour Line series require a triangulation (ITF) files or a custom triangulation data source for visualization.
@@ -203,6 +204,8 @@ For a sample implementation of binding the `igMap` control to a JavaScript array
 The `igMap` control can be configured to request remote data and receive a JSON response which can be bound to a geographic symbol series instance. The JSON response must provide geographic coordinates for the points to be visualized and may contain additional attributes. The additional attributes will be bound to the corresponding points on the map together with the geographic coordinates. They are available for tooltip templates and callback functions.
 
 For a sample implementation of binding the `igMap` control to JSON data, see [Code Example: Binding Geographic Symbol Series to a JSON Database from a Remote Service](#example-json-database).
+
+The `igMap` can also be configured to use a local JSON data and example for that case you can find in [Code Example: Binding Geographic Symbol Series to a JSON Database](#example-json-local).
 
 ### <a id="binding-shape-datasource"></a>Binding to shape data source
 
@@ -399,7 +402,17 @@ control instance in an ASP.NET MVC application.
 
 	In both examples, the `LatitudeMemberPath()` and `LongitudeMemberPath()` calls configure the names of the properties of the objects in the data model which contain the geographic latitude and longitude.
 
+##<a id="example-json-local"></a>Code Example: Binding Geographic Symbol Series to a JSON Database
 
+### Description
+
+This sample demonstrates how to bind JSON data with locations of cities in the world to the igMap control using a geographic symbol series.
+
+### Example
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/map/json-binding](%%SamplesEmbedUrl%%/map/json-binding)
+</div>
 
 ##<a id="example-json-database"></a>Code Example: Binding Geographic Symbol Series to a JSON Database from a Remote Service
 

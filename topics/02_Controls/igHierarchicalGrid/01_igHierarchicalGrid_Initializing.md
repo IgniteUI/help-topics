@@ -54,7 +54,7 @@ Following is a preview of the final result.
     **In HTML:**
 
     ```html
-    <table id="grid1">
+    <table id="hierarchicalGrid">
     </table>
     ```
 
@@ -84,81 +84,17 @@ The following code sample demonstrates the scripts as added to the header code o
 ### Database Requirements 
 For the purpose of this example only:
 
--   jQuery – Hierarchical Data source variable `ds` is following the format below:
-
-    **In Javascript:**
-
-    ```js
-    {
-        "d" : {
-            "results": [
-            {
-                "CategoryID": 1, 
-                "CategoryName": "Beverages", 
-                "Description": "Soft drinks, coffees, teas, beers, and ales", 
-                "Products": {
-                    "results": [
-                    {
-                        "ProductID": 1,
-                        "ProductName": "Chai", 
-                        "QuantityPerUnit": "10 boxes x 20 bags"
-                    },
-                    // ...
-                    // Product 2
-                    // ...
-                    ]
-                }
-            },
-            // ...
-            // Category 2
-            // ...
-            ]
-        }
-    }
-    ```
+-   jQuery – Northwind database
 
 -   MVC – Adventure Works database.
 
 ## <a id="initializing-jquery"></a>Initializing a jQuery igHierarchicalGrid 
-Inside the `$(document).ready()` event handler you can create a igHierarchicalGrid using `ds` data source from the requirements above. Follow the next table to see how to initialize igHierarchicalGrid.
 
-**In Javascript:**
+The sample below demonstrates how to bind igHierarchicalGrid to JSON data source.
 
-```js
-$("#grid1").igHierarchicalGrid({
-    initialDataBindDepth: 1,
-    dataSource: ds,
-    dataSourceType: 'json',
-    responseDataKey: 'd.results',
-    width: "700px",
-
-    autoGenerateColumns: false,
-    primaryKey: "CategoryID",
-    columns: [
-      { key: "CategoryID", headerText: "Category ID", dataType: "number" },
-      { key: "CategoryName", headerText: "Category Name", dataType: "string" },
-      { key: "Description", headerText: "Description", dataType: "string" }
-    ],
-            
-    autoGenerateLayouts: false,
-    columnLayouts: [
-        {
-            key: "Products",
-            responseDataKey: 'results',
-            autoGenerateColumns: false,
-            primaryKey: "ProductID",
-            foreignKey: "CategoryID",
-            columns: [
-                { key: "ProductID", dataType: "number" },
-                { key: "ProductName", dataType: "string" },
-                { key: "QuantityPerUnit", dataType: "string" }
-            ]
-        }
-    ]    
-});
-```
-
-To verify the result, open the HTML file in your browser. You should see the igHierarchicalGrid (as shown in the Preview above).
+<div class="embed-sample">
+   [igHierarchicalGrid JSON Binding](%%SamplesEmbedUrl%%/hierarchical-grid/json-binding)
+</div>
 
 ## <a id="initializing-mvc"></a>Initializing a MVC igHierarchicalGrid 
 1.  Create the LINQ to SQL model. ![](images/igHierarchicalGrid_Initializing_02.png)
