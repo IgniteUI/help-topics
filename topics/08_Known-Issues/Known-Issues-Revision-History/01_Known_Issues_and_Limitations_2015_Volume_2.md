@@ -726,6 +726,7 @@ Fixed virtualization is not supported with RWD Mode | Fixed virtualization depen
 Column virtualization is not supported with continuous virtualization | Column virtualization is supported only with fixed virtualization. When column virtualization is enabled([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) then the virtualization mode must be set to "fixed"([virtualizationMode](%%jQueryApiUrl%%/ui.iggrid#options:virtualizationMode) = "fixed"). | ![](../../images/images/negative.png)
 Virtualization and auto sizing of columns is not supported | Auto sizing columns by setting their width option to "*"  is not supported with virtualization. | ![](../../images/images/negative.png)
 Column setter is not working with column virtualization | Using column setter ($(".selector").igGrid("option", "columns", [/*columns definition*/]);) will result in horizontal scrollbar disappearing. | ![](../../images/images/negative.png)
+In Column Virtualization column widths are not respected | Setting different column widths have little to no effect, because the content is shifted between columns during horizontal scrolling, but the visible columns width stays intact. |![](../../images/images/negative.png)
 
 ### <a id="grid-responsive"></a> [igGrid – Responsive Web Design Mode](igGrid-Known-Issues.html)
 
