@@ -32,15 +32,16 @@ This topic contains the following sections:
 The following table lists the basic options that need to be defined in order to display the data in a pivot table.
 
 For the igPivotGrid:
-|Option| Description | 
-|------|-------------|
-| [dataSource](%%jQueryApiUrl%%/ui.igPivotGrid#options:dataSource)| An instance of $.ig.OlapXmlaDataSource or $.ig.OlapFlatDataSource.
+
+Option| Description | 
+------|-------------|
+ [dataSource](%%jQueryApiUrl%%/ui.igPivotGrid#options:dataSource)| An instance of $.ig.OlapXmlaDataSource or $.ig.OlapFlatDataSource.
 
 The **$.ig.OlapXmlaDataSource** component handles the communication with a Microsoft® SQL Server Analysis Services (SSAS) server configured with the msmdpump.dll HTTP data provider. 
 The relevant basic settings for it are:
 
-|Option| Description | 
-|------|-------------|
+Option| Description | 
+------|-------------|
 [serverUrl](%%jQueryApiUrl%%/ig.OlapXmlaDataSource#options:options.serverUrl)| The URL of the XMLA server.
 [catalog](%%jQueryApiUrl%%/ig.OlapXmlaDataSource#options:options.catalog)| The catalog name.
 [cube](%%jQueryApiUrl%%/ig.OlapXmlaDataSource#options:options.cube) | The name of the cube in the data source.
@@ -56,9 +57,10 @@ The relevant basic settings for it are:
 
 
 For the OlapFlatDataSource:
-|Option| Description | 
-|------|-------------|
-[dataSource](%%jQueryApiUrl%%/ig.OlapFlatDataSource#options:options.dataSource)| Specifies any valid data source accepted by $.ig.DataSource, or an instance of an $.ig.DataSource itself.|
+
+Option| Description | 
+------|-------------|
+[dataSource](%%jQueryApiUrl%%/ig.OlapFlatDataSource#options:options.dataSource)| Specifies any valid data source accepted by $.ig.DataSource, or an instance of an $.ig.DataSource itself.
 [metadata](%%jQueryApiUrl%%/ig.OlapFlatDataSource#options:options.metadata)| An object containing processing instructions for the $.ig.DataSource data.
 [metadata.cube](%%jQueryApiUrl%%/ig.OlapFlatDataSource#options:options.cube)|Metadata used for the creation of the cube.
 [metadata.cube.measuresDimension](%%jQueryApiUrl%%/ig.OlapFlatDataSource#options:options.cube)| An object providing information about the measures' root node.
