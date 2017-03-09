@@ -17,6 +17,9 @@ This topic covers samples with Ignite UI directives for AngularJS.
 
 This topic contains the following sections:
 -   [Requirements](#requirements)
+-   [Grid Sample](#grid_sample)
+    -   [Preview](#grid_sample_preview)
+    -   [Details](#grid_sample_details)
 -   [Editors Sample](#editors_sample)
     -   [Preview](#editors_sample_preview)
     -   [Details](#editors_sample_details)
@@ -41,6 +44,19 @@ This topic contains the following sections:
 In order to run this sample, you need to have:
 -   The required Ignite UI JavaScript and CSS files
 -   The Ignite UI AngularJS directives
+
+### <a id="grid_sample"></a>Grid Sample​
+This sample will demonstrate how we can use `igGrid` with AngularJS.
+
+#### <a id="grid_sample_preview"></a>Preview
+The following is a preview of the final result.
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/grid/angular](%%SamplesEmbedUrl%%/grid/angular)
+</div>
+
+#### <a id="grid_sample_details"></a>Details
+This sample demonstrates how AngularJS directives are used with the igGrid when `Updating`, `Paging` and `Sorting` features are activated.
 
 ### <a id="editors_sample"></a>Editors Sample​
 This sample will demonstrate how we can use `igEditors` with AngularJS.

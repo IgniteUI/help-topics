@@ -44,7 +44,6 @@ This topic contains the following sections:
     -   [Steps](#json-net-steps)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
     -   [Resources](#resources)
 
 
@@ -87,6 +86,10 @@ public ActionResult UpdateDataTableGrid()
 When the `AutoGenerateColumns` property is set to true, the grid columns' definitions are extracted entirely from the `DataTable` definition.
 
 > **Note:** Having one or more defined columns alongside `AutoGenerateColumns` set to *true* is **not** a valid scenario - you need to either have all columns defined or auto-generated.
+
+<a id="dataTable_example"></a><div class="embed-sample">
+   [Binding to DataTable](%%SamplesEmbedUrl%%/grid/datatable-binding)
+</div>
 
 ### <a id="dataSet"></a> Binding to *DataSet*
 
@@ -139,7 +142,7 @@ Similarly, the summaries feature is unsupported when using a `DataTable`/`DataSe
 
 *Remote sorting and filtering* can be implemented by processing the request and filtering and/or sorting the data on the `DataSet`/`DataTable` level before returning the data.
 
-For more details how to implement remote *sorting* by processing the request and sorting the data on `DataTable` level before returning it, you can take a look at the [DataTable Binding](%%SamplesUrl%%/grid/datatable-binding) sample. 
+For more details how to implement remote *sorting* by processing the request and sorting the data on `DataTable` level before returning it, you can take a look at the [DataTable Binding](#dataTable_example) sample. 
 
 The following features work remotely when binding to a `DataTable` or `DataSet`:
 
@@ -475,15 +478,6 @@ Following are the general conceptual steps for enabling the updating feature whe
 The following topics provide additional information related to this topic.
 
 - [Binding igHierarchicalGrid to DataSet](igHierarchicalGrid-Binding-to-DataSet.html): This topic shows how to configure the `igHierarchicalGrid` ™ control in order to bind it to `DataSet`
-
-
-
-### <a id="samples"></a> Samples
-
-The following samples provide additional information related to this topic.
-
-- [DataTable Binding](%%SamplesUrl%%/grid/datatable-binding): This sample demonstrates how to bind `igGrid` to `DataTable` using the view to configure the grid
-
 
 
 ### <a id="resources"></a> Resources
