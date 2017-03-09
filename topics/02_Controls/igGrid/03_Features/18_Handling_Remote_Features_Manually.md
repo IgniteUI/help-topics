@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# Handling Remote Features Manually
+# Handling Remote Features Manually (igGrid)
 
 ## In this topic
 
@@ -21,7 +21,7 @@
 
 ## <a id="overview"></a> Overview
 
-Remote features in the grid require a backend implementation for handling their specific remote requests and returning the resulting data.
+Remote features in the `igGrid` require a backend implementation for handling their specific remote requests and returning the resulting data.
 The following features have remote capabilities:
   - Paging
   - Filtering
@@ -40,7 +40,7 @@ features: [
 ]
 ```
 
-When you're using the Infragistics ASP.NET MVC wrapper the remote requests initiated by these features can be proccessed out of the box by adding to the related Action the GridDataSourceActionAttribute.
+When you're using the Grid ASP.NET MVC wrapper the remote requests initiated by these features can be proccessed out of the box by adding to the related Action the `GridDataSourceActionAttribute`.
 This is an action filter attribute that you can use to decorate the MVC Action that returns your grid data.
 For example:
 
@@ -53,12 +53,14 @@ public ActionResult GetGridData()
 }
 ```
 
-It handles incoming requests by the various remote grid features and returns the proccessed Json data back to grid.
+It handles incoming requests by the various remote grid features and returns the proccessed JSON data back to grid.
 
-When using the grid in an MVC environment it's recommended to use this attribute when using remote features in order to take full advantage of their remote capabilities with the least amount of effort.
+> **Note:** Use `GridDataSourceAction` attribute when you configure grid in the View. If you're using `GridModel` class and configure the grid in the Controller you should use the `GridModel.GetData` instance method to return data back to the browser. 
 
-However in some cases you may not have access to the MVC wrappers or you may want to build a custom logic for handling those requests.
-This topic will guide you through the proccess of reading the sent by the features query strings, proccessing your data based on them and sending back the data in JSON format.
+We recommend you to use the above methods in order to take full advantage of their remote capabilities with the least amount of effort.
+
+However in some cases you may not have access to the MVC wrappers (for example if you're using Ignite UI in an ASP.NET project) or you may want to build a custom logic for handling those requests.
+This topic will guide you through the proccess manually handling `igGrid` features remote requests and sending back a response in a JSON format that they can understand.
 
 ## <a id="paging"></a> Handling Remote Paging
 
@@ -70,14 +72,14 @@ Steps:
 
 ### Client-side configuration
 
-The following table lists options that affect the remote paging and that should be set when you're manually handling the response from your backend.
+The following table lists the options that affect the remote Paging and that should be set when you're manually handling the response from your backend.
 
 Options| Description | Required |
 -------|-------------|---------|
 [responseDataKey](%%jQueryApiUrl%%/ui.igGrid#options:responseDataKey) | The property in the responses where data records are held.| Yes.
-[dataSource](%%jQueryApiUrl%%/ui.igGrid#options:dataSource)| Can be any valid data source accepted by $.ig.DataSource, or an instance of an $.ig.DataSource itself. | Yes. Should be set to the url for the backend that will handle the remote requests.
+[dataSource](%%jQueryApiUrl%%/ui.igGrid#options:dataSource)| Can be any valid data source accepted by `$.ig.DataSource`, or an instance of an `$.ig.DataSource` itself. | Yes. Should be set to the url for the backend that will handle the remote requests.
 [recordCountKey](%%jQueryApiUrl%%/ui.iggridpaging#options:recordCountKey) | The property in the response data, when using remote data source, that will hold the total number of records in the data source.| Yes
-[type](%%jQueryApiUrl%%/ui.iggridpaging#options:type) | Sets the type of paging. | Yes. Should be set to "remote" to enable remote paging.
+[type](%%jQueryApiUrl%%/ui.iggridpaging#options:type) | Sets the type of Paging. | Yes. Should be set to "remote" to enable remote Paging.
 [pageSizeUrlKey](%%jQueryApiUrl%%/ui.iggridpaging#options:pageSizeUrlKey) | The name of the encoded URL parameter that will state what is the currently requested page size. | No.  Uses OData conventions by default.
 [pageIndexUrlKey](%%jQueryApiUrl%%/ui.iggridpaging#options:pageIndexUrlKey) | The name of the encoded URL parameter that will state what is the currently requested page index.| No.  Uses OData conventions by default.
 
@@ -100,14 +102,15 @@ http://<server>/grid/GetData?$skip=0&$top=25
 ### Server-side configuration
 
 The backend to which the request is send should do the following:
-1. Read the query string parameters that contain the paging information (page and pageSize)
+
+1. Read the query string parameters that contain the paging information (`page` and `pageSize`)
 2. Proccess the data of the grid to get only the data for the current page based on the parameters.
 3. Return JSON data that contain the proccesed grid data and the total records count of the grid, for example:
 
 ```js
 {Records: <data>, TotalRecordsCount: totalCountOfAllRecords}
 ```
-Note that the property holding  the data should match the responseDataKey option defined on the client-side and the the property holding the total count should match the recordCountKey option of the Paging Feature.
+Note that the property holding  the data should match the `responseDataKey` option defined on the client-side and the the property holding the total count should match the `recordCountKey` option of the Paging Feature.
 
 The below example shows how to apply the above steps in a ASP.NET MVC application:
 
@@ -142,18 +145,19 @@ private IQueryable ApplyPaging(NameValueCollection queryString, IQueryable data)
 This section will guide you through the process of configuring and handling remote Filtering.
 
 Steps:
+
 1. Client-side configuration
 2. Server-side configuration and proccessing of the request.
 
 ### Client-side configuration
 
-The following table lists options that affect the remote filtering and that should be set when you're manually handling the response from your backend.
+The following table lists options that affect the remote Filtering and that should be set when you're manually handling the response from your backend.
 
 Options| Description | Required |
 -------|-------------|---------|
-[dataSource](%%jQueryApiUrl%%/ui.igGrid#options:dataSource)| Can be any valid data source accepted by $.ig.DataSource, or an instance of an $.ig.DataSource itself. | Yes. Should be set to the url for the backend that will handle the remote requests.
-[type](%%jQueryApiUrl%%/ui.iggridfiltering#options:type) | Sets the type of filtering. | Yes. Should be set to "remote" to enable remote filtering.
-[filterExprUrlKey](%%jQueryApiUrl%%/ui.iggridfiltering#options:filterExprUrlKey)| URL key name that specifies how the filtering expressions will be encoded for remote requests, e.g. &filter('col') = startsWith. Default is OData.| No.  Uses OData conventions by default.
+[dataSource](%%jQueryApiUrl%%/ui.igGrid#options:dataSource)| Can be any valid data source accepted by `$.ig.DataSource`, or an instance of an `$.ig.DataSource` itself. | Yes. Should be set to the url for the backend that will handle the remote requests.
+[type](%%jQueryApiUrl%%/ui.iggridfiltering#options:type) | Sets the type of Filtering. | Yes. Should be set to "remote" to enable remote Filtering.
+[filterExprUrlKey](%%jQueryApiUrl%%/ui.iggridfiltering#options:filterExprUrlKey)| URL key name that specifies how the filtering expressions will be encoded for remote requests, e.g. `&filter('col') = startsWith`. Default is OData.| No.  Uses OData conventions by default.
 
 Example configuration:
 
@@ -174,6 +178,7 @@ http://<server>/grid/GetData?filter(OrderID)=equals(10273)
 ### Server-side configuration
 
 The backend to which the request is send should do the following:
+
 1. Read the query string parameters that contain the filtering information
 2. Proccess the data of the grid and return the filtered data.
 
@@ -334,20 +339,21 @@ private IQueryable ApplyFilterExpr(NameValueCollection queryString, IQueryable d
 This section will guide you through the process of configuring and handling remote Sorting. The same steps apply for GroupBy as the only applied data operation for GroupBy is to sort the data.
 
 Steps:
+
 1. Client-side configuration
 2. Server-side configuration and proccessing of the request.
 
 ### Client-side configuration
 
-The following table lists options that affect the remote sorting and that should be set when you're manually handling the response from your backend.
+The following table lists options that affect the remote Sorting and that should be set when you're manually handling the response from your backend.
 
 Options| Description | Required |
 -------|-------------|---------|
-[dataSource](%%jQueryApiUrl%%/ui.igGrid#options:dataSource)| Can be any valid data source accepted by $.ig.DataSource, or an instance of an $.ig.DataSource itself. | Yes. Should be set to the url for the backend that will handle the remote requests.
-[type](%%jQueryApiUrl%%/ui.iggridsorting#options:type) | Sets the type of sorting. | Yes. Should be set to "remote" to enable remote sorting.
+[dataSource](%%jQueryApiUrl%%/ui.igGrid#options:dataSource)| Can be any valid data source accepted by `$.ig.DataSource`, or an instance of an `$.ig.DataSource` itself. | Yes. Should be set to the url for the backend that will handle the remote requests.
+[type](%%jQueryApiUrl%%/ui.iggridsorting#options:type) | Sets the type of Sorting. | Yes. Should be set to "remote" to enable remote Sorting.
 [sortUrlKey](%%jQueryApiUrl%%/ui.iggridsorting#options:sortUrlKey)| URL param name which specifies how sorting expressions will be encoded in the URL. Uses OData conventions. ex: ?sort(col1)=asc.| No. Uses OData conventions by default.
-[sortUrlKeyAscValue](%%jQueryApiUrl%%/ui.iggridsorting#options:sortUrlKeyAscValue) | URL param value for ascending type of sorting. Uses OData conventions. Example: ?sort(col1)=asc.| No.
-[sortUrlKeyDescValue](%%jQueryApiUrl%%/ui.iggridsorting#options:sortUrlKeyDescValue)| URL param value for descending type of sorting. Uses OData conventions. Example: ?sort(col1)=desc.| No.
+[sortUrlKeyAscValue](%%jQueryApiUrl%%/ui.iggridsorting#options:sortUrlKeyAscValue) | URL param value for ascending type of Sorting. Uses OData conventions. Example: ?sort(col1)=asc.| No.
+[sortUrlKeyDescValue](%%jQueryApiUrl%%/ui.iggridsorting#options:sortUrlKeyDescValue)| URL param value for descending type of Sorting. Uses OData conventions. Example: ?sort(col1)=desc.| No.
 
 
 Example configuration:
@@ -355,13 +361,13 @@ Example configuration:
 ```js
 dataSource: "http://<server>/grid/GetData",
 features: [
-					{
-						name: "Sorting",
-            type: "remote",
-						sortUrlKey: 'sort',
-						sortUrlKeyAscValue: 'asc',
-						sortUrlKeyDescValue: 'desc'
-					}
+	{
+		name: "Sorting",
+		type: "remote",
+		sortUrlKey: 'sort',
+		sortUrlKeyAscValue: 'asc',
+		sortUrlKeyDescValue: 'desc'
+	}
 ...
 ]
 ```
@@ -375,6 +381,7 @@ http://<server>/grid/GetData?sort(OrderID)=asc
 ### Server-side configuration
 
 The backend to which the request is send should do the following:
+
 1. Read the query string parameters that contain the sorting information
 2. Proccess the data of the grid and return the sorted data.
 
@@ -446,6 +453,7 @@ public List<SortExpression> BuildSortExpressions(NameValueCollection queryString
 This section will guide you through the process of configuring and handling remote Summaries.
 
 Steps:
+
 1. Client-side configuration
 2. Server-side configuration and proccessing of the request.
 
@@ -456,7 +464,7 @@ The following table lists options that affect the remote Summaries and that shou
 Options| Description | Required |
 -------|-------------|---------|
 [responseDataKey](%%jQueryApiUrl%%/ui.igGrid#options:responseDataKey) | The property in the responses where data records are held.| Yes.
-[dataSource](%%jQueryApiUrl%%/ui.igGrid#options:dataSource)| Can be any valid data source accepted by $.ig.DataSource, or an instance of an $.ig.DataSource itself. | Yes. Should be set to the url for the backend that will handle the remote requests.
+[dataSource](%%jQueryApiUrl%%/ui.igGrid#options:dataSource)| Can be any valid data source accepted by `$.ig.DataSource`, or an instance of an `$.ig.DataSource` itself. | Yes. Should be set to the url for the backend that will handle the remote requests.
 [type](%%jQueryApiUrl%%/ui.iggridsummaries#options:type) | Sets the type of summaries. | Yes. Should be set to "remote" to enable remote summaries.
 [summariesResponseKey](%%jQueryApiUrl%%/ui.iggridsummaries#options:summariesResponseKey)| Result key by which we get data from the result returned by remote data source. | No. Default is "summaries".
 [summaryExprUrlKey](%%jQueryApiUrl%%/ui.iggridsummaries#options:summaryExprUrlKey) | Set key in GET Request for summaries - used only when type is remote. | No. Default is "summaries".
@@ -467,7 +475,7 @@ Example configuration:
 dataSource: "http://<server>/grid/GetData",
 responseDataKey: "Records",
 features: [
-					{ name: "Summaries", type:"remote"}
+	{ name: "Summaries", type:"remote"}
 ...
 ]
 ```
@@ -481,6 +489,7 @@ http://<server>/grid/GetData?summaries(OrderID)=count,min,max,sum,avg
 ### Server-side configuration
 
 The backend to which the request is send should do the following:
+
 1. Read the query string parameters that contain the summary information
 2. Proccess the data of the grid and to pupulate the summaries.
 3. Return JSON data that contain the proccesed grid data and the calculated summaries for the grid, for example:
