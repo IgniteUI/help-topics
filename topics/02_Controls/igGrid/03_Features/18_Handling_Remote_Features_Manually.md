@@ -13,7 +13,7 @@
 ## In this topic
 
 - [Overview](#overview)
-- [Handling Remote Paging](#pagig)
+- [Handling Remote Paging](#paging)
 - [Handling Remote Filtering](#filtering)
 - [Handling Remote Sorting/GroupBy](#sorting)
 - [Handling Remote Summaries](#summaries)
