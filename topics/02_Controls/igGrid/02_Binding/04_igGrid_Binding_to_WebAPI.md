@@ -50,7 +50,7 @@ Following are the general requirements for binding to an ASP.NET MVC 4 Web API.
 
 Following are the general conceptual steps for binding to an ASP.NET MVC 4 Web API.
 
-​1. Setup the model
+1. Setup the model
 2. Initialize the *igGrid* with the REST settings
 3. Configure controller actions for the *igGrid*
 
