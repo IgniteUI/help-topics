@@ -14,7 +14,11 @@
 
 ### Purpose
 
-The `igGridExcelExporter`™ provides options that allow any data and layout manipulations caused by the `igGrid` features to be reflected in the Excel Worksheet, as well as to configure styles to be applied, columns to be skipped during exporting, setting file and worksheet names, etc.
+The `igGrid` is a highly customizable widget and is usually styled and configured to fit within a visual layout. Users that are regularly working with this web application develop habits connectd to this environment that help them do anything more quickly - for example they know that the most valuable information for them is displayed in the first column and it is always vibible, or search for records colored in green as those display a positive trend.
+
+Often the business people require to quickly export this data from web to Excel without the struggle of orientating in a new visual environment. This is where the configuring of the `igGridExcelExporter` comes to help. Using the appropriate settings one can achieve almost the same look and feel of the `igGrid` in the expored Excel Worksheet. Another common scenario is when the business users only need a particular set of the data to work with in Excel, so they do not worry about style, but rather for data aggregations, etc.
+
+The `igGridExcelExporter`™ provides options that to configure how any data or layout manipulations caused by the `igGrid` features will reflected in the Excel Worksheet, thus fullfiling common business scenarios like the ones described above.
 
 ### In this topic
 
@@ -31,16 +35,43 @@ This topic contains the following sections:
 - [igGridExcelExporter Overview](iggridexcelexporter-overview.html "igGridExcelExporter Overview") - General information on the `igGridExcelExporter` control.
 
 
-### <a id="gridfeatureoptions_configure"></a>Configure the `gridFeatureOptions` settings
+## <a id="gridfeatureoptions_configure"></a>Configure the `gridFeatureOptions` settings
 
-Data and layout manipulations caused by the `Filtering`, `Hiding`, `Paging`, `Sorting`, `Summaries` and `Column Fixing` features of the `igGrid` can be reflected in the exported Excel Worksheet. The setting for each feature is passed within the [`gridFeatureOptions`](%%jQueryApiUrl%%/ig.gridexcelexporter#options:settings.gridFeatureOptions) object.
-All of these are enumerations and the `sorting`, `summaries` and `columnfixing` have only options - `"none"` or `"applied"`.  
+Тhe [`gridFeatureOptions`](%%jQueryApiUrl%%/ig.gridexcelexporter#options:settings.gridFeatureOptions) object defines how the data and layout manipulations caused by the `Filtering`, `Hiding`, `Paging`, `Sorting`, `Summaries` and `Column Fixing` features of the `igGrid` will be reflected in the exported Excel Worksheet. 
+
+#### Filtering
+Configuring the `filtering` will allow for a developer to control how the Excel worksheet represents filtering operations executed in the `igGrid`. All `igGrid` built-in filtering conditions are matched to the corresponding filtering conditions that are native to Excel, thus verifying the user works with a valid set of data. Custom filtering conditions that a user may define in `igGrid` are not supported, so if such exists, they are ignored by the `igGridExcelExporter`.
+
+#### Sorting
+`Sorting` in `igGrid` may affect single or multiple columns and the respective column headers are modified to display a sort indicator, while the column itself is being colored. When applying sorting in Excel, the column headers will display indicators showing the sorting direction (ascending or descending), but the column itself will not be colored differently. This is native behavior to Excel, but can be customized in some `igGridExcelExporter` event, see the [`events`](#callbacks) below for example.
+
+#### Summaries
+Column summaries in `igGrid` are highly flexible, allowing developers to customize the way summaries are calculated and modify the specific UI that is rendered. When applying summaries in the Worksheet, the `igGridExcelExporter` uses the native data aggregations available to Excel - sum, min, max, average and count. Custom summaries defined in `igGrid` are not supported and are ignored by the `igGridExcelExporter`.
+
+#### Paging
+`Paging` in `igGrid` can be customized in many ways, but in the context of `igGridExcelExporter` it is only about exporting the current page data or all pages data. The behavior is controlled using the `paging` property that accepts values `"currentPage"` or `"allRows"`.
+
+#### Hiding
+Columns in `igGrid` can be defined as hidden initially or can be hidden/shown by the user if the `Column Hiding` feature is enabled. The `igGridExcelExporter` allows the developer to control whether these columns will be exported using the `hiding` property.
+
+#### Column Fixing
+Columns in `igGrid` can be fixed to either to the left or right direction, while in Excel columns get fixed to the left side only. The behavior is controlled using the `columnfixing` property and the developer may choose whether or not to fix columns in the Excel Worksheet. 
+
+Refer to the below table that lists the properties of the `gridFeatureOptions` object along with all the possible values and how they affect the exported Excel Worksheet.
 
 |Setting | Property | Description
 | -------------------| ------------------- |----------- 
-Configure Sorting | [sorting](%%jQueryApiUrl%%/ig.gridexcelexporter#options:settings.gridFeatureOptions.sorting) | Accepts values `"none"` or `"applied"`. When `"none"` Sorting is not applied in the Excel. When `"applied"` Sorting is applied in the Excel Worksheet.
+Configure Sorting | [sorting](%%jQueryApiUrl%%/ig.gridexcelexporter#options:settings.gridFeatureOptions.sorting) | Accepted values `"none"` \| `"applied"`<br />.When `"none"` Sorting is not applied in the Excel. When `"applied"` Sorting is applied in the Excel Worksheet.
+Configure Filtering | [filtering](%%jQueryApiUrl%%/ig.gridexcelexporter#options:settings.gridFeatureOptions.filtering) | Accepted values: `"none"` \| `"applied"` \| `"filteredRowsOnly"`.<br />When `"none"` Filtering is not applied in the Excel. When `"applied"` filtering expressions are read from the `igGrid` and applied to respective columns in Excel. Value of `"filteredRowsOnly"` will export only the records that have been filtered in the `igGrid` and will not apply filtering in the Excel worksheet.
+Configure Paging | [paging](%%jQueryApiUrl%%/ig.gridexcelexporter#options:settings.gridFeatureOptions.paging) | Accepted values: `"currentPage"` \| `"allRows"`<br />`"currentPage"` will export only the current `igGrid` page, while `"allRows"` will export all data pages.
+Configure Hiding | [hiding](%%jQueryApiUrl%%/ig.gridexcelexporter#options:settings.gridFeatureOptions.hiding) | Accepted values: `"none"` \| `"applied"` \| `"visibleColumnsOnly"`<br />Value of `"none"` will ignore if any columns are hidden initially or through the `igGrid` UI and will still export them to the worksheet. `"applied"` will export the hidden columns, but they will not be visible in Excel until the user changes the column width in Excel to a value greater than 0. When value is `"visibleColumnsOnly"` the `igGridExcelExporter` will export only the `igGrid` columns that are not hidden.
+Configure Column Fixing | [columnfixing](%%jQueryApiUrl%%/ig.gridexcelexporter#options:settings.gridFeatureOptions.columnfixing) | Accepted values: `"none"` \| `"applied"`<br />Set `"none"` to ignore `Column Fixing`. Value of `"applied"` will fix the respective columns in the Excel worksheet.
+Configure Summaries | [summaries](%%jQueryApiUrl%%/ig.gridexcelexporter#options:settings.gridFeatureOptions.summaries) | Accepted values: `"none"` \| `"applied"`<br />Set `"none"` to ignore the `igGrid` summaries. Value of `"applied"` will make the Excel calculate summaries for each column that has summaries in `igGrid`.
 
-Code sample:
+
+> **Note:** While `Filtering` and `Sorting` always manipulate the whole data set in the `igGrid`, the data exported to Excel might be just a subset of the whole data (when `paging` is set to `"currentPage"`). Applying the same filtering and/or sorting expression to the Excel data will bring different results than in `igGrid`. Same is valid when calculating summaries for a given column in the Excel.
+
+<br />Code sample:
 
 ```javascript
 $.ig.GridExcelExporter.exportGrid($(".selector"), {
@@ -50,18 +81,7 @@ $.ig.GridExcelExporter.exportGrid($(".selector"), {
         // summaries will not be calculated in the worksheet
         summaries: "none",
         // Sorted `igGrid` columns will be sorted in the excel worksheet
-        sorting: "applied"
-    }
-});
-```
-
-Different options are available for configuring the `filtering`, `paging` and `hiding`. For example, we can opt to work with the visible `igGrid` columns only and do not export the hidden ones by setting `hiding: "visibleColumnsOnly"`. The other possible options for hiding are still `"none"` and `"applied"`. Setting `paging` and `filtering` is tricky as both features manipulate the data and different combinations will bring different results. For `paging` we can set either `"currentPage"` that will export only the current `igGrid` page, or `"allRows"` correspondingly. `filtering` can take values `"none"`, `"applied"`, or `"filteredRowsOnly"`. The difference between them - setting `"applied"` will make the `igGridExcelExporter` export all data and apply the same filter as applied in the `igGrid`, while setting `"filteredRowsOnly"` will export only the filtered records.
-
-> **Note:** While filtering and sorting always manipulate the whole data set in the `igGrid`, the data exported to Excel might be just a subset of the whole data (when `paging` is set to `"currentPage"`). Applying the same filtering and/or sorting expression to the Excel data will bring different results than in `igGrid`.
-
-```javascript
-$.ig.GridExcelExporter.exportGrid($(".selector"), {
-    gridFeatureOptions: {
+        sorting: "applied",
         // Hidden `igGrid` columns will be exported, but hidden in the worksheet
         hiding: "applied",
         // All pages of data will be exported
