@@ -85,7 +85,7 @@ Example configuration:
 
 ```js
 responseDataKey: "Records",
-dataSource: "http://<server>/grid/GetData',
+dataSource: "http://<server>/grid/GetData",
 features: [
 { name: "Paging", type: "remote", recordCountKey: "TotalRecordsCount" }
 ]
@@ -158,7 +158,7 @@ Options| Description | Required |
 Example configuration:
 
 ```js
-dataSource: "http://<server>/grid/GetData',
+dataSource: "http://<server>/grid/GetData",
 features: [
 { name: "Filtering", type: "remote", filterExprUrlKey: "filter" }
 ...
@@ -353,7 +353,7 @@ Options| Description | Required |
 Example configuration:
 
 ```js
-dataSource: "http://<server>/grid/GetData',
+dataSource: "http://<server>/grid/GetData",
 features: [
 					{
 						name: "Sorting",
@@ -464,7 +464,7 @@ Options| Description | Required |
 Example configuration:
 
 ```js
-dataSource: "http://<server>/grid/GetData',
+dataSource: "http://<server>/grid/GetData",
 responseDataKey: "Records",
 features: [
 					{ name: "Summaries", type:"remote"}
