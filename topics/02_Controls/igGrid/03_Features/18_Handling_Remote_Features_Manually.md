@@ -67,6 +67,7 @@ This topic will guide you through the proccess manually handling `igGrid` featur
 This section will guide you through the process of configuring and handling remote Paging.
 
 Steps:
+
 1. Client-side configuration
 2. Server-side configuration and proccessing of the request.
 
@@ -80,8 +81,8 @@ Options| Description | Required |
 [dataSource](%%jQueryApiUrl%%/ui.igGrid#options:dataSource)| Can be any valid data source accepted by `$.ig.DataSource`, or an instance of an `$.ig.DataSource` itself. | Yes. Should be set to the url for the backend that will handle the remote requests.
 [recordCountKey](%%jQueryApiUrl%%/ui.iggridpaging#options:recordCountKey) | The property in the response data, when using remote data source, that will hold the total number of records in the data source.| Yes
 [type](%%jQueryApiUrl%%/ui.iggridpaging#options:type) | Sets the type of Paging. | Yes. Should be set to "remote" to enable remote Paging.
-[pageSizeUrlKey](%%jQueryApiUrl%%/ui.iggridpaging#options:pageSizeUrlKey) | The name of the encoded URL parameter that will state what is the currently requested page size. | No.  Uses OData conventions by default.
-[pageIndexUrlKey](%%jQueryApiUrl%%/ui.iggridpaging#options:pageIndexUrlKey) | The name of the encoded URL parameter that will state what is the currently requested page index.| No.  Uses OData conventions by default.
+[pageSizeUrlKey](%%jQueryApiUrl%%/ui.iggridpaging#options:pageSizeUrlKey) | The name of the encoded URL parameter that will hold the currently requested page size. | No.  If not set OData conventions are used by default.
+[pageIndexUrlKey](%%jQueryApiUrl%%/ui.iggridpaging#options:pageIndexUrlKey) | The name of the encoded URL parameter that will hold the currently requested page index.| No.  If not set OData conventions are used by default.
 
 Example configuration:
 
@@ -103,14 +104,14 @@ http://<server>/grid/GetData?$skip=0&$top=25
 
 The backend to which the request is send should do the following:
 
-1. Read the query string parameters that contain the paging information (`page` and `pageSize`)
+1. Read the query string parameters that contain the paging information (`$skip` and `$top`)
 2. Proccess the data of the grid to get only the data for the current page based on the parameters.
 3. Return JSON data that contain the proccesed grid data and the total records count of the grid, for example:
 
 ```js
 {Records: <data>, TotalRecordsCount: totalCountOfAllRecords}
 ```
-Note that the property holding  the data should match the `responseDataKey` option defined on the client-side and the the property holding the total count should match the `recordCountKey` option of the Paging Feature.
+Note that the property holding  the data should match the `responseDataKey` option defined on the client-side and the property holding the total count should match the `recordCountKey` option of the Paging feature.
 
 The below example shows how to apply the above steps in a ASP.NET MVC application:
 
@@ -157,7 +158,7 @@ Options| Description | Required |
 -------|-------------|---------|
 [dataSource](%%jQueryApiUrl%%/ui.igGrid#options:dataSource)| Can be any valid data source accepted by `$.ig.DataSource`, or an instance of an `$.ig.DataSource` itself. | Yes. Should be set to the url for the backend that will handle the remote requests.
 [type](%%jQueryApiUrl%%/ui.iggridfiltering#options:type) | Sets the type of Filtering. | Yes. Should be set to "remote" to enable remote Filtering.
-[filterExprUrlKey](%%jQueryApiUrl%%/ui.iggridfiltering#options:filterExprUrlKey)| URL key name that specifies how the filtering expressions will be encoded for remote requests, e.g. `&filter('col') = startsWith`. Default is OData.| No.  Uses OData conventions by default.
+[filterExprUrlKey](%%jQueryApiUrl%%/ui.iggridfiltering#options:filterExprUrlKey)| URL key name that specifies how the filtering expressions will be encoded for remote requests, e.g. `&filter('col') = startsWith`. Default is OData.| No. If not set OData conventions are used by default.
 
 Example configuration:
 
@@ -351,9 +352,9 @@ Options| Description | Required |
 -------|-------------|---------|
 [dataSource](%%jQueryApiUrl%%/ui.igGrid#options:dataSource)| Can be any valid data source accepted by `$.ig.DataSource`, or an instance of an `$.ig.DataSource` itself. | Yes. Should be set to the url for the backend that will handle the remote requests.
 [type](%%jQueryApiUrl%%/ui.iggridsorting#options:type) | Sets the type of Sorting. | Yes. Should be set to "remote" to enable remote Sorting.
-[sortUrlKey](%%jQueryApiUrl%%/ui.iggridsorting#options:sortUrlKey)| URL param name which specifies how sorting expressions will be encoded in the URL. Uses OData conventions. ex: ?sort(col1)=asc.| No. Uses OData conventions by default.
-[sortUrlKeyAscValue](%%jQueryApiUrl%%/ui.iggridsorting#options:sortUrlKeyAscValue) | URL param value for ascending type of Sorting. Uses OData conventions. Example: ?sort(col1)=asc.| No.
-[sortUrlKeyDescValue](%%jQueryApiUrl%%/ui.iggridsorting#options:sortUrlKeyDescValue)| URL param value for descending type of Sorting. Uses OData conventions. Example: ?sort(col1)=desc.| No.
+[sortUrlKey](%%jQueryApiUrl%%/ui.iggridsorting#options:sortUrlKey)| URL param name which specifies how sorting expressions will be encoded in the URL. Example: ?sort(col1)=asc.| No. If not set OData conventions are used by default.
+[sortUrlKeyAscValue](%%jQueryApiUrl%%/ui.iggridsorting#options:sortUrlKeyAscValue) | URL param value for ascending type of Sorting. Example: ?sort(col1)=asc.| No. If not set OData conventions are used by default.
+[sortUrlKeyDescValue](%%jQueryApiUrl%%/ui.iggridsorting#options:sortUrlKeyDescValue)| URL param value for descending type of Sorting. Example: ?sort(col1)=desc.| No. If not set OData conventions are used by default.
 
 
 Example configuration:
@@ -465,7 +466,7 @@ Options| Description | Required |
 -------|-------------|---------|
 [responseDataKey](%%jQueryApiUrl%%/ui.igGrid#options:responseDataKey) | The property in the responses where data records are held.| Yes.
 [dataSource](%%jQueryApiUrl%%/ui.igGrid#options:dataSource)| Can be any valid data source accepted by `$.ig.DataSource`, or an instance of an `$.ig.DataSource` itself. | Yes. Should be set to the url for the backend that will handle the remote requests.
-[type](%%jQueryApiUrl%%/ui.iggridsummaries#options:type) | Sets the type of summaries. | Yes. Should be set to "remote" to enable remote summaries.
+[type](%%jQueryApiUrl%%/ui.iggridsummaries#options:type) | Sets the type of summaries. | Yes. Should be set to "remote" to enable remote Summaries.
 [summariesResponseKey](%%jQueryApiUrl%%/ui.iggridsummaries#options:summariesResponseKey)| Result key by which we get data from the result returned by remote data source. | No. Default is "summaries".
 [summaryExprUrlKey](%%jQueryApiUrl%%/ui.iggridsummaries#options:summaryExprUrlKey) | Set key in GET Request for summaries - used only when type is remote. | No. Default is "summaries".
 
