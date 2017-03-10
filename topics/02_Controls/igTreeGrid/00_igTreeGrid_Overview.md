@@ -28,7 +28,7 @@ In order to maintain flexibility the tree grid features a configurable expansion
 - [**igTreeGrid vs. igHierarchicalGrid**](#tree-vs-hierarchical-grids)
 - [**Performance**](#performance)
 - [**Getting Started**](#getting-started)
-  - [Initializing a jQuery igTreeGrid](#jq-treegrid)
+  - [Initializing igTreeGrid in JavaScript](#jq-treegrid)
 	  - [Full Page Sample](#full-page-sample)
   - [Initializing a MVC igTreeGrid](#mvc-treegrid)
   - [Customize the expand and collapse icons](#customize-icon)
@@ -193,7 +193,7 @@ Other features that help increase performance include [Load on Demand](igTreeGri
 
 ## <a id="getting-started"></a> Getting Started with the igTreeGrid
 
-### <a id='jq-treegrid'></a> Initializing a jQuery igTreeGrid
+### <a id='jq-treegrid'></a> Initializing igTreeGrid in JavaScript
 
 Initializing the `igTreeGrid` requires that you pass an [`options`](%%jQueryApiUrl%%/ui.igtreegrid#options) object that defines the characteristics of the grid. The following code snippet demonstrates how to create a grid bound to a flat data source that includes filtering, sorting and paging.
 
@@ -336,9 +336,9 @@ The following steps will guide you through the proccess of initializing the MVC 
 
 Steps:
 
-1. Create a new MVC application.
-2. Add reference to the Infragistics.Web.Mvc assembly.
-3. Create a model class.
+	1. Create a new MVC application.
+	2. Add reference to the Infragistics.Web.Mvc assembly.
+	3. Create a model class.
 
 ```csharp
     public class FileExplorer
@@ -352,7 +352,7 @@ Steps:
     }
 ```
 
-4. Create a MVC Controller method that populates a List of data and returns it to the View.
+	4. Create a MVC Controller method that populates a List of data and returns it to the View.
 
 ```csharp
 public ActionResult AspMvcHelper()
@@ -425,7 +425,7 @@ public ActionResult AspMvcHelper()
 		}
 ```
 
-5. Create a View named "aspnet-mvc-helper".
+	5. Create a View named "aspnet-mvc-helper".
 
 In it reference the Infragistics.Web.Mvc.dll assembly and define the Model for the View:
 
@@ -452,7 +452,8 @@ Add reference to the jQuery, jQueryUI and the IgniteUI scripts and css classes:
     <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
 
 ```
-6. Define the igTreeGrid in the View.
+
+	6. Define the igTreeGrid in the View.
 
 **In C#:**
 
