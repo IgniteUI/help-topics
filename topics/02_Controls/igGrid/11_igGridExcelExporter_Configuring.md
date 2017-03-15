@@ -2,8 +2,8 @@
 |metadata|
 {
     "fileName": "iggridexcelexporter-configuring",
-    "controlName": ["igExcel", "igGrid", "igGridExcelExporter"],
-    "tags": [excel, exporting]
+    "controlName": "igGridExcelExporter",
+    "tags": ["Exporting"]
 }
 |metadata|
 -->
