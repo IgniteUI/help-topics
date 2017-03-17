@@ -442,11 +442,18 @@ Adding and updating a virtual grid doesn’t work if it is grouped | When using 
 Keyboard navigation while in edit mode does not wrap-around if virtualization is enabled. | When virtualization is enabled keyboard navigation with Tab/Shift+Tab when edit mode is "cell" and keyboard navigation with Enter/Shift+Enter when edit mode is "row" will not wrap-around. When reaching the last row/cell and navigating to the next one the first row/cell will not enter edit mode and the same will happend when reaaching the first row/cell and navigating to the previous one - the last row/cell will not enter edit mode. | ![](../../images/images/negative.png)
 Keyboard navigation not supported for column virtualization | Keyboard navigation is not supported for column virtualization. | ![](../../images/images/negative.png)
 
+## igGridHiding
+
+Issue | Description | Status
+---|---|---
+Hidden column indicator is not displayed correctly when having MultiColumnHeaders. | When hiding a root header element the hiding indicator may be shown under another visible column group, creating the incorrect impression that the hidden column belongs to that group.| ![](../../images/images/negative.png)
+
 ## <a id="feature-chooser"></a>Feature Chooser
 
 Issue | Description | Status
 ------|-------------|-------
 If any of the features or their options are changed after initialization the changes won't be reflected in the Feature Chooser.|The feature chooser is rendered only once on initialization and won't be affected if any of the features are modified after this.|![](../../images/images/negative.png)
+
 
 ## <a id="grid-general"></a> igGrid – General
 
