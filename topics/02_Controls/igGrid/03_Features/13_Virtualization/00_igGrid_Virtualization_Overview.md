@@ -53,7 +53,7 @@ With Fixed Row Virtualization, only the visible rows are rendered in the grid an
 
 Compared to Continuous Row Virtualization the Fixed Row Virtualization does support Column Virtualization.
 
-Checkout the [Feature Compatibility Matrix (igGrid)](Feature-Compatibility-Matrix(igGrid).html) for the list of the grid features that work in combination with Fixed Row Virtualization.
+Checkout the [Feature Compatibility Matrix (igGrid)](Feature-Compatibility-Matrix%28igGrid%29.html) for the list of the grid features that work in combination with Fixed Row Virtualization.
 
 The picture on the left demonstrates a grid with 500 records. The picture on the right shows the actual HTML table elements that exist in the DOM to support the virtualized grid.
 
@@ -72,7 +72,7 @@ Column Virtualization depends on Fixed Row Virtualization and will enable it imp
 
 Setting different column widths have little to no effect, because the content is shifted between columns during horizontal scrolling, but the visible columns width stays intact.
 
-Checkout the [Feature Compatibility Matrix (igGrid)](Feature-Compatibility-Matrix(igGrid).html) for the list of the grid features that work in combination with Column Virtualization.
+Checkout the [Feature Compatibility Matrix (igGrid)](Feature-Compatibility-Matrix%28igGrid%29.html) for the list of the grid features that work in combination with Column Virtualization.
 
 The picture on the left demonstrates a grid with 25 columns and 500 records loaded on the client. The picture on the right shows the actual HTML table elements that exist in the DOM to support the virtualized grid.
 
@@ -88,7 +88,7 @@ Continuous Virtualization uses a pre-defined number of rows so that there might 
 
 Compared to Fixed Row Virtualization Continuous Row Virtualization has greater grid feature integration support, it's easier to configure and better handles variable row height.
 
-Checkout the [Feature Compatibility Matrix (igGrid)](Feature-Compatibility-Matrix(igGrid).html) for the list of the grid features that work in combination with Continuous Row Virtualization.
+Checkout the [Feature Compatibility Matrix (igGrid)](Feature-Compatibility-Matrix%28igGrid%29.html) for the list of the grid features that work in combination with Continuous Row Virtualization.
 
 The picture on the left demonstrates a grid with 500 records loaded at on the client. The picture on the right shows the actual HTML table elements that exist in the DOM to support the virtualized grid.
 
@@ -114,7 +114,7 @@ The following topics provide additional information related to this topic.
 
 - [Enabling and Configuring Virtualization](igGrid-Enabling-and-Configuring-Virtualization.html): This topic explains, with code examples, how to enable and configure the Virtualization feature in the `igGrid`.
 - [Performance Guide](iggrid-performance-guide.html): This topic explains in more details the different grid settings that can further improve the performance.
-- [Feature Compatibility Matrix (igGrid)](Feature-Compatibility-Matrix(igGrid).html): This topic show the compatible feature combinations in `igGrid`.
+- [Feature Compatibility Matrix (igGrid)](Feature-Compatibility-Matrix%28igGrid%29.html): This topic show the compatible feature combinations in `igGrid`.
 - [IIS HTTP Compression](https://www.iis.net/configreference/system.webserver/httpcompression?showTreeNavigation=true)
 - [Apache Enable Compression](http://httpd.apache.org/docs/current/mod/mod_deflate.html#enable)
 

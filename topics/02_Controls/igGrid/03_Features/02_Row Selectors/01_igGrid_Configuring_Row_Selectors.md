@@ -381,7 +381,7 @@ Following are some other topics you may find useful.
 This sample shows how to configure a Row Selectors in the `igGrid`.
 
 <div class="embed-sample">
-   [Configuring Row Selectors](%%SamplesEmbedUrl%%/grid/iggrid-configuring-row-selectors)
+   [Configuring Row Selectors](%%SamplesEmbedUrl%%/grid/row-selectors)
 </div>
 
  

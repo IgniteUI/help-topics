@@ -17,8 +17,6 @@ This document demonstrates how to bind the `igGrid` control to a JSON array, Jav
 
 The following steps demonstrate how to bind the `igGrid` control to client-side data.
 
-[**Table as DataSource Sample**](iggrid-binding-to-datatable.html#dataTable_example)
-
 1.  To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) help topic.
 2.  On your HTML page, reference the required JavaScript and CSS files.
 
@@ -165,7 +163,7 @@ The following steps demonstrate how to bind the `igGrid` control to client-side 
 
 ## Related Links
 
--   [Table as DataSoure Sample](iggrid-binding-to-datatable.html#dataTable_example)
+-   [Table as DataSoure Sample](iggrid-binding-to-datatable.html)
 -   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
 -   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
 
