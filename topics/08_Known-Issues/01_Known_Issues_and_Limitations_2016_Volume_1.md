@@ -46,6 +46,7 @@ This topic contains the following sections:
     -   [igGridSummaries](#grid-summaries)
     -   [igGridTooltips](#grid-tooltips)
     -   [igGridUpdating](#grid-updating)
+    -   [igGridHiding](#grid-hiding)
     -   [igGridExcelExporter](#grid-exporter)
     -   [Feature Chooser](#feature-chooser)
     -   [igTreeGrid](#tree-grid)
@@ -1069,6 +1070,14 @@ Excel Navigation mode supported only for Cell Edit mode. | When [`excelNavigatio
 Adding and updating a virtual grid doesn’t work if it is grouped | When using GroupBy and Updating in a virtual grid, updating or adding rows will not work when the grid is grouped. If you ungroup you will see the newly added record at the bottom of the grid records. | ![](../images/images/negative.png)
 Updating rows/cells when the Updating and Continuous Virtualization features are enabled while [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) is disabled is not supported. | Editing rows/cells with Updating when the [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) grid option is set to false and Continuous Virtualization is enable will throw exception. | ![](../images/images/positive.png)
 Keyboard navigation while in edit mode does not wrap-around if virtualization is enabled. | When virtualization is enabled keyboard navigation with Tab/Shift+Tab when edit mode is "cell" and keyboard navigation with Enter/Shift+Enter when edit mode is "row" will not wrap-around. When reaching the last row/cell and navigating to the next one the first row/cell will not enter edit mode and the same will happend when reaaching the first row/cell and navigating to the previous one - the last row/cell will not enter edit mode. | ![](../images/images/negative.png)
+
+Go up to [Known Issues and Limitations Summary](#summary)
+
+### <a id="grid-hiding"></a> igGridHiding
+
+Issue | Description | Status
+---|---|---
+Hidden column indicator is not displayed correctly when having MultiColumnHeaders. | When hiding a root header element the hiding indicator may be shown under another visible column group, creating the incorrect impression that the hidden column belongs to that group.| ![](../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
