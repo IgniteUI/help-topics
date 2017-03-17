@@ -268,6 +268,19 @@ Use the [fixNonDataColumns](%%jQueryApiUrl%%/ui.iggrid#methods:fixNonDataColumns
 ![](../../images/images/negative.png)
 			</td>
         </tr>
+        <tr>
+            <td>
+Caption rendering differs whether there is height set for the grid or not.
+			</td>
+            <td>
+    1. When there is grid [caption](%%jQueryApiUrl%%/ui.iggrid#options:caption) and [height](%%jQueryApiUrl%%/ui.iggrid#options:height) set two captions are rendered, one for the fixed and one for the unfixed area.<br />
+    2. When there is grid caption without height set only one caption is rendered for the grid.<br />
+    The difference is caused by the more complex DOM structure used when there is grid height set.<br />
+			</td>
+            <td>
+![](../../images/images/negative.png)
+			</td>
+        </tr>
     </tbody>
 </table>
 
@@ -361,6 +374,7 @@ Issue | Description | Status
 [Incorrect selection when selecting row/cell with continuous virtualization enabled](#selection-continuous-virtualization) | When selecting row/cell of the `igGrid` while continuous virtualization is enabled, the grid scrolls down and a different row/cell is selected due to a bug in jQuery version 1.6.4. This problem appears only in this version of the jQuery library. | ![](../../images/images/positive.png)
 Incorrect cell selection when selecting with mouse dragging and persistence is enabled|Selecting with mouse dragging when persistence is enabled and there are rows which cells are duplicated (the rows are visually the same) will select only the cells from the first row.|![](../../images/images/positive.png)
 [Text selection is not working when Selection feature is enabled](#text-selection) | The Selection feature disables text selection inside the grid by cancelling the selectstart event and as a result the cell's text cannot be selected. | ![](../../images/images/positive.png)
+[Selecting a row in IE scrolls the row to most left in a grid with horizontal scrollbar](#selecting-rows-ie) | Selecting a row in IE is applying focus to the row, which scrolls the `igGrid` all the way to the left. | ![](../../images/images/positive.png)
 
 
 
@@ -951,6 +965,17 @@ Selecting with mouse dragging when persistence is enabled and there are rows whi
 
 >**Workaround**: Set persistence to false.
 
+### <a id="selecting-rows-ie"></a> Selecting a row in IE scrolls the row to most left in a grid with horizontal scrollbar
+
+Selecting a row in IE is applying focus to the row, which scrolls the `igGrid` all the way to the left.
+
+> **Workaround 1** 
+> 
+> Removе activation altogether (note that this will remove Selection's keyboard navigation)
+
+> **Workaround 2** 
+> 
+> Change the selection mode to "cell"
 
 ## <a id="summaries"></a> igGridSummaries
 
