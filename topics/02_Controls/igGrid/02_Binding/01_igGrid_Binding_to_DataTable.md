@@ -87,10 +87,6 @@ When the `AutoGenerateColumns` property is set to true, the grid columns' defini
 
 > **Note:** Having one or more defined columns alongside `AutoGenerateColumns` set to *true* is **not** a valid scenario - you need to either have all columns defined or auto-generated.
 
-<a id="dataTable_example"></a><div class="embed-sample">
-   [Binding to DataTable](%%SamplesEmbedUrl%%/grid/datatable-binding)
-</div>
-
 ### <a id="dataSet"></a> Binding to *DataSet*
 
 There is a new property introduced in the `igGrid` ASP.NET MVC helper: **`DataMember`**.
@@ -142,7 +138,61 @@ Similarly, the summaries feature is unsupported when using a `DataTable`/`DataSe
 
 *Remote sorting and filtering* can be implemented by processing the request and filtering and/or sorting the data on the `DataSet`/`DataTable` level before returning the data.
 
-For more details how to implement remote *sorting* by processing the request and sorting the data on `DataTable` level before returning it, you can take a look at the [DataTable Binding](#dataTable_example) sample. 
+The below example demonstrates how to implement remote *sorting* by processing the request and sorting the data on the `DataTable` level before returning it.
+
+**In C#:**
+
+```csharp
+[GridDataSourceAction]
+[ActionName("UpdateDataTableGrid")]
+public ActionResult UpdateDataTableGrid()
+{
+    DataTable dt = this.MyEmployees;
+	NameValueCollection queryString = HttpUtility.ParseQueryString(Request.QueryString.ToString());
+	// check the query string for sorting expressions
+	List<SortExpression> sortExpressions = BuildSortExpressions(queryString, "sort", true);
+	DataView dv = customers.DefaultView;
+	if (sortExpressions.Count > 0)
+	{
+		String sortExpression = "";
+		foreach (SortExpression expr in sortExpressions)
+		{
+			sortExpression += expr.Key + " " + (expr.Mode == SortMode.Ascending ? "asc" : "desc") + ",";
+		}
+		dv.Sort = sortExpression.Substring(0, sortExpression.Length - 1);
+	}
+	return View("UpdateDataTableGrid", dv.ToTable());
+}
+
+public List<SortExpression> BuildSortExpressions(NameValueCollection queryString, string sortKey, bool isTable)
+{
+	List<SortExpression> expressions = new List<SortExpression>();
+	List<string> sortKeys = new List<string>();
+	foreach (string key in queryString.Keys)
+	{
+		if (!string.IsNullOrEmpty(key) && key.StartsWith(sortKey))
+		{
+			SortExpression e = new SortExpression();
+			e.Key = key.Substring(key.IndexOf("(")).Replace("(", "").Replace(")", "");
+			e.Logic = "AND";
+			e.Mode = queryString[key].ToLower().StartsWith("asc") ? SortMode.Ascending : SortMode.Descending;
+			expressions.Add(e);
+			sortKeys.Add(key);
+		}
+	}
+	if (sortKeys.Count > 0 && isTable)
+	{
+		foreach (string sortedKey in sortKeys)
+		{
+			queryString.Remove(sortedKey);
+		}
+		string url = Request.Url.AbsolutePath;
+		string updatedQueryString = "?" + queryString.ToString();
+		Response.Redirect(url + updatedQueryString);
+	}
+	return expressions;
+}
+```
 
 The following features work remotely when binding to a `DataTable` or `DataSet`:
 

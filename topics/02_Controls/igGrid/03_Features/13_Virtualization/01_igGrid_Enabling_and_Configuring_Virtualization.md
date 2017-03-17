@@ -38,8 +38,8 @@ This topic contains the following sections:
 
 The following table lists the different configurable settings of the Virtualization feature and maps them to the respective properties that manage them.
 
-|Setting | Property | Description
-| -------------------| ------------------- |----------- 
+Setting | Property | Description
+---|---|---
 Row virtualization | [rowVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:rowVirtualization) | Enables/Disables virtualization for rows only.
 Column virtualization | [columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) | Enables/Disables Column Virtualization. Column Virtualization depends on Fixed Row Virtualization and will enable it implicitly if it is not enabled explicitly.
 Both Row and Column virtualization | [virtualization](%%jQueryApiUrl%%/ui.iggrid#options:virtualization) | Shorthand for setting `rowVirtualization` and `columnVirtualization` via a single option.
