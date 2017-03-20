@@ -46,7 +46,7 @@ This topic contains the following sections:
 ## <a id="overview"></a> HistoryJS Integration Overview
 
 HTML5 has History/State APIs that allows manipulating the browser history. With the expanding usage of Single Page Applications, where all the page manipulations happen asynchronously, the need to change the page URL accordingly, when having dynamic page change, grows. This is also required, in order to have a unique entry point to each page section. HTML5 History/State APIs allows saving a page states and create corresponding URL's for each of them, and while navigating back and forward across the page to restore that page's states.
-Not all the browsers still fully support that functionality, but the [HistoryJS](https://github.com/browserstate/history.js/) framework polyfills the problems that may occur across the browers.
+Not all the browsers still fully support that functionality, but the [HistoryJS](https://github.com/browserstate/history.js/) framework polyfills the problems that may occur across the broswers.
 
 When using the browser History API, a current page is defined with three main parameters:
      - state - object that is holding current page information.
@@ -55,9 +55,9 @@ When using the browser History API, a current page is defined with three main pa
 
 Then the current page state can be added to the history stack, replaced or restored from there and it is available, when navigating through the browser history.
 
-Ignite UI controls can be fully integrated with history.js – a popular framework for browser history support. When we want to save the state of IgniteUI control, we use its client-side event API. Those events carry the current state of the IgniteUI control - a state we can use the push to browser stack. Follow the next paragraph for more information of how to integrate igGrid with the HistotyJS framework.
+Ignite UI controls can be fully integrated with history.js – a popular framework for browser history support. When we want to save the state of IgniteUI control, we use its client-side event API. Those events carry the current state of the IgniteUI control - a state we can use the push it to the browser history stack. Follow the next paragraph for more information of how to integrate igGrid with the HistotyJS framework.
 
-The following are the browser History and HistoryJS API methods that are needed to enable that functionlaity for the IgniteUI controls. Follow that [topic](https://developer.mozilla.org/en-US/docs/Web/API/History_API), for detailed information about the full browser History API and [HistoryJS](https://github.com/browserstate/history.js/) framework overview in GitHub.
+The following are the browser History and HistoryJS API methods that are needed to enable that functionality for the IgniteUI controls. Follow that [topic](https://developer.mozilla.org/en-US/docs/Web/API/History_API), for detailed information about the full browser History API and [HistoryJS](https://github.com/browserstate/history.js/) framework overview in GitHub.
 
 
  - pushState() - add an entry to the history stack.
@@ -103,7 +103,7 @@ pageIndexChanged: function (e, args) {
 
 ```
 As you see we choose our state to have the name of the feature and the pageIndex. This is all we need to have the proper paging state and restore it lately.
-Note: In the sample code below you can see what the _formURL()_ method is doing to create an propert URL. In this case with paging, it builds the following string: "?page=2" and associate it with the current paging state, while for other features it is more complicated.
+Note: In the sample code below you can see what the _formURL()_ method is doing to create an proper URL. In this case with paging, it builds the following string: "?page=2" and associate it with the current paging state, while for other features it is more complicated.
 
 Then the state can be recovered inside the statechange event handler:
 
@@ -114,7 +114,7 @@ window.History.Adapter.bind(window, 'statechange', function (e, args) {
 }
 ```
 
-This enough for a feature like paging, where we always have a selected page and also have only one method to change paging state - _pageIndex()_.
+This is enough for a feature like paging, where we always have a selected page and also have only one method to change paging state - _pageIndex()_.
 The procedure above will not work for a feature like sorting. Imagine we have the following case:
 
 1. The grid is not sorted.
@@ -162,9 +162,9 @@ window.History.Adapter.bind(window, 'statechange', function (e, args) {
 }
 ```
 
-The problem here is how to destinguish, which is the correct method you need, when going back in the history? This is not possible, unless you have some additional information for the current history state. What we really need, in this case is, before we add new state for the sorted column (in 3.), then modify the previous paging state and add an undo state for the sorted column. This will help, not only restore the previous paging state, but in addition to undo and unsort the current sorted one.
+The problem here is how to distinguish, which is the correct method you need, when going back in the history? This is not possible, unless you have some additional information for the current history state. What we really need, in this case is, before we add new state for the sorted column (in 3.), then modify the previous paging state and add an undo state for the sorted column. This will help, not only restore the previous paging state, but in addition to undo and unsort the current sorted one.
 
-For each feature state, before we add it to the history stack, we want to save its undo state. This can happen in an IgniteUI control's _-ing_ event, where we still have the old state inforamtion. For sorting, it is the columnSorting event:
+For each feature state, before we add it to the history stack, we want to save its undo state. This can happen in an IgniteUI control's _-ing_ event, where we still have the old state information. For sorting, it is the columnSorting event:
 
 ```
 columnSorting: function (e, args) {
@@ -177,7 +177,7 @@ columnSorting: function (e, args) {
 }
 ```
 
-We take the previos state, add and undo information to it, and replace it in the hisotry stack. 
+We take the previous state, add and undo information to it, and replace it in the hisotry stack. 
 The code above defines an object _undoData_ similar to the _data_ one, having in addition a flag that says the state needs to be undone.
 
 ```
