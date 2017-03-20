@@ -31,11 +31,13 @@ This topic contains the following sections:
 
 ## <a id="summaries-overview"></a> GroupBy Summmaries Feature Overview
 
-The GroupBy Summaries feature allows an additional summary row to be displayed below each group data island that displays summary information for the data columns in that island. The below image demonstrates a grid with grouped columns where below each group the total sum of the "Price" column is displayed in a summary row:
+The GroupBy Summaries feature allows an additional summary row to be displayed below each group data island that displays summary information for the data columns in that island. The summary row is visible only when the related group is expanded. The below image demonstrates a grid with grouped columns where below each group the total sum of the "Price" column is displayed in a summary row:
 
 ![](images/igGrid_GroupBy_Summaries_Overview_01.png)
     
 This feature allows the user to display the result for either a default summary function (Sum, Min, Max, Avg etc.) or a custom one in order to provide a meaningful summary of the data group.
+
+This feature can also be combined with the igGrid Summaries feature in order to display summary information for the whole data in the grid footer. 
 
 ## <a id="enable-summaries"></a> Enabling GroupBy Summmaries
 
@@ -71,7 +73,20 @@ Below you can see an example result with the default settings:
 
 ![](images/igGrid_GroupBy_Summaries_Overview_02.png)
 
-The applicabe column types as well as other default summaries related options can be modified via the `$.ig.util.defaultSummaryMethods` collection.
+The applicabe column types as well as other default summaries related options can be modified via the `$.ig.util.defaultSummaryMethods` array.
+
+The summary method object in the `$.ig.util.defaultSummaryMethods` array has the following options:
+
+Name | Description | Type 
+-----| ------------| -----
+label | Label that will be applied to the result of the summary function. | string
+name | Name of the summary function. Ex: {summaryFunction: “count”} | string
+summaryFunction | Speficies the function that will be used when calculating the summary. | function
+dataType | Speficies to which type of column this summary is applicable. Setting it to 'any' will apply this summary to all column types. | 'any' or array 
+active | Sets if the summary should be applied. | boolean | true
+order | Speficies the order in which this summary will be placed when there are multiple summaries. order: 0 means that it will be displayed on top of all summaries. |  number 
+applyFormat | Sets whether formatting will be applicable for the summary value. | boolean
+
 
 ### <a id='summaries-advanced'></a>Advanced settings
 
@@ -104,7 +119,7 @@ $("#grid1").igGrid({
 This summary will be applied for all columns whose data type allows applying it. 
 In this example since the "Sum" summary is only applicable for numeric columns only the numeric columns in the grid will have a "Sum" summary displayed in the summary row.
 
-The columnSettings.groupSummaries option allows specifying a summary per column, which takes higher priority than the groupSummaries main level option. When this option is set for a particular column any settings related to this column from the main groupSummaries option are disregarded.
+The `columnSettings.groupSummaries` option allows specifying a summary per column, which takes higher priority than the groupSummaries main level option. When this option is set for a particular column any settings related to this column from the main `groupSummaries` option are disregarded.
 
 The <a id="groupSummariesObject"></a>**groupSummariesObject** used for specifying the summary options has the following properties:
 Name| Description | Type | Default value |
@@ -167,6 +182,12 @@ function existingCount(data, dataType) {
 
 
 ## <a id="related-content"></a> Related Content
+
+### <a id="samples"></a> Related Samples
+
+The following sample provides additional information related to this topic.
+
+- [Grouping with summaries](%%SamplesUrl%%/grid/grouping)
 
 ### <a id="topics"></a> Topics
 

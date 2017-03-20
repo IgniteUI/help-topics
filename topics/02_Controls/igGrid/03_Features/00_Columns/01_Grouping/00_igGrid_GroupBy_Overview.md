@@ -36,7 +36,7 @@ The `igGrid` supports a column grouping functionality that enables the user to e
 
 Grouping in the `igGrid` works the same as the analogous functionality in Microsoft® Office Outlook® – you drag a column that you want to group by and drop it into a special grouping area above the grid. This re-arranges the grid with as many groups as distinct value are there in the selected column. In addition, inside the groups, the records are sorted. If you drop additional columns, then, within the already existing groups, further gropings are applied.
 
-You can define your own custom grouping method. For details about custom grouping, refer to the Grid Outlook Group By Overview topic.
+You can define your own custom grouping method. For details about custom grouping, refer to the Grid Group By Overview topic.
 
 Grouping is implemented and managed by the Group By widget.
 
@@ -90,10 +90,16 @@ The table below briefly explains the grouping main features and the Group By wid
             <td>[ColumnSettings](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridGroupBy~ColumnSettings.html)</td>
         </tr>
         <tr>
-            <td>Group summaries</td>
+            <td>Group summaries in group row</td>
             <td>Group summaries are provide some group-specific information about every group, like the the count of the rows in the group. Group summaries are configured individually for every group.</td>
             <td>[summarySettings](%%jQueryApiUrl%%/ui.iggridgroupby#options:summarySettings)</td>
             <td>[SummarySettings](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridGroupBy~SummarySettings.html)</td>
+        </tr>
+         <tr>
+            <td>GroupBy Summaries per data-island</td>
+            <td> Allows an additional summary row to be displayed below each group data island that displays summary information for the data columns in that island.</td>
+            <td>[groupSummaries](%%jQueryApiUrl%%/ui.iggridgroupby#options:groupSummaries)</td>
+            <td>[SummarySettings](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridGroupBy~GroupSummaries.html)</td>
         </tr>
         <tr>
             <td>Grouped row text templates</td>
@@ -239,9 +245,9 @@ When focus is on the dialog:
 
 The following topics provide additional information related to this topic.
 
-- [Grid Outlook Group By Getting Started](igGrid-Enabling-GroupBy.html)
+- [Enabling Column Grouping (igGrid)](igGrid-Enabling-GroupBy.html)
 
-- [Grid Outlook Group By Properties Reference](%%jQueryApiUrl%%/ui.iggridgroupby#options)
+- [Grid Group By Properties Reference](%%jQueryApiUrl%%/ui.iggridgroupby#options)
 
 - [Grid Known Issues and Breaking Changes](igGrid-Known-Issues.html)
 
