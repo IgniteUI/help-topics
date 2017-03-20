@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# GroupBy Summary Feature Overview (igGrid)
+# GroupBy Summaries Feature Overview (igGrid)
 
 ## Topic Overview
 
@@ -35,7 +35,7 @@ The GroupBy Summaries feature allows an additional summary row to be displayed b
 
 ![](images/igGrid_GroupBy_Summaries_Overview_01.png)
     
-This feature allows the user to display the result for either a default summary function (Sum, Min, Max, Avg etc.) or a custom one in order to provide a meaningful summary for the data group.
+This feature allows the user to display the result for either a default summary function (Sum, Min, Max, Avg etc.) or a custom one in order to provide a meaningful summary of the data group.
 
 ## <a id="enable-summaries"></a> Enabling GroupBy Summmaries
 
@@ -102,7 +102,7 @@ $("#grid1").igGrid({
 ```
 
 This summary will be applied for all columns whose data type allows applying it. 
-In this example since the "Sum" summary is only applicable for numeric columns all of the numeric columns in the grid will have a "Sum" summary displayed in the summary row.
+In this example since the "Sum" summary is only applicable for numeric columns only the numeric columns in the grid will have a "Sum" summary displayed in the summary row.
 
 The columnSettings.groupSummaries option allows specifying a summary per column, which takes higher priority than the groupSummaries main level option. When this option is set for a particular column any settings related to this column from the main groupSummaries option are disregarded.
 
@@ -120,7 +120,15 @@ They allow futher customization of the look of the summary when it gets displaye
 
 Custom summaries allow specifying a custom function for aggregating the data from the data islands.
 In order to set a custom summary you can set a function to the `summaryFunction` property of the group summaries object.
-Depending on whether you want to apply the custom summary to all columns or just for a specific one you can define the group summaries object either in the top level GroupBy groupSummaries array or the one in the columnSettings for a particular columns. 
+
+The group summaries object can be added to one of the following collections, which will determine which columns the custom summary will be applied to as follows:
+
+When set in: | Custom summary is applied to: 
+---|---
+[columnSettings.groupSummaries](%%jQueryApiUrl%%/ui.iggridgroupby#options:columnSettings.groupSummaries) | The particular column only.
+[groupSummaries](%%jQueryApiUrl%%/ui.iggridgroupby#options:groupSummaries) | All columns.
+$.ig.util.defaultSummaryMethods | All columns.
+
 The function accepsts the data island data and should return the summary result for that data.
 
 Custom Summary Example:
@@ -146,7 +154,7 @@ $("#grid1").igGrid({
     dataSource: data
  });
 
-function existingCount(data) {
+function existingCount(data, dataType) {
     var i, count = 0; 
     for (i = 0; i < data.length; i++) {
         if(data[i] === "Y"){
