@@ -12,25 +12,34 @@
 
 This topic contains the following sections:
 
+-   [Introduction](#introduction)
 -   [Download and Install](#download)
 -   [Host Ignite UI in your project](#hosting)
     -   [Using NPM, JSPM, NuGet](#package_managers)
     -   [Add CSS and JavaScript references](#add_references)
-    -   [Sample Ignite UI Boilerplate html page (using trial CDN links)](#boilerplate)
+    -   [Sample Ignite UI Boilerplate HTML page (using trial CDN links)](#boilerplate)
 -   [Add your first control](#first_control)
     -   [Add an igGrid Directly](#directly)
     -   [Add an igGrid using Page Designer](#page_designer)
 -   [Get just what you need](#custom_download)
 -   [Using CDN Links](#cdn)
 -   [TypeScript Directives](#typescript)
--   [AngularJS Wrappers](#angularjs)
--   [Angular 2 Wrappers](#angular)
--   [ReactJS Wrappers](#reactjs)
+-   [AngularJS Extensions](#angularjs)
+-   [Angular 2 Extensions](#angular)
+-   [ReactJS Extensions](#reactjs)
 -   [Related Content](#related_content)
+
+# <a id="introduction"></a>Introduction
+
+Ignite UI&trade; is an advanced HTML5+ toolset that helps you create stunning, modern Web apps. Building on jQuery and jQuery UI, it primarily consists of feature rich, high-performing UI controls/widgets such as all kinds of charts, data visualization maps, (hierarchical, editable) data grids, pivot grids, enhanced editors (combo box, masked editors, HTML editor, date picker, to name a few), flexible data source connectors, and a whole lot more.
+
+Ignite UI comes in two vesions: 
+-   Full - a paid version that contains the complete toolset.
+-   Open Source - a free version that contains a subset of the complete toolset. Grids and Data Visualization controls are excluded. For more information checkout the [Ignite UI OSS](https://github.com/IgniteUI/ignite-ui) project on GitHub&trade;.
 
 # <a id="download"></a>Download and Install
 
-You can download the Ignite UI&trade; from its [download page](http://www.infragistics.com/products/ignite-ui/download). 
+You can download the Ignite UI from its [download page](http://www.infragistics.com/products/ignite-ui/download). 
 Depending on your operating system you have several options to install the product, both trial and licensed.
 
 For Windows:
@@ -48,7 +57,7 @@ A Windows only offline MSI installer containing the product and samples.
 # <a id="hosting"></a>Host Ignite UI in your project
 
 You have several options to host Ignite UI in your project:
-- Copy the JavaScript and CSS files from the Ignite UI installation directory into your project
+- Copy the [JavaScript and CSS files](Adding_the_Required_Resources_for_NetAdvantage_for_jQuery.html) from the Ignite UI installation directory into your project
 - Use [Infragistics Content Delivery Network (CDN)](#cdn)
 - Use Package Manager like NPM, JSPM, NuGet
 
@@ -56,15 +65,15 @@ You have several options to host Ignite UI in your project:
 
 Ignite UI supports a number of package managers: NPM, JSPM and NuGet.
 
-NPM (installs Ignite UI Open Source)
+NPM (installs [Ignite UI Open Source](https://www.npmjs.com/package/ignite-ui))
 
 ```
     npm install ignite-ui
 ```
 
-For instructions how to configure the licensed package, please check [Using Ignite UI npm packages](Using_Ignite_UI_Npm_Packages.html) topic.
+For instructions how to configure the full licensed package, please check [Using Ignite UI npm packages](Using_Ignite_UI_Npm_Packages.html) topic.
 
-NuGet (installs Ignite UI Trial)
+NuGet (installs [Ignite UI Trial](https://www.nuget.org/packages/IgniteUI/))
 
 ```
     Install-Package IgniteUI
@@ -72,12 +81,12 @@ NuGet (installs Ignite UI Trial)
 
 For instructions how to configure the licensed package, please check [Using Ignite UI NuGet packages](Using_Ignite_UI_NuGet_Packages.html) topic.
 
-JSPM (installs Ignite UI Open Source)
+JSPM (installs [Ignite UI Open Source](https://www.npmjs.com/package/ignite-ui))
 ```
     jspm install npm:ignite-ui
 ```
 
-For instructions how to configure the licensed package, please check [Using System.JS with Ignite UI controls](Using-System.JS-with-IgniteUI-controls.html) topic.
+For instructions how to configure the full licensed package, please check [Using System.JS with Ignite UI controls](Using-System.JS-with-IgniteUI-controls.html) topic.
 
 ## <a id="add_references"></a>Add CSS and JavaScript references
 
@@ -87,7 +96,9 @@ Ignite UI depends on jQuery and jQuery UI libraries and you need to add referenc
 - Using Infragistics Loader - The Infragistics Loader is a loader that can automatically load Ignite UI files (and not only). It saves you the burden to reference control files manually. For more information check [Adding Required Resources Automatically with the Infragistics Loader](Using_Infragistics_Loader.html) topic.
 - Using AMD Loader - Ignite UI is AMD compatible and can be used with all popular AMD loaders.
 
-## <a id="boilerplate"></a>Sample Ignite UI Boilerplate html page (using trial CDN links)
+## <a id="boilerplate"></a>Sample Ignite UI Boilerplate HTML page (using trial CDN links)
+
+The following code represents a sample boilerplate HTML page containing the required references (CDN links) needed to start using Ignite UI.
 
 ```
 <!DOCTYPE html>
@@ -104,6 +115,12 @@ Ignite UI depends on jQuery and jQuery UI libraries and you need to add referenc
         /* ----- CSS Goes Here ----- */
 
     </style>
+</head>
+<body>
+
+    <!-- ----- HTML Goes Here ----- -->
+
+    <table id="grid"></table>
 
     <!-- JavaScript Library Dependencies -->
     <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -112,13 +129,7 @@ Ignite UI depends on jQuery and jQuery UI libraries and you need to add referenc
     <!-- Ignite UI Required Combined JavaScript Files -->
     <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
     <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
-    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
-
-</head>
-<body>
-
-    <!-- ----- HTML Goes Here ----- -->
-    
+    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>    
     <script>
 
         $(function () {
@@ -182,12 +193,11 @@ $(function () {
 ## <a id="page_designer"></a>Add an igGrid using Page Designer
 
 The Ignite UI Page Designer gives you a complete designer experience to configure any Ignite UI control by only using the mouse.
-To add `igGrid` to a page design area (on the left) in the toolbox on the right find "List & Pickers" sectoin and drag and drop the Grid control. Then use the Property Editor to configure the grid. When ready just copy the resulting generated page.
+To add `igGrid` to a page design area (on the left) in the toolbox (on the right) find "List & Pickers" section and drag and drop the Grid control. Then use the Property Editor to configure the grid. When ready just copy the resulting generated page.
 
 # <a id="custom_download"></a>Get just what you need
 
-The Ignite UI [Custom Download Page](https://www.igniteui.com/download) gives you the option to choose only the Ignite UI controls and features you use in your project and download optimized (minified and combined) JavaScript and CSS files.
-
+The Ignite UI [Custom Download Page](https://www.igniteui.com/download) gives you the option to choose only the Ignite UI controls and features you use in your project and download optimized (minified and combined) JavaScript and CSS files for maximum page load performance.
 
 # <a id="cdn"></a>Using CDN Links
 
@@ -209,6 +219,22 @@ Following are the Ignite UI Trial links. For more details checkout [Infragistics
     <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
     <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
 ```
+
+# <a id="typescript"></a>TypeScript Directives
+
+Ignite UI provides type definitions for TypeScript allowing you to take advantage of strong typing, compile time checking and IntelliSense features. For more information check [Using Ignite UI with TypeScript](Using_Ignite_UI_with_TypeScript.html) topic.
+
+# <a id="typescript"></a>AngularJS Extensions
+
+Ignite UI AngularJS extenstions provide two-way data binding and declarative initialization for controls used in AngularJS applications. For more information check [Using Ignite UI with AngularJS](Using_Ignite_UI_with_AngularJS.html) topic.
+
+# <a id="angular"></a>Angular 2 Extensions
+
+Ignite UI Angular 2 Extensions provide two-way data binding, declarative initialization and native API for controls used in Angular 2 applications. For more information  check [Ignite UI extensions for Angular 2](https://github.com/IgniteUI/igniteui-angular2) on GitHub.
+
+# <a id="reactjs"></a>ReactJS Extensions
+
+Ignite UI ReactJS extenstions provide JSX markup and React API initialization. For more information check [Ignite UI extensions for React ](https://github.com/IgniteUI/igniteui-react) on GitHub.
 
 # <a id="related_content"></a>Related Content
 
