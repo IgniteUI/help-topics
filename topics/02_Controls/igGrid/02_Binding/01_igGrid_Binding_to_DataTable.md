@@ -21,7 +21,7 @@ Starting with version 12.2, the `igGrid` supports binding to `DataTable` objects
 The following topics are prerequisites to understanding this topic:
 
 - [igGrid Overview](igGrid-Overview.html): This topic explains how to add the `igGrid` to a web page.
- 
+
 - [igGrid/igDataSource Architecture Overview](igGrid-igDataSource-Architecture-Overview.html): This topic explains the inner workings of `igGrid` and how it collaborates with `igDataSource` to enable binding to different data sources.
 
 - [igGrid Updating](igGrid-Updating.html): This topic explains how to use the Updating feature of the `igGrid` control.
@@ -38,7 +38,7 @@ This topic contains the following sections:
     -   [Binding to DataTable](#dataTable)
     -   [Binding to DataSet](#dataSet)
 -   [Known issues and limitations](#known-issues)
--   [Update the grid using the Json.NET serializer](#json-net) 
+-   [Update the grid using the Json.NET serializer](#json-net)
     -   [Prerequisites](#json-net-prerequisites)
     -   [Overview](#json-net-overview)
     -   [Steps](#json-net-steps)
@@ -58,17 +58,17 @@ Binding to a `DataTable` can be done by passing the `DataTable` through the **`G
 
 In the scenario below, the model is a `DataTable` (you may set the type to be a .NET dynamic as well). In this  case, the `DataTable` is returned from a `GridDataSourceAction` `ActionMethod` which serializes the model (`DataTable`) into JSON and returns it from the server to be consumed on the client.
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
 @model  System.Data.DataTable
-<%=(Html.Infragistics().Grid<System.Data.DataTable>().ID("grid1").Height("500px")
+@(Html.Infragistics().Grid<System.Data.DataTable>().ID("grid1").Height("500px")
 		…
         .DataSource(Model)
-        .DataSourceUrl(Url.Action("UpdateDataTableGrid"))        
-        .DataBind()        
-        .Render())
-%>
+        .DataSourceUrl(Url.Action("UpdateDataTableGrid"))
+        .DataBind()
+        .Render()
+)
 ```
 
 **In C#:**
@@ -93,7 +93,7 @@ There is a new property introduced in the `igGrid` ASP.NET MVC helper: **`DataMe
 
 It contains the name of the `DataTable` from the `DataSet` bound to the current `igGrid`.
 
-When set, the grid looks for the name of the `DataTable` matching the `DataMember` value from the `DataSet` to which the grid is bound. The property is useful when `AutoGenerateLayouts` is false and the layouts are defined manually. 
+When set, the grid looks for the name of the `DataTable` matching the `DataMember` value from the `DataSet` to which the grid is bound. The property is useful when `AutoGenerateLayouts` is false and the layouts are defined manually.
 
 > **Note:** Another change made in v12.2 is that `AutogenerateLayouts` is false by default.
 
@@ -107,13 +107,13 @@ When the `igGrid` performs remote filtering, sorting, and grouping, it uses LINQ
 
 Similarly, the summaries feature is unsupported when using a `DataTable`/`DataSet` as a data source.
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
-<%=(Html.Infragistics().Grid<dynamic>().ID("grid1").Height("500px")
-		.AutoGenerateColumns(true)       
+@(Html.Infragistics().Grid<dynamic>().ID("grid1").Height("500px")
+		.AutoGenerateColumns(true)
 		.RenderCheckboxes(true)
-		.AutoCommit(false)       
+		.AutoCommit(false)
 		.Features(features => {
 		    features.Sorting().Type(OpType.Local).Mode(SortingMode.Single);
 		    features.Filtering().Type(OpType.Local);
@@ -125,7 +125,7 @@ Similarly, the summaries feature is unsupported when using a `DataTable`/`DataSe
 		    features.RowSelectors();
 		    features.Resizing();
 		    features.Tooltips().Visibility(TooltipsVisibility.Always);
-		})        
+		})
 		.GenerateCompactJSONResponse(false)
 		.DataSource(Model)
 		.DataSourceUrl(Url.Action("datatable-interactions"))
@@ -133,7 +133,8 @@ Similarly, the summaries feature is unsupported when using a `DataTable`/`DataSe
 		.DataBind()
 		.Width("100%")
 		.Height("100%")
-		.Render()) %>
+		.Render()
+)
 ```
 
 *Remote sorting and filtering* can be implemented by processing the request and filtering and/or sorting the data on the `DataSet`/`DataTable` level before returning the data.
@@ -203,16 +204,16 @@ The following features work remotely when binding to a `DataTable` or `DataSet`:
 
 If a `DataTable` or a `DataSet` has a `PrimaryKey` defined then the `igGrid` automatically uses it, otherwise set this manually through the ASP.NET MVC helper. This is needed when updating feature is enabled.
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
 // The Model in the code snippet below is a DataTable
-<%=(Html.Infragistics().Grid<DataTable>(Model).ID("grid1").Height("500px")
+@(Html.Infragistics().Grid<DataTable>(Model).ID("grid1").Height("500px")
         .PrimaryKey("ProductID")
         .AutoGenerateLayouts(true)
-        .AutoGenerateColumns(true)       
+        .AutoGenerateColumns(true)
         .RenderCheckboxes(true)
-        .AutoCommit(false)   
+        .AutoCommit(false)
         .GenerateCompactJSONResponse(false)
         .DataSource(Model)
         .DataSourceUrl(Url.Action("datatable-interactions"))
@@ -220,14 +221,15 @@ If a `DataTable` or a `DataSet` has a `PrimaryKey` defined then the `igGrid` aut
         .DataBind()
         .Width("100%")
         .Height("100%")
-        .Render()) %>
+        .Render()
+)
 ```
 
 ### When updating, a serializer which supports Dictionary&lt;string, string&gt; should be used
 
 When updating, a serializer which supports `Dictionary<string, string>` should be used It is a known issue that the Microsoft JSON serializer doesn’t support deserializing a Dictionary to JSON. If you want to use the updating feature, the `GridModel` must override the `LoadTransactions` method. You can use the Json.NET serializer for this purpose. You can download it from the page below and it is also included in ASP.NET MVC 4 as the default serializer.
 
-[http://james.newtonking.com/projects/json-net.aspx](http://james.newtonking.com/projects/json-net.aspx)
+[http://www.newtonsoft.com/json](http://www.newtonsoft.com/json)
 
 **In C#:**
 
@@ -239,7 +241,7 @@ public List<Transaction<T>> LoadTransactionsDictionary<T>(string postdata) where
 }
 ```
 
-Another approach is to create a model based on the table’s layout and use it in the `LoadTransactions` method. The sample code below demonstrates how to use the updating feature when binding to `DataTable` and passing a model based on the table’s layout in the `LoadTransactions` method. 
+Another approach is to create a model based on the table’s layout and use it in the `LoadTransactions` method. The sample code below demonstrates how to use the updating feature when binding to `DataTable` and passing a model based on the table’s layout in the `LoadTransactions` method.
 
 **In C#:**
 
@@ -254,7 +256,7 @@ public class Employee
     public bool OnSite { get; set; }
 }
 ...
-  
+
 public ActionResult EditingSaveChanges()
 {
     ViewData["GenerateCompactJSONResponse"] = false;
@@ -293,7 +295,7 @@ public ActionResult EditingSaveChanges()
     response.Add("Success", true);
     result.Data = response;
     return result;
-}   
+}
 ```
 
 
@@ -331,11 +333,11 @@ public class Employee
 ```
 
 
-**In ASPX:**
+**In Razor:**
 
 
 ```csharp
-<%=( Html.Infragistics().Grid<Employee>().ID("grid1").Height("500px").Width("1000px")
+@( Html.Infragistics().Grid<Employee>().ID("grid1").Height("500px").Width("1000px")
 		.Columns(column =>
 		{
 		    column.For(x => x.EmployeeID).DataType("number").HeaderText("Employee ID");
@@ -344,9 +346,10 @@ public class Employee
 		    column.For(x => x.DepartmentID).DataType("number").HeaderText("Department");
 		    column.For(x => x.DateOfHire).DataType("date").HeaderText("Date Of Hire");
 		    column.For(x => x.OnSite).DataType("bool").HeaderText("On site");
-		})   
+		})
 		.DataBind()
-		.Render())%> 
+		.Render()
+)
 ```
 
 
@@ -364,7 +367,7 @@ To complete the procedure, you need the following:
 -   A reference to the *Infragistics.Web.Mvc.dll* assembly
 -   Json.NET Serializer - Newtonsoft.Json.dll
 
-This can be downloaded from [http://james.newtonking.com/projects/json-net.aspx](http://james.newtonking.com/projects/json-net.aspx)
+This can be downloaded from [http://www.newtonsoft.com/json](http://www.newtonsoft.com/json)
 
 ### <a id="json-net-overview"></a> Overview
 
@@ -384,42 +387,43 @@ Following are the general conceptual steps for enabling the updating feature whe
 	1.  Pass the `DataTable` in the `DataSourceUrl` action and set the `DataTable`as the grid’s model.
 	2.  Also set the `UpdateUrl` to point to the `EditingSaveChanges` controller action. It handles persisting changes in the data base through LINQ
 
- 	**In ASPX:**
-		
+ 	**In Razor:**
+
 	```csharp
-	<%=(Html.Infragistics().Grid<DataTable>(Model).ID("grid1").Height("500px")
-	    .AutoGenerateColumns(true)       
-	    .RenderCheckboxes(true)
-	    .AutoCommit(false)       
-	    .Features(features => {
-	        features.Sorting().Type(OpType.Local).Mode(SortingMode.Single);
-	        features.Filtering().Type(OpType.Local);
-	        features.GroupBy().Type(OpType.Local);
-	        features.Paging().PageSize(5).Type(OpType.Remote);
-	        features.Updating();
-	        features.Hiding();
-	        features.Selection().Mode(SelectionMode.Row).MultipleSelection(true);
-	        features.RowSelectors();
-	        features.Resizing();
-	        features.Tooltips().Visibility(TooltipsVisibility.Always);
-	    })        
-	    .GenerateCompactJSONResponse(false)
-	    .DataSource(Model)
-	    .DataSourceUrl(Url.Action("DataTableInteractions"))
-	    .UpdateUrl(Url.Action("EditingSaveChanges"))
-	    .DataBind()
-	    .Width("100%")
-	    .Height("100%")
-	    .Render()) %>
+		@(Html.Infragistics().Grid<DataTable>(Model).ID("grid1").Height("500px")
+			.AutoGenerateColumns(true)
+			.RenderCheckboxes(true)
+			.AutoCommit(false)
+			.Features(features => {
+				features.Sorting().Type(OpType.Local).Mode(SortingMode.Single);
+				features.Filtering().Type(OpType.Local);
+				features.GroupBy().Type(OpType.Local);
+				features.Paging().PageSize(5).Type(OpType.Remote);
+				features.Updating();
+				features.Hiding();
+				features.Selection().Mode(SelectionMode.Row).MultipleSelection(true);
+				features.RowSelectors();
+				features.Resizing();
+				features.Tooltips().Visibility(TooltipsVisibility.Always);
+			})
+			.GenerateCompactJSONResponse(false)
+			.DataSource(Model)
+			.DataSourceUrl(Url.Action("DataTableInteractions"))
+			.UpdateUrl(Url.Action("EditingSaveChanges"))
+			.DataBind()
+			.Width("100%")
+			.Height("100%")
+			.Render()
+		)
 	```
- 
+
  	**In C#:**
-		
+
 	```csharp
 	public ActionResult DataTableInteractions()
-	{ 
-	
-	   DataTable dt = this.MyEmployees;  
+	{
+
+	   DataTable dt = this.MyEmployees;
 	   return View("DataTableInteractions",dt);
 	}
 	```
@@ -427,8 +431,8 @@ Following are the general conceptual steps for enabling the updating feature whe
 2. **Add the Json.NET library to the project and reference it**  <a id="json-net-step"></a>
 
 	1.  Download the *Newtonsoft.Json.dll*
-	
-		[http://james.newtonking.com/projects/json-net.aspx](http://james.newtonking.com/projects/json-net.aspx)
+
+		[http://www.newtonsoft.com/json](http://www.newtonsoft.com/json)
 
 		This is required for ASP.NET MVC 3 and below but is included in the default ASP.NET MVC 4 templates. This JSON library can also be obtained through NuGet.
 	2.  Add the assembly file as reference to the project
@@ -442,23 +446,25 @@ Following are the general conceptual steps for enabling the updating feature whe
  	**In C#:**
 
 	```csharp
-	using Newtonsoft.Json;
-	public class NewtonSoftGridModel : GridModel
-	{
-	    /// <summary>
-	    /// loads a list of transactions from the POST data, in case saveChanges() is invoked in the client side and UpdateUrl is set
-	    /// to a valid controller action (GridUpdating)
-	    /// The method is using the Newtonsoft serializer, which gives the ability to deserialize objects in to Dictionary<string, string>
-	    /// </summary>
-	    /// <typeparam name="T"></typeparam>
-	    /// <param name="postdata"></param>
-	    /// <returns></returns>
-	    public List<Transaction<T>> LoadTransactionsDictionary<T>(string postdata) where T : class
-	    {
-	        List<Transaction<T>> transactions = JsonConvert.DeserializeObject<List<Transaction<T>>>(postdata);
-	        return transactions;
-	    }
-	}
+		using Newtonsoft.Json;
+		public class NewtonSoftGridModel : GridModel
+		{
+			/// <summary>
+			/// loads a list of transactions from the POST data, in case saveChanges()
+			/// is invoked in the client side and UpdateUrl is set
+			/// to a valid controller action (GridUpdating)
+			/// The method is using the Newtonsoft serializer, which gives the ability
+			/// to deserialize objects in to Dictionary<string, string>
+			/// </summary>
+			/// <typeparam name="T"></typeparam>
+			/// <param name="postdata"></param>
+			/// <returns></returns>
+			public List<Transaction<T>> LoadTransactionsDictionary<T>(string postdata) where T : class
+			{
+				List<Transaction<T>> transactions = JsonConvert.DeserializeObject<List<Transaction<T>>>(postdata);
+				return transactions;
+			}
+		}
 	```
 
 4. **Parse the dates from the JSON format**  <a id="parse-json-step"></a>
@@ -473,13 +479,17 @@ Following are the general conceptual steps for enabling the updating feature whe
 	```csharp
 	[ActionName("EditingSaveChanges")]
 	public ActionResult EditingSaveChanges()
-	{           DataTable dt = this.MyEmployees as DataTable;
-	   NewtonSoftGridModel m = new NewtonSoftGridModel();     
-	
-	    List<Transaction<Dictionary<string, string>>> transactionsDict = m.LoadTransactionsDictionary<Dictionary<string, string>>(HttpContext.Request.Form["ig_transactions"]);
+	{
+		DataTable dt = this.MyEmployees as DataTable;
+		NewtonSoftGridModel m = new NewtonSoftGridModel();
+
+	    List<Transaction<Dictionary<string, string>>> transactionsDict =
+			m.LoadTransactionsDictionary<Dictionary<string, string>>(HttpContext.Request.Form["ig_transactions"]);
+
 	    foreach (Transaction<Dictionary<string, string>> t in transactionsDict)
-	    {…..
-	      if (t.type == "row")
+	    {
+			...
+			if (t.type == "row")
 	        {
 	            DataRow dr =    dt.Rows.Find(Int32.Parse(t.rowId));
 	            if (t.row["Name"] != null)
@@ -510,7 +520,7 @@ Following are the general conceptual steps for enabling the updating feature whe
 	            }
 	            dt.AcceptChanges();
 	        }
-	    } 
+	    }
 	    JsonResult result = new JsonResult();
 	    Dictionary<string, bool> response = new Dictionary<string, bool>();
 	    response.Add("Success", true);
@@ -534,14 +544,14 @@ The following topics provide additional information related to this topic.
 
 The following material (available outside the Infragistics family of content) provides additional information related to this topic.
 
-- [Newtonsoft serializer](http://james.newtonking.com/projects/json-net.aspx): The home page of Json.NET serializer.
+- [Newtonsoft serializer](http://www.newtonsoft.com/json): The home page of Json.NET serializer.
 
 
 
 
 
- 
 
- 
+
+
 
 
