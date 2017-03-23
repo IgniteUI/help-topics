@@ -1,4 +1,4 @@
-﻿<!--
+﻿<!-- 
 |metadata|
 {
     "fileName": "categorychart-chart-title-subtitle",
