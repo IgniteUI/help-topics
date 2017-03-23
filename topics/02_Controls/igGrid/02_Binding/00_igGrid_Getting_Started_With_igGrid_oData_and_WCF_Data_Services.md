@@ -65,15 +65,15 @@ This topic demonstrates how to setup a client-side jQuery grid with remote pagin
 	```csharp
 	public static void InitializeService(DataServiceConfiguration config)
     {
-	
+
 	    config.SetEntitySetAccessRule("Products", EntitySetRights.AllRead);
-	
+
 	    config.DataServiceBehavior.MaxProtocolVersion = DataServiceProtocolVersion.V2;
 
     }
 	```
 
-9.  WCF Data Services natively support for the Atom and JSON formats. To enable JSONP formatted data, you must download the [JSONPSupportBehavior](http://archive.msdn.microsoft.com/DataServicesJSONP) code file and include it in your application.
+9.  WCF Data Services natively support for the Atom and JSON formats. To enable JSONP formatted data, you must download the [JSONPSupportBehavior](https://github.com/schotime/NerdDinner-PetaPoco/blob/master/NerdDinner/Services/JSONPSupportBehavior.cs) code file and include it in your application.
 
 10. Once the *JSONPSupportBehavior.cs* file is included in your application, make sure to change the namespace to match the namespace used in your application. Also, add the `JSONPSupportBehavior` attribute to your `AdventureWorksDataService` class:
 
@@ -88,7 +88,7 @@ This topic demonstrates how to setup a client-side jQuery grid with remote pagin
 
 12. You will need the Ignite UI combined and minified script files, infragistics.core.js and infragistics.lob.js, which come with the product. In addition, you must reference the jQuery core and jQuery UI scripts to run the sample. [This help article](Deployment-Guide-JavaScript-Resources.html) discusses referencing the required scripts and where the combined and minified scripts are available to add to your application.
 
-    > **Note**: You can [download the full or trial product here](http://www.infragistics.com/dotnet/netadvantage/jquery-controls.aspx#Downloads). The jQuery [templates script can be obtained here](http://plugins.jquery.com/tag/templates/).
+    > **Note**: You can [download the full or trial product here](http://www.infragistics.com/products/jquery#Downloads).
 
 13. Create a “scripts” directory in your project and copy the JavaScript files into this folder.
 
@@ -106,10 +106,9 @@ This topic demonstrates how to setup a client-side jQuery grid with remote pagin
 	<head>
 	    <link href="css/themes/infragistics/infragistics.theme.css" rel="stylesheet" type="text/css" />
 	    <link href="css/structure/infragistics.css" rel="stylesheet" type="text/css" />
-	 
+
 	    <script src="scripts/jquery.min.js" type="text/javascript"></script>
 		<script src="scripts/jquery-ui.min.js" type="text/javascript"></script>
-		<script src="scripts/jquery.tmpl.min.js" type="text/javascript"></script>
 		<script src="scripts/infragistics.core.js" type="text/javascript"></script>
 		<script src="scripts/infragistics.lob.js" type="text/javascript"></script>
 	</head>
@@ -131,9 +130,9 @@ This topic demonstrates how to setup a client-side jQuery grid with remote pagin
 
 	```html
 	<script type="text/javascript">
-			
+
 		$(function () {
-		
+
 			$('#tableProducts').igGrid({
 				height: '500px',
 				width: '800px',
@@ -141,13 +140,13 @@ This topic demonstrates how to setup a client-side jQuery grid with remote pagin
 				columns: [
 					{ headerText: 'ID', key: 'ProductID', dataType: 'number' },
 					{ headerText: 'Name', key: 'Name', dataType: 'string' },
-					{ headerText: 'Number', key: 'ProductNumber', dataType: 'string' },			
-					{ headerText: 'Cost', key: 'StandardCost', dataType: 'number', format: 'currency'}	
-				]			
-			});	
-	
+					{ headerText: 'Number', key: 'ProductNumber', dataType: 'string' },
+					{ headerText: 'Cost', key: 'StandardCost', dataType: 'number', format: 'currency'}
+				]
+			});
+
 		});
-	
+
      </script>
 	```
 
@@ -161,7 +160,7 @@ This topic demonstrates how to setup a client-side jQuery grid with remote pagin
     > **Note:** The value d.results is a standard response key for JSON data coming from a ‘V2’ OData service
 
 20.  Finally, enable the features of the grid including the option to make them operate remotely:
-	
+
 	**In Javascript:**
 
 		```js
@@ -192,10 +191,10 @@ Run the sample to see the `igGrid` control populated with data from an *OData* s
 [**Download Sample**](http://dl.infragistics.com/community/jquery/codesamples/aaronm/2011-07-28/igGridOData.zip)
 
 > **Note**: The AdventureWorks database and Ignite UI resources are not included in the sample. Visit these links to obtain the software:
-> 
+>
 > * [AdventureWorks Database](http://msftdbprodsamples.codeplex.com/releases/view/37109)
-> 
-> * [Ignite UI](http://www.infragistics.com/dotnet/netadvantage/jquery-controls.aspx#Downloads)
+>
+> * [Ignite UI](http://www.infragistics.com/products/jquery#Downloads)
 
 
 
@@ -206,8 +205,8 @@ Following are some other topics you may find useful.
 -   [igGrid/igDataSource Architecture Overview](igGrid-igDataSource-Architecture-Overview.html)
 -   [Binding to Web Services](igGrid-Binding-to-Web-Services.html)
 
- 
 
- 
+
+
 
 
