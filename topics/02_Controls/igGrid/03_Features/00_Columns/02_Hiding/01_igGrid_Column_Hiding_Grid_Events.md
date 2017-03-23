@@ -62,7 +62,7 @@ $("#grid1").igGrid({
     features: [{
         name: 'Hiding',
         columnHiding: function (e, args) {
-            // Handle event  
+            // Handle event
         }
     }]
 });
@@ -73,12 +73,12 @@ When attaching a handler in MVC, you need to use the jQuery User Interface (UI) 
 **In Javascript:**
 
 ```js
-$("#grid1").live("iggridhidingcolumnhiding ", function (e, args) {
-     // Handle event  
+$("#grid1").on("iggridhidingcolumnhiding ", function (e, args) {
+     // Handle event
 });
 ```
 
-> **Note**: The jQuery’s `live` function is used in case some DOM elements are added after attaching to the handler.
+> **Note**: The jQuery’s `on` function is used in case some DOM elements are added after attaching to the handler.
 
 ## <a id="events-reference"></a> Events Reference Chart
 
