@@ -85,14 +85,12 @@ This architecture enables you to easily create extensions of the data source tha
     -   This class is pre-configured to work specifically with [JSON](http://en.wikipedia.org/wiki/JSON) data.
 -   ***$.ig.XMLDataSource***
     -   This class is pre-configured to work specifically with [XML](http://en.wikipedia.org/wiki/XML) data.
--   ***$.ig.WebSocketsDataSource***
-    -   This class is pre-configured to work specifically with [Web Sockets](http://en.wikipedia.org/wiki/WebSockets).
 
 > **Note:** The controls listed above are included in the Ignite UI data source JavaScript library.
 
 Further, you can extend the data source control to override any of its implementation in order to achieve a highly customized data binding functionality. Listing 1 demonstrates how to extend the base data source to pre-configure the options to work with JSON data.
 
-**Listing 1**: Extending `igDataSource` to pre-configure options to with JSON data 
+**Listing 1**: Extending `igDataSource` to pre-configure options to with JSON data
 
 **In Javascript:**
 
@@ -110,7 +108,7 @@ $.ig.JSONDataSource = $.ig.DataSource.extend({
 });
 ```
 
-Listing 2 depicts a more complex example that implements a data source customized to use Web Sockets rather than Ajax, thus demonstrating the flexibility of the data source architecture.
+Listing 2 depicts a more complex example that implements a data source customized to use [Web Sockets](http://en.wikipedia.org/wiki/WebSockets) rather than Ajax, thus demonstrating the flexibility of the data source architecture.
 
 **Listing 2**: Extending `igDataSource` to interact with Web Sockets
 
@@ -119,16 +117,16 @@ Listing 2 depicts a more complex example that implements a data source customize
 ```js
 (function ($) {
     $.ig.WebSocketsDataSource = $.ig.DataSource.extend({
-        
+
         init: function (options) {
-            
+
             options.responseDataType = "json";
             options.responseContentType = "json";
             options.type = 'remoteUrl';
             this._super(options);
             return this;
         },
-        // use the HTML5 WebSockets API here instead of calling $.ajax 
+        // use the HTML5 WebSockets API here instead of calling $.ajax
         _processRequest: function (options) {
             if(!("WebSocket" in window)) {
                 throw new Error("Sorry, the build of your browser does not support WebSockets. Please use latest Chrome or Webkit nightly.");
@@ -142,7 +140,7 @@ Listing 2 depicts a more complex example that implements a data source customize
             var resp = this._super(JSON.parse(evt.data), "json");
             if (this.settings.responseBehavior === "append") {
                 this._data.push(resp);
-                this._dataView.push(resp); 
+                this._dataView.push(resp);
             } else {
                 this._data = [resp];
                 this._dataView = [resp];
@@ -177,23 +175,23 @@ Grid features are declared during grid initialization by providing JSON objects 
 
 ```js
 $("#grid2").igGrid({
-dataSource: "/server.php",
-columns: [ <columns definitions> ],
-features: [
-    {
-        name: "Paging",
-        type: "local",
-        pageSize: 10
-    },
-    {
-        name: "Sorting",
-        type: "local",
-        caseSensitive: true,
-        columnSettings: [
-            {columnKey: "ProductID", allowSorting: true}
-        ]
-    }
-]
+    dataSource: "/server.php",
+    columns: [ "<columns definitions>" ],
+    features: [
+        {
+            name: "Paging",
+            type: "local",
+            pageSize: 10
+        },
+        {
+            name: "Sorting",
+            type: "local",
+            caseSensitive: true,
+            columnSettings: [
+                { columnKey: "ProductID", allowSorting: true }
+            ]
+        }
+    ]
 });
 ```
 
@@ -207,7 +205,7 @@ Listing 4 demonstrates how to access feature options, in this case sorting, from
 
 ```js
 var sortingObject = $("#grid1").data("igGridSorting");
-``` 
+```
 
 Listing 5 depicts how to manipulate the feature API. The first example demonstrates how to enable case sensitivity of sorting, while the second example executes a simple sort to the data.
 
@@ -220,20 +218,19 @@ Listing 5 depicts how to manipulate the feature API. The first example demonstra
 $("#grid1").igGridSorting("option", "caseSensitive", true);
 
 // sorts a column
-$("#grid1").igGridSorting("sortColumn", … ) ; 
+$("#grid1").igGridSorting("sortColumn", … ) ;
 ```
 
 
 ## <a id="dependencies"></a>Dependencies
 
-Since the `igGrid` control is built as jQuery widget, it is dependent on the jQuery core library as well as jQuery UI. While no specific version of jQuery UI supported, the following versions recommended for best results: 
+Since the `igGrid` control is built as a jQuery UI widget, it is dependent on the jQuery core library as well as jQuery UI. While no specific version of jQuery UI is required, the following versions are recommended for the best results:
 
 ### Dependent Script Versions
 
--   jQuery 1.4.4
--   jQuery UI 1.8.*
-    
-    > **Note:** If your enable jQuery templating (by setting the jQueryTemplating to true), you must include the jquery-tmpl JavaScript library in your application. You may download this library at: [https://github.com/jquery/jquery-tmpl](https://github.com/jquery/jquery-tmpl).
+-   jQuery 3.1.1
+-   jQuery UI 1.12.*
+
 
 ## <a id="external-references"></a>External References
 
@@ -251,8 +248,8 @@ Since the `igGrid` control is built as jQuery widget, it is dependent on the jQu
 -   [Styling igGrid](igGrid-Styling-and-Theming.html)
 -   [Styling and Theming in Ignite UI](Deployment-Guide-Styling-and-Theming.html)
 
- 
 
- 
+
+
 
 
