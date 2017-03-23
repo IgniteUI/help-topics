@@ -22,7 +22,7 @@ The following table lists the topics required as a prerequisite to understanding
 
 - [Touch Support for Ignite UI Controls](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html): This topic introduces the updates to Ignite UI™ controls for touch-support interactions.
 
-- [Feature Chooser](igGrid-Feature-Chooser.html): This topic explains the `igGrid`™ Feature Chooser menu and its sections. 
+- [Feature Chooser](igGrid-Feature-Chooser.html): This topic explains the `igGrid`™ Feature Chooser menu and its sections.
 
 - [igGrid Group By Overview](igGrid-GroupBy-Overview.html): This topics demonstrates grouping in the `igGrid`.
 
@@ -87,7 +87,7 @@ The window has two grouping behaviors – immediate grouping and deferred groupi
 The following table lists the configurable behaviors of the Group By dialog. Additional details are available after the table.
 
 Behavior | Description | *modalDialogGroupByOnClick* value
--------  | ----------- | ------------ 
+-------  | ----------- | ------------
 [Immediate grouping](#interactions-immediate-grouping) | When the user selects a column, the grid is grouped by that column without delay. | true
 [Deferred grouping](#interactions-deferred-grouping) | When the user selects a column, the grid is not grouped until the **Apply** button is clicked. This enables the user to select multiple columns and define their order before the grouping action takes place. | false
 
@@ -194,7 +194,7 @@ The following table shows the `igGrid` Sorting events that are fired during inte
 
 Event | Description
 ----- | -----------
-[modalDialogOpening](%%jQueryApiUrl%%/ui.iggridgroupby#events:modalDialogOpening) | Event fired before the modal dialog is opened. 
+[modalDialogOpening](%%jQueryApiUrl%%/ui.iggridgroupby#events:modalDialogOpening) | Event fired before the modal dialog is opened.
 [modalDialogOpened](%%jQueryApiUrl%%/ui.iggridgroupby#events:modalDialogOpened) | Event fired after the modal dialog is already opened.
 [modalDialogMoving](%%jQueryApiUrl%%/ui.iggridgroupby#events:modalDialogMoving) | Event fired every time the column chooser changes its position.
 [modalDialogClosing](%%jQueryApiUrl%%/ui.iggridgroupby#events:modalDialogClosing) | Event fired before the modal dialog is closed.
@@ -221,10 +221,10 @@ The following topics provide additional information related to this topic.
 
 - [Touch Support for Ignite UI Controls](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html): This topic introduces the updates to Ignite UI™ controls for touch-support interactions.
 
-- [Feature Chooser](igGrid-Feature-Chooser.html): This topic explains the `igGrid`™ Feature Chooser menu and its sections. 
+- [Feature Chooser](igGrid-Feature-Chooser.html): This topic explains the `igGrid`™ Feature Chooser menu and its sections.
 
 - [igGrid Group By Overview](igGrid-GroupBy-Overview.html): This topics demonstrates grouping in the `igGrid`.
- 
+
 - [igHierarchicalGrid™ Group By Overview](igHierarchicalGrid-Grouping-Overview.html): This topics demonstrates grouping in the `igHierarchicalGrid`.
 
 
@@ -232,12 +232,12 @@ The following topics provide additional information related to this topic.
 
 The following samples provide additional information related to this topic.
 
-- [Grouping with summaries](%%SamplesUrl%%/grid/grouping): Sample that shows the interactions with the igGrid GroupBy modal dialog window.
+- [Grouping](%%SamplesUrl%%/grid/grouping): Sample that shows the interactions with the igGrid GroupBy modal dialog window.
 
 
 
- 
 
- 
+
+
 
 
