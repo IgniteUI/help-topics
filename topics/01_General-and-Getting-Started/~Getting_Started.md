@@ -23,7 +23,7 @@ This topic contains the following sections:
     -   [Add an igGrid using Page Designer](#page_designer)
 -   [Get just what you need](#custom_download)
 -   [Using CDN Links](#cdn)
--   [TypeScript Directives](#typescript)
+-   [TypeScript Definitions](#typescript)
 -   [AngularJS Extensions](#angularjs)
 -   [Angular 2 Extensions](#angular)
 -   [ReactJS Extensions](#reactjs)
@@ -34,8 +34,8 @@ This topic contains the following sections:
 Ignite UI&trade; is an advanced HTML5+ toolset that helps you create stunning, modern Web apps. Building on jQuery and jQuery UI, it primarily consists of feature rich, high-performing UI controls/widgets such as all kinds of charts, data visualization maps, (hierarchical, editable) data grids, pivot grids, enhanced editors (combo box, masked editors, HTML editor, date picker, to name a few), flexible data source connectors, and a whole lot more.
 
 Ignite UI comes in two vesions: 
--   Full - a paid version that contains the complete toolset.
 -   Open Source - a free version that contains a subset of the complete toolset. Grids and Data Visualization controls are excluded. For more information checkout the [Ignite UI OSS](https://github.com/IgniteUI/ignite-ui) project on GitHub&trade;.
+-   Full - a paid version that contains the complete toolset.
 
 # <a id="download"></a>Download and Install
 
@@ -220,7 +220,7 @@ Following are the Ignite UI Trial links. For more details checkout [Infragistics
     <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
 ```
 
-# <a id="typescript"></a>TypeScript Directives
+# <a id="typescript"></a>TypeScript Definitions
 
 Ignite UI provides type definitions for TypeScript allowing you to take advantage of strong typing, compile time checking and IntelliSense features. For more information check [Using Ignite UI with TypeScript](Using_Ignite_UI_with_TypeScript.html) topic.
 
