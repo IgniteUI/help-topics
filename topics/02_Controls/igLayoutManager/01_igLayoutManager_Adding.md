@@ -112,7 +112,7 @@ The following table summarizes the requirements for `igLayoutManager` control.
 					<li>(Recommended) <a href="Using-Infragistics-Loader.html" data-auto-update-caption="true">**Using Infragistics Loader**</a> (igLoader™). You only need to include a script reference to igLoader on your page.</li>
 					<li>Load the required resources manually. You need to use the dependencies listed in the table below.</li>
 				</ul>
-				<div>Below are listed the Ignite UI library dependences related to the igLayoutManager control. These resources need to be referred to explicitly if you chose to load resources manually (i.e. not to use igLoader).
+				<div>Below are listed the Ignite UI library dependences related to the igLayoutManager control. These resources need to be referred explicitly if you choоse to load resources manually (i.e. not to use igLoader).
 				</div>
                 <br />
                 <div>
