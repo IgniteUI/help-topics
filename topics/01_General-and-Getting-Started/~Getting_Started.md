@@ -8,25 +8,237 @@
 |metadata|
 -->
 
-# Get Started with Ignite UI
-There are a number of different ways to get started building desktop and mobile applications with Ignite UI&trade;. Check out the links below for ways for you to quickly get started building your app!
+# In this topic
 
-## Install, Download or Reference Files
-You have a number of different options available to you when it comes to getting access to Ignite UI files:
+This topic contains the following sections:
 
-- **[Platform Installer](https://www.infragistics.com/my-account/keys-and-downloads)**: Licensed customers can login and download the platform installer.
+-   [Introduction](#introduction)
+-   [Download and Install](#download)
+-   [Host Ignite UI in your project](#hosting)
+    -   [Using NPM, JSPM, NuGet](#package_managers)
+    -   [Add CSS and JavaScript references](#add_references)
+    -   [Sample Ignite UI Boilerplate HTML page (using trial CDN links)](#boilerplate)
+-   [Add your first control](#first_control)
+    -   [Add an igGrid Directly](#directly)
+    -   [Add an igGrid using Page Designer](#page_designer)
+-   [Get just what you need](#custom_download)
+-   [Using CDN Links](#cdn)
+-   [TypeScript Definitions](#typescript)
+-   [AngularJS Extensions](#angularjs)
+-   [Angular 2 Extensions](#angular)
+-   [ReactJS Extensions](#reactjs)
+-   [Related Content](#related_content)
 
-- **[Download (full product or custom build)](https://www.igniteui.com/download)**: Download the full version of Ignite UI or create a custom build to only include the CSS and JavaScript related to specific controls.
+# <a id="introduction"></a>Introduction
 
-- **[CDN Links](https://www.igniteui.com/download)**: From the downloads page you also have access to the Ignite UI files on the Infragistics CDN for bundled versions of Ignite UI.  
- 
-> **Note**: For the download and CDN options, if you log in as an existing customer you are able to access production-ready files otherwise you'll get trial versions of Ignite UI.
+Ignite UI&trade; is an advanced HTML5+ toolset that helps you create stunning, modern Web apps. Building on jQuery and jQuery UI, it primarily consists of feature rich, high-performing UI controls/widgets such as all kinds of charts, data visualization maps, (hierarchical, editable) data grids, pivot grids, enhanced editors (combo box, masked editors, HTML editor, date picker, to name a few), flexible data source connectors, and a whole lot more.
 
-## Jump Right In
-If you'd like to dive right in by working with the controls directly, the [Page Designer allows you to work with each control in a WYSIWYG environment](http://designer.igniteui.com/). The designer comes is complete with sample data that makes it easy to get started without having to go through any sort of setup process.
+Ignite UI comes in two vesions: 
+-   Open Source - a free version that contains a subset of the complete toolset. Grids and Data Visualization controls are excluded. For more information checkout the [Ignite UI OSS](https://github.com/IgniteUI/ignite-ui) project on GitHub&trade;.
+-   Full - a paid version that contains the complete toolset.
 
-## Building Your First Page
-As you begin to build your first page you can follow the [Ignite UI Getting Started tutorial](http://www.igniteui.com/getting-started) which demonstrates how to get setup and  shows you which files to reference on the page.
+# <a id="download"></a>Download and Install
 
-## Deploying Ignite UI
-Once your page is built, then you'll want to review the [deployment guide](Deployment-Guide.html) which helps you get better acquainted with not only all the individual files involved in using Ignite UI, but also where and how to deploy them depending on how your application is configured. 
+You can download the Ignite UI from its [download page](http://www.infragistics.com/products/ignite-ui/download). 
+Depending on your operating system you have several options to install the product, both trial and licensed.
+
+For Windows:
+
+- **[Platform Installer](https://www.infragistics.com/my-account/keys-and-downloads)**: Platform Installer is a Windows only online installer that gives you a wizard like experience to manage (install, update, uninstall) Ignite UI and all other Infragistics Developer tools their help and samples.
+
+- **[Download full product](http://www.infragistics.com/products/ignite-ui/download)**: 
+A Windows only offline MSI installer containing the product, help and samples.
+
+For MacOs, Linux, Unix etc.
+
+- **[Download No Installer Bundle](http://www.infragistics.com/products/ignite-ui/download)**: 
+A Windows only offline MSI installer containing the product and samples.
+
+# <a id="hosting"></a>Host Ignite UI in your project
+
+You have several options to host Ignite UI in your project:
+- Copy the [JavaScript and CSS files](Adding_the_Required_Resources_for_NetAdvantage_for_jQuery.html) from the Ignite UI installation directory into your project
+- Use [Infragistics Content Delivery Network (CDN)](#cdn)
+- Use Package Manager like NPM, JSPM, NuGet
+
+## <a id="package_managers"></a>Using NPM, JSPM, NuGet
+
+Ignite UI supports a number of package managers: NPM, JSPM and NuGet.
+
+NPM (installs [Ignite UI Open Source](https://www.npmjs.com/package/ignite-ui))
+
+```
+    npm install ignite-ui
+```
+
+For instructions how to configure the full licensed package, please check [Using Ignite UI npm packages](Using_Ignite_UI_Npm_Packages.html) topic.
+
+NuGet (installs [Ignite UI Trial](https://www.nuget.org/packages/IgniteUI/))
+
+```
+    Install-Package IgniteUI
+```
+
+For instructions how to configure the licensed package, please check [Using Ignite UI NuGet packages](Using_Ignite_UI_NuGet_Packages.html) topic.
+
+JSPM (installs [Ignite UI Open Source](https://www.npmjs.com/package/ignite-ui))
+```
+    jspm install npm:ignite-ui
+```
+
+For instructions how to configure the full licensed package, please check [Using System.JS with Ignite UI controls](Using-System.JS-with-IgniteUI-controls.html) topic.
+
+## <a id="add_references"></a>Add CSS and JavaScript references
+
+Ignite UI depends on jQuery and jQuery UI libraries and you need to add references to them before the Ignite UI scripts. You also have several options to include the Ignite UI controls in the page
+- Referencing combined and minified bundle files - installation comes with a combined and minified files which group controls by type. There are `infragistics.core.js` (mandatory), `infragistics.lob.js` which contains the Line of Business controls like Grids and `infragistics.dv.js` which contains the Data Visualization controls like Charts. For more information check [Adding Required Resources Manually](Adding_the_Required_Resources_for_NetAdvantage_for_jQuery.html) topic.
+- Referencing individual control files - For more information check [JavaScript Files in Ignite UI](Deployment_Guide_JavaScript_Files.html) topic.
+- Using Infragistics Loader - The Infragistics Loader is a loader that can automatically load Ignite UI files (and not only). It saves you the burden to reference control files manually. For more information check [Adding Required Resources Automatically with the Infragistics Loader](Using_Infragistics_Loader.html) topic.
+- Using AMD Loader - Ignite UI is AMD compatible and can be used with all popular AMD loaders.
+
+## <a id="boilerplate"></a>Sample Ignite UI Boilerplate HTML page (using trial CDN links)
+
+The following code represents a sample boilerplate HTML page containing the required references (CDN links) needed to start using Ignite UI.
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <!-- Ignite UI Required Combined CSS Files -->
+    <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+    <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet" />
+    
+    <style>
+
+        /* ----- CSS Goes Here ----- */
+
+    </style>
+</head>
+<body>
+
+    <!-- ----- HTML Goes Here ----- -->
+
+    <table id="grid"></table>
+
+    <!-- JavaScript Library Dependencies -->
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- Ignite UI Required Combined JavaScript Files -->
+    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
+    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>    
+    <script>
+
+        $(function () {
+
+            // ----- JavaScript Goes Here ----- //
+
+        });
+
+    </script>
+
+</body>
+</html>
+```
+
+# <a id="first_control"></a>Add your first control
+
+There are two options available: Directly or with Page Designer
+
+## <a id="directly"></a>Add an igGrid Directly
+
+```
+$(function () {
+    // Data
+    var populationData = [
+        { "CountryName": "China", "1995": 1216, "2005": 1297, "2015": 1361, "2025": 1394 },
+        { "CountryName": "India", "1995": 920, "2005": 1090, "2015": 1251, "2025": 1396 },
+        { "CountryName": "United States", "1995": 266, "2005": 295, "2015": 322, "2025": 351 },
+        { "CountryName": "Indonesia", "1995": 197, "2005": 229, "2015": 256, "2025": 277 },
+        { "CountryName": "Brazil", "1995": 161, "2005": 186, "2015": 204, "2025": 218 }
+    ];
+
+    // Grid
+    $("#grid").igGrid({
+        width: "100%",
+        dataSource: populationData,
+        autoGenerateColumns: false,
+        columns: [{
+            key: "CountryName",
+            headerText: "Country",
+            width: "33.33%"
+        }, {
+            key: "2005",
+            headerText: "2005",
+            width: "33.33%"
+        }, {
+            key: "2015",
+            headerText: "2015",
+            width: "33.33%"
+        }],
+        features: [{
+            name: "Sorting",
+            columnSettings: [{
+                columnKey: "2015",
+                currentSortDirection: "descending"
+            }]
+        }]
+    });
+});
+```
+
+## <a id="page_designer"></a>Add an igGrid using Page Designer
+
+The Ignite UI Page Designer gives you a complete designer experience to configure any Ignite UI control by only using the mouse.
+To add `igGrid` to a page design area (on the left) in the toolbox (on the right) find "List & Pickers" section and drag and drop the Grid control. Then use the Property Editor to configure the grid. When ready just copy the resulting generated page.
+
+# <a id="custom_download"></a>Get just what you need
+
+The Ignite UI [Custom Download Page](https://www.igniteui.com/download) gives you the option to choose only the Ignite UI controls and features you use in your project and download optimized (minified and combined) JavaScript and CSS files for maximum page load performance.
+
+# <a id="cdn"></a>Using CDN Links
+
+Instead of hosting the Ignite UI script files into your project, you can just use Ignite UI CDN links. For Internet applications CDN usually serves files faster to the end users compared to host them on premise.
+
+Following are the Ignite UI Trial links. For more details checkout [Infragistics Content Delivery Network (CDN) for Ignite UI](deployment_guide_infragistics_content_delivery_network%28cdn%29.html) topic.
+
+```
+    <!-- Ignite UI Required Combined CSS Files (Trial) -->
+    <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+    <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet" />
+
+    <!-- JavaScript Library Dependencies -->
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- Ignite UI Required Combined JavaScript Files (Trial) -->
+    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
+```
+
+# <a id="typescript"></a>TypeScript Definitions
+
+Ignite UI provides type definitions for TypeScript allowing you to take advantage of strong typing, compile time checking and IntelliSense features. For more information check [Using Ignite UI with TypeScript](Using_Ignite_UI_with_TypeScript.html) topic.
+
+# <a id="typescript"></a>AngularJS Extensions
+
+Ignite UI AngularJS extenstions provide two-way data binding and declarative initialization for controls used in AngularJS applications. For more information check [Using Ignite UI with AngularJS](Using_Ignite_UI_with_AngularJS.html) topic.
+
+# <a id="angular"></a>Angular 2 Extensions
+
+Ignite UI Angular 2 Extensions provide two-way data binding, declarative initialization and native API for controls used in Angular 2 applications. For more information  check [Ignite UI extensions for Angular 2](https://github.com/IgniteUI/igniteui-angular2) on GitHub.
+
+# <a id="reactjs"></a>ReactJS Extensions
+
+Ignite UI ReactJS extenstions provide JSX markup and React API initialization. For more information check [Ignite UI extensions for React ](https://github.com/IgniteUI/igniteui-react) on GitHub.
+
+# <a id="related_content"></a>Related Content
+
+### Topics
+
+- [Deployment Guide](Deployment-Guide.html)
+- [HTML 5 Designer](http://designer.igniteui.com/)
