@@ -73,7 +73,7 @@ Properties
         </tr>
 	</thead>
 	<tbody>
-        
+
 
         <tr>
             <td colspan="2">
@@ -230,7 +230,7 @@ $("#grid").igGrid({
 });
 ```
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
 @(Html.Infragistics().Grid(Model)
@@ -279,7 +279,7 @@ $("#grid").igGrid({
 });
 ```
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
 @(Html.Infragistics().Grid(Model)
@@ -362,13 +362,13 @@ $("#grid").igGrid({
     ]});
 ```
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
 @(Html.Infragistics().Grid(Model)
 .AutoGenerateColumns(true)
 .ID("grid1")
-.Features(f => 
+.Features(f =>
     f.ColumnMoving()
     .MoveType(MovingType.Render)
     .ColumnSettings(cs => cs.ColumnSetting().ColumnKey("Name").AllowMoving(false)))
@@ -427,7 +427,7 @@ $("#grid").igGrid({
 });
 ```
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
 @(Html.Infragistics().Grid(Model)
@@ -457,8 +457,8 @@ The following samples provide additional information related to this topic.
 - [Column Moving](%%SamplesUrl%%/grid/column-moving): This sample demonstrates configuring column moving in the `igGrid`.
 
 
- 
 
- 
+
+
 
 
