@@ -171,10 +171,10 @@ In ASP.NET MVC to attach/detach to a server-side event of an `igUpload` control 
 
 UploadProgressManager method | Event | Example
 ---|---|---
-AddStartingUploadEventHandler | UploadStarting | `UploadProgressManager .Instance.AddStartingUploadEventHandler("upload1" , startingUploadHandler);`
-AddFileUploadingEventHandler | FileUploading | `UploadProgressManager .Instance.AddFileUploadingEventHandler("upload1" , fileUploadingHandler);`
-AddFinishingUploadEventHandler | UploadFinishing | `UploadProgressManager .Instance.AddFinishingUploadEventHandler("upload1" , fileFinishingHandler);`
-AddFinishedUploadEventHandler | UploadFinished | `UploadProgressManager .Instance.AddFinishedUploadEventHandler("upload1" , fileFinishedHandler);`
+[AddStartingUploadEventHandler](infragistics.web.mvc~infragistics.web.mvc.uploadprogressmanager~addstartinguploadeventhandler.html)| UploadStarting | `UploadProgressManager .Instance.AddStartingUploadEventHandler("upload1" , startingUploadHandler);`
+[AddFileUploadingEventHandler](infragistics.web.mvc~infragistics.web.mvc.uploadprogressmanager~addfileuploadingeventhandler.html)  | FileUploading | `UploadProgressManager .Instance.AddFileUploadingEventHandler("upload1" , fileUploadingHandler);`
+[AddFinishingUploadEventHandler](infragistics.web.mvc~infragistics.web.mvc.uploadprogressmanager~addfinishinguploadeventhandler.html) | UploadFinishing | `UploadProgressManager .Instance.AddFinishingUploadEventHandler("upload1" , fileFinishingHandler);`
+[AddFinishedUploadEventHandler](infragistics.web.mvc~infragistics.web.mvc.uploadprogressmanager~addfinisheduploadeventhandler.html) | UploadFinished | `UploadProgressManager .Instance.AddFinishedUploadEventHandler("upload1" , fileFinishedHandler);`
 
 
 **Note:** It's a common error to attach to `igUpload` server-side events in a controller action. Since controller actions can be invoked multiple times during the application lifecycle this will result in single event handler attached multiple times (usually you'll want to attach to a server-side event only once.). It is recommended that you handle server-side events in the application start logic in the Global.asax file of a MVC project.
@@ -331,7 +331,6 @@ After uploading a file that does not meet the requirements, the custom error mes
 ![](images/igUpload_CustomErrorMessage.png)
 
 ## Related Links
--   [igUpload API and Events Sample](%%SamplesUrl%%/file-upload/api-events)
 -   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
 -   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
 

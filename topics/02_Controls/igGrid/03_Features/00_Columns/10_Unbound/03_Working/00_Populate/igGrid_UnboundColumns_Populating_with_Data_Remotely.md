@@ -45,7 +45,6 @@ This topic contains the following sections:
     -   [Code](#without-primary-key-code)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
 
 
 
@@ -610,10 +609,3 @@ The following topics provide additional information related to this topic.
 - [Rendering Calculated Values (Unbound Columns, igGrid)](igGrid-UnboundColumns-Rendering-Calculated-Values.html): This topic demonstrates, with code examples how to set up formula function to calculate unbound column values.
 
 - [Optimizing the Grid Performance When Unbound Columns Are Used](igGrid-UnboundColumns-Optimize-Performance.html): This topic discusses client-based vs. server-based merging of unbound columns and the optimization considerations for each. It also demonstrates how the developer can programmatically control where merging can take place.
-
-
-### <a id="samples"></a> Samples
-
-The following sample provides additional information related to this topic.
-
-- [Unbound Column](%%SamplesUrl%%/grid/unbound-column): The sample demonstrates how to add and configure unbound columns in `igGrid`.

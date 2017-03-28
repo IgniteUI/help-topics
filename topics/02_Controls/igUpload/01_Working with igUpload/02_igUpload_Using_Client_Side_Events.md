@@ -320,7 +320,6 @@ Value |Description
 8 |Error thrown when trying to check if the file could be canceled and `maxSimultaneousFilesUploads` Is less or equal to 0
 
 ## Related Links
--   [igUpload API and Events Sample](%%SamplesUrl%%/file-upload/api-events)
 -   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
 -   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
 

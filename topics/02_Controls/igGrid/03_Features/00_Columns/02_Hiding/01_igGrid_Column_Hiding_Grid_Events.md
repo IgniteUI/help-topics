@@ -26,7 +26,6 @@ This topic contains the following sections:
 -   [Events Reference Chart](#events-reference)
 -   [Related Content](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
 
 ## <a id="events-overview"></a> Events Overview
 
@@ -108,10 +107,3 @@ The following topics provide additional information related to this topic.
 
 -   [Enable Column Hiding](igGrid-Column-Hiding-Enabling-Column-Hiding.html)
 -   [Configure igGrid Column Hiding](igGrid-Configure-Column-Hiding.html)
-
-### <a id="samples"></a> Samples
-
-The following samples provide additional information related to this topic.
-
--   [API and Events](%%SamplesUrl%%/grid/grid-api-events)
-

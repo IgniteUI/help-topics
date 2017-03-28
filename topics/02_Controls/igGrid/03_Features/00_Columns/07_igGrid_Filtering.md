@@ -866,6 +866,4 @@ _Note_: There is a difference between the drop-down for selecting the column and
 
 ### <a id="samples"></a> Samples
 
--   [Simple Filtering](%%SamplesUrl%%/grid/simple-filtering)
--   [Advanced Filtering](%%SamplesUrl%%/grid/grid/advanced-filtering)
--   [Custom Conditions Filtering](%%SamplesUrl%%/grid/custom-conditions-filtering)
+-   [Filtering](%%SamplesUrl%%/grid/simple-filtering)

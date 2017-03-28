@@ -62,7 +62,7 @@ In order to properly configure the hierarchical grid to use this example JSON da
 [dataSource](%%jQueryApiUrl%%/ui.igGrid#options:dataSource)| The source of the data, that the grid will use when displaying data. | A valid json object similar to the above example.
 [responseDataKey](%%jQueryApiUrl%%/ui.igGrid#options:responseDataKey)| Applicable only if the response is wrapped. This is the property in the responses where data records are held.| "results"
 [columnLayouts](%%jQueryApiUrl%%/ui.igHierarchicalGrid#options:dataSource) | List of columnLayout objects that specify the structure of the child grids. | List of the column layouts. The options of the column layout object are the same as in an igGrid with the exception of the "key" property.| 
-[columnLayouts.key](%%jQueryApiUrl%%/ui.igHierarchicalGrid:columnLayouts.key) | This is the property that holds the data records for the current column layout.| columnLayouts: [{  key: "Orders", ... }]
+[columnLayouts.key](%%jQueryApiUrl%%/ui.igHierarchicalGrid#options:columnLayouts.key) | This is the property that holds the data records for the current column layout.| columnLayouts: [{  key: "Orders", ... }]
 
 Instead of defining the `columnLayouts` you could set the `autoGenerateLayouts` to `true` in order to let the igHierarchicalGrid generate the layouts based on the data.
 
@@ -107,7 +107,7 @@ So the first step is to define the schema for the igDataSource. The schema requi
 [searchField](%%jQueryApiUrl%%/ig.dataschema#options:schema.searchField)| Serves as the base node(s) for the XPaths used to define the fields. |"OrgChart"
 childDataProperty| Maps the node to the the child data fields. | "Employee"
 [fields](%%jQueryApiUrl%%/ig.dataschema#options:schema.fields) | The fields collection. | fields: [{ name: "Name", xpath: "@Name" }, { name: "Age", xpath: "@Age" }, { name: "Employee", xpath: "Employee" }]
-fields.xpath | The XPath expression to map the node to the field. | { name: "Name", xpath: "@Name" }
+[fields.xpath](%%jQueryApiUrl%%/ig.dataschema#options:schema.fields.xpath) | The XPath expression to map the node to the field. | { name: "Name", xpath: "@Name" }
 
 ```js
 var xmlSchema = new $.ig.DataSchema("xml",

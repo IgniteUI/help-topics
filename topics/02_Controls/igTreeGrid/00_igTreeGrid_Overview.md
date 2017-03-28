@@ -559,6 +559,4 @@ Press|While| To
 
 ### <a id="samples"></a> Samples
 - [igTreeGrid Overview](%%SamplesUrl%%/tree-grid/overview)
-- [igTreeGrid Filtering](%%SamplesUrl%%/tree-grid/file-explorer)
-- [igTreeGrid Sorting](%%SamplesUrl%%/tree-grid/remote-features)
-- [igTreeGrid Paging](%%SamplesUrl%%/tree-grid/file-explorer)
+- [igTreeGrid Paging](%%SamplesUrl%%/tree-grid/paging)
