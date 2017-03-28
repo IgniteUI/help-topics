@@ -137,7 +137,7 @@ It requires the following additional options to be set:
 - [height](%%jQueryApiUrl%%/ui.iggrid#options:height) (due to auto enabling row virtualization)
 - [avgRowHeight](%%jQueryApiUrl%%/ui.iggrid#options:avgRowHeight) (due to auto enabling row virtualization)
 
-When Column Virtualization is enabled the sum of the visible column widths should be equal to the grid width so that the currentlt visible columns are fully visible in the viewport.
+When Column Virtualization is enabled the sum of the visible column widths should be equal to the grid width so that the current visible columns are fully visible in the viewport.
 The `avgColumnWidth` option should also be calculated and set in order for the horizontal scrollbar width to be correct and to allow scrolling to the last visible column.
 Next section explains how to calculate `avgColumnWidth` option.
 
@@ -280,4 +280,4 @@ The sample below demonstrates how the continuous virtualization works:
 The following topics provide additional information related to this topic.
 
 - [Virtualization Overview](igGrid-Virtualization-Overview.html): This topic introduces the Virtualization feature of the `igGrid` control.
-- [Feature Compatibility Matrix (igGrid)](Feature-Compatibility-Matrix(igGrid).html): This topic shows the compatibility between `igGrid` features when enabled at the same time.
+- [Feature Compatibility Matrix (igGrid)](Feature-Compatibility-Matrix%28igGrid%29.html): This topic shows the compatibility between `igGrid` features when enabled at the same time.
