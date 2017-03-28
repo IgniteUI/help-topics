@@ -40,7 +40,7 @@ features: [
 ]
 ```
 
-When you're using the Grid ASP.NET MVC wrapper the remote requests initiated by these features can be proccessed out of the box by adding to the related Action the `GridDataSourceActionAttribute`.
+When you're using the Grid ASP.NET MVC wrapper the remote requests initiated by these features can be processed out of the box by adding to the related Action the `GridDataSourceActionAttribute`.
 This is an action filter attribute that you can use to decorate the MVC Action that returns your grid data.
 For example:
 
@@ -53,14 +53,14 @@ public ActionResult GetGridData()
 }
 ```
 
-It handles incoming requests by the various remote grid features and returns the proccessed JSON data back to grid.
+It handles incoming requests by the various remote grid features and returns the processed JSON data back to grid.
 
 > **Note:** Use `GridDataSourceAction` attribute when you configure grid in the View. If you're using `GridModel` class and configure the grid in the Controller you should use the `GridModel.GetData` instance method to return data back to the browser. 
 
 We recommend you to use the above methods in order to take full advantage of their remote capabilities with the least amount of effort.
 
 However in some cases you may not have access to the MVC wrappers (for example if you're using Ignite UI in an ASP.NET project) or you may want to build a custom logic for handling those requests.
-This topic will guide you through the proccess manually handling `igGrid` features remote requests and sending back a response in a JSON format that they can understand.
+This topic will guide you through the process manually handling `igGrid` features remote requests and sending back a response in a JSON format that they can understand.
 
 ## <a id="paging"></a> Handling Remote Paging
 
@@ -69,7 +69,7 @@ This section will guide you through the process of configuring and handling remo
 Steps:
 
 1. Client-side configuration
-2. Server-side configuration and proccessing of the request.
+2. Server-side configuration and processing of the request.
 
 ### Client-side configuration
 
@@ -105,8 +105,8 @@ http://<server>/grid/GetData?$skip=0&$top=25
 The backend to which the request is send should do the following:
 
 1. Read the query string parameters that contain the paging information (`$skip` and `$top`)
-2. Proccess the data of the grid to get only the data for the current page based on the parameters.
-3. Return JSON data that contain the proccesed grid data and the total records count of the grid, for example:
+2. Process the data of the grid to get only the data for the current page based on the parameters.
+3. Return JSON data that contains the processed grid data and the total records count of the grid, for example:
 
 ```js
 {Records: <data>, TotalRecordsCount: totalCountOfAllRecords}
@@ -148,7 +148,7 @@ This section will guide you through the process of configuring and handling remo
 Steps:
 
 1. Client-side configuration
-2. Server-side configuration and proccessing of the request.
+2. Server-side configuration and processing of the request.
 
 ### Client-side configuration
 
@@ -181,7 +181,7 @@ http://<server>/grid/GetData?filter(OrderID)=equals(10273)
 The backend to which the request is send should do the following:
 
 1. Read the query string parameters that contain the filtering information
-2. Proccess the data of the grid and return the filtered data.
+2. Process the data of the grid and return the filtered data.
 
 The below example shows how to apply the above steps in a ASP.NET MVC application:
 
@@ -342,7 +342,7 @@ This section will guide you through the process of configuring and handling remo
 Steps:
 
 1. Client-side configuration
-2. Server-side configuration and proccessing of the request.
+2. Server-side configuration and processing of the request.
 
 ### Client-side configuration
 
@@ -384,7 +384,7 @@ http://<server>/grid/GetData?sort(OrderID)=asc
 The backend to which the request is send should do the following:
 
 1. Read the query string parameters that contain the sorting information
-2. Proccess the data of the grid and return the sorted data.
+2. Process the data of the grid and return the sorted data.
 
 The below example shows how to apply the above steps in a ASP.NET MVC application:
 
@@ -456,7 +456,7 @@ This section will guide you through the process of configuring and handling remo
 Steps:
 
 1. Client-side configuration
-2. Server-side configuration and proccessing of the request.
+2. Server-side configuration and processing of the request.
 
 ### Client-side configuration
 
@@ -492,7 +492,7 @@ http://<server>/grid/GetData?summaries(OrderID)=count,min,max,sum,avg
 The backend to which the request is send should do the following:
 
 1. Read the query string parameters that contain the summary information
-2. Proccess the data of the grid and to pupulate the summaries.
+2. Process the data of the grid and to pupulate the summaries.
 3. Return JSON data that contain the proccesed grid data and the calculated summaries for the grid, for example:
 
 ```
