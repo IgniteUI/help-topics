@@ -218,10 +218,9 @@ The following topics provide additional information related to this topic.
 
 ### <a id="samples"></a> Samples
 
-The following samples provide additional information related to this topic.
+The following sample provides additional information related to this topic.
 
-- [Column Hiding](%%SamplesUrl%%/grid/column-hiding)
-- [Feature Chooser](%%SamplesUrl%%/grid/feature-chooser)
+- [Column Management](%%SamplesUrl%%/grid/column-management)
 
  
 

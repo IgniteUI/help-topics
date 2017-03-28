@@ -36,7 +36,6 @@ This topic contains the following sections:
     -   [Populating Unbound Columns with Data Remotely summary](#remote-data)
 -   [Related Content](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
 
 
 
@@ -199,13 +198,6 @@ The following topics provide additional information related to this topic.
 - [Populating Unbound Columns Locally (igGrid)](igGrid-UnboundColumns-Populating-with-Data-Locally.html): This topic demonstrates, with code samples how to set unbound column values on the client.
 
 - [Populating Unbound Columns Remotely (igGrid)](igGrid-UnboundColumns-Populating-with-Data-Remotely.html): This topic demonstrates, with code samples how to set unbound column values on the server.
-
-
-### <a id="samples"></a> Samples
-
-The following sample provides additional information related to this topic.
-
-- [Unbound Column](%%SamplesUrl%%/grid/unbound-column): The sample demonstrates how to add and configure unbound columns in `igGrid`.
 
 
 

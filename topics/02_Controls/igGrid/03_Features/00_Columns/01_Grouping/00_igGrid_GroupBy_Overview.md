@@ -269,7 +269,7 @@ The following topics provide additional information related to this topic.
 
 The following samples provide additional information related to this topic.
 
-- [Grouping with summaries](%%SamplesUrl%%/grid/grouping)
+- [GroupBy](%%SamplesUrl%%/grid/grouping)
 
  
 

@@ -172,7 +172,7 @@ The following topics provide additional information related to this topic.
 
 ### <a id="samples"></a> Samples
 
-The following samples provide additional information related to this topic.
+The following sample provides additional information related to this topic.
 
-- [Feature Chooser](%%SamplesUrl%%/grid/feature-chooser): Sample that demonstrates the Feature Chooser.
+- [Feature Chooser](%%SamplesUrl%%/grid/column-management): Sample that demonstrates the Feature Chooser.
 

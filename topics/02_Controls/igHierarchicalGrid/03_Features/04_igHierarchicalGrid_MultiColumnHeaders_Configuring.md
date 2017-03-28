@@ -390,9 +390,3 @@ The following topics provide additional information related to this topic.
 - [Row Selectors](igHierarchicalGrid-Row-Selectors-LandingPage.html): Landing page for topics related to the igHierarchicalGrid Row Selectors feature.
 - [Selection](jQuery-igHierarchical-Grid-Selection-Landing-Page.html): Landing page for topics related to the igHierarchicalGrid Selection feature.
 - [Grouping Overview](igHierarchicalGrid-Grouping-Overview.html): This topic introduces the igHierarchicalGrid control’s grouping feature as well as provides an overview of the configurable aspects of the feature.
-
-#### Samples
-
-The following samples provide additional information related to this topic.
-
-- [Multi-Column Headers](%%SamplesUrl%%/grid/multi-column-headers): This sample shows how to configure multi-column headers in the igGrid.

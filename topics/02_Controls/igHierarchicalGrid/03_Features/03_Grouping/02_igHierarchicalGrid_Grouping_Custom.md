@@ -143,12 +143,6 @@ The following topic provides additional information related to this topic.
 
 - [Enabling and Configuring Grouping](igHierarchicalGrid-Grouping-Enabling-and-Configuring.html): This topic explains how to add grouping functionality to the igHierarchicalGrid control.
 
-#### Samples
-
-The following sample provides additional information related to this topic.
-
-- [Grouping Customization](%%SamplesUrl%%/grid/grouping-customization): This sample demonstrates defining custom grouping by assigning a function which implements custom grouping logic.
-
 
 
 

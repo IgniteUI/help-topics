@@ -149,13 +149,6 @@ The following topics provide additional information related to this topic.
 - [Known Issues and Limitations (igGrid)](igGrid-Known-Issues.html): This topic explains the known issues of the `igGrid` control.
 
 - [Known Issues Revision History](Known-Issues-Revision-History.html): This group of topics explains the known issues of Ignite UI controls between the volume releases.
-
-
-### <a id="samples"></a> Samples
-
-The following samples provide additional information related to this topic.
-
-- [Unbound Column](%%SamplesUrl%%/grid/unbound-column): The sample demonstrates adding and configuring unbound columns in the `igGrid` control.
  
 
  

@@ -23,7 +23,6 @@ This topic contains the following sections:
 -   [**Keyboard Interactions**](#keyboard-interactions)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
-	-   [Samples](#samples)
 
 ## <a id="introduction"></a> Introduction
 
@@ -117,14 +116,6 @@ The following topics provide additional information related to this topic.
 - [Feature Compatibility Matrix (igGrid)](Feature-Compatibility-Matrix%28igGrid%29.html): This topic show the compatible feature combinations in `igGrid`.
 - [IIS HTTP Compression](https://www.iis.net/configreference/system.webserver/httpcompression?showTreeNavigation=true)
 - [Apache Enable Compression](http://httpd.apache.org/docs/current/mod/mod_deflate.html#enable)
-
-### <a id="samples"></a> Samples
-
-The following samples provide additional information related to this topic.
-
-- [Virtualization (Fixed)](%%SamplesUrl%%/grid/virtualization-fixed): This sample demonstrates the HTML virtualization capabilities of the `igGrid` using fixed number of rows.
-
-- [Virtualization (Continuous)](%%SamplesUrl%%/grid/virtualization-continuous): This sample demonstrates the Continuous Virtualization capabilities of the `igGrid` control.
 
 
 
