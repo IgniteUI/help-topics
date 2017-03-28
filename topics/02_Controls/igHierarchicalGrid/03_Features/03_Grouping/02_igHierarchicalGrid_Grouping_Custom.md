@@ -51,86 +51,86 @@ The following screenshot previews the results.
 
 #### Steps
 
-Demonstrate how to create a custom grouping function and assign it to the grouping feature of a hierarchical grid.
+These steps demonstrate how to create a custom grouping function and assign it to the grouping feature of a hierarchical grid.
 
 1. Create the custom grouping function.
 
-  The function in the code below groups values by their first character.
+    The function in the code below groups values by their first character.
 
-  The interface for custom grouping functions consisting of three arguments:
+    The interface for custom grouping functions consisting of three arguments:
 
-  -   `columnSetting`: the column settings object for the column for which custom grouping is configured (e.g. in the example below this is the `columnSettings` assigned for the Name column; see Step 2 in this walkthrough)
-  -   `val1`: the first value to be compared
-  -   `val2`: the second value to be compared
+    -   `columnSetting`: the column settings object for the column for which custom grouping is configured (e.g. in the example below this is the `columnSettings` assigned for the Name column; see Step 2 in this walkthrough)
+    -   `val1`: the first value to be compared
+    -   `val2`: the second value to be compared
 
-**In JavaScript:**
+    **In JavaScript:**
 
-```js
-function firstLetterGroupComparer(columnSetting, val1, val2) {
-    if (val1 !== null && val2 !== null && val1.substring(0, 1) === val2.substring(0, 1)) {
-        columnSetting.customGroupName = val1.substring(0, 1);
-        return true;
-    } else if (val1 !== null && val2 !== null && val1.substring(0, 1) !== val2.substring(0, 1)) {
-        columnSetting.customGroupName = val1.substring(0, 1);
-        return false;
-    } else if (val1 === null && val2 !== null) {
-        columnSetting.customGroupName = val2.substring(0, 1);
-        return false;
-    } else if (val1 !== null && val2 === null) {
-        columnSetting.customGroupName = val1.substring(0, 1);
+    ```js
+    function firstLetterGroupComparer(columnSetting, val1, val2) {
+        if (val1 !== null && val2 !== null && val1.substring(0, 1) === val2.substring(0, 1)) {
+            columnSetting.customGroupName = val1.substring(0, 1);
+            return true;
+        } else if (val1 !== null && val2 !== null && val1.substring(0, 1) !== val2.substring(0, 1)) {
+            columnSetting.customGroupName = val1.substring(0, 1);
+            return false;
+        } else if (val1 === null && val2 !== null) {
+            columnSetting.customGroupName = val2.substring(0, 1);
+            return false;
+        } else if (val1 !== null && val2 === null) {
+            columnSetting.customGroupName = val1.substring(0, 1);
+            return false;
+        }
         return false;
     }
-    return false;
-}
-```
+    ```
 
-  Except for the custom logic in the if and the first else if statements, it is important to mark the last two else if statements, which cover the case where there is only one defined value with the other being undefined. This must always be taken into account when writing comparer functions.
+    Except for the custom logic in the if and the first else if statements, it is important to mark the last two else if statements, which cover the case where there is only one defined value with the other being undefined. This must always be taken into account when writing comparer functions.
 
-​2. Configure the grid to use the custom function.
+2. Configure the grid to use the custom function.
 
-Configure the custom grouping function in the grid so that the controls could call it when grouping data.
+    Configure the custom grouping function in the grid so that the controls could call it when grouping data.
 
-In JavaScript  In the `groupComparerFunction: "firstLetterGroupComparer"` assignment for the Name column, the grid object’s configuration calls the `firstLetterGroupComparer()` function whenever the grouping operation is performed on the data from the Name column.
+    In JavaScript  In the `groupComparerFunction: "firstLetterGroupComparer"` assignment for the Name column, the grid object’s configuration calls the `firstLetterGroupComparer()` function whenever the grouping operation is performed on the data from the Name column.
 
-**In JavaScript:**
+    **In JavaScript:**
 
-```js
-...
-features: [
-{
-      name: "GroupBy",
-      type: "local",
-      groupByAreaVisibility: "hidden",
-      inherit: true,
-      columnSettings: [{
-            columnKey: "Name",
-            isGroupBy: true,
-            groupComparerFunction: "firstLetterGroupComparer",
-            allowGrouping: false
-      }]
-}]
-...
-```
+    ```js
+    ...
+    features: [
+    {
+        name: "GroupBy",
+        type: "local",
+        groupByAreaVisibility: "hidden",
+        inherit: true,
+        columnSettings: [{
+                columnKey: "Name",
+                isGroupBy: true,
+                groupComparerFunction: "firstLetterGroupComparer",
+                allowGrouping: false
+        }]
+    }]
+    ...
+    ```
 
-ASP.NET MVC  As with the previous JavaScript example, here, the method call `GroupByComparerFunction("firstLetterGroupComparer")` of the grid wrapper configures the grid to use the `firstLetterGroupComparer()` function for grouping on the Name column.
+    ASP.NET MVC  As with the previous JavaScript example, here, the method call `GroupByComparerFunction("firstLetterGroupComparer")` of the grid wrapper configures the grid to use the `firstLetterGroupComparer()` function for grouping on the Name column.
 
-**In ASPX:**
+    **In ASPX:**
 
-```csharp
-...
-.Features(feature => {
-    feature.GroupBy().Type(OpType.Local).Inherit(true)
-        .GroupByAreaVisibility(GroupAreaVisibility.Hidden)
-        .ColumnSettings(setting =>
-        {
-            setting.ColumnSetting().ColumnKey("Name")
-                .IsGroupBy(true)
-                .GroupByComparerFunction("firstLetterGroupComparer")
-                .AllowGrouping(false);
-        });
-})
-...
-```
+    ```csharp
+    ...
+    .Features(feature => {
+        feature.GroupBy().Type(OpType.Local).Inherit(true)
+            .GroupByAreaVisibility(GroupAreaVisibility.Hidden)
+            .ColumnSettings(setting =>
+            {
+                setting.ColumnSetting().ColumnKey("Name")
+                    .IsGroupBy(true)
+                    .GroupByComparerFunction("firstLetterGroupComparer")
+                    .AllowGrouping(false);
+            });
+    })
+    ...
+    ```
 
 
 
