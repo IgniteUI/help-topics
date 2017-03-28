@@ -73,7 +73,7 @@ Since Multi-Row Layout changes how cells are rendered and therefore breaks the c
 
 An additional function is added to the public API that accepts a DOM element and returns information about it in the context of the grid's layout.
 
-[getElementInfo](%%jQueryApiUrl%%/ui.iggrid#methods:getElementInfo) - accepts a DOM element and returns and object containing the following properties:
+[getElementInfo](%%jQueryApiUrl%%/ui.iggrid#methods:getElementInfo) - accepts a DOM element and returns an object containing the following properties:
 
 * rowId - will be null if no primary key is specified
 * rowIndex - the index of the row (the element itself of its parent in case of `TD`/`TH`) in the DOM 
