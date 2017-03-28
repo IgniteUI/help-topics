@@ -162,7 +162,7 @@ Column hiding defined with CSS classes uses CSS 3 Media Queries. CSS classes are
 
 The following table maps the desired configuration to property settings.
 
-I<table class="table table-striped">
+<table class="table table-striped">
 	<thead>
 		<tr>
             <th>
