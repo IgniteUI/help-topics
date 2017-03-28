@@ -62,7 +62,7 @@ A Windows only offline MSI installer containing the product and samples.
 You have several options to host Ignite UI in your project:
 
 - Use Package Manager like NPM, JSPM, NuGet
-- Copy the [JavaScript and CSS files](Adding_the_Required_Resources_for_NetAdvantage_for_jQuery.html) from the Ignite UI installation directory into your project
+- Copy the [JavaScript and CSS files](Adding-the-Required-Resources-for-NetAdvantage-for-jQuery.html) from the Ignite UI installation directory into your project
 - Use [Infragistics Content Delivery Network (CDN)](#cdn)
 
 ## <a id="package_managers"></a>Using NPM, JSPM, NuGet
@@ -75,7 +75,7 @@ NPM (installs [Ignite UI Open Source](https://www.npmjs.com/package/ignite-ui))
     npm install ignite-ui
 ```
 
-For instructions how to configure the full licensed package, please check [Using Ignite UI npm packages](Using_Ignite_UI_Npm_Packages.html) topic.
+For instructions how to configure the full licensed package, please check [Using Ignite UI npm packages](Using-Ignite-UI-Npm-Packages.html) topic.
 
 NuGet (installs [Ignite UI Trial](https://www.nuget.org/packages/IgniteUI/))
 
@@ -83,7 +83,7 @@ NuGet (installs [Ignite UI Trial](https://www.nuget.org/packages/IgniteUI/))
     Install-Package IgniteUI
 ```
 
-For instructions how to configure the licensed package, please check [Using Ignite UI NuGet packages](Using_Ignite_UI_NuGet_Packages.html) topic.
+For instructions how to configure the licensed package, please check [Using Ignite UI NuGet packages](Using-Ignite-UI-NuGet-Packages.html) topic.
 
 JSPM (installs [Ignite UI Open Source](https://www.npmjs.com/package/ignite-ui))
 ```
@@ -95,9 +95,9 @@ For instructions how to configure the full licensed package, please check [Using
 ### <a id="add_references"></a>Add CSS and JavaScript references
 
 Ignite UI depends on jQuery and jQuery UI libraries and you need to add references to them before the Ignite UI scripts. You also have several options to include the Ignite UI controls in the page
-- Referencing combined and minified bundle files - installation comes with a combined and minified files which group controls by type. There are `infragistics.core.js` (mandatory), `infragistics.lob.js` which contains the Line of Business controls like Grids and `infragistics.dv.js` which contains the Data Visualization controls like Charts. For more information check [Adding Required Resources Manually](Adding_the_Required_Resources_for_NetAdvantage_for_jQuery.html) topic.
-- Referencing individual control files - For more information check [JavaScript Files in Ignite UI](Deployment_Guide_JavaScript_Files.html) topic.
-- Using Infragistics Loader - The Infragistics Loader is a loader that can automatically load Ignite UI files (and not only). It saves you the burden to reference control files manually. For more information check [Adding Required Resources Automatically with the Infragistics Loader](Using_Infragistics_Loader.html) topic.
+- Referencing combined and minified bundle files - installation comes with a combined and minified files which group controls by type. There are `infragistics.core.js` (mandatory), `infragistics.lob.js` which contains the Line of Business controls like Grids and `infragistics.dv.js` which contains the Data Visualization controls like Charts. For more information check [Adding Required Resources Manually](Adding-the-Required-Resources-for-NetAdvantage-for-jQuery.html) topic.
+- Referencing individual control files - For more information check [JavaScript Files in Ignite UI](Deployment-Guide-JavaScript-Files.html) topic.
+- Using Infragistics Loader - The Infragistics Loader is a loader that can automatically load Ignite UI files (and not only). It saves you the burden to reference control files manually. For more information check [Adding Required Resources Automatically with the Infragistics Loader](Using-Infragistics-Loader.html) topic.
 - Using AMD Loader - Ignite UI is AMD compatible and can be used with all popular AMD loaders.
 
 ### <a id="boilerplate"></a>Sample Ignite UI Boilerplate HTML page (using trial CDN links)
@@ -171,7 +171,7 @@ The Ignite UI [Custom Download Page](https://www.igniteui.com/download) gives yo
 
 Instead of hosting the Ignite UI script files into your project, you can just use Ignite UI CDN links. For Internet applications CDN usually serves files faster to the end users compared to host them on premise.
 
-Following are the Ignite UI Trial links. For more details checkout [Infragistics Content Delivery Network (CDN) for Ignite UI](deployment_guide_infragistics_content_delivery_network%28cdn%29.html) topic.
+Following are the Ignite UI Trial links. For more details checkout [Infragistics Content Delivery Network (CDN) for Ignite UI](deployment-guide-infragistics-content-delivery-network%28cdn%29.html) topic.
 
 ```
     <!-- Ignite UI Required Combined CSS Files (Trial) -->
@@ -190,11 +190,11 @@ Following are the Ignite UI Trial links. For more details checkout [Infragistics
 
 ## <a id="typescript"></a>TypeScript Definitions
 
-Ignite UI provides type definitions for TypeScript allowing you to take advantage of strong typing, compile time checking and IntelliSense features. For more information check [Using Ignite UI with TypeScript](Using_Ignite_UI_with_TypeScript.html) topic.
+Ignite UI provides type definitions for TypeScript allowing you to take advantage of strong typing, compile time checking and IntelliSense features. For more information check [Using Ignite UI with TypeScript](Using-Ignite-UI-with-TypeScript.html) topic.
 
 ## <a id="typescript"></a>AngularJS Extensions
 
-Ignite UI AngularJS extenstions provide two-way data binding and declarative initialization for controls used in AngularJS applications. For more information check [Using Ignite UI with AngularJS](Using_Ignite_UI_with_AngularJS.html) topic.
+Ignite UI AngularJS extenstions provide two-way data binding and declarative initialization for controls used in AngularJS applications. For more information check [Using Ignite UI with AngularJS](Using-Ignite-UI-with-AngularJS.html) topic.
 
 ## <a id="angular"></a>Angular 2 Extensions
 
@@ -206,7 +206,7 @@ Ignite UI ReactJS extenstions provide JSX markup and React API initialization. F
 
 ## <a id="aspnet_wrappers"></a>ASP.NET MVC Wrappers
 
-Ignite UI ASP.NET MVC Wrappers provide Model and View Chaining initialization as well as out of the box server-side remote requests handling. For more information check [Adding Controls to an MVC Project](Adding_NetAdvantage_Controls_to_an_MVC_Project.html) topic.
+Ignite UI ASP.NET MVC Wrappers provide Model and View Chaining initialization as well as out of the box server-side remote requests handling. For more information check [Adding Controls to an MVC Project](Adding-NetAdvantage-Controls-to-an-MVC-Project.html) topic.
 
 ## <a id="related_content"></a>Related Content
 
