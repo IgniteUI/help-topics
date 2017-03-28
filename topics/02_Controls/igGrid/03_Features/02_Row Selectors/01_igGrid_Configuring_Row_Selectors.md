@@ -47,9 +47,7 @@ The table below lists the required background you need for fully understanding t
 - Topics
 	- You need to first read the [Enabling Row Selectors](igGrid-Enabling-Row-Selectors.html) topic.
 - External Resources 
-	- You need to first read the following articles:
-	- [jQuery bind() API](http://api.jquery.com/bind/)
-	- j[Query delegate() API](http://api.jquery.com/delegate/)
+	- You need to first read the [jQuery on() API](http://api.jquery.com/on/) article.
 
 
 ## <a id="overview"></a> RowSelectors Configuration Overview 
@@ -83,29 +81,29 @@ In the picture below, RowSelectors and multiple Selection features are enabled.
 
 ```html
 <script type="text/javascript">
-$(function () {
-    $("#grid").igGrid({
-              autoGenerateColumns: true,
-              dataSource: source,
-              features: [
+    $(function () {
+        $("#grid").igGrid({
+            autoGenerateColumns: true,
+            dataSource: source,
+            features: [
                 {
                     name: 'RowSelectors'
                 },
                 {
-                    name: 'Selection',				
+                    name: 'Selection',
                     mode: "cell",
                     multipleSelection: true
                 }
             ]
         });    
-     });
+    });
 </script>
 ```
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
-<%= Html.Infragistics().Grid(Model)
+@(Html.Infragistics().Grid(Model)
     .AutoGenerateColumns(true)
     .Features(feature =>        {       
         feature.Selection().MultipleSelection(true);
@@ -113,7 +111,7 @@ $(function () {
     })
     .DataBind()
     .Render()
-%>
+)
 ```
 
 ## <a id="select-all-pages"></a> Enabling Selection across all pages
@@ -143,35 +141,35 @@ Property | Setting
 
 ```html
 <script type="text/javascript">
-  $(function () {
-      $("#grid").igGrid({
-                autoGenerateColumns: true,
-                dataSource: source,
-                features: [
-                  {
-                      name: 'RowSelectors',
-                      enableCheckBoxes: true,
-                      enableSelectAllForPaging: true
-                  },
-                  {
-                      name: 'Selection',
-                      multipleSelection: true
-                  },
-                  {
-                      name: 'Paging',
-                      type: "local",
-                      pageSize: 10
-                  }
-              ]
-       });    
-   });
+    $(function () {
+        $("#grid").igGrid({
+            autoGenerateColumns: true,
+            dataSource: source,
+            features: [
+                {
+                    name: 'RowSelectors',
+                    enableCheckBoxes: true,
+                    enableSelectAllForPaging: true
+                },
+                {
+                    name: 'Selection',
+                    multipleSelection: true
+                },
+                {
+                    name: 'Paging',
+                    type: "local",
+                    pageSize: 10
+                }
+            ]
+        });
+    });
 </script>
 ```
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
-<%= Html.Infragistics().Grid(Model)
+@(Html.Infragistics().Grid(Model)
     .AutoGenerateColumns(true)
     .Features(feature =>        {       
         feature.Selection().MultipleSelection(true);
@@ -182,7 +180,7 @@ Property | Setting
     })
 	.DataBind()
 	.Render()
-%>
+)
 ```
 
 ## <a id="adding-selection-checkboxes"></a> Adding Selection Checkboxes 
@@ -214,9 +212,9 @@ Property | Setting
 <script type="text/javascript">
     $(function () {
         $("#grid").igGrid({
-              autoGenerateColumns: true,
-              dataSource: source,
-              features: [
+            autoGenerateColumns: true,
+            dataSource: source,
+            features: [
                 {
                     name: 'RowSelectors', 
                     enableCheckBoxes: true
@@ -225,24 +223,24 @@ Property | Setting
                     name: 'Selection',
                     multipleSelection: true
                 }
-              ]
+            ]
         });
     });
 </script>
 ```
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
-<%= Html.Infragistics().Grid(Model)
+@(Html.Infragistics().Grid(Model)
     .AutoGenerateColumns(true)
     .Features(feature =>         { 
         feature.Selection().MultipleSelection(true);
         feature.RowSelectors().EnableCheckBoxes(true);
      })
-	.DataBind()
-	.Render()
-    %>
+    .DataBind()
+    .Render()
+)
 ```
 
 ## <a id="row-numbering"></a> Enabling Row Numbering 
@@ -267,38 +265,38 @@ rowNumberingSeed| 0
 
 ### <a id="row-numbering-code"></a> Code 
 
-**In Javascript:**
+**In HTML:**
 
-```js
+```html
 <script type="text/javascript">
- $ (function () {
-  $("#grid").igGrid({
-         autoGenerateColumns: true,
-         dataSource: source,
-             features: [
+    $(function () {
+        $("#grid").igGrid({
+            autoGenerateColumns: true,
+            dataSource: source,
+            features: [
                 {
                     name: 'RowSelectors', 
                     enableRowNumbering: true
                 }
             ]
+        });
     });
- });
 </script>
 ```
  
 
-**In C#:**
+**In Razor:**
 
 ```csharp
-<%= Html.Infragistics().Grid(Model)
+@(Html.Infragistics().Grid(Model)
     .AutoGenerateColumns(true)
     .Features(feature =>        {
-		feature.Selection().MultipleSelection(true);
+        feature.Selection().MultipleSelection(true);
         feature.RowSelectors().EnableRowNumbering(true);
     })
-	.DataBind()
-	.Render()
-%>
+    .DataBind()
+    .Render()
+)
 ```
 
 ## <a id="cancel-checkbox"></a> Canceling the Check Box State Changing Event 
@@ -316,13 +314,11 @@ Following is a conceptual overview of the process:
 
         **In Javascript:**
 
-		```js
-        <script type="text/javascript">        
-            function gridcheckboxStateChanging (evt, ui) {
-         
-            };   
-        </script>
-		```
+        ```js
+        function gridcheckboxStateChanging (evt, ui) {
+        
+        };
+        ```
 
     2.  Set the handler to the `rowSelectorClicked` event of the `igGrid`.
 
@@ -334,25 +330,25 @@ Following is a conceptual overview of the process:
 		
 		**In Javascript:**
 		
-		```js
-		$(function () {
-		  $("#grid1").igGrid({
-		       autoGenerateColumns: true,
-		       dataSource: adventureWorks,
-		       responseDataKey: 'Records',
-		       features: [
-	                {
-	                     name: 'RowSelectors',
-	                     enableCheckBoxes: true,
-	                     checkBoxStateChanging: "gridcheckboxStateChanging"
-	                },
-	                {
-	                     name: 'Selection'
-	                }
-		       ]
-		  });
-		});
-		```
+        ```js
+        $(function () {
+            $("#grid1").igGrid({
+                autoGenerateColumns: true,
+                dataSource: adventureWorks,
+                responseDataKey: 'Records',
+                features: [
+                    {
+                        name: 'RowSelectors',
+                        enableCheckBoxes: true,
+                        checkBoxStateChanging: "gridcheckboxStateChanging"
+                    },
+                    {
+                        name: 'Selection'
+                    }
+                ]
+            });
+        });
+        ```
 
 2. Cancel the event.
 
@@ -361,12 +357,10 @@ Following is a conceptual overview of the process:
 	**In Javascript:**
 	
 	```js
-	<script type="text/javascript">        
-	    function gridcheckboxStateChanging (evt, ui) {
-	       if (conditionNotMet)
-	          return false;
-	     };   
-	</script>
+    function gridcheckboxStateChanging (evt, ui) {
+        if (conditionNotMet)
+            return false;
+    };
 	```
 
 ##  <a id="topics"></a> Related Topics 
