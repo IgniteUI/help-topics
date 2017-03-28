@@ -36,7 +36,7 @@ The list below provides brief descriptions of the Columns features of the igHier
 
 ## <a id="defining-columns"></a> Defining Columns
 
-When defining columns, you can configure some individual column settings, like the data binding. the header text, and the column width. For more information about the available options, see the columns property. The code below  demonstrates setting of some basic options at defining columns.
+When defining columns, you can configure some individual column settings, like the data binding. the header text, and the column width. For more information about the available options, see the columns property. The code below  demonstrates setting of some basic options when defining columns.
 
 **In Javascript:**
 
@@ -135,7 +135,7 @@ To load the data for the igHierarchicalGrid on demand, you must explicitly defin
 ## <a id="auto"></a> Auto-generate Columns and Layouts
 
 ### Introduction
-If you you don’t need to define neither the columns nor layouts, you can let the igHierarchicalGrid to configure columns and layouts automatically. When the grid auto-generates the layouts automatically, it takes the structure of attached data source. This can be done either on the client or on the server .
+If you don’t need to define neither the columns nor layouts, you can let the igHierarchicalGrid to configure columns and layouts automatically. When the grid auto-generates the layouts automatically, it takes the structure of attached data source. This can be done either on the client or on the server .
 
 ### Property Settings
 Auto-generating layouts works by recursively analyzing the data source structure. If the objects' types contain public properties that are of IEnumerable/IQueryable type, they are assumed that they define a parent-child relationships and thus a layout is generated for these relationships. For example, you can bind to a list of Customers, and that list can have a property called `Orders` which is of type IQueryable.
@@ -165,7 +165,7 @@ $("#grid1").igHierarchicalGrid({
 ```
 
 ### Additional considerations
-It's important to know that using `autogenerate` columns and `autogenerate` layouts saves implementation time and can be used when the site is in development. But it is always preferable to define columns and layouts manually, when the application is running in a production environment. This is because the performance is better and you have control on the data is rendered to the client.
+It's important to know that using `autogenerate` columns and `autogenerate` layouts saves implementation time and can be used when the site is in development. But it is always preferable to define columns and layouts manually, when the application is running in a production environment. This is because the performance is better and you have control over the data that is rendered to the client.
 
 **Note:** Updating feature requires `dataType` property to be set when `autoGenerateColumns` is set to false. That's because Updating feature uses primary key to synchronize records between the grid and the underlying data source and the primary key is compared by value and type.
 
