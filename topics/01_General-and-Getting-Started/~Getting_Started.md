@@ -206,7 +206,7 @@ Ignite UI ReactJS extenstions provide JSX markup and React API initialization. F
 
 ## <a id="aspnet_wrappers"></a>ASP.NET MVC Wrappers
 
-Ignite UI ASP.NET MVC Wrappers provide Model and View Chaining initialization as well as out of the box server-side remote requests handling. For more information check [Adding Controls to an MVC Project](Adding NetAdvantage Controls to an MVC Project.html) topic.
+Ignite UI ASP.NET MVC Wrappers provide Model and View Chaining initialization as well as out of the box server-side remote requests handling. For more information check [Adding Controls to an MVC Project](Adding_NetAdvantage_Controls_to_an_MVC_Project.html) topic.
 
 ## <a id="related_content"></a>Related Content
 
