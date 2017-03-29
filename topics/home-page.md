@@ -17,7 +17,7 @@
 
 <h2>Getting Started</h2>
 <p>Get started by exploring the product documentation via the tree on this page or [run the samples](%%SamplesUrl%%/grid/overview), work directly with the controls inside the [Ignite UI Page Designer](%%DesignerUrl%%).</p>
-<a href="Getting_Started.html" class="landing-btn landing-btn-primary" target="_blank">Start Here</a>
+<a href="Getting-Started.html" class="landing-btn landing-btn-primary" target="_blank">Start Here</a>
 
 </div>
 <div class="col-sm-6 landing-col landing-api">

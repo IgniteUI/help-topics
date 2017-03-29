@@ -192,7 +192,7 @@ Following are the Ignite UI Trial links. For more details checkout [Infragistics
 
 Ignite UI provides type definitions for TypeScript allowing you to take advantage of strong typing, compile time checking and IntelliSense features. For more information check [Using Ignite UI with TypeScript](Using-Ignite-UI-with-TypeScript.html) topic.
 
-## <a id="typescript"></a>AngularJS Extensions
+## <a id="angularjs"></a>AngularJS Extensions
 
 Ignite UI AngularJS extenstions provide two-way data binding and declarative initialization for controls used in AngularJS applications. For more information check [Using Ignite UI with AngularJS](Using-Ignite-UI-with-AngularJS.html) topic.
 
