@@ -78,6 +78,7 @@ $("#zoombar").igZoombar("clone").igDataChart("addItem", {"Item1": "Value1", "Ite
 
 The `igZoombar` creates a clone of the original `igDataChart` that it targets. By default the `igZoombar` infers the clone's options from the original chart object (refer to the [`clone`](%%jQueryApiUrl%%/ui.igzoombar#options:clone) option of the `igZoombar`). In the case of the stacked series, which have a more complex structure, the original chart modifies the series that the user provides internally. Due to this the `igZoombar` cannot obtain the original series and cannot recreate the clone automatically.
 >**Workaround:**Use igDataChart options to initialize igZoombar by configuring its [clone](%%jQueryApiUrl%%/ui.igzoombar#methods:clone) option.
+
 **In JavaScript:**
 
 ```js
