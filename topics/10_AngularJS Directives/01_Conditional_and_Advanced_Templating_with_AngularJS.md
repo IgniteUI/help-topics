@@ -218,6 +218,5 @@ The following topics provide additional information related to this topic.
 The following samples provide additional information related to this topic.
 
 -   [igGrid Sample](http://igniteui.github.io/igniteui-angular/samples/igGrid.html)
--   [Conditional Templates](%%NewSamplesUrl%%/templating-engine/conditional-templates)
 
                     
