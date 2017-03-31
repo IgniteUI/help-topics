@@ -189,6 +189,17 @@ clone
 ![](../images/images/negative.png)
 			</td>
         </tr>
+        <tr>
+            <td>
+Controls and features affected by jQuery 3.2.\*
+			</td>
+            <td>
+Due to API changes made in jQuery 3.2.\* versions some controls or control features may not function as expected when using them together with jQuery 3.2.\*.
+            </td>
+            <td>
+![](../images/images/plannedFix.png)
+            </td>
+        </tr>
     </tbody>
 </table>
 
