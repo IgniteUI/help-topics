@@ -105,7 +105,7 @@ So the first step is to define the schema for the igDataSource. The schema requi
 |Option | Description | Set to:|
 |--------|-------------|--------|
 |[searchField](%%jQueryApiUrl%%/ig.dataschema#options:schema.searchField)| Serves as the base node(s) for the XPaths used to define the fields. |"OrgChart"
-childDataProperty| Maps the node to the the child data fields. | "Employee"|
+|childDataProperty| Maps the node to the the child data fields. | "Employee"|
 |[fields](%%jQueryApiUrl%%/ig.dataschema#options:schema.fields) | The fields collection. | fields: [{ name: "Name", xpath: "@Name" }, { name: "Age", xpath: "@Age" }, { name: "Employee", xpath: "Employee" }]|
 |[fields.xpath](%%jQueryApiUrl%%/ig.dataschema#options:schema.fields.xpath) | The XPath expression to map the node to the field. | { name: "Name", xpath: "@Name" }|
 
