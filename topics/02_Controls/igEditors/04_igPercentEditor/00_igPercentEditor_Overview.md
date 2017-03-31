@@ -13,7 +13,7 @@
 ##Overview Of The igPercentEditor
 
 
-The Ignite UI™ percent editor, or `igPercentEditor`, is a control that renders an input field which only accepts numeric digits, formatted as a percentage. The `igPercentEditor` control supports localization, by recognizing different regional options exposed from the browser.
+The %%ProductName%%™ percent editor, or `igPercentEditor`, is a control that renders an input field which only accepts numeric digits, formatted as a percentage. The `igPercentEditor` control supports localization, by recognizing different regional options exposed from the browser.
 
 The `igPercentEditor` control may be extensively styled giving you an opportunity to provide a completely different look and feel for the control as opposed to the default style. Styling options include using your own styles as well as styles from jQuery UI’s `ThemeRoller`.
 
@@ -35,7 +35,7 @@ The `igPercentEditor` includes the following characteristics:
 ##Adding igPercentEditor to a Web Page
 
 
-1.  To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) help topic.
+1.  To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) help topic.
 2.  On your HTML page or ASP.NET MVC View, reference the required JavaScript files, CSS files, and ASP.NET MVC assemblies.
 
     **In HTML:**
@@ -97,8 +97,8 @@ The `igPercentEditor` includes the following characteristics:
 ##Related Links
 
 -   [Basic Usage Sample](%%SamplesUrl%%/editors/basic-usage)
--   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
--   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+-   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)
+-   [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 
  
 

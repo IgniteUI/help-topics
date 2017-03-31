@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# Mobile Wrappers Known Issues and Limitations (Ignite UI ASP.NET MVC)
+# Mobile Wrappers Known Issues and Limitations (%%ProductName%% ASP.NET MVC)
 
 
 
@@ -23,7 +23,7 @@ Legend: |
 ![](../images/images/plannedFix.png) | No known workaround, fix planned
 
 
-### Ignite UI ASP.NET MVC Mobile Wrappers (mobile)
+### %%ProductName%% ASP.NET MVC Mobile Wrappers (mobile)
 
 Issue | Description | Status
 ------|-------------|--------

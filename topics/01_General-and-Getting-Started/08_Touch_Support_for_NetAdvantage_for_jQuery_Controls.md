@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# Touch Support for Ignite UI Controls
+# Touch Support for %%ProductName%% Controls
 
 
 
@@ -17,7 +17,7 @@
 
 ### Purpose
 
-This topic provides a summary of how the Ignite UI™ suite supports touch-enabled environments, suggests best practices, and lists the touch-support specifics of the individual Ignite UI controls.
+This topic provides a summary of how the %%ProductName%%™ suite supports touch-enabled environments, suggests best practices, and lists the touch-support specifics of the individual %%ProductName%% controls.
 
 ### In this topic
 
@@ -40,15 +40,15 @@ This topic contains the following sections:
 
 ###<a id="touch-support-summary"></a> Touch support summary
 
-All Ignite UI controls support touch interaction. This support is possible by adding new features and components in order to support touch-compatible behaviors.
+All %%ProductName%% controls support touch interaction. This support is possible by adding new features and components in order to support touch-compatible behaviors.
 
-Rendered in a touch-enabled environment, each Ignite UI control will look and behave the same way under Desktop and Touch platforms. For example, the igGrid™ widget is not an entirely new control for the touch device, but includes touch-optimized features which are available under a touch-enabled environment. This adaptability allows you (with little configuration) to have multi-platform control in your applications. For details surrounding individual controls, refer to the Control overview section.
+Rendered in a touch-enabled environment, each %%ProductName%% control will look and behave the same way under Desktop and Touch platforms. For example, the igGrid™ widget is not an entirely new control for the touch device, but includes touch-optimized features which are available under a touch-enabled environment. This adaptability allows you (with little configuration) to have multi-platform control in your applications. For details surrounding individual controls, refer to the Control overview section.
 
->**Note:** It’s recommended to use the Modernizr JavaScript library together with Ignite UI for jQuery controls. The controls work well without Modernizr, but when the library is available on the page, the controls adapt to a more touch-friendly mode.
+>**Note:** It’s recommended to use the Modernizr JavaScript library together with %%ProductName%% for jQuery controls. The controls work well without Modernizr, but when the library is available on the page, the controls adapt to a more touch-friendly mode.
 
 ###<a id="scrolling-touch-environment"></a> Scrolling in touch environment
 
-All Ignite UI controls support scrolling by default when running under a touch-enabled environment. The scrolling behavior is controlled by an internal component called `igScroll`™.
+All %%ProductName%% controls support scrolling by default when running under a touch-enabled environment. The scrolling behavior is controlled by an internal component called `igScroll`™.
 
 For the scrolling behavior to be operational under touch, the `igScroll` script must be referenced on the page. This is done automatically when using the [Infragistics® Loader](Using-Infragistics-Loader.html). However, if you do not use the Loader, you need to either reference it manually or to reference the infragistics.core.js file which contains `igScroll`.
 
@@ -72,11 +72,11 @@ This way, the `igScroll` component makes the container scrollable under touch-en
 
 ###<a id="mobile-pages-best-practice"></a>Mobile Pages Best Practices
 
-Ignite UI controls are optimized for touch as well as standard desktop web browser use. In addition to using the stock controls you will want to make sure to follow a few best practices in order to get the best performance and response from each control:
+%%ProductName%% controls are optimized for touch as well as standard desktop web browser use. In addition to using the stock controls you will want to make sure to follow a few best practices in order to get the best performance and response from each control:
 
 -   **Use Modernizr**
 
-	Use the Modernizr JavaScript library together with Ignite UI controls in order to ensure the controls render in the most touch-optimized mode possible.
+	Use the Modernizr JavaScript library together with %%ProductName%% controls in order to ensure the controls render in the most touch-optimized mode possible.
 
 -   **Define the viewport meta tag**
 

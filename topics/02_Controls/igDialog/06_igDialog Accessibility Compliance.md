@@ -30,7 +30,7 @@ The following topics are prerequisite to understanding this topic:
 
 ### <a id="accessibility-compliance-intro"></a> Introduction
 
-All of the Ignite UI™ controls and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. Table 1 contains the specific rules of Subpart 1194.22 that pertain to the control. Also, detailed information about how the grid control complies with each rule is represented.
+All of the %%ProductName%%™ controls and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. Table 1 contains the specific rules of Subpart 1194.22 that pertain to the control. Also, detailed information about how the grid control complies with each rule is represented.
 
 To meet the requirements of each accessibility rule, in some cases you may need to interact with the control by to setting a specific property, but in other cases the control does the work for you.
 
@@ -55,7 +55,7 @@ Rules | Rule Text | How We Comply
 
 The following topics provide additional information related to this topic:
 
-- [Accessibility Compliance](Accessibility-Compliance.html): Provides reference information for accessibility compliance of all Ignite UI controls.
+- [Accessibility Compliance](Accessibility-Compliance.html): Provides reference information for accessibility compliance of all %%ProductName%% controls.
 - [***igDialog* Overview**](igDialog-Overview.html): The topic introduces the user to the `igDialog` control’s main features.
 
 

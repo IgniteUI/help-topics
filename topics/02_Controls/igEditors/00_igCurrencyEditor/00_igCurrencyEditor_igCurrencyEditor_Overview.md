@@ -11,7 +11,7 @@
 # igCurrencyEditor Overview
 
 
-The Ignite UI™ currency editor, or `igCurrencyEditor`, is a control which renders an input field which only accepts numeric values, formatted as various currency types. The `igCurrencyEditor` control supports localization, by recognizing different regional options exposed from the browser.
+The %%ProductName%%™ currency editor, or `igCurrencyEditor`, is a control which renders an input field which only accepts numeric values, formatted as various currency types. The `igCurrencyEditor` control supports localization, by recognizing different regional options exposed from the browser.
 
 As the user interacts with the control, the visual appearance is updated to reflect any changes. Once the editor loses focus, a value-dependent positive or negative pattern is applied to the control, along with adding the appropriate currency sign.
 
@@ -50,7 +50,7 @@ $('#currencyEditor').igCurrencyEditor({
 
 ## Adding igCurrencyEditor to a Web Page
 
-1.  To get started, include the required and localized resources for your application. Details on which resources to include are found in the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) help topic.
+1.  To get started, include the required and localized resources for your application. Details on which resources to include are found in the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) help topic.
 2.  On your HTML page or ASP.NET MVC View, reference the required JavaScript files, CSS files, and ASP.NET MVC assemblies.
 
     **In HTML:**
@@ -112,8 +112,8 @@ $('#currencyEditor').igCurrencyEditor({
 ## Related Links
 
 -   [Currency Editor Sample](%%SamplesUrl%%/editors/currency-editor)
--   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
--   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+-   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)
+-   [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 
  
 

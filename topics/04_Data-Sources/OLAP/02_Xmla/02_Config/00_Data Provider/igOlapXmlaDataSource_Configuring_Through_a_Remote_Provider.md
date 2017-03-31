@@ -250,13 +250,13 @@ Following is the code for the RemoteDataProviderSample View.
 <html>
 <head>
     <title></title>
-    <!-- Ignite UI Required Combined CSS Files -->
+    <!-- %%ProductName%% Required Combined CSS Files -->
     <link href="@Url.Content("[IG root]/css/themes/infragistics/infragistics.theme.css")" rel="stylesheet" />
     <link href="@Url.Content("[IG root]/css/structure/infragistics.css")" rel="stylesheet" />
     <script src="@Url.Content("~/js/modernizr.min.js")"></script>
     <script src="@Url.Content("~/js/jquery.min.js")"></script>
     <script src="@Url.Content("~/js/jquery-ui.min.js")"></script>
-    <!-- Ignite UI Required Combined JavaScript Files -->
+    <!-- %%ProductName%% Required Combined JavaScript Files -->
     <script src="@Url.Content("[IG root]/js/infragistics.core.js")"></script>
     <script src="@Url.Content("[IG root]/js/infragistics.lob.js")"></script>
 </head>

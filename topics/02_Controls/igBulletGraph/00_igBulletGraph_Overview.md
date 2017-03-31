@@ -56,7 +56,7 @@ This topic contains the following sections:
 
 #### <a id="summary"></a>igBulletGraph summary
 
-The `igBulletGraph` control is an **Ignite UI**™ control which allows for visualizing data in the form of a bullet graph. Linear by design, it provides a simple and concise view of a primary measure or measures compared against a scale and, optionally, some other measure.
+The `igBulletGraph` control is an **%%ProductName%%**™ control which allows for visualizing data in the form of a bullet graph. Linear by design, it provides a simple and concise view of a primary measure or measures compared against a scale and, optionally, some other measure.
 
 ![](images/igBulletGraph.png)
 

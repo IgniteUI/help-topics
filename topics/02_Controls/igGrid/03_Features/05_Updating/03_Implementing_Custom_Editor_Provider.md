@@ -31,7 +31,7 @@ This topic contains the following sections:
 
 The Updating feature when in edit mode displays editors for the row or cell being edited. Those editors are implemented by an editor providers abstraction which provides a common editing communication interface with the Updating feature.
 
-Updating comes with a set of editor providers that wrap the [Ignite UI Editors](igEditors-LandingPage.html) to provide feature rich experience for the end user.
+Updating comes with a set of editor providers that wrap the [%%ProductName%% Editors](igEditors-LandingPage.html) to provide feature rich experience for the end user.
 
 ## <a id="editors"></a> Built-in editor types
 

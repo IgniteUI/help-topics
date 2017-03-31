@@ -41,7 +41,7 @@ The Infragistics Motion Framework tells the story of your data in a way that all
 
 Motion Framework works on the principle that data is being fed, either continually or in batches, to a chart control that invokes the appropriate API method whenever data changes to render a fully customizable animated visual representation of your data.
 
-The Motion Framework allows developers using the Ignite UI chart controls, to increase the visual appeal of, and imply trends or other meaning behind the data.
+The Motion Framework allows developers using the %%ProductName%% chart controls, to increase the visual appeal of, and imply trends or other meaning behind the data.
 
 
 

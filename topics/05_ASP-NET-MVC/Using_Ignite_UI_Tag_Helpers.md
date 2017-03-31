@@ -8,11 +8,11 @@
 |metadata|
 -->
 
-# Using Ignite UI Tag Helpers
+# Using %%ProductName%% Tag Helpers
 
 ## Topic Overview
 
-This topic demonstrates how to configure Ignite UI™ components by using the Tag Helpers syntax introduced in the new ASP.NET Core 1.0
+This topic demonstrates how to configure %%ProductName%%™ components by using the Tag Helpers syntax introduced in the new ASP.NET Core 1.0
 
 ### In this topic
 
@@ -24,7 +24,7 @@ This topic contains the following sections:
 
 ## <a id="addtaghelper"></a> Adding Tag Helpers to scope of the view
 
-To add all Ignite UI Tag Helpers to the current view scope, the @addTagHelper directive is used:
+To add all %%ProductName%% Tag Helpers to the current view scope, the @addTagHelper directive is used:
 
 ```csharp
 @using Infragistics.Web.Mvc
@@ -148,5 +148,5 @@ and by using Tag Helpers:
 ```
 
 ## <a id="related"></a> Related Content
-- [Using Ignite UI controls in ASP.NET Core 1.0](Using-IgniteUI-Controls-in-ASP.NET-Core-1.0-project.html)
+- [Using %%ProductName%% controls in ASP.NET Core 1.0](Using-IgniteUI-Controls-in-ASP.NET-Core-1.0-project.html)
 - [Adding Controls to an MVC Project](Adding-NetAdvantage-Controls-to-an-MVC-Project.html)

@@ -153,7 +153,7 @@ Each data source has different requirements for data binding to the `igDataSourc
 
 ###<a id="data-sources-summary"></a> Data sources summary
 
-The data binding of the `igDataChart` control is identical to that of the other controls in the Ignite UI™ library. The way to bind data is by either by assigning a data source to the `dataSource` option or by providing a URL in the `dataSourceUrl` if data is provided by a web or WCF service.
+The data binding of the `igDataChart` control is identical to that of the other controls in the %%ProductName%%™ library. The way to bind data is by either by assigning a data source to the `dataSource` option or by providing a URL in the `dataSourceUrl` if data is provided by a web or WCF service.
 
 ##<a id="bind-to-js-array"></a>Binding to a JavaScript Array
 
@@ -256,7 +256,7 @@ The following steps demonstrate how to bind the `igDataChart` control to a JavaS
 
 ###<a id="mvc-introduction"></a> Introduction
 
-This procedure demonstrates how to bind a list of data objects from a backend controller method to a data chart using the ASP.NET helper provided in the Ignite UI library.
+This procedure demonstrates how to bind a list of data objects from a backend controller method to a data chart using the ASP.NET helper provided in the %%ProductName%% library.
 
 ###<a id="mvc_prerequisites"></a> Prerequisites
 

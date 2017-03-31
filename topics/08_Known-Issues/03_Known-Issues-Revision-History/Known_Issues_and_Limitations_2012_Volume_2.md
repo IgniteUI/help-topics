@@ -13,7 +13,7 @@
 ## Topic Overview
 ### Purpose
 
-This topic lists known issues and limitations in the Ignite UI™ library and provides a reference to individual controls’ known issues topics.
+This topic lists known issues and limitations in the %%ProductName%%™ library and provides a reference to individual controls’ known issues topics.
 
 ### In this topic
 
@@ -30,7 +30,7 @@ This topic contains the following sections:
     -   [First and last items appear half cut in financial series charts](#first-last-items-half-cut)
     -   [Chart animation disabled when axis range changes](#chart-animation-disabled)
     -   [ASP.NET MVC helper generated code in conjunction with ASP.NET MVC Loader executes after any custom JavaScript code on a page](#mvc-heper-issue)
-    -   [Using Document Engines from Infragistics ASP.NET and Ignite UI together workaround](#document-engines-workaround)
+    -   [Using Document Engines from Infragistics ASP.NET and %%ProductName%% together workaround](#document-engines-workaround)
     -   [igEditor styling](#igEditor-styling)
     -   [igEditor rendering failure](#igEditor-rendering-failure)
     -   [Cannot use igGridHiding with row templates](#igGridHiding-cannot-use-row-templates)
@@ -70,7 +70,7 @@ This topic contains the following sections:
 ## <a id="known-issues"></a>Known Issues and Limitations in 2012 Volume 2
 ### <a id="overview"></a>Overview
 
-The following table summarizes the known issues and limitations of the Ignite UI 2012 Volume 2 release. Detailed explanations of known issues and the possible workarounds are provided in the known issues topics for each control.
+The following table summarizes the known issues and limitations of the %%ProductName%% 2012 Volume 2 release. Detailed explanations of known issues and the possible workarounds are provided in the known issues topics for each control.
 
 ### Legend:
 
@@ -104,7 +104,7 @@ Feature | Description | Status
 [First and last items appear half cut in financial series charts](#first-last-items-half-cut) | In a financial series, the first and the last data items do not appear entirely on the chart view but are plotted as if they are cut in half. | ![](../../images/images/plannedFix.png)
 [Chart animations are disabled when the axis range changes](#chart-animation-disabled) | If you use the Motion Framework for charts and updated data causes the Y-axis range to change, then all chart animation is disabled and new data appears immediately without any motion effect. | ![](../../images/images/positive.png)
 [MVC helper generated code in conjunction with the MVC Loader executes after any custom JavaScript code on a page](#mvc-heper-issue) | When the MVC Loader and an MVC helper for any control is used in an ASP.NET MVC view, the JavaScript code they generate is executed after custom page set-up code from `document.ready()` or `window.load()` events. | ![](../../images/images/positive.png)
-[Using Document Engines from Infragistics ASP.NET and Ignite UI together workaround](#document-engines-workaround) | Using both the Infragistics ASP.NET and Ignite UI documents assemblies together will cause namespace conflict exceptions. | ![](../../images/images/positive.png)
+[Using Document Engines from Infragistics ASP.NET and %%ProductName%% together workaround](#document-engines-workaround) | Using both the Infragistics ASP.NET and %%ProductName%% documents assemblies together will cause namespace conflict exceptions. | ![](../../images/images/positive.png)
 [igEditor styling](#igEditor-styling) | Layout of HTML elements is modified and rounded corners are rendered around the whole editor, not only buttons. | ![](../../images/images/positive.png)
 igEditor spin buttons | Spin buttons are rendered horizontally. | ![](../../images/images/negative.png)
 [igEditor rendering failure](#igEditor-rendering-failure) | Rendering may fail if the base element is a TD. | ![](../../images/images/positive.png)
@@ -218,11 +218,11 @@ $.ig.loader(function () {
 
 In this example, the `customControlLogic()` function handles any custom code. This ensures that code affecting the control will execute after the control is instantiated.
 
-## <a id="document-engines-workaround"></a>Using Document Engines from Infragistics ASP.NET and Ignite UI together workaround
+## <a id="document-engines-workaround"></a>Using Document Engines from Infragistics ASP.NET and %%ProductName%% together workaround
 
-Using both the Infragistics ASP.NET and Ignite UI documents assemblies together causes namespace conflict exceptions.
+Using both the Infragistics ASP.NET and %%ProductName%% documents assemblies together causes namespace conflict exceptions.
 
-To resolve this issue, reference either the documents assemblies from Infragistics ASP.NET or the documents assemblies from Ignite UI in your application. The documents libraries within these assemblies are the same and can be used to replace one another.
+To resolve this issue, reference either the documents assemblies from Infragistics ASP.NET or the documents assemblies from %%ProductName%% in your application. The documents libraries within these assemblies are the same and can be used to replace one another.
 
 ## <a id="igEditor-styling"></a>igEditor styling workaround
 

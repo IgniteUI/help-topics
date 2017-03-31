@@ -65,7 +65,7 @@ This topic contains the following sections:
 ## <a id="overview"></a>Binding igTileManager to Data Sources – Conceptual Overview
 ### <a id="data-source"></a>Data sources summary
 
-`igTileManager` is bound to data in the same way as any other control of the Ignite UI® library. Data is bound either by assigning a data source to the [dataSource](%%jQueryApiUrl%%/ui.igtilemanager#options:dataSource) option or by providing a URL in the [dataSourceUrl](%%jQueryApiUrl%%/ui.igtilemanager#options:dataSourceUrl) if data is provided by either a web service or Windows Communication Foundation (WCF) service. The `igTileManager` control creates and uses an [igDataSource](%%jQueryApiUrl%%/ig.datasource) object to handle data.
+`igTileManager` is bound to data in the same way as any other control of the %%ProductName%%® library. Data is bound either by assigning a data source to the [dataSource](%%jQueryApiUrl%%/ui.igtilemanager#options:dataSource) option or by providing a URL in the [dataSourceUrl](%%jQueryApiUrl%%/ui.igtilemanager#options:dataSourceUrl) if data is provided by either a web service or Windows Communication Foundation (WCF) service. The `igTileManager` control creates and uses an [igDataSource](%%jQueryApiUrl%%/ig.datasource) object to handle data.
 
 ### <a id="suppoted-data-source"></a>Supported data sources
 

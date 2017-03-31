@@ -8,13 +8,13 @@
 |metadata|
 -->
 
-# Referencing Mobile Resources in Ignite UI
+# Referencing Mobile Resources in %%ProductName%%
 
 ##Topic Overview
 
 ### Purpose
 
-This topic explains how to manage the required mobile resources for Ignite UI controls.
+This topic explains how to manage the required mobile resources for %%ProductName%% controls.
 
 ### In this topic
 
@@ -37,7 +37,7 @@ This topic contains the following sections:
 
 ## <a id="introduction"></a> Introduction
 
-The `igListView`™ and `igRating`™ are the two controls that are part of the Ignite UI 2012.2 mobile controls. Both are new, different widgets from Ignite UI controls, and are adapted especially for mobile platforms. The both controls require specific script and CSS files for the control to work on the page. This topic explains how to manage the required resources for Ignite UI mobile controls.
+The `igListView`™ and `igRating`™ are the two controls that are part of the %%ProductName%% 2012.2 mobile controls. Both are new, different widgets from %%ProductName%% controls, and are adapted especially for mobile platforms. The both controls require specific script and CSS files for the control to work on the page. This topic explains how to manage the required resources for %%ProductName%% mobile controls.
 
 ![](images/01_ReferencingResourcesInJQueryMobile_1.png)
 
@@ -47,11 +47,11 @@ The `igListView`™ and `igRating`™ are the two controls that are part of the 
 
 ### Referencing external resources summary
 
-The [jQuery](http://jquery.com/) and [jQuery Mobile](http://jquerymobile.com) JavaScript libraries are always required when using Ignite UI mobile controls. In addition to that it’s highly recommended to use [Modernizr](http://modernizr.com/) which detects the current browser features.
+The [jQuery](http://jquery.com/) and [jQuery Mobile](http://jquerymobile.com) JavaScript libraries are always required when using %%ProductName%% mobile controls. In addition to that it’s highly recommended to use [Modernizr](http://modernizr.com/) which detects the current browser features.
 
-> **Note:** The Ignite UI mobile controls don’t depend on Modernzir, but the controls adapt better to a mobile environment when accompanied by Modernizr.
+> **Note:** The %%ProductName%% mobile controls don’t depend on Modernzir, but the controls adapt better to a mobile environment when accompanied by Modernizr.
 
-The following list describes the latest version of the resources that are required and are compatible among each other and Ignite UI control scripts (see the next block):
+The following list describes the latest version of the resources that are required and are compatible among each other and %%ProductName%% control scripts (see the next block):
 
 -   jQuery 1.6.4 ([Download jQuery](http://docs.jquery.com/Downloading_jQuery))
 -   jQuery Mobile 1.0.1 RTM ([Download jQuery Mobile](http://jquerymobile.com/download/))
@@ -65,7 +65,7 @@ You also need to reference **JQuery Mobile base CSS Structure. This is the basic
 
 ![](images/01_ReferencingResourcesInJQueryMobile_2.png)
 
-> **Note:** See a complete list describing which framework versions are supported with each release of Ignite UI at [http://www.infragistics.com/help/supported-environments](http://www.infragistics.com/help/supported-environments).
+> **Note:** See a complete list describing which framework versions are supported with each release of %%ProductName%% at [http://www.infragistics.com/help/supported-environments](http://www.infragistics.com/help/supported-environments).
 
 ### Referencing JavaScript libraries
 
@@ -97,7 +97,7 @@ Modernizr library:
 
 ### Referencing the jQuery Mobile CSS
 
-The jQuery mobile structure CSS is required to define the layout of Ignite UI widgets. The code example below includes the structure CSS.
+The jQuery mobile structure CSS is required to define the layout of %%ProductName%% widgets. The code example below includes the structure CSS.
 
 jQuery Mobile structure CSS:
 
@@ -112,9 +112,9 @@ jQuery Mobile structure CSS:
 
 ### Referencing Infragistics resources summary
 
-To work with the mobile controls from Ignite UI you must reference Infragistics resources in your page. You can reference these resources in the following different ways:
+To work with the mobile controls from %%ProductName%% you must reference Infragistics resources in your page. You can reference these resources in the following different ways:
 
-- [Referencing Infragistics JavaScript from a custom download](#custom-build): This is the recommended approach to reference Ignite UI JavaScript files. You can [create a custom download](%%SamplesUrl%%/download) of selected Ignite UI controls and components.
+- [Referencing Infragistics JavaScript from a custom download](#custom-build): This is the recommended approach to reference %%ProductName%% JavaScript files. You can [create a custom download](%%SamplesUrl%%/download) of selected %%ProductName%% controls and components.
 
 - [Using Infragistics Loader](#loader): The Infragistics Loader can be used to resolve all the Infragistics resources (styles and scripts)
 
@@ -133,7 +133,7 @@ The following represents the places where the script and style files are located
 
 ### <a id="custom-build"></a> Referencing Infragistics JavaScript from a custom download
 
-To create an Ignite UI custom build, go to the [custom download page](%%SamplesUrl%%/download). Custom builds have two main benefits. First, by choosing only the controls and features used in your application, the browser downloads and executes less total JavaScript. Second, the JavaScript is combined into one file reducing the amount of requests that the browser makes to the server. These benefits result in faster performance for your application.
+To create an %%ProductName%% custom build, go to the [custom download page](%%SamplesUrl%%/download). Custom builds have two main benefits. First, by choosing only the controls and features used in your application, the browser downloads and executes less total JavaScript. Second, the JavaScript is combined into one file reducing the amount of requests that the browser makes to the server. These benefits result in faster performance for your application.
 
 **In HTML:**
 
@@ -270,7 +270,7 @@ Mobile scripts for `igRating`:
 
 ### <a id="installed"></a> Installed resources
 
-If you have chosen the typical installation of Ignite UI %%ProductVersion%%, you can find the resources under the paths below:
+If you have chosen the typical installation of %%ProductName%% %%ProductVersion%%, you can find the resources under the paths below:
 
 Type | Path
 ---|---
@@ -300,9 +300,9 @@ The following picture shows you the content of the other folder css.
 
 The basic structure CSS files and all the CSS files for all controls can be found in the structure folder. Infragistics mobile themes are available in the **themes** folder.
 
-> **Note:** The iOS theme is the only one available for the Ignite UI 2012.2 release.
+> **Note:** The iOS theme is the only one available for the %%ProductName%% 2012.2 release.
 
-You can see all scripts required for each control in the topic [JavaScript Files in Ignite UI](Deployment-Guide-JavaScript-Files.html)
+You can see all scripts required for each control in the topic [JavaScript Files in %%ProductName%%](Deployment-Guide-JavaScript-Files.html)
 
 
 ### <a id="cdn"></a> Infragistics Content Deliver Network (CDN) Resources
@@ -375,9 +375,9 @@ The following code example demonstrates how to include localization resources ma
 
 The following topics provide additional information related to this topic.
 
-- [Adding Mobile Ignite UI control to an ASP.NET MVC Application](Adding-Mobile-Ignite-UI-Controls-to-an-ASP.NET-MVC-Application.html): This topic explains how to add mobile controls in ASP.NET MVC application.
+- [Adding Mobile %%ProductName%% control to an ASP.NET MVC Application](Adding-Mobile-Ignite-UI-Controls-to-an-ASP.NET-MVC-Application.html): This topic explains how to add mobile controls in ASP.NET MVC application.
 
-- [Referencing Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html): This topic explains how to manage the required resources for Ignite UI controls.
+- [Referencing Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html): This topic explains how to manage the required resources for %%ProductName%% controls.
 
 - [igListView Overview](igListView-Overview.html): This topic explains the features of `igListView`.
 

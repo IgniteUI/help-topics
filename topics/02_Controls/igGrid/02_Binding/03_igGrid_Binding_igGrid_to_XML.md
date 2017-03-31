@@ -12,7 +12,7 @@
 
 ## Overview
 
-The Ignite UI™ data source control , or `igDataSource`, can seamlessly bind to both namespaced, as well as non-namespaced XML documents. 
+The %%ProductName%%™ data source control , or `igDataSource`, can seamlessly bind to both namespaced, as well as non-namespaced XML documents. 
 
 One limitation of XML with namespaces is that most browsers do not natively support executing XPath expressions. Fortunately, the data source control supports XPath expression out-of-the-box, so you can still point a specific part of the XML to be included in your schema. 
 

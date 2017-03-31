@@ -17,7 +17,7 @@
 
 ### Purpose
 
-Starting with a form consisting of Ignite UI editor controls, this topic demonstrates how to create the form and validate the form with data annotations. It also shows how to configure an ASP.NET MVC ValidationMessage to further customize the layout of validation text.
+Starting with a form consisting of %%ProductName%% editor controls, this topic demonstrates how to create the form and validate the form with data annotations. It also shows how to configure an ASP.NET MVC ValidationMessage to further customize the layout of validation text.
 
 ### Required background
 
@@ -28,7 +28,7 @@ Starting with a form consisting of Ignite UI editor controls, this topic demonst
 
 ####Topics
 
--	[Adding Controls to an MVC Project](Adding-NetAdvantage-Controls-to-an-MVC-Project.html): To accomplish the basics of setting up an ASP.NET MVC application with Ignite UI scripts, CSS, and assemblies.
+-	[Adding Controls to an MVC Project](Adding-NetAdvantage-Controls-to-an-MVC-Project.html): To accomplish the basics of setting up an ASP.NET MVC application with %%ProductName%% scripts, CSS, and assemblies.
 
 -	[igTextEditor Overview](igTextEditor-Overview.html) : To familiarize you with the basics of using the igTextEditor in ASP.NET MVC
 
@@ -59,7 +59,7 @@ This topic contains the following sections:
 
 ### <a id="_Introduction"></a>Introduction
 
-In this procedure, you create and configure a Person model for ASP.NET MVC Data Annotation Validation using Ignite UI controls.
+In this procedure, you create and configure a Person model for ASP.NET MVC Data Annotation Validation using %%ProductName%% controls.
 
 ### <a id="_Preview"></a>Preview
 
@@ -71,7 +71,7 @@ The following screenshot is a preview of the final result.
 
 To complete the procedure, you need the an ASP.NET MVC Project with the following:
 
--   The required Ignite UI JavaScript and CSS files
+-   The required %%ProductName%% JavaScript and CSS files
 -   The Infragistics.Web.Mvc.dll assembly referenced
 
 ###<a id="_Requirements_Overview"></a> Overview
@@ -85,7 +85,7 @@ This topic takes you step-by-step toward creating a model with data annotations.
 
 ### <a id="_Steps"></a>Steps
 
-The following steps demonstrate how to configure data annotation validation for Ignite UI controls.
+The following steps demonstrate how to configure data annotation validation for %%ProductName%% controls.
 
 
 

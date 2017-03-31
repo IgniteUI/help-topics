@@ -33,9 +33,9 @@ The whole list of the `igValidator` options can be found in the [igValidator API
 
 ## <a id="setting-up"></a> Setting up the igValidator
 
-The validator control can be configured independently on one or multiple targets (fields) or as an integrated part of the supported Ignite UI controls - Editors, Combo and Rating. It possesses plenty of options which allows you to customize and configure this control corresponding to your needs.
+The validator control can be configured independently on one or multiple targets (fields) or as an integrated part of the supported %%ProductName%% controls - Editors, Combo and Rating. It possesses plenty of options which allows you to customize and configure this control corresponding to your needs.
 
-### Configuring from other Ignite UI controls
+### Configuring from other %%ProductName%% controls
 
 ```html
 <div id="textEditor"></div>
@@ -131,7 +131,7 @@ $("#rating").igRating({
 	});
 ```
 
-> **Note:** Both standalone configurations support fields enhanced with Ignite UI Editor controls, however they must be initialized in advance for the validator to discover and handle them correctly. In case the timing cannot be controlled and the validator is initialized before other control(s) the [`updateField`](%%jQueryApiUrl%%/ui.igvalidator#methods:updateField) method can be used to update that field in the validator.
+> **Note:** Both standalone configurations support fields enhanced with %%ProductName%% Editor controls, however they must be initialized in advance for the validator to discover and handle them correctly. In case the timing cannot be controlled and the validator is initialized before other control(s) the [`updateField`](%%jQueryApiUrl%%/ui.igvalidator#methods:updateField) method can be used to update that field in the validator.
 
 
 ## <a id="triggers"></a> Validation triggers

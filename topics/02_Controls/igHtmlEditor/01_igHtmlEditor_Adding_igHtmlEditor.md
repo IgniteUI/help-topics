@@ -26,7 +26,7 @@ The following table lists the topics required as a prerequisite to understanding
 
 -	[igHtmlEditor Overview](igHtmlEditor-Overview.html): This topic provides an overview of the `igHtmlEditor` and its features.
 
--	[Using Infragistics Loader](Using-Infragistics-Loader.html): This topic explains how to manage the required resources to work with Ignite UI using the Infragistics Loader.
+-	[Using Infragistics Loader](Using-Infragistics-Loader.html): This topic explains how to manage the required resources to work with %%ProductName%% using the Infragistics Loader.
 
 
 ##Adding a igHtmlEditor to Web Page
@@ -93,7 +93,7 @@ The following steps demonstrate how to add the `igHtmlEditor` to a web page.
 	    });
 		```
 
-		>**Note:** The Infragistics loader is a quick and efficient way to reference the required files. However, you can reference them manually. For more information, see the "[Using JavaScript Resouces in Ignite UI](Deployment-Guide-JavaScript-Resources.html)" topic in the [Related Content](#related-content) section.
+		>**Note:** The Infragistics loader is a quick and efficient way to reference the required files. However, you can reference them manually. For more information, see the "[Using JavaScript Resouces in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)" topic in the [Related Content](#related-content) section.
 
 	3. Initialize the igHtmlEditor
 
@@ -117,7 +117,7 @@ The following steps demonstrate how to add the `igHtmlEditor` to a web page.
 		 @(Html.Infragistics().Loader().ScriptPath(Url.Content ("js")).CssPath(Url.Content("css")).Render())
 		 ```
 
-		The Resources method invocation is not required when using the Infragistics Loader ASP.NET MVC Helper because the loader infers which resources to include based off of the other Infragistics helpers used in a given View. This is only valid if the Ignite UI controls are also instantiated with ASP.NET MVC helpers.
+		The Resources method invocation is not required when using the Infragistics Loader ASP.NET MVC Helper because the loader infers which resources to include based off of the other Infragistics helpers used in a given View. This is only valid if the %%ProductName%% controls are also instantiated with ASP.NET MVC helpers.
 
 	2. Initialize the igHtmlEditor
 
@@ -139,7 +139,7 @@ The following topics provide additional information related to this topic.
 
 -	[Styling and Theming (igHtmlEditor)](igHtmlEditor-Styling-and-Theming.html): This topic explains, with code examples, how to customize the look-and-feel of the `igHtmlEditor`.
 
--	[Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html): This topic explains how to manage the required resources to work with the Ignite UI within a Web application.
+-	[Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html): This topic explains how to manage the required resources to work with the %%ProductName%% within a Web application.
 
 
 

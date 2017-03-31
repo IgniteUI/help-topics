@@ -23,7 +23,7 @@ This topic explains, with a code examples, how to attach event handlers to the `
 
 The following topics are prerequisites to understanding this topic:
 
--	[Using Events in Ignite UI](Using-Events-in-NetAdvantage-for-jQuery.html): This topic explains how to manage the required resources to work with Ignite UI® within a Web application.
+-	[Using Events in %%ProductName%%](Using-Events-in-NetAdvantage-for-jQuery.html): This topic explains how to manage the required resources to work with %%ProductName%%® within a Web application.
 
 -	[igLayoutManager Overview](igLayoutManager-Overview.html): This topic explains the `igLayoutManager` control conceptually and provides information on the supported layouts and their uses.
 
@@ -79,7 +79,7 @@ The `igLayoutManager` supports the following events:
 -   [`itemRendered`](%%jQueryApiUrl%%/ui.iglayoutmanager#events:itemRendered) –fired after all items are rendered
 -   [`rendered`](%%jQueryApiUrl%%/ui.iglayoutmanager#events:rendered) –fired before an item is going to accommodate 100% of the container's width or height
 
-For details on how to handle events, refer to the [Using Events in Ignite UI](Using-Events-in-NetAdvantage-for-jQuery.html) topic.
+For details on how to handle events, refer to the [Using Events in %%ProductName%%](Using-Events-in-NetAdvantage-for-jQuery.html) topic.
 
 ### <a id="event-handaling"></a>Event handling cases summary chart
 

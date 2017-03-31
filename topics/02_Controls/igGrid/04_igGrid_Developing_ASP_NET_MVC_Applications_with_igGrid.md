@@ -9,9 +9,9 @@
 -->
 
 # Developing ASP.NET MVC Applications with igGrid
-Ignite UI is a JavaScript-based [jQuery UI](http://jqueryui.com/) control suite that you can use to build rich, interactive web applications. When Ignite UI is paired with ASP.NET MVC, you have the option to use JavaScript directly or with the MVC Helpers provided in Ignite UI.
+%%ProductName%% is a JavaScript-based [jQuery UI](http://jqueryui.com/) control suite that you can use to build rich, interactive web applications. When %%ProductName%% is paired with ASP.NET MVC, you have the option to use JavaScript directly or with the MVC Helpers provided in %%ProductName%%.
 
-The MVC Helpers are a collection of .NET classes and extension methods that generate the HTML markup and JavaScript required to work with Ignite UI controls. Once rendered to the page, there is very little difference between code you may write by hand using a JavaScript-only approach and what is rendered by Ignite UI MVC Helpers, but using the helpers may be a good choice for you if:
+The MVC Helpers are a collection of .NET classes and extension methods that generate the HTML markup and JavaScript required to work with %%ProductName%% controls. Once rendered to the page, there is very little difference between code you may write by hand using a JavaScript-only approach and what is rendered by %%ProductName%% MVC Helpers, but using the helpers may be a good choice for you if:
 
 * You are implementing remote features like remote load-on-demand, remote paging, remote filtering, etc.
 
@@ -24,7 +24,7 @@ This document is focused specifically on explaining the igGrid MVC Helper. Along
 
 ### In this topic
 - [**Getting Started**](#getting-started)
-	- [Referencing the Ignite UI MVC Assembly](#referencing-igniteui-mvc-assembly)
+	- [Referencing the %%ProductName%% MVC Assembly](#referencing-igniteui-mvc-assembly)
 	- [Referencing Styles and Scripts](#referencing-styles-and-scripts)
 - [**Syntax Variations**](#syntax-variations)
  	- [Grid Model](#syntax-grid-model)
@@ -38,8 +38,8 @@ This document is focused specifically on explaining the igGrid MVC Helper. Along
 ## <a id="getting-started"></a> Getting Started
 Before you can use the igGrid MVC Helper, you must first create a reference to the `Infragistics.Web.Mvc` assembly and reference the proper scripts and style sheets on your page.
 
-### <a id="referencing-igniteui-mvc-assembly"></a>Referencing the Ignite UI MVC Assembly
-Begin by creating a reference in your ASP.NET application to the Ignite UI MVC assembly which is found at this location:
+### <a id="referencing-igniteui-mvc-assembly"></a>Referencing the %%ProductName%% MVC Assembly
+Begin by creating a reference in your ASP.NET application to the %%ProductName%% MVC assembly which is found at this location:
 
 ```
 %%InstallPath%%\MVC\<MVC_VERSION_NUMBER>\Bin\Infragistics.Web.Mvc.dll
@@ -57,10 +57,10 @@ Next, you need to reference the required style sheet and script files on your pa
 <script type="text/javascript" src="infragistics.core.js"></script>
 <script type="text/javascript" src="infragistics.lob.js"></script>
 ```
-> **Note**: Due to the nature of how the Ignite UI MVC Helpers operate, you must include references to jQuery, jQuery UI and Ignite UI at the top of the page.
+> **Note**: Due to the nature of how the %%ProductName%% MVC Helpers operate, you must include references to jQuery, jQuery UI and %%ProductName%% at the top of the page.
 
 ## <a id="syntax-variations"></a>Syntax Variations
-When using the Ignite UI MVC Helpers, there are a few different parts that compose a page that are relevant to using the igGrid. As a page is requested, Model data is collected in the Controller and passed to the View so the Ignite UI MVC Helpers can render the control on the page. In the Controller, you can choose to either pass data directly to the view in the form of an `IQueryable<T>` collection, or pass an instance of the `Infragistics.Web.Mvc.GridModel` class.
+When using the %%ProductName%% MVC Helpers, there are a few different parts that compose a page that are relevant to using the igGrid. As a page is requested, Model data is collected in the Controller and passed to the View so the %%ProductName%% MVC Helpers can render the control on the page. In the Controller, you can choose to either pass data directly to the view in the form of an `IQueryable<T>` collection, or pass an instance of the `Infragistics.Web.Mvc.GridModel` class.
 
 > **Note**: The igGrid MVC Helper data source uses LINQ and therefore only accepts instances of `IQueryable<T>`. Even when you opt to use the `GridModel` you will explicitly set the `DataSource` property which requires an instance of `IQueryable<T>` .
 

@@ -61,7 +61,7 @@ This topic contains the following sections:
 
 The starting point for performing data analysis of a multi-dimensional (OLAP) data set is presenting the OLAP cube in tabular form with various levels of filtering and aggregation of the data. This filtering and aggregation is based on selecting certain data categories and data aggregation criteria. In a pivot grid, the particular tabular view meeting the desired criteria is achieved through the specific choice and arrangement of the rows, columns, filters, and measures of the grid. This arrangement filters the result set to configure a particular slice based the desired data categories levels of aggregation and display it in tabular view. So specifying and displaying a particular data slice (view) is a matter of configuring (= selecting and arranging) the hierarchies for the rows, columns, filters, and measures.
 
-In the Ignite UI™ OLAP components, the configuring of these hierarchies can be done on the following levels:
+In the %%ProductName%%™ OLAP components, the configuring of these hierarchies can be done on the following levels:
 
 -   From the user interface of the respective UI widgets (`igPivotDataSelector`, `igPivotGrid`™, `igPivotView`™) (user configuration)
 -   Programmatically with the `igOlapFlatDataSource` or `igOlapXmlaDataSource` API, which can be:

@@ -13,12 +13,12 @@
 
 The `igCurrencyEditor` jQuery widget exposes a number of options for styling. To customize the style of the currency editor, you can use a different theme, or directly apply custom CSS rules to the control. 
 
-The Ignite UI package comes with a number of jQuery UI and Bootstrap themes. Bootstrap support also includes generating and customizing your own bootstrap themes - see [Styling and Theming](Deployment-Guide-Styling-and-Theming.html) for details. 
+The %%ProductName%% package comes with a number of jQuery UI and Bootstrap themes. Bootstrap support also includes generating and customizing your own bootstrap themes - see [Styling and Theming](Deployment-Guide-Styling-and-Theming.html) for details. 
 All of the themes will style all controls on the page, including the editors.
 
 ## Using ThemeRoller
 
-As the `igCurrencyEditor` control uses the jQuery UI CSS framework, it can also be fully styled using the [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/) where you can customize your own theme or choose from a gallery of available ones. These themes replace the ones that come by default with Ignite UI.
+As the `igCurrencyEditor` control uses the jQuery UI CSS framework, it can also be fully styled using the [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/) where you can customize your own theme or choose from a gallery of available ones. These themes replace the ones that come by default with %%ProductName%%.
 
 Currency editor using the UI Darkness theme:
 

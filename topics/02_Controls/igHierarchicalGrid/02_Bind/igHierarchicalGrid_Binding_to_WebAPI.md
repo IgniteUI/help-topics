@@ -81,7 +81,7 @@ To complete the procedure, you need the following:
 -   MVC 4 Framework installed
 -   Northwind Database installed
 -   Infragistics.Web.Mvc.dll
--   Ignite UI JavaScript and Theme Files
+-   %%ProductName%% JavaScript and Theme Files
 
 ### Steps
 
@@ -100,8 +100,8 @@ The following steps demonstrate how to bind igHierarchicalGrid to MVC 4 Web API.
   - Right click on the References folder and choose Add Reference…
   - Locate the `Infragistics.Web.Mvc.dll` from the .NET tab or alternatively Browse for it.
 
-3. Add reference to Ignite UI Scripts
-  - Copy the Ignite UI distributable files to your project Scripts directory
+3. Add reference to %%ProductName%% Scripts
+  - Copy the %%ProductName%% distributable files to your project Scripts directory
   - In the `_Layout.cshtml` file under the `Views\Shared` folder add the reference to Infragistics loader
 
 **In HTML:**
@@ -210,7 +210,7 @@ Define the Infragistics loader
 @Html.Infragistics().Loader().ScriptPath("~/Scripts/Infragistics/js/").CssPath("~/Scripts/Infragistics /css/").Render()
 ```
 
-> Note: You must change the `ScriptPath` and `CssPath` to match your Ignite UI file locations.
+> Note: You must change the `ScriptPath` and `CssPath` to match your %%ProductName%% file locations.
 
 Define the grid:
 

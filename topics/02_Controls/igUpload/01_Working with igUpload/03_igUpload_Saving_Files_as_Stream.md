@@ -142,7 +142,7 @@ Following are the general requirements for saving file as memory stream by proce
 
 -   Microsoft® Visual Studio® 2010 or later
 -   ASP.NET MVC 2 or higher
--   Infragistics Ignite UI® 13.1 or higher
+-   Infragistics %%ProductName%%® 13.1 or higher
 
 ### <a id="procedure-prerequisites"></a>Prerequisites
 
@@ -151,7 +151,7 @@ Following are the general requirements for saving file as memory stream by proce
 -   The following scripts added to the `<project folder>/Views/Shared/_Layout.cshtml` file
     -   `<project folder>/Scripts/jquery-1.5.1.min.js`
     -   `<project folder>/Scripts/jquery-ui-1.8.11.min.js`
--   Infragistics Ignite UI scripts included in the project and properly referenced
+-   Infragistics %%ProductName%% scripts included in the project and properly referenced
     -   The scripts must reside in `<project folder>`Infragistics folder.
     -   The scripts must be referenced in the head tag of the `<project folder>/Views/Shared/_Layout.cshtml` file (The file is available as part of the project.):
 

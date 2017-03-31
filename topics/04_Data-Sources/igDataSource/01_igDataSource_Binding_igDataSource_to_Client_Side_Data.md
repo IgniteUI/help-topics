@@ -11,7 +11,7 @@
 # Binding igDataSource to Client-Side Data
 
 ## Overview
-This document demonstrates how to bind the Ignite UI™ data source component, or `igDataSource`, to client-side JavaScript arrays and JSON data. The general approach of binding to client-side data whether you are binding to standard arrays or JSON arrays is the same. After establishing the data source array, you must bind the data to the `igDataSource` component and then bind the data source to a UI element on the page. While the basic steps for binding to client-side data follow a similar pattern, this topic details the nuances of using the different data formats.
+This document demonstrates how to bind the %%ProductName%%™ data source component, or `igDataSource`, to client-side JavaScript arrays and JSON data. The general approach of binding to client-side data whether you are binding to standard arrays or JSON arrays is the same. After establishing the data source array, you must bind the data to the `igDataSource` component and then bind the data source to a UI element on the page. While the basic steps for binding to client-side data follow a similar pattern, this topic details the nuances of using the different data formats.
 
 ## Binding to Client-Side Data
 Regardless of the array format you choose to bind to, your page must have the appropriate JavaScript files included to support the data source component. Listing 1 shows you the script references you must add to your page to work with each of the coming examples.

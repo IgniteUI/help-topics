@@ -237,7 +237,7 @@ To complete the procedure, you need the following:
 -   ASP.NET MVC 3 or newer Framework installed
 -   The AdventureWorks Database installed
 -   A reference to the Infragistics.Web.Mvc.dll assembly
--   Required Ignite UI JavaScript and theme resources
+-   Required %%ProductName%% JavaScript and theme resources
 
 ### <a id="mvc-overview"></a> Overview
 

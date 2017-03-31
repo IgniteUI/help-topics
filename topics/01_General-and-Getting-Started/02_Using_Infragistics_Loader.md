@@ -84,7 +84,7 @@ $(function () {
     });
 });
 ```
-> **Note:** Deferring of the document ready event is only available in jQuery version 1.6 and above therefore this or newer version of the library is required to be used with Ignite UI 2016.2 and above.
+> **Note:** Deferring of the document ready event is only available in jQuery version 1.6 and above therefore this or newer version of the library is required to be used with %%ProductName%% 2016.2 and above.
 
 ### Load on Demand
 When you define resources up front as an option while initializing the loader, all files are immediately downloaded. An alternative to this approach, however, is to load scripts on demand. Loading on demand can help boost the performance of your pages by deferring the file loading until the moment they are needed on the page. The following code demonstrates how to initialize the loader without immediately loading any files.
@@ -200,7 +200,7 @@ $.ig.loader({
 > **Note**: *Take care in using wildcards in resource expressions*. This can contribute to page bloat as you may be forcing the page to download unnecessary files for features that are not used.
 
 ### Explicitly Loading Resources
-In some instances you may want to use the loader to load custom or external files in conjunction with Ignite UI resources. To explicitly load resources you simply need to add the path to the resource into the resource expression. The example below loads a custom JavaScript file with the igGrid core resources.
+In some instances you may want to use the loader to load custom or external files in conjunction with %%ProductName%% resources. To explicitly load resources you simply need to add the path to the resource into the resource expression. The example below loads a custom JavaScript file with the igGrid core resources.
 
 ```javascript
 $.ig.loader({
@@ -336,7 +336,7 @@ The following demonstrates how to use the loader with the ASP.NET MVC helpers:
 ```
 
 ## <a id="localization"></a> Localization
-Localization of the widgets is controlled by the locale option. The following locales are currently supported in Ignite UI:
+Localization of the widgets is controlled by the locale option. The following locales are currently supported in %%ProductName%%:
 
 - English(en)
 - Japanese(ja)
@@ -346,12 +346,12 @@ Localization of the widgets is controlled by the locale option. The following lo
 - French(fr)
 - German(de)
 
-The English and Japanese versions of Ignite UI have their respective resources merged with the product code.
+The English and Japanese versions of %%ProductName%% have their respective resources merged with the product code.
 
 The loader can also detect the browser's language setting and automatically switch to this locale. This behavior is controlled by the `autoDetectLocale` option, which is set to `false` by default. If `autoDetectLocale` is set and `locale` is set, the `locale` option takes precedence.
 
 ## <a id="regional-settings"></a> Regional Settings
-Regional settings are relevant to some Ignite UI controls like editors where numeric and currency values are formatted differently depending on the region. The loader automatically loads regional settings by inferring it from the locale or from auto-detecting is from the browser.
+Regional settings are relevant to some %%ProductName%% controls like editors where numeric and currency values are formatted differently depending on the region. The loader automatically loads regional settings by inferring it from the locale or from auto-detecting is from the browser.
 
 To force the loader to load a custom regional setting, you need to configure the `regional` option of the loader.
 
@@ -360,10 +360,10 @@ To force the loader to load a custom regional setting, you need to configure the
 All regional files can be found in folder:
 
 ```javascript
-{Ignite UI resources root}/js/modules/i18n/regional/
+{%%ProductName%% resources root}/js/modules/i18n/regional/
 ```
 
-The following code loads the hierarchical grid with the Updating feature enabled (which uses the Ignite UI editor controls) for the Bulgarian locale using Great Britain English.
+The following code loads the hierarchical grid with the Updating feature enabled (which uses the %%ProductName%% editor controls) for the Bulgarian locale using Great Britain English.
 
 ```javascript
 $.ig.loader({
@@ -376,13 +376,13 @@ $.ig.loader({
 ```
 
 ### Special Considerations for the jQuery UI Date Picker
-When the jQuery UI date picker widget is configured to use the Ignite UI editors, you need to include a reference to `jquery-ui-i18n.min.js` on the page and the regional setting needs to be specified. For instance:
+When the jQuery UI date picker widget is configured to use the %%ProductName%% editors, you need to include a reference to `jquery-ui-i18n.min.js` on the page and the regional setting needs to be specified. For instance:
 
 ```javascript
 $.datepicker.setDefaults($.datepicker.regional['ru']);
 ```
 
-### Special Considerations for Ignite UI Editors
+### Special Considerations for %%ProductName%% Editors
 When setting regional settings for editors, the following file must be referenced on the page:
 
 ```javascript
@@ -408,7 +408,7 @@ es (Spain)				        | it (Italy)	              | sl (Slovenia)           |
 et (Estonia)	                | ja (Japan)  				  | sq (Albania)
 
 ## <a id="related-content"></a> Related Content
-- [JavaScript Files in Ignite UI](deployment-guide-javascript-files.html)
-- [Infragistics Content Delivery Network (CDN) for Ignite UI](deployment-guide-infragistics-content-delivery-network%28cdn%29.html)
+- [JavaScript Files in %%ProductName%%](deployment-guide-javascript-files.html)
+- [Infragistics Content Delivery Network (CDN) for %%ProductName%%](deployment-guide-infragistics-content-delivery-network%28cdn%29.html)
 - [Adding Required Resources Manually](adding-the-required-resources-for-netadvantage-for-jquery.html)
-- [Using JavaScript Resources in Ignite UI](deployment-guide-javascript-resources.html)
+- [Using JavaScript Resources in %%ProductName%%](deployment-guide-javascript-resources.html)

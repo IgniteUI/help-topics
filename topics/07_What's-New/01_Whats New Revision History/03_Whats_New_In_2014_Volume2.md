@@ -10,7 +10,7 @@
 
 #What's New in 2014 Volume 2
 
-This topic presents the controls and the new and enhanced features for the Ignite UI™ 2014 Volume 2 release.
+This topic presents the controls and the new and enhanced features for the %%ProductName%%™ 2014 Volume 2 release.
 
 
 ##What’s New Summary
@@ -21,19 +21,19 @@ The following summarizes what’s new in 2014 Volume 2. Additional details follo
 
 Feature | Description
 ---|---
-[AngularJS directives](#angular-directives) | Now Ignite UI controls feature custom directives for AngularJS.
+[AngularJS directives](#angular-directives) | Now %%ProductName%% controls feature custom directives for AngularJS.
 
 
 
 
-### Ignite UI Page Designer
+### %%ProductName%% Page Designer
 
 Feature | Description
 ---|---
-[WYSIWYG for HTML5](#wysiwyg) | New drag-n-drop UI design surface for Modern Web using Ignite UI controls.
+[WYSIWYG for HTML5](#wysiwyg) | New drag-n-drop UI design surface for Modern Web using %%ProductName%% controls.
 Responsive Web Design (RWD) | Visualize and manage breakpoints to make responsive design easier.
 Clean Code Editor | See, edit, and copy clean code to incorporate into your projects.
-Easier Data Access | Easily configure Ignite UI data source components to connect your controls to your data.
+Easier Data Access | Easily configure %%ProductName%% data source components to connect your controls to your data.
 Integrated API Help | See help for API members in both the component editor and in the code editor.
 
 
@@ -76,7 +76,7 @@ Feature | Description
 
 Feature | Description
 ---|---
-[Bootstrap theming](#bootstrap-theming) | Ignite UI controls now support Bootstrap theming.
+[Bootstrap theming](#bootstrap-theming) | %%ProductName%% controls now support Bootstrap theming.
 [New theme (RTM)](#new-theme) | The iOS 7-style theme is now RTM and renamed to just iOS theme—replaces prior iOS6-style theme. The theme also added support for the jQuery Mobile 1.4 + controls.
 [Updated themes to support jQuery UI 1.11+](#update-themes) | New theme files are added in order to support jQuery UI 1.11+ own controls.
 
@@ -87,7 +87,7 @@ Feature | Description
 
 We launched a preview of AngularJS directives last release on our GitHub repo; they are now officially in the product as well and are considered RTM.
 
-All of the Ignite UI controls can be instantiated declaratively with custom tags or from the controller or via controller options. Further, the following controls support two-way data binding:
+All of the %%ProductName%% controls can be instantiated declaratively with custom tags or from the controller or via controller options. Further, the following controls support two-way data binding:
 
 -   igGrid
 -   igCombo
@@ -99,20 +99,20 @@ All of the Ignite UI controls can be instantiated declaratively with custom tags
 
 [AngularJS Directives](AngularJS-Directives.html)
 
-[Ignite UI directives for AngularJS on GitHub](https://github.com/IgniteUI/igniteui-angular)
+[%%ProductName%% directives for AngularJS on GitHub](https://github.com/IgniteUI/igniteui-angular)
 
 #### Related Samples
 
-[Ignite UI directives for AngularJS samples](http://igniteui.github.io/igniteui-angular/)
+[%%ProductName%% directives for AngularJS samples](http://igniteui.github.io/igniteui-angular/)
 
 
 
-##Ignite UI Page Designer
+##%%ProductName%% Page Designer
 
 
 ### <a id="wysiwyg"></a>WYSIWYG for HTML5
 
-Leverage common HTML elements, Bootstrap components, and of course Ignite UI components to lay out and jumpstart your modern LOB pages. It’s the best way to learn to use Ignite UI and more quickly configure Ignite UI controls to then copy into your projects.
+Leverage common HTML elements, Bootstrap components, and of course %%ProductName%% components to lay out and jumpstart your modern LOB pages. It’s the best way to learn to use %%ProductName%% and more quickly configure %%ProductName%% controls to then copy into your projects.
 
 **Use it now at [%%DesignerUrl%%](%%DesignerUrl%%) !**
 
@@ -121,7 +121,7 @@ Leverage common HTML elements, Bootstrap components, and of course Ignite UI com
 
 ### Responsive Web Design (RWD)
 
-Visualize and edit your responsive CSS breakpoints and jump into editing the CSS for breakpoints easily. You can also use Bootstrap row components or Ignite UI layout components to easily defing a grid layout for your responsive page.
+Visualize and edit your responsive CSS breakpoints and jump into editing the CSS for breakpoints easily. You can also use Bootstrap row components or %%ProductName%% layout components to easily defing a grid layout for your responsive page.
 
 ![](images/Whats_New_In_Ignite_UI_2014_Volume_2_2.png)
 
@@ -133,13 +133,13 @@ We built on top of the world-class ACE code editor to help you see, edit, and co
 
 ### Easier Data Access
 
-The Ignite UI data source components make it easier to connect your controls to your data, and the Page Designer makes those easier to use with custom component editors and letting you easily set your data sources on components that use them. You can pick a data source from a list in the component editor or just drop a data source onto controls like the grid to get started.
+The %%ProductName%% data source components make it easier to connect your controls to your data, and the Page Designer makes those easier to use with custom component editors and letting you easily set your data sources on components that use them. You can pick a data source from a list in the component editor or just drop a data source onto controls like the grid to get started.
 
 ### Integrated API Help
 
 Throughout the designer, we incorporate API help so that you don’t have to go digging for it. We do it in the code editor as well as in the component editor:
 
-1.  For Ignite UI componets, you can click the ? link in the component editor to go directly to the API docs for that component.
+1.  For %%ProductName%% componets, you can click the ? link in the component editor to go directly to the API docs for that component.
 2.  When hovering over properties and events, we show you the related API docs right there.
 
 ![](images/Whats_New_In_Ignite_UI_2014_Volume_2_4.png)
@@ -155,8 +155,8 @@ Our new Excel Library is a 100% pure JavaScript client-side library that support
 
 #### Related Topics
 
--   [Ignite UI Client-Side Excel Library Overview](JavaScript-Excel-Library-Overview.html)
--   [Using the Ignite UI Client-Side Excel Library](Using-the-JavaScript-Excel-Library.html)
+-   [%%ProductName%% Client-Side Excel Library Overview](JavaScript-Excel-Library-Overview.html)
+-   [Using the %%ProductName%% Client-Side Excel Library](Using-the-JavaScript-Excel-Library.html)
 
 #### Related Samples
 
@@ -235,7 +235,7 @@ The `igPivotGrid`™ control now allows you to visualize the row hierarchies in 
 
 ### <a id="bootstrap-theming"></a>Bootstrap theming
 
-This release adds a mechanism to apply any Bootstrap theme (which uses LESS variables defined by Bootstrap) look and feel to the Ignite UI controls. The resulting themes are standalone and can be used with or without Bootstrap.
+This release adds a mechanism to apply any Bootstrap theme (which uses LESS variables defined by Bootstrap) look and feel to the %%ProductName%% controls. The resulting themes are standalone and can be used with or without Bootstrap.
 
 The product comes with four preset themes “Bootstrap” (equivalent to the default Bootstrap theme), “Superhero”, “Yeti”, “Flatly” which are compiled against the respective themes taken from [bootswatch.com](http://bootswatch.com/) site.
 
@@ -251,7 +251,7 @@ Note: The four preset themes as well as the LESS files used to generate them are
 
 ### <a id="new-theme"></a>New theme (RTM)
 
-The previously named iOS7 theme has been renamed to just iOS and replaces the prior iOS6-style theme. The iOS theme is now RTM and adds support for the Ignite UI Mobile Controls.
+The previously named iOS7 theme has been renamed to just iOS and replaces the prior iOS6-style theme. The iOS theme is now RTM and adds support for the %%ProductName%% Mobile Controls.
 
 ![](images/Whats_New_In_Ignite_UI_2014_Volume_2_10.png)
 
@@ -263,7 +263,7 @@ The previously named iOS7 theme has been renamed to just iOS and replaces the pr
 
 ### <a id="update-themes"></a>Updated themes to support jQuery UI 1.11+
 
-We updated our themes to support the jQuery UI 1.11+ own controls. However, because there are some breaking changes in the CSS structure in jQuery UI, you may see some minor issues in the look and feel of native jQuery UI controls when using Ignite UI themes.
+We updated our themes to support the jQuery UI 1.11+ own controls. However, because there are some breaking changes in the CSS structure in jQuery UI, you may see some minor issues in the look and feel of native jQuery UI controls when using %%ProductName%% themes.
 
 
 

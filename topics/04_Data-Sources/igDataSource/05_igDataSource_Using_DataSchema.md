@@ -161,7 +161,7 @@ For XML schemas, use XPath to select the nodes with the data you want to bind to
 -   [igDataSource Overview](igDataSource-igDataSource-Overview.html)
 -   [Binding to XML](igDataSource-Binding-to-XML.html)
 -   [Binding to HTML Table](igDataSource-Binding-to-HTML-Table-Data.html)
--   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
+-   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)
 
  
 

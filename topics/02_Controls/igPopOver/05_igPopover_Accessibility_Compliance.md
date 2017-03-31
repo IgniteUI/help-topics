@@ -30,7 +30,7 @@ The following topics are prerequisites to understanding this topic:
 ## Accessibility Compliance Reference
 ### Introduction
 
-All Ignite UI™ controls and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. The table below contains the specific rules of Subpart 1194.22 that pertain to the control. Also, detailed is how the `igPopover` control complies with each rule.
+All %%ProductName%%™ controls and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. The table below contains the specific rules of Subpart 1194.22 that pertain to the control. Also, detailed is how the `igPopover` control complies with each rule.
 
 In some cases, to meet the requirements of each accessibility rule, you may need to interact with the control by setting a specific property, but in other cases, the control performs these tasks for you.
 
@@ -55,7 +55,7 @@ Rule| Rule text| How we comply
 
 The following topics provide additional information related to this topic.
 
-- [Accessibility Compliance](Accessibility-Compliance.html): This topic provides reference information for accessibility compliance of all Ignite UI™ controls.
+- [Accessibility Compliance](Accessibility-Compliance.html): This topic provides reference information for accessibility compliance of all %%ProductName%%™ controls.
 
 
 

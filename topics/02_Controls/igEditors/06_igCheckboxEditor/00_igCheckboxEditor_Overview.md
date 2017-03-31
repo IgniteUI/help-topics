@@ -10,7 +10,7 @@
 
 # igCheckboxEditor Overview
 
-The Ignite UI check box editor, or "`igCheckboxEditor`", is a control that renders a check box field, which permits users to make a binary choice between one or multiple mutually exclusive options and allows the user to submit the check box value to the server.
+The %%ProductName%% check box editor, or "`igCheckboxEditor`", is a control that renders a check box field, which permits users to make a binary choice between one or multiple mutually exclusive options and allows the user to submit the check box value to the server.
 
 As the user interacts with the control the visual appearance is updated to give immediate feedback. The editor has two states and the check box works as a two-state toggle. One of the states reflects the checked solution and the other reflects the not checked solution.
 
@@ -19,7 +19,7 @@ As the user interacts with the control the visual appearance is updated to give 
 
 ## Adding igCheckboxEditor to a Web Page
 
-1.  To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) help topic.
+1.  To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) help topic.
 
 2.  On your HTML page or ASP.NET MVC View, reference the required JavaScript files, CSS files, and ASP.NET MVC assemblies.
 
@@ -109,6 +109,6 @@ $('#checkInput').igCheckboxEditor({
 
 ## Related Links
 
--   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
--   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+-   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)
+-   [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 

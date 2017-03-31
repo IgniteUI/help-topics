@@ -30,7 +30,7 @@ The following topics are prerequisites to understanding this topic:
 ## Accessibility Compliance Reference
 ### Introduction
 
-All of the Ignite UI® and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. The table below contains the specific rules of Subpart 1194.22 that pertain to the control. Also detailed is how the `igTileManager` control complies with each rule.
+All of the %%ProductName%%® and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. The table below contains the specific rules of Subpart 1194.22 that pertain to the control. Also detailed is how the `igTileManager` control complies with each rule.
 
 To meet the requirements for each accessibility rule, in some cases, you may need to interact with the control by setting a specific option, but, in other cases, the control does the work for you.
 
@@ -53,7 +53,7 @@ Rules| Rule Text |How We Comply
 
 The following topics provide additional information related to this topic.
 
-- [Accessibility Compliance](Accessibility-Compliance.html): This topic provides reference information for accessibility compliance of all Ignite UI controls.
+- [Accessibility Compliance](Accessibility-Compliance.html): This topic provides reference information for accessibility compliance of all %%ProductName%% controls.
 
 
 

@@ -11,9 +11,9 @@
 # igDateEditor Overview
 
 
-The Ignite UI™ date editor, or `igDateEditor`, is a control that renders an input field, which allows users to edit date formatted data. The `igDateEditor` control supports localization, by recognizing different regional options exposed from the browser.
+The %%ProductName%%™ date editor, or `igDateEditor`, is a control that renders an input field, which allows users to edit date formatted data. The `igDateEditor` control supports localization, by recognizing different regional options exposed from the browser.
 
-The `igDateEditor` control exposes a rich client-side API, which can be configured to work with any server technology. While the Ignite UI™ controls are server-agnostic, the control does feature wrappers specific for the Microsoft® ASP.NET MVC Framework to configure the control with the .NET™ language of your choice.
+The `igDateEditor` control exposes a rich client-side API, which can be configured to work with any server technology. While the %%ProductName%%™ controls are server-agnostic, the control does feature wrappers specific for the Microsoft® ASP.NET MVC Framework to configure the control with the .NET™ language of your choice.
 
 The `igDateEditor` control may be extensively styled giving you an opportunity to provide a completely different look and feel for the control as opposed to the default style. Styling options include using your own styles as well as styles from jQuery UI’s ThemeRoller.
 
@@ -38,7 +38,7 @@ The `igDateEditor` includes the following characteristics:
 
 ## Adding igDateEditor to a Web Page
 
-1.  To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in  Ignite UI](Deployment-Guide-JavaScript-Resources.html) help topic.
+1.  To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in  %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) help topic.
 2.  On your HTML page or ASP.NET MVC View, reference the required JavaScript files, CSS files, and ASP.NET MVC assemblies.
 
     **In HTML:**
@@ -117,8 +117,8 @@ When you use a string value for the `minValue`, `maxValue` and the `value` optio
 ## Related Links
 
 -   [Date and Time Formats](%%SamplesUrl%%/editors/date-and-time-formats) 
--   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
--   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+-   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)
+-   [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 
  
 

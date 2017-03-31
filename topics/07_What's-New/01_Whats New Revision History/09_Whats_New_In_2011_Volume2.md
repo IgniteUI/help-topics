@@ -11,7 +11,7 @@
 # What's New in 2011 Volume 2
 
 ## Topic Overview
-This topic provides an overview of the new functionalities and components introduced with the Ignite UI™ 2011 Volume 2.
+This topic provides an overview of the new functionalities and components introduced with the %%ProductName%%™ 2011 Volume 2.
 
 ### In this topic
 This document contains the following sections:
@@ -42,7 +42,7 @@ The `igHierarchicalGrid` control is a new grid control used to render hierarchic
 [Initializing the igHierarchicalGrid](igHierarchicalGrid-Initializing.html)
 
 ### <a id="igtree"></a>igTree™ 
-The Ignite UI 2011 Volume 2 release now features a tree control. The `igTree` control comes equipped with a number of valuable features. The control supports load-on-demand to enable an optimized performance profile. Multiple selection scenarios are supported including bi-state and tri-state selection. The Selection feature is driven by a configurable set of selection options including checkboxes, keyboard input and individual selection. Node images are customizable and you have the option of configuring image through CSS, directly through bindings or by providing explicit URL paths to an image. The control may be created and managed through a pure JavaScript context or via the ASP.NET MVC helper.
+The %%ProductName%% 2011 Volume 2 release now features a tree control. The `igTree` control comes equipped with a number of valuable features. The control supports load-on-demand to enable an optimized performance profile. Multiple selection scenarios are supported including bi-state and tri-state selection. The Selection feature is driven by a configurable set of selection options including checkboxes, keyboard input and individual selection. Node images are customizable and you have the option of configuring image through CSS, directly through bindings or by providing explicit URL paths to an image. The control may be created and managed through a pure JavaScript context or via the ASP.NET MVC helper.
 
 ![](images/JQuery_Whats_New_11.2_Pic2.png)
 
@@ -50,7 +50,7 @@ The Ignite UI 2011 Volume 2 release now features a tree control. The `igTree` co
 [Getting Started with igTree](igTree-Getting-Started.html)
 
 ###<a id="igcombobox"></a> igCombo™ 
-The Ignite UI 2011 Volume 2 release now features a combo control. The `igCombo` control comes equipped with a number of valuable features. User interface virtualization support includes the ability of the control to only create HTML elements for data items that are within the viewable area of the control. As additional data is required beyond what is visible, the control reuses existing HTML elements and keeps the scrollbar position in sync with the relative data position. The auto-complete feature allows users to begin typing in the combo box and matching selections begin to appear within the entry box to allow for easy selection. The auto-suggest feature allows users to begin typing in the entry box and the control will return a list of possible matches based on the entered text for selection. The selection features allow users to select single or multiple items via checkboxes, keyboard input or standard click-selection.
+The %%ProductName%% 2011 Volume 2 release now features a combo control. The `igCombo` control comes equipped with a number of valuable features. User interface virtualization support includes the ability of the control to only create HTML elements for data items that are within the viewable area of the control. As additional data is required beyond what is visible, the control reuses existing HTML elements and keeps the scrollbar position in sync with the relative data position. The auto-complete feature allows users to begin typing in the combo box and matching selections begin to appear within the entry box to allow for easy selection. The auto-suggest feature allows users to begin typing in the entry box and the control will return a list of possible matches based on the entered text for selection. The selection features allow users to select single or multiple items via checkboxes, keyboard input or standard click-selection.
 
 ![](images/JQuery_Whats_New_11.2_Pic3.png)
 
@@ -72,7 +72,7 @@ The `igGrid` Group By feature allows you to group a series of columns. The grid 
 [Enabling igGrid Outlook GroupBy](igGrid-Enabling-GroupBy.html)
 
 ### <a id="column-hiding"></a>igGrid Column Hiding 
-The Ignite UI 2011 Volume 2 release now includes `igGrid` control column hiding. With this feature, you can hide columns from users before and after the grid is rendered. Further, columns can be hidden either programmatically or using UI elements in the column header. The image below depicts an `igGrid` control with a hidden column. The red arrow is pointing to the hidden column indicator:
+The %%ProductName%% 2011 Volume 2 release now includes `igGrid` control column hiding. With this feature, you can hide columns from users before and after the grid is rendered. Further, columns can be hidden either programmatically or using UI elements in the column header. The image below depicts an `igGrid` control with a hidden column. The red arrow is pointing to the hidden column indicator:
 
 ![](images/JQuery_Whats_New_11.2_Pic5.png)
 
@@ -80,7 +80,7 @@ The Ignite UI 2011 Volume 2 release now includes `igGrid` control column hiding.
 [Enabling Column Hiding](igGrid-Column-Hiding-Enabling-Column-Hiding.html)
 
 ### <a id="column-resizing"></a>igGrid Column Resizing 
-The Ignite UI 2011 Volume 2 release now includes `igGrid` column resizing. The column resizing feature enables users to change the width of the columns in the grid. The effect of the resizing action can be applied to the grid either after the resize action has finished or simultaneously as it happens. The column resizing functionality has several features that are available for configuration in code including the levels at which resizing is allows– for the entire grid and for individual columns. The image below depicts a grid where the Color column is being resized by the user.
+The %%ProductName%% 2011 Volume 2 release now includes `igGrid` column resizing. The column resizing feature enables users to change the width of the columns in the grid. The effect of the resizing action can be applied to the grid either after the resize action has finished or simultaneously as it happens. The column resizing functionality has several features that are available for configuration in code including the levels at which resizing is allows– for the entire grid and for individual columns. The image below depicts a grid where the Color column is being resized by the user.
 
 ![](images/JQuery_Whats_New_11.2_Pic6.png)
 
@@ -88,7 +88,7 @@ The Ignite UI 2011 Volume 2 release now includes `igGrid` column resizing. The c
 [igGrid Column Resizing](igGrid-Column-Resizing.html)
 
 ### <a id="row-selectors"></a>igGrid Row Selectors 
-The Ignite UI 2011 Volume 2 release now includes `igGrid` row selectors. The row selectors feature exposes options to enable checkboxes, row numbering and combine with the multiple selection feature of `igGrid` control (see the image below):
+The %%ProductName%% 2011 Volume 2 release now includes `igGrid` row selectors. The row selectors feature exposes options to enable checkboxes, row numbering and combine with the multiple selection feature of `igGrid` control (see the image below):
 
 ![](images/JQuery_Whats_New_11.2_Pic7.png)
 
@@ -96,7 +96,7 @@ The Ignite UI 2011 Volume 2 release now includes `igGrid` row selectors. The row
 [Enabling Row Selectors](igGrid-Enabling-Row-Selectors.html)
 
 ### <a id="tooltips"></a>igGrid Tooltips 
-The Ignite UI 2011 Volume 2 release now includes `igGrid` tooltips. This feature enables tooltips to appear over grid cells. The purpose of the tooltips is to make the whole cell content visible and enable users to select and copy the text that is inside the tooltip container.
+The %%ProductName%% 2011 Volume 2 release now includes `igGrid` tooltips. This feature enables tooltips to appear over grid cells. The purpose of the tooltips is to make the whole cell content visible and enable users to select and copy the text that is inside the tooltip container.
 
 ![](images/JQuery_Whats_New_11.2_Pic8.png)
 
@@ -104,7 +104,7 @@ The Ignite UI 2011 Volume 2 release now includes `igGrid` tooltips. This feature
 [Enabling igGrid Tooltips](igGrid-Enabling-Tooltips.html)
 
 ### <a id="column-summaries"></a>igGrid Column Summaries 
-The Ignite UI 2011 Volume 2 release now includes `igGrid` column summaries. The column summaries feature exposes the option to calculate summaries based on column data. The grid includes a number of default summary functions, as well as giving you the ability to define custom functions to calculate the summaries. Further, options exist which allow you to choose whether summaries are calculated remotely or local. The following image depicts a grid with summaries enabled.
+The %%ProductName%% 2011 Volume 2 release now includes `igGrid` column summaries. The column summaries feature exposes the option to calculate summaries based on column data. The grid includes a number of default summary functions, as well as giving you the ability to define custom functions to calculate the summaries. Further, options exist which allow you to choose whether summaries are calculated remotely or local. The following image depicts a grid with summaries enabled.
 
 ![](images/JQuery_Whats_New_11.2_Pic9.png)
 
@@ -112,7 +112,7 @@ The Ignite UI 2011 Volume 2 release now includes `igGrid` column summaries. The 
 [Enabling Column Summaries](igGrid-Enabling--Column-Summaries.html)
 
 ### <a id="metadata"></a>igGrid Model Metadata enhancement 
-The Ignite UI 2011 Volume 2 release now includes the ability of the `igGrid` MVC helper to recognize the `DisplayName` attribute. Use of the `DisplayName` attribute allows the MVC helper to automatically use this attribute as `headerText` for a specified column. Keep in mind that if `headerText` is set explicitly in the grid, the value from the `DisplayName` is overwritten. The following example shows simple model and `igGrid` which automatically binds the `headerText` to the `DisplayName` attribute value.
+The %%ProductName%% 2011 Volume 2 release now includes the ability of the `igGrid` MVC helper to recognize the `DisplayName` attribute. Use of the `DisplayName` attribute allows the MVC helper to automatically use this attribute as `headerText` for a specified column. Keep in mind that if `headerText` is set explicitly in the grid, the value from the `DisplayName` is overwritten. The following example shows simple model and `igGrid` which automatically binds the `headerText` to the `DisplayName` attribute value.
 
  
 

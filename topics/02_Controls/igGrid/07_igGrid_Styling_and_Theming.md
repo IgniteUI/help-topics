@@ -12,7 +12,7 @@
 
 ## Required CSS and Themes
 
-The Ignite UI™ grid (or `igGrid`), like other jQuery widgets, utilizes the jQuery UI CSS Framework for styling. Included in Ignite UI are custom jQuery UI themes called Infragistics and Metro. These themes provide a professional and attractive design to all Infragistics and standard jQuery UI widgets.
+The %%ProductName%%™ grid (or `igGrid`), like other jQuery widgets, utilizes the jQuery UI CSS Framework for styling. Included in %%ProductName%% are custom jQuery UI themes called Infragistics and Metro. These themes provide a professional and attractive design to all Infragistics and standard jQuery UI widgets.
 
 In addition to the Infragistics and Metro themes, there is a structure directory, which is required for the basic CSS layout of the Infragistics widgets.
 
@@ -85,7 +85,7 @@ The Metro Theme is referenced after the jQuery Theme. The following stylesheets 
 
 ## Using ThemeRoller
 
-The ThemeRoller is a tool provided by jQuery UI which facilitates the creation of custom themes that are compatible with jQuery UI widgets. Many pre-built themes that can be downloaded and incorporated into your website. The Ignite UI widgets support the use of ThemeRoller themes. 
+The ThemeRoller is a tool provided by jQuery UI which facilitates the creation of custom themes that are compatible with jQuery UI widgets. Many pre-built themes that can be downloaded and incorporated into your website. The %%ProductName%% widgets support the use of ThemeRoller themes. 
 
 In addition to incorporating individual themes, the [jQuery UI Theme Switcher widget](http://docs.jquery.com/UI/Theming/ThemeSwitcher) is available to change pre-built jQuery UI themes dynamically in the browser. For more information on ThemeRoller and the Theme Switcher widget, see the [**External References**](#external-references) below.
 

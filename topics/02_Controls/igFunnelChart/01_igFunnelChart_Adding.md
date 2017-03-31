@@ -24,7 +24,7 @@ The following table lists the concepts and topics required as a prerequisite to 
 	-   jQuery, jQuery UI
 	-   ASP.NET MVC
 -   Topics
-	-   [Using JavaScript Resouces in Ignite UI](Deployment-Guide-JavaScript-Resources.html): This topic provides general guidance on adding required JavaScript resources to use controls from the Ignite UI® library.
+	-   [Using JavaScript Resouces in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html): This topic provides general guidance on adding required JavaScript resources to use controls from the %%ProductName%%® library.
 	-   [*igFunnelChart* Overview](igFunnelChart-Overview.html): This topic provides conceptual information about the `igFunnelChart` control including its main features, minimum requirements, and user functionality.
 
 
@@ -90,7 +90,7 @@ Adding the `igFunnelChart` control to an HTML page requires referencing the reso
 			</td>
 
 			<td>
-				Ignite UI is built on top of these frameworks:
+				%%ProductName%% is built on top of these frameworks:
 
 				<ul>
 					<li><a class="ig-topic-link" href="http://jquery.com/" target="_blank">jQuery</a></li>
@@ -120,7 +120,7 @@ Adding the `igFunnelChart` control to an HTML page requires referencing the reso
 			</td>
 
 			<td>
-				The charting functionality of the Ignite UI library is distributed across several files depending on the series type. Also, there is a separate funnel chart JavaScript file which must be linked to you HTML or MVC views.
+				The charting functionality of the %%ProductName%% library is distributed across several files depending on the series type. Also, there is a separate funnel chart JavaScript file which must be linked to you HTML or MVC views.
 
 				In case you wish to include resources manually, you need to use the dependencies listed in the following table.
 
@@ -142,7 +142,7 @@ Adding the `igFunnelChart` control to an HTML page requires referencing the reso
 							</td>
 
 							<td>
-								Ignite UI utilities
+								%%ProductName%% utilities
 							</td>
 						</tr>
 
@@ -162,7 +162,7 @@ Adding the `igFunnelChart` control to an HTML page requires referencing the reso
 							</td>
 
 							<td>
-								Ignite UI templating engine
+								%%ProductName%% templating engine
 							</td>
 						</tr>
 
@@ -246,7 +246,7 @@ Adding the `igFunnelChart` control to an HTML page requires referencing the reso
 							</td>
 
 							<td>
-								The `igChartLegend` control used by all chart controls in Ignite UI
+								The `igChartLegend` control used by all chart controls in %%ProductName%%
 							</td>
 						</tr>
 					</tbody>
@@ -260,7 +260,7 @@ Adding the `igFunnelChart` control to an HTML page requires referencing the reso
 			</td>
 
 			<td>
-				This theme contains custom visual styles created for the Ignite UI library. It is contained in the following file:<br />*&lt;IG CSS root&gt;/themes/Infragistics/infragistics.theme.css*
+				This theme contains custom visual styles created for the %%ProductName%% library. It is contained in the following file:<br />*&lt;IG CSS root&gt;/themes/Infragistics/infragistics.theme.css*
 			</td>
 		</tr>
 
@@ -277,7 +277,7 @@ Adding the `igFunnelChart` control to an HTML page requires referencing the reso
 </table>
 
 
-> **Note:** It is recommended to use the `igLoader` component to load JavaScript and CSS resources. For information on how to do it, refer to the [**Using Infragistics Loader**](Using-Infragistics-Loader.html) topic. In addition to that, in the online Ignite UI [Samples Browser](%%SamplesUrl%%), you can find some specific examples on how to use the `igLoader` with the `igFunnelChart` component.
+> **Note:** It is recommended to use the `igLoader` component to load JavaScript and CSS resources. For information on how to do it, refer to the [**Using Infragistics Loader**](Using-Infragistics-Loader.html) topic. In addition to that, in the online %%ProductName%% [Samples Browser](%%SamplesUrl%%), you can find some specific examples on how to use the `igLoader` with the `igFunnelChart` component.
 
 
 
@@ -285,7 +285,7 @@ Adding the `igFunnelChart` control to an HTML page requires referencing the reso
 
 ### <a id="javascript-introduction"></a> Introduction
 
-This procedure guides you through the steps for adding a funnel chart with basic functionality to a web page. The example shows a pure HTML/JavaScript implementation. It includes proper Loader configuration for loading all Ignite UI resources needed by the `igFunnelChart` control.
+This procedure guides you through the steps for adding a funnel chart with basic functionality to a web page. The example shows a pure HTML/JavaScript implementation. It includes proper Loader configuration for loading all %%ProductName%% resources needed by the `igFunnelChart` control.
 
 The procedure instantiates and configures a 325x450-pixel funnel chart with default sort order (highest value on top), weighted slices and straight side lines representing the budget of the departments of a company. The data is supplied to the `igFunnelChart` control in the form of a JSON array (configured, too, in the procedure). In addition to that basic tuning, the paths, and the visual state of `igFunnelChart`’s labels are configured in order to have descriptive information about the data that is shown.
 
@@ -522,7 +522,7 @@ The following steps demonstrate how to add a basic funnel chart control to an AS
 		
 	2. Add the `igLoader`’s MVC helper configuration for `igFunnelChart`.
 	
-		The following code, added to the ASP.NET MVC View, configures the `igLoader`’s wrapper with the paths to the Ignite UI resources.
+		The following code, added to the ASP.NET MVC View, configures the `igLoader`’s wrapper with the paths to the %%ProductName%% resources.
 		
 		**In ASPX:**
 		

@@ -108,7 +108,7 @@ Another scenario to consider that may be a performance issue is when Append Rows
 
 ### <a id="migration-guide"></a>CTP Migration Guide
 
-As noted previously the feature was renamed from “Load on Demand” to “Append Rows on Demand” in order to differentiate from other functionality with the same name. In order to upgrade from previous versions of Ignite UI you need to know the following information:
+As noted previously the feature was renamed from “Load on Demand” to “Append Rows on Demand” in order to differentiate from other functionality with the same name. In order to upgrade from previous versions of %%ProductName%% you need to know the following information:
 
 -   The feature file in the “<installation_folder>\js\modules” folder is renamed from “`infragistics.ui.grid.loadondemand.js`” to “`infragistics.ui.grid.appendrowsondemand.js`”
 -   In Infragistics Loader the feature name from “igGrid.LoadOnDemand” to “igGrid.AppendRowsOnDemand”

@@ -10,7 +10,7 @@
 
 # Using the HTTP Handler and Module (igUpload)
  
-To facilitate uploads with the `igUpload` control you must implement server logic to process and save the uploaded data. The client-only `igUpload` works with any number of different server technologies, Ignite UI™ includes a server-side implementation using ASP.NET. This topic demonstrates how to configure a HTTP Module and HTTP Handler to process the server events necessary to accept the uploaded data.
+To facilitate uploads with the `igUpload` control you must implement server logic to process and save the uploaded data. The client-only `igUpload` works with any number of different server technologies, %%ProductName%%™ includes a server-side implementation using ASP.NET. This topic demonstrates how to configure a HTTP Module and HTTP Handler to process the server events necessary to accept the uploaded data.
 
 ## HTTP Module
 An HttpModule may be configured to manage the file upload process. It implements the .NET IHttpModule interface so that it plugs into the HTTP Request process. Therefore all the requests, even those that are not coming from the upload control, pass through HttpModule. That’s why HttpModule filters the requests that are relevant only to the upload control.
@@ -136,8 +136,8 @@ Value | Description
 10 | Error set when file upload is cancelled on start uploading in event handler
 
 ## Related Links
--   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
--   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+-   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)
+-   [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 -   [igUpload Overview](igUpload-Overview.html)
 
  

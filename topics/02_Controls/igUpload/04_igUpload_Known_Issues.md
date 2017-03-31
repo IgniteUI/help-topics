@@ -56,7 +56,7 @@ protected void OnFileFinishing(object sender, UploadFinishingEventArgs e)
 
 
 ## Dependencies
-The `igUpload` control depends on the following separate Ignite UI™ widgets – `igButton` `igBrowseButton`, `igProgressBar` and the ajaxQueue plugin. These widgets are included with the `igUpload` control so you have them available by default.
+The `igUpload` control depends on the following separate %%ProductName%%™ widgets – `igButton` `igBrowseButton`, `igProgressBar` and the ajaxQueue plugin. These widgets are included with the `igUpload` control so you have them available by default.
 
 Also, the widget uses strings defined from an external JavaScript file ig.ui.fileupload-en.js. Other language locales may be added by creating other similar files with the proper two letter language suffix.
 

@@ -145,7 +145,7 @@ Example|Description
 [Configuring the Tooltip Template](#config-tooltip-template)|This code example shows how to configure a tooltip template in the context of the Geographical Symbol series.
 [Configuring the Marker Template in JavaScript](#config-marker-template-js)|This code example shows how to configure a custom marker template in JavaScript.
 [Configuring the Marker Template in ASP.NET MVC](#config-marker-template-mvc)|This code example shows how to configure a custom marker template in ASP.NET MVC.
-[Configuring the Marker Template With the SimpleTextMarkerTemplate](#simple-text-marker-template)|This code example shows how to configure a custom marker template using the `SimpleTextMarkerTemplate` helper class from the Ignite UI library.
+[Configuring the Marker Template With the SimpleTextMarkerTemplate](#simple-text-marker-template)|This code example shows how to configure a custom marker template using the `SimpleTextMarkerTemplate` helper class from the %%ProductName%% library.
 [Configuring a Custom Marker Template](#config-custom-marker-template)|This code example shows how to configure a custom marker template in the context of The  Geographical Symbol series.
 
 
@@ -305,7 +305,7 @@ The following code snippet shows how to assign the customMarker variable to the 
 
 This code example shows how to configure a custom marker template in the context of geographical symbol series. Configuring custom markers for geographic shape series is identical. Other map series types do not display markers and custom markers are irrelevant.
 
-The example employs a helper widget called `SimpleTextMarkerTemplate` from the Ignite UI created in order to simplify using custom markers. The widget has several options for configuring the tooltip’s appearance.
+The example employs a helper widget called `SimpleTextMarkerTemplate` from the %%ProductName%% created in order to simplify using custom markers. The widget has several options for configuring the tooltip’s appearance.
 
 ### Code
 

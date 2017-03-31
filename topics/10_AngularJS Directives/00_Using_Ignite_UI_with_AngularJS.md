@@ -8,18 +8,18 @@
 |metadata|
 -->
 
-#Using Ignite UI with AngularJS
+#Using %%ProductName%% with AngularJS
 
 ##Topic Overview
 
-This topic contains an overview using the Ignite UI directives for AngularJS.
+This topic contains an overview using the %%ProductName%% directives for AngularJS.
 
 ### Required background
 
 The following lists the concepts, topics, and articles required as a prerequisite to understanding this topic.
 
 -   Topics
-    -   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
+    -   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)
 
 -   Concepts
     -   [AngularJS Conceptual Overview](https://docs.angularjs.org/guide/concepts)
@@ -36,7 +36,7 @@ This topic contains the following sections:
     -   [Scope Options](#scope-options)
     -   [Events](#events)
     -   [Options Evaluation](#options-evaluation)
--   [**Creating Angular app with Ignite UI**](#creating-angular-app)
+-   [**Creating Angular app with %%ProductName%%**](#creating-angular-app)
     -   [Requirements](#requirements)
     -   [Steps](#steps)
 -   [**Data Binding**](#data-binding)
@@ -52,15 +52,15 @@ This topic contains the following sections:
 ## <a id="introduction"></a>Introduction
 
 
-The [Ignite UI® directives for AngularJS](https://github.com/IgniteUI/igniteui-angular) allow you to take advantage of data binding and declarative programming when using Ignite UI® controls in AngularJS apps.
+The [%%ProductName%%® directives for AngularJS](https://github.com/IgniteUI/igniteui-angular) allow you to take advantage of data binding and declarative programming when using %%ProductName%%® controls in AngularJS apps.
 
-The directives are available as a separate module called `'igniteui-directives'` in the *igniteui-angular.js* file. They extend Angular with HTML markers that enable initialization and binding of Ignite UI controls in the context (scope) provided by AngularJS.
+The directives are available as a separate module called `'igniteui-directives'` in the *igniteui-angular.js* file. They extend Angular with HTML markers that enable initialization and binding of %%ProductName%% controls in the context (scope) provided by AngularJS.
 
->**Note:** Directives are registered dynamically based on the loaded Ignite UI widgets. Therefore, you should make sure only the proper scripts are loaded on the page (and preferably avoid loading unused widgets).
+>**Note:** Directives are registered dynamically based on the loaded %%ProductName%% widgets. Therefore, you should make sure only the proper scripts are loaded on the page (and preferably avoid loading unused widgets).
 
 ## <a id="directives"></a>Directives
 
-As Angular provides a very flexible syntax for writing directives and normalizes different declarative approaches to a single behavior, there are multiple ways you can initialize a control and its options. You have a number of different options available to you to initialize an Ignite UI control in an Angular application. You may use a custom tag element `<control-name>`, attributes like `<div data-control-name>` or a class name `<div class="control-name">`. Each of these approaches will match the control directive and produce the same result. Stated another way, the following definitions all work to initialize an `igRating` control:
+As Angular provides a very flexible syntax for writing directives and normalizes different declarative approaches to a single behavior, there are multiple ways you can initialize a control and its options. You have a number of different options available to you to initialize an %%ProductName%% control in an Angular application. You may use a custom tag element `<control-name>`, attributes like `<div data-control-name>` or a class name `<div class="control-name">`. Each of these approaches will match the control directive and produce the same result. Stated another way, the following definitions all work to initialize an `igRating` control:
 
 **In HTML:**
 
@@ -70,12 +70,12 @@ As Angular provides a very flexible syntax for writing directives and normalizes
 <div class="ig-rating"></div>
 ```
 
-For readability, best practices recommend using tags and attributes over classes. Even though Angular normalizes other delimiters, it’s also recommended for Ignite UI Angular directives the control names to be lower case and dash-delimited.
+For readability, best practices recommend using tags and attributes over classes. Even though Angular normalizes other delimiters, it’s also recommended for %%ProductName%% Angular directives the control names to be lower case and dash-delimited.
 
 ## <a id="options"></a>Options
 
 
-All options provided for a directive are intended for the Ignite UI widget that it will create, therefore all applicable options can be found under the [Ignite UI API reference](%%jQueryApiUrl%%/). There are two mutually-exclusive ways to define options – declaratively in the View or as an object in the Scope.
+All options provided for a directive are intended for the %%ProductName%% widget that it will create, therefore all applicable options can be found under the [%%ProductName%% API reference](%%jQueryApiUrl%%/). There are two mutually-exclusive ways to define options – declaratively in the View or as an object in the Scope.
 
 ### <a id="declarative-options"></a>Declarative Options
 
@@ -136,11 +136,11 @@ app.controller('treeController',
         };
     }]);
 ```
-These options may seem familiar to you as they are simply using the [Ignite UI API](%%jQueryApiUrl%%/ui.igtree) in the controller as there is no need for AngularJS to normalize them from the view.
+These options may seem familiar to you as they are simply using the [%%ProductName%% API](%%jQueryApiUrl%%/ui.igtree) in the controller as there is no need for AngularJS to normalize them from the view.
 
 ### <a id="events"></a>Events
 
-Although standard methods of [handling Ignite UI events](Using-Events-in-NetAdvantage-for-jQuery.html) are still available, directives can also bind handlers that are defined declaratively as an attribute with `event-` prefix. The name of the event still follows the same naming convention as options - **lower case and dash-delimited**. For example, the following code listing shows how to declare the [`ended`](%%jQueryApiUrl%%/ui.igvideoplayer#events:ended) event of the `igVideoPlayer`:
+Although standard methods of [handling %%ProductName%% events](Using-Events-in-NetAdvantage-for-jQuery.html) are still available, directives can also bind handlers that are defined declaratively as an attribute with `event-` prefix. The name of the event still follows the same naming convention as options - **lower case and dash-delimited**. For example, the following code listing shows how to declare the [`ended`](%%jQueryApiUrl%%/ui.igvideoplayer#events:ended) event of the `igVideoPlayer`:
 
 **In HTML:**
 ```html
@@ -155,7 +155,7 @@ function ($scope) {
     }
 }]);
 ```
->**Note:** Keep in mind there are many user interaction-related events in the Ignite UI controls are not raised when the controls are manipulated through the API. The directives use API methods to achieve data binding. For example, the [`activeItemChanged`](%%jQueryApiUrl%%/ui.igcombo#events:activeItemChanged) event of the `igCombo` control is not raised because a change was made to the `ngModel` to which it was bound.
+>**Note:** Keep in mind there are many user interaction-related events in the %%ProductName%% controls are not raised when the controls are manipulated through the API. The directives use API methods to achieve data binding. For example, the [`activeItemChanged`](%%jQueryApiUrl%%/ui.igcombo#events:activeItemChanged) event of the `igCombo` control is not raised because a change was made to the `ngModel` to which it was bound.
 
 ### <a id="options-evaluation"></a>Options Evaluation
 
@@ -177,24 +177,24 @@ By dividing it by 10:
 
 ![](images/Using_Ignite_UI_with_AngularJS_1.png)
 
-## <a id="creating-angular-app"></a>Creating Angular app with Ignite UI
+## <a id="creating-angular-app"></a>Creating Angular app with %%ProductName%%
 
 ### <a id="requirements"></a>Requirements
 
-When considering the required resources the same requirements and options apply as described in the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) documentation in addition to loading the Ignite UI Angular directives module afterwards. This means that along with some styles the application would also need to include:
+When considering the required resources the same requirements and options apply as described in the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) documentation in addition to loading the %%ProductName%% Angular directives module afterwards. This means that along with some styles the application would also need to include:
 
 -   [jQuery](http://www.jquery.com/) 1.7 and later
 -   [jQuery UI](http://jqueryui.com/) 1.8 and later
 -   [AngularJS](http://www.angularjs.org/) 1.0 and later
--   [Ignite UI](http://www.igniteui.com/) 13.1 and later
+-   [%%ProductName%%](http://www.igniteui.com/) 13.1 and later
 
 ### <a id="steps"></a>Steps
 
-1.  Begin by including the [Ignite UI theme and structural](Deployment-Guide-Styling-and-Theming.html) files:
+1.  Begin by including the [%%ProductName%% theme and structural](Deployment-Guide-Styling-and-Theming.html) files:
 
     **In HTML:**
 	```html
-	<!-- Ignite UI Required Combined CSS Files -->
+	<!-- %%ProductName%% Required Combined CSS Files -->
 	<link href="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
 	<link href="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/css/structure/infragistics.css" rel="stylesheet" />
 	```
@@ -209,11 +209,11 @@ When considering the required resources the same requirements and options apply 
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
 	```
 
-3.  Include Ignite UI and the directives module. Preferably use a custom download, but you can also [include Ignite UI in any available way](Deployment-Guide-JavaScript-Resources.html).
+3.  Include %%ProductName%% and the directives module. Preferably use a custom download, but you can also [include %%ProductName%% in any available way](Deployment-Guide-JavaScript-Resources.html).
 
     **In HTML:**
 	```html
-	<!-- Ignite UI Required Combined JavaScript Files -->
+	<!-- %%ProductName%% Required Combined JavaScript Files -->
 	<script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.core.js"></script>
 	<script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.lob.js"></script>
 	<script src="igniteui-angular.min.js"></script>
@@ -250,7 +250,7 @@ When considering the required resources the same requirements and options apply 
 ## <a id="data-binding"></a>Data Binding
 
 
-Besides providing initialization integration, one of the main benefits of the Ignite UI directives for AngularJS is data binding support. The directives automatically assign AngularJS watchers to the sources provided at initialization, so the only requirement to enable data binding is to set the `dataSource` option or `data-source` attribute to the desired property from the scope:
+Besides providing initialization integration, one of the main benefits of the %%ProductName%% directives for AngularJS is data binding support. The directives automatically assign AngularJS watchers to the sources provided at initialization, so the only requirement to enable data binding is to set the `dataSource` option or `data-source` attribute to the desired property from the scope:
 
 **In HTML:**
 ```html
@@ -289,7 +289,7 @@ The other main group are controls that cannot edit their information (mostly con
 
 ## <a id="templates"></a>Templates
 
-Many Ignite UI controls support templates that are by default handled by the [Infragistics Templating Engine](igTemplating-Overview.html). The Ignite UI® Templating Engine is a JavaScript library used to apply a content template to a set of HTML elements. It supports conditional logic and nested templates. The engine uses a `${property}` notation for substitution of the corresponding property values in the data provided. For example, wrapping column values in additional markup for styling and formatting:
+Many %%ProductName%% controls support templates that are by default handled by the [Infragistics Templating Engine](igTemplating-Overview.html). The %%ProductName%%® Templating Engine is a JavaScript library used to apply a content template to a set of HTML elements. It supports conditional logic and nested templates. The engine uses a `${property}` notation for substitution of the corresponding property values in the data provided. For example, wrapping column values in additional markup for styling and formatting:
 
 **In HTML:**
 ```html
@@ -366,7 +366,7 @@ The following topics provide additional information related to this topic.
 
 The following samples provide additional information related to this topic.
 
--   [Ignite UI directives for AngularJS samples](http://igniteui.github.io/igniteui-angular/)
--   [All Ignite UI control samples](%%SamplesUrl%%)
+-   [%%ProductName%% directives for AngularJS samples](http://igniteui.github.io/igniteui-angular/)
+-   [All %%ProductName%% control samples](%%SamplesUrl%%)
 
                     

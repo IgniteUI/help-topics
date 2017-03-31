@@ -28,7 +28,7 @@ This topic demonstrates how to apply styles and themes to the `igDataChart`™ c
 
 **Topics**
 
--	[Styling and Theming in Ignite UI](Deployment-Guide-Styling-and-Theming.html): General information and a procedure for updating styles and themes in Ignite UI™ library.
+-	[Styling and Theming in %%ProductName%%](Deployment-Guide-Styling-and-Theming.html): General information and a procedure for updating styles and themes in %%ProductName%%™ library.
 
 **External Resources**
 
@@ -73,9 +73,9 @@ The `igDataChart` uses the jQuery UI CSS Framework for the purposes of applying 
 
 To customize a theme, you can use the ThemeRoller tool. This jQuery UI tool facilitates the creation of custom themes that are compatible with the jQuery UI widgets. Many prebuilt themes are available for download and use in your website. The `igDataChart` control supports the use of ThemeRoller themes.
 
-Detailed information for using themes with Ignite UI library is available in the [Styling and Theming in Ignite UI](Deployment-Guide-Styling-and-Theming.html) topic.
+Detailed information for using themes with %%ProductName%% library is available in the [Styling and Theming in %%ProductName%%](Deployment-Guide-Styling-and-Theming.html) topic.
 
-Note: The base theme of Ignite UI is not necessary for charts and you may safely omit it on pages only containing charts.
+Note: The base theme of %%ProductName%% is not necessary for charts and you may safely omit it on pages only containing charts.
 
 
 
@@ -107,7 +107,7 @@ A summary of the `igDataChart` control’s available themes.
             </td>
 
             <td>
-                This theme defines general visual features for all Ignite UI controls. Detailed information for using the IG theme is available in the <a class="ig-topic-link" href="Deployment-Guide-Styling-and-Theming.html" data-auto-update-caption="true">Styling and Theming in Ignite UI</a> topic.
+                This theme defines general visual features for all %%ProductName%% controls. Detailed information for using the IG theme is available in the <a class="ig-topic-link" href="Deployment-Guide-Styling-and-Theming.html" data-auto-update-caption="true">Styling and Theming in %%ProductName%%</a> topic.
             </td>
         </tr>
 
@@ -464,7 +464,7 @@ Demonstrate how to modify the default IG Chart styles with your preferred settin
 
 1.  <a id="copy-default-css"></a>Copy the default chart CSS file.
 
- 	**Copy the CSS file, with the default chart styles (`infragistics.ui.chart.css`), from the Ignite UI installation folder to the themes folder of your web site or application.**
+ 	**Copy the CSS file, with the default chart styles (`infragistics.ui.chart.css`), from the %%ProductName%% installation folder to the themes folder of your web site or application.**
 
  	For instance, if you have a folder `Content/themes` in your web site or application where keep the CSS files used by the application, then make a copy of the default chart CSS file mentioned above in `Content/themes/MyChartTheme/ig.ui.chart.custom.css`. 
 

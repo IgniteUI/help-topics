@@ -14,7 +14,7 @@
 
 ### Overview
 
-The following table summarizes the known issues and limitations of the `igPivotDataSelector`™ control for the Ignite UI™ %%ProductVersionShort%% release. Detailed explanations of some of the issues and the existing workarounds are provided for some of the issues after the summary table.
+The following table summarizes the known issues and limitations of the `igPivotDataSelector`™ control for the %%ProductName%%™ %%ProductVersionShort%% release. Detailed explanations of some of the issues and the existing workarounds are provided for some of the issues after the summary table.
 
 ### Legend:
 

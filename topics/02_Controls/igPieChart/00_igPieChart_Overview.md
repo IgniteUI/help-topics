@@ -30,7 +30,7 @@ The following table lists the materials required as a prerequisite to understand
 
 **Topics**
 
-- [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html): General information on the Ignite UI™ library.
+- [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html): General information on the %%ProductName%%™ library.
 
 
 ### In this topic
@@ -65,7 +65,7 @@ The main features of `igPieChart` include legend, tooltips based on templates, c
 
 ### <a id="min-requirements-introduction"></a>Introduction
 
-The igPieChart control is a jQuery UI widget and, therefore, depends on the jQuery and jQuery UI libraries. The Modernzr library is also used internally for detecting browser and device capabilities. The control uses several Ignite UI™ shared resources for functionality and data binding. References to these resources are needed nevertheless, in spite of pure jQuery or ASP.NET MVC helpers being used. The `Infragistics.Web.Mvc` assembly is required when the control is used in the context of ASP.NET MVC.
+The igPieChart control is a jQuery UI widget and, therefore, depends on the jQuery and jQuery UI libraries. The Modernzr library is also used internally for detecting browser and device capabilities. The control uses several %%ProductName%%™ shared resources for functionality and data binding. References to these resources are needed nevertheless, in spite of pure jQuery or ASP.NET MVC helpers being used. The `Infragistics.Web.Mvc` assembly is required when the control is used in the context of ASP.NET MVC.
 
 ### <a id="requirements-summary-chart"></a>Requirements summary chart
 
@@ -102,7 +102,7 @@ jQuery and jQuery UI JavaScript resources
 			</td>
 
 			<td>
-				Ignite UI is built on top of these frameworks:
+				%%ProductName%% is built on top of these frameworks:
 
 				<ul>
 					<li>
@@ -138,7 +138,7 @@ Charting JavaScript resources
 			</td>
 
 			<td>
-				The charting functionality of the Ignite UI library is distributed across several files depending on the series type. Also, there is a separate pie chart JavaScript file which must be linked to you HTML or MVC views.
+				The charting functionality of the %%ProductName%% library is distributed across several files depending on the series type. Also, there is a separate pie chart JavaScript file which must be linked to you HTML or MVC views.
 
 				In case you wish to include resources manually, you need to use the dependencies listed in the following table.
 
@@ -163,7 +163,7 @@ Description
 			</td>
 
 							<td>
-Ignite UI utilities
+%%ProductName%% utilities
 			</td>
 						</tr>
 
@@ -229,7 +229,7 @@ IG theme
 			</td>
 
 			<td>
-This theme contains custom visual styles created for the Ignite UI library. It is contained in the following file:
+This theme contains custom visual styles created for the %%ProductName%% library. It is contained in the following file:
 
 				`{IG CSS root}/themes/Infragistics/infragistics.theme.css`
 			</td>
@@ -277,7 +277,7 @@ The Legend is a visual panel that shows an icon and a title for each data series
 
 ![](images/igPieChart_Overview_2.png)
 
-Legends are implemented with a separate control from the Ignite UI library called `igChartLegend`™ and require a separate div element on the page. This div element is referred in the pie chart and displays a label for each data item specified by the `labelMemberPath` option. The `igChartLegend` is a very simple control covered in the topic referred below.
+Legends are implemented with a separate control from the %%ProductName%% library called `igChartLegend`™ and require a separate div element on the page. This div element is referred in the pie chart and displays a label for each data item specified by the `labelMemberPath` option. The `igChartLegend` is a very simple control covered in the topic referred below.
 
 By default, the pie chart legend option is null and no legend is rendered.
 

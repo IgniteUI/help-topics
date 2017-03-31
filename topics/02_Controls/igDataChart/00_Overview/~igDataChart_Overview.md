@@ -30,9 +30,9 @@ The following table lists the materials required as a prerequisite to understand
 **Topics**
 
 
--	[Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
+-	[%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)
 
-General information on the Ignite UI™ library.
+General information on the %%ProductName%%™ library.
 
 ### In This Topic
 
@@ -565,7 +565,7 @@ scatterLine
 
 ### Minimum requirements summary
 
-The `igDataChart` control is a jQuery UI widget and therefore depends on the jQuery and jQuery UI libraries. The Modernzr library is also used internally for detecting browser and device capabilities. The control uses several Ignite UI™ shared resources for functionality and data binding. References to these resources are needed nevertheless, in spite of pure jQuery or ASP.NET MVC helpers being used. The `Infragistics.Web.Mvc` assembly is required when the control is used in the context of ASP.NET MVC.
+The `igDataChart` control is a jQuery UI widget and therefore depends on the jQuery and jQuery UI libraries. The Modernzr library is also used internally for detecting browser and device capabilities. The control uses several %%ProductName%%™ shared resources for functionality and data binding. References to these resources are needed nevertheless, in spite of pure jQuery or ASP.NET MVC helpers being used. The `Infragistics.Web.Mvc` assembly is required when the control is used in the context of ASP.NET MVC.
 
 ### Minimum requirements summary chart
 
@@ -602,7 +602,7 @@ jQuery and jQuery UI JavaScript resources
 			</td>
 
 			<td>
-				Ignite UI is built on top of these frameworks:
+				%%ProductName%% is built on top of these frameworks:
 
 				<ul>
 					<li>
@@ -638,7 +638,7 @@ General charting JavaScript resources
 			</td>
 
 			<td>
-				The charting functionality of the Ignite UI library is distributed across several files depending on the series type.
+				The charting functionality of the %%ProductName%% library is distributed across several files depending on the series type.
 
 				In case you wish to include resources manually, you need to use the dependencies listed in the following tables.
 
@@ -663,7 +663,7 @@ infragistics.util.js
 			</td>
 
 							<td>
-Ignite UI utilities
+%%ProductName%% utilities
 			</td>
 						</tr>
 
@@ -867,7 +867,7 @@ IG theme
 			</td>
 
 			<td>
-				This theme contains custom visual styles created for the Ignite UI library. It is contained in the following file:
+				This theme contains custom visual styles created for the %%ProductName%% library. It is contained in the following file:
 
 				<ul>
 					<li>
@@ -896,7 +896,7 @@ Chart structure
 </table>
 
 
->**Note:**To learn about the different ways to reference JavaScript resources in Ignite UI, see the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) topic.
+>**Note:**To learn about the different ways to reference JavaScript resources in %%ProductName%%, see the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) topic.
 
 
 
@@ -1013,7 +1013,7 @@ The legend is a visual panel that shows an icon and a title for each data series
 
 ![](images/igDataChart_Overview_2.png)
 
-Legends are implemented with a separate control from the Ignite UI library called `igChartLegend` and require a separate div element on the page. The div element is referred in each series object so that it is included in the legend. The `igChartLegend` is a very simple control covered in the topic referred below.
+Legends are implemented with a separate control from the %%ProductName%% library called `igChartLegend` and require a separate div element on the page. The div element is referred in each series object so that it is included in the legend. The `igChartLegend` is a very simple control covered in the topic referred below.
 
 ###<a id="composite-charts"></a> Composite charts
 

@@ -13,12 +13,12 @@
 ## Topic Overview
 ### Purpose
 
-This topic provides an overview of the new features of Ignite UI™ 2013 Volume 2 release.
+This topic provides an overview of the new features of %%ProductName%%™ 2013 Volume 2 release.
 
 ## New Features
 ### New features summary chart
 
-The following table summarizes the new features for the Ignite UI 2013 Volume 2 release. Additional details are available after the summary table.
+The following table summarizes the new features for the %%ProductName%% 2013 Volume 2 release. Additional details are available after the summary table.
 
 <table class="table table-bordered">
 	<thead>
@@ -41,7 +41,7 @@ Description
 
         <tr>
             <td>
-Ignite UI
+%%ProductName%%
 			</td>
 
             <td>

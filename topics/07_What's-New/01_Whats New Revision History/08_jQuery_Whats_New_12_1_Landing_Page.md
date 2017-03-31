@@ -12,7 +12,7 @@
 
 ## New Features
 
-The following table summarizes the new features of Ignite UI™ 2012 Volume 1 release. Additional details are available after the summary table.
+The following table summarizes the new features of %%ProductName%%™ 2012 Volume 1 release. Additional details are available after the summary table.
 
 - [Hierarchical grid GroupBy](#hierarchical-grid-grouping): The grouping functionality available for flat grids is now fully supported for hierarchical grids.
 
@@ -34,25 +34,25 @@ The following table summarizes the new features of Ignite UI™ 2012 Volume 1 re
 
 - [Charts Motion Framework](#charts-motion-framework): The charting controls support the new Motion Framework which allows chart contents to be animated in different ways.
 
-- [Templating engine for jQuery controls](#templating-engine): The new `igTemplating`™ engine has been added to the Ignite UI bundle. The `igTemplating` engine exposes powerful capabilities to create templates for dynamic text rendering inside jQuery controls.
+- [Templating engine for jQuery controls](#templating-engine): The new `igTemplating`™ engine has been added to the %%ProductName%% bundle. The `igTemplating` engine exposes powerful capabilities to create templates for dynamic text rendering inside jQuery controls.
 
 - [Mobile list view control](#mobile-list): The new `igListView`™ control provides list display and interaction functionality for jQuery Mobile platform.
 
 - [Mobile rating control](#mobile-rating): The new `igRating`™ control for mobile devices has been implemented separately from the existing `igRating` control to address unique requirements of mobile and touch device environments.
 
-- [iOS theme for mobile controls](#mobile-ios-theme): The new iOS theme for iPhone applications has been added to the Ignite UI library to provide better looks for mobile device applications.
+- [iOS theme for mobile controls](#mobile-ios-theme): The new iOS theme for iPhone applications has been added to the %%ProductName%% library to provide better looks for mobile device applications.
 
-- [Touch support](#touch-support): All controls in the Ignite UI library had been designed and tested to support touch interface for mobile devices.
+- [Touch support](#touch-support): All controls in the %%ProductName%% library had been designed and tested to support touch interface for mobile devices.
 
 - [Combo box load on demand](#combo-load-on-demand): Combo box load on demand is a new feature which improves `igCombo`™ performance by loading large sets of remote data on batches and not all at once.
 
 - [Support for MVC validation](#mvc-validation): Support for MVC validation using data annotations has been incorporated into combo and editor controls.
 
-- [New jQuery themes & JavaScript resources structure](#themes-resources-structure): All JavaScript and CSS resources in the Ignite UI library have been organized in a new folder structure and some of them have been renamed so that it is easier for developers using the library to figure out the purpose and location of each item. Note that this is a breaking change.
+- [New jQuery themes & JavaScript resources structure](#themes-resources-structure): All JavaScript and CSS resources in the %%ProductName%% library have been organized in a new folder structure and some of them have been renamed so that it is easier for developers using the library to figure out the purpose and location of each item. Note that this is a breaking change.
 
 - [CSS/JS resources loader](#resources-loader): The new `igLoader` control has been added to allow easier JavaScript and CSS resources loading into web pages and in relation to the new resources structure.
 
-- [Metro theme](#metro-theme): The new Metro theme has been added to allow better integration of Ignite UI controls into the new Metro UI for upcoming versions of Microsoft® Windows®.
+- [Metro theme](#metro-theme): The new Metro theme has been added to allow better integration of %%ProductName%% controls into the new Metro UI for upcoming versions of Microsoft® Windows®.
 
 
 
@@ -109,7 +109,7 @@ The grid editing functionality has been improved to report only net transactions
 
 ## <a id="grid-virtualization"></a> Grid Virtualization
 
-The virtualization technology used for better performance when displaying large data sets has been improved to support hierarchical grids and GroupBy mode for hierarchical grids. Now there are two virtualization modes: fixed and continuous. Fixed mode is the existing virtualization embedded in Ignite UI controls. Continuous mode is a new development that supports hierarchical grid and the group by feature to handle situations with variable child row count.
+The virtualization technology used for better performance when displaying large data sets has been improved to support hierarchical grids and GroupBy mode for hierarchical grids. Now there are two virtualization modes: fixed and continuous. Fixed mode is the existing virtualization embedded in %%ProductName%% controls. Continuous mode is a new development that supports hierarchical grid and the group by feature to handle situations with variable child row count.
 
 ### Related Topics:
 
@@ -150,7 +150,7 @@ On the screenshot below you can see a column chart with three data series.
 
 ## <a id="charts-motion-framework"></a> Charts Motion Framework
 
-The Motion Framework for charts allows developers using the Ignite UI chart controls to animate the contents of a chart to increase visual appeal and imply trends or other meaning behind the data. The basic principle behind the framework is that whenever data behind the chart is updated the corresponding API method of the `igDataChart` control is called to initiate chart animation.
+The Motion Framework for charts allows developers using the %%ProductName%% chart controls to animate the contents of a chart to increase visual appeal and imply trends or other meaning behind the data. The basic principle behind the framework is that whenever data behind the chart is updated the corresponding API method of the `igDataChart` control is called to initiate chart animation.
 
 ### Related Topics:
 
@@ -158,7 +158,7 @@ The Motion Framework for charts allows developers using the Ignite UI chart cont
 
 ## <a id="templating-engine"></a> Templating engine for jQuery controls
 
-The new `igTemplating` engine exposes to developers powerful capabilities to create templates for dynamic content rendering inside Ignite UI controls. This engine is used throughout the Ignite UI library instead of the jQuery templating plugin wherever the text in UI elements can be customized to display contents dynamically. On the screenshot below a template is applied on the first two columns of a data grid.
+The new `igTemplating` engine exposes to developers powerful capabilities to create templates for dynamic content rendering inside %%ProductName%% controls. This engine is used throughout the %%ProductName%% library instead of the jQuery templating plugin wherever the text in UI elements can be customized to display contents dynamically. On the screenshot below a template is applied on the first two columns of a data grid.
 
 ![](images/Whats_New_in_2012_Volume_1_7.png)
 
@@ -188,7 +188,7 @@ The new `igRating` control for mobile devices has been implemented to support mo
 
 ## <a id="mobile-ios-theme"></a> iOS theme for mobile controls
 
-The new iOS theme for the mobile Ignite UI controls has been implemented to target mobile devices. Its purpose is to provide more consistent look and better integration into iPhone and iPad mobile and touch capable applications.
+The new iOS theme for the mobile %%ProductName%% controls has been implemented to target mobile devices. Its purpose is to provide more consistent look and better integration into iPhone and iPad mobile and touch capable applications.
 
 ![](images/Whats_New_in_2012_Volume_1_10.png)
 
@@ -200,7 +200,7 @@ All the Infragistics jQuery controls support touch interaction. New features and
 
 ### Related Topics:
 
--   [Touch Support for Ignite UI Controls](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html)
+-   [Touch Support for %%ProductName%% Controls](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html)
 
 ## <a id="combo-load-on-demand"></a> Combo box load on demand
 
@@ -214,7 +214,7 @@ If Load-on-Demand is enabled, the user should first be able to see a scrollbar i
 
 ## <a id="mvc-validation"></a> Support for MVC validation
 
-MVC style validation with data annotations is incorporated into combo and editor controls. That feature allows seamless integration of Ignite UI validation capabilities with existing applications using data annotations.
+MVC style validation with data annotations is incorporated into combo and editor controls. That feature allows seamless integration of %%ProductName%% validation capabilities with existing applications using data annotations.
 
 ![](images/Whats_New_in_2012_Volume_1_12.png)
 
@@ -224,7 +224,7 @@ MVC style validation with data annotations is incorporated into combo and editor
 
 ## <a id="themes-resources-structure"></a> New jQuery themes & JavaScript resources structure
 
-All JavaScript and CSS resources in the Ignite UI library have been organized in a new folder structure and some of them have been renamed so that it is easier for developers using the library to figure out the purpose and location of each item. The new structure allows much faster script and resource loading by allowing applications to load only essentially required resources. Combined and minified version of the resources is still available.
+All JavaScript and CSS resources in the %%ProductName%% library have been organized in a new folder structure and some of them have been renamed so that it is easier for developers using the library to figure out the purpose and location of each item. The new structure allows much faster script and resource loading by allowing applications to load only essentially required resources. Combined and minified version of the resources is still available.
 
 Note:This is a breaking change.
 
@@ -232,28 +232,28 @@ Note:This is a breaking change.
 
 ### Related Topics:
 
--   [JavaScript Files in Ignite UI](Deployment-Guide-JavaScript-Files.html)
--   [Upgrading Projects to the Latest Ignite UI Version](Manually-Updating-Previous-Versions.html)
+-   [JavaScript Files in %%ProductName%%](Deployment-Guide-JavaScript-Files.html)
+-   [Upgrading Projects to the Latest %%ProductName%% Version](Manually-Updating-Previous-Versions.html)
 
 ## <a id="resources-loader"></a> CSS/JS resources loader
 
-The new `igLoader` control has been added to allow easier JavaScript and CSS resources loading into web pages and in relation to the new resources structure. The control automates loading necessary resources and requires the application to specify the location of the Ignite UI JavaScript and CSS files. For pure HTML/jQuery pages it is required to specify which controls and which features will be instantiated on the page, for example. “`igGrid`.*” for all features of the flat grid, or “`igDataChart.Category`” for plotting category charts only. The MVC counterpart of the loader does not require applications to specify needed resources as it automatically detects which scripts and CSS files must be loaded.
+The new `igLoader` control has been added to allow easier JavaScript and CSS resources loading into web pages and in relation to the new resources structure. The control automates loading necessary resources and requires the application to specify the location of the %%ProductName%% JavaScript and CSS files. For pure HTML/jQuery pages it is required to specify which controls and which features will be instantiated on the page, for example. “`igGrid`.*” for all features of the flat grid, or “`igDataChart.Category`” for plotting category charts only. The MVC counterpart of the loader does not require applications to specify needed resources as it automatically detects which scripts and CSS files must be loaded.
 
 The `igLoader` control is the easiest and recommended way to upgrade from previous versions and prevents the need to specify multiple JS and CSS files in the head part of web pages.
 
 ### Related Topics:
 
--   [Upgrading Projects to the Latest Ignite UI Version](Manually-Updating-Previous-Versions.html)
+-   [Upgrading Projects to the Latest %%ProductName%% Version](Manually-Updating-Previous-Versions.html)
 
 ## <a id="metro-theme"></a> Metro theme
 
-The new Metro theme is a result of research efforts to give native Metro UI look and feel to Ignite UI controls for upcoming versions of Microsoft® Windows®. It aims not only styling and colors but also behavior and touch friendly user interface. On the picture below you can see a flat grid with the Metro theme applied.
+The new Metro theme is a result of research efforts to give native Metro UI look and feel to %%ProductName%% controls for upcoming versions of Microsoft® Windows®. It aims not only styling and colors but also behavior and touch friendly user interface. On the picture below you can see a flat grid with the Metro theme applied.
 
 ![](images/Whats_New_in_2012_Volume_1_14.png)
 
 ### Related Topics:
 
--   [Styling and Theming in Ignite UI](Deployment-Guide-Styling-and-Theming.html)
+-   [Styling and Theming in %%ProductName%%](Deployment-Guide-Styling-and-Theming.html)
 
 
 

@@ -28,7 +28,7 @@ The following topics are prerequisites to understanding this topic:
 ## igSplitter Accessibility Compliance
 ### igSplitter accessibility compliance summary
 
-All Infragistics® Ignite UI® controls and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. The [igSplitter accessibility compliance summary chart](#summary-chart) contains the specific rules of Subpart 1194.22 that pertain to the control. Also, detailed is how the grid control complies with each rule.
+All Infragistics® %%ProductName%%® controls and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. The [igSplitter accessibility compliance summary chart](#summary-chart) contains the specific rules of Subpart 1194.22 that pertain to the control. Also, detailed is how the grid control complies with each rule.
 
 In some cases, to meet the requirements of each accessibility rule, you may need to interact with the control by setting a specific property, but in other cases, the control performs these tasks for you.
 
@@ -137,7 +137,7 @@ When electronic forms are designed to be completed on-line, the form shall allow
 
 The following topics provide additional information related to this topic.
 
-- [Accessibility Compliance](Accessibility-Compliance.html): Provides reference information about the accessibility compliance of all controls in the Ignite UI product suite.
+- [Accessibility Compliance](Accessibility-Compliance.html): Provides reference information about the accessibility compliance of all controls in the %%ProductName%% product suite.
 
  
 

@@ -14,7 +14,7 @@ This topic demonstrates how to customize the `igUpload` control to achieve a cus
 
 ## Required CSS and Themes
 
-The Ignite UI™ `igUpload`, like other jQuery widgets, utilizes the jQuery UI CSS Framework for styling. Included in Ignite UI are custom jQuery UI themes called Infragistics and Metro. These themes provide a professional and attractive design to all Infragistics and standard jQuery UI widgets.
+The %%ProductName%%™ `igUpload`, like other jQuery widgets, utilizes the jQuery UI CSS Framework for styling. Included in %%ProductName%% are custom jQuery UI themes called Infragistics and Metro. These themes provide a professional and attractive design to all Infragistics and standard jQuery UI widgets.
 
 In addition to the Infragistics and Metro themes, there is a structure directory, which is required for the basic CSS layout of the Infragistics widgets.
 
@@ -194,8 +194,8 @@ If there are file extension icons with more than one set default property then t
 -   [jQuery UI CSS Framework](http://docs.jquery.com/UI/Theming/API)
 
 ## Related Links
--   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
--   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+-   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)
+-   [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 
  
 

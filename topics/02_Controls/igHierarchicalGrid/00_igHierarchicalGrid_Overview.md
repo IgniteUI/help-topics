@@ -121,7 +121,7 @@ You can use the ASP.NET MVC Helper for managed code languages to configure the i
 
 ## <a id="binding-requirements"></a> Binding Requirements
 
-The igHierarchicalGrid is a jQuery UI Widget and therefore has a requirement for the jQuery and jQuery UI JavaScript libraries. In addition, there are several Ignite UI JavaScript resources that the igHierarchicalGrid uses for shared functionality and data binding. These JavaScript references are required whether the igHierarchicalGrid is used in JavaScript or in ASP.NET MVC. When using the igHierarchicalGrid in ASP.NET MVC, the Infragistics.Web.Mvc assembly is required to configure the igHierarchicalGrid with .NET languages.
+The igHierarchicalGrid is a jQuery UI Widget and therefore has a requirement for the jQuery and jQuery UI JavaScript libraries. In addition, there are several %%ProductName%% JavaScript resources that the igHierarchicalGrid uses for shared functionality and data binding. These JavaScript references are required whether the igHierarchicalGrid is used in JavaScript or in ASP.NET MVC. When using the igHierarchicalGrid in ASP.NET MVC, the Infragistics.Web.Mvc assembly is required to configure the igHierarchicalGrid with .NET languages.
 
 Data structures can be any of the following:
 - Well-formed JSON or XML supplied locally or from a web server, including servers that supports oData protocol.

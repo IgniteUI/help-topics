@@ -118,7 +118,7 @@ The control can be bound be bound to non-observable object also but the applicat
 
 The following topics provide additional information related to this topic.
 
-- [Bind Editors with Knockout](Configuring-Knockout-Support-%28Editors%29.html): This topic explains how to configure Ignite UI editor controls to bind to View-Model objects using the Knockout library.
+- [Bind Editors with Knockout](Configuring-Knockout-Support-%28Editors%29.html): This topic explains how to configure %%ProductName%% editor controls to bind to View-Model objects using the Knockout library.
 
 - [Configuring Knockout Support (igCombo)](igCombo-KnockoutJS-Support.html): This topic explains how to configure the `igCombo` control to bind to View-Model objects managed by the Knockout library.
 

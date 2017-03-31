@@ -16,7 +16,7 @@ The `igTreeGrid`™ presents hierarchical data by combining the principles of a 
 
 As the `igTreeGrid` inherits the `igGrid` control, it is able to enjoy many of the same features and functionality. Some features differ in function and implementation to best suit the needs of hierarchical data (e.g. filtering, paging, etc.).
 
-In order to maintain flexibility the tree grid features a configurable expansion indicator, which can be rendered inline in the first data column or in a standalone column. The expansion indicator can also be customized with a different look-and-feel to achieve custom visualizations (see the [File Explorer sample](%%SamplesUrl%%/tree-grid/file-explorer "File Explorer Sample - File Explorer with Tree Grid Control - Ignite UI™")).
+In order to maintain flexibility the tree grid features a configurable expansion indicator, which can be rendered inline in the first data column or in a standalone column. The expansion indicator can also be customized with a different look-and-feel to achieve custom visualizations (see the [File Explorer sample](%%SamplesUrl%%/tree-grid/file-explorer "File Explorer Sample - File Explorer with Tree Grid Control - %%ProductName%%™")).
 
 ### In this topic:
 
@@ -52,7 +52,7 @@ The `igTreeGrid` inherits the [`igGrid`](igGrid-Overview.html "igGrid Overview")
 
 Much like the flat grid control, the `igTreeGrid` uses a `TABLE` or `DIV` element as the basis for its structure in the DOM. As data is revealed by clicking/tapping on the expansion indicator in the parent's row, the table row and cell elements needed to render child rows are created on-the-fly. For more detailed information on performance considerations for the `igTreeGrid`, please see the [Performance section](#performance).
 
-The tree grid enjoys a disconnected architecture in the same manner as other Ignite UI grids. Under the surface the `igTreeGrid` is powered by the `igTreeHierarchialDataSource` component. The data source component is responsible for implementing logic for features that directly affect the tree grid's source data before its ready to be presented to the user. For details about this specialized data source, see [igTreeHierarchicalDataSource](%%jQueryApiUrl%%/ig.treehierarchicaldatasource).
+The tree grid enjoys a disconnected architecture in the same manner as other %%ProductName%% grids. Under the surface the `igTreeGrid` is powered by the `igTreeHierarchialDataSource` component. The data source component is responsible for implementing logic for features that directly affect the tree grid's source data before its ready to be presented to the user. For details about this specialized data source, see [igTreeHierarchicalDataSource](%%jQueryApiUrl%%/ig.treehierarchicaldatasource).
 
 ## <a id="supported-data-sources"></a> Supported Data Sources
 

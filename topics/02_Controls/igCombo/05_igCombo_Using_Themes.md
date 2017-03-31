@@ -26,7 +26,7 @@ To customize a theme, you can use ThemeRoller. ThemeRoller is a tool provided by
 
 The information you need to customize the jQuery UI theme for the `igCombo` is covered in the following topics:
 
--	[Styling and Theming in Ignite UI](Deployment-Guide-Styling-and-Theming.html)
+-	[Styling and Theming in %%ProductName%%](Deployment-Guide-Styling-and-Theming.html)
 
 ##Related Topics
 

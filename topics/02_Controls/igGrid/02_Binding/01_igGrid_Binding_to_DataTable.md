@@ -307,7 +307,7 @@ This procedure explains how to implement the `LoadTransaction` method when using
 
 To complete the procedure, you need the following:
 
--   The required Ignite UI JavaScript and CSS files
+-   The required %%ProductName%% JavaScript and CSS files
 -   A reference to the *Infragistics.Web.Mvc.dll* assembly
 -   Json.NET Serializer - Newtonsoft.Json.dll
 

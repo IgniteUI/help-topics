@@ -20,7 +20,7 @@ The following table lists the topics and concepts required as a prerequisite to 
 
 **Topics**
 
-- [Multidimensional (OLAP) Data Source Components Overview](Multidimensional-Data-Source-Components-Overview.html): This group of topics explain the multidimensional (OLAP) data source components of the Ignite UI™ suite.
+- [Multidimensional (OLAP) Data Source Components Overview](Multidimensional-Data-Source-Components-Overview.html): This group of topics explain the multidimensional (OLAP) data source components of the %%ProductName%%™ suite.
 
 
 **External Resources**
@@ -40,7 +40,7 @@ This topic contains the following sections:
     -   [Authentication support](#authentication-support)
     -   [Support of OLAP metadata pre-sets](#support-metadata)
     -   [Data slices generation](#data-slice-generation)
-    -   [Integration with Ignite UI controls](#integration-with-igniteui)
+    -   [Integration with %%ProductName%% controls](#integration-with-igniteui)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
     -   [Samples](#samples)
@@ -49,7 +49,7 @@ This topic contains the following sections:
 
 ## <a id="introduction"></a>Introduction
 
-The `igOlapXmlaDataSource` component handles the communication between a JavaScript client application and a Microsoft® SQL Server Analysis Services (SSAS) server configured with the `msmdpump.dll` HTTP data provider. It exposes a user-friendly way for obtaining data from Microsoft SQL Server Analysis Services (MS SASS) – you do not have to possess any particular knowledge of Multidimensional Expressions (MDX) or XML for Analysis (XMLA) in order to get the data from an SSAS server. The `igOlapXmlaDataSource` generates the necessary MDX queries based on the commands it is given. The `igOlapXmlaDataSource` is usually used with one or more of the Ignite UI widgets capable of visualizing and interacting with OLAP data, e.g. `igPivotView`™ or `igPivotGrid`™.
+The `igOlapXmlaDataSource` component handles the communication between a JavaScript client application and a Microsoft® SQL Server Analysis Services (SSAS) server configured with the `msmdpump.dll` HTTP data provider. It exposes a user-friendly way for obtaining data from Microsoft SQL Server Analysis Services (MS SASS) – you do not have to possess any particular knowledge of Multidimensional Expressions (MDX) or XML for Analysis (XMLA) in order to get the data from an SSAS server. The `igOlapXmlaDataSource` generates the necessary MDX queries based on the commands it is given. The `igOlapXmlaDataSource` is usually used with one or more of the %%ProductName%% widgets capable of visualizing and interacting with OLAP data, e.g. `igPivotView`™ or `igPivotGrid`™.
 
 
 
@@ -64,7 +64,7 @@ Feature | Description
 [Authentication support](#authentication-support) | The `igOlapXmlaDataSource` supports basic (username and password) authentication.
 [Support of OLAP metadata pre-sets](#support-metadata) | When initialized, the `igOlapXmlaDataSource` downloads the OLAP metadata from the server – available databases, cubes, measure groups, dimensions, etc.
 [Data slices generation](#data-slice-generation) | After hierarchies are assigned as rows/columns, `igOlapXmlaDataSource` generates one or more result axes containing tuples of members from the corresponding hierarchies. If measures, too, have been chosen, `igOlapXmlaDataSource` generates a two-dimensional array of value cell objects.
-[Integration with Ignite UI controls](#integration-with-igniteui)|The `igOlapXmlaDataSource` component can feed data to those data visualization controls of Ignite UI that are capable of presenting OLAP data.
+[Integration with %%ProductName%% controls](#integration-with-igniteui)|The `igOlapXmlaDataSource` component can feed data to those data visualization controls of %%ProductName%% that are capable of presenting OLAP data.
 
 
 
@@ -103,9 +103,9 @@ The `igOlapXmlaDataSource` component represents an abstraction of a pivot table.
 
 -   [Configuring the Tabular View of the Result Set by Arranging the Columns, Rows, Filters, and Measures of the Pivot Grid (igOlapFlatDataSource, igOlapXmlaDataSource, igPivotDataSelector, igPivotGrid, igPivotView)](Configuring-the-Tabular-View.html)
 
-### <a id="integration-with-igniteui"></a>Integration with Ignite UI controls
+### <a id="integration-with-igniteui"></a>Integration with %%ProductName%% controls
 
-The `igOlapXmlaDataSource` component can feed data to those data visualization controls of Ignite UI that are capable of presenting OLAP data. The controls supported at this writing are `igPivotDataSelector`, `igPivotGrid`, and `igPivotView`.
+The `igOlapXmlaDataSource` component can feed data to those data visualization controls of %%ProductName%% that are capable of presenting OLAP data. The controls supported at this writing are `igPivotDataSelector`, `igPivotGrid`, and `igPivotView`.
 
 #### Related Topics:
 
@@ -128,7 +128,7 @@ The following topics provide additional information related to this topic.
 
 - [Configuring the Tabular View of the Result Set by Arranging the Columns, Rows, Filters, and Measures of the Pivot Grid (igOlapFlatDataSource, igOlapXmlaDataSource, igPivotDataSelector, igPivotGrid, igPivotView)](Configuring-the-Tabular-View.html): This topic explains how to configure the tabular View of the OLAP cube result set by arranging the hierarchies of the pivot grid columns, rows, filters, and measures, either from the grid’s interface or programmatically in the code.
 
-- [Key Performance Indicators Support (igPivotGrid, igPivotDataSelector, igOlapXmlaDataSource)](igPivotGrid-KPI-Support.html): This topic explains conceptually how the Key Performance Indicators (KPIs) data from a multi-dimensional (OLAP) data set is visualized in Ignite UI™. The Ignite UI controls that visualize KPIs are the `igPivotDataSelector` and the `igPivotGrid`.
+- [Key Performance Indicators Support (igPivotGrid, igPivotDataSelector, igOlapXmlaDataSource)](igPivotGrid-KPI-Support.html): This topic explains conceptually how the Key Performance Indicators (KPIs) data from a multi-dimensional (OLAP) data set is visualized in %%ProductName%%™. The %%ProductName%% controls that visualize KPIs are the `igPivotDataSelector` and the `igPivotGrid`.
 
 - [Known Issues and Limitations (igOlapXmlaDataSource)](igOlapXmlaDataSource-Known-Issues-and-Limitations.html): This topic provides information about the known issues and limitations of the `igOlapXmlaDataSource` component.
 

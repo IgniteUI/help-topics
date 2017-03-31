@@ -10,13 +10,13 @@
 
 # Styling and Theming (igRating)
 
-The `igRating` control, Ignite UI™ rating control, supports custom styling and theming which allows you to have full control over the look and feel of the rating experience. If no custom styles are applied to the control, then the default styling is applied to the control.
+The `igRating` control, %%ProductName%%™ rating control, supports custom styling and theming which allows you to have full control over the look and feel of the rating experience. If no custom styles are applied to the control, then the default styling is applied to the control.
 
 The examples in this topic include implementations in both jQuery/HTML implementations as well as in Microsoft™ ASP.NET™ MVC.
 
 ### Required CSS and Themes
 
-The Ignite UI™ rating, like other jQuery widgets, utilizes the jQuery UI CSS Framework for styling. Included in Ignite UI are custom jQuery UI themes called Infragistics and Metro. These themes provide a professional and attractive design to all Infragistics and standard jQuery UI widgets.
+The %%ProductName%%™ rating, like other jQuery widgets, utilizes the jQuery UI CSS Framework for styling. Included in %%ProductName%% are custom jQuery UI themes called Infragistics and Metro. These themes provide a professional and attractive design to all Infragistics and standard jQuery UI widgets.
 
 In addition to the Infragistics and Metro themes, there is a structure directory, which is required for the basic CSS layout of the Infragistics widgets.
 
@@ -356,7 +356,7 @@ This topic demonstrates how to style individual items as well as the entire `igR
 
 ## Related Links
 -   [Custom Styles](%%SamplesUrl%%/rating/custom-styles) 
--   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+-   [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 
  
 

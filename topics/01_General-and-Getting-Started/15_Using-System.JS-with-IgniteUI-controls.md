@@ -8,12 +8,12 @@
 |metadata|
 -->
 
-# Using System.JS with Ignite UI controls
+# Using System.JS with %%ProductName%% controls
 
 ## Introduction
 
-Ignite UI controls can be loaded using standard module loaders. Each module contains an AMD signature and references dependency modules.
-[System.JS](https://github.com/systemjs/systemjs) is a popular module loader which is used by the JSPM package manager. This topic describes how to setup System.JS to use Ignite UI controls.
+%%ProductName%% controls can be loaded using standard module loaders. Each module contains an AMD signature and references dependency modules.
+[System.JS](https://github.com/systemjs/systemjs) is a popular module loader which is used by the JSPM package manager. This topic describes how to setup System.JS to use %%ProductName%% controls.
 
 For all of the examples below command line prompt on Windows is being used. Similar commands can be performed in terminal on MacOS. Using [Visual Studio Code](https://code.visualstudio.com/) is recommended, but not required.
 
@@ -44,18 +44,18 @@ jspm install jquery-ui
 jspm install css
 ```
 
-## Add Ignite UI package using GitHub
+## Add %%ProductName%% package using GitHub
 
-There is a set of components in the Ignite UI suite that is distributed freely and their source code is [hosted](https://github.com/IgniteUI/ignite-ui) on GitHub for everyone to use and contribute to. If the application uses only open source Ignite UI controls, you can add this package to the application using the following command:
+There is a set of components in the %%ProductName%% suite that is distributed freely and their source code is [hosted](https://github.com/IgniteUI/ignite-ui) on GitHub for everyone to use and contribute to. If the application uses only open source %%ProductName%% controls, you can add this package to the application using the following command:
 ```
 jspm install github:igniteui/ignite-ui
 ```
 
-## Add Ignite UI package using private NPM registry
+## Add %%ProductName%% package using private NPM registry
 
-Full paid version of Ignite UI that includes all of the controls can also be used with JSPM. However at the moment of writing this article it is required to publish Ignite UI package in a private NPM registry after downloading it from Infragistics website.
+Full paid version of %%ProductName%% that includes all of the controls can also be used with JSPM. However at the moment of writing this article it is required to publish %%ProductName%% package in a private NPM registry after downloading it from Infragistics website.
 
-If your organization has a private NPM registry setup, then after the Ignite UI package is published there, you can bring it to your application by using this command:
+If your organization has a private NPM registry setup, then after the %%ProductName%% package is published there, you can bring it to your application by using this command:
 ```
 jspm install npm:igniteui/ignite-ui
 ```
@@ -137,4 +137,4 @@ http-server
 ```
 Open the browser and navigate to `http://localhost:8080` to see the application running.
 
-In this article we demonstrated how Ignite UI controls can be used along with JSPM and System.JS loader.
+In this article we demonstrated how %%ProductName%% controls can be used along with JSPM and System.JS loader.

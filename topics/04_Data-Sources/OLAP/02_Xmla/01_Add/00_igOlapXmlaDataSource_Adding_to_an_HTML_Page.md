@@ -59,7 +59,7 @@ This topic contains the following sections:
 
 The `igOlapXmlaDataSource` makes the OLAP data from a SSAS server available for use in a JavaScript client environment. In order for the component to work correctly, the [serverUrl](%%jQueryApiUrl%%/ig.OlapXmlaDataSource#options:serverUrl) property has to be specified. Also before using the component, you must initialize it.
 
-Normally this data source component is used together with one of the OLAP pivot UI controls available with Ignite UI.
+Normally this data source component is used together with one of the OLAP pivot UI controls available with %%ProductName%%.
 
 ### <a id="requirements"></a>Requirements
 
@@ -68,7 +68,7 @@ Following are the general requirements for configuring `igOlapXmlaDataSource` fo
 -   A MS SSAS Server (with at least one database) configured with the `msmdpump.dll` HTTP data provider
 -   The required JavaScript files:
     -   The jQuery library
-    -   The required Ignite UI™ JavaScript files
+    -   The required %%ProductName%%™ JavaScript files
 
 ### <a id="steps"></a>Steps
 
@@ -93,9 +93,9 @@ The first step of the procedure offers both alternative ways for providing the r
 
 To complete the procedure, you need the following:
 
--   The required JavaScript files (The Infragistics JavaScript files reside by default in the JavaScript modules folder under the Ignite UI™ installation path):
+-   The required JavaScript files (The Infragistics JavaScript files reside by default in the JavaScript modules folder under the %%ProductName%%™ installation path):
     -   Jquery-[versionNumber].js (for example, jquery-1.9.0.js) – the jQuery library (available at the jQuery site)
-    -   infragistics.util.js – the JavaScript file containing shared non-UI logic used by some of the Ignite UI™ components
+    -   infragistics.util.js – the JavaScript file containing shared non-UI logic used by some of the %%ProductName%%™ components
     -   `infragistics.olapxmladatasource.js` – the JavaScript file containing the `igOlapXmlaDataSource` component
     -   (Conditional – if the Infragistics Loader is used) `infragistics.loader.js` – the Infragistics Loader component which can be used to automatically load all the Infragistics JavaScript and CSS files required by a component
 	-   The Adventure Works DW Standard Edition database deployed on a SSAS server instance configured with HTTP access through the `msmdpump.dll`

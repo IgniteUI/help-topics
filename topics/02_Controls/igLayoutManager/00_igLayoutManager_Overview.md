@@ -17,7 +17,7 @@
 
 ### Purpose
 
-This topic explains the Ignite UI®  control conceptually and provides information on the supported layouts and their uses.
+This topic explains the %%ProductName%%®  control conceptually and provides information on the supported layouts and their uses.
 
 ### In this topic
 

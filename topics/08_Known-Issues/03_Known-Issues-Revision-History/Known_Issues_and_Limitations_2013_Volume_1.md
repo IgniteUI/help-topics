@@ -12,7 +12,7 @@
 
 ## Overview
 
-The following table summarizes the known issues and limitations of the Ignite UI 2013 Volume 1 release. Detailed explanations of known issues and the possible workarounds are provided in the known issues topics for each control.
+The following table summarizes the known issues and limitations of the %%ProductName%% 2013 Volume 1 release. Detailed explanations of known issues and the possible workarounds are provided in the known issues topics for each control.
 
 ### Legend:
 
@@ -694,7 +694,7 @@ In the `igHierarchicalGrid`, child layouts may have rendering issues if the Row 
 
         <tr>
             <td rowspan="3">
-[Ignite UI ASP.NET MVC Wrappers](#mvc-wrappers-issue)
+[%%ProductName%% ASP.NET MVC Wrappers](#mvc-wrappers-issue)
 			</td>
 
             <td>
@@ -746,11 +746,11 @@ The ASP.NET MVC Loader cannot initialize before the controls in an actual view w
 			</td>
 
             <td>
-[Using Document Engines from Infragistics ASP.NET and Ignite UI together workaround](#using-document-engines)
+[Using Document Engines from Infragistics ASP.NET and %%ProductName%% together workaround](#using-document-engines)
 			</td>
 
             <td>
-Using both the Infragistics ASP.NET and Ignite UI documents assemblies together will cause namespace conflict exceptions.
+Using both the Infragistics ASP.NET and %%ProductName%% documents assemblies together will cause namespace conflict exceptions.
 			</td>
 
             <td>
@@ -792,7 +792,7 @@ No tooltips appear on an iPad device when Geographic Symbol series are rendered.
 
         <tr>
             <td rowspan="2">
-[Ignite UI ASP.NET MVC Mobile Wrappers](#mvc-mobile-wrappers)
+[%%ProductName%% ASP.NET MVC Mobile Wrappers](#mvc-mobile-wrappers)
 			</td>
 
             <td>
@@ -1286,7 +1286,7 @@ To avoid this, add the Row Selectors before grouping in the array.
 
 
 
-## <a id="mvc-wrappers-issue"></a>Ignite UI ASP.NET MVC Wrappers
+## <a id="mvc-wrappers-issue"></a>%%ProductName%% ASP.NET MVC Wrappers
 ### <a id="mvc-helper-generated-code"></a>MVC helper generated code in conjunction with MVC Loader executes after any custom JavaScript code on a page solution
 
 When MVC Loader and MVC helper for any control are used in an MVC view the JavaScript code they generate is executed after custom page set-up code put in `document.ready` or `window.load` events. (This is because the control is rendered in the body part of a page and script code is usually put in the head part.) If the custom code refers to the control rendered by the MVC helper code, it may fail since the control does not exist yet. This is a timing issue and depends on how quickly the loader loads necessary resources.
@@ -1320,15 +1320,15 @@ The solution is not to include the MVC Loader in an ASP.NET MVC Razor layout pag
 
 
 ## <a id="infragistics-document-engine"></a>Infragistics Document Engine
-### <a id="using-document-engines"></a>Using Document Engines from Infragistics ASP.NET and Ignite UI together workaround
+### <a id="using-document-engines"></a>Using Document Engines from Infragistics ASP.NET and %%ProductName%% together workaround
 
-Using both the Infragistics ASP.NET and Ignite UI documents assemblies together causes namespace conflict exceptions.
+Using both the Infragistics ASP.NET and %%ProductName%% documents assemblies together causes namespace conflict exceptions.
 
-To resolve this issue, reference either the documents assemblies from Infragistics ASP.NET or the documents assemblies from Ignite UI in your application. The documents libraries within these assemblies are the same and can be used to replace one another.
+To resolve this issue, reference either the documents assemblies from Infragistics ASP.NET or the documents assemblies from %%ProductName%% in your application. The documents libraries within these assemblies are the same and can be used to replace one another.
 
 
 
-## <a id="mvc-mobile-wrappers"></a>Ignite UI ASP.NET MVC Mobile Wrappers
+## <a id="mvc-mobile-wrappers"></a>%%ProductName%% ASP.NET MVC Mobile Wrappers
 ### <a id="mvc-popup-mobile-control-requirements"></a>The ASP.NET MVC Popup Mobile control requires jQuery Mobile version 1.2
 
 The popup widget is introduced in jQuery Mobile version 1.2. If you want to use the Popup MVC wrapper use a jQuery Mobile version higher or equal to 1.2.

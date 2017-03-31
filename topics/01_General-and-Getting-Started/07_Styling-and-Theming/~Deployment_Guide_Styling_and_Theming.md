@@ -20,7 +20,7 @@ This topic provides instructions on setting up your application for design time,
 
 This topic contains the following sections:
 
--   [Styling and Theming Ignite UI](#_Styling_and_Theming_IgniteUI)
+-   [Styling and Theming %%ProductName%%](#_Styling_and_Theming_IgniteUI)
 -   [Adding Required Themes in Your Application](#_Adding_Required_Themes_in_Your_Application)
 -   [Infragistics Themes](#Infragistics_Themes)
 -   [Using Infragistics Loader for Adding a Theme in Your Application](#_Using_Infragistics_Loader_for_Adding_a_Theme_in_Your_Application)
@@ -31,16 +31,16 @@ This topic contains the following sections:
 
 
 
-##<a id="_Styling_and_Theming_IgniteUI"></a>Styling and Theming Ignite UI
+##<a id="_Styling_and_Theming_IgniteUI"></a>Styling and Theming %%ProductName%%
 
 
 #### Overview
 
-Ignite UI™ utilizes the jQuery UI CSS Framework for styling and theming purposes. *Infragistics*, *Infragistics 2012*, *metro* and *iOS* are jQuery UI themes provided by Infragistics for use in your application. The default Twitter Bootstrap theme along with three custom ones – *Yeti*, *Superhero* and *Flatly*, compiled for usage with jQuery UI and Ignite UI controls are also available. This document shows how to setup your application for design time and overviews, how to create or customize a theme, and provides options for using Ignite UI CSS in production.
+%%ProductName%%™ utilizes the jQuery UI CSS Framework for styling and theming purposes. *Infragistics*, *Infragistics 2012*, *metro* and *iOS* are jQuery UI themes provided by Infragistics for use in your application. The default Twitter Bootstrap theme along with three custom ones – *Yeti*, *Superhero* and *Flatly*, compiled for usage with jQuery UI and %%ProductName%% controls are also available. This document shows how to setup your application for design time and overviews, how to create or customize a theme, and provides options for using %%ProductName%% CSS in production.
 
 #### Organization of CSS resources
 
-Provided with Ignite UI is a set of combined and minified themes for use in a production environment. These minified versions reduce the readability of the CSS but in production allow for faster download of resources across the network.
+Provided with %%ProductName%% is a set of combined and minified themes for use in a production environment. These minified versions reduce the readability of the CSS but in production allow for faster download of resources across the network.
 
 CSS files are reorganized in the structure described below:
 
@@ -87,7 +87,7 @@ images/IMAGE_NAME.gif
 
 All the themes are located in the installed directory within the `css` folder.
 
-If you have chosen the typical installation of Ignite UI %%ProductVersionShort%%, you can find the css resources under the path below:
+If you have chosen the typical installation of %%ProductName%% %%ProductVersionShort%%, you can find the css resources under the path below:
 
 ```
 %%InstallPath%%\css
@@ -184,7 +184,7 @@ The *iOS* theme is implementation of the well-known iOS look and feel. This them
 
 #### Bootstrap Themes
 
-The Bootstrap themes for jQuery UI and Ignite UI are generated from the popular Bootstrap themes with the same names. The careful process of utilizing their look and feel for a theme following the jQuery UI CSS framework conventions has been automated with the Bootstrap Theme Generator web application. It provides the functionality of exporting almost every Bootstrap theme available in LESS for styling Ignite UI and jQuery UI widgets. A reference to the file `{IG Resources root}\css\structure\infragistics.css` is required.
+The Bootstrap themes for jQuery UI and %%ProductName%% are generated from the popular Bootstrap themes with the same names. The careful process of utilizing their look and feel for a theme following the jQuery UI CSS framework conventions has been automated with the Bootstrap Theme Generator web application. It provides the functionality of exporting almost every Bootstrap theme available in LESS for styling %%ProductName%% and jQuery UI widgets. A reference to the file `{IG Resources root}\css\structure\infragistics.css` is required.
 
 ##<a  id="_Using_Infragistics_Loader_for_Adding_a_Theme_in_Your_Application"></a>Using Infragistics Loader for Adding a Theme in Your Application
 
@@ -215,7 +215,7 @@ $.ig.loader({
       });
 ```
 
-For more information regarding the Infragistics loader, refer to the topic [Using JavaScript Resouces in Ignite UI](Deployment-Guide-JavaScript-Resources.html).
+For more information regarding the Infragistics loader, refer to the topic [Using JavaScript Resouces in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html).
 
 > **Note:** For custom themes use the name of the theme’s directory.
 
@@ -287,7 +287,7 @@ The following steps demonstrate how to add Redmond theme in your application.
 
 ##<a id="Using_Bootstrap_Theme_Generator"></a>Using Bootstrap Theme Generator
 
-The Bootstrap Theme Generator is a web tool provided by Infragistics which facilitates the export of themes created for the Bootstrap CSS framework to themes usable by Ignite UI and jQuery UI widgets. In addition it allows for customization of every property of the theme and displays previews showing the end result.
+The Bootstrap Theme Generator is a web tool provided by Infragistics which facilitates the export of themes created for the Bootstrap CSS framework to themes usable by %%ProductName%% and jQuery UI widgets. In addition it allows for customization of every property of the theme and displays previews showing the end result.
 
 ### Overview
 This topic takes you step-by-step toward using the Bootstrap Theme Generator for exporting Bootstrap themes and adding them to your website. The following is a conceptual overview of the process:
@@ -352,7 +352,7 @@ The following steps demonstrate how to export and add a Bootstrap theme in your 
 
 All listed themes are hosted on the Infragistics CDN.
 
-The benefits of using a CDN are numerous. For more information, refer to the dedicated help topic Infragistics Content Delivery Network (CDN) for Ignite UI. For more information on referencing files from the CDN, see the [Infragistics Content Delivery Network (CDN) for Ignite UI](Deployment-Guide-Infragistics-Content-Delivery-Network%28CDN%29.html) topic.
+The benefits of using a CDN are numerous. For more information, refer to the dedicated help topic Infragistics Content Delivery Network (CDN) for %%ProductName%%. For more information on referencing files from the CDN, see the [Infragistics Content Delivery Network (CDN) for %%ProductName%%](Deployment-Guide-Infragistics-Content-Delivery-Network%28CDN%29.html) topic.
 
 **In HTML:**
 
@@ -372,17 +372,17 @@ The benefits of using a CDN are numerous. For more information, refer to the ded
 The following topics provide additional information related to this topic.
 
 
-- [JavaScript Files in Ignite UI](Deployment-Guide-JavaScript-Files.html): This topic is a reference to the JavaScript files required to work with the controls included in Ignite UI™.
+- [JavaScript Files in %%ProductName%%](Deployment-Guide-JavaScript-Files.html): This topic is a reference to the JavaScript files required to work with the controls included in %%ProductName%%™.
 
-- [Using JavaScript Resouces in Ignite UI](Deployment-Guide-JavaScript-Resources.html): This topic explains how to manage the required resources to work with the Ignite UI within a Web application.
+- [Using JavaScript Resouces in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html): This topic explains how to manage the required resources to work with the %%ProductName%% within a Web application.
 
-- [Infragistics Content Delivery Network (CDN) for Ignite UI](Deployment-Guide-Infragistics-Content-Delivery-Network%28CDN%29.html): Instructions on using Infragistics Content Delivery Network (CDN) in Ignite UI.
+- [Infragistics Content Delivery Network (CDN) for %%ProductName%%](Deployment-Guide-Infragistics-Content-Delivery-Network%28CDN%29.html): Instructions on using Infragistics Content Delivery Network (CDN) in %%ProductName%%.
 
-- [Using Gradient Colors in Data Visualizations](Using-Gradient-Colors-in-Data-Visualizations.html): This topic explains how to apply gradient colors to the data visuals in Ignite UI™ controls.
+- [Using Gradient Colors in Data Visualizations](Using-Gradient-Colors-in-Data-Visualizations.html): This topic explains how to apply gradient colors to the data visuals in %%ProductName%%™ controls.
 
 - [Applying the New Style (*igDataChart*)](igDataChart-New-Default-Style.html): This topic explains how to apply the new chart style and provides an overview of the changes it makes to the chart look.
 
-- [Using Ignite UI with Bootstrap](Using-Ignite-UI-with-Bootstrap.html) : This topic explains how Ignite UI and Bootstrap work together
+- [Using %%ProductName%% with Bootstrap](Using-Ignite-UI-with-Bootstrap.html) : This topic explains how %%ProductName%% and Bootstrap work together
 
 
 

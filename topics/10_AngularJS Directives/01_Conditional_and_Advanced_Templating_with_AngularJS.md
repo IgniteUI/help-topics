@@ -11,14 +11,14 @@
 
 ##Topic Overview
 
-This topic explains how to use conditional templates and use advanced templating methods to customize controls created with the Ignite UI directives for AngularJS.
+This topic explains how to use conditional templates and use advanced templating methods to customize controls created with the %%ProductName%% directives for AngularJS.
 
 ### Required background
 
 The following lists the concepts, topics, and articles required as a prerequisite to understanding this topic.
 
 -   Topics
-    -   [Using Ignite UI with AngularJS](Using-Ignite-UI-with-AngularJS.html)
+    -   [Using %%ProductName%% with AngularJS](Using-Ignite-UI-with-AngularJS.html)
     -   [Infragistics Templating Engine](igTemplating-Overview.html)
 
 -   Concepts
@@ -44,7 +44,7 @@ This topic contains the following sections:
 
 ## <a id="introduction"></a>Introduction
 
-As Ignite UI controls use [Infragistics Templating Engine](igTemplating-Overview.html) by default to handle templating, there are a few characteristics that must be taken into account when creating Ignite UI controls in an Angular app, more specifically when doing so declaratively. The templating engine supports both common substitution using a `${property}` notation, as well as **conditional and iterative operations** that using double curly braces (e.g. `{{condition / loop}}` ). The latter is however in direct conflict with Angular’s [expression](https://docs.angularjs.org/guide/expression) evaluation as it uses the same syntax for bindings and therefore would recognize such templates and attempt to parse them. That is usually not a desired effect as it is likely to cause exceptions due to syntax and context differences. Even without errors, it might change the template’s markup that is otherwise intended for evaluation at within a control’s rendering process. This topic provides a few alternatives for using complex templates declaratively as well as methods to customize the entire templating handling with different engines.
+As %%ProductName%% controls use [Infragistics Templating Engine](igTemplating-Overview.html) by default to handle templating, there are a few characteristics that must be taken into account when creating %%ProductName%% controls in an Angular app, more specifically when doing so declaratively. The templating engine supports both common substitution using a `${property}` notation, as well as **conditional and iterative operations** that using double curly braces (e.g. `{{condition / loop}}` ). The latter is however in direct conflict with Angular’s [expression](https://docs.angularjs.org/guide/expression) evaluation as it uses the same syntax for bindings and therefore would recognize such templates and attempt to parse them. That is usually not a desired effect as it is likely to cause exceptions due to syntax and context differences. Even without errors, it might change the template’s markup that is otherwise intended for evaluation at within a control’s rendering process. This topic provides a few alternatives for using complex templates declaratively as well as methods to customize the entire templating handling with different engines.
 
 ### <a id="context-and-scope"></a>Context and Scope
 
@@ -108,11 +108,11 @@ The templates works as expected because nested elements under the parent are rem
 
 ### <a id="external-templates"></a>External Templates
 
-The easiest way to avoid conflicts would be to define templates outside the `ng-app` directive but that would mean the template can no longer be part of the Ignite UI directive options. Nonetheless, an external template can often have a desired effect. For example you can increase readability of your code or share templates between controls. Either way, the directives need to be able to find that template for control initialization and to do that you use a scope method.
+The easiest way to avoid conflicts would be to define templates outside the `ng-app` directive but that would mean the template can no longer be part of the %%ProductName%% directive options. Nonetheless, an external template can often have a desired effect. For example you can increase readability of your code or share templates between controls. Either way, the directives need to be able to find that template for control initialization and to do that you use a scope method.
 
 ### <a id="scope-method"></a>Using a Scope Method
 
-A function defined in the angular scope can be used to provide the template value via option evaluation. It can perform both complex tasks for initialization or simply provide access to a template defined somewhere in the document. While some controls provide the choice to supply either the template itself or the id by which it can be found( e.g. the `igDataChart`), the Ignite UI directives will register the `getHtml()` function in your scope for the rest:
+A function defined in the angular scope can be used to provide the template value via option evaluation. It can perform both complex tasks for initialization or simply provide access to a template defined somewhere in the document. While some controls provide the choice to supply either the template itself or the id by which it can be found( e.g. the `igDataChart`), the %%ProductName%% directives will register the `getHtml()` function in your scope for the rest:
 
 **In JavaScript:**
 ```js
@@ -180,13 +180,13 @@ While the Infragistics Templating Engine is used by default, it is not by any me
 </ig-grid>
 ```
 
-To use this feature jsRender script must be referenced on the page. Note that this **does not affect other controls**, their templates would still be handled by the Ignite UI engine by default and follow the default syntax. As jsRender uses double curly braces even more extensively, the same techniques to avoid conflicts with Angular apply as described so far. Even more so, as substitution of a single property (e.g. `template="{{>UnitPrice}}"`) without any additional markup or formatting will be recognized as an expression to evaluate even for options nested within a directive.
+To use this feature jsRender script must be referenced on the page. Note that this **does not affect other controls**, their templates would still be handled by the %%ProductName%% engine by default and follow the default syntax. As jsRender uses double curly braces even more extensively, the same techniques to avoid conflicts with Angular apply as described so far. Even more so, as substitution of a single property (e.g. `template="{{>UnitPrice}}"`) without any additional markup or formatting will be recognized as an expression to evaluate even for options nested within a directive.
 
 **Related Sample:** [JsRender Integration](%%NewSamplesUrl%%/grid/jsrender-integration)
 
 ### <a id="overriding-templating"></a>Overriding the Templating Function
 
-In advanced scenarios where other customization options are exhausted it is also possible to override the main templating function with your own. This is only possible in **Ignite UI version 14.1 and later**. The `tmpl` is the main function of the Infragistics Templating Engine and is defined globally under the `$.ig` namespace object. This function is called by all relevant Ignite UI controls and it receives both the template and data object:
+In advanced scenarios where other customization options are exhausted it is also possible to override the main templating function with your own. This is only possible in **%%ProductName%% version 14.1 and later**. The `tmpl` is the main function of the Infragistics Templating Engine and is defined globally under the `$.ig` namespace object. This function is called by all relevant %%ProductName%% controls and it receives both the template and data object:
 
 **In JavaScript:**
 ```js
@@ -202,7 +202,7 @@ The templating process at this point may be handled in any number of ways – fr
 
 If you want to use Angular’s syntax there are two options that handle evaluation of expressions in html – the compile and interpolate services. The string output requirement of the templating function essentially excludes the [`$compile`](https://docs.angularjs.org/api/ng/service//$compile) service as an option for custom templating (as compiled and linked templates still won’t have the time to activate). The [`$interpolate`](https://docs.angularjs.org/api/ng/service//$interpolate) service, however, immediately evaluates any expressions in the markup and directly substitutes their values. Creating such templating solution still requires a `$scope` reference accessible from the global function and also matching the passed data item in the angular app scope so it can be evaluated, but it is possible to execute logic from scope methods on every render.
 
->**Note:** Keep in mind that overriding the templating function applies to every active Ignite UI control in the application, so if other controls have templates the new function should be able to handle those as well. Changing templating engines also usually means templates for all controls must change to match the new syntax.
+>**Note:** Keep in mind that overriding the templating function applies to every active %%ProductName%% control in the application, so if other controls have templates the new function should be able to handle those as well. Changing templating engines also usually means templates for all controls must change to match the new syntax.
 
 ## <a id="related-content"></a>Related Content
 
@@ -210,7 +210,7 @@ If you want to use Angular’s syntax there are two options that handle evaluati
 
 The following topics provide additional information related to this topic.
 
--   [Using different template engines with Ignite UI controls](http://www.infragistics.com/community/blogs/marina_stoyanova/archive/2014/05/30/using-different-template-engines-with-ignite-ui-controls.aspx)
+-   [Using different template engines with %%ProductName%% controls](http://www.infragistics.com/community/blogs/marina_stoyanova/archive/2014/05/30/using-different-template-engines-with-ignite-ui-controls.aspx)
 
 ### <a id="samples"></a>Samples
 

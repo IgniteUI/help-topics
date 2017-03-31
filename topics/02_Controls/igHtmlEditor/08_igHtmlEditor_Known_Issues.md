@@ -20,7 +20,7 @@ This topic lists the known issues and limitations of the `igHtmlEditor`™ contr
 
 The following topics are prerequisites to understanding this topic:
 
--	[Known Issues](Known-Issues-Revision-History.html): Provides reference information for known issues and limitations of all Ignite UI controls.
+-	[Known Issues](Known-Issues-Revision-History.html): Provides reference information for known issues and limitations of all %%ProductName%% controls.
 
 
 ##Known Issues and Limitations
@@ -139,7 +139,7 @@ The following topics provide additional information related to this topic.
 
 -	[Accessibility Compliance(igHtmlEditor)](igHtmlEditor-Accessibility-Compliance.html): This topic explains the accessibility features of the `igHtmlEditor` and gives information on how to achieve accessibility compliance for pages containing `igHtmlEditor`.
 
--	[Accessibility Compliance](Accessibility-Compliance.html): Provides reference information for accessibility compliance of all Ignite UI controls.
+-	[Accessibility Compliance](Accessibility-Compliance.html): Provides reference information for accessibility compliance of all %%ProductName%% controls.
 
 
 

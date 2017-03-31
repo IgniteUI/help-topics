@@ -19,7 +19,7 @@ The following screenshot is a preview of the final result:
 To complete the procedure, you need to do the following:
 
 -   Create an MVC Mobile application
--   Reference the Ignite UI MVC wrappers assembly
+-   Reference the %%ProductName%% MVC wrappers assembly
 
 ## Steps
 

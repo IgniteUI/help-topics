@@ -13,13 +13,13 @@
 ## Topic Overview
 ### Purpose
 
-This topic provides an overview of the new features of Ignite UI® 2013 Volume 1 release.
+This topic provides an overview of the new features of %%ProductName%%® 2013 Volume 1 release.
 
 
 ## New Features
 ### New Features summary chart
 
-The following table summarizes the new features for the Ignite UI® 2013 Volume 1 release. Additional details are available after the summary table.
+The following table summarizes the new features for the %%ProductName%%® 2013 Volume 1 release. Additional details are available after the summary table.
 
 <table class="table table-bordered">
 	<thead>
@@ -78,7 +78,7 @@ igEditors™
 			</td>
 
             <td>
-The support for the Knockout library in Ignite UI editor controls is intended to provide easy means for developers to use the Knockout library and its declarative syntax to instantiate and configure Ignite UI editors.
+The support for the Knockout library in %%ProductName%% editor controls is intended to provide easy means for developers to use the Knockout library and its declarative syntax to instantiate and configure %%ProductName%% editors.
 			</td>
         </tr>
 
@@ -147,7 +147,7 @@ The `igGrid` Column Fixing feature allows you to pin the columns on the left or 
 			</td>
 
             <td>
-The support for the Knockout library in Ignite UI `igGrid` controls is intended to provide easy means for developers to use the Knockout library and its declarative syntax to instantiate and configure Ignite UI grids.
+The support for the Knockout library in %%ProductName%% `igGrid` controls is intended to provide easy means for developers to use the Knockout library and its declarative syntax to instantiate and configure %%ProductName%% grids.
 			</td>
         </tr>
 
@@ -181,8 +181,8 @@ Cell Merging feature for `igHierarchicalGrid`™ is now RTM.
 			</td>
 
             <td>
-The support for the Knockout library in Ignite UI `igHierarchicalGrid`™ controls is intended to provide easy means for developers to use the Knockout library and its declarative syntax to instantiate and configure
-                    Ignite UI grids.
+The support for the Knockout library in %%ProductName%% `igHierarchicalGrid`™ controls is intended to provide easy means for developers to use the Knockout library and its declarative syntax to instantiate and configure
+                    %%ProductName%% grids.
 			</td>
         </tr>
 
@@ -308,7 +308,7 @@ igTree™
 			</td>
 
             <td>
-The support for the Knockout library in Ignite UI editor controls is intended to provide easy means for developers to use the Knockout library and its declarative syntax to instantiate and configure Ignite UI editors.
+The support for the Knockout library in %%ProductName%% editor controls is intended to provide easy means for developers to use the Knockout library and its declarative syntax to instantiate and configure %%ProductName%% editors.
 			</td>
         </tr>
 
@@ -348,7 +348,7 @@ igUpload™ allows you to process files as MemoryStream object.
 
         <tr>
             <td>
-Ignite UI ASP.NET MVC Helpers
+%%ProductName%% ASP.NET MVC Helpers
 			</td>
 
             <td>
@@ -356,7 +356,7 @@ Ignite UI ASP.NET MVC Helpers
 			</td>
 
             <td>
-You can now add client events to the Ignite UI® controls’ ASP.NET MVC helpers by using the `AddClientEvent` helper method. Provide an event name and function name to the helper and it renders the required
+You can now add client events to the %%ProductName%%® controls’ ASP.NET MVC helpers by using the `AddClientEvent` helper method. Provide an event name and function name to the helper and it renders the required
                     JavaScript on the client to handle the event.
 			</td>
         </tr>
@@ -371,7 +371,7 @@ TypeScript Definition File
 			</td>
 
             <td>
-TypeScript is a language for adding a typed layer to JavaScript aiding in the development of JavaScript applications. Ignite UI now includes a TypeScript definition file, `igniteui.d.ts`, providing type definitions for all controls.
+TypeScript is a language for adding a typed layer to JavaScript aiding in the development of JavaScript applications. %%ProductName%% now includes a TypeScript definition file, `igniteui.d.ts`, providing type definitions for all controls.
 			</td>
         </tr>
 
@@ -491,7 +491,7 @@ The `igDataChart` control now supports over 40 chart types. The following new ch
 ## <a id="igeditors-knockout-support"></a>igEditors
 ### Knockout Support
 
-The support for the Knockout library in Ignite UI editor controls is
+The support for the Knockout library in %%ProductName%% editor controls is
 intended to provide easy means for developers to use the Knockout
 library and its declarative syntax to instantiate and configure Ignite
 UI editors.
@@ -558,7 +558,7 @@ To this end, the RWD Mode feature supports a set of pre-defined grid templates w
 
 ### <a id="knockout-support"></a>Knockout Support is RTM
 
-The support for the Knockout library in Ignite UI `igGrid` controls is
+The support for the Knockout library in %%ProductName%% `igGrid` controls is
 intended to provide easy means for developers to use the Knockout
 library and its declarative syntax to instantiate and configure Ignite
 UI grids.
@@ -615,7 +615,7 @@ left or the right of the grid so that they are always visible.
 
 ### <a id="hierarchicalgrid-knockout-support"></a>Knockout Support is RTM
 
-The support for the Knockout library in Ignite UI `igHierarchicalGrid` controls is intended to provide easy means for developers to use the Knockout library and its declarative syntax to instantiate and configure Ignite UI grids.
+The support for the Knockout library in %%ProductName%% `igHierarchicalGrid` controls is intended to provide easy means for developers to use the Knockout library and its declarative syntax to instantiate and configure %%ProductName%% grids.
 
 The Knockout support is implemented as a Knockout extension which is
 invoked initially when Knockout bindings are applied to a page and
@@ -732,7 +732,7 @@ The `igSplitter` is a container control for managing layouts in HTML5 Web applic
 ## <a id="igtree-knockout-support"></a>igTree
 ### Knockout Support
 
-The support for the Knockout library in Ignite UI editor controls is
+The support for the Knockout library in %%ProductName%% editor controls is
 intended to provide easy means for developers to use the Knockout
 library and its declarative syntax to instantiate and configure Ignite
 UI editors.
@@ -785,10 +785,10 @@ The functionality is available only in the browsers which support multiple attri
 
 
 
-## Ignite UI ASP.NET MVC Helpers
+## %%ProductName%% ASP.NET MVC Helpers
 ### <a id="support-adding-events"></a>Support for Adding Events
 
-You can now add events to Ignite UI controls by adding them to the ASP.NET MVC helper. Use the `AddClientEvent` method to supply the event name and a handler function name. The helper will render to the appropriate instantiation JavaScript on the client to fire the event.
+You can now add events to %%ProductName%% controls by adding them to the ASP.NET MVC helper. Use the `AddClientEvent` method to supply the event name and a handler function name. The helper will render to the appropriate instantiation JavaScript on the client to fire the event.
 
 **In ASPX:**
 
@@ -810,16 +810,16 @@ Note: `igUpload`, `igGrid`/`igHierarchicalGrid` and their features will get this
 ### New Feature (CTP)
 
 TypeScript is a language for adding a typed layer to JavaScript aiding
-in the development of JavaScript applications. Ignite UI now includes a
+in the development of JavaScript applications. %%ProductName%% now includes a
 TypeScript definition file, `igniteui.d.ts`, providing type definitions
 for all controls.
 
-You can find the definition file in the Ignite UI installation directory under `{Installation Directory}typingsigniteui.t.ds.` Refer to the following articles for additional information.
+You can find the definition file in the %%ProductName%% installation directory under `{Installation Directory}typingsigniteui.t.ds.` Refer to the following articles for additional information.
 
 ### Related Articles
 
 -   [Download TypeScript](http://www.typescriptlang.org/#Download)
--   [Introducing TypeScript Support for Ignite UI](http://www.infragistics.com/community/blogs/angel_todorov/archive/2012/10/27/introducing-typescript-support-for-ignite-ui.aspx)
+-   [Introducing TypeScript Support for %%ProductName%%](http://www.infragistics.com/community/blogs/angel_todorov/archive/2012/10/27/introducing-typescript-support-for-ignite-ui.aspx)
 -   [TypeScript Tutorial](http://www.typescriptlang.org/Tutorial/)
 -   [TypeScript: Add Productivity and Manageability to your JavaScript Apps – Part 2](http://msdn.microsoft.com/en-us/magazine/jj983351.aspx)
 
@@ -893,7 +893,7 @@ The following topics provide additional information related to this topic.
 
 - [Configuring Knockout Support (igCombo)](igCombo-KnockoutJS-Support.html): This topic explains how to configure the `igCombo`™ control to bind it to View-Model objects managed by the Knockout library.
 
-- [Configuring Knockout Support (igEditors)](Configuring-Knockout-Support-%28Editors%29.html): This topic explains how to configure Ignite UI® editor controls to bind to View-Model objects using the Knockout library.
+- [Configuring Knockout Support (igEditors)](Configuring-Knockout-Support-%28Editors%29.html): This topic explains how to configure %%ProductName%%® editor controls to bind to View-Model objects using the Knockout library.
 
 - [igFunnelChart Overview](igFunnelChart-Overview.html): This topic provides conceptual information about the `igFunnelChart`™ control including its main features, minimum requirements, and user functionality.
 

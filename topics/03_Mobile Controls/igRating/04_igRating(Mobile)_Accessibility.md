@@ -20,7 +20,7 @@ This topic explains `igRating`™ accessibility features and provides advice how
 
 ## Accessibility Compliance Reference
 
-All of the Ignite UI™ controls and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. Table 1 contains the specific rules of Subpart 1194.22 that pertain to the control. Also detailed information about how the grid control complies with each rule is represented.
+All of the %%ProductName%%™ controls and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. Table 1 contains the specific rules of Subpart 1194.22 that pertain to the control. Also detailed information about how the grid control complies with each rule is represented.
 
 Apart from Section 508 we are also following [Mobile Web Best Practices](http://www.w3.org/TR/mobile-bp/) guide and [Web Content Accessibility Guidelines](http://www.w3.org/WAI/intro/wcag.php) guide.
 
@@ -48,7 +48,7 @@ Rules | Rule Text | How We Comply
 
 The following topics provide additional information related to this topic.
 
-- [Accessibility Compliance](Accessibility-Compliance.html): Provides reference information for accessibility compliance of all Ignite UI controls.
+- [Accessibility Compliance](Accessibility-Compliance.html): Provides reference information for accessibility compliance of all %%ProductName%% controls.
 
 - [igRating (Mobile) Overview](igRating%28Mobile%29-Overview.html): The topic that introduces the user to the `igRating`™ control’s main features and functionality.
 

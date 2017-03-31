@@ -25,7 +25,7 @@ The Excel library can be used to export a grid or table to a workbook document o
 
 ## Setting up the Environment
 
-To use the Excel library, you must reference the following JavaScript files from the Ignite UI product:
+To use the Excel library, you must reference the following JavaScript files from the %%ProductName%% product:
 
 -   infragistics.util.js
 -   infragistics.xml.js [new in 14.2]

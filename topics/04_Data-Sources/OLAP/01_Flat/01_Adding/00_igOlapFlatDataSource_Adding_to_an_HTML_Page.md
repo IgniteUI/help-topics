@@ -48,9 +48,9 @@ This topic contains the following sections:
 ## <a id="conceptual-overview"></a>Adding igOlapFlatDataSource to an HTML Page – Conceptual Overview
 ### <a id="summary"></a>Adding igOlapFlatDataSource to an HTML Page summary
 
-The `igOlapFlatDataSource` component makes possible for flat data collections to be fed to Ignite UI™ pivot grid controls in a JavaScript client environment. This enables the multidimensional (OLAP) analysis on such data sets.
+The `igOlapFlatDataSource` component makes possible for flat data collections to be fed to %%ProductName%%™ pivot grid controls in a JavaScript client environment. This enables the multidimensional (OLAP) analysis on such data sets.
 
-For the `igOlapFlatDataSource` component to work correctly, its [dataSource](%%jQueryApiUrl%%/ig.OlapFlatDataSource#options) and metadata properties must be specified. Initialization of `igOlapFlatDataSource` is not required when it is used together with any of the Ignite UI pivot-grid-related controls (which is the most common case) – `igPivotDataSelector` ™, `igPivotGrid` ™, and `igPivotView`™ (Initialization of `igOlapFlatDataSource` is required only if the component is used on its own.).
+For the `igOlapFlatDataSource` component to work correctly, its [dataSource](%%jQueryApiUrl%%/ig.OlapFlatDataSource#options) and metadata properties must be specified. Initialization of `igOlapFlatDataSource` is not required when it is used together with any of the %%ProductName%% pivot-grid-related controls (which is the most common case) – `igPivotDataSelector` ™, `igPivotGrid` ™, and `igPivotView`™ (Initialization of `igOlapFlatDataSource` is required only if the component is used on its own.).
 
 For instantiating the `igOlapFlatDataSource` component, two parameters are required: `dataSource` and metadata. The `dataSource` parameter specifies the input data to be used and the metadata parameter specifies how the input data will be treated as OLAP data, that is how dimensions, hierarchies, measures, etc., are generated. Internally, `igOlapFlatDataSource` uses an `igDataSource`™ instance. When specifying the dataSource property, you can either specify an `igDataSource` instance or set it to a data source supported by the `igDataSource`.
 
@@ -61,12 +61,12 @@ Following are the general requirements for adding the `igOlapFlatDataSource` com
 -   Data requirements – an `igDataSource` instance or any type of data supported by the `igDataSource`
 -   The required JavaScript files:
     -   References to the jQuery library
-    -   References to the Ignite UI JavaScript files
+    -   References to the %%ProductName%% JavaScript files
 
-The Infragistics® JavaScript files reside by default in the JavaScript modules folder under the Ignite UI installation path:
+The Infragistics® JavaScript files reside by default in the JavaScript modules folder under the %%ProductName%% installation path:
 
 -   Jquery-[versionNumber].js (for example, jquery-1.9.0.js) – the jQuery library (available at the jQuery site)
--   `infragistics.util.js` – the JavaScript file containing shared non-UI logic used by some of the Ignite UI™ components
+-   `infragistics.util.js` – the JavaScript file containing shared non-UI logic used by some of the %%ProductName%%™ components
 -   `infragistics.olapflatdatasource.js` – the JavaScript file containing the igOlapFlatDataSource component
 -   (Conditional – if the Infragistics Loader is used) `infragistics.loader.js` – the Infragistics Loader component which can be used to automatically load all the Infragistics JavaScript and CSS files required by a component
 

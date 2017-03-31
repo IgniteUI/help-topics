@@ -8,13 +8,13 @@
 |metadata|
 -->
 
-# Wrappers Known Issues and Limitations (Ignite UI ASP.NET MVC)
+# Wrappers Known Issues and Limitations (%%ProductName%% ASP.NET MVC)
 
 
 
 ## Known Issues and Limitations Summary
 
-The following table summarizes the known issues and limitations of the Ignite UI™ ASP.NET MVC wrappers. Detailed explanations of some of the issues and the existing workarounds are provided after the summary table.
+The following table summarizes the known issues and limitations of the %%ProductName%%™ ASP.NET MVC wrappers. Detailed explanations of some of the issues and the existing workarounds are provided after the summary table.
 
 
 Legend: | 
@@ -23,7 +23,7 @@ Legend: |
 ![](../images/images/negative.png) | No known workaround
 ![](../images/images/plannedFix.png) | No known workaround, fix planned
 
-### Ignite UI ASP.NET MVC Wrappers
+### %%ProductName%% ASP.NET MVC Wrappers
 
 
 Issue | Description | Status

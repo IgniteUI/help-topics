@@ -38,7 +38,7 @@ This topic contains the following sections:
 
 ## <a id="overview"></a> Known Issues and Limitations
 
-The following table summarizes the known issues and limitations for the mobile `igRating` of the Ignite UI %%ProductVersionShort%% release. Detailed explanations of known issues and the possible workarounds are provided for some of the issues follow the summary table.
+The following table summarizes the known issues and limitations for the mobile `igRating` of the %%ProductName%% %%ProductVersionShort%% release. Detailed explanations of known issues and the possible workarounds are provided for some of the issues follow the summary table.
 
 Legend: | 
 --------|------

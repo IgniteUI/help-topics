@@ -26,8 +26,8 @@ The following table lists the materials required as a prerequisite to understand
 
 **Topics**
 
--   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
--   [Using JavaScript Resouces in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+-   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)
+-   [Using JavaScript Resouces in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 
 
 
@@ -54,7 +54,7 @@ This procedure will guide you through the process of adding reference to the req
 The examples in the next block use the following file structure that needs be present for the referencing to work properly.
 
 -   The jQuery resources have been added to a folder named Scripts in your web site or web application.
--   The Ignite UI JavaScript files have been added to a folder named Scripts/ig in your web site or web application (For more information, refer to the [Using JavaScript Resouces in Ignite UI](Deployment-Guide-JavaScript-Resources.html) topic).
+-   The %%ProductName%% JavaScript files have been added to a folder named Scripts/ig in your web site or web application (For more information, refer to the [Using JavaScript Resouces in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) topic).
 
 If you use your own structure you should replace *Scripts/ig* with your own folder structure.
 
@@ -71,7 +71,7 @@ If you use your own structure you should replace *Scripts/ig* with your own fold
 
 ### <a id="javasript"></a>Using igLoader in JavaScript
 
-The `igLoader` control is the recommended way to load JavaScript and CSS resources required by the Ignite UI library controls. First the `igLoader` script must be included in the page:
+The `igLoader` control is the recommended way to load JavaScript and CSS resources required by the %%ProductName%% library controls. First the `igLoader` script must be included in the page:
 
 **In JavaScript:**
 
@@ -100,7 +100,7 @@ For HTML views the `igLoader` must be instantiated this way:
 
 The Infragistics.Web.Mvc assembly must be referenced in your ASP.NET MVC project and the corresponding namespace must be referenced in your view.
 
-For more information, refer to the [Using JavaScript Resouces in Ignite UI](Deployment-Guide-JavaScript-Resources.html) topic.
+For more information, refer to the [Using JavaScript Resouces in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) topic.
 
 The code to reference the namespace is given in the code snippet below.
 

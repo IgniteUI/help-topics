@@ -45,7 +45,7 @@ The table belows lists the required background you need to fully understand the 
 
 Background type | Content
 ---|---
-Topics | You need to first read the following topics: [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html) <br> [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) <br> [Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html) <br> [igGrid/igDataSource Architectural Overview](igGrid-igDataSource-Architecture-Overview.html), The Data Source Control section
+Topics | You need to first read the following topics: [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html) <br> [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) <br> [Styling and Theming %%ProductName%%](Deployment-Guide-Styling-and-Theming.html) <br> [igGrid/igDataSource Architectural Overview](igGrid-igDataSource-Architecture-Overview.html), The Data Source Control section
 External Resources | You need to first read the following article: [Working with jQuery Widgets](http://wiki.jqueryui.com/w/page/12137708/How%20to%20use%20jQuery%20UI%20widgets)
 
 
@@ -131,18 +131,18 @@ You can use the ASP.NET MVC Helper to use managed code languages to configure th
 
 ## <a id="requirements"></a>Requirements
 ### <a id="requirements-introduction"></a>Introduction 
-The `igTree` control is a jQuery UI Widget and therefore is dependent on the jQuery and jQuery UI JavaScript libraries. In addition, there are several Ignite UI™ JavaScript resources that the `igTree` control uses for shared functionality and data binding. The JavaScript references are required whether the `igTree` control is used in a pure JavaScript context or in ASP.NET MVC. When using the `igTree` control in ASP.NET MVC, the Infragistics.Web.Mvc assembly is required to configure the `igTree` control with .NET languages.
+The `igTree` control is a jQuery UI Widget and therefore is dependent on the jQuery and jQuery UI JavaScript libraries. In addition, there are several %%ProductName%%™ JavaScript resources that the `igTree` control uses for shared functionality and data binding. The JavaScript references are required whether the `igTree` control is used in a pure JavaScript context or in ASP.NET MVC. When using the `igTree` control in ASP.NET MVC, the Infragistics.Web.Mvc assembly is required to configure the `igTree` control with .NET languages.
 
 ### <a id="requirements-chart"></a>Requirements chart 
 The table below lists the requirements for the `igTree` control.
 
 Requirement | Description
 ---|---
-jQuery and jQuery UI JavaScript resources | Ignite UI is built on top of these frameworks: [jQuery](http://jquery.com/) [jQuery UI](http://jqueryui.com/) [Templating Engine Overview](igTemplating-Overview.html) (for node templates)
-Shared Ignite UI JavaScript resources | There are several shared JavaScript resources in Ignite UI that most widgets use: `infragistics.util.js` infragistics.ui.shared.js
+jQuery and jQuery UI JavaScript resources | %%ProductName%% is built on top of these frameworks: [jQuery](http://jquery.com/) [jQuery UI](http://jqueryui.com/) [Templating Engine Overview](igTemplating-Overview.html) (for node templates)
+Shared %%ProductName%% JavaScript resources | There are several shared JavaScript resources in %%ProductName%% that most widgets use: `infragistics.util.js` infragistics.ui.shared.js
 `igDataSource` JavaScript Resources | The `igTree` control uses the `igDataSource` internally for data operations: `infragistics.dataSource.js`
 `igTree` JavaScript resources | The JavaScript file for the `igTree` control: `infragistics.ui.tree.js`
-IG Theme | This theme contains custom visual styles created especially for Ignite UI
+IG Theme | This theme contains custom visual styles created especially for %%ProductName%%
 Base Theme | The base theme contains styles that primarily define the form and function for each control.
 
 
@@ -199,9 +199,9 @@ Display custom HTML for each node on a certain level of hierarchy | `nodeContent
 ## <a id="related-topics"></a>Related Topics 
 Following are some other topics you may find useful.
 
--   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
--   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
--   [Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html)
+-   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)
+-   [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
+-   [Styling and Theming %%ProductName%%](Deployment-Guide-Styling-and-Theming.html)
 -   [igGrid/igDataSource Architectural Overview](igGrid-igDataSource-Architecture-Overview.html)
 -   [Optimize the igTree’s Performance](igTree-Optimize-Performance.html)
 -   [Configure Checkboxes and Selection for igTree](igTree-Configure-Checkboxes-And-Selection.html)

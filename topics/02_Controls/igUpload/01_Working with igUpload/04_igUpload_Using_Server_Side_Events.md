@@ -332,8 +332,8 @@ After uploading a file that does not meet the requirements, the custom error mes
 
 ## Related Links
 -   [igUpload API and Events Sample](%%SamplesUrl%%/file-upload/api-events)
--   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
--   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+-   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)
+-   [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 
  
 

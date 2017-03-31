@@ -17,7 +17,7 @@
 
 ### Introduction
 
-The topics in this group explain how to configure Ignite UI® combo control.
+The topics in this group explain how to configure %%ProductName%%® combo control.
 
 ### Topics
 

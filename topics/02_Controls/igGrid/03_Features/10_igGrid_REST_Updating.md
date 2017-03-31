@@ -27,7 +27,7 @@ The following table lists the topics and articles required as a prerequisite to 
 - Topics
 	- [igGrid Overview](igGrid-Overview.html): The `igGrid` is a jQuery-based client-side grid that is responsible for presenting and manipulating tabular data. Its whole lifecycle is on the client-side making it independent of any specific server-side technology.
 	- [igGrid/igDataSource Architecture Overview](igGrid-igDataSource-Architecture-Overview.html): This document explains the architecture of `igDataSource`.
-	- [Binding to REST Services (igDataSource)](igDataSource-Binding-to-REST-Services.html): This document demonstrates how to bind REST services to the Ignite UI™ data source, or `igDataSource`, control.
+	- [Binding to REST Services (igDataSource)](igDataSource-Binding-to-REST-Services.html): This document demonstrates how to bind REST services to the %%ProductName%%™ data source, or `igDataSource`, control.
 - External Resources
 	-   Representational State Transfer (REST)
 	-   Open Data Protocol
@@ -586,7 +586,7 @@ The screenshot below demonstrates how the `$.ig.RESTDataSource` behaves as a res
 
 The following topics provide additional information related to this topic.
 
-- [Binding to Web Services](igGrid-Binding-to-Web-Services.html): This document demonstrates how to bind the Ignite UI™ grid, or `igGrid`, to an OData protocol web-based data source.
+- [Binding to Web Services](igGrid-Binding-to-Web-Services.html): This document demonstrates how to bind the %%ProductName%%™ grid, or `igGrid`, to an OData protocol web-based data source.
 
 - [Getting started with igGrid, OData and WCF Data Services](igGrid-Getting-Started-With-igGrid-oData-and-WCF-Data-Services.html): This topic demonstrates how to setup a client-side jQuery grid with remote paging, filtering, and sorting by setting up a WCF Data Service in an ASP.NET Web Application and setting two options on the `igGrid`.
 

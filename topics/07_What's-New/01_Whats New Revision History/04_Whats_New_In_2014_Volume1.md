@@ -12,7 +12,7 @@
 
 ## Topic Overview
 
-This topic presents the controls and the new and enhanced features for the Ignite UI™ 2014 Volume 1 release.
+This topic presents the controls and the new and enhanced features for the %%ProductName%%™ 2014 Volume 1 release.
 
 
 ## What’s New Summary
@@ -129,7 +129,7 @@ Each template includes documentation and more templates will appear in the Infra
 
 ![](images/Whats_New_Project_Dialog.png)
 
-Note: In previous versions of Ignite UI, the starter templates were installed with the product installer. They are now accessible through the Infragistics Template Gallery.
+Note: In previous versions of %%ProductName%%, the starter templates were installed with the product installer. They are now accessible through the Infragistics Template Gallery.
 
 ### <a id="new-theme"></a>New theme (CTP)
 

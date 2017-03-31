@@ -28,9 +28,9 @@ The following table lists the materials required as a prerequisite to understand
 
 **Topics**
 
--	[Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html): General information on the Ignite UI™ library.
+-	[%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html): General information on the %%ProductName%%™ library.
 
--	[Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html): This topic provides general guidance on adding required JavaScript resources to use controls from the Ignite UI library.
+-	[Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html): This topic provides general guidance on adding required JavaScript resources to use controls from the %%ProductName%% library.
 
 -	[igDataChart Overview](igDataChart-Overview.html): This topic provides conceptual information about the `igDataChart`™ control including its main features, minimum requirements for using charts and user functionality.
 
@@ -95,13 +95,13 @@ The following steps demonstrate how to add an `igDataChart` control to a web pag
 	
 	Add the jQuery, jQueryUI and Modernizr JavaScript resources to a folder named `Scripts` in your web site or web application.
 	
-	Add the Ignite UI CSS files to a folder named `Content/ig` in your web site or web application (see the [Styling and Theming in Ignite UI](Deployment-Guide-Styling-and-Theming.html) topic for details).
+	Add the %%ProductName%% CSS files to a folder named `Content/ig` in your web site or web application (see the [Styling and Theming in %%ProductName%%](Deployment-Guide-Styling-and-Theming.html) topic for details).
 	
-	Add the Ignite UI JavaScript files to a folder named `Scripts/ig` in your web site or web application (see the [Using JavaScript Resouces in Ignite UI](Deployment-Guide-JavaScript-Resources.html) topic for details).
+	Add the %%ProductName%% JavaScript files to a folder named `Scripts/ig` in your web site or web application (see the [Using JavaScript Resouces in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) topic for details).
 	
 	<a id="use-igLoader-in-js"></a>**Use igLoader in JavaScript**
 	
-	The `igLoader`™ control is the recommended way to load JavaScript and CSS resources required by the Ignite UI library controls. First the `igLoader` script must be included in the page:
+	The `igLoader`™ control is the recommended way to load JavaScript and CSS resources required by the %%ProductName%% library controls. First the `igLoader` script must be included in the page:
 	
 	**In HTML:**
 	
@@ -127,7 +127,7 @@ The following steps demonstrate how to add an `igDataChart` control to a web pag
 	
 	<a id="use-mvc-loader"></a>**Use MVC Loader**
 	
-	The `Infragistics.Web.Mvc` assembly must be referenced in your ASP.NET MVC project and the corresponding namespace must be referenced in your view. For details, see [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) but for clarity the code to reference the namespace is given here.
+	The `Infragistics.Web.Mvc` assembly must be referenced in your ASP.NET MVC project and the corresponding namespace must be referenced in your view. For details, see [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) but for clarity the code to reference the namespace is given here.
 	
 	**In ASPX:**
 	

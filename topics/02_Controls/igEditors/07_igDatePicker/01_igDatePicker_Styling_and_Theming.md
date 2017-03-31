@@ -17,7 +17,7 @@ The `igDatePicker` control is jQuery-based widget that extends the igDateEditor 
 
 ## Using ThemeRoller
 
-As the `igDatePicker` control uses the jQuery UI CSS framework it can also be fully styled using the [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/) where you can customize your own theme or choose from a gallery of available ones. These themes replace the ones that come by default with Ignite UI.
+As the `igDatePicker` control uses the jQuery UI CSS framework it can also be fully styled using the [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/) where you can customize your own theme or choose from a gallery of available ones. These themes replace the ones that come by default with %%ProductName%%.
 
 Date picker using the UI Darkness theme:
 

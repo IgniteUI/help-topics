@@ -42,13 +42,13 @@ The `igSplitter` is a container control for managing layouts in HTML5 Web applic
 
 ![](images/igSplitter_Overview_1.png)
 
-Any Ignite UI® control can be placed inside those panels thus enabling you create dynamic layouts with resizable and collapsible panels.
+Any %%ProductName%%® control can be placed inside those panels thus enabling you create dynamic layouts with resizable and collapsible panels.
 
 The igSplitter visual layout consists of two panels (2) and (3) placed in a container (1) (The numbers refer to the illustration below.). The panels are divided by a splitter bar (4). By default, the splitter bar has buttons (5) for expanding and collapsing panels. The following picture demonstrates a blank (without any other controls placed it) `igSplitter` control:
 
 ![](images/igSplitter_Overview_2.png)
 
-The picture below demonstrates an `igSplitter` with an igTree Ignite UI control in the `igSplitter`’s left panel. After a node is selected for the tree, the corresponding text to that node is placed in the right panel.
+The picture below demonstrates an `igSplitter` with an igTree %%ProductName%% control in the `igSplitter`’s left panel. After a node is selected for the tree, the corresponding text to that node is placed in the right panel.
 
 ![](images/igSplitter_Overview_3.png)
 
@@ -121,7 +121,7 @@ By default, the `igSplitter` control supports mouse dragging for resizing panels
 
 ## <a id="touch-suport"></a>Touch Support
 
-For touch-enabled devices, special classes are added to the splitter and touch events are handled. On touch-enabled devices, the splitter bar a bit wider (16 pixels of width) than it is on standard devices (6 pixels) to allow for easier user interaction with the splitter bar in the touch environment. For details, refer to [Touch Support for Ignite UI](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html).
+For touch-enabled devices, special classes are added to the splitter and touch events are handled. On touch-enabled devices, the splitter bar a bit wider (16 pixels of width) than it is on standard devices (6 pixels) to allow for easier user interaction with the splitter bar in the touch environment. For details, refer to [Touch Support for %%ProductName%%](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html).
 
 
 

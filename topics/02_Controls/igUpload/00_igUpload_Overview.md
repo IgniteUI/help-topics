@@ -11,7 +11,7 @@
 # igUpload Overview
 
 ## About igUpload
-The Ignite UI™ upload control, or `igUpload`, is a control that allows you to upload any types of files, sending them from the client browser to the server. The size of the uploaded files can be restricted only by server limitations, so you can upload large files with size more than default 10MB.
+The %%ProductName%%™ upload control, or `igUpload`, is a control that allows you to upload any types of files, sending them from the client browser to the server. The size of the uploaded files can be restricted only by server limitations, so you can upload large files with size more than default 10MB.
 
 The upload control is able to handle single uploads (default) or simultaneous multiple file upload operations. To facilitate multiple uploads, the control uses an HTML iframe element to upload files in the background. When the file is uploaded then iframe is removed as a HTML .
 
@@ -71,7 +71,7 @@ This sample demonstrates a basic upload scenario in Single Mode, which will star
 
 [igUpload Single Upload Sample](%%SamplesUrl%%/file-upload/basic-usage)
 
-1.  To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) help topic.
+1.  To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) help topic.
 2.  On your HTML page or ASP.NET MVC View, reference the required JavaScript files, CSS files, and ASP.NET MVC assemblies.
 
     **In HTML:**
@@ -339,8 +339,8 @@ Configures the MIME types which can be uploaded. Multiple MIME types can be list
 
 ## Related Links
 -   [igUpload Single Upload Sample](%%SamplesUrl%%/file-upload/basic-usage)
--   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
--   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+-   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)
+-   [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 -   [igUpload HTTP Handler and Module](igUpload-Using-HTTP-Handler-and-Modules.html)
 -   [igUpload Client-side events](igUpload-Using-Client-Side-Events.html)
 -   [igUpload Server-side events in ASP.NET MVC ](igUpload-Using-Server-Side-Events.html)

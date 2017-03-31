@@ -8,14 +8,14 @@
 |metadata|
 -->
 
-# Using Events in Ignite UI
+# Using Events in %%ProductName%%
 
 ##Topic Overview
 
 
 ### Purpose
 
-This topic demonstrates how to handle events raised by Ignite UI™ controls. Also included is an explanation of the differences between binding events on initialization and after initialization.
+This topic demonstrates how to handle events raised by %%ProductName%%™ controls. Also included is an explanation of the differences between binding events on initialization and after initialization.
 
 ### In this topic
 
@@ -33,7 +33,7 @@ This topic contains the following sections:
 ### General requirements
 
 -   jQuery-specific requirements
--   An HTML web page where Ignite UI controls are instantiated.
+-   An HTML web page where %%ProductName%% controls are instantiated.
 -   MVC-specific requirements
 -   An MVC project in Microsoft Visual Studio® with an igGrid bound to a data source
 -   A reference to the Infragistics.Web.Mvc.dll (contains the ASP.NET MVC wrappers)
@@ -45,7 +45,7 @@ This topic contains the following sections:
 -   The required scripts for both jQuery and MVC approach are the same because the MVC wrappers render similar JavaScript as the jQuery widget. You will need:
 	1.  The jQuery core library script
 	2.  The jQuery UI library
-	3.  The required Ignite UI script files for the widgets used on your page
+	3.  The required %%ProductName%% script files for the widgets used on your page
 
 The following code demonstrates the scripts as added to the HTML document.
 
@@ -158,7 +158,7 @@ When using `bind()`, keep in mind that it attaches the specified handler only on
 
 When using any of the prescribed jQuery event wiring functions make sure to adhere to the jQuery UI event naming conventions. For instance the jQuery UI widget factory adds the name of the widget as a prefix of the event name. Therefore if want to attach to the “*columnhiding*” event of the *“iggridhiding”* widget, the event name becomes, “*iggridhidingcolumnhiding*”.
 
->**Note:** The Ignite UI API documentation includes a full list of each control's available options, methods and events.
+>**Note:** The %%ProductName%% API documentation includes a full list of each control's available options, methods and events.
 
 >**Note:** When using the *igEditor* controls with the ASP.NET MVC wrapper, the wrapper always instantiates the igEditor control with its type option set according to the widget you want to instantiate. When using live, bind or delegate you must pass – “igeditor” + “eventName”
 

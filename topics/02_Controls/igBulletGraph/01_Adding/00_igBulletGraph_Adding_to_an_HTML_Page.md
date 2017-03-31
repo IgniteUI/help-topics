@@ -68,7 +68,7 @@ What you need to do…
 jQuery and jQuery UI JavaScript resources
 			</td>
             <td>
-                Ignite UI™ is built on top of the following frameworks:
+                %%ProductName%%™ is built on top of the following frameworks:
 
                 <ul>
                     <li>
@@ -89,7 +89,7 @@ Add script references to both libraries in the `<head>` section of your page.
 General *igBulletGraph* JavaScript Resources
 			</td>
             <td>
-The *igBulletGraph* control depends on functionality distributed across several files in the Ignite UI Library. You can load the required resources in one of the following ways:
+The *igBulletGraph* control depends on functionality distributed across several files in the %%ProductName%% Library. You can load the required resources in one of the following ways:
 
                 <ul>
                     <li>
@@ -99,11 +99,11 @@ Use the Infragistics® Loader (*igLoader*™). You only need to include a script
 Load the required resources manually. You need to use the dependencies listed in the table below.
 					</li>
                     <li>
-Load the two combined files, containing the logic for all data visualization controls from the Ignite UI package - *infragistics.core.js*, *infragistics.dv.js* and *infragistics.encoding.js* (optional).
+Load the two combined files, containing the logic for all data visualization controls from the %%ProductName%% package - *infragistics.core.js*, *infragistics.dv.js* and *infragistics.encoding.js* (optional).
 					</li>
                 </ul>
 
-The following table lists the Ignite UI library dependencies related to the *igBulletGraph* control. These resources need to be referred to explicitly if you chose not to use *igLoader* or the combined files.
+The following table lists the %%ProductName%% library dependencies related to the *igBulletGraph* control. These resources need to be referred to explicitly if you chose not to use *igLoader* or the combined files.
 
 				<table class="table">
 					<tbody>
@@ -120,7 +120,7 @@ Description
 *infragistics.util.js*
 							</td>
 							<td>
-Ignite UI utilities
+%%ProductName%% utilities
 							</td>
 						</tr>
 						<tr>
@@ -207,7 +207,7 @@ To complete the procedure, you need the required JavaScript and CSS files refere
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Ignite UI Required Combined CSS Files -->
+	<!-- %%ProductName%% Required Combined CSS Files -->
 	<link href="../../igniteui/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
 	<link href="../../igniteui/css/structure/modules/infragistics.ui.bulletgraph.css" rel="stylesheet"/>
 	<script type="text/javascript" src="../../js/jquery.min.js"></script>
@@ -370,7 +370,7 @@ Following is the full code for this procedure.
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Ignite UI Required Combined CSS Files -->
+	<!-- %%ProductName%% Required Combined CSS Files -->
 	<link href="../../igniteui/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
 	<link href="../../igniteui/css/structure/infragistics.css" rel="stylesheet"/>
 	<script type="text/javascript" src="../../js/jquery.min.js"></script>

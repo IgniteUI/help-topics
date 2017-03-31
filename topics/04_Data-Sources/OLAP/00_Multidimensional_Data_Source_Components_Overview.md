@@ -16,7 +16,7 @@
 
 ### Purpose
 
-This topic provides an overview of the multidimensional data source components of Ignite UI® and their functionality.
+This topic provides an overview of the multidimensional data source components of %%ProductName%%® and their functionality.
 
 ### Required background
 
@@ -33,7 +33,7 @@ The following table lists the topics required as a prerequisite to understanding
 
 ### Components summary
 
-The multidimensional data source components in Ignite UI – [`igOlapFlatDataSource`](igOlapFlatDataSource.html)™ and [`igOlapXmlaDataSource`](igOlapXmlaDataSource.html)™ – operate as “intermediaries” between actual data (OLAP Cube or a flat data collection) and the visual controls used to display the data (like [`igPivotView`](igPivotView.html)™, [`igPivotGrid`](igPivotGrid.html)™, and [`igPivotDataSelector`](igPivotDataSelector.html)™). Both [`igOlapFlatDataSource`](igOlapFlatDataSource.html) and [`igOlapXmlaDataSource`](igOlapXmlaDataSource.html) provide an abstraction of a pivot table with all its elements – rows, columns, filters and measures, filtering mechanisms, etc. – that can be used to retrieve the data resulting from interaction with those elements.
+The multidimensional data source components in %%ProductName%% – [`igOlapFlatDataSource`](igOlapFlatDataSource.html)™ and [`igOlapXmlaDataSource`](igOlapXmlaDataSource.html)™ – operate as “intermediaries” between actual data (OLAP Cube or a flat data collection) and the visual controls used to display the data (like [`igPivotView`](igPivotView.html)™, [`igPivotGrid`](igPivotGrid.html)™, and [`igPivotDataSelector`](igPivotDataSelector.html)™). Both [`igOlapFlatDataSource`](igOlapFlatDataSource.html) and [`igOlapXmlaDataSource`](igOlapXmlaDataSource.html) provide an abstraction of a pivot table with all its elements – rows, columns, filters and measures, filtering mechanisms, etc. – that can be used to retrieve the data resulting from interaction with those elements.
 
 ### Functionalities implemented through components
 

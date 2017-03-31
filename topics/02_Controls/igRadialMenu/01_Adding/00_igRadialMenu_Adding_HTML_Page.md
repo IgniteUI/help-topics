@@ -69,7 +69,7 @@ jQuery and jQuery UI JavaScript resources
 			</td>
 
             <td>
-                Ignite UI™ is built on top of the following frameworks:
+                %%ProductName%%™ is built on top of the following frameworks:
 
                 <ul>
                     <li>
@@ -93,7 +93,7 @@ General `igRadialMenu` JavaScript Resources
 			</td>
 
             <td>
-                The `igRadialMenu` control depends on functionality distributed across several files in the Ignite UI Library. You can load the required resources in one of the following ways:
+                The `igRadialMenu` control depends on functionality distributed across several files in the %%ProductName%% Library. You can load the required resources in one of the following ways:
 
                 <ul>
                     <li>
@@ -105,11 +105,11 @@ Load the required resources manually. You need to use the dependencies listed in
 					</li>
 
                     <li>
-Load the two combined files, containing the logic for all data visualization controls from the Ignite UI package -` infragistics.core.js`, `infragistics.dv.js` and `infragistics.encoding.js` (optional).
+Load the two combined files, containing the logic for all data visualization controls from the %%ProductName%% package -` infragistics.core.js`, `infragistics.dv.js` and `infragistics.encoding.js` (optional).
 					</li>
                 </ul>
 
-                The following table lists the Ignite UI library dependences related to the `igRadialMenu` control. These resources need to be referred to explicitly if you chose not to use igLoader or
+                The following table lists the %%ProductName%% library dependences related to the `igRadialMenu` control. These resources need to be referred to explicitly if you chose not to use igLoader or
                     the combined files.
 
                 <table class="table">
@@ -133,7 +133,7 @@ Description
 			</td>
 
                             <td>
-Ignite UI utilities
+%%ProductName%% utilities
 			</td>
                         </tr>
 
@@ -234,7 +234,7 @@ Following is the full code for this procedure.
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Ignite UI Required Combined CSS Files -->
+    <!-- %%ProductName%% Required Combined CSS Files -->
     <link href="../../igniteui/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
     <link href="../../igniteui/css/structure/infragistics.css" rel="stylesheet"/>
     <script type="text/javascript" src="../../js/jquery.min.js"></script>
@@ -390,7 +390,7 @@ Following is the full code for this procedure.
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Ignite UI Required Combined CSS Files -->
+    <!-- %%ProductName%% Required Combined CSS Files -->
     <link href="../../igniteui/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
     <link href="../../igniteui/css/structure/infragistics.css" rel="stylesheet"/>
     <script type="text/javascript" src="../../js/jquery.min.js"></script>

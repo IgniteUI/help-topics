@@ -174,7 +174,7 @@ $(function () {
 
 The following steps demonstrate how to create a basic implementation of the igScroll widget on a web page using jQuery client code.
 
-To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) help topic.
+To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) help topic.
 
 1.  On your HTML page, **reference the required JavaScript and CSS** files.
 

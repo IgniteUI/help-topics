@@ -13,11 +13,11 @@
 
 The `igPercentEditor` control is jQuery-based control that extends `igNumericEditor` and exposes a number of options for styling. To customize style of your percent editor you can use different themes or apply custom CSS rules to the control. 
 
-The Ignite UI package comes with a number of jQuery UI and Bootstrap themes. Bootstrap support also includes generating and customizing your own bootstrap themes - see [Styling and Theming](Deployment-Guide-Styling-and-Theming.html) for details. All of the themes will style all controls including the editors on the page.
+The %%ProductName%% package comes with a number of jQuery UI and Bootstrap themes. Bootstrap support also includes generating and customizing your own bootstrap themes - see [Styling and Theming](Deployment-Guide-Styling-and-Theming.html) for details. All of the themes will style all controls including the editors on the page.
 
 ## Using ThemeRoller
 
-As the `igPercentEditor` control uses the jQuery UI CSS framework it can also be fully styled using the [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/) where you can customize your own theme or choose from a gallery of available ones. These themes replace the ones that come by default with Ignite UI.
+As the `igPercentEditor` control uses the jQuery UI CSS framework it can also be fully styled using the [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/) where you can customize your own theme or choose from a gallery of available ones. These themes replace the ones that come by default with %%ProductName%%.
 
 Percent editor using the UI Darkness theme:
 

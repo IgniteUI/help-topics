@@ -20,7 +20,7 @@ This topic demonstrates how to configure the Tooltips Popover style.
 
 The following table lists the topics required as a prerequisite to understanding this topic.
 
-- [Touch Support for Ignite UI Controls](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html): This topic introduces to user to the new updates that jQuery controls has to support touch interactions.
+- [Touch Support for %%ProductName%% Controls](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html): This topic introduces to user to the new updates that jQuery controls has to support touch interactions.
 
 - [igGrid™ Tooltips Overview](igGrid-Tooltips-Overview.html): This topic shows how to enable and use `igGrid` tooltips.
 
@@ -143,7 +143,7 @@ The following topics provide additional information related to this topic.
 
 - [igGrid Tooltips Overview](igGrid-Tooltips-Overview.html): Topic describing the properties and behavior of the `igGrid` Tooltips.
 
-- [Touch Support for Ignite UI Controls](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html): This topic introduces to user to the new updates that jQuery controls has to support touch interactions.
+- [Touch Support for %%ProductName%% Controls](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html): This topic introduces to user to the new updates that jQuery controls has to support touch interactions.
 
 
 

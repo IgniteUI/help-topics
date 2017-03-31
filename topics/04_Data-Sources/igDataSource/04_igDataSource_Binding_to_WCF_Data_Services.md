@@ -10,7 +10,7 @@
 
 # Binding igDataSource to WCF Data Services
 
-The `igDataSource` is a client-side JavaScript data source component that can bind to a variety of formats of data including XML, JSON, Atom, JavaScript arrays, and even HTML tables. You can see the different formats used in the Ignite UI [samples browser](%%SamplesUrl%%/data-source/mashup).
+The `igDataSource` is a client-side JavaScript data source component that can bind to a variety of formats of data including XML, JSON, Atom, JavaScript arrays, and even HTML tables. You can see the different formats used in the %%ProductName%% [samples browser](%%SamplesUrl%%/data-source/mashup).
 
 The `igDataSource` is ‘server agnostic’ which means that it takes no dependency on any type of server-side software platform. With that being said, developers using the .NET framework often want to leverage WCF to provide data in their RIA applications. This topic dissects one of the WCF samples from the samples browser and walks you through the process of setting up your own WCF service to deliver XML data to the `igDataSource` in an ASP.NET application.
 
@@ -25,11 +25,11 @@ The following steps walk you through building the sample in Microsoft Visual Stu
 
  >**Note**: [The complete sample is available for download here](http://dl.infragistics.com/community/jquery/codesamples/aaronm/2011-07-28/igDataSourceWCFService.zip).
 
-1.  Open Visual Studio and create a new ASP.NET Empty Web Application and name it ‘igDataSourceWCFService’: **Note**: As stated above, the `igDataSource` component is server-agnostic. Therefore this exercise demonstrates how you can implement WCF support in ASP.NET WebForms as opposed to ASP.NET MVC which Ignite UI supports out-of-the-box.
+1.  Open Visual Studio and create a new ASP.NET Empty Web Application and name it ‘igDataSourceWCFService’: **Note**: As stated above, the `igDataSource` component is server-agnostic. Therefore this exercise demonstrates how you can implement WCF support in ASP.NET WebForms as opposed to ASP.NET MVC which %%ProductName%% supports out-of-the-box.
 
     ![](images/dswcf_webapp.jpg)
 
-2.  Add a reference to the Ignite UI combined and minified script file, infragistics.core.js, which comes with the product. In addition, you must reference jQuery core, jQuery UI, and jQuery templating scripts to run the sample. This [help article discusses referencing the required scripts](Deployment-Guide-JavaScript-Resources.html) and where the combined and minified scripts are available to add to your application. **Note**: You can [download the full or trial product here](http://www.infragistics.com/dotnet/netadvantage/jquery-controls.aspx#Downloads). The jQuery [templates script is available here](http://plugins.jquery.com/tag/templates/).
+2.  Add a reference to the %%ProductName%% combined and minified script file, infragistics.core.js, which comes with the product. In addition, you must reference jQuery core, jQuery UI, and jQuery templating scripts to run the sample. This [help article discusses referencing the required scripts](Deployment-Guide-JavaScript-Resources.html) and where the combined and minified scripts are available to add to your application. **Note**: You can [download the full or trial product here](http://www.infragistics.com/dotnet/netadvantage/jquery-controls.aspx#Downloads). The jQuery [templates script is available here](http://plugins.jquery.com/tag/templates/).
 
 3.  Create a “scripts” directory in your project and copy the JavaScript files into this folder.
 
@@ -260,7 +260,7 @@ The following steps walk you through building the sample in Microsoft Visual Stu
 
 11. Run the application and the stock information for Microsoft will appear. At first, this will be the only company that has data available. To see data for all of the companies as well as the sample in its completed form, download the [full sample here](http://dl.infragistics.com/community/jquery/codesamples/aaronm/2011-07-28/igDataSourceWCFService.zip).
 
->**Note**: The Ignite UI script files are not included with this download. Please use the files installed with your copy of Ignite UI or download your copy [here](http://www.infragistics.com/dotnet/netadvantage/jquery-controls.aspx#Downloads).
+>**Note**: The %%ProductName%% script files are not included with this download. Please use the files installed with your copy of %%ProductName%% or download your copy [here](http://www.infragistics.com/dotnet/netadvantage/jquery-controls.aspx#Downloads).
 
 ## Related Topics
 Following are some other topics you may find useful.

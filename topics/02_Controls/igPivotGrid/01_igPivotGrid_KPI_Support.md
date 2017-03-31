@@ -15,7 +15,7 @@ igOlapXmlaDataSource)
 
 #### Purpose
 
-This topic explains conceptually how the Key Performance Indicators (KPIs) data from a multi-dimensional (OLAP) data set is visualized in Ignite UI™. The Ignite UI controls that visualize KPIs are the `igPivotDataSelector`™ and the `igPivotGrid`™.
+This topic explains conceptually how the Key Performance Indicators (KPIs) data from a multi-dimensional (OLAP) data set is visualized in %%ProductName%%™. The %%ProductName%% controls that visualize KPIs are the `igPivotDataSelector`™ and the `igPivotGrid`™.
 
 ### Required background
 

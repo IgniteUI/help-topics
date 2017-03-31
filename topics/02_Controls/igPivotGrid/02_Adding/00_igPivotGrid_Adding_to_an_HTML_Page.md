@@ -20,7 +20,7 @@ This topic explains, in both conceptual and step-by-step form, how to add the `i
 
 The following topics are prerequisites to understanding this topic:
 
-- [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html): This topic provides general guidance on adding required JavaScript resources to use controls from the Ignite UI library.
+- [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html): This topic provides general guidance on adding required JavaScript resources to use controls from the %%ProductName%% library.
 
 - [igPivotGrid Overview](igPivotGrid-Overview.html): This topic provides conceptual information about the `igPivotGrid` control including its main features, minimum requirements and user functionality.
 
@@ -78,7 +78,7 @@ The following table summarizes the requirements for using the `igPivotGrid` cont
 			</td>
 
 			<td>
-				Ignite UI™ is built on top of the following frameworks:
+				%%ProductName%%™ is built on top of the following frameworks:
 
 				<ul>
 					<li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
@@ -116,17 +116,17 @@ The following table summarizes the requirements for using the `igPivotGrid` cont
 			</td>
 
 			<td>
-				The igPivotGrid functionality of the Ignite UI library is distributed across several files. You can load the required resources in one of the following ways:
+				The igPivotGrid functionality of the %%ProductName%% library is distributed across several files. You can load the required resources in one of the following ways:
 
 				<ul>
-					<li>**Including a custom JavaScript file**: This is the recommended approach to reference Ignite UI JavaScript files. You can [create a custom download](%%SamplesUrl%%/download) of selected Ignite UI controls and components.</li>
+					<li>**Including a custom JavaScript file**: This is the recommended approach to reference %%ProductName%% JavaScript files. You can [create a custom download](%%SamplesUrl%%/download) of selected %%ProductName%% controls and components.</li>
                     
 					<li>**Using Infragistics Loader**: The *Infragistics Loader* can be used to resolve all the Infragistics resources (styles and scripts)</li>
 
 					<li>Load the required resources manually. You need to use the dependencies listed in the table below.</li>
 				</ul>
 
-				The following table lists the Ignite UI library dependences related to the igPivotGrid control. These resources need to be referred to explicitly if you chose to load resources manually (i.e. not to use `igLoader`).
+				The following table lists the %%ProductName%% library dependences related to the igPivotGrid control. These resources need to be referred to explicitly if you chose to load resources manually (i.e. not to use `igLoader`).
 
 				<table cellspacing="0" cellpadding="0" class="table table-bordered">
 					<tbody>
@@ -146,7 +146,7 @@ The following table summarizes the requirements for using the `igPivotGrid` cont
 							</td>
 
 							<td>
-								Ignite UI utilities
+								%%ProductName%% utilities
 							</td>
 						</tr>
 
@@ -190,7 +190,7 @@ The following table summarizes the requirements for using the `igPivotGrid` cont
 							</td>
 
 							<td>
-								Ignite UI shared code
+								%%ProductName%% shared code
 							</td>
 						</tr>
 
@@ -229,7 +229,7 @@ The following table summarizes the requirements for using the `igPivotGrid` cont
 							</td>
 
 							<td height="22">
-								Ignite UI shared code for pivot components
+								%%ProductName%% shared code for pivot components
 							</td>
 						</tr>
 
@@ -267,7 +267,7 @@ The following table summarizes the requirements for using the `igPivotGrid` cont
 			</td>
 
 			<td>
-				This theme contains the visual styles for the Ignite UI library. The theme file is:
+				This theme contains the visual styles for the %%ProductName%% library. The theme file is:
 
 				<ul>
 					<li>`<IG CSS root>/themes/Infragistics/infragistics.theme.css`</li>
@@ -357,9 +357,9 @@ The following steps demonstrate how to add a jQuery `igPivotGrid`.
 
 		A. **Add the jQuery, jQuery UI, and Modernizr JavaScript resources to a folder named Scripts in the directory where your web page resides.**
 
-		B. **Add the Ignite UI CSS files to a folder named Content/ig (For details, see the  [Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html) topic).**
+		B. **Add the %%ProductName%% CSS files to a folder named Content/ig (For details, see the  [Styling and Theming %%ProductName%%](Deployment-Guide-Styling-and-Theming.html) topic).**
 
-		C. **Add the Ignite UI JavaScript files to a folder named Scripts/ig in your web site or application (For details,see the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) topics).**
+		C. **Add the %%ProductName%% JavaScript files to a folder named Scripts/ig in your web site or application (For details,see the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) topics).**
 
 	2. Add the references to the required JavaScript libraries.
 

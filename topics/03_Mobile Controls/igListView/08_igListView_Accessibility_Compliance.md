@@ -36,7 +36,7 @@ The following table lists the topics required as a prerequisite to understanding
 
 ## igListView Accessibility Compliance
 
-All of the Ignite UI™ Mobile controls and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. The Accessibility Compliance Reference chart that follows contains the specific rules of Subpart 1194.22 that pertain to the control. Also detailed is how the list view control complies with each rule.
+All of the %%ProductName%%™ Mobile controls and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. The Accessibility Compliance Reference chart that follows contains the specific rules of Subpart 1194.22 that pertain to the control. Also detailed is how the list view control complies with each rule.
 
 Apart from Section 508 we are also following [Mobile Web Best Practices](http://www.w3.org/TR/mobile-bp/) guide and [Web Content Accessibility Guidelines](http://www.w3.org/WAI/intro/wcag.php) guide.
 
@@ -62,7 +62,7 @@ Rules | Rule Text | How We Comply
 
 The following topics provide additional information related to this topic.
 
-- [Accessibility Compliance](Accessibility-Compliance.html): Provides reference information for accessibility compliance of all Ignite UI controls.
+- [Accessibility Compliance](Accessibility-Compliance.html): Provides reference information for accessibility compliance of all %%ProductName%% controls.
 
 - [Known Issues and Limitations](igListView-Known-Issues.html): This topic lists the known issues and limitations of `igListView`.
 

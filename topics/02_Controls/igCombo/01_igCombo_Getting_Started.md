@@ -25,8 +25,8 @@ The `igCombo`™ can be configured to run using jQuery or using the ASP.NET MVC 
 
 You need to first read the following topics:
 
--   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
--   [Styling and Theming in Ignite UI](Deployment-Guide-Styling-and-Theming.html)
+-   [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
+-   [Styling and Theming in %%ProductName%%](Deployment-Guide-Styling-and-Theming.html)
 
 ##Create a basic igCombo implementation
 
@@ -376,8 +376,8 @@ public class DefaultController : Controller{
 
 Following are some other topics you may find useful.
 
--   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
--   [Styling and Theming in Ignite UI](Deployment-Guide-Styling-and-Theming.html)
+-   [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
+-   [Styling and Theming in %%ProductName%%](Deployment-Guide-Styling-and-Theming.html)
 
  
 

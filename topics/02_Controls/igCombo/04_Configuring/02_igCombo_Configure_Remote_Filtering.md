@@ -188,7 +188,7 @@ Following is a conceptual overview of the process:
 
 2.  Configure the data source
 
-    Set the dataSource option to the URL of the OData service. In the case of the Ignite UI OData service, JSONP is used to avoid cross-domain restrictions of the browser. This is format is requested by passing a callback parameter in the OData request URI.
+    Set the dataSource option to the URL of the OData service. In the case of the %%ProductName%% OData service, JSONP is used to avoid cross-domain restrictions of the browser. This is format is requested by passing a callback parameter in the OData request URI.
 
     **In HTML:**
 
@@ -204,7 +204,7 @@ Following is a conceptual overview of the process:
 
 3.  Configure the response data key
 
-    The data is returned from OData in a specific schema. If you are accessing an OData v1 service, this key is typically ‘d’. The Ignite UI service is OData v2 and the response key is ‘d.results’.
+    The data is returned from OData in a specific schema. If you are accessing an OData v1 service, this key is typically ‘d’. The %%ProductName%% service is OData v2 and the response key is ‘d.results’.
 
     **In HTML:**
 

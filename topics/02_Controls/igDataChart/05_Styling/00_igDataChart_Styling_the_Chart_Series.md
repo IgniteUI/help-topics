@@ -348,9 +348,9 @@ The following topics provide additional information related to this topic.
 
 -   [Styling igDataChart](igDataChart-Styling-Themes.html): This topic demonstrates how to apply styles and themes to the `igDataChart` control.
 
--   [Styling and Theming in Ignite UI](Deployment-Guide-Styling-and-Theming.html)
+-   [Styling and Theming in %%ProductName%%](Deployment-Guide-Styling-and-Theming.html)
 
-General information and a procedure for updating styles and themes in Ignite UI™ library.
+General information and a procedure for updating styles and themes in %%ProductName%%™ library.
 
 
 ### <a id="samples"></a>Samples

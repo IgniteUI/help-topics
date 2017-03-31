@@ -30,7 +30,7 @@ The following table lists the topics, and concepts required as a prerequisite to
 
 **Topics**
 
-- [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html) General information on the Ignite UI™ library.
+- [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html) General information on the %%ProductName%%™ library.
 
  
 
@@ -275,7 +275,7 @@ The following table displays the supported map (series) types.
 
 ### <a id="min-introduction"></a>Introduction
 
-The `igMap` control is a jQuery UI widget and depends on the jQuery and jQuery UI libraries. The Modernzr library is used internally for detecting browser and device capabilities. The control uses shared resources from the Ignite UI™ for functionality and data binding. References to these resources are needed nevertheless, in spite of pure jQuery or ASP.NET MVC helpers being used. The `Infragistics.Web.Mvc` assembly is required when the control is used in the context of ASP.NET MVC.
+The `igMap` control is a jQuery UI widget and depends on the jQuery and jQuery UI libraries. The Modernzr library is used internally for detecting browser and device capabilities. The control uses shared resources from the %%ProductName%%™ for functionality and data binding. References to these resources are needed nevertheless, in spite of pure jQuery or ASP.NET MVC helpers being used. The `Infragistics.Web.Mvc` assembly is required when the control is used in the context of ASP.NET MVC.
 
 ### <a id="min-requirements-summary"></a>Requirements summary chart
 
@@ -309,7 +309,7 @@ The functionality of the igMap control is based on the HTML5 Canvas tag and its 
 			</td>
 
 			<td>
-				Ignite UI is built on top of these frameworks:
+				%%ProductName%% is built on top of these frameworks:
 
 				<ul>
 					<li>jQuery</li>
@@ -343,7 +343,7 @@ The functionality of the igMap control is based on the HTML5 Canvas tag and its 
 			</td>
 
 			<td>
-				The functionality of the igMap control uses some utilities and the data visualization core from the Ignite UI library.
+				The functionality of the igMap control uses some utilities and the data visualization core from the %%ProductName%% library.
 
 				<table class="table">
 					<thead>
@@ -360,7 +360,7 @@ The functionality of the igMap control is based on the HTML5 Canvas tag and its 
 							</td>
 
 							<td>
-								Ignite UI utilities
+								%%ProductName%% utilities
 							</td>
 						</tr>
 						
@@ -445,7 +445,7 @@ The functionality of the igMap control is based on the HTML5 Canvas tag and its 
 			<td>
 				The CSS resources consist of the IG theme and the map structure CSS.
 
-				The IG theme contains custom visual styles created for the Ignite UI library. It is contained in the following file:`{IG CSS root}/themes/Infragistics/infragistics.theme.css`
+				The IG theme contains custom visual styles created for the %%ProductName%% library. It is contained in the following file:`{IG CSS root}/themes/Infragistics/infragistics.theme.css`
 
 				The map structure CSS resource is used for rendering different elements of the map control:`{IG CSS root}/structure/modules/infragistics.ui.map.css`
 			</td>

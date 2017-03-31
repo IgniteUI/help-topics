@@ -20,12 +20,12 @@ This topic describes the known issues for the `igListView`™ control.
 
 The following table lists the topics required as a prerequisite to understanding this topic.
 
-- [Known Issues](Known-Issues-Revision-History.html): Provides reference information for known issues and limitations of all Ignite UI controls.
+- [Known Issues](Known-Issues-Revision-History.html): Provides reference information for known issues and limitations of all %%ProductName%% controls.
 
 
 ## Known Issues and Limitations
 
-The following table summarizes the known issues and limitations for `igListView`™ of the Ignite UI %%ProductVersionShort%% release. Detailed explanations of known issues and the possible workarounds are provided for some of the issues follow the summary table.
+The following table summarizes the known issues and limitations for `igListView`™ of the %%ProductName%% %%ProductVersionShort%% release. Detailed explanations of known issues and the possible workarounds are provided for some of the issues follow the summary table.
 
 ### Legend:
 <table class="table">
@@ -113,7 +113,7 @@ The following topics provide additional information related to this topic.
 
 - [Accessibility Compliance (igListView)](igListView-Accessibility-Compliance.html): This topic explains the accessibility features of the `igListView`™ and gives information on how to achieve accessibility compliance for pages containing `igListView`.
 
-- [Accessibility Compliance](Accessibility-Compliance.html): Provides reference information for accessibility compliance of all Ignite UI controls.
+- [Accessibility Compliance](Accessibility-Compliance.html): Provides reference information for accessibility compliance of all %%ProductName%% controls.
 
 
 

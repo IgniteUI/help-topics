@@ -19,14 +19,14 @@ This feature can be combined with additional remote features to achieve complete
 
 The following lists the concepts, topics, and articles required as a prerequisite to understanding this topic.
 
-- [Adding Controls to an MVC Project](Adding-NetAdvantage-Controls-to-an-MVC-Project.html): This topic explains how to get started with Ignite UI™ components in an ASP.NET MVC application.
+- [Adding Controls to an MVC Project](Adding-NetAdvantage-Controls-to-an-MVC-Project.html): This topic explains how to get started with %%ProductName%%™ components in an ASP.NET MVC application.
 
 
 ## Introduction
 
 The Load on Demand functionality enables the tree grid to request the data for the child nodes from the server as the user interacts with the grid (expands a node). This approach significantly reduces the data being transferred between the browser and the server.
 
-In order to take advantage of the remote load on demand functionality the controller action method responsible for processing the request should be decorated with TreeGridDataSourceAction attribute. This is all that needs to be done and the TreeGridDataSourceAction is handling everything else for you. In this scenario requests are handled by the ignite UI Grid MVC Wrapper which automatically adds parameter to the request and returns the data for the specific level only.  
+In order to take advantage of the remote load on demand functionality the controller action method responsible for processing the request should be decorated with TreeGridDataSourceAction attribute. This is all that needs to be done and the TreeGridDataSourceAction is handling everything else for you. In this scenario requests are handled by the %%ProductName%% Grid MVC Wrapper which automatically adds parameter to the request and returns the data for the specific level only.  
 
 When a row is expanded, the data for the child records is requested with an Ajax call to the server. The feature uses the same [`dataSourceUrl`](%%jQueryApiUrl%%/ui.igtreegrid#options:dataSourceUrl) address shared by other [remote features](igTreeGrid-Remote-Features.html). This means back-end implementations for multiple remote features need to be able to handle more than one style of request.
 
@@ -46,7 +46,7 @@ produces the following two requests, where the single root row has an primary ke
 
 and as visible, the child record's key value is "5", producing a path of `2/5` for its data request.
 
-> **Note:** While Ignite UI comes with ASP.NET MVC helper models to help developers, this feature in not dependent on the platform. Rather, Load on demand can be enabled through the [`enableRemoteLoadOnDemand`](%%jQueryApiUrl%%/ui.igtreegrid#options:enableRemoteLoadOnDemand) option and implemented with any server-side platform that can provide an endpoint to handle the incoming request and return the processed data as JSON.
+> **Note:** While %%ProductName%% comes with ASP.NET MVC helper models to help developers, this feature in not dependent on the platform. Rather, Load on demand can be enabled through the [`enableRemoteLoadOnDemand`](%%jQueryApiUrl%%/ui.igtreegrid#options:enableRemoteLoadOnDemand) option and implemented with any server-side platform that can provide an endpoint to handle the incoming request and return the processed data as JSON.
 
 ## <a id="walkthrough"></a> Walkthrough
 

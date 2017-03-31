@@ -12,7 +12,7 @@
 
 This section contains topics covering the use of the JavaScript Excel Library.
 
-This particular topic demonstrates how to export the contents of an Ignite UI `igGrid` to an Excel workbook using the new JavaScript Excel Library. Which can give you a general insight of how powerful the Infragistics JavaScript Excel Library is.
+This particular topic demonstrates how to export the contents of an %%ProductName%% `igGrid` to an Excel workbook using the new JavaScript Excel Library. Which can give you a general insight of how powerful the Infragistics JavaScript Excel Library is.
 
 ## Initial Setup 
 
@@ -26,7 +26,7 @@ $.ig.loader({
     resources: "igGrid.Summaries"
 });
 ```
-Here, the loader is configured to load JavaScript files from the js folder, load the Ignite UI styles from the Infragistics CDN and load the grid Summaries feature.
+Here, the loader is configured to load JavaScript files from the js folder, load the %%ProductName%% styles from the Infragistics CDN and load the grid Summaries feature.
 
 Once the scripts are loaded then the grid is constructed as shown in the following code:
 

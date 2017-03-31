@@ -11,9 +11,9 @@
 # igTextEditor Overview
 
 ## Overview Of The igTextEditor
-The Ignite UI™ text editor, or `igTextEditor`, is a control that renders an input field which can be formatted for single or multiline input.
+The %%ProductName%%™ text editor, or `igTextEditor`, is a control that renders an input field which can be formatted for single or multiline input.
 
-The `igTextEditor` control exposes a rich client-side API, which may be configured the work with any server technology. While the Ignite UI™ controls are server-agnostic, the control does feature wrappers specific for the Microsoft® ASP.NET MVC Framework to configure the control with the .NET™ language of your choice.
+The `igTextEditor` control exposes a rich client-side API, which may be configured the work with any server technology. While the %%ProductName%%™ controls are server-agnostic, the control does feature wrappers specific for the Microsoft® ASP.NET MVC Framework to configure the control with the .NET™ language of your choice.
 
 The `igTextEditor` control may be extensively styled giving you an opportunity to provide a completely different look and feel for the control as opposed to the default style. Styling options include using your own styles as well as styles from jQuery UI’s ThemeRoller.
 
@@ -36,7 +36,7 @@ The `igTextEditor` includes the following characteristics:
 
 ## Adding igTextEditor to a Web Page
 
-1.  To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) help topic.
+1.  To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) help topic.
 2.  On your HTML page or ASP.NET MVC View, reference the required JavaScript files, CSS files, and ASP.NET MVC assemblies.
 
     **In HTML:**
@@ -93,8 +93,8 @@ The `igTextEditor` includes the following characteristics:
 
 ## Related Links
 -   [Basic Usage Sample](%%SamplesUrl%%/editors/basic-usage)
--   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
--   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+-   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)
+-   [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 
  
 

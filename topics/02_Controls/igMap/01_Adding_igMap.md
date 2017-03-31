@@ -24,9 +24,9 @@ The following table lists the topics and external articles required as a prerequ
 
 **Topics**
 
--	[Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html): General information on the Ignite UI™ library.
+-	[%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html): General information on the %%ProductName%%™ library.
 
--	[Using JavaScript Resouces in Ignite UI](Deployment-Guide-JavaScript-Resources.html): This topic provides general guidance on adding required JavaScript resources to use controls from the Ignite UI library.
+-	[Using JavaScript Resouces in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html): This topic provides general guidance on adding required JavaScript resources to use controls from the %%ProductName%% library.
 
 -	[igMap Overview](Overview-igMap.html): This topic provides conceptual information about the `igMap` control including its main features, minimum requirements, and user interaction capabilities.
 
@@ -75,8 +75,8 @@ Following are the requirements for adding a map to a web page:
 
 -   References to the required resources. The required resources are:
     -   The jQuery, jQueryUI and Modernizr JavaScript resources (must reside in the scripts folder of your web site or web application)
-    -   The Ignite UI CSS files (must reside in the Infragistics® content folder of your web site or web application; topic for details, see the [Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html))
-    -   The Ignite UI JavaScript (must reside in the Infragistics scripts folder your web site or web application; for details, see the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) topic).
+    -   The %%ProductName%% CSS files (must reside in the Infragistics® content folder of your web site or web application; topic for details, see the [Styling and Theming %%ProductName%%](Deployment-Guide-Styling-and-Theming.html))
+    -   The %%ProductName%% JavaScript (must reside in the Infragistics scripts folder your web site or web application; for details, see the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) topic).
 
 You can add the references either manually or using the [Infragistics Loader](Using-Infragistics-Loader.html) (recommended).
 
@@ -223,8 +223,8 @@ Following are the requirements for adding a map to an ASP.NET MVC View:
 
 -   References to the required resources. The required resources are:
    -   The jQuery, jQueryUI and Modernizr JavaScript resources (must reside in the scripts folder of your web site or web application)
-    -   The Ignite UI CSS files (must reside in the Infragistics® content folder of your web site or web application; topic for details, see the [Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html))
-    -   The Ignite UI JavaScript (must reside in the Infragistics scripts folder your web site or web application; for details, see the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) topic).
+    -   The %%ProductName%% CSS files (must reside in the Infragistics® content folder of your web site or web application; topic for details, see the [Styling and Theming %%ProductName%%](Deployment-Guide-Styling-and-Theming.html))
+    -   The %%ProductName%% JavaScript (must reside in the Infragistics scripts folder your web site or web application; for details, see the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) topic).
 
 You can the references either manually or using the [Infragistics Loader](Using-Infragistics-Loader.html) (recommended).
 
@@ -237,7 +237,7 @@ include the `igLoader` script in the page:
 <script type="text/javascript" src="/Scripts/ig/js/infragistics.loader.js"></script>
 ```
 
-…and then reference the `Infragistics.Web.Mvc` assembly in your ASP.NET MVC project and the `Infragistics.Web.Mvc` namespace in your view. For details, see [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html). In the interest of clarity, the code to reference the namespace follows below.
+…and then reference the `Infragistics.Web.Mvc` assembly in your ASP.NET MVC project and the `Infragistics.Web.Mvc` namespace in your view. For details, see [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html). In the interest of clarity, the code to reference the namespace follows below.
 
 **In ASPX:**
 

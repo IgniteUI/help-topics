@@ -8,19 +8,19 @@
 |metadata|
 -->
 
-# Customizing the Localization of Ignite UI Controls
+# Customizing the Localization of %%ProductName%% Controls
 
 ##Topic Overview
 
 ### Purpose
 
-This topic explains how to localize the Ignite UI™ controls in your language of choice.
+This topic explains how to localize the %%ProductName%%™ controls in your language of choice.
 
 ### Required Background
 
 The following table lists the topics required as a prerequisite to understanding this topic.
 
-[Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) : This topic describes Ignite UI folder structure, how to use Infragistics loader and how to manually reference controls.
+[Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) : This topic describes %%ProductName%% folder structure, how to use Infragistics loader and how to manually reference controls.
 
 ### In this topic
 
@@ -42,7 +42,7 @@ This topic contains the following sections:
 ##<a id="Introduction"></a>Introduction
 
 
-### Introduction to localizing Ignite UI controls
+### Introduction to localizing %%ProductName%% controls
 
 Currently we ship jQuery controls in the following languages:
 
@@ -79,11 +79,11 @@ If you want to set another language you need to follow a different procedure:
 
 ### <a id="subIntroduction"></a>Introduction
 
-This section describes the available localization files for Ignite UI controls. You can find these files under the *<IgniteUI_Install_Folder>\js\modules\i18n* folder, where <IgniteUI_Install_Folder> points to the directory where you installed the Ignite UI product.
+This section describes the available localization files for %%ProductName%% controls. You can find these files under the *<IgniteUI_Install_Folder>\js\modules\i18n* folder, where <IgniteUI_Install_Folder> points to the directory where you installed the %%ProductName%% product.
 
 ###<a id="LocalizationSummary"></a> Control localization reference summary
 
-The following table summarizes localization files for Ignite UI controls.
+The following table summarizes localization files for %%ProductName%% controls.
 
 <table class="table">
 	<thead>
@@ -164,7 +164,7 @@ The following screenshot is a preview of the final result.
 
 ### <a id="Requirements"></a>Requirements
 
-To complete the procedure, you need an installation of Ignite UI %%ProductVersionShort%% (English redistributable).
+To complete the procedure, you need an installation of %%ProductName%% %%ProductVersionShort%% (English redistributable).
 
 >**Note**:  We assume that the installation path is `%%InstallPath%%`
 
@@ -243,9 +243,9 @@ The following steps demonstrate how to localize x control.
 
 The following topics provide additional information related to this topic.
 
-- [General and Getting Started](Getting-Started.html): This topic describes how to deploy Ignite UI controls.
+- [General and Getting Started](Getting-Started.html): This topic describes how to deploy %%ProductName%% controls.
 
-- [JavaScript Files in Ignite UI](Deployment-Guide-JavaScript-Files.html) : This topic lists all JavaScript files in Ignite UI.
+- [JavaScript Files in %%ProductName%%](Deployment-Guide-JavaScript-Files.html) : This topic lists all JavaScript files in %%ProductName%%.
 
 
 

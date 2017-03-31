@@ -20,9 +20,9 @@ This topic explains, in both conceptual and step-by-step form, how to add the `i
 
 The following topics are prerequisites to understanding this topic:
 
-- [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html): This topic provides some general information on the Ignite UI™ library.
+- [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html): This topic provides some general information on the %%ProductName%%™ library.
 
-- [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html):This topic provides general guidance on adding the required JavaScript resources for using the controls from the Ignite UI library.
+- [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html):This topic provides general guidance on adding the required JavaScript resources for using the controls from the %%ProductName%% library.
 
 - [igPivotDataSelector Overview](igPivotDataSelector-Overview.html):This topic provides conceptual information about the `igPivotDataSelector` control including its main features, requirements, and user functionality.
 
@@ -80,7 +80,7 @@ The following table summarizes the requirements for using the `igPivotDataSelect
 			</td>
 
 			<td>
-				Ignite UI™ is built on top of these frameworks:
+				%%ProductName%%™ is built on top of these frameworks:
 
 				<ul>
 					<li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
@@ -118,7 +118,7 @@ The following table summarizes the requirements for using the `igPivotDataSelect
 			</td>
 
 			<td>
-				The igPivotDataSelector functionality of the Ignite UI library is distributed across several files. You can load the required resources in one of the following ways:
+				The igPivotDataSelector functionality of the %%ProductName%% library is distributed across several files. You can load the required resources in one of the following ways:
 
 				<ul>
 					<li>(Recommended)&nbsp;Use the Infragistics® Loader (`igLoader`™). You only need to include a script reference to `igLoader` on your page.</li>
@@ -126,7 +126,7 @@ The following table summarizes the requirements for using the `igPivotDataSelect
 					<li>Load the required resources manually. You need to use the dependencies listed in the table below.</li>
 				</ul>
 
-				The following table lists the Ignite UI library dependences related to the `igPivotDataSelector` control. These resources need to be referred to explicitly if you chose to load resources manually (i.e. not to use `igLoader`).
+				The following table lists the %%ProductName%% library dependences related to the `igPivotDataSelector` control. These resources need to be referred to explicitly if you chose to load resources manually (i.e. not to use `igLoader`).
 
 				<table cellspacing="0" cellpadding="0" class="table table-bordered">
 					<tbody>
@@ -146,7 +146,7 @@ The following table summarizes the requirements for using the `igPivotDataSelect
 							</td>
 
 							<td>
-								Ignite UI utilities
+								%%ProductName%% utilities
 							</td>
 						</tr>
 
@@ -190,7 +190,7 @@ The following table summarizes the requirements for using the `igPivotDataSelect
 							</td>
 
 							<td>
-								Ignite UI shared code
+								%%ProductName%% shared code
 							</td>
 						</tr>
 
@@ -230,7 +230,7 @@ The following table summarizes the requirements for using the `igPivotDataSelect
 							</td>
 
 							<td height="22">
-								Ignite UI shared code for pivot components
+								%%ProductName%% shared code for pivot components
 							</td>
 						</tr>
 
@@ -266,7 +266,7 @@ The following table summarizes the requirements for using the `igPivotDataSelect
 			</td>
 
 			<td>
-				This theme contains the visual styles for the Ignite UI library. The theme file is:
+				This theme contains the visual styles for the %%ProductName%% library. The theme file is:
 
 				<ul>
 					<li>`<IG CSS root>/themes/Infragistics/infragistics.theme.css`</li>
@@ -357,9 +357,9 @@ The following steps demonstrate how to add a jQuery `igPivotDataSelector`.
 		
 		A. Add the jQuery, jQueryUI and Modernizr JavaScript resources to a folder named Scripts in the directory where your web page resides.
 
-		B. Add the Ignite UI CSS files to a folder named Content/ig (For details, see the [Styling and Theming in Ignite UI](Deployment-Guide-Styling-and-Theming.html) topic).
+		B. Add the %%ProductName%% CSS files to a folder named Content/ig (For details, see the [Styling and Theming in %%ProductName%%](Deployment-Guide-Styling-and-Theming.html) topic).
 
-		C. Add the Ignite UI JavaScript files to a folder named Scripts/ig in your web site or application (For details, see the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) topic).
+		C. Add the %%ProductName%% JavaScript files to a folder named Scripts/ig in your web site or application (For details, see the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) topic).
 
 	2. Add the references to the required JavaScript libraries.
 

@@ -22,7 +22,7 @@ This is a group of topics explaining how to configure the various aspects of the
 ### Topics
 
 
--	[Animating Charts (Motion Framework for Charts)](igDataChart-Animating-Charts.html): The Infragistics® Motion Framework™ is a framework for animating data changes in Ignite UI™ chart controls.
+-	[Animating Charts (Motion Framework for Charts)](igDataChart-Animating-Charts.html): The Infragistics® Motion Framework™ is a framework for animating data changes in %%ProductName%%™ chart controls.
 
 -	[Configuring the Chart Title and Subtitle (igDataChart)](igDataChart-Chart-Titles-and-Subtitles.html): This topic provides information on using the chart title and subtitle feature of the `igDataChart`™ control.
 

@@ -22,7 +22,7 @@ This is a group of topics explaining how to bind `igGrid`™ control to differen
 
 - [Binding igGrid to DataTable (*igGrid*)](igGrid-Binding-to-DataTable.html): This topic introduces the feature and demonstrates how to configure and use a `DataTable` with the Grid ASP.NET MVC Helper.
 
-- [Binding igGrid to Web Services (*igGrid*)](igGrid-Binding-to-Web-Services.html): This document demonstrates how to bind the Ignite UI® `igGrid`, to an *oData* protocol web-based data source.
+- [Binding igGrid to Web Services (*igGrid*)](igGrid-Binding-to-Web-Services.html): This document demonstrates how to bind the %%ProductName%%® `igGrid`, to an *oData* protocol web-based data source.
 
 - [Client-Side Data Binding (*igGrid*)](igGrid-Client-Side-Binding.html): This document demonstrates how to bind the `igGrid` control to a JSON array, JavaScript array and HTML table element.
 

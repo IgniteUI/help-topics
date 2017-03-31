@@ -14,13 +14,13 @@
 ## Topic Overview
 ### Purpose
 
-This topic lists the known issues and limitations in the 2011 Volume 1 release of the Ignite UI™ library.
+This topic lists the known issues and limitations in the 2011 Volume 1 release of the %%ProductName%%™ library.
 
 
 ## Known Issues and Limitations in 2011 Volume 1
 ### Overview
 
-The following table summarizes the known issues and limitations in the 2011 Volume 1 release of the Ignite UI. Detailed explanations of known issues and the possible workarounds are provided for in the known issues topics for each control.
+The following table summarizes the known issues and limitations in the 2011 Volume 1 release of the %%ProductName%%. Detailed explanations of known issues and the possible workarounds are provided for in the known issues topics for each control.
 
 ### Legend:
 

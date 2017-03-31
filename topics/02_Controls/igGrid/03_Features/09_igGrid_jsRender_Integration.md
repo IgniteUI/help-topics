@@ -86,7 +86,7 @@ The following screenshot previews of the result. In this example the rows the ce
 
 To complete the procedure, you need the following:
 
-1.  The required Ignite UI JavaScript and CSS files for version 13.2
+1.  The required %%ProductName%% JavaScript and CSS files for version 13.2
 2.  The jsRender library referenced on the page
 
 **In JavaScript:**

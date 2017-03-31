@@ -20,7 +20,7 @@ This topic demonstrates how to use the `igGrid`™ control’s Multiple Sorting 
 
 The following table lists the topics required as a prerequisite to understanding this topic.
 
-- [Touch Support for Ignite UI Controls](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html): This topic introduces the updates to Ignite UI™ controls for touch-support interactions.
+- [Touch Support for %%ProductName%% Controls](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html): This topic introduces the updates to %%ProductName%%™ controls for touch-support interactions.
 
 - [igGrid Feature Chooser](igGrid-Feature-Chooser.html): This topic explains the `igGrid`™ Feature Chooser menu and its sections.
 
@@ -121,7 +121,7 @@ Property | Description
 [modalDialogCaptionButtonDesc](%%jQueryApiUrl%%/ui.iggridsorting#options:modalDialogCaptionButtonDesc) | Specifies caption for each descending sorted column in multiple sorting dialog.
 [modalDialogCaptionButtonAsc](%%jQueryApiUrl%%/ui.iggridsorting#options:modalDialogCaptionButtonAsc) | Specifies the caption for each ascending sorted column in the multiple sorting dialog.
 [modalDialogCaptionButtonUnsort](%%jQueryApiUrl%%/ui.iggridsorting#options:modalDialogCaptionButtonUnsort) | Specifies caption for unsort button in multiple sorting dialog.
-[unsortedColumnTooltip](%%jQueryApiUrl%%/ui.iggridsorting#options:unsortedColumnTooltip) | Custom unsorted column tooltip in Ignite UI templating format.
+[unsortedColumnTooltip](%%jQueryApiUrl%%/ui.iggridsorting#options:unsortedColumnTooltip) | Custom unsorted column tooltip in %%ProductName%% templating format.
 [modalDialogCaptionText](%%jQueryApiUrl%%/ui.iggridsorting#options:modalDialogCaptionText) | Specifies caption text for multiple sorting dialog.
 [modalDialogButtonApplyText](%%jQueryApiUrl%%/ui.iggridsorting#options:modalDialogButtonApplyText) | Specifies the text of the button which applies changes in modal dialog.
 [modalDialogButtonCancelText](%%jQueryApiUrl%%/ui.iggridsorting#options:modalDialogButtonCancelText) | Specifies the text of the button which cancels changes in modal dialog.
@@ -174,7 +174,7 @@ Event | Description
 
 The following topics provide additional information related to this topic.
 
-- [Touch Support for Ignite UI Controls](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html): This topic introduces the updates to Ignite UI™ controls for touch-support interactions.
+- [Touch Support for %%ProductName%% Controls](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html): This topic introduces the updates to %%ProductName%%™ controls for touch-support interactions.
 
 - [igGrid Feature Chooser](igGrid-Feature-Chooser.html): This topic explains the `igGrid`™ Feature Chooser menu and its sections.
 

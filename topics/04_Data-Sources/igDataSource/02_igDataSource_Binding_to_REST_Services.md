@@ -11,7 +11,7 @@
 # Binding igDataSource to REST Services
 
 ## Overview
-This document demonstrates how to bind REST services to the Ignite UI™ data source, or `igDataSource`, control. To show the true flexibility of the data source control, the included sample does not use the Ignite UI grid, or `igGrid`, control to render data to the user. Instead you learn how to handle rendering manually directly from the data source.
+This document demonstrates how to bind REST services to the %%ProductName%%™ data source, or `igDataSource`, control. To show the true flexibility of the data source control, the included sample does not use the %%ProductName%% grid, or `igGrid`, control to render data to the user. Instead you learn how to handle rendering manually directly from the data source.
 
 >**Note:** Using a manual rendering approach implies that you may use the `igDataSource` control to build your own data bound controls
 

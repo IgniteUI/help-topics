@@ -7,12 +7,12 @@
 }
 |metadata|
 -->
-# Ignite UI Scaffolder Visual Studio extension
+# %%ProductName%% Scaffolder Visual Studio extension
 
 ### Introduction
 
 
-With the 2015.2 Release, we introduce the **Ignite UI** Scaffolder Extension.
+With the 2015.2 Release, we introduce the **%%ProductName%%** Scaffolder Extension.
 
 It allows the developer to easily generate MVC wrapper widget declarations, as well as related Controller action methods.
 This saves a lot of time for manual setup, referencing and coding.
@@ -33,7 +33,7 @@ In order to take advantage of the Scaffolding mechanism, just follow the steps o
 3. Click on the "Add" menu item and then on "New Scaffolder Item..." option.
 This set of steps is demonstrated in the screenshot below:
 ![](images/Step1.png)
-4. Next, you will be prompted to choose the type of Scaffolding item you want - this can be an "Ignite UI View" or an "Ignite UI Controller with View".
+4. Next, you will be prompted to choose the type of Scaffolding item you want - this can be an "%%ProductName%% View" or an "%%ProductName%% Controller with View".
 These selection options are demonstrated in the screenshot below:
 ![](images/Step2.png)
 The difference between these two options is that one adds a simple View, whereas the other one creates a View, along with a controller.
@@ -43,7 +43,7 @@ In the second and last tab, you can choose which properties to enable in the com
 This is demonstrated in the screenshot below:
 ![](images/Step3.png)
 6. Once we are done with the settings for the component that we are adding, we click on the "Add" button. This automatically adds a view, containing the widget wrapper definition, along with all the settings that we have enabled.
-You can further customize it, add or remove properties and methods, as you would normally do in a standard view, containing an Ignite UI widget wrapper.
+You can further customize it, add or remove properties and methods, as you would normally do in a standard view, containing an %%ProductName%% widget wrapper.
 
 ###Prerequisites
 

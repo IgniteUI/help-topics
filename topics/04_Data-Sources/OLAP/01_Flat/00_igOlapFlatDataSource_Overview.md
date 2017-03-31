@@ -21,7 +21,7 @@ The following table lists the topics and concepts required as a prerequisite to 
 
 **Topics**
 
-- [Multidimensional (OLAP) Data Source Components](Multidimensional-Data-Source-Components.html): This group of topics explain the multidimensional (OLAP) data source components of the Ignite UI™ suite.
+- [Multidimensional (OLAP) Data Source Components](Multidimensional-Data-Source-Components.html): This group of topics explain the multidimensional (OLAP) data source components of the %%ProductName%%™ suite.
 
 External Resources
 
@@ -40,7 +40,7 @@ This topic contains the following sections:
     -   [Multiple data types support](#multiple-data-types)
     -   [OLAP metadata generation](#olap-metadata-generation)
     -   [Data slices generation](#data-slice-generation)
-    -   [Integration with Ignite UI controls](#integration-with-igniteui)
+    -   [Integration with %%ProductName%% controls](#integration-with-igniteui)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
     -   [Samples](#samples)
@@ -49,7 +49,7 @@ This topic contains the following sections:
 
 ## <a id="introduction"></a>Introduction
 
-The `igOlapFlatDataSource` component enables multi-dimensional (OLAP-like) analysis to be performed on flat data collections. Given a data collection or an [igDataSource](igDataSource-igDataSource.html)™ instance and based on the user configuration, it extracts the necessary metadata in order to create dimensions of hierarchies and measures. The `igOlapFlatDataSource` component also performs calculations and aggregates data as requested using the component’s API directly or through one or more of the Ignite UI widgets capable of visualizing and interacting with OLAP data, e.g. `igPivotView`™ or `igPivotGrid`™.
+The `igOlapFlatDataSource` component enables multi-dimensional (OLAP-like) analysis to be performed on flat data collections. Given a data collection or an [igDataSource](igDataSource-igDataSource.html)™ instance and based on the user configuration, it extracts the necessary metadata in order to create dimensions of hierarchies and measures. The `igOlapFlatDataSource` component also performs calculations and aggregates data as requested using the component’s API directly or through one or more of the %%ProductName%% widgets capable of visualizing and interacting with OLAP data, e.g. `igPivotView`™ or `igPivotGrid`™.
 
 
 ## <a id="main-features"></a>Main Features Summary
@@ -63,7 +63,7 @@ The following table summarizes the main features of the `igOlapFlatDataSource` c
 
 - [Data slices generation](#data-slice-generation): After hierarchies are assigned as rows/columns, the `igOlapFlatDataSource` generates one or more result axes containing tuples of members from the corresponding hierarchies. If measures, too, have been chosen, the `igOlapFlatDataSource` generates a two-dimensional array of value cell objects.
 
-- [Integration with Ignite UI controls](#integration-with-igniteui): The `igOlapFlatDataSource` component can feed data to those data visualization controls of Ignite UI that are capable of presenting OLAP data.
+- [Integration with %%ProductName%% controls](#integration-with-igniteui): The `igOlapFlatDataSource` component can feed data to those data visualization controls of %%ProductName%% that are capable of presenting OLAP data.
 
 
 
@@ -91,9 +91,9 @@ The `igOlapFlatDataSource` component represents an abstraction of a pivot table.
 
 -   [**Configuring the Tabular View of the Result Set by Arranging the Columns, Rows, Filters, and Measures of the Pivot Grid (igOlapFlatDataSource, igOlapXmlaDataSource, igPivotDataSelector, igPivotGrid, igPivotView)**](Configuring-the-Tabular-View.html)
 
-### <a id="integration-with-igniteui"></a>Integration with Ignite UI controls
+### <a id="integration-with-igniteui"></a>Integration with %%ProductName%% controls
 
-The `igOlapFlatDataSource` component can feed data to those data visualization controls of Ignite UI that are capable of presenting OLAP data. The controls supported at this writing are `igPivotDataSelector`, `igPivotGrid`, and `igPivotView`.
+The `igOlapFlatDataSource` component can feed data to those data visualization controls of %%ProductName%% that are capable of presenting OLAP data. The controls supported at this writing are `igPivotDataSelector`, `igPivotGrid`, and `igPivotView`.
 
 #### Related Topics:
 

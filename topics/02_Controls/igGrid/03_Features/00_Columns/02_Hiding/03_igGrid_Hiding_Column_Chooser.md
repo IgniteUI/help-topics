@@ -20,7 +20,7 @@ This topic demonstrates how to use the `igGrid`™ control’s Hiding Column Cho
 
 The following table lists the topics required as a prerequisite to understanding this topic.
 
-- [**Touch Support for Ignite UI Controls**](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html): This topic introduces the updates to Ignite UI™ controls for touch-support interactions.
+- [**Touch Support for %%ProductName%% Controls**](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html): This topic introduces the updates to %%ProductName%%™ controls for touch-support interactions.
 
 - [**igGrid Feature Chooser**](igGrid-Feature-Chooser.html): This topic explains the `igGrid` Feature Chooser menu and its sections.
 
@@ -163,7 +163,7 @@ Event | Description
 
 The following topics provide additional information related to this topic.
 
-- [**Touch Support for Ignite UI Controls**](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html): This topic introduces the updates to Ignite UI™ controls for touch-support interactions.
+- [**Touch Support for %%ProductName%% Controls**](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html): This topic introduces the updates to %%ProductName%%™ controls for touch-support interactions.
 
 - [**igGrid Feature Chooser**](igGrid-Feature-Chooser.html): This topic explains the `igGrid` Feature Chooser menu and its sections.
 

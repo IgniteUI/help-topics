@@ -13,7 +13,7 @@
 ## New Features
 ### Features overview
 
-The following table summarizes the new features for the Ignite UI™ 2012 Volume 2 release. Additional details are available after the summary table.
+The following table summarizes the new features for the %%ProductName%%™ 2012 Volume 2 release. Additional details are available after the summary table.
 
 - [igHtmlEditor control](#ightmleditor-control): The new `igHtmlEditor`™ is a jQuery WYSIWYG control and provides HTML editing capabilities in the web browser.
 

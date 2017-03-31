@@ -217,7 +217,7 @@ The `igCombo` control is displayed in a HTML element with inline-block property,
 
 The following topics provide additional information related to this topic.
 
--	[Knockout Support (Editors)](Configuring-Knockout-Support-%28Editors%29.html): This topic explains how to configure Ignite UI editor controls to bind to View-Model objects managed by the [Knockout library](http://knockoutjs.com/).
+-	[Knockout Support (Editors)](Configuring-Knockout-Support-%28Editors%29.html): This topic explains how to configure %%ProductName%% editor controls to bind to View-Model objects managed by the [Knockout library](http://knockoutjs.com/).
 
 ###<a id="samples"></a> Samples
 

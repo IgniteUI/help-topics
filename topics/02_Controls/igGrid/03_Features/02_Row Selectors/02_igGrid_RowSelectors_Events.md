@@ -81,7 +81,7 @@ $("#grid1").delegate("#iggridrowselectorsrowselectorclicked’": function (e, ar
 );
 ```
 
-> **Note:** For more information please read the topic [Using Events in Ignite UI](Using-Events-in-NetAdvantage-for-jQuery.html).
+> **Note:** For more information please read the topic [Using Events in %%ProductName%%](Using-Events-in-NetAdvantage-for-jQuery.html).
 
 ## <a id="reference-chart"></a> Events Reference Chart 
 
