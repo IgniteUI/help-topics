@@ -40,7 +40,7 @@ Following are the general requirements for adding an `igSparkline` to your appli
 -   The jQuery JavaScript framework
 -   The jQuery UI JavaScript UI framework
 -   The Modernizr JavaScript library to support touch interactions
--   Infragistics Ignite UI JavaScript and CSS Resources
+-   Infragistics %%ProductName%% JavaScript and CSS Resources
 -   A one-dimensional data source containing numeric or date data
 -   If you are going to use the ASP.NET MVC helper you will also require the `Infragistics.Web.Mvc.dll` assembly
 

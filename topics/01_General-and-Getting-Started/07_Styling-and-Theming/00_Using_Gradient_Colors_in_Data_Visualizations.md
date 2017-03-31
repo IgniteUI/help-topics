@@ -16,7 +16,7 @@
 
 #### Purpose
 
-This topic explains how to apply gradient colors to the data visuals in Ignite UI™ controls. This capability is supported for the following data visualization controls:
+This topic explains how to apply gradient colors to the data visuals in %%ProductName%%™ controls. This capability is supported for the following data visualization controls:
 
 -   [igBulletGraph](igBulletGraph.html)™
 -   [igDataChart](igDataChart-Landing-Page.html)™
@@ -33,7 +33,7 @@ The following topics are prerequisites to understanding this topic:
 
 ####Topics
 
-[Styling and Theming in Ignite UI](Deployment-Guide-Styling-and-Theming.html): This topic provides instructions on setting up your application for design time, options for using CSS in production and an overview on creating or customizing a theme.
+[Styling and Theming in %%ProductName%%](Deployment-Guide-Styling-and-Theming.html): This topic provides instructions on setting up your application for design time, options for using CSS in production and an overview on creating or customizing a theme.
 
 [Adding igDataChart](igDataChart-Adding.html): This topic demonstrates how to add the igDataChart control to a page and bind it to data.
 
@@ -312,7 +312,7 @@ brush: {
 
 #### <a id="_Overview_CSS"></a>Overview
 
-Some of the Ignite UI data visualization controls support setting the gradient colors for some of their color-related properties through CSS. In order to specify a gradient color via CSS, you need to create a CSS rule that targets a specified class and sets the background-image property of the visual element to a function specifying the gradient (e.g. linear-gradient). If a CSS gradient color is specified together with a solid color CSS setting, the gradient color setting will take precedence.
+Some of the %%ProductName%% data visualization controls support setting the gradient colors for some of their color-related properties through CSS. In order to specify a gradient color via CSS, you need to create a CSS rule that targets a specified class and sets the background-image property of the visual element to a function specifying the gradient (e.g. linear-gradient). If a CSS gradient color is specified together with a solid color CSS setting, the gradient color setting will take precedence.
 
 >**Note:** If the color is specified both through the API and the CSS
 classes, the API settings take precedence and will render the respective

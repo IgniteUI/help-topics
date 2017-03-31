@@ -22,7 +22,7 @@ The following table lists the topics and concepts required as a prerequisite to 
 
 **Topics**
 
-- [Multidimensional (OLAP) Data Source Components](Multidimensional-Data-Source-Components.html): This group of topics explains the multidimensional (OLAP) data source components of the Ignite UI™ suite.
+- [Multidimensional (OLAP) Data Source Components](Multidimensional-Data-Source-Components.html): This group of topics explains the multidimensional (OLAP) data source components of the %%ProductName%%™ suite.
 
 
 **External Resources**
@@ -77,7 +77,7 @@ Data Selection|Given a data source, the `igPivotDataSelector` provides drop-down
 Metadata Tree|All the available dimensions with their respective hierarchies along with a list with all the available measures are loaded in a tree once the user chooses a database, cube, and measure group.![](images/igPivotDataSelector_Overview_3.png) When the user selects a Measure group, the measures are filtered accordingly. If none is selected, all measures will be available in the metadata tree.
 Slice Interaction| Unless custom restrictions are applied, all available hierarchies from the tree can be drag-and-dropped to one of the following areas: Rows, Columns, Filters. All available measures from the tree can be drag-and-dropped to the Measures area.![](images/igPivotDataSelector_Overview_4.png)
 Deferred Update|The `igPivotDataSelector` supports two data source update modes based on when the data source gets updated after the user makes a change in the control:<ul><li>Immediate – when the user makes a change in the control, that change gets executed immediately in the underlying back-end to update the data source. The user has to wait until the control is refreshed to the new state before they are can interact with the control again.</li><li>Deferred – the system is not updated until the user explicitly carries out a refresh operation (via an update button). This enables users to perform multiple changes without having to wait for the control to refresh after each change.</li></ul>Deferred update improves the performance of the control by not taxing system resources, especially when very large amounts of data are involved.In `igPivotDataSelector`, the user can control the refresh mode through the Defer Update checkbox and, if the box is checked, manually refresh the data source at their discretion by pressing the update button.<br>![](images/igPivotDataSelector_Overview_5.png)
-Support for interaction with other Ignite UI controls|`igPivotDataSelector` uses the same data source instance as other Ignite UI controls, such as `igPivotGrid`. This enables you to build complete OLAP data visualization applications. (You can use the `igPivotView` control which has similar purpose.)
+Support for interaction with other %%ProductName%% controls|`igPivotDataSelector` uses the same data source instance as other %%ProductName%% controls, such as `igPivotGrid`. This enables you to build complete OLAP data visualization applications. (You can use the `igPivotView` control which has similar purpose.)
 
 
 ##<a id="user-interaction"></a>User Interactions and Usability
@@ -101,7 +101,7 @@ Update the grid on demand if Deferred Update is enabled|By clicking the Update L
 
 ### Requirements summary
 
-Because the `igPivotDataSelector` control is a jQuery UI widget, it depends on jQuery and jQuery UI libraries. The Modernzr library is also used internally for detecting browser and device capabilities. The control uses several Ignite UI shared resources for its functionality. References to these resources are needed nevertheless, in spite of pure jQuery or ASP.NET MVC helpers being used. The `Infragistics.Web.Mvc` assembly is required when the control is used in the context of ASP.NET MVC.
+Because the `igPivotDataSelector` control is a jQuery UI widget, it depends on jQuery and jQuery UI libraries. The Modernzr library is also used internally for detecting browser and device capabilities. The control uses several %%ProductName%% shared resources for its functionality. References to these resources are needed nevertheless, in spite of pure jQuery or ASP.NET MVC helpers being used. The `Infragistics.Web.Mvc` assembly is required when the control is used in the context of ASP.NET MVC.
 
 For a detailed list of the required resources for using the `igPivotDataSelector` control, refer to the [Adding igPivotDataSelector to an HTML Page](igPivotDataSelector-Adding-to-HTML-Page.html) topic.
 

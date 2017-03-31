@@ -20,7 +20,7 @@ This topic details the features of the `Slider` ASP.NET MVC helper.
 
 The following topics are prerequisites to understanding this topic:
 
-- [Referencing Mobile Resources in Ignite UI](Referencing-Mobile-Resources-in-NetAdvantage-for-jQuery.html): This topic explains how to manage the required mobile resources for Ignite UI controls.
+- [Referencing Mobile Resources in %%ProductName%%](Referencing-Mobile-Resources-in-NetAdvantage-for-jQuery.html): This topic explains how to manage the required mobile resources for %%ProductName%% controls.
 
 
 ### In this topic

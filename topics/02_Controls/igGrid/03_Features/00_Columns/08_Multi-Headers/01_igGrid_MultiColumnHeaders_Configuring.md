@@ -431,7 +431,7 @@ To complete the procedure, you need the following:
 -   ASP.NET MVC 3 or newer Framework installed
 -   The Northwind Database installed
 -   A reference to the Infragistics.Web.Mvc.dll assembly
--   Ignite UI JavaScript and theme resources
+-   %%ProductName%% JavaScript and theme resources
 
 ### <a id="mvc-overview"></a> Overview
 
@@ -555,7 +555,7 @@ To complete the procedure, you need the following:
 -   ASP.NET MVC 3 or newer Framework installed
 -   The Northwind Database installed
 -   A reference to the Infragistics.Web.Mvc.dll assembly
--   Ignite UI JavaScript and theme resources
+-   %%ProductName%% JavaScript and theme resources
 
 ### <a id="ccg-mvc-overview"></a> Overview
 

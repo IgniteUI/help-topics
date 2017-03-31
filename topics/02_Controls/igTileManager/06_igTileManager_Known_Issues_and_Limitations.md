@@ -13,7 +13,7 @@
 ## Known Issues and Limitations
 ### Known issues and limitations summary chart
 
-The following table summarizes the known issues and limitations of the `igTileManager`™ control for the Ignite UI® %%ProductVersion%% release. Detailed explanations of all of the issues and the existing workarounds are provided after the summary table.
+The following table summarizes the known issues and limitations of the `igTileManager`™ control for the %%ProductName%%® %%ProductVersion%% release. Detailed explanations of all of the issues and the existing workarounds are provided after the summary table.
 
 ### Legend:
 

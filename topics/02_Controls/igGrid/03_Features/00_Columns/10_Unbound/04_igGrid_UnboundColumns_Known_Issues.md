@@ -148,7 +148,7 @@ The following topics provide additional information related to this topic.
 
 - [Known Issues and Limitations (igGrid)](igGrid-Known-Issues.html): This topic explains the known issues of the `igGrid` control.
 
-- [Known Issues Revision History](Known-Issues-Revision-History.html): This group of topics explains the known issues of Ignite UI controls between the volume releases.
+- [Known Issues Revision History](Known-Issues-Revision-History.html): This group of topics explains the known issues of %%ProductName%% controls between the volume releases.
 
 
 ### <a id="samples"></a> Samples

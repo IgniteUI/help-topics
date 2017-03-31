@@ -20,7 +20,7 @@ Click the links below to access important information about the Infragistics Exc
 
 - [Deploying the Infragistics Excel Engine](ExcelEngine-Deploying-the-Infragistics-Excel-Engine.html "deploying the infragistics excel engine"): If your application uses the Infragistics Excel Engine, refer to this topic for a list of the Infragistics .NET assemblies that you need to redistribute as part of your application.
 
-- [API Overview](ExcelEngine-API-Overview.html "api overview for excel engine"): This topic lists the namespaces and classes that you will be working with while programming with the Infragistics Excel Engine. The namespaces and classes listed in this topic link conveniently into the "API Reference Guide" section of the Ignite UI help.
+- [API Overview](ExcelEngine-API-Overview.html "api overview for excel engine"): This topic lists the namespaces and classes that you will be working with while programming with the Infragistics Excel Engine. The namespaces and classes listed in this topic link conveniently into the "API Reference Guide" section of the %%ProductName%% help.
 
  
 

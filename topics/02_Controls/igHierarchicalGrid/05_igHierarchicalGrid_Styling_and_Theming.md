@@ -36,7 +36,7 @@ All the jQuery controls use the jQuery UI CSS Framework class conventions. The i
 ## <a id="styling_using_themes"></a> Styling Using Themes 
 ### <a id="required_css"></a> Required CSS and Themes 
 
-The Ignite UI™ Hierarchical grid, like other jQuery widgets, utilizes the jQuery UI CSS Framework for styling. Included in Ignite UI are custom jQuery UI themes called Infragistics and Metro. These themes provide a professional and attractive design to all Infragistics and standard jQuery UI widgets.
+The %%ProductName%%™ Hierarchical grid, like other jQuery widgets, utilizes the jQuery UI CSS Framework for styling. Included in %%ProductName%% are custom jQuery UI themes called Infragistics and Metro. These themes provide a professional and attractive design to all Infragistics and standard jQuery UI widgets.
 
 In addition to the Infragistics and Metro themes, there is a structure directory, which is required for the basic CSS layout of the Infragistics widgets.
 

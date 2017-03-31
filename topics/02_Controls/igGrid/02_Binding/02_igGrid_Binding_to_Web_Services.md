@@ -52,7 +52,7 @@ The Grid MVC Helper wrapper however uses different request parameters which are 
 This procedure guides you through the process of creating an igGrid in a MVC application together with an OData service that retrieves data from a SQL Database using Entity Framework.
 
 ###Requirements
-In order to complete this procedure you need to have the Ignite UI product installed on your machine and have the Northwind Database installed in SQL Server.
+In order to complete this procedure you need to have the %%ProductName%% product installed on your machine and have the Northwind Database installed in SQL Server.
 This procedure also assumes that you are using Visual Studio 2013 and MVC5. 
 
 ###Overview
@@ -80,8 +80,8 @@ This procedure also assumes that you are using Visual Studio 2013 and MVC5.
 
 	- Add a reference to *System.Runtime.Serialization*.
     - Add a reference to *Infragistics.Web.Mvc* and make sure that *Copy Local* option is set to *true*. 
-    - Add the Ignite UI script files to the **Scripts** folder.
-    - Add the Ignite UI CSS files and images to the **Content** folder.
+    - Add the %%ProductName%% script files to the **Scripts** folder.
+    - Add the %%ProductName%% CSS files and images to the **Content** folder.
     - Build the solution to make sure everything compiles.
     
 2. Create the Models
@@ -160,7 +160,7 @@ public static void Register(HttpConfiguration config)
         
     - At the top of *Index.cshtml* add a using statement for *Infragistics.Web.Mvc*.  (IntelliSense should help you complete this)  If the Infragistics assembly is not recognized, close the view and compile the application to make sure that the* Infragistics.Web.Mvc* assembly is copied in to the bin folder.  When you reopen the view file the Infragistics reference should now be recognized.
         
-    - In Index.cshtml add JavaScript references for jQuery, jQuery UI, Modernizr, and the Ignite UI controls.  
+    - In Index.cshtml add JavaScript references for jQuery, jQuery UI, Modernizr, and the %%ProductName%% controls.  
         
          **In HTML:**
          
@@ -180,7 +180,7 @@ public static void Register(HttpConfiguration config)
 <link href="@Url.Content("Content/Infragistics/themes/infragistics/infragistics.theme.css")" rel="stylesheet" />
     <link href="@Url.Content("Content/Infragistics/structure/modules/infragistics.css")" rel="stylesheet" />
    		 ```
-- Create an Ignite UI grid on the page.
+- Create an %%ProductName%% grid on the page.
         
      Add the declaration for the igGrid that uses the Product class as its record type.  The DataSourceUrl property must point to the Products endpoint of the service. The ResponseDataKey property must be set to the name of the property that holds the data in the response, which in our example is value. The DataBind and Render methods then need to be added to make sure that the control is bound to the DataSource and rendered in to the markup.
         

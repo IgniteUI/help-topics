@@ -27,7 +27,7 @@ This topic contains the following sections:
 - [Related Content](#related)
 
 ## <a id="summary"></a>Styling Summary
-The Ignite UI™ Scroll (or `igScroll`), like other jQuery widgets, provides a number of CSS classes that apply to
+The %%ProductName%%™ Scroll (or `igScroll`), like other jQuery widgets, provides a number of CSS classes that apply to
 specific UI elements. Each CSS class defines the look and feel of a DOM element that the igScroll renders.
 
 The list of CSS classes that apply to the vertical custom scrollbar are:

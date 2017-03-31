@@ -12,14 +12,14 @@
 
 ## Topic Overview
 
-This topic explains how to get started with Ignite UI™ components in an ASP.NET MVC application.
+This topic explains how to get started with %%ProductName%%™ components in an ASP.NET MVC application.
 
 ### In this topic
 
 This topic contains the following sections:
 
 -   [Using MVC helper](#mvcHelper)
--   [Methods for Defining Ignite UI Controls in an MVC Project](#methodsMVC)
+-   [Methods for Defining %%ProductName%% Controls in an MVC Project](#methodsMVC)
 -   [Developing ASP.NET MVC application with igTree](#developingMVC)
 -   [Related Content](#related)
 
@@ -27,7 +27,7 @@ This topic contains the following sections:
 
 ### Using the MVC helper overview
 
-The ASP.NET MVC helpers for Ignite UI wrap the already client-only control in a server-side set of MVC Extensions that allows the control to be defined and used in the following way:
+The ASP.NET MVC helpers for %%ProductName%% wrap the already client-only control in a server-side set of MVC Extensions that allows the control to be defined and used in the following way:
 
 **In ASPX:**
 
@@ -53,7 +53,7 @@ All controls have helper methods available off of the `Infragistics()` or `Infra
 
 ### Navigate to the installed resources
 
-If you have chosen the typical installation of Ignite UI 20%%ProductVersionShort%% , you can find the resources under the paths below:
+If you have chosen the typical installation of %%ProductName%% 20%%ProductVersionShort%% , you can find the resources under the paths below:
 
 <table class="table">
 	<thead>
@@ -80,13 +80,13 @@ If you have chosen the typical installation of Ignite UI 20%%ProductVersionShort
 
 ## MVC 2, MVC 3, MVC 4, MVC 5 and MVC6
 
-All the code for the MVC helper is contained in the `Infragistics.Web.Mvc` assembly, which comes compiled against all MVC2, MVC3, MVC4, MVC5 and MVC6. For further details on the assembly location of the ASP.NET MVC helpers, please read [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+All the code for the MVC helper is contained in the `Infragistics.Web.Mvc` assembly, which comes compiled against all MVC2, MVC3, MVC4, MVC5 and MVC6. For further details on the assembly location of the ASP.NET MVC helpers, please read [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 
 > **Note**: You should set `Copy Local` property of the reference of the dll to be `true`.
 
 ### Use the MVC helper for the loader
 
-The Infragistics loader is used to load dependent scripts and styles files required for the page. For further details on how to use the loader please refer to the topic: [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html).
+The Infragistics loader is used to load dependent scripts and styles files required for the page. For further details on how to use the loader please refer to the topic: [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html).
 
 The following code listing demonstrates how to initialize the loader using the ASP.NET MVC helper:
 
@@ -124,11 +124,11 @@ The JavaScript files are also available in a hosted environment on the Infragist
 
 When instantiating the control with the ASP.NET MVC Helper, you must call the Render method last after all other options are configured. This is the method that renders the HTML and JavaScript necessary to instantiate the control on the client.
 
-## <a id="methodsMVC"></a> Methods for Defining Ignite UI Controls in an MVC Project
+## <a id="methodsMVC"></a> Methods for Defining %%ProductName%% Controls in an MVC Project
 
 ### Methods for configuring the controls summary
 
-There are two different options available for defining controls in an MVC application available. The following table lists the available methods for defining Ignite UI controls depending on whether you define the control in a Model or in the View. Additional details are available after the summary table.
+There are two different options available for defining controls in an MVC application available. The following table lists the available methods for defining %%ProductName%% controls depending on whether you define the control in a Model or in the View. Additional details are available after the summary table.
 
 <table class="table">
 	<thead>
@@ -238,14 +238,14 @@ private void InitializeSortingGridOptions(GridModel model)
 
 ### Introduction
 
-The following procedure demonstrates how to add the required assemblies and resources (CSS and JavaScript files) to work with Ignite UI in ASP.NET MVC.
+The following procedure demonstrates how to add the required assemblies and resources (CSS and JavaScript files) to work with %%ProductName%% in ASP.NET MVC.
 
 ### Requirements
 
 To complete the procedure, you need the following:
 
 -   A project with any Web application
--   Ignite UI 20%%ProductVersionShort%% installed
+-   %%ProductName%% 20%%ProductVersionShort%% installed
 -   [jQuery](http://jquery.com/) core library 1.4.4 version or above
 -   [jQuery UI](http://jqueryui.com/) library 1.8.17 or above
 -   [Modernizr](http://modernizr.com/) open-source JavaScript library 2.5.2 or above
@@ -266,7 +266,7 @@ The following steps demonstrate how to develop ASP.NET MVC application with `igT
 
 1. Adding required resource to the MVC application
 
-	 - Navigate to the installation folder of Ignite UI 20%%ProductVersionShort%%: `%%InstallPath%%`
+	 - Navigate to the installation folder of %%ProductName%% 20%%ProductVersionShort%%: `%%InstallPath%%`
 	
 	 - Copy the `js` and `css` folder to the root directory of your MVC application
 	
@@ -391,7 +391,7 @@ The following steps demonstrate how to develop ASP.NET MVC application with `igT
 	```
 
 ## Next Steps
-Now that you've had the opportunity to learn about working with Ignite UI and ASP.NET MVC, make sure to check out 
+Now that you've had the opportunity to learn about working with %%ProductName%% and ASP.NET MVC, make sure to check out 
 [Developing ASP.NET MVC Applications with igGrid](igGrid-Developing-ASP-NET-MVC-Applications-with-igGrid.html) for more detail on working specifically with ASP.NET MVC.
 
 ## <a id="related"></a>Related Content
@@ -402,9 +402,9 @@ The following topics provide additional information related to this topic.
 
 - [Developing ASP.NET MVC Applications with igGrid](igGrid-Developing-ASP-NET-MVC-Applications-with-igGrid.html)
 
-- [JavaScript Files in Ignite UI](Deployment-Guide-JavaScript-Files.html)
+- [JavaScript Files in %%ProductName%%](Deployment-Guide-JavaScript-Files.html)
 
-- [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
-- [Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html)
+- [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
+- [Styling and Theming %%ProductName%%](Deployment-Guide-Styling-and-Theming.html)
 
-- [Infragistics Content Delivery Network (CDN) for Ignite UI](Deployment-Guide-Infragistics-Content-Delivery-Network%28CDN%29.html)
+- [Infragistics Content Delivery Network (CDN) for %%ProductName%%](Deployment-Guide-Infragistics-Content-Delivery-Network%28CDN%29.html)

@@ -27,7 +27,7 @@ The `igOlapXmlaDataSource` component handles the communication between a JavaScr
 
 - [Configuring igOlapXmlaDataSource](igOlapXmlaDataSource-Configuring.html): This is a group of topics explaining how to configure the various aspects of the `igOlapXmlaDataSource` and its related server-side components.
 
-- [Key Performance Indicators Support (igPivotGrid, igPivotDataSelector, igOlapXmlaDataSource)](igPivotGrid-KPI-Support.html): This topic explains conceptually how the Key Performance Indicators (KPIs) data from a multi-dimensional (OLAP) data set is visualized in Ignite UI™. The Ignite UI controls that visualize KPIs are the `igPivotDataSelector`™ and the `igPivotGrid`™.
+- [Key Performance Indicators Support (igPivotGrid, igPivotDataSelector, igOlapXmlaDataSource)](igPivotGrid-KPI-Support.html): This topic explains conceptually how the Key Performance Indicators (KPIs) data from a multi-dimensional (OLAP) data set is visualized in %%ProductName%%™. The %%ProductName%% controls that visualize KPIs are the `igPivotDataSelector`™ and the `igPivotGrid`™.
 
 - [Known Issues and Limitations (igOlapXmlaDataSource)](igOlapXmlaDataSource-Known-Issues-and-Limitations.html): This topic provides information about the known issues and limitations of the `igOlapXmlaDataSource` component.
 

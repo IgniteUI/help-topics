@@ -8,29 +8,29 @@
 |metadata|
 -->
 
-# JavaScript Files in Ignite UI
+# JavaScript Files in %%ProductName%%
 
 ##Topic Overview
 
 ### Purpose
 
-This topic provides reference information about the JavaScript files required to work with the controls included in Ignite UI™.
+This topic provides reference information about the JavaScript files required to work with the controls included in %%ProductName%%™.
 
 ### Required Background
 
 The following list presents the prerequisite topics needed to understanding this material.
 
-- [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html): This topic explains how to manage the required resources to work with the Ignite UI JavaScript within a Web application.
+- [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html): This topic explains how to manage the required resources to work with the %%ProductName%% JavaScript within a Web application.
 
-- [Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html): This topic provides instructions on setting up your application for design time, options for using CSS in production and an overview on creating or customizing a theme.
+- [Styling and Theming %%ProductName%%](Deployment-Guide-Styling-and-Theming.html): This topic provides instructions on setting up your application for design time, options for using CSS in production and an overview on creating or customizing a theme.
 
-- [Infragistics Content Delivery Network (CDN) for Ignite UI](Deployment-Guide-Infragistics-Content-Delivery-Network%28CDN%29.html): Instructions on using Infragistics Content Delivery Network (CDN) in Ignite UI.
+- [Infragistics Content Delivery Network (CDN) for %%ProductName%%](Deployment-Guide-Infragistics-Content-Delivery-Network%28CDN%29.html): Instructions on using Infragistics Content Delivery Network (CDN) in %%ProductName%%.
 
 
 ### JavaScript File Types Reference
 
 
-The following summarizes the JavaScript file types included in Ignite UI.
+The following summarizes the JavaScript file types included in %%ProductName%%.
 
 The names of the JavaScript files containing the combined scripts are:
 
@@ -38,7 +38,7 @@ The names of the JavaScript files containing the combined scripts are:
 -   `infragistics.lob.js`
 -   `infragistics.dv.js`
 
-The files are found in the js folder (the root folder for the JavaScript files in the Ignite UI program installation path).
+The files are found in the js folder (the root folder for the JavaScript files in the %%ProductName%% program installation path).
 
 There is also a combined script version of the localization resources in Bulgarian, Russian, Japanese, German, Spanish and French language. File names are `infragistics-bg.js`, `infragistics-ja.js`, `infragistics-ru.js`, `infragistics-de.js`, `infragistics-es.js` and `infragistics-fr.js` and they resides in the `../js/i18n` folder.
 
@@ -54,9 +54,9 @@ The non-minified files are used for debugging purposes. They expose the same fol
 
 There are two types of internalizations. First is for the localization resources in the controls. Second is for the regional settings in the controls.
 
-Localization resources for the controls are in Bulgarian, Russian, Japanese, German, Spanish and French languages. These reside in js/modules/i18n (where *js* is the root folder for the JavaScript files in the Ignite UI program installation path).
+Localization resources for the controls are in Bulgarian, Russian, Japanese, German, Spanish and French languages. These reside in js/modules/i18n (where *js* is the root folder for the JavaScript files in the %%ProductName%% program installation path).
 
-The regional settings - igRegional JavaScript files - provide localized formats including dates, numbers, and currency symbols for the jQuery editors. These reside in the `../js/modules/i18n/regional` (where `js` is the root folder for the JavaScript files in the Ignite UI program installation path).
+The regional settings - igRegional JavaScript files - provide localized formats including dates, numbers, and currency symbols for the jQuery editors. These reside in the `../js/modules/i18n/regional` (where `js` is the root folder for the JavaScript files in the %%ProductName%% program installation path).
 
 >**Note:** When using the combined scripts file you must always reference the regional settings; they are not part of combined scripts file.
 
@@ -65,7 +65,7 @@ For other languages corresponding localization need to be referenced before the 
 
 ##JavaScript Files Reference by Control
 
-### Ignite UI controls listing
+### %%ProductName%% controls listing
 
 To navigate to the required JavaScript files listing for the particular control, click the control name in the following list.
 

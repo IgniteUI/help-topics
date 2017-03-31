@@ -260,7 +260,7 @@ The following topics provide additional information related to this topic.
 
 The following samples provide additional information related to this topic.
 
-- [Basic Usage](%%SamplesUrl%%/templating-engine/basic-usage): The Infragistics Templating Engine provides a consistent templating syntax for all of the Ignite UI controls. This example demonstrates the templating syntax in context when customizing the `igCombo` control's header, items, and footer.
+- [Basic Usage](%%SamplesUrl%%/templating-engine/basic-usage): The Infragistics Templating Engine provides a consistent templating syntax for all of the %%ProductName%% controls. This example demonstrates the templating syntax in context when customizing the `igCombo` control's header, items, and footer.
 
 - [Grid Column Template](%%SamplesUrl%%/templating-engine/grid-column-template): This sample shows how to insert a button into a column using igGrid column template functionality. In the most right column there is button for each row. Pressing a button will delete its containing row.
 

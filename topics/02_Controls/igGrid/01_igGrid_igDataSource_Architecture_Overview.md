@@ -25,7 +25,7 @@ This topic contains the following sections:
 
 ## <a id="overview"></a>Overview
 
-The Ignite UI™ grid, or `igGrid`™, is a client-side grid control built entirely with JavaScript, HTML and CSS. The client-only nature of the control makes the grid agnostic to server-side technologies allowing seamless interaction with applications built in PHP, Ruby on Rails®, Java™, Python™, Microsoft® ASP.NET™ and more.
+The %%ProductName%%™ grid, or `igGrid`™, is a client-side grid control built entirely with JavaScript, HTML and CSS. The client-only nature of the control makes the grid agnostic to server-side technologies allowing seamless interaction with applications built in PHP, Ruby on Rails®, Java™, Python™, Microsoft® ASP.NET™ and more.
 
 The grid is constructed using a modular architecture where the data source and optional features are logically separated from the grid control. The separation of logic from presentation allows the associated data source control to take on the responsibility for processing features such as paging, sorting, filtering and the like. The grid itself, on the other hand, is only concerned with presentation details. While the grid is built with this modular construction, you are not required to first setup the data source and then the grid. You can easily configure the data source through the public interface of the grid control.
 
@@ -88,7 +88,7 @@ This architecture enables you to easily create extensions of the data source tha
 -   ***$.ig.WebSocketsDataSource***
     -   This class is pre-configured to work specifically with [Web Sockets](http://en.wikipedia.org/wiki/WebSockets).
 
-> **Note:** The controls listed above are included in the Ignite UI data source JavaScript library.
+> **Note:** The controls listed above are included in the %%ProductName%% data source JavaScript library.
 
 Further, you can extend the data source control to override any of its implementation in order to achieve a highly customized data binding functionality. Listing 1 demonstrates how to extend the base data source to pre-configure the options to work with JSON data.
 
@@ -249,7 +249,7 @@ Since the `igGrid` control is built as jQuery widget, it is dependent on the jQu
 
 -   [Performance Guide (igGrid)](igGrid-Performance-Guide.html)
 -   [Styling igGrid](igGrid-Styling-and-Theming.html)
--   [Styling and Theming in Ignite UI](Deployment-Guide-Styling-and-Theming.html)
+-   [Styling and Theming in %%ProductName%%](Deployment-Guide-Styling-and-Theming.html)
 
  
 

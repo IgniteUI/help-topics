@@ -13,9 +13,9 @@
 
 ### Introduction
 
-Ignite UI® provides type definitions for TypeScript allowing you to take advantage of strong typing, compile time checking and intellisense features.
+%%ProductName%%® provides type definitions for TypeScript allowing you to take advantage of strong typing, compile time checking and intellisense features.
 
 ### Topics
 
--   [Using Ignite UI with TypeScript](Using-Ignite-UI-with-TypeScript.html) - This topic contains an overview for using the Ignite UI type definitions for TypeScript.
+-   [Using %%ProductName%% with TypeScript](Using-Ignite-UI-with-TypeScript.html) - This topic contains an overview for using the %%ProductName%% type definitions for TypeScript.
                     

@@ -24,7 +24,7 @@ The `igPivotGrid` control is a data presentation control for displaying data in 
 
 - [igPivotGrid Overview](igPivotGrid-Overview.html): This topic provides conceptual information about the `igPivotGrid` control including its main features, minimum requirements, and user functionality.
 
-- [Key Performance Indicators Support (igPivotGrid, igPivotDataSelector, igOlapXmlaDataSource)](igPivotGrid-KPI-Support.html): This topic explains conceptually how the Key Performance Indicators (KPIs) data from a multi-dimensional (OLAP) data set is visualized in Ignite UI™. The Ignite UI controls that visualize KPIs are the `igPivotDataSelector` and the `igPivotGrid`.
+- [Key Performance Indicators Support (igPivotGrid, igPivotDataSelector, igOlapXmlaDataSource)](igPivotGrid-KPI-Support.html): This topic explains conceptually how the Key Performance Indicators (KPIs) data from a multi-dimensional (OLAP) data set is visualized in %%ProductName%%™. The %%ProductName%% controls that visualize KPIs are the `igPivotDataSelector` and the `igPivotGrid`.
 
 - [Adding igPivotGrid](igPivotGrid-Adding.html): This is a group of topics demonstrating how to add the `igPivotGrid` control to an HTML page and an ASP.NET MVC application.
 

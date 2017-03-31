@@ -96,7 +96,7 @@ The following table summarizes the requirements for `igLayoutManager` control.
 			</td>
 
 			<td>
-				Ignite UI is built on top of these frameworks:
+				%%ProductName%% is built on top of these frameworks:
 
 				<ul>
 					<li><a class="ig-topic-link" href="http://jquery.com/" target="_blank">jQuery</a></li>
@@ -116,7 +116,7 @@ The following table summarizes the requirements for `igLayoutManager` control.
 			</td>
 
 			<td>
-				The igLayoutManager functionality of the Ignite UI library is distributed across several files. You can load the required resources in one of the following ways:
+				The igLayoutManager functionality of the %%ProductName%% library is distributed across several files. You can load the required resources in one of the following ways:
 
 				<ul>
 					<li>(Recommended) <a href="Using-Infragistics-Loader.html" data-auto-update-caption="true">**Using Infragistics Loader**</a> (igLoader™). You only need to include a script reference to igLoader on your page.</li>
@@ -124,7 +124,7 @@ The following table summarizes the requirements for `igLayoutManager` control.
 					<li>Load the required resources manually. You need to use the dependencies listed in the table below.</li>
 				</ul>
 
-				The following table lists the Ignite UI library dependences related to the igLayoutManager control. These resources need to be referred to explicitly if you chose to load resources manually (i.e. not to use igLoader).
+				The following table lists the %%ProductName%% library dependences related to the igLayoutManager control. These resources need to be referred to explicitly if you chose to load resources manually (i.e. not to use igLoader).
 
 				<table cellspacing="0" cellpadding="0">
 					<tbody>
@@ -168,7 +168,7 @@ The following table summarizes the requirements for `igLayoutManager` control.
 			</td>
 
 			<td>
-				This theme contains the visual styles for the Ignite UI library. The theme file is:
+				This theme contains the visual styles for the %%ProductName%% library. The theme file is:
 
 				{IG CSS root}/themes/Infragistics/infragistics.theme.css
 			</td>
@@ -196,7 +196,7 @@ The following table summarizes the requirements for `igLayoutManager` control.
 
 
 
->**Note:**It is recommended to use the `igLoader` component to load JavaScript and CSS resources. For information on how to do this, refer to the [Adding Required Resources Automatically with the Infragistics Loader](Using-Infragistics-Loader.html) topic. In addition to that, in the online [Ignite UI Samples Browser](%%SamplesUrl%%), you can find some specific examples on how to use the `igLoader` with the `igLayoutManager` component.
+>**Note:**It is recommended to use the `igLoader` component to load JavaScript and CSS resources. For information on how to do this, refer to the [Adding Required Resources Automatically with the Infragistics Loader](Using-Infragistics-Loader.html) topic. In addition to that, in the online [%%ProductName%% Samples Browser](%%SamplesUrl%%), you can find some specific examples on how to use the `igLoader` with the `igLayoutManager` component.
 
 ### <a id="steps"></a>Steps
 
@@ -212,7 +212,7 @@ Following are the general conceptual steps for adding `igLayoutManager` to an HT
 
 ### <a id="introduction"></a>Introduction
 
-This procedure guides you through the steps of adding an `igLayoutManager` control with Flow layout and default settings to an HTML page. This is a pure HTML/JavaScript implementation. It uses the Infragistics Loader (`igLoader`) component to load all Ignite UI resources needed by the `igLayoutManager` control. The markup is also defined in an HTML page. The `igLayoutManager` initializes directly in the HTML markup (i.e on an `<ul>` element with `<li>` elements).
+This procedure guides you through the steps of adding an `igLayoutManager` control with Flow layout and default settings to an HTML page. This is a pure HTML/JavaScript implementation. It uses the Infragistics Loader (`igLoader`) component to load all %%ProductName%% resources needed by the `igLayoutManager` control. The markup is also defined in an HTML page. The `igLayoutManager` initializes directly in the HTML markup (i.e on an `<ul>` element with `<li>` elements).
 
 For other scenarios, refer to [Configuring igLayoutManager](igLayoutManager-Configuring-layouts.html).
 
@@ -228,8 +228,8 @@ The required resources added and properly referenced. (For a conceptual overview
 
 -   The required files added to their appropriate locations:
     -   The required jQuery and jQueryUI JavaScript resources added to a folder named Scripts in the directory where your web page resides.
-    -   The Ignite UI CSS files added to a folder named Content/ig (For details, see the [**Styling and Theming Ignite UI**](Deployment-Guide-Styling-and-Theming.html) topic).
-    -   The Ignite UI JavaScript files added to a folder of your web site or application named Scripts/ig (For details, see the [**Using JavaScript Resources in Ignite UI**](Deployment-Guide-JavaScript-Resources.html) topics).
+    -   The %%ProductName%% CSS files added to a folder named Content/ig (For details, see the [**Styling and Theming %%ProductName%%**](Deployment-Guide-Styling-and-Theming.html) topic).
+    -   The %%ProductName%% JavaScript files added to a folder of your web site or application named Scripts/ig (For details, see the [**Using JavaScript Resources in %%ProductName%%**](Deployment-Guide-JavaScript-Resources.html) topics).
 -   The required JavaScript resources referenced in the `<head>` section of the page.
 
     **In HTML:**
@@ -311,7 +311,7 @@ The following steps demonstrate how to add a basic `igLayoutManager` control to 
 
 ### <a id="js-introduction"></a>Introduction
 
-This procedure guides you through the steps of adding an `igLayoutManager` control with basic functionality to an HTML page using a pure HTML/JavaScript implementation. It uses the Infragistics Loader component to load all Ignite UI resources needed by the `igLayoutManager` control. The `igLayoutManager` initializes as an array of item objects in the control options (i.e. on a blank `<ul>` element, and the number of items is provided inside the instance of `igLayoutManager` using the [`itemCount`](%%jQueryApiUrl%%/ui.iglayoutmanager#options) property).
+This procedure guides you through the steps of adding an `igLayoutManager` control with basic functionality to an HTML page using a pure HTML/JavaScript implementation. It uses the Infragistics Loader component to load all %%ProductName%% resources needed by the `igLayoutManager` control. The `igLayoutManager` initializes as an array of item objects in the control options (i.e. on a blank `<ul>` element, and the number of items is provided inside the instance of `igLayoutManager` using the [`itemCount`](%%jQueryApiUrl%%/ui.iglayoutmanager#options) property).
 
 ### <a id="js-preview"></a>Preview
 
@@ -325,8 +325,8 @@ The required resources added and properly referenced. (For a conceptual overview
 
 -   The required files added to their appropriate locations:
     -   The required jQuery and jQueryUI JavaScript resources added to a folder named Scripts in the directory where your web page resides.
-    -   The Ignite UI CSS files added to a folder named Content/ig (For details, see the [**Styling and Theming Ignite UI**](Deployment-Guide-Styling-and-Theming.html) topic).
-    -   The Ignite UI JavaScript files added to a folder of your web site or application named Scripts/ig (For details, see the [**Using JavaScript Resources in Ignite UI**](Deployment-Guide-JavaScript-Resources.html) topics).
+    -   The %%ProductName%% CSS files added to a folder named Content/ig (For details, see the [**Styling and Theming %%ProductName%%**](Deployment-Guide-Styling-and-Theming.html) topic).
+    -   The %%ProductName%% JavaScript files added to a folder of your web site or application named Scripts/ig (For details, see the [**Using JavaScript Resources in %%ProductName%%**](Deployment-Guide-JavaScript-Resources.html) topics).
 -   The required JavaScript resources referenced in the `<head>` section of the page.
 
     **In HTML:**
@@ -411,8 +411,8 @@ The required resources added and properly referenced. (For a conceptual overview
 
 -   The required files added to their appropriate locations:
     -   The required jQuery and jQueryUI JavaScript resources added to a folder named Scripts in the directory where your web page resides.
-    -   The Ignite UI CSS files added to a folder named Content/ig (For details, see the [**Styling and Theming Ignite UI**](Deployment-Guide-Styling-and-Theming.html) topic).
-    -   The Ignite UI JavaScript files added to a folder of your web site or application named Scripts/ig (For details, see the [**Using JavaScript Resources in Ignite UI**](Deployment-Guide-JavaScript-Resources.html) topics).
+    -   The %%ProductName%% CSS files added to a folder named Content/ig (For details, see the [**Styling and Theming %%ProductName%%**](Deployment-Guide-Styling-and-Theming.html) topic).
+    -   The %%ProductName%% JavaScript files added to a folder of your web site or application named Scripts/ig (For details, see the [**Using JavaScript Resources in %%ProductName%%**](Deployment-Guide-JavaScript-Resources.html) topics).
 -   The required JavaScript resources referenced in the `<head>` section of the page.
 
     **In HTML:**

@@ -209,7 +209,7 @@ The following topics provide additional information related to this topic.
 
 -	[Configuring Knockout Support (igCombo)](igCombo-Configuring.html):  This topic explains how to configure the `igCombo` control to bind to View-Model objects managed by the Knockout library.
 
--	[Configuring Knockout Support (igEditors)](Configuring-Knockout-Support-%28Editors%29.html):  This topic explains how to configure Ignite UI editor controls to bind to View-Model objects using the Knockout library.
+-	[Configuring Knockout Support (igEditors)](Configuring-Knockout-Support-%28Editors%29.html):  This topic explains how to configure %%ProductName%% editor controls to bind to View-Model objects using the Knockout library.
 
 -	[Configuring Knockout Support (igTree)](igTree-KnockoutJS-Support.html):  This topic explains how to configure the `igTree` control to bind to View-Model objects managed by the Knockout library.
 

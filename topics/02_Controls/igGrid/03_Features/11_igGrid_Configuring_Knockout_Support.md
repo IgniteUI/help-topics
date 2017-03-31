@@ -166,7 +166,7 @@ This procedure demonstrates the basic configuration of an `igGrid` control bound
 
 To complete the procedure, you need the following:
 
-1.  The required Ignite UI JavaScript and CSS files for version 13.1 and later
+1.  The required %%ProductName%% JavaScript and CSS files for version 13.1 and later
 2.  The knockout library referenced on the page
 
 **In JavaScript:**
@@ -300,7 +300,7 @@ The following topics provide additional information related to this topic.
 
 - [Configuring Knockout Support (igCombo)](igCombo-KnockoutJS-Support.html): This topic explains how to configure the `igCombo` control to bind to View-Model objects managed by the Knockout library
 
-- [Knockout Support (Editors)](Configuring-Knockout-Support-%28Editors%29.html): This topic explains how to configure Ignite UI editor controls to bind to View-Model objects managed by the Knockout library.
+- [Knockout Support (Editors)](Configuring-Knockout-Support-%28Editors%29.html): This topic explains how to configure %%ProductName%% editor controls to bind to View-Model objects managed by the Knockout library.
 
 - [Configuring Knockout Support (igTree)](igTree-KnockoutJS-Support.html): This topic explains how to configure the `igTree` control to bind to View-Model objects managed by the Knockout library.
 

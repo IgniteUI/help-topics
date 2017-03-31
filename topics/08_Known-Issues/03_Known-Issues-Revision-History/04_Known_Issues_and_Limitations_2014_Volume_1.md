@@ -14,7 +14,7 @@
 
 ### Purpose
 
-This summarizes the known issues and limitations of the Ignite UI™ 2014 Volume 1 release. Information about previous releases can be found [here](Known-Issues-Revision-History.html).
+This summarizes the known issues and limitations of the %%ProductName%%™ 2014 Volume 1 release. Information about previous releases can be found [here](Known-Issues-Revision-History.html).
 
 ### In this topic
 
@@ -48,8 +48,8 @@ This topic contains the following sections:
     -   [igHierarchicalGrid GroupBy](#hierarchical-grid-grouping)
     -   [igHierarchicalGrid RowSelectors](#hierarchical-grid-row-selectors)
     -   [igLinearGauge](#linear-gauge)
-    -   [Ignite UI ASP.NET MVC Wrappers](#mvc)
-    -   [Ignite UI ASP.NET MVC Wrappers (mobile)](#mvc-mobile)
+    -   [%%ProductName%% ASP.NET MVC Wrappers](#mvc)
+    -   [%%ProductName%% ASP.NET MVC Wrappers (mobile)](#mvc-mobile)
     -   [igMap](#map)
     -   [igOlapXmlaDataSource](#olap-xmla-data-source)
     -   [igPivotDataSelector](#pivot-data-selector)
@@ -67,7 +67,7 @@ This topic contains the following sections:
 
 ## <a id="summary"></a> Known Issues and Limitations Summary
 
-The following table summarizes the known issues and limitations of the Ignite UI 2014 Volume 1 release. Detailed explanations of known issues and the possible workarounds are provided in the known issues topics for each control.
+The following table summarizes the known issues and limitations of the %%ProductName%% 2014 Volume 1 release. Detailed explanations of known issues and the possible workarounds are provided in the known issues topics for each control.
 
 <a id="legend"></a>
 
@@ -1168,7 +1168,7 @@ No label collisions detection | The `igLinearGauge` control does not provide mea
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
-### <a id="mvc"></a> [Ignite UI ASP.NET MVC Wrappers](ASPNET-MVC-Wrappers-Known-Issues.html)
+### <a id="mvc"></a> [%%ProductName%% ASP.NET MVC Wrappers](ASPNET-MVC-Wrappers-Known-Issues.html)
 
 Issue | Description | Status
 ---|---|---
@@ -1180,7 +1180,7 @@ MVC Loader not functioning correctly in an MVC Razor Layout View | The ASP.NET M
 Go up to [Known Issues and Limitations Summary](#summary)
 
 
-### <a id="mvc-mobile"></a> [Ignite UI ASP.NET MVC Wrappers (mobile)](ASPNET-MVC-Mobile-Wrappers-Known-Issues.html)
+### <a id="mvc-mobile"></a> [%%ProductName%% ASP.NET MVC Wrappers (mobile)](ASPNET-MVC-Mobile-Wrappers-Known-Issues.html)
 
 Issue | Description | Status
 ---|---|---
@@ -1272,7 +1272,7 @@ Go up to [Known Issues and Limitations Summary](#summary)
 
 Issue | Description | Status
 ---|---|---
-Namespace conflict | Using the NetAdvantage® for ASP.NET and Ignite UI documents’ assemblies together causes namespace conflict exceptions. | ![](../../images/images/positive.png)
+Namespace conflict | Using the NetAdvantage® for ASP.NET and %%ProductName%% documents’ assemblies together causes namespace conflict exceptions. | ![](../../images/images/positive.png)
 
 
  Go up to [Known Issues and Limitations Summary](#summary)

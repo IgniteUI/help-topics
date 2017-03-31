@@ -10,7 +10,7 @@
 
 #What's New in 2016 Volume 1
 
-This topic presents the controls and the new and enhanced features for the Ignite UI™ 2016 Volume 1 release.
+This topic presents the controls and the new and enhanced features for the %%ProductName%%™ 2016 Volume 1 release.
 
 
 ##What’s New Summary
@@ -21,10 +21,10 @@ The following summarizes what’s new in 2016 Volume 1. Additional details follo
 
 Feature | Description
 ---|---
-New Bootstrap 4 theme | A new Bootstrap 4 compatible theme is now shipped with Ignite UI - [view sample](%%SamplesUrl%%/themes/bootstrap4-default).
-Angular 2 Components (CTP) | Ignite UI widgets have component wrappers for Angular 2. For detailed information visit [Ignite UI Angular 2 GitHub](https://github.com/IgniteUI/igniteui-angular2) page.|
+New Bootstrap 4 theme | A new Bootstrap 4 compatible theme is now shipped with %%ProductName%% - [view sample](%%SamplesUrl%%/themes/bootstrap4-default).
+Angular 2 Components (CTP) | %%ProductName%% widgets have component wrappers for Angular 2. For detailed information visit [%%ProductName%% Angular 2 GitHub](https://github.com/IgniteUI/igniteui-angular2) page.|
 New scalable font icons | The default Infragistics theme now uses [jQuery UI font icons](https://github.com/mkkeck/jquery-ui-iconfont) instead of image icons. |
-Modernizr 3.x support | Ignite UI uses Modernizr library to detect touch environments (see [Touch Support for Ignite UI Controls](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html)). [Mordernizr 3.x](https://modernizr.com/) is now supported along with older Modernizr versions. |
+Modernizr 3.x support | %%ProductName%% uses Modernizr library to detect touch environments (see [Touch Support for %%ProductName%% Controls](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html)). [Mordernizr 3.x](https://modernizr.com/) is now supported along with older Modernizr versions. |
 
 ### igTileManager
 
@@ -56,7 +56,7 @@ Feature | Description
 
 ### TypeScript Support
 
-Starting with 16.1 release Ignite UI the minimum supported TypeScript version is 1.4.
+Starting with 16.1 release %%ProductName%% the minimum supported TypeScript version is 1.4.
 
 Feature | Description
 ---|---
@@ -133,7 +133,7 @@ All possible methods with their parameters are now listed in the intellisense.
 ![](images/method-overloads.png)
 
 #### Methods intellisense on the widget's `data`
-In jQuery UI syntax the widget methods can be invoked from the widget's data: $(".selector").data('widgetName'). This is now possible with the Ignite UI TypeScript directives.
+In jQuery UI syntax the widget methods can be invoked from the widget's data: $(".selector").data('widgetName'). This is now possible with the %%ProductName%% TypeScript directives.
 
 ![](images/method-data-overloads.png)
 

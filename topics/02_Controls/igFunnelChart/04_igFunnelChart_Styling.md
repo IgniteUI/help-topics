@@ -24,7 +24,7 @@ The following table lists the concepts and topics required as a prerequisite to 
 	-   Cascading Style Sheets
 	-   Applying themes by changing linked CSS files
 -   Topics
-	-   [Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html): This topic provides general information and a procedure for updating styles and themes in Ignite UI® library.
+	-   [Styling and Theming %%ProductName%%](Deployment-Guide-Styling-and-Theming.html): This topic provides general information and a procedure for updating styles and themes in %%ProductName%%® library.
 	-   [*igFunnelChart* Overview](igFunnelChart-Overview.html): This topic provides conceptual information about the `igFunnelChart` control including its main features, minimum requirements, and user functionality. 
 	-   [Adding *igFunnelChart*](igFunnelChart-Adding.html): This topic demonstrates how to add the `igFunnelChart` control to an HTML page and bind it to data.
 
@@ -58,15 +58,15 @@ This topic contains the following sections:
 
 The `igFunnelChart` control allows developers to create easily funnel chart in applications or web sites. The `igFunnelChart` control uses the jQuery UI CSS Framework for the purposes of applying styles and themes. By default, the `igFunnelChart` uses the IG theme which is a jQuery UI theme provided by Infragistics® for use in your applications. In addition to that, the IG theme has some specific styles that support funnel charts. This is needed because, for the purpose of customizing the look and feel of funnel charts, a general jQuery UI theme would not be sufficient. You must provide additional styles classes for altering elements specific to funnel charts like tooltips, and slices.
 
-Detailed information about using themes with Ignite UI library is available in the [**Styling and Theming Ignite UI**](Deployment-Guide-Styling-and-Theming.html) topic.
+Detailed information about using themes with %%ProductName%% library is available in the [**Styling and Theming %%ProductName%%**](Deployment-Guide-Styling-and-Theming.html) topic.
 
-> **Note:** The base theme of Ignite UI is unnecessary for charts and may be omitted on pages that contain only charts.
+> **Note:** The base theme of %%ProductName%% is unnecessary for charts and may be omitted on pages that contain only charts.
 
 
 
 ## <a id="themes"></a> Themes Overview
 
-Ignite UI offers the following themes for use with the `igFunnelChart` control:
+%%ProductName%% offers the following themes for use with the `igFunnelChart` control:
 
 -   IG
 -   Metro
@@ -79,7 +79,7 @@ The following table summarizes the themes available with the `igFunnelChart`.
 
 Theme | Description
 --- | ---
-**IG** ![](images/Styling_igFunnelChart_%28User_Story%29_1.png) | Path: *&lt;IG CSS root&gt;/themes/infragistics/* <br /> File: *infragistics.theme.css* <br /> This theme defines general visual features for all Ignite UI controls. Detailed information for using the IG theme is available in the [Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html) topic.
+**IG** ![](images/Styling_igFunnelChart_%28User_Story%29_1.png) | Path: *&lt;IG CSS root&gt;/themes/infragistics/* <br /> File: *infragistics.theme.css* <br /> This theme defines general visual features for all %%ProductName%% controls. Detailed information for using the IG theme is available in the [Styling and Theming %%ProductName%%](Deployment-Guide-Styling-and-Theming.html) topic.
 **Metro** ![](images/Styling_igFunnelChart_%28User_Story%29_2.png) | Path: *&lt;IG CSS root&gt;/themes/metro/* <br />File: *infragistics.theme.css* <br /> This theme defines visual features with regard to the new Windows® 8 user interface and touch enabled devices. It features sharp corners and some different colors for slices.
 
 

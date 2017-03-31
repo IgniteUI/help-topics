@@ -8,15 +8,15 @@
 |metadata|
 -->
 
-# Using Ignite UI in Browsers Without HTML5 or CSS3 Support
+# Using %%ProductName%% in Browsers Without HTML5 or CSS3 Support
 
 
 
-Ignite UI™ is a set of controls that takes advantage of [jQuery core](http://jquery.com), [jQuery UI](http://jqueryui.com), [HTML5](http://en.wikipedia.org/wiki/HTML5) (markup and APIs) and modern programming practices to help you create state-of-the-art web applications. While web technologies continue to quickly advance, the browser ecosystem evolves at a much slower pace than the underlying technology. This topic explains how old browsers work with Ignite UI and how you can develop your applications to respond appropriately in the context of new and old browsers.
+%%ProductName%%™ is a set of controls that takes advantage of [jQuery core](http://jquery.com), [jQuery UI](http://jqueryui.com), [HTML5](http://en.wikipedia.org/wiki/HTML5) (markup and APIs) and modern programming practices to help you create state-of-the-art web applications. While web technologies continue to quickly advance, the browser ecosystem evolves at a much slower pace than the underlying technology. This topic explains how old browsers work with %%ProductName%% and how you can develop your applications to respond appropriately in the context of new and old browsers.
 
-The controls included in Ignite UI are largely made up of custom [jQuery widgets](http://en.wikipedia.org/wiki/JQuery_UI#Widgets) which have a proven operability and performance track record among new and old browsers. This far-reaching ability is possible because most controls render commonplace HTML markup that is supported in nearly all web browsers. JavaScript dependencies are loaded by the controls and only in certain cases use HTML5 JavaScript APIs. CSS3 styling is only used in limited situations. Table 1 depicts which Ignite UI controls use new HTML features and CSS3 styling.
+The controls included in %%ProductName%% are largely made up of custom [jQuery widgets](http://en.wikipedia.org/wiki/JQuery_UI#Widgets) which have a proven operability and performance track record among new and old browsers. This far-reaching ability is possible because most controls render commonplace HTML markup that is supported in nearly all web browsers. JavaScript dependencies are loaded by the controls and only in certain cases use HTML5 JavaScript APIs. CSS3 styling is only used in limited situations. Table 1 depicts which %%ProductName%% controls use new HTML features and CSS3 styling.
 
-**Table 1:** Only a select number of Ignite UI controls use HTML5 markup, HTML5 APIs or CSS3 styling.
+**Table 1:** Only a select number of %%ProductName%% controls use HTML5 markup, HTML5 APIs or CSS3 styling.
 
 <table class="table table-striped">
 	<thead>
@@ -151,7 +151,7 @@ Read more about Modernizer on its website: [http://modernizr.com](http://moderni
 #Conclusion
 
 
-Most controls included in Ignite UI will operate as expect in new as well as old web browsers. In the few cases where controls use state-of-the-art HTML features, either the control compensates for the less-capable browser or you can employ manual or library-based capability detection to determine if your page will work as expected in any given browser.
+Most controls included in %%ProductName%% will operate as expect in new as well as old web browsers. In the few cases where controls use state-of-the-art HTML features, either the control compensates for the less-capable browser or you can employ manual or library-based capability detection to determine if your page will work as expected in any given browser.
 
 #Related Items
 

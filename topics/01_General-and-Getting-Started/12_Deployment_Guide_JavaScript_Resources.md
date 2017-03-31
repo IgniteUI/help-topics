@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# Using JavaScript Resources in Ignite UI
+# Using JavaScript Resources in %%ProductName%%
 
 
 
@@ -16,7 +16,7 @@
 
 #### Purpose
 
-This topic explains how to manage the required resources to work with Ignite UI™ within a Web application.
+This topic explains how to manage the required resources to work with %%ProductName%%™ within a Web application.
 
 #### In this topic
 
@@ -45,9 +45,9 @@ This topic contains the following sections:
 
 ### Referencing Infragistics JavaScript resources summary
 
-To work with Ignite UI, you must reference the Infragistics resources in your Web application. You can reference these resources in three different ways.
+To work with %%ProductName%%, you must reference the Infragistics resources in your Web application. You can reference these resources in three different ways.
 
--	**Including a custom JavaScript file**: This is the recommended approach to reference Ignite UI JavaScript files. You can [create a custom download](%%SamplesUrl%%/download) of selected Ignite UI controls and components.
+-	**Including a custom JavaScript file**: This is the recommended approach to reference %%ProductName%% JavaScript files. You can [create a custom download](%%SamplesUrl%%/download) of selected %%ProductName%% controls and components.
 
 -	**Using Infragistics Loader**: The *Infragistics Loader* can be used to resolve all the Infragistics resources (styles and scripts)
 
@@ -56,7 +56,7 @@ To work with Ignite UI, you must reference the Infragistics resources in your We
 
 ### Referencing Infragistics JavaScript from a custom download
 
-To create an Ignite UI custom build, go to the [custom download page](%%SamplesUrl%%/download). Custom builds have two main benefits. First, by choosing only the controls and features used in your application, the browser downloads and executes less total JavaScript. Second, the JavaScript is combined into one file reducing the amount of requests that the browser makes to the server. These benefits result in faster performance for your application.
+To create an %%ProductName%% custom build, go to the [custom download page](%%SamplesUrl%%/download). Custom builds have two main benefits. First, by choosing only the controls and features used in your application, the browser downloads and executes less total JavaScript. Second, the JavaScript is combined into one file reducing the amount of requests that the browser makes to the server. These benefits result in faster performance for your application.
 
 **In HTML:**
 
@@ -106,7 +106,7 @@ $.ig.loader('igGrid.Paging.Updating',
 
 ### Referencing the combined and minified JavaScript file
 
-You need to manually reference several resources for Ignite UI to work, including the base JavaScript files.
+You need to manually reference several resources for %%ProductName%% to work, including the base JavaScript files.
 
 The combined scripts for all Infragistics JavaScript files is the following:
 
@@ -159,7 +159,7 @@ Currently jQuery controls use Infragistics template engine. The following code a
 
 ### Referencing external JavaScript libraries summary
 
-The **Modernizr**, **JQuery**, and **JQuery UI** JavaScript libraries are always required in your projects including the Ignite UI. The Modernizr library detects the current browser features, allowing the controls to identify a touch or non-touch environment.
+The **Modernizr**, **JQuery**, and **JQuery UI** JavaScript libraries are always required in your projects including the %%ProductName%%. The Modernizr library detects the current browser features, allowing the controls to identify a touch or non-touch environment.
 
 Note: You need to include a JSON parser implementation for Internet Explorer 7, because it doesn't include a native JSON parser. Such parser is provided by [JSON-js](https://github.com/douglascrockford/JSON-js) library. Remember that you need to include JSON-js library before any other JavaScript Library.
 
@@ -208,15 +208,15 @@ References needed to include the libraries mentioned above:
 
 ### Referencing localization resources summary
 
-Ignite UI ships with resources for English and Japanese languages.
+%%ProductName%% ships with resources for English and Japanese languages.
 
-Starting with Volume 2012.2 we will provide Russian ([ru]), Bulgarian ([bg]), German ([de]), Spanish ([es]) and French ([fr]) localization as part of the product. Localization files must be placed in the localization folder `../js/i18n` (where *js* is the root folder for the JavaScript files in the Ignite UI program installation).
+Starting with Volume 2012.2 we will provide Russian ([ru]), Bulgarian ([bg]), German ([de]), Spanish ([es]) and French ([fr]) localization as part of the product. Localization files must be placed in the localization folder `../js/i18n` (where *js* is the root folder for the JavaScript files in the %%ProductName%% program installation).
 
 After adding Infragistics resources, the *scripts* folder of your Web application will have a *modules* folder. Under the modules folder localization resources for modular widgets (igGrid) need to be combined into one file.
 
 The *i18n* folder will be placed inside the *modules* folder, holding the JavaScript files to localize the widgets to the Japanese, Bulgarian,  Russian, German, Spanish and French languages.
 
-JavaScript files provide localized formats including dates, numbers, and currency for the jQuery editors. These reside *in `../js/modules/i18n/regional`* (where js is the root folder for the JavaScript files in the Ignite UI program installation).
+JavaScript files provide localized formats including dates, numbers, and currency for the jQuery editors. These reside *in `../js/modules/i18n/regional`* (where js is the root folder for the JavaScript files in the %%ProductName%% program installation).
 
 >**Note:** The regional settings are not part of combined scripts file,therefore they must be referenced if the combined scripts file is used.
 
@@ -307,13 +307,13 @@ The JavaScript files are also available in a hosted environment on the Infragist
 The following topics provide additional information related to this topic.
 
 
-- [JavaScript Files in Ignite UI](Deployment-Guide-JavaScript-Files.html): This topic is a reference to the JavaScript files required to work with the controls included in Ignite UI™.
+- [JavaScript Files in %%ProductName%%](Deployment-Guide-JavaScript-Files.html): This topic is a reference to the JavaScript files required to work with the controls included in %%ProductName%%™.
 
-- [Using Infragistics Loader](Using-Infragistics-Loader.html): This topic explains how to manage the required resources to work with the Ignite UI using Infragistics Loader. 
+- [Using Infragistics Loader](Using-Infragistics-Loader.html): This topic explains how to manage the required resources to work with the %%ProductName%% using Infragistics Loader. 
 
-- [Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html): Instructions on setting up your application for design time, options for using CSS in production and an overview on creating or customizing a theme.
+- [Styling and Theming %%ProductName%%](Deployment-Guide-Styling-and-Theming.html): Instructions on setting up your application for design time, options for using CSS in production and an overview on creating or customizing a theme.
 
-- [Infragistics Content Delivery Network (CDN) for Ignite UI](Deployment-Guide-Infragistics-Content-Delivery-Network%28CDN%29.html): Instructions on using Infragistics Content Delivery Network (CDN) in Ignite UI.
+- [Infragistics Content Delivery Network (CDN) for %%ProductName%%](Deployment-Guide-Infragistics-Content-Delivery-Network%28CDN%29.html): Instructions on using Infragistics Content Delivery Network (CDN) in %%ProductName%%.
 
 
 

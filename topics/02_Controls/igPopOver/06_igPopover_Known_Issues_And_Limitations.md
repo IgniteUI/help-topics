@@ -13,7 +13,7 @@
 ## Known Issues and Limitations Summary
 ### Known issues and limitations summary chart
 
-The following table summarizes the known issues and limitations of the `igPopover`™ control for the Ignite UI® 20%%ProductVersionShort%% release. Detailed explanations of all of the issues and the existing workarounds are provided after the summary table.
+The following table summarizes the known issues and limitations of the `igPopover`™ control for the %%ProductName%%® 20%%ProductVersionShort%% release. Detailed explanations of all of the issues and the existing workarounds are provided after the summary table.
 
 ### Legend:
 

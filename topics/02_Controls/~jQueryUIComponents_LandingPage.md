@@ -12,9 +12,9 @@
 
 
 
--   [Touch Support for Ignite UI Controls](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html)
+-   [Touch Support for %%ProductName%% Controls](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html)
 -   [Getting Started](Getting-Started.html)
--   [Using Events in Ignite UI](Using-Events-in-NetAdvantage-for-jQuery.html)
+-   [Using Events in %%ProductName%%](Using-Events-in-NetAdvantage-for-jQuery.html)
 -   [igBulletGraph](igBulletGraph.html)
 -   [igCombo](igCombo-igCombo.html)
 -   [igDataChart](igDataChart-Landing-Page.html)

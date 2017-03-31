@@ -106,7 +106,7 @@ By enabling the Updating feature, you enable adding, removing or updating the da
 
 ### <a id="required"></a> Adding Required CSS and JavaScript references using igLoader in JavaScript 
 
-The `igLoader` control is the recommended way to load JavaScript and CSS resources required by the Ignite UI library controls. First the `igLoader` script must be included in the page:
+The `igLoader` control is the recommended way to load JavaScript and CSS resources required by the %%ProductName%% library controls. First the `igLoader` script must be included in the page:
 
 **In JavaScript:**
 

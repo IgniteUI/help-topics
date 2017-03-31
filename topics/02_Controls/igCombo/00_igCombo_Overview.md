@@ -42,11 +42,11 @@ The table below lists the required background you need for fully understanding t
 
 You need to first read the following topics:
 
--	[Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
+-	[%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)
 
--	[Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+-	[Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 
--	[Styling and Theming in Ignite UI](Deployment-Guide-Styling-and-Theming.html)
+-	[Styling and Theming in %%ProductName%%](Deployment-Guide-Styling-and-Theming.html)
 
 -	[igGrid/igDataSource Architecture Overview](igGrid-igDataSource-Architecture-Overview.html), The Data Source Control section
 
@@ -211,7 +211,7 @@ You can use the ASP.NET MVC Helper to use managed code languages to configure th
 ###Introduction
 
 
-The `igCombo` control is a jQuery UI Widget and therefore is dependent upon the jQuery core and jQuery UI JavaScript libraries. In addition, there are several Ignite UI™ JavaScript resources that the `igCombo` control uses for shared functionality and data binding. These JavaScript references are required whether the `igCombo` control is used in a pure JavaScript context or in ASP.NET MVC. When using the `igCombo` in ASP.NET MVC, the Infragistics.Web.Mvc assembly is required to configure the `igCombo` with .NET languages.
+The `igCombo` control is a jQuery UI Widget and therefore is dependent upon the jQuery core and jQuery UI JavaScript libraries. In addition, there are several %%ProductName%%™ JavaScript resources that the `igCombo` control uses for shared functionality and data binding. These JavaScript references are required whether the `igCombo` control is used in a pure JavaScript context or in ASP.NET MVC. When using the `igCombo` in ASP.NET MVC, the Infragistics.Web.Mvc assembly is required to configure the `igCombo` with .NET languages.
 
 ###Requirements 
 
@@ -228,7 +228,7 @@ The table below lists the requirements for the `igCombo` control.
 	<tbody>
 		<tr>
 			<td>jQuery and jQuery UI JavaScript resources</td>
-			<td>Ignite UI is built on top of these frameworks:
+			<td>%%ProductName%% is built on top of these frameworks:
 				<ul>
 					<li>[jQuery](http://jquery.com) (The required jQuery version for igCombo is 1.8.3)</li>
 					<li>[jQuery UI](http://jqueryui.com/) (The required jQuery UI version for igCombo is 1.9.2)</li>
@@ -236,8 +236,8 @@ The table below lists the requirements for the `igCombo` control.
 			</td>
 		</tr>
 		<tr>
-			<td>Shared Ignite UI JavaScript resources</td>
-			<td>There are several shared JavaScript resources in Ignite UI that most widgets use:
+			<td>Shared %%ProductName%% JavaScript resources</td>
+			<td>There are several shared JavaScript resources in %%ProductName%% that most widgets use:
 				<ul>
 					<li>infragistics.util.js</li>
 				</ul>
@@ -269,7 +269,7 @@ The table below lists the requirements for the `igCombo` control.
 		</tr>
 		<tr>
 			<td>IG Theme</td>
-			<td>This theme contains custom visual styles created especially for Ignite UI</td>
+			<td>This theme contains custom visual styles created especially for %%ProductName%%</td>
 		</tr>
 		<tr>
 			<td>Base Theme</td>
@@ -461,11 +461,11 @@ The table below maps some of your possible needs to the appropriate templates.
 
 Following are some other topics you may find useful.
 
-- [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
+- [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)
 
-- [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+- [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 
-- [Styling and Theming in Ignite UI](Deployment-Guide-Styling-and-Theming.html)
+- [Styling and Theming in %%ProductName%%](Deployment-Guide-Styling-and-Theming.html)
  
 - [igGrid/igDataSource Architecture Overview](igGrid-igDataSource-Architecture-Overview.html)
  

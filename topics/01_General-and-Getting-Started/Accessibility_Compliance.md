@@ -21,7 +21,7 @@ This topic contains the following sections:
 
 [Section 508](http://www.section508.gov/) of the Rehabilitation Act was amended in 1998 by Congress to require all Federal agencies to make their electronic and information technology accessible to people with disabilities. Since then, Section 508 compliance has not only been a requirement in government agencies, but it's also important when providing software solutions and designing Web pages.
 
-Section 1194.22 of the Section 508 law specifically targets Web-based intranet and internet information and systems, and contains a set of 16 rules to follow. In order to enable you to keep your Web applications and Web sites compatible with these rules with minimal effort on your part, Infragistics has taken steps to ensure that the Ignite UI™ controls and components are compliant with the relevant accessibility rules.
+Section 1194.22 of the Section 508 law specifically targets Web-based intranet and internet information and systems, and contains a set of 16 rules to follow. In order to enable you to keep your Web applications and Web sites compatible with these rules with minimal effort on your part, Infragistics has taken steps to ensure that the %%ProductName%%™ controls and components are compliant with the relevant accessibility rules.
 
 The matrix below provides a high-level outline of the accessibility support provided by our visual controls (and related components). To learn more about an individual control/component's accessibility compliance, click the name of the control/component. 
 

@@ -10,7 +10,7 @@
 
 #What's New in 2015 Volume 1
 
-This topic presents the controls and the new and enhanced features for the Ignite UI™ 2015 Volume 1 release.
+This topic presents the controls and the new and enhanced features for the %%ProductName%%™ 2015 Volume 1 release.
 
 
 ##What’s New Summary
@@ -21,13 +21,13 @@ The following summarizes what’s new in 2015 Volume 1. Additional details follo
 
 Feature | Description
 ---|---
-[New Ignite UI Help Viewer](#help-viewer) | We have a brand new, modernized help viewer for Ignite UI.
+[New %%ProductName%% Help Viewer](#help-viewer) | We have a brand new, modernized help viewer for %%ProductName%%.
 
-### Ignite UI Page Designer
+### %%ProductName%% Page Designer
 
 Feature | Description
 ---|---
-[Out-of-the-Box Theming Support](#page-designer-theming-support) | Added support for other Ignite UI themes and common Bootstrap-based themes that you can easily select with the built-in theme picker.
+[Out-of-the-Box Theming Support](#page-designer-theming-support) | Added support for other %%ProductName%% themes and common Bootstrap-based themes that you can easily select with the built-in theme picker.
 [Improved Data Sources Experience](#page-designer-datasource-expirience) | Added explicit support for JSONP data source and local data source as well as a new data source editor.
 [Intellisense support for Ace](#page-designer-intellisense-support)  | Added support for showing intellisense when the designer is in code view and the user starts typing
 [Remote data source – user friendly errors](#page-designer-remote-dataSource) | Web designer now has user interface for showing detailed information for the possible problem, while connecting to the remote data source
@@ -83,21 +83,21 @@ API Improvements| We also took this opportunity to revisit some less-than-optima
 
 Feature | Description
 ---|---
-jQuery Mobile 1.4+ Support | Ignite UI mobile controls are now compatible with the most recent version of jQuery Mobile, 1.4+.
+jQuery Mobile 1.4+ Support | %%ProductName%% mobile controls are now compatible with the most recent version of jQuery Mobile, 1.4+.
 
 
 ##General
 
-### <a id="help-viewer"></a>New Ignite UI Help Viewer
+### <a id="help-viewer"></a>New %%ProductName%% Help Viewer
 
-We have a brand new, modernized help viewer for Ignite UI. This makes it much easier to navigate through and share individual topics, and you can also easily switch between product versions (for version 14.1 and up) directly in a topic.
+We have a brand new, modernized help viewer for %%ProductName%%. This makes it much easier to navigate through and share individual topics, and you can also easily switch between product versions (for version 14.1 and up) directly in a topic.
 Beyond making the experience easier to use, the actual topics themselves are now available on GitHub in Markdown. This means that you can easily report issues on topics or perhaps even submit additions or changes to a topic via a GitHub pull request.
 
 #### Related Content
 
--   [Ignite UI Help Topics on GitHub](https://github.com/IgniteUI/help-topics)
+-   [%%ProductName%% Help Topics on GitHub](https://github.com/IgniteUI/help-topics)
 
-##Ignite UI Page Designer
+##%%ProductName%% Page Designer
 
 ### <a id="page-designer-theming-support"></a>Out-of-the-Box Theming Support
 Selecting a theme from the list changes the theme for all the components already dropped on the design surface. 
@@ -130,7 +130,7 @@ In 14.2, we CTP’d the first version of the "Client-Side Excel Library" which i
 #### Related Topics
 
 -   [Understanding the Infragistics JavaScript Excel Library](understanding-the-infragistics-javascript-excel-library.html)
--   [Using the Ignite UI JavaScript Excel Library](Using-The-JavaScript-Excel-Library.html)
+-   [Using the %%ProductName%% JavaScript Excel Library](Using-The-JavaScript-Excel-Library.html)
 
 #### Related Samples
 

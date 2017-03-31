@@ -19,7 +19,7 @@ This topic explains, with code examples, how to attach event handlers to the `ig
 
 The following topics are prerequisites to understanding this topic:
 
-- [Using Events in Ignite UI](Using-Events-in-NetAdvantage-for-jQuery.html): This topic demonstrates how to handle events raised by Ignite UI® controls. Also included is an explanation of the differences between binding events on initialization and after initialization.
+- [Using Events in %%ProductName%%](Using-Events-in-NetAdvantage-for-jQuery.html): This topic demonstrates how to handle events raised by %%ProductName%%® controls. Also included is an explanation of the differences between binding events on initialization and after initialization.
 
 - [igTileManager Overview](igTileManager-Overview.html): This topic provides conceptual information about the `igTileManager` control including its main features, minimum requirements, and user functionality.
 

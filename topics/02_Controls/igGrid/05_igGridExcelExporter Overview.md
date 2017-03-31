@@ -24,7 +24,7 @@ The `igGridExcelExporter` includes the following characteristics:
  - Provides callbacks (events) throughout the export process.
 
 ## Required Background
-- [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html "Ignite UI Overview") - General information on the Ignite UI™ library.  
+- [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html "%%ProductName%% Overview") - General information on the %%ProductName%%™ library.  
 - [igGrid Overview](igGrid-Overview.html "igGrid Overview") - General information on the `igGrid` control.
 
 ## Dependencies

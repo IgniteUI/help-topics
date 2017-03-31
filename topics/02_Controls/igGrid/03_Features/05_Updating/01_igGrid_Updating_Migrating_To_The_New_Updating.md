@@ -34,7 +34,7 @@ This topic contains the following sections:
 ### <a id="dependencies"></a> Dependencies
 Changes and improvements in the structure and functionality in the igEditors suite that igGridUpdating uses to edit rows and cells in the grid changed the earliest jQuery and jQuery UI versions that are supported. The difference is summarized in the following table.
 
-||Ignite UI 15.1|Ignite UI 15.2|
+||%%ProductName%% 15.1|%%ProductName%% 15.2|
 |---|:---:|:---:|
 |**Earliest supported jQuery version**|1.4.4|1.9.1|
 |**Earliest supported jQuery UI version**|-|1.9.0|

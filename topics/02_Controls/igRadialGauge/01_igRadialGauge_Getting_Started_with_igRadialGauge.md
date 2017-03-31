@@ -23,9 +23,9 @@ The following lists the materials required as a prerequisite to understanding th
 
 **Topics**
 
-- [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html): General information on the Ignite UI™ library.
+- [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html): General information on the %%ProductName%%™ library.
 
-- [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html): This topic provides general guidance on adding required JavaScript resources to use controls from the Ignite UI library.
+- [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html): This topic provides general guidance on adding required JavaScript resources to use controls from the %%ProductName%% library.
 
 - [igRadialGauge Overview](igRadialGauge-igRadialGauge-Overview.html): This topic provides conceptual information about the `igRadialGauge` control including its main features, minimum requirements for using charts and user functionality.
 
@@ -77,14 +77,14 @@ The following steps demonstrate how to add an `igRadialGauge` control to a web p
 	Reference the required resources. Referencing resources includes:
 	
 	-   Adding the jQuery, jQueryUI and Modernizr JavaScript resources to a folder named Scripts in your web site or web application.
-	-   Adding the Ignite UI CSS files to a folder named Content/ig in your web site or web application (see the [Styling and Theming in Ignite UI](Deployment-Guide-Styling-and-Theming.html) topic for details).
-	-   Adding the Ignite UI JavaScript files to a folder named Scripts/ig in your web site or web application (see the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) topic for details).
+	-   Adding the %%ProductName%% CSS files to a folder named Content/ig in your web site or web application (see the [Styling and Theming in %%ProductName%%](Deployment-Guide-Styling-and-Theming.html) topic for details).
+	-   Adding the %%ProductName%% JavaScript files to a folder named Scripts/ig in your web site or web application (see the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) topic for details).
 	
 	**The resources can be added either manually or using loaders** (recommended).
 	
 	Referencing resources in JavaScript using the igLoader
 	
-	The `igLoader`™ control is the recommended way to load JavaScript and CSS resources required by the Ignite UI library controls. First the igLoader script must be included in the page:
+	The `igLoader`™ control is the recommended way to load JavaScript and CSS resources required by the %%ProductName%% library controls. First the igLoader script must be included in the page:
 	
 	**In HTML:**
 	

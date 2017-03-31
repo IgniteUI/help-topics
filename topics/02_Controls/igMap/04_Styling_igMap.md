@@ -30,7 +30,7 @@ The following table lists the topics, and external articles required as a prereq
 
 **Topics**
 
-- [Styling and Theming in Ignite UI](Deployment-Guide-Styling-and-Theming.html): General information and a procedure for updating styles and themes in Ignite UI™ library.
+- [Styling and Theming in %%ProductName%%](Deployment-Guide-Styling-and-Theming.html): General information and a procedure for updating styles and themes in %%ProductName%%™ library.
 
 -	[igMap Overview](Overview-igMap.html): This topic provides conceptual information about the `igMap` control including its main features, minimum requirements and user interaction capabilities.
 
@@ -80,9 +80,9 @@ The `igMap` control is intended to allow developers to easily plot maps with app
 
 Map series’ colors are controlled by options and depend on the particular series type used. For example, the Geographic Symbol and Geographic Shape series support markers, while the rest of the map series have other visual representation like polylines and contour lines or employ colored regions which depend on map data.
 
-Detailed information about using themes with the Ignite UI library is available in the [Styling and Theming in Ignite UI](Deployment-Guide-Styling-and-Theming.html) topic.
+Detailed information about using themes with the %%ProductName%% library is available in the [Styling and Theming in %%ProductName%%](Deployment-Guide-Styling-and-Theming.html) topic.
 
->**Note:** The base theme of Ignite UI is not required for maps and you may safely omit it on pages containing only maps.
+>**Note:** The base theme of %%ProductName%% is not required for maps and you may safely omit it on pages containing only maps.
 
 
 
@@ -90,7 +90,7 @@ Detailed information about using themes with the Ignite UI library is available 
 
 ### Themes summary
 
-Ignite UI offers the following themes you can use with the `igMap` control:
+%%ProductName%% offers the following themes you can use with the `igMap` control:
 
 -   IG
 -   Metro
@@ -126,7 +126,7 @@ The following table summarizes the available themes for the `igMap` control.
 
 				File: infragistics.theme.css
 
-				This theme defines general visual features for all Ignite UI controls. Detailed information for using the IG theme is available in the <a class="ig-topic-link" href="Deployment-Guide-Styling-and-Theming.html" data-auto-update-caption="true">Styling and Theming in Ignite UI</a> topic.
+				This theme defines general visual features for all %%ProductName%% controls. Detailed information for using the IG theme is available in the <a class="ig-topic-link" href="Deployment-Guide-Styling-and-Theming.html" data-auto-update-caption="true">Styling and Theming in %%ProductName%%</a> topic.
 			</td>
 		</tr>
 

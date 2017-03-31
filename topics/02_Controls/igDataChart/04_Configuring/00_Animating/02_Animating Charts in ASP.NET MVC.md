@@ -306,7 +306,7 @@ Step-by-step instructions for creating a simple web page with an animated column
 
 The following topics provide additional information related to this topic.
 
--	[Animating Charts in HTML and JavaScript](igDataChart-Animating-HTML.html) : Demonstrates how to: create an HTML view; use JavaScript to add data dynamically to a column chart; and animate data changes using the Motion Framework for charts in the Ignite UI library.
+-	[Animating Charts in HTML and JavaScript](igDataChart-Animating-HTML.html) : Demonstrates how to: create an HTML view; use JavaScript to add data dynamically to a column chart; and animate data changes using the Motion Framework for charts in the %%ProductName%% library.
 
 
 

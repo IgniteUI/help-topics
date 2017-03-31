@@ -12,7 +12,7 @@
 
 ## Topic Overview
 
-This topic provides a conceptual overview of the data source components available in Ignite UI®.
+This topic provides a conceptual overview of the data source components available in %%ProductName%%®.
 
 ### Required background
 
@@ -24,13 +24,13 @@ The following table lists the concepts and topics required as a prerequisite to 
 
 **Topics**
 
-- [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html): This topic provides an overview of the Ignite UI product.
+- [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html): This topic provides an overview of the %%ProductName%% product.
 
 
 ## Introduction
 ### Data source components summary
 
-The data source components available in the Ignite UI suite are client-side components intended to serve as a mediator between the actual data and the visual components that visualize the data. Multiple kinds of input data are supported. Ignite UI data source components fall into the following categories:
+The data source components available in the %%ProductName%% suite are client-side components intended to serve as a mediator between the actual data and the visual components that visualize the data. Multiple kinds of input data are supported. %%ProductName%% data source components fall into the following categories:
 
 -   Flat data source components (`igDataSource`™) used for feeding data-bound controls that visualize standard, ”flat” and hierarchical data (i.e. data that is not multidimensional) in the form of a regular table (grid)
 -   Multidimensional OLAP data source components (`igOlapFlatDataSource`™, `igOlapXmlaDataSource`™) used for visualizing data as an OLAP data slice in a pivot grid. The original supplied data set at that can be either in authentic OLAP format (and fed to the `igOlapXmlaDataSource` component) or in standard “flat” data (and fed to the `igOlapFlatDataSource` component). (In the latter case, “flat” data can be visualized in a pivot grid as OLAP data.)
@@ -40,11 +40,11 @@ The data source components available in the Ignite UI suite are client-side comp
 ## Individual Data Source Components Summary
 ### Individual data source components summary chart
 
-The following table provides summaries of the purpose and capabilities of the Ignite UI data source components. Additional details about each component are available after the table, including links to dedicated topics about the component.
+The following table provides summaries of the purpose and capabilities of the %%ProductName%% data source components. Additional details about each component are available after the table, including links to dedicated topics about the component.
 
 Component | Description
 ---|---
-[igDataSource](igDataSource-igDataSource.html) | The standard Ignite UI component for binding to various kinds and sources of data. The `igDataSource` transforms source data format into a format that can be fed to data-bound controls like the `igGrid`™.
+[igDataSource](igDataSource-igDataSource.html) | The standard %%ProductName%% component for binding to various kinds and sources of data. The `igDataSource` transforms source data format into a format that can be fed to data-bound controls like the `igGrid`™.
 [igOlapXmlaDataSource](igOlapXmlaDataSource.html) | A component for feeding multi-dimensional (OLAP) data visualization controls with OLAP data from a Microsoft® SQL Server® Analysis Services (SSAS) server.
 [igOlapFlatDataSource](igOlapFlatDataSource.html) | A component for feeding multi-dimensional (OLAP) data visualization controls with flat data to be presented in OLAP format. This allows for OLAP-like analysis on a flat data collection.
 
@@ -52,7 +52,7 @@ Component | Description
 
 ### igDataSource
 
-The `igDataSource` component is the standard Ignite UI component for binding to various kinds and sources of data. It serves as an intermediate layer between the data-bound controls like `igGrid` and the actual data,which can be either local (e.g. JSON, XML, JavaScript Array, etc.) or remote (REST services, WCF services, etc.). Paging, filtering, and sorting are supported, too.
+The `igDataSource` component is the standard %%ProductName%% component for binding to various kinds and sources of data. It serves as an intermediate layer between the data-bound controls like `igGrid` and the actual data,which can be either local (e.g. JSON, XML, JavaScript Array, etc.) or remote (REST services, WCF services, etc.). Paging, filtering, and sorting are supported, too.
 
 #### Related Topics
 

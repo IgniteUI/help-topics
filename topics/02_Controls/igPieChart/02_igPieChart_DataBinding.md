@@ -88,7 +88,7 @@ Data types|<ul><li>String: for category axes only</li><li>Number</li><li>Date</l
 
 ### <a id="data-source-summary"></a>Data sources summary
 
-Data binding for `igPieChart` is done identically to binding for other controls from the Ignite UI™ library. The way to bind data is by either by assigning a data source to the `dataSource` option or to provide a URL in the `dataSourceUrl` if data is provided by a web or WCF service.
+Data binding for `igPieChart` is done identically to binding for other controls from the %%ProductName%%™ library. The way to bind data is by either by assigning a data source to the `dataSource` option or to provide a URL in the `dataSourceUrl` if data is provided by a web or WCF service.
 
 
 
@@ -181,7 +181,7 @@ The following steps demonstrate how to bind JavaScript data array to an `igPieCh
 
 ### <a id="mvc-introduction"></a>Introduction
 
-This procedure shows how to bind a list of data objects from a backend controller method to a pie chart using the ASP.NET helper provided in the Ignite UI library.
+This procedure shows how to bind a list of data objects from a backend controller method to a pie chart using the ASP.NET helper provided in the %%ProductName%% library.
 
 ### Prerequisites
 

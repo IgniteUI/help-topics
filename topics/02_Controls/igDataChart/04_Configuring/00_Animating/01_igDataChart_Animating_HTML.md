@@ -17,7 +17,7 @@
 
 ### Purpose
 
-This topic explains how to create an HTML view and use JavaScript to add data dynamically to a column chart and use the Motion Framework for charts in the Ignite UI library to animate data changes.
+This topic explains how to create an HTML view and use JavaScript to add data dynamically to a column chart and use the Motion Framework for charts in the %%ProductName%% library to animate data changes.
 
 ### Required background
 
@@ -246,7 +246,7 @@ You can experiment by creating a different kind of change in the data source lik
 The following topics provide additional information related to this topic.
 
 
--	[Animating Charts in ASP.NET MVC(igDataChart)](Animating-Charts-in-ASP.NET-MVC.html): This topic explains how to create an MVC view and use jQuery to add data dynamically to a column chart by an AJAX POST request and use the Motion Framework for charts in the Ignite UI library to animate data changes.
+-	[Animating Charts in ASP.NET MVC(igDataChart)](Animating-Charts-in-ASP.NET-MVC.html): This topic explains how to create an MVC view and use jQuery to add data dynamically to a column chart by an AJAX POST request and use the Motion Framework for charts in the %%ProductName%% library to animate data changes.
 
 
 

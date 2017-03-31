@@ -39,7 +39,7 @@ When the tree grid is set up to use remote features, Ajax requests are used for 
 
 Supported features that can perform remote operations are **Sorting**, **Filtering** and **Paging**.
 
-In order to take advantage of the remote features functionality the controller action method responsible for Sorting, Filtering and Paging should be decorated with TreeGridDataSourceAction attribute. This is all that needs to be done and the TreeGridDataSourceAction is handling everything else for you. In this scenario requests are handled by the ignite UI Grid MVC Wrapper which automatically adds parameter to the request and returns the data in the appropriate format. 
+In order to take advantage of the remote features functionality the controller action method responsible for Sorting, Filtering and Paging should be decorated with TreeGridDataSourceAction attribute. This is all that needs to be done and the TreeGridDataSourceAction is handling everything else for you. In this scenario requests are handled by the %%ProductName%% Grid MVC Wrapper which automatically adds parameter to the request and returns the data in the appropriate format. 
 
 ```csharp
 

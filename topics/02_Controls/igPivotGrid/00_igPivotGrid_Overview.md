@@ -24,7 +24,7 @@ The following table lists the topics and concepts required as a prerequisite to 
 
 **Topics**
 
-- [Multidimensional (OLAP) Data Source Components](Multidimensional-Data-Source-Components.html): This group of topics explains the multidimensional (OLAP) data source components of the Ignite UI™ suite.
+- [Multidimensional (OLAP) Data Source Components](Multidimensional-Data-Source-Components.html): This group of topics explains the multidimensional (OLAP) data source components of the %%ProductName%%™ suite.
 
 
 **External Resources**
@@ -69,7 +69,7 @@ Manipulating those elements allows users to go through the displayed results and
 
 The `igPivotGrid` control can slice, dice, drill down or up, and pivot data taken from an OLAP cube or from a flat data collection. With its arsenal of features, `igPivotGrid` allows you to build sophisticated data-driven applications.
 
-The `igPivotGrid` is designed to work closely with another control from the Ignite UI suite – the [igPivotDataSelector](igPivotDataSelector.html)™. The `igPivotDataSelector` control all hierarchies and measures available in the data source available to users for displaying in the `igPivotGrid`. (If the `igPivotGrid` is used on its own, the users are limited in their interactions with the data only to the data slice that is currently displayed in the pivot grid.) If you prefer to use one widget instead of two you want to benefit from the built-in functionality to resize/collapse the `igPivotDataSelector`, use the [igPivotView](igPivotView.html)™ instead of the `igPivotGrid-igPivotDataSelector` combination.
+The `igPivotGrid` is designed to work closely with another control from the %%ProductName%% suite – the [igPivotDataSelector](igPivotDataSelector.html)™. The `igPivotDataSelector` control all hierarchies and measures available in the data source available to users for displaying in the `igPivotGrid`. (If the `igPivotGrid` is used on its own, the users are limited in their interactions with the data only to the data slice that is currently displayed in the pivot grid.) If you prefer to use one widget instead of two you want to benefit from the built-in functionality to resize/collapse the `igPivotDataSelector`, use the [igPivotView](igPivotView.html)™ instead of the `igPivotGrid-igPivotDataSelector` combination.
 
 
 
@@ -179,7 +179,7 @@ Apply sorting|The sort buttons, users can sort the values for one or more column
 
 ### Requirements summary
 
-Because the `igPivotGrid` control is a jQuery UI widget, it depends on jQuery and jQuery UI libraries. The Modernzr library is also used internally for detecting browser and device capabilities. The control uses several Ignite UI shared resources for its functionality. References to these resources are needed nevertheless, in spite of pure jQuery or ASP.NET MVC helpers being used. The `Infragistics.Web.Mvc` assembly is required when the control is used in the context of ASP.NET MVC.
+Because the `igPivotGrid` control is a jQuery UI widget, it depends on jQuery and jQuery UI libraries. The Modernzr library is also used internally for detecting browser and device capabilities. The control uses several %%ProductName%% shared resources for its functionality. References to these resources are needed nevertheless, in spite of pure jQuery or ASP.NET MVC helpers being used. The `Infragistics.Web.Mvc` assembly is required when the control is used in the context of ASP.NET MVC.
 
 For a detailed list of the required resources for using the `igPivotGrid` control, refer to the [Adding igPivotView to an HTML Page](igPivotView-Adding-to-HTML-Page.html).
 

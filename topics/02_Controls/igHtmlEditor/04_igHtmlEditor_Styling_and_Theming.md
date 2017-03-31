@@ -33,7 +33,7 @@ The following table lists the topics, concepts, and articles required as a prere
 
 -	[Configuring Toolbars and Buttons](igHtmlEditor-Configuring-Toolbars-and-Buttons.html): This topic explains how to configure the `igHtmlEditor` toolbars and buttons.
 
--	[Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html): This topic provides instructions on setting up your application for design time, options for using CSS in production and an overview on creating or customizing a theme.
+-	[Styling and Theming %%ProductName%%](Deployment-Guide-Styling-and-Theming.html): This topic provides instructions on setting up your application for design time, options for using CSS in production and an overview on creating or customizing a theme.
 
 
 
@@ -73,9 +73,9 @@ In the following screenshot you can see the `igHtmlEditor` with custom button ic
 
 ### Introduction
 
-Ignite UI™ utilizes the jQuery UI CSS Framework for styling and theming purposes. Infragistics and metro are jQuery UI themes provided by Infragistics for use in your application.
+%%ProductName%%™ utilizes the jQuery UI CSS Framework for styling and theming purposes. Infragistics and metro are jQuery UI themes provided by Infragistics for use in your application.
 
-Detailed information for applying these themes is available in the [Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html) topic.
+Detailed information for applying these themes is available in the [Styling and Theming %%ProductName%%](Deployment-Guide-Styling-and-Theming.html) topic.
 
 The `igHtmlEditor` specifically is not supported with jQuery UI themes and the Theme Roller tool because the styles of the jQuery UI themes override the `igHtmlEditor` button styles causing the buttons display incorrect icons from the jQuery UI themes.
 
@@ -109,7 +109,7 @@ The following table summarizes the themes available for the `igHtmlEditor`.
 			</td>
 
 			<td>
-				This theme defines general visual features for all Ignite UI controls.
+				This theme defines general visual features for all %%ProductName%% controls.
 			</td>
 		</tr>
 

@@ -13,13 +13,13 @@
 ## Topic Overview
 ### Purpose
 
-This topic lists the known issues and limitations in the 2011 Volume 2 release of the Ignite UI™ library.
+This topic lists the known issues and limitations in the 2011 Volume 2 release of the %%ProductName%%™ library.
 
 
 ## Known Issues and Limitations in 2011 Volume 2
 ### Overview
 
-The following table summarizes the known issues and limitations of the Ignite UI 2011 Volume 2 release. Detailed explanations of known issues and the possible workarounds are provided for in the known issues topics for each control.
+The following table summarizes the known issues and limitations of the %%ProductName%% 2011 Volume 2 release. Detailed explanations of known issues and the possible workarounds are provided for in the known issues topics for each control.
 
 ### Legend:
 
@@ -42,7 +42,7 @@ The following table summarizes the known issues and limitations of the Ignite UI
 
 Feature | Description | Status
 ---|---|---
-[Using Document Engines from NetAdvantage for ASP.NET and Ignite UI together workaround ](#using-document-engine) | Using both the Infragistics ASP.NET and Ignite UI documents assemblies together will cause namespace conflict exceptions. | ![](../../images/images/positive.png)
+[Using Document Engines from NetAdvantage for ASP.NET and %%ProductName%% together workaround ](#using-document-engine) | Using both the Infragistics ASP.NET and %%ProductName%% documents assemblies together will cause namespace conflict exceptions. | ![](../../images/images/positive.png)
 [igEditor styling ](#igEditor-styling) | Layout of html elements was modified and rounded corners are rendered around whole editor, not only buttons. | ![](../../images/images/positive.png)
 `igEditor` spin buttons | Spin buttons are rendered horizontally. | ![](../../images/images/negative.png)
 [igEditor rendering failure ](#rigEditor-rendering-failure) | Rendering may fail if the base element is TD. | ![](../../images/images/positive.png)
@@ -57,12 +57,12 @@ Feature | Description | Status
 
 
 
-## <a id="using-document-engine"></a>Using Document Engines from Infragistics ASP.NET and Ignite UI together workaround
+## <a id="using-document-engine"></a>Using Document Engines from Infragistics ASP.NET and %%ProductName%% together workaround
 
-Using both the Infragistics ASP.NET and Ignite UI documents assemblies
+Using both the Infragistics ASP.NET and %%ProductName%% documents assemblies
 together will cause namespace conflict exceptions.
 
-To resolve this issue, reference either the documents assemblies from Infragistics ASP.NET or the documents assemblies from Ignite UI in your application. The documents libraries within these assemblies are the same and can be used to replace one another.
+To resolve this issue, reference either the documents assemblies from Infragistics ASP.NET or the documents assemblies from %%ProductName%% in your application. The documents libraries within these assemblies are the same and can be used to replace one another.
 
 ## <a id="igEditor-styling"></a>igEditor styling
 

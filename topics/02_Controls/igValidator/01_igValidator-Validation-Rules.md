@@ -172,7 +172,7 @@ $('#editor').igValidator({
 
 ### <a id="equals"></a> EqualsTo
 
-The [`equalTo`](%%jQueryApiUrl%%/ui.igValidator#options:equalTo) validation requires the value of the target and another field to be the same. The selector for the other field can point to different types of input and including elements on which other supported Ignite UI editor controls are initialized. This check is performed based on the `igValidator` triggers where the rule is defined.
+The [`equalTo`](%%jQueryApiUrl%%/ui.igValidator#options:equalTo) validation requires the value of the target and another field to be the same. The selector for the other field can point to different types of input and including elements on which other supported %%ProductName%% editor controls are initialized. This check is performed based on the `igValidator` triggers where the rule is defined.
 
 Can be configured with a valid jQuery selector/reference or and object with `selector` option additional message:
 
@@ -295,7 +295,7 @@ The `$.ui.igValidator.defaults` holds the global defaults used by all instances 
 - `thousandsSeparator` Default decimal thousands (",") to use when no explicit number option property is defined
 - `emailRegEx` Default email checking RegExp object matching the [HTML5 specification for email input](https://www.w3.org/TR/html5/forms.html#e-mail-state-(type=email).
 
-To globally override one of those settings set the property after loading the required Ignite UI resources and before initializing the `igValidator` control.
+To globally override one of those settings set the property after loading the required %%ProductName%% resources and before initializing the `igValidator` control.
 
 ```js
 // override default thousands separator:

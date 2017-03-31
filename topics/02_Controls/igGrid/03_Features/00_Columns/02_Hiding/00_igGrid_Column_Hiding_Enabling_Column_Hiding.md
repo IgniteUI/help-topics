@@ -213,8 +213,8 @@ When focus is on one of those elements:
 The following topics provide additional information related to this topic.
 
 - [igGrid Configuration: Columns](igGrid-Configure-Column-Hiding.html)
-- [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
-- [Styling and Theming in Ignite UI](Deployment-Guide-Styling-and-Theming.html)
+- [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
+- [Styling and Theming in %%ProductName%%](Deployment-Guide-Styling-and-Theming.html)
 
 ### <a id="samples"></a> Samples
 

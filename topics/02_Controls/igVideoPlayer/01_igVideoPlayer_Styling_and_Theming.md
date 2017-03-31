@@ -12,13 +12,13 @@
 
 
 ## Required CSS and Themes
-When you decide to use the jQuery Video Player™ control in your web application the most common issue you will face is making the Video Player control look and feel according to your application’s style. You can achieve this using the following information about styling and theming for the video player in particular and in broader terms for the client UI controls available in the Ignite UI™ package.
+When you decide to use the jQuery Video Player™ control in your web application the most common issue you will face is making the Video Player control look and feel according to your application’s style. You can achieve this using the following information about styling and theming for the video player in particular and in broader terms for the client UI controls available in the %%ProductName%%™ package.
 
-The `igVideoPlayer` control, like other jQuery widgets, utilizes the jQuery UI CSS Framework for styling. Included in Ignite UI is a custom jQuery UI theme called ‘IG Theme’. This theme provides a professional and attractive design to all Infragistics and standard jQuery UI widgets.
+The `igVideoPlayer` control, like other jQuery widgets, utilizes the jQuery UI CSS Framework for styling. Included in %%ProductName%% is a custom jQuery UI theme called ‘IG Theme’. This theme provides a professional and attractive design to all Infragistics and standard jQuery UI widgets.
 
 ### Required CSS and Themes
 
-The Ignite UI™ videoplayer, like other jQuery widgets, utilizes the jQuery UI CSS Framework for styling. Included in Ignite UI are custom jQuery UI themes called Infragistics and Metro. These themes provide a professional and attractive design to all Infragistics and standard jQuery UI widgets.
+The %%ProductName%%™ videoplayer, like other jQuery widgets, utilizes the jQuery UI CSS Framework for styling. Included in %%ProductName%% are custom jQuery UI themes called Infragistics and Metro. These themes provide a professional and attractive design to all Infragistics and standard jQuery UI widgets.
 
 In addition to the Infragistics and Metro themes, there is a structure directory, which is required for the basic CSS layout of the Infragistics widgets.
 

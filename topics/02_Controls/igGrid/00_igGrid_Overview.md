@@ -43,11 +43,11 @@ Further, the grid also includes support for:
 
 ## Adding igGrid to a Web Page
 
-The following steps demonstrate how to create a basic implementation of the jQuery Grid on a web page using either jQuery client code. To read about which implementation to choose, see [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html).
+The following steps demonstrate how to create a basic implementation of the jQuery Grid on a web page using either jQuery client code. To read about which implementation to choose, see [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html).
 
 [igGrid Overview Sample](%%SamplesUrl%%/grid/overview)
 
-To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) help topic.
+To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) help topic.
 
 1.  On your HTML page, **reference the required JavaScript and CSS** files. **In HTML:**
 
@@ -125,8 +125,8 @@ To get started, include the required and localized resources for your applicatio
 ### Topics
 
 -   [igGrid/igDataSource Architecture Overview](igGrid-igDataSource-Architecture-Overview.html)
--   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html) 
--   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+-   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html) 
+-   [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 
 ### Samples
 

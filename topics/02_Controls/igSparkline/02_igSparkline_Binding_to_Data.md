@@ -118,7 +118,7 @@ Date
 
 #### Data sources summary
 
-The `igSparkline` control’s data binding is identical to that of the other controls in the Ignite UI™ library. The way to bind data is either by assigning a data source to the `dataSource` option or by providing a URL in the `dataSourceUrl` in the event that data is provided by a web or WCF service.
+The `igSparkline` control’s data binding is identical to that of the other controls in the %%ProductName%%™ library. The way to bind data is either by assigning a data source to the `dataSource` option or by providing a URL in the `dataSourceUrl` in the event that data is provided by a web or WCF service.
 
 Data structure|Related Topic/Sample
 ---|---

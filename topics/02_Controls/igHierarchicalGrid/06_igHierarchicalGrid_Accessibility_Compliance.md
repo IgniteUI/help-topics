@@ -19,7 +19,7 @@ This topic contains the following sections:
 
 ## <a id="section-508"></a>igHierarchicalGrid Section 508 Compliance Overview
 
-All of the Ignite UI™ controls and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. The table in the Section "508 Compliance Description" block lists the specific rules of Subpart 1194.22 that pertain to the control and details how the grid control complies with each rule.
+All of the %%ProductName%%™ controls and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. The table in the Section "508 Compliance Description" block lists the specific rules of Subpart 1194.22 that pertain to the control and details how the grid control complies with each rule.
 
 In some cases, to meet the requirements of each accessibility rule, you may need to interact with the control by to setting a specific property, but in other cases, the control does the work for you.
 

@@ -19,7 +19,7 @@ The following steps demonstrate how to bind the `igGrid` control to client-side 
 
 [**Table as DataSource Sample**](%%SamplesUrl%%/grid/datatable-binding)
 
-1.  To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) help topic.
+1.  To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) help topic.
 2.  On your HTML page, reference the required JavaScript and CSS files.
 
     **In Javascript:**
@@ -173,8 +173,8 @@ The following steps demonstrate how to bind the `igGrid` control to client-side 
 ## Related Links
 
 -   [Table as DataSoure Sample](%%SamplesUrl%%/grid/datatable-binding)
--   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
--   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+-   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)
+-   [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 
  
 

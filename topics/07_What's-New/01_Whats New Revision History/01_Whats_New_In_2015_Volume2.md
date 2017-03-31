@@ -10,7 +10,7 @@
 
 #What's New in 2015 Volume 2
 
-This topic presents the controls and the new and enhanced features for the Ignite UI™ 2015 Volume 2 release.
+This topic presents the controls and the new and enhanced features for the %%ProductName%%™ 2015 Volume 2 release.
 
 
 ##What’s New Summary
@@ -21,9 +21,9 @@ The following summarizes what’s new in 2015 Volume 2. Additional details follo
 
 Feature | Description
 ---|---
-[New Ignite UI Scaffolder for MVC](#igniteui-scaffolder) | New scaffolder for Ignite UI widgets.
-Full support for ASP.NET MVC 6 for all Ignite UI widgets | The Infragistics.Web.Mvc.dll now includes version build against ASP.NET MVC 6.
-Ignite UI TypeScript 1.5 definitions | The Ignite UI TypeScript definitions now support TypeScript 1.5. Intellisense is added for widget methods.
+[New %%ProductName%% Scaffolder for MVC](#igniteui-scaffolder) | New scaffolder for %%ProductName%% widgets.
+Full support for ASP.NET MVC 6 for all %%ProductName%% widgets | The Infragistics.Web.Mvc.dll now includes version build against ASP.NET MVC 6.
+%%ProductName%% TypeScript 1.5 definitions | The %%ProductName%% TypeScript definitions now support TypeScript 1.5. Intellisense is added for widget methods.
 
 ### igCombo
 Feature | Description
@@ -89,7 +89,7 @@ Feature | Description
 ### igValidator
 Feature | Description
 ---|---
-[Refactored Validator](#validator) | The Validator is reworked to allow flexible validation on an array of Ignite UI components, as well as standard input form elements
+[Refactored Validator](#validator) | The Validator is reworked to allow flexible validation on an array of %%ProductName%% components, as well as standard input form elements
 
 ### igUpload
 
@@ -99,16 +99,16 @@ Sending additional data between the client and server during file uploading | Yo
 
 ##General
 
-### <a id="igniteui-scaffolder"></a> New Ignite UI Scaffolder for MVC
+### <a id="igniteui-scaffolder"></a> New %%ProductName%% Scaffolder for MVC
 
-We release a brand new Scaffolder for Ignite UI widgets. With this we boost developer productivity greatly by providing code generation and templates to quickly target standard data scenarios like creating, reading, updating and deleting data. With a few clicks you can completely configure a Grid, generate a controller and save time on manual coding. Configuring other widgets as HierarchicalGrid, TreeGrid, Data Chart and others are already in the works.
-Along with the standard templates for create, edit, delete, details and list that ship with ASP.NET MVC, we provide customized Ignite UI templates that use the new editor widgets.
+We release a brand new Scaffolder for %%ProductName%% widgets. With this we boost developer productivity greatly by providing code generation and templates to quickly target standard data scenarios like creating, reading, updating and deleting data. With a few clicks you can completely configure a Grid, generate a controller and save time on manual coding. Configuring other widgets as HierarchicalGrid, TreeGrid, Data Chart and others are already in the works.
+Along with the standard templates for create, edit, delete, details and list that ship with ASP.NET MVC, we provide customized %%ProductName%% templates that use the new editor widgets.
 
 ![](images/igniteui_scafolder.png)
 
 #### Related Topics
 
--   [Ignite UI Scaffolder Visual Studio extension](MVC-Scaffolding.html)
+-   [%%ProductName%% Scaffolder Visual Studio extension](MVC-Scaffolding.html)
 
 ## igCombo
 ### <a id="combo-grouping"></a>
@@ -287,7 +287,7 @@ The functionality is controlled by the [`contextRowMode`](%%jQueryApiUrl%%ui.igt
 
 The Notifier component is an extension of the Popover component, which specializes in providing the end user with notification information. There are four predefined states of notification - success, info, warning, and error. 
 The component supports a popover mode, as well as simple inline-style messaging. In addition to this, there is automatic pairing with editor widgets to allow detection of erroneous input, which is outside of the predefined range. 
-Whether used with an Ignite UI widget or on its own, the Notifier component provides an easy and intuitive way to improve user experience.
+Whether used with an %%ProductName%% widget or on its own, the Notifier component provides an easy and intuitive way to improve user experience.
 
 ![](images/notifier.png)
 
@@ -303,7 +303,7 @@ Whether used with an Ignite UI widget or on its own, the Notifier component prov
 
 ### <a id="validator"></a> Refactored Validator
 
-The refactored igValidator component allows flexible validation on an array of Ignite UI components, as well as standard input form elements. The mechanism uses the igNotification component capabilities to both handle the validation process and display flexible and visually appealing notifications to the end user. See [Migrating to the new igValidator control](igvalidator-migration-topic.html) for information on how to migrate to the refactored igValidator.
+The refactored igValidator component allows flexible validation on an array of %%ProductName%% components, as well as standard input form elements. The mechanism uses the igNotification component capabilities to both handle the validation process and display flexible and visually appealing notifications to the end user. See [Migrating to the new igValidator control](igvalidator-migration-topic.html) for information on how to migrate to the refactored igValidator.
 
 ![](images/validator.png)
 

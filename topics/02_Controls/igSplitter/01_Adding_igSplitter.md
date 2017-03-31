@@ -21,7 +21,7 @@ The following table lists the concepts and topics required as a prerequisite to 
 
 **Topics**
 
-- [Using JavaScript Resouces in Ignite UI](Deployment-Guide-JavaScript-Resources.html): This topic explains how to manage the required resources to work with Ignite UI® within a Web application.
+- [Using JavaScript Resouces in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html): This topic explains how to manage the required resources to work with %%ProductName%%® within a Web application.
 
 - [igSplitter Overview](igSplitter-Overview.html): This topic provides conceptual information about the `igSplitter` control including its main features, minimum requirements, and user functionality.
 
@@ -86,7 +86,7 @@ jQuery and jQuery UI JavaScript resources
 			</td>
 
             <td>
-                Ignite UI is built on top of these frameworks:
+                %%ProductName%% is built on top of these frameworks:
 
                 <ul>
                     <li>
@@ -133,7 +133,7 @@ igSplitter JavaScript resources
 			</td>
 
             <td>
-                The igSplitter functionality of the Ignite UI library is distributed across several files. You can load the required resources in one of the following ways:
+                The igSplitter functionality of the %%ProductName%% library is distributed across several files. You can load the required resources in one of the following ways:
 
                 <ul>
                     <li>
@@ -146,7 +146,7 @@ Load the required resources manually. You need to use the dependencies listed in
 					</li>
                 </ul>
 
-                The following table lists the Ignite UI library dependences related to the igSplitter control. These resources need to be referred to explicitly if you chose to load resources manually (i.e. not to use
+                The following table lists the %%ProductName%% library dependences related to the igSplitter control. These resources need to be referred to explicitly if you chose to load resources manually (i.e. not to use
                     igLoader).
 
                 <table class="table">
@@ -180,7 +180,7 @@ infragistics.util.js
 			</td>
 
                             <td>
-Ignite UI utilities
+%%ProductName%% utilities
 			</td>
                         </tr>
 
@@ -221,7 +221,7 @@ IG theme
 			</td>
 
             <td>
-This theme contains the visual styles for the Ignite UI library. The theme file is:
+This theme contains the visual styles for the %%ProductName%% library. The theme file is:
 
                 {IG CSS root}/themes/Infragistics/infragistics.theme.css
 			</td>
@@ -251,7 +251,7 @@ Add `style` reference to the file in your page.
 
 
 
->**Note:**It is recommended to use the igLoader component to load JavaScript and CSS resources. For information on how to do this, refer to the [Using Infragistics Loader](Using-Infragistics-Loader.html) topic. In addition to that, in the online [Ignite UI Samples Browser](%%SamplesUrl%%), you can find some specific examples on how to use the igLoader with the igSplitter component.
+>**Note:**It is recommended to use the igLoader component to load JavaScript and CSS resources. For information on how to do this, refer to the [Using Infragistics Loader](Using-Infragistics-Loader.html) topic. In addition to that, in the online [%%ProductName%% Samples Browser](%%SamplesUrl%%), you can find some specific examples on how to use the igLoader with the igSplitter component.
 
 ### <a id="steps"></a>Steps
 
@@ -264,7 +264,7 @@ Following are the general conceptual steps for adding `igSplitter` to an HTML pa
 ## <a id="procedure-js"></a>Adding igSplitter in JavaScript – Procedure
 ### <a id="js-introduction"></a>Introduction
 
-This procedure guides you through the steps of adding an `igSplitter` control with basic functionality to an HTML page using a pure HTML/JavaScript implementation. It uses the Infragistics Loader component to load all Ignite UI resources needed by the `igSplitter` control.
+This procedure guides you through the steps of adding an `igSplitter` control with basic functionality to an HTML page using a pure HTML/JavaScript implementation. It uses the Infragistics Loader component to load all %%ProductName%% resources needed by the `igSplitter` control.
 
 ### <a id="js-preview"></a>Preview
 
@@ -282,10 +282,10 @@ The following steps demonstrate how to add a basic `igSplitter` control to a web
 	
 		A. Add the jQuery, jQueryUI, and Modernizr JavaScript resources to a folder named Scripts in the directory where your web page resides.
 
-		B. Add the Ignite UI CSS files to a folder named Content/ig (For details, see the [Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html) topic).
+		B. Add the %%ProductName%% CSS files to a folder named Content/ig (For details, see the [Styling and Theming %%ProductName%%](Deployment-Guide-Styling-and-Theming.html) topic).
 
-		C. Add the Ignite UI JavaScript files to a folder named Scripts/ig 
-		in your web site or application (For details, see the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) topics).
+		C. Add the %%ProductName%% JavaScript files to a folder named Scripts/ig 
+		in your web site or application (For details, see the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) topics).
 
 	2. Add the references to the required JavaScript libraries.
 	
@@ -389,9 +389,9 @@ The following steps demonstrate how to add a basic `igSplitter` control to an AS
 	
 		 A. Add the jQuery, jQueryUI, and Modernizr JavaScript resources to a folder named Scripts in the directory where   your web page resides.
 
-		 B. Add the Ignite UI CSS files to a folder named Content/ig (For details, see the [Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html) topic).
+		 B. Add the %%ProductName%% CSS files to a folder named Content/ig (For details, see the [Styling and Theming %%ProductName%%](Deployment-Guide-Styling-and-Theming.html) topic).
 
-		 C. Add the Ignite UI JavaScript files to a folder named Scripts/ig in your web site or application (For details, see the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+		 C. Add the %%ProductName%% JavaScript files to a folder named Scripts/ig in your web site or application (For details, see the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 		topics).
 
 	2. Add the references to the required JavaScript libraries.Add references to the jQuery, jQuery UI and Modernizr libraries to the `<head>` section of your page:

@@ -83,7 +83,7 @@ For the `igQRCodeBarcode` control to operate properly, the respective character 
 -   The `infragistics.encoding.js` file. It contains the full sets of character encodings. This should be the preferred alternative if more than one encodings is going to be needed in the application, i.e. to generate barcodes using multiple changing sets.
 -   The `infragistics.encoding.core.js` and the `infragistics.encoding_<encoding-name>.js` file. The latter contains only the `<encoding-name>` encoding. Several `infragistics.encoding_<encoding-name>.js` files can be included to support multiple languages. This alternative is recommended if no other encodings will be used because of the smaller file size.
 
-1.  The desired encoding files can be found at the following location under the Ignite UI™ package folder structure:
+1.  The desired encoding files can be found at the following location under the %%ProductName%%™ package folder structure:
 
     <IG JS root>/modules/encoding
 

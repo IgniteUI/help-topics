@@ -27,7 +27,7 @@ The following topics are prerequisites to understanding this topic:
 ## Accessibility Compliance Reference
 ### Introduction
 
-All of the Ignite UI™ controls and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. The table below contains the specific rules of Subpart 1194.22 that pertain to the control. Also, detailed is how the `igRadialGauge` control complies with each of these rules.
+All of the %%ProductName%%™ controls and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. The table below contains the specific rules of Subpart 1194.22 that pertain to the control. Also, detailed is how the `igRadialGauge` control complies with each of these rules.
 
 In some cases, to meet the requirements of each accessibility rule, you may need to interact with the control by setting a specific property, but in other cases, the control performs these tasks for you.
 
@@ -48,7 +48,7 @@ Rules| Rule text| How we comply
 
 The following topic provides additional information related to this topic.
 
-- [Accessibility Compliance](Accessibility-Compliance.html): This topic provides reference information for the accessibility compliance of all controls in the Ignite UI product.
+- [Accessibility Compliance](Accessibility-Compliance.html): This topic provides reference information for the accessibility compliance of all controls in the %%ProductName%% product.
 
 
 

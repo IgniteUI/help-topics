@@ -53,7 +53,7 @@ This topic contains the following sections:
 
 ### igLinearGauge summary
 
-The `igLinearGauge` control is an Ignite UI control which allows for visualizing data in the form of a linear gauge. It provides a simple and concise view of a primary value compared against a scale and one or more comparative ranges.
+The `igLinearGauge` control is an %%ProductName%% control which allows for visualizing data in the form of a linear gauge. It provides a simple and concise view of a primary value compared against a scale and one or more comparative ranges.
 
 ![](images/igLinearGauge.png)
 

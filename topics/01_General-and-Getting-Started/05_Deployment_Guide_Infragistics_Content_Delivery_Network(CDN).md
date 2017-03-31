@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# Infragistics Content Delivery Network (CDN) for Ignite UI
+# Infragistics Content Delivery Network (CDN) for %%ProductName%%
 
 ##Topic Overview
 
@@ -24,9 +24,9 @@ The following table lists the topics required as a prerequisite to understanding
 -  [Content Delivery Network (CDN)](http://en.wikipedia.org/wiki/Content_delivery_network)
 
 
-- [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html): This topic explains how to manage the required resources to work with the Ignite UI JavaScript within a Web application.
+- [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html): This topic explains how to manage the required resources to work with the %%ProductName%% JavaScript within a Web application.
 
-- [Using Infragistics Loader](Using-Infragistics-Loader.html): This topic explains how to manage the required resources to work with the Ignite UI using Infragistics Loader.
+- [Using Infragistics Loader](Using-Infragistics-Loader.html): This topic explains how to manage the required resources to work with the %%ProductName%% using Infragistics Loader.
 
 
 ### In this topic
@@ -51,9 +51,9 @@ The following table lists the topics required as a prerequisite to understanding
 
 To enable CDN support, you need to make the references to the required resources to point to the instances of these resources on the CDN instead of the local server. The files on the CDN are arranged in the same folder structure as they are your local machine. The referencing options are the same too, which means you can reference the resources either statically or with the Infragistics Loader.
 
-The root URL for referencing these resources includes the Volume number of Ignite UI and the version number of the resources.
+The root URL for referencing these resources includes the Volume number of %%ProductName%% and the version number of the resources.
 
->**Note:**Starting with Ignite UI 2012 Volume 2, there is a new 'latest' URL for the CDN. This URL is used in this topic and throughout the help for quickly accessing trial CDN resources. This location is automatically updated to the latest service release of the Ignite UI product and displays a trial watermark on the page when used. To use the production URLs, without a trial watermark, the information is contained on the [Keys & Downloads](https://www.infragistics.com/my-account/keys-and-downloads/) page under the selected product's *Source Code* tab on the Infragistics website.
+>**Note:**Starting with %%ProductName%% 2012 Volume 2, there is a new 'latest' URL for the CDN. This URL is used in this topic and throughout the help for quickly accessing trial CDN resources. This location is automatically updated to the latest service release of the %%ProductName%% product and displays a trial watermark on the page when used. To use the production URLs, without a trial watermark, the information is contained on the [Keys & Downloads](https://www.infragistics.com/my-account/keys-and-downloads/) page under the selected product's *Source Code* tab on the Infragistics website.
 
 >**Note:** The examples cover using a non-secure URL only, For secure URLs you have to [use secure protocol https](http://en.wikipedia.org/wiki/HTTPS) instead of non-secure protocol http .
 
@@ -68,7 +68,7 @@ The root URL for referencing these resources includes the Volume number of Ignit
 
 The following blocks cover referencing resources for standard HTML pages either statically or using the Infragistics Loader.
 
-If you need further details, refer to the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) topic.
+If you need further details, refer to the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) topic.
 
 ###<a id="referencing-cdn-hosted-js-css"></a>Referencing CDN-hosted JavaScript and CSS files statically
 
@@ -115,7 +115,7 @@ $.ig.loader({
 The following blocks demonstrate referencing resources for ASP.NET MVC either manually or using the Infragistics Loader. The examples cover referencing minified JavaScript files and the ASP.NET MVC Wrapper.
 
 If you need further details, refer to the [Using JavaScript Resources in
-Ignite UI](Deployment-Guide-JavaScript-Resources.html) topic.
+%%ProductName%%](Deployment-Guide-JavaScript-Resources.html) topic.
 
 ###<a id="js-cdn-statically"></a> Referencing CDN-hosted JavaScript files statically
 

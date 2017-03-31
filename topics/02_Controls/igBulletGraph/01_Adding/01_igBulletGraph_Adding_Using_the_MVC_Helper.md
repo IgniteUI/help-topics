@@ -29,7 +29,7 @@ The following table lists the concepts and topics required as a prerequisite to 
 	-   ASP.NET MVC HTML Helpers
 
 - Topics
-	- [Adding Controls to an MVC Project](Adding-NetAdvantage-Controls-to-an-MVC-Project.html): This topic explains how to get started with Ignite UI™ components in an 	ASP.NET MVC application.
+	- [Adding Controls to an MVC Project](Adding-NetAdvantage-Controls-to-an-MVC-Project.html): This topic explains how to get started with %%ProductName%%™ components in an 	ASP.NET MVC application.
 	- [*igBulletGraph* Overview](igBulletGraph-Overview.html): This topic provides conceptual information about the `igBulletGraph` control including its main features, minimum requirements, and user functionality.
 
 
@@ -157,7 +157,7 @@ Add the ASP.NET MVC helper to the body of your ASP.NET page.
 
 ​**2. Instantiate the *igBulletGraph* control** configuring its basic rendering options.
 
-Instantiate the `igBulletGraph` control. As with all Ignite UI ASP.NET MVC helpers, you must call the Render method to render the HTML and JavaScript to the View.
+Instantiate the `igBulletGraph` control. As with all %%ProductName%% ASP.NET MVC helpers, you must call the Render method to render the HTML and JavaScript to the View.
 
 **In ASPX:**
 

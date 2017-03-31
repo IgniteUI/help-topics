@@ -113,7 +113,7 @@ The following screenshot is a preview of the final result.
 
 To complete the procedure, you need the following:
 
--   Ignite UI JavaScript and Theme Files
+-   %%ProductName%% JavaScript and Theme Files
 
 ## Steps
 
@@ -153,7 +153,7 @@ $.ig.loader({
 });
 ```
 
-> **Note:** The Infragistics loader is a quick and efficient way to reference the required files. However, you can reference them manually. For more information, see the "[Using JavaScript Resouces in Ignite UI](Deployment-Guide-JavaScript-Resources.html)" topic in the [Related Content](#related-content) section.
+> **Note:** The Infragistics loader is a quick and efficient way to reference the required files. However, you can reference them manually. For more information, see the "[Using JavaScript Resouces in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)" topic in the [Related Content](#related-content) section.
 
 ### Step ​4. Initialize the *igHierarchicalGrid*.
 

@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# Using Ignite UI controls in different time zones
+# Using %%ProductName%% controls in different time zones
 
 ##Introduction
 Users of a web application are often in a different time zone than the web server and in some circumstances you may want to render the server-based date values adjusted to the client's time zone. In this topic you learn to customize the `enableUTCDates` property in the `igGrid`, `igDatePicker` and `igDateEditor` to display and edit date values that reflect the client's time zone.

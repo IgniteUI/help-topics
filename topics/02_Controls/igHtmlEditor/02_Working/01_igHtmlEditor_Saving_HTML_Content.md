@@ -80,7 +80,7 @@ The following screenshot is a preview of the final result.
 
 To complete the procedure, you need the following:
 
--   An ASP.NET MVC 3 project with included Ignite UI resources
+-   An ASP.NET MVC 3 project with included %%ProductName%% resources
 
 ###<a id="asp-net-mvc-overview"></a> Overview
 
@@ -217,7 +217,7 @@ The following screenshot is a preview of the final result.
 
 To complete the procedure, you need the following:
 
--   An ASP.NET MVC 3 project with included Ignite UI resources
+-   An ASP.NET MVC 3 project with included %%ProductName%% resources
 
 ###<a id="ajax-call-overview"></a> Overview
 

@@ -50,7 +50,7 @@ This topic contains the following sections:
 
 ### Data sources summary
 
-Bind data to `igFunnelChart` in the same way you would bind any other control to the Ignite UI® library. Data is bound either by assigning a data source to the `dataSource` option or by providing a URL in the `dataSourceUrl` if data is provided by a web or Windows Communication Foundation (WCF) service. The `igFunnelChart` control creates and uses an `igDataSource` object to handle data.
+Bind data to `igFunnelChart` in the same way you would bind any other control to the %%ProductName%%® library. Data is bound either by assigning a data source to the `dataSource` option or by providing a URL in the `dataSourceUrl` if data is provided by a web or Windows Communication Foundation (WCF) service. The `igFunnelChart` control creates and uses an `igDataSource` object to handle data.
 
 ### Supported data sources listing
 

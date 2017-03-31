@@ -17,7 +17,7 @@
 
 ### Purpose
 
-This topic explains how to configure Ignite UI® editor controls to bind to View-Model objects using the Knockout library.
+This topic explains how to configure %%ProductName%%® editor controls to bind to View-Model objects using the Knockout library.
 
 ### Required background
 
@@ -62,7 +62,7 @@ This topic contains the following sections:
 
 ### Knockout support summary
 
-The support for the Knockout library in Ignite UI editor controls is intended to provide easy means for developers to use the Knockout library and its declarative syntax to instantiate and configure Ignite UI editors.
+The support for the Knockout library in %%ProductName%% editor controls is intended to provide easy means for developers to use the Knockout library and its declarative syntax to instantiate and configure %%ProductName%% editors.
 
 The Knockout support is implemented as a Knockout extension which is invoked initially when Knockout bindings are applied to a page and during the page life when external updates to the View-Model happen. You can specify any of the editor control options that have relevance for your business case in the data-bind attribute.
 
@@ -75,7 +75,7 @@ The Knockout support is implemented as a Knockout extension which is invoked ini
 The following table lists the code examples included in this topic.
 
 
--	 [Configuring Value Binding for Editor Controls](#_Configuring_Value_Binding_for_Editor_Controls) : This example shows how to bind the value option of Ignite UI editor controls to a View-Model object using the Knockout declarative syntax.
+-	 [Configuring Value Binding for Editor Controls](#_Configuring_Value_Binding_for_Editor_Controls) : This example shows how to bind the value option of %%ProductName%% editor controls to a View-Model object using the Knockout declarative syntax.
 
 -	[Configuring an Input Mask (igMaskEditor)](#_Configuring_an_Input_Mask) : This example shows how to bind an `igMaskEditor`™ to a View-Model object using the Knockout declarative syntax.
 
@@ -92,7 +92,7 @@ The following table lists the code examples included in this topic.
 
 ### Description
 
-This example shows how to bind the value option of Ignite UI editor controls to a View-Model managed by Knockout. It is shown in the context of `igTextEditor`, `igNumericEditor`, `igCurrencyEditor`™ and `igDateEditor` controls. Using the declarative syntax of Knockout, the controls are instantiated from data-bind attribute of input elements and bound to View-Model observable properties.
+This example shows how to bind the value option of %%ProductName%% editor controls to a View-Model managed by Knockout. It is shown in the context of `igTextEditor`, `igNumericEditor`, `igCurrencyEditor`™ and `igDateEditor` controls. Using the declarative syntax of Knockout, the controls are instantiated from data-bind attribute of input elements and bound to View-Model observable properties.
 
 ### Code
 
@@ -111,7 +111,7 @@ var viewModel = {
 };
 ```
 
-The following code snippet shows how to apply the declared Knockout bindings to the page. Note that the `ko.applyBindings()` call is made within the ready callback of the Loader. This is necessary because the Ignite UI editor extensions for Knockout need to be loaded into the page before the bindings are applied.
+The following code snippet shows how to apply the declared Knockout bindings to the page. Note that the `ko.applyBindings()` call is made within the ready callback of the Loader. This is necessary because the %%ProductName%% editor extensions for Knockout need to be loaded into the page before the bindings are applied.
 
 **In JavaScript:**
 
@@ -194,7 +194,7 @@ The code snippet below instantiates an `igPercentEditor` control. The control is
 
 ### Description
 
-This example shows how to bind the value option of Ignite UI editor control to a View-Model managed by Knockout and configure the control to update the View-Model on every keystroke. By default, any edits in an Ignite UI editor control are sent to the View-Model when the control loses focus, i.e. when `onBlur` event occurs. The following code configures the update mode of the `igTextEditor` control to Immediate by setting the `updateMode` option to ‘immediate’.
+This example shows how to bind the value option of %%ProductName%% editor control to a View-Model managed by Knockout and configure the control to update the View-Model on every keystroke. By default, any edits in an %%ProductName%% editor control are sent to the View-Model when the control loses focus, i.e. when `onBlur` event occurs. The following code configures the update mode of the `igTextEditor` control to Immediate by setting the `updateMode` option to ‘immediate’.
 
 ### Code
 
@@ -230,7 +230,7 @@ The following topics provide additional information related to this topic.
 The following samples provide additional information related to this topic.
 
 
--	[KnockoutJS Binding](%%SamplesUrl%%/editors/bind-editors-with-ko): This sample demonstrates binding Ignite UI Editor controls to data managed by Knockout data bindings.
+-	[KnockoutJS Binding](%%SamplesUrl%%/editors/bind-editors-with-ko): This sample demonstrates binding %%ProductName%% Editor controls to data managed by Knockout data bindings.
 
 
 

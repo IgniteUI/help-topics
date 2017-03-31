@@ -257,7 +257,7 @@ To complete the procedure, you need the following:
 -   MVC 3 Framework or newer installed
 -   Northwind Database installed
 -   Infragistics.Web.Mvc.dll added to an ASP.NET MVC project
--   Ignite UI JavaScript and theme files added to an ASP.NET MVC project
+-   %%ProductName%% JavaScript and theme files added to an ASP.NET MVC project
 
 ### Steps
 

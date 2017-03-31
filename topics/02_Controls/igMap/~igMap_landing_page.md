@@ -16,7 +16,7 @@
 
 ### Introduction
 
-The topics in this group explain the `igMap`™ control of Ignite UI™.
+The topics in this group explain the `igMap`™ control of %%ProductName%%™.
 
 The `igMap` control provides functionality to visualize various kinds of maps based on the HTML5 canvas element and performs all rendering on the client-side.
 
@@ -57,7 +57,7 @@ This section contains topics covering `igMap` control.
 The following topics provide additional information related to this topic.
 
 
--	[Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html): This topic provides general information about the Ignite UI library.
+-	[%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html): This topic provides general information about the %%ProductName%% library.
 
 ### Samples
 

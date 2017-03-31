@@ -30,7 +30,7 @@ Concepts
 
 **Topics**
 
-- [Adding Controls to an MVC Project](Adding-NetAdvantage-Controls-to-an-MVC-Project.html): This topic explains how to get started with Ignite UI™ components in an ASP.NET MVC application.
+- [Adding Controls to an MVC Project](Adding-NetAdvantage-Controls-to-an-MVC-Project.html): This topic explains how to get started with %%ProductName%%™ components in an ASP.NET MVC application.
 
 - [igRadialMenu Features](igRadialMenu-Features.html): This topic explains the features supported by the control from developer perspective.
 
@@ -151,7 +151,7 @@ The following steps demonstrate how to instantiate `igRadialMenu` in an ASP.NET 
 
 2. Instantiate the `igRadialMenu` control configuring its basic rendering options.
 
-	Instantiates the `igRadialMenu` control. As with all Ignite UI ASP.NET MVC helpers, you must call the Render method to render the HTML and JavaScript to the View.
+	Instantiates the `igRadialMenu` control. As with all %%ProductName%% ASP.NET MVC helpers, you must call the Render method to render the HTML and JavaScript to the View.
 	
 	**In ASPX:**
 	

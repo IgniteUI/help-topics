@@ -81,7 +81,7 @@ jQuery and jQuery UI JavaScript resources
 			</td>
 
             <td width="417">
-                Ignite UI™ is built on top of these frameworks:
+                %%ProductName%%™ is built on top of these frameworks:
 
                 <ul>
                     <li>
@@ -105,7 +105,7 @@ igPopover JavaScript resources
 			</td>
 
             <td height="300" width="417">
-                The igPopover functionality of the Ignite UI library is distributed across several files. You can load the required resources in one of the following ways:
+                The igPopover functionality of the %%ProductName%% library is distributed across several files. You can load the required resources in one of the following ways:
 
                 <ul>
                     <li>
@@ -117,7 +117,7 @@ Load the required resources manually. You need to use the dependencies listed in
 					</li>
                 </ul>
 
-                The following table lists the Ignite UI library dependences related to the igPopover control. These resources need to be referred to explicitly if you chose to load resources manually (i.e. not to use igLoader).
+                The following table lists the %%ProductName%% library dependences related to the igPopover control. These resources need to be referred to explicitly if you chose to load resources manually (i.e. not to use igLoader).
 
                 <table class="table">
 	<thead>
@@ -171,7 +171,7 @@ IG theme
 			</td>
 
             <td width="417">
-This theme contains the visual styles for the Ignite UI library. The theme file is:
+This theme contains the visual styles for the %%ProductName%% library. The theme file is:
 
                 {IG CSS root}/themes/Infragistics/infragistics.theme.css
 			</td>
@@ -201,7 +201,7 @@ Add style reference to the file in your page.
 
 
 
->**Note:** It is recommended to use the `igLoader` component to load JavaScript and CSS resources. For information on how to do this, refer to the [**Adding Required Resources Automatically with the Infragistics Loader**](Using-Infragistics-Loader.html) topic. In addition to that, in the online [**Ignite UI Samples Browser**](%%SamplesUrl%%), you can find some specific examples on how to use the `igLoader` with the `igPopover` component.
+>**Note:** It is recommended to use the `igLoader` component to load JavaScript and CSS resources. For information on how to do this, refer to the [**Adding Required Resources Automatically with the Infragistics Loader**](Using-Infragistics-Loader.html) topic. In addition to that, in the online [**%%ProductName%% Samples Browser**](%%SamplesUrl%%), you can find some specific examples on how to use the `igLoader` with the `igPopover` component.
 
 ### <a id="overview-steps"></a>Steps
 
@@ -214,7 +214,7 @@ Following are the general conceptual steps for adding `igPopover` to an HTML pag
 ## <a id="procedure-js"></a>Adding igPopover in JavaScript – Procedure
 ### <a id="js-introduction"></a>Introduction
 
-This procedure guides you through the steps of adding `igPopover` with basic functionality to an HTML page using a pure HTML/JavaScript implementation. It uses the Infragistics Loader component to load all Ignite UI resources needed by the `igPopover` control.
+This procedure guides you through the steps of adding `igPopover` with basic functionality to an HTML page using a pure HTML/JavaScript implementation. It uses the Infragistics Loader component to load all %%ProductName%% resources needed by the `igPopover` control.
 
 The procedure adds a basic `igPopover` control with default configuration to an input HTML element. The popover contains the title of the input and shows when the user hovers over the element with the mouse.
 
@@ -231,9 +231,9 @@ The required resources added and properly referenced. (For a conceptual overview
 -   The required files added to their appropriate locations:
 
    -   The required jQuery and jQueryUI JavaScript resources added to a folder named Scripts in the directory where your web page resides.
-    -   The Ignite UI CSS files added to a folder named Content/ig (For details, see the [**Styling and Theming Ignite UI**](Deployment-Guide-Styling-and-Theming.html) topic).
+    -   The %%ProductName%% CSS files added to a folder named Content/ig (For details, see the [**Styling and Theming %%ProductName%%**](Deployment-Guide-Styling-and-Theming.html) topic).
 
-    -   The Ignite UI JavaScript files added to a folder of your web site or application named Scripts/ig (For details, see the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) topic).
+    -   The %%ProductName%% JavaScript files added to a folder of your web site or application named Scripts/ig (For details, see the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) topic).
 -   The required JavaScript resources referenced in the <head> section of the page.
 
 **In HTML:**
@@ -331,9 +331,9 @@ To complete the procedure, you need the following:
 -   The required files added to their appropriate locations:
 
    -   The required jQuery and jQueryUI JavaScript resources added to a folder named Scripts in the directory where your web page resides.
-    -   The Ignite UI CSS files added to a folder named Content/ig (For details, see the Styling and Theming Ignite UI topic).
+    -   The %%ProductName%% CSS files added to a folder named Content/ig (For details, see the Styling and Theming %%ProductName%% topic).
 
-    -   The Ignite UI JavaScript files added to a folder of your web site or application named Scripts/ig (For details, see the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) topics).
+    -   The %%ProductName%% JavaScript files added to a folder of your web site or application named Scripts/ig (For details, see the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) topics).
 -   The required JavaScript resources referenced in the <head> section of the page.
 
 **In HTML:**

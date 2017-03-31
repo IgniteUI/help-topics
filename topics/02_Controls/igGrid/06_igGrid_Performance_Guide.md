@@ -36,7 +36,7 @@ This topic contains the following sections:
 
 ## <a id="overview"></a> Overview
 
-The Ignite UI® `igGrid` provides exceptional performance out-of-the box. Going beyond the default settings, however, gives you an opportunity to further increase the grid’s performance ability (without sacrificing functionality) in special cases. 
+The %%ProductName%%® `igGrid` provides exceptional performance out-of-the box. Going beyond the default settings, however, gives you an opportunity to further increase the grid’s performance ability (without sacrificing functionality) in special cases. 
 
 Before learning about ways to adjust the grid to fine-tune performance, first get acquainted with some the underlying building blocks of the grid.
 

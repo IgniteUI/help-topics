@@ -15,7 +15,7 @@
 ## About jQuery Rating Control
 The jQuery Rating control, or igRating, allows you to select and rate items from a given range of values. Although it seems like a simple control, igRating is very flexible. It has a rich API that allows you to change its appearance and behavior, so you can respond to client actions and change control dynamically. This topic lists all the features and illustrates how to create a simple igRating control.
 
-The jQuery Rating control is part of the Ignite UI packet, which contains client-side-only controls. This gives the developer the flexibility to choose from several implementation options when developing using the jQuery Rating. The rating control exposes a rich jQuery API that can be configured without the use of any specific server back end. Also, developers using the Microsoft® ASP.NET MVC framework can leverage the rating’s server-side wrapper to configure the control with their .NET™ language of choice.
+The jQuery Rating control is part of the %%ProductName%% packet, which contains client-side-only controls. This gives the developer the flexibility to choose from several implementation options when developing using the jQuery Rating. The rating control exposes a rich jQuery API that can be configured without the use of any specific server back end. Also, developers using the Microsoft® ASP.NET MVC framework can leverage the rating’s server-side wrapper to configure the control with their .NET™ language of choice.
 
 The jQuery Rating allows itself to be styled, providing a different look and feel to the control. Styling the jQuery Rating provides a consistent appearance across supported browsers. The jQuery Rating can utilize your existing style sheets and can be styled using the jQuery UI’s ThemeRoller.
 
@@ -36,13 +36,13 @@ The jQuery Rating allows itself to be styled, providing a different look and fee
 ## Adding jQuery Rating to a Web Page
 The following steps demonstrate how to create a basic implementation of the jQuery Rating on a webpage using either jQuery client code or ASP.NET MVC server code.
 
-To read about which implementation to choose, see [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html). The following screenshot shows the default Rating view.
+To read about which implementation to choose, see [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html). The following screenshot shows the default Rating view.
 
 ![](images/Rating_Overview_02.png)
 
 [Basic Usage](%%SamplesUrl%%/rating/basic-usage)
 
-1.  To get started, include the required and localized resources for your project or website. Details on which resources to include can be found in the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) help topic.
+1.  To get started, include the required and localized resources for your project or website. Details on which resources to include can be found in the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) help topic.
 2.  On your HTML page or ASP.NET MVC View, reference the required JavaScript files, CSS files, and ASP.NET MVC assemblies.
 
     ###Client Code
@@ -143,8 +143,8 @@ To read about which implementation to choose, see [Ignite UI Overview](NetAdvant
 
 ## Related Links
 -   [Basic Usage](%%SamplesUrl%%/rating/basic-usage)
--   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
--   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+-   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)
+-   [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 
  
 

@@ -11,7 +11,7 @@
 # igVideoPlayer Overview
 
 ## About the Video Player
-The Ignite UI™ Video Player, or `igVideoPlayer`, is an HTML 5 video player, which renders video on a web page with a robust, cross-browser user interface. The video player is built using the HTML 5 video tag and the jQuery UI framework providing users with a fast-loading, rich multimedia experience without the need for installing and maintaining browser plugins.
+The %%ProductName%%™ Video Player, or `igVideoPlayer`, is an HTML 5 video player, which renders video on a web page with a robust, cross-browser user interface. The video player is built using the HTML 5 video tag and the jQuery UI framework providing users with a fast-loading, rich multimedia experience without the need for installing and maintaining browser plugins.
 
 When using the video player, you can choose from several implementation options. The video player exposes a rich jQuery API, which can be configured without the use of any specific server backend. Also, developers using the Microsoft® ASP.NET MVC framework can leverage the video player’s server-side wrapper to configure the control with their .NET™ language of choice.
 
@@ -35,13 +35,13 @@ Styling the `igVideoPlayer` provides a consistent appearance across supported br
 ## Adding igVideoPlayer to a Web Page
 The following steps demonstrate how to create a basic implementation of the video player on a web page using either jQuery client code or ASP.NET MVC server code.
 
->**Note:** To read more about which implementation to choose, see [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html).
+>**Note:** To read more about which implementation to choose, see [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html).
 
 **Figure 2: igVideoPlayer showing initial video player view**
 
 [![Running Sample](images/VideoPlayer_Overview_02.png)](%%SamplesUrl%%/video-player/basic-usage)
 
-1.  To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html) help topic.
+1.  To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) help topic.
 2.  On your HTML page or ASP.NET MVC View, reference the required JavaScript files, CSS files, and ASP.NET MVC assemblies.
 
 	**Listing 1: CSS and JavaScript references for igVideoPlayer**
@@ -247,9 +247,9 @@ The following steps demonstrate how to create a basic implementation of the vide
 
 ## Related Links
 -   [igVideoPlayer Basic Usage Samples](%%SamplesUrl%%/video-player/basic-usage)
--   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
--   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
--   [JavaScript Files in Ignite UI](Deployment-Guide-JavaScript-Files.html)
+-   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)
+-   [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
+-   [JavaScript Files in %%ProductName%%](Deployment-Guide-JavaScript-Files.html)
 -   [igVideoPlayer Working with HTML5 Video](igVideoPlayer-Working-with-HTML5-Video.html)
 
  

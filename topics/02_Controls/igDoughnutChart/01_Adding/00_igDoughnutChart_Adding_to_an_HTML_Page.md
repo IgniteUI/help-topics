@@ -20,7 +20,7 @@ This topic explains how to add the `igDoughnutChart`™ to an HTML page.
 
 The following topics are prerequisites to understanding this topic:
 
-- [Adding Required Resources Manually](Adding-the-Required-Resources-for-NetAdvantage-for-jQuery.html): This topic provides general guidance on adding required JavaScript resources to use controls from the Ignite UI library.
+- [Adding Required Resources Manually](Adding-the-Required-Resources-for-NetAdvantage-for-jQuery.html): This topic provides general guidance on adding required JavaScript resources to use controls from the %%ProductName%% library.
 
 - [*igDoughnutChart* Overview](igDoughnutChart-Overview.html): This topic provides an overall look at the `igDoughnutChart` control.
 
@@ -74,7 +74,7 @@ The following table summarizes the requirements for using the `igDoughnutChart` 
 			</td>
 
 			<td>
-				Ignite UI™ is built on top of the following frameworks:
+				%%ProductName%%™ is built on top of the following frameworks:
 
 				<ul>
                     <li>
@@ -113,17 +113,17 @@ The following table summarizes the requirements for using the `igDoughnutChart` 
 			</td>
 
 			<td>
-				The igDoughnutChart control depends on functionality distributed across several files in the Ignite UI Library. Load the required resources in one of the following ways:
+				The igDoughnutChart control depends on functionality distributed across several files in the %%ProductName%% Library. Load the required resources in one of the following ways:
 
 				<ul>
 					<li>Using the Infragistics® Loader (igLoader™). You only need to include a script reference to igLoader on your page.</li>
 
 					<li>Loading the required resources manually. You need to use the dependencies listed in the table below.</li>
 
-					<li>Loading the two combined files, containing the logic for all data visualization controls from the Ignite UI package: infragistics.core.js and infragistics.dv.js.</li>
+					<li>Loading the two combined files, containing the logic for all data visualization controls from the %%ProductName%% package: infragistics.core.js and infragistics.dv.js.</li>
 				</ul>
 
-				The following table lists the Ignite UI library dependences related to the igDoughnutChart control. Refer to these resources explicitly if not to using igLoader or the combined files.
+				The following table lists the %%ProductName%% library dependences related to the igDoughnutChart control. Refer to these resources explicitly if not to using igLoader or the combined files.
 
 				<table class="table">
 					<tbody>
@@ -143,7 +143,7 @@ The following table summarizes the requirements for using the `igDoughnutChart` 
 							</td>
 
 							<td>
-								Ignite UI utilities
+								%%ProductName%% utilities
 							</td>
 						</tr>
 
@@ -233,7 +233,7 @@ The following table summarizes the requirements for using the `igDoughnutChart` 
 							</td>
 
 							<td>
-								The igChartLegend™ control is common to all Ignite UI chart controls
+								The igChartLegend™ control is common to all %%ProductName%% chart controls
 							</td>
 						</tr>
 
@@ -287,7 +287,7 @@ The following table summarizes the requirements for using the `igDoughnutChart` 
 			</td>
 
 			<td>
-				This theme contains the visual styles for the Ignite UI library. The theme file is:&lt;IG CSS root&gt;/themes/Infragistics/infragistics.theme.css
+				This theme contains the visual styles for the %%ProductName%% library. The theme file is:&lt;IG CSS root&gt;/themes/Infragistics/infragistics.theme.css
 			</td>
 
 			<td></td>
@@ -338,16 +338,16 @@ Follow these steps to add an `igDoughnutChart` to an HTML page.
 	<!DOCTYPE html>
     <html>
     <head>
-	<!-- Ignite UI IG Theme CSS File -->
+	<!-- %%ProductName%% IG Theme CSS File -->
 	<link href="../../igniteui/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
-	<!-- Ignite UI Required CSS File -->
+	<!-- %%ProductName%% Required CSS File -->
 	<link rel="stylesheet" type="text/css" href="../../igniteui/css/structure/modules/infragistics.ui.html5.css"/>
 	<link rel="stylesheet" type="text/css" href="../../igniteui/css/structure/modules/infragistics.ui.shared.css"/>
 	<link rel="stylesheet" type="text/css" href="../../igniteui/css/structure/modules/infragistics.ui.chart.css"/>
 	<!-- jQuery Files -->
 	<script src="../../js/jquery.min.js"></script>
 	<script src="../../js/jquery-ui.min.js"></script>
-	<!-- Ignite UI Required JavaScript Files -->
+	<!-- %%ProductName%% Required JavaScript Files -->
 	<script src="../../igniteui/js/modules/infragistics.util.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.datasource.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.templating.js" type="text/javascript"></script>
@@ -452,16 +452,16 @@ Follow these steps to add an `igDoughnutChart` to an HTML page.
 <html>
 <head>
 <title>DoughnutChart</title>
-	<!-- Ignite UI IG Theme CSS File -->
+	<!-- %%ProductName%% IG Theme CSS File -->
 	<link href="../../igniteui/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
-	<!-- Ignite UI Required CSS File -->
+	<!-- %%ProductName%% Required CSS File -->
 	<link rel="stylesheet" type="text/css" href="../../igniteui/css/structure/modules/infragistics.ui.html5.css"/>
 	<link rel="stylesheet" type="text/css" href="../../igniteui/css/structure/modules/infragistics.ui.shared.css"/>
 	<link rel="stylesheet" type="text/css" href="../../igniteui/css/structure/modules/infragistics.ui.chart.css"/>
 	<!-- jQuery Files -->
 	<script src="../../js/jquery.min.js"></script>
 	<script src="../../js/jquery-ui.min.js"></script>
-	<!-- Ignite UI Required JavaScript Files -->
+	<!-- %%ProductName%% Required JavaScript Files -->
 	<script src="../../igniteui/js/modules/infragistics.util.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.datasource.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.templating.js" type="text/javascript"></script>

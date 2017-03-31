@@ -25,7 +25,7 @@ The following table lists the concepts and topics required as a prerequisite to 
 	-   Funnel chart
 	-   Data Visualization
 -   Topics
-	-   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html): General information on the Ignite UI® library.
+	-   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html): General information on the %%ProductName%%® library.
 
 
 ### In this topic
@@ -57,7 +57,7 @@ The `igFunnelChart` control is similar to `igPieChart`™ in that that they disp
 
 ## <a id="minimum-requirements"></a> Minimum Requirements
 
-The `igFunnelChart` control is a jQuery UI widget and, therefore, depends on the jQuery and jQuery UI libraries. The Modernizr library is also used internally for detecting browser and device capabilities. The control uses several Ignite UI shared resources for functionality and data binding. References to these resources are needed nevertheless, in spite of pure jQuery or ASP.NET MVC helpers being used. The *Infragistics.Web.Mvc* assembly is required when the control is used in the context of ASP.NET MVC.
+The `igFunnelChart` control is a jQuery UI widget and, therefore, depends on the jQuery and jQuery UI libraries. The Modernizr library is also used internally for detecting browser and device capabilities. The control uses several %%ProductName%% shared resources for functionality and data binding. References to these resources are needed nevertheless, in spite of pure jQuery or ASP.NET MVC helpers being used. The *Infragistics.Web.Mvc* assembly is required when the control is used in the context of ASP.NET MVC.
 
 
 

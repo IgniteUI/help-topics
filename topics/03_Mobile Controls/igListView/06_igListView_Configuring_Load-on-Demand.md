@@ -109,7 +109,7 @@ The following screenshot is a preview of the final result.
 
 ### <a id="js-requirements"></a> Requirements
 
-To complete the procedure, you need to have installed Ignite UI %%ProductVersionShort%% product.
+To complete the procedure, you need to have installed %%ProductName%% %%ProductVersionShort%% product.
 
 ### <a id="js-overview"></a> Overview
 
@@ -246,7 +246,7 @@ To complete the procedure, you need the following:
 -   MVC 3 Framework installed
 -   Northwind Database installed
 -   *Infragistics.Web.Mvc.Mobile.dll* added
--   Ignite UI jQuery Mobile Files added
+-   %%ProductName%% jQuery Mobile Files added
 
 ### <a id="mvc-overview"></a> Overview
 
@@ -404,7 +404,7 @@ The following screenshot is a preview of the final result.
     -   MVC 3 Framework installed
     -   Northwind Database installed
     -   *Infragistics.Web.Mvc.Mobile.dll* added
-    -   Ignite UI jQuery Mobile Files added
+    -   %%ProductName%% jQuery Mobile Files added
 
 ### <a id="mvc-remote-overview"></a> Overview
 

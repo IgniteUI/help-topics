@@ -24,15 +24,15 @@ The following table summarizes the known issues and limitations for the Infragis
 ## Infragistics Document Engine
 Issue | Description | Status
 ---|---|---
-Namespace conflict | Using the NetAdvantage® for ASP.NET and Ignite UI™ documents’ assemblies together causes namespace conflict exceptions. | ![](../../../../images/images/positive.png)
+Namespace conflict | Using the NetAdvantage® for ASP.NET and %%ProductName%%™ documents’ assemblies together causes namespace conflict exceptions. | ![](../../../../images/images/positive.png)
 
 
 
 ## Known Issues and Limitations Details
-Using the Infragistics ASP.NET and Ignite UI documents’ assemblies together causes namespace conflict exceptions.
+Using the Infragistics ASP.NET and %%ProductName%% documents’ assemblies together causes namespace conflict exceptions.
 
 ### Workaround
-Reference either the documents assemblies from Infragistics ASP.NET or the documents assemblies from Ignite UI in your application. The documents’ libraries within these assemblies are the same and can be used to replace one another.
+Reference either the documents assemblies from Infragistics ASP.NET or the documents assemblies from %%ProductName%% in your application. The documents’ libraries within these assemblies are the same and can be used to replace one another.
 
 
 

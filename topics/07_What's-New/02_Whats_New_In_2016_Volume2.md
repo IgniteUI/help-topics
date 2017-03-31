@@ -10,7 +10,7 @@
 
 #What's New in 2016 Volume 2
 
-This topic presents the controls and the new and enhanced features for the Ignite UI™ 2016 Volume 2 release.
+This topic presents the controls and the new and enhanced features for the %%ProductName%%™ 2016 Volume 2 release.
 
 
 ##What’s New Summary
@@ -21,15 +21,15 @@ The following summarizes what’s new in 2016 Volume 2. Additional details follo
 
 Feature | Description
 ---|---
-Ignite UI OSS | A big part of the Ignite UI toolset is now open source. Checkout the repository on [GitHub](https://github.com/IgniteUI/ignite-ui)|
-Ignite UI directives for Angular 2 (RTM) | Ignite UI widgets have component wrappers for Angular 2. For detailed information visit [Ignite UI Angular 2 GitHub](https://github.com/IgniteUI/igniteui-angular2) page.|
-Ignite UI Components for React (CTP) | Ignite UI widgets have component wrappers for [React](https://facebook.github.io/react/). For detailed information visit [Ignite UI Components for React](https://github.com/IgniteUI/igniteui-react) page.|
-ASP.NET Core 1.0 MVC Helpers | Ignite UI MVC Helpers now support ASP.NET Core 1.0. Checkout the [Using Ignite UI controls in ASP.NET Core 1.0](Using-IgniteUI-Controls-in-ASP.NET-Core-1.0-project.html) topic.|
-ASP.NET Core 1.0 MVC Tag Helpers | Ignite UI now provides Tag Helpers for ASP.NET Core 1.0. Checkout the [Using Ignite UI Tag Helpers](Using-Ignite-UI-Tag-Helpers.html) topic.|
+%%ProductName%% OSS | A big part of the %%ProductName%% toolset is now open source. Checkout the repository on [GitHub](https://github.com/IgniteUI/ignite-ui)|
+%%ProductName%% directives for Angular 2 (RTM) | %%ProductName%% widgets have component wrappers for Angular 2. For detailed information visit [%%ProductName%% Angular 2 GitHub](https://github.com/IgniteUI/igniteui-angular2) page.|
+%%ProductName%% Components for React (CTP) | %%ProductName%% widgets have component wrappers for [React](https://facebook.github.io/react/). For detailed information visit [%%ProductName%% Components for React](https://github.com/IgniteUI/igniteui-react) page.|
+ASP.NET Core 1.0 MVC Helpers | %%ProductName%% MVC Helpers now support ASP.NET Core 1.0. Checkout the [Using %%ProductName%% controls in ASP.NET Core 1.0](Using-IgniteUI-Controls-in-ASP.NET-Core-1.0-project.html) topic.|
+ASP.NET Core 1.0 MVC Tag Helpers | %%ProductName%% now provides Tag Helpers for ASP.NET Core 1.0. Checkout the [Using %%ProductName%% Tag Helpers](Using-Ignite-UI-Tag-Helpers.html) topic.|
 [New Javascript file breakdown](#javascript-file-breakdown) | The goal is to reduce the amount of code required in order to load a specific feature. |
 DPI Scaling | High DPI Scaling is enabled by default now which makes the components look much sharper and crisper than before. Components that have the DPI Scaling by default now are - igDataChart, igPieChart, igFunnelChart, igDoughnutChart, igRadialGauge, igLinearGauge, igBulletGraph, igSparkline, igRadialMenu. |
 Standard moduling support | All of IgniteUI JavaScript files contain AMD module definitions. Therefore these files can be loaded using standard module loaders such as Require.JS, System.JS etc.|
-[Ignite UI NuGet packages](#ignite-ui-nuget-packages) | New Ignite UI NuGet packages are available, including a package for creating .NET Core applications. |
+[%%ProductName%% NuGet packages](#ignite-ui-nuget-packages) | New %%ProductName%% NuGet packages are available, including a package for creating .NET Core applications. |
 
 
 ### igCategoryChart
@@ -267,16 +267,16 @@ If you want to load the new igCategoryChart control you need everything you need
 
 * infragistics.ui.categorychart.js
 
-### <a id="ignite-ui-nuget-packages"></a>Ignite UI NuGet packages
+### <a id="ignite-ui-nuget-packages"></a>%%ProductName%% NuGet packages
 
-Three new Ignite UI NuGet packages are added in this 2016 volume 2 release. Those packages can boost your productivity allowing you to setup your application faster. They will automatically include the Ignite UI files and references you need to your project.
+Three new %%ProductName%% NuGet packages are added in this 2016 volume 2 release. Those packages can boost your productivity allowing you to setup your application faster. They will automatically include the %%ProductName%% files and references you need to your project.
 
 With the new ASP.NET most modules are now wrapped as NuGet packages. Having this in mind our new MVC wrappers built on top of ASP.NET Core are also available as a NuGet package.
 
 The NuGet packages are installed with the product`s installer and during the installation a new local feed is created, meaning that you don`t need to setup your NuGet Package Manager. You will find the local NuGet feed Infragistics (Local) the next time you run your Visual Studio.
 
 #### Related Topic:
-- [Using Ignite UI NuGet packages](using-ignite-ui-nuget-packages.html)
+- [Using %%ProductName%% NuGet packages](using-ignite-ui-nuget-packages.html)
 
 ## igDataChart
 

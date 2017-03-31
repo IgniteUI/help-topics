@@ -20,7 +20,7 @@ This topic demonstrates how to configure Multiple Cell Selection for both Deskto
 
 The following table lists the topics required as a prerequisite to understanding this topic.
 
-- [Touch Support for Ignite UI Control](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html): This topic introduces to user to the new updates that Ignite UI controls has to support touch interactions.
+- [Touch Support for %%ProductName%% Control](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html): This topic introduces to user to the new updates that %%ProductName%% controls has to support touch interactions.
 
 - [igGrid Selection](igGrid-Selection-Overview.html): This topic shows you how to enable and use `igGrid` Selection.
 
@@ -113,7 +113,7 @@ Property | Default Value | Description
 
 The following topics provide additional information related to this topic.
 
-- [Touch Support for Ignite UI Control](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html): This topic introduces to user to the new updates that Ignite UI controls has to support touch interactions.
+- [Touch Support for %%ProductName%% Control](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html): This topic introduces to user to the new updates that %%ProductName%% controls has to support touch interactions.
 
 - [igGrid Selection](igGrid-Selection-Overview.html): This topic shows you how to enable and use `igGrid` Selection.
 

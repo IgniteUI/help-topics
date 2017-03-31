@@ -17,7 +17,7 @@
 
 ### Known issues and limitations summary chart
 
-The following table summarizes the known issues and limitations of the `igLayoutManager`™ control for the Ignite UI® %%ProductVersion%% release.
+The following table summarizes the known issues and limitations of the `igLayoutManager`™ control for the %%ProductName%%® %%ProductVersion%% release.
 
 ### Legend:
 

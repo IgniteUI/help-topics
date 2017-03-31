@@ -107,7 +107,7 @@ The following steps demonstrate how to add the `igRating` control to a web page.
 2. Instantiate `igRating` <a id="instantiate-igListView"></a>
 	1. Instantiate through markup
 
-		If you want to initialize the `igRating` control on a web page with markup only, then you must declare a HTML DIV element and define the appropriate attributes and the accompanying Ignite UI files will initialize the widget behind the scenes.
+		If you want to initialize the `igRating` control on a web page with markup only, then you must declare a HTML DIV element and define the appropriate attributes and the accompanying %%ProductName%% files will initialize the widget behind the scenes.
 		
 		To define the required attributes, use HTML 5 `data-*` attributes to set all the initial settings of the `igRating` control.
 		

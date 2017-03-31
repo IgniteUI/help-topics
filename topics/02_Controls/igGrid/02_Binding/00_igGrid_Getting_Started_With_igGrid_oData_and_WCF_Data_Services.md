@@ -22,7 +22,7 @@ This topic demonstrates how to setup a client-side jQuery grid with remote pagin
 
 1.  Open Microsoft Visual Studio® and create a new ASP.NET Empty Web Application named ‘igDataSourceWCFService’:
 
-    > **Note**: The `igGrid` control uses the underlying `igDataSource` component is server-agnostic. Therefore this exercise demonstrates how you can implement *OData* support in ASP.NET WebForms as opposed to ASP.NET MVC which Ignite UI supports out-of-the-box.
+    > **Note**: The `igGrid` control uses the underlying `igDataSource` component is server-agnostic. Therefore this exercise demonstrates how you can implement *OData* support in ASP.NET WebForms as opposed to ASP.NET MVC which %%ProductName%% supports out-of-the-box.
 
     ![](images/Getting_Started_with_igGrid_oData_WCF_01.png)
 
@@ -86,7 +86,7 @@ This topic demonstrates how to setup a client-side jQuery grid with remote pagin
 
 11. At this point, you can run the Web Application and access the data of the service so now it’s time to setup the `igGrid` control.
 
-12. You will need the Ignite UI combined and minified script files, infragistics.core.js and infragistics.lob.js, which come with the product. In addition, you must reference the jQuery core and jQuery UI scripts to run the sample. [This help article](Deployment-Guide-JavaScript-Resources.html) discusses referencing the required scripts and where the combined and minified scripts are available to add to your application.
+12. You will need the %%ProductName%% combined and minified script files, infragistics.core.js and infragistics.lob.js, which come with the product. In addition, you must reference the jQuery core and jQuery UI scripts to run the sample. [This help article](Deployment-Guide-JavaScript-Resources.html) discusses referencing the required scripts and where the combined and minified scripts are available to add to your application.
 
     > **Note**: You can [download the full or trial product here](http://www.infragistics.com/dotnet/netadvantage/jquery-controls.aspx#Downloads). The jQuery [templates script can be obtained here](http://plugins.jquery.com/tag/templates/).
 
@@ -191,11 +191,11 @@ Run the sample to see the `igGrid` control populated with data from an *OData* s
 
 [**Download Sample**](http://dl.infragistics.com/community/jquery/codesamples/aaronm/2011-07-28/igGridOData.zip)
 
-> **Note**: The AdventureWorks database and Ignite UI resources are not included in the sample. Visit these links to obtain the software:
+> **Note**: The AdventureWorks database and %%ProductName%% resources are not included in the sample. Visit these links to obtain the software:
 > 
 > * [AdventureWorks Database](http://msftdbprodsamples.codeplex.com/releases/view/37109)
 > 
-> * [Ignite UI](http://www.infragistics.com/dotnet/netadvantage/jquery-controls.aspx#Downloads)
+> * [%%ProductName%%](http://www.infragistics.com/dotnet/netadvantage/jquery-controls.aspx#Downloads)
 
 
 

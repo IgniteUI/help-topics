@@ -76,7 +76,7 @@ jQuery and jQuery UI JavaScript resources
 			</td>
 
             <td>
-                Ignite UI™ is built on top of the following frameworks:
+                %%ProductName%%™ is built on top of the following frameworks:
 
                 <ul>
                     <li>
@@ -100,7 +100,7 @@ General `igQRCodeBarcode` JavaScript Resources
 			</td>
 
             <td>
-                The igQRCodeBarcode control depends on functionality distributed across several files in the Ignite UI Library. You can load the required resources in one of the following ways:
+                The igQRCodeBarcode control depends on functionality distributed across several files in the %%ProductName%% Library. You can load the required resources in one of the following ways:
 
                 <ul>
                     <li>
@@ -112,11 +112,11 @@ Load the required resources manually. You need to use the dependencies listed in
 					</li>
 
                     <li>
-Load the two combined files, containing the logic for all data visualization controls from the Ignite UI package - `infragistics.core.js`, `infragistics.dv.js` and `infragistics.encoding.js` (optional).
+Load the two combined files, containing the logic for all data visualization controls from the %%ProductName%% package - `infragistics.core.js`, `infragistics.dv.js` and `infragistics.encoding.js` (optional).
 					</li>
                 </ul>
 
-                The following table lists the Ignite UI library dependences related to the igQRCodeBarcode control. These resources need to be referred to explicitly if you chose not to use `igLoader` or
+                The following table lists the %%ProductName%% library dependences related to the igQRCodeBarcode control. These resources need to be referred to explicitly if you chose not to use `igLoader` or
                     the combined files.
 
                 <table class="table">
@@ -140,7 +140,7 @@ Description
 			</td>
 
                             <td>
-Ignite UI utilities
+%%ProductName%% utilities
 			</td>
                         </tr>
 
@@ -244,13 +244,13 @@ To complete the procedure, you need the required JavaScript and CSS files refere
 <!DOCTYPE html>
 <html>
 <head>
-      <!-- Ignite UI  CSS File -->
+      <!-- %%ProductName%%  CSS File -->
       <link href="../../igniteui/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
       
       <script type="text/javascript" src="../../js/jquery.min.js"></script>
       <script type="text/javascript" src="../../js/jquery-ui.js"></script>
       
-      <!-- Ignite UI Required Common JavaScript Files -->
+      <!-- %%ProductName%% Required Common JavaScript Files -->
       <script src="../../igniteui/js/modules/infragistics.util.js"></script>
       <script src="../../igniteui/js/modules/infragistics.dv.simple.core.js"></script>      
       
@@ -321,13 +321,13 @@ Following is the full code for this procedure.
 <!DOCTYPE html>
 <html>
 <head>
-      <!-- Ignite UI  CSS File -->
+      <!-- %%ProductName%%  CSS File -->
       <link href="../../igniteui/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
       
       <script type="text/javascript" src="../../js/jquery.min.js"></script>
       <script type="text/javascript" src="../../js/jquery-ui.js"></script>
       
-      <!-- Ignite UI Required Common JavaScript Files -->
+      <!-- %%ProductName%% Required Common JavaScript Files -->
       <script src="../../igniteui/js/modules/infragistics.util.js"></script>
       <script src="../../igniteui/js/modules/infragistics.dv.simple.core.js"></script>
       

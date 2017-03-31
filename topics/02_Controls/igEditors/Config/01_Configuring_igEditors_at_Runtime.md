@@ -38,7 +38,7 @@ This topic contains the following sections:
 #### General requirements
 
 -   jQuery-specific requirements
--   An HTML web page where Ignite UI controls are instantiated.
+-   An HTML web page where %%ProductName%% controls are instantiated.
 -   MVC-specific requirements
 -   An MVC project in Microsoft Visual Studio®
 -   A reference to the Infragsitics.Web.Mvc dll (contains the ASP.NET MVC helper)
@@ -49,7 +49,7 @@ This topic contains the following sections:
 
 	1.  The jQuery core library script
 	2.  The jQuery UI library
-	3.  The required Ignite UI script files for the editors on your page
+	3.  The required %%ProductName%% script files for the editors on your page
 
 ##<a id="_Binding_to_events_and_setting_options"></a>Binding to events and setting options
 
@@ -283,7 +283,7 @@ $("#percenteditor").igEditor('option', 'maxDecimals', 10);
 ##<a id="_Related_Topics"></a>Related Topics
 
 
--   [Using Events in Ignite UI](Using-Events-in-NetAdvantage-for-jQuery.html)
+-   [Using Events in %%ProductName%%](Using-Events-in-NetAdvantage-for-jQuery.html)
 
  
 

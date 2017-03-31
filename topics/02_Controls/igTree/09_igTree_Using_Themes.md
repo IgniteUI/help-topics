@@ -19,7 +19,7 @@ To customize a theme, you can use the jQuery UI ThemeRoller. ThemeRoller is a to
 ### Topics
 The information you need to customize the jQuery UI theme for the `igTree` control is covered in the following topics:
 
--   [Styling and Theming Ignite UI](Deployment-Guide-Styling-and-Theming.html)
+-   [Styling and Theming %%ProductName%%](Deployment-Guide-Styling-and-Theming.html)
 -   [igTree Theming API Documentation](%%jQueryApiUrl%%/ui.igtree#!theming)
 
 ## Related Topics

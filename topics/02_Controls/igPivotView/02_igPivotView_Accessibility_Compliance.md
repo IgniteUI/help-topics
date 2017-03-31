@@ -29,7 +29,7 @@ The following topics are prerequisites to understanding this topic:
 
 ### igPivotView accessibility compliance summary
 
-All Infragistics® Ignite UI™ controls and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. The [igPivotView accessibility compliance summary chart](#summary-chart) contains the specific rules of Subpart 1194.22 that pertain to the control.
+All Infragistics® %%ProductName%%™ controls and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. The [igPivotView accessibility compliance summary chart](#summary-chart) contains the specific rules of Subpart 1194.22 that pertain to the control.
 
 In some cases, to meet the requirements of each accessibility rule, you may need to interact with the control by setting a specific property, but in other cases, the control performs these tasks for you.
 
@@ -60,7 +60,7 @@ Rules| Rule text| How we comply
 
 The following topics provide additional information related to this topic.
 
-- [Accessibility Compliance](Accessibility-Compliance.html): This topic provides reference information about the accessibility compliance of all controls in the Infragistics Ignite UI product suite.
+- [Accessibility Compliance](Accessibility-Compliance.html): This topic provides reference information about the accessibility compliance of all controls in the Infragistics %%ProductName%% product suite.
 
 
 

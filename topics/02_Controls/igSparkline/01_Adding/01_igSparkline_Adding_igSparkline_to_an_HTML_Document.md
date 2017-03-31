@@ -30,9 +30,9 @@ The following table lists the concepts, topics, and articles required as a prere
 
 - [Adding igSparkline Overview](igSparkline-Adding-igSparkline-Overview.html): This topic provides an overview of the various ways of adding `igSparkline`™ to an application.
 
-- [Adding Required Resources Manually](Adding-the-Required-Resources-for-NetAdvantage-for-jQuery.html): This topic explains the organization of JavaScript resources in Ignite UI®.
+- [Adding Required Resources Manually](Adding-the-Required-Resources-for-NetAdvantage-for-jQuery.html): This topic explains the organization of JavaScript resources in %%ProductName%%®.
 
-- [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html): This topic provides general guidance on adding required JavaScript resources to use controls from the Ignite UI library.
+- [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html): This topic provides general guidance on adding required JavaScript resources to use controls from the %%ProductName%% library.
 
 
 **External Resources**
@@ -97,7 +97,7 @@ IG Theme
 			</td>
 
             <td>
-This theme contains the visual styles for the Ignite UI library. The theme file is:
+This theme contains the visual styles for the %%ProductName%% library. The theme file is:
 
                 css/themes/Infragistics/infragistics.theme.css
 			</td>
@@ -136,7 +136,7 @@ Description
 			</td>
 
                             <td>
-Shared CSS styles for all Ignite UI controls.
+Shared CSS styles for all %%ProductName%% controls.
 			</td>
                         </tr>
 
@@ -196,7 +196,7 @@ jQuery and jQuery UI JavaScript resources
 			</td>
 
             <td>
-                Ignite UI is built on top of the following frameworks:
+                %%ProductName%% is built on top of the following frameworks:
 
                 <ul>
                     <li>
@@ -220,7 +220,7 @@ General `igSparkline` JavaScript Resources
 			</td>
 
             <td>
-                The igSparkline functionality of the Ignite UI library is distributed across several files. You can load the required resources in one of the following ways:
+                The igSparkline functionality of the %%ProductName%% library is distributed across several files. You can load the required resources in one of the following ways:
 
                 <ul>
                     <li>
@@ -237,7 +237,7 @@ Load the required resources manually. You need to use the dependencies listed in
 					</li>
                 </ul>
 
-                The following table lists the Ignite UI library dependences related to the igSparkline control. These resources need to be referred to explicitly if you chose to load resources manually (i.e. not to use `igLoader`).
+                The following table lists the %%ProductName%% library dependences related to the igSparkline control. These resources need to be referred to explicitly if you chose to load resources manually (i.e. not to use `igLoader`).
 
                 <table class="table table-bordered">
 	<thead>
@@ -260,7 +260,7 @@ Description
 			</td>
 
                             <td>
-Ignite UI utilities
+%%ProductName%% utilities
 			</td>
                         </tr>
 
@@ -305,7 +305,7 @@ A shared library for all data visualization components
 			</td>
 
                             <td>
-The base widget for all Ignite UI chart components
+The base widget for all %%ProductName%% chart components
 			</td>
                         </tr>
 
@@ -411,13 +411,13 @@ Follow these steps to add an `igSparkline` to an HTML document.
 	<html>
 	<head>
 	    <title></title>
-	    <!-- Ignite UI Required Combined CSS Files -->
+	    <!-- %%ProductName%% Required Combined CSS Files -->
 	    <link href="../../igniteui/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
 	    <link href="../../igniteui/css/structure/infragistics.css" rel="stylesheet" />
 	    <script src="../../js/modernizr.min.js"></script>
 	    <script src="../../js/jquery.min.js"></script>
 	    <script src="../../js/jquery-ui.min.js"></script>
-	    <!-- Ignite UI Required Combined JavaScript Files -->
+	    <!-- %%ProductName%% Required Combined JavaScript Files -->
 	    <script src="../../igniteui/js/infragistics.core.js"></script>
 	    <script src="../../igniteui/js/infragistics.dv.js"></script>
 	</head>
@@ -504,13 +504,13 @@ Full Code:
 <html>
 <head>
     <title></title>
-    <!-- Ignite UI Required Combined CSS Files -->
+    <!-- %%ProductName%% Required Combined CSS Files -->
     <link href="../../igniteui/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
     <link href="../../igniteui/css/structure/infragistics.css" rel="stylesheet" />
     <script src="../../js/modernizr.min.js"></script>
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/jquery-ui.min.js"></script>
-    <!-- Ignite UI Required Combined JavaScript Files -->
+    <!-- %%ProductName%% Required Combined JavaScript Files -->
     <script src="../../igniteui/js/infragistics.core.js"></script>
     <script src="../../igniteui/js/infragistics.dv.js"></script>
 </head>

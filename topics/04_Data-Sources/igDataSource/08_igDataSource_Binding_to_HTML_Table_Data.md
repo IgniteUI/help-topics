@@ -11,7 +11,7 @@
 # Binding to HTML Table Data
 
 ## Overview
-The Ignite UI™ grid control, or `igGrid`, allows binding to existing plain HTML tables, through the `igDataSource` control. There are several points to consider when binding to a HTML table.
+The %%ProductName%%™ grid control, or `igGrid`, allows binding to existing plain HTML tables, through the `igDataSource` control. There are several points to consider when binding to a HTML table.
 
 -   You do not need to specify a `dataSource`. If you are instantiating the `igGrid` widget on the same table to which you would like to bind
 -   The data extraction, parsing, binding and formatting process are done through the data source control. This means that once the grid is bound, the table BODY of the plain HTML table is cleared, and data is stored now in the data source in the format of an array of JavaScript objects. This implies you cannot rebind to the grid again in the same way (getting the data from the TABLE), because it is already cleared.

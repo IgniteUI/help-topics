@@ -12,7 +12,7 @@
 
 ## Known Issues and Limitations Overview
 ### Issues/Limitations chart
-The table below briefly describes the known issues/limitations of the Ignite UI® %%ProductVersion%% release for the `igTree`™ control. Detailed explanations and the possible workarounds are provided for some of the issues in the blocks following the table.
+The table below briefly describes the known issues/limitations of the %%ProductName%%® %%ProductVersion%% release for the `igTree`™ control. Detailed explanations and the possible workarounds are provided for some of the issues in the blocks following the table.
 
 Legend:
 
@@ -51,7 +51,7 @@ This can be resolved by explicitly setting the appropriate custom width to all L
 In Firefox, there is an issue in jQuery 1.4.4 which fails to fire the blur event as expected. This causes the active styles of nodes to remain even after they are no longer active.
 
 ### Active node styles workaround
-Upgrade to a later version of jQuery after 1.4.4 or upgrade to the latest service release of Ignite UI where the `igTree` control resolves this issue internally.
+Upgrade to a later version of jQuery after 1.4.4 or upgrade to the latest service release of %%ProductName%% where the `igTree` control resolves this issue internally.
 
 ## Move and copy a node without primary key in a tree with primary keys
 Do not mix bindings with primary keys and bindings without.

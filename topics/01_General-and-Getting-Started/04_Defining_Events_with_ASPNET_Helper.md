@@ -25,9 +25,9 @@ The following topics are prerequisites to understanding this topic:
 
 
 
-- [Adding Controls to an MVC Project](Adding-NetAdvantage-Controls-to-an-MVC-Project.html): This topic explains how to get started with Ignite UI® components by adding them to an ASP.NET MVC application.
+- [Adding Controls to an MVC Project](Adding-NetAdvantage-Controls-to-an-MVC-Project.html): This topic explains how to get started with %%ProductName%%® components by adding them to an ASP.NET MVC application.
 
-- [Using Events in Ignite UI](Using-Events-in-NetAdvantage-for-jQuery.html): This topic demonstrates how to handle events raised by Ignite UI controls. Also included is an explanation of the differences between binding events on initialization and after initialization.
+- [Using Events in %%ProductName%%](Using-Events-in-NetAdvantage-for-jQuery.html): This topic demonstrates how to handle events raised by %%ProductName%% controls. Also included is an explanation of the differences between binding events on initialization and after initialization.
 
 
 
@@ -72,7 +72,7 @@ The following screenshot is a preview of the final result.
 
 To complete the procedure, you need the following:
 
--   An ASP.NET MVC application configured with the required Ignite UI resources
+-   An ASP.NET MVC application configured with the required %%ProductName%% resources
 -   A controller and action method configured to return a View
 
 ### Overview
@@ -183,7 +183,7 @@ The following steps demonstrate how to configure the `igCombo`’s ASP.NET MVC H
 
 The following topic provides additional information related to this topic.
 
-- [Using Events in Ignite UI](Using-Events-in-NetAdvantage-for-jQuery.html): This topic demonstrates how to handle events raised by Ignite UI controls. Also included is an explanation of the differences between binding events on initialization and after initialization.
+- [Using Events in %%ProductName%%](Using-Events-in-NetAdvantage-for-jQuery.html): This topic demonstrates how to handle events raised by %%ProductName%% controls. Also included is an explanation of the differences between binding events on initialization and after initialization.
 
 
 

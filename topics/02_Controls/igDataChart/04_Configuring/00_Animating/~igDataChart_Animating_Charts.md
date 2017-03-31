@@ -14,7 +14,7 @@
 ##Topic overview
 ### Introduction
 
-The Infragistics® Motion Framework™ is a framework for animating data changes in Ignite UI™ chart controls.
+The Infragistics® Motion Framework™ is a framework for animating data changes in %%ProductName%%™ chart controls.
 
 ### Topics
 

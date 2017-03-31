@@ -26,7 +26,7 @@ The following table lists the concepts and topics required as a prerequisite to 
 
 Topics
 
-- [Adding Controls to an MVC Project](Adding-NetAdvantage-Controls-to-an-MVC-Project.html): This topic explains how to get started with Ignite UI® components in an ASP.NET MVC application.
+- [Adding Controls to an MVC Project](Adding-NetAdvantage-Controls-to-an-MVC-Project.html): This topic explains how to get started with %%ProductName%%® components in an ASP.NET MVC application.
 
  
 #### In this topic
@@ -193,7 +193,7 @@ Width()| Sets the string width of the `igSparkline`
 ValueMemberPath()|Set this helper method to the Invoice member that signifies the value the `igSparkline` renders on the vertical axis for each item.
 LabelMemberPath()|Set this helper method to the Invoice member that represents the horizontal axis value.
 
-Finally, as with all of the Ignite UI ASP.NET MVC helpers, you must call the Render method to render the HTML and JavaScript to the view.
+Finally, as with all of the %%ProductName%% ASP.NET MVC helpers, you must call the Render method to render the HTML and JavaScript to the view.
 
 **In ASPX:**
 

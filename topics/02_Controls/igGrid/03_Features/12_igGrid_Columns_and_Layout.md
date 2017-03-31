@@ -337,7 +337,7 @@ Listing 2: Required stylesheet definitions
 
 The first CSS, *jquery.ui.custom.css* represent the actual theme (that is, color-related styling), and you may replace it with any CSS file generated from Theme Roller.
 
-The second CSS is custom to Infragistics Ignite UI and contains layout-related rules that are not available in Theme Roller / jQuery UI. Therefore it is required so the control is ensured to function properly.
+The second CSS is custom to Infragistics %%ProductName%% and contains layout-related rules that are not available in Theme Roller / jQuery UI. Therefore it is required so the control is ensured to function properly.
 
 If you would like to reference not-combined CSS (used in development scenarios), you can add the references as depicted by Listing 3.
 
@@ -505,6 +505,6 @@ $("#grid1").igGrid({
 -   [Configure Text Alignment](%%SamplesUrl%%/grid/configure-text-alignment)
 
 ### Topic
--   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
+-   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)
 -   [Formatting Dates, Numbers and Strings](Formatting-Dates-Numbers-and-Strings.html)
 -   [Templating Engine Overview](igTemplating-Overview.html)

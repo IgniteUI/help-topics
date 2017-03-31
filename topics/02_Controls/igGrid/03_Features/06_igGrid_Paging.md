@@ -30,7 +30,7 @@ This topic contains the following sections:
 
 ## <a id="overview"></a> Overview
 
-The Ignite UI™ grid, or `igGrid`, Paging feature allows you to divide your data in pages so that you can achieve better performance by fetching only a predefined number of records from your original data source.
+The %%ProductName%%™ grid, or `igGrid`, Paging feature allows you to divide your data in pages so that you can achieve better performance by fetching only a predefined number of records from your original data source.
 
 **Figure 1: Typical grid paging UI**
 
@@ -78,7 +78,7 @@ In order to enable Paging, you first need to include the necessary JavaScript an
 	<script type="text/javascript" src="infragistics.core.js"></script><script type="text/javascript" src="infragistics.lob.js"></script>
 	```
 	
-	If you would like to include only the minimal Ignite UI™ scripts necessary for paging, you can do so by referencing the scripts as depicted in Listing 2.
+	If you would like to include only the minimal %%ProductName%%™ scripts necessary for paging, you can do so by referencing the scripts as depicted in Listing 2.
 
 - **Listing 2: Minimum scripts and styles to enable grid paging**
 

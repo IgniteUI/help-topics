@@ -32,7 +32,7 @@ The following topics are prerequisites to understanding this topic:
 
 #### *igFunnelChart* accessibility compliance summary
 
-All Infragistics® Ignite UI® controls and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. The [***igFunnelChart* accessibility compliance summary chart**](#compliance-summary-chart) contains the specific rules of Subpart 1194.22 that pertain to the control. Also, detailed is how the funnel chart control complies with each rule.
+All Infragistics® %%ProductName%%® controls and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. The [***igFunnelChart* accessibility compliance summary chart**](#compliance-summary-chart) contains the specific rules of Subpart 1194.22 that pertain to the control. Also, detailed is how the funnel chart control complies with each rule.
 
 In some cases, to meet the requirements of each accessibility rule, you may need to interact with the control by setting a specific property, but in other cases, the control performs these tasks for you.
 
@@ -60,7 +60,7 @@ Rules | Rule Text | How We Comply
 
 The following topic provides additional information related to this topic.
 
-- [Accessibility Compliance](Accessibility-Compliance.html): This topic provides reference information for accessibility compliance of all controls in the Infragistics Ignite UI product.
+- [Accessibility Compliance](Accessibility-Compliance.html): This topic provides reference information for accessibility compliance of all controls in the Infragistics %%ProductName%% product.
 
 
 

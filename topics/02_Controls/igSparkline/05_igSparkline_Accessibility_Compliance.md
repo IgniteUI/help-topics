@@ -27,7 +27,7 @@ The following topics are prerequisite to understanding this topic:
 ## Accessibility Compliance Reference
 ### Introduction
 
-All of the Infragistics® Ignite UI® controls and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. The table below contains the specific rules of Subpart 1194.22 that pertain to the control. Also detailed is how the `igSparkline` control complies with each rule.
+All of the Infragistics® %%ProductName%%® controls and components comply with Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973. The table below contains the specific rules of Subpart 1194.22 that pertain to the control. Also detailed is how the `igSparkline` control complies with each rule.
 
 To meet the requirements of each accessibility rule, in some cases, you may need to interact with the control by to setting a specific property, but in other cases the control does the work for you.
 
@@ -54,7 +54,7 @@ Rule | Rule Text| How We Comply
 
 The following topic provides additional information related to this topic.
 
-- [Accessibility Compliance](Accessibility-Compliance.html): Provides reference information for accessibility compliance of all Ignite UI controls.
+- [Accessibility Compliance](Accessibility-Compliance.html): Provides reference information for accessibility compliance of all %%ProductName%% controls.
 
 
 

@@ -207,9 +207,9 @@ Following are some other topics you may find useful.
 
 - [Configuring Column Summaries (igGrid)](igGrid-Configuring-Column-Summaries.html)
 
-- [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
+- [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 
-- [Styling and Theming in Ignite UI](Deployment-Guide-Styling-and-Theming.html)
+- [Styling and Theming in %%ProductName%%](Deployment-Guide-Styling-and-Theming.html)
 
 ### <a id="samples"></a> Samples
 

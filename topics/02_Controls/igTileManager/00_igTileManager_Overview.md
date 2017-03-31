@@ -64,7 +64,7 @@ The grid layout of the `igTileManager` is based on [igLayoutManager‘s Grid Lay
 
 Users interact with the control by selecting the tile to maximize and scrolling the Minimized Tiles panel. They can also resize the panels relatively to each other with the splitter bar. (For details, refer to [User Interactions and Usability](#user-interaction).)
 
-Any Ignite UI® control can be placed inside those tiles thus enabling moving and resizing of tiles, and changing the state of the tiles at run-time.
+Any %%ProductName%%® control can be placed inside those tiles thus enabling moving and resizing of tiles, and changing the state of the tiles at run-time.
 
 ### <a id="tile-states"></a>igTileManager tile states
 
@@ -206,7 +206,7 @@ The margins of the minimized tiles define the space around each tile in the grid
 
 ## <a id="touch-support"></a>Touch Support
 
-For touch-enabled devices, special classes are added to the tile manager and touch events are handled. On touch-enabled devices, the splitter bar is a bit wider (16 pixels of width) than it is on standard devices (6 pixels) to allow for easier user interaction with the splitter bar in the touch environment. For details, refer to [Touch Support for Ignite UI Controls](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html).
+For touch-enabled devices, special classes are added to the tile manager and touch events are handled. On touch-enabled devices, the splitter bar is a bit wider (16 pixels of width) than it is on standard devices (6 pixels) to allow for easier user interaction with the splitter bar in the touch environment. For details, refer to [Touch Support for %%ProductName%% Controls](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html).
 
 
 
