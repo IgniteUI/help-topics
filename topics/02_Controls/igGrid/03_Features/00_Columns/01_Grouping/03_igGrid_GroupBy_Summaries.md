@@ -14,7 +14,7 @@
 
 ### Purpose
 
-This topic introduces the Group Summaries functionality of the `igGrid`™.
+This topic introduces the GroupBy Summaries functionality of the `igGrid`™.
 
 
 ### In this topic
@@ -80,7 +80,7 @@ The summary method object in the `$.ig.util.defaultSummaryMethods` array has the
 Name | Description | Type 
 -----| ------------| -----
 label | Label that will be applied to the result of the summary function. | string
-name | Name of the summary function. Ex: {summaryFunction: “count”} | string
+name | Name of the summary function. Ex: {summaryFunction: "count"} | string
 summaryFunction | Speficies the function that will be used when calculating the summary. | function
 dataType | Speficies to which type of column this summary is applicable. Setting it to 'any' will apply this summary to all column types. | 'any' or array 
 active | Sets if the summary should be applied. | boolean | true
@@ -193,6 +193,6 @@ The following sample provides additional information related to this topic.
 
 The following topics provide additional information related to this topic.
 
-- [Grid Outlook Group By Getting Started](igGrid-Enabling-GroupBy.html)
+- [Enabling Column Grouping (igGrid)](igGrid-Enabling-GroupBy.html)
 
-- [Grid Outlook Group By Properties Reference](%%jQueryApiUrl%%/ui.iggridgroupby#options)
+- [Grid Group By Properties Reference](%%jQueryApiUrl%%/ui.iggridgroupby#options)

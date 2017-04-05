@@ -23,7 +23,7 @@ This topic contains the following sections:
 
 -   [Introduction](#introduction)
 -   [GroupBy Persistence](#groupBy-persistence)
--   [Grouping Features Overview](#grouping-features)
+-   [GroupBy Features Overview](#grouping-features)
 -   [API Usage](#api-usage) 
 -   [Keyboard Interactions](#keyboard-interaction) 
 -   [Related Content](#related-content)
@@ -36,9 +36,9 @@ The `igGrid` supports a column grouping functionality that enables the user to e
 
 Grouping in the `igGrid` works the same as the analogous functionality in Microsoft® Office Outlook® – you drag a column that you want to group by and drop it into a special grouping area above the grid. This re-arranges the grid with as many groups as distinct value are there in the selected column. In addition, inside the groups, the records are sorted. If you drop additional columns, then, within the already existing groups, further gropings are applied.
 
-You can define your own custom grouping method. For details about custom grouping, refer to the Grid Group By Overview topic.
+You can define your own custom grouping method. For details about custom grouping, refer to the Grid GroupBy Overview topic.
 
-Grouping is implemented and managed by the Group By widget.
+Grouping is implemented and managed by the GroupBy widget.
 
 ## <a id="groupBy-persistence"></a> GroupBy Persistence
 
@@ -57,15 +57,15 @@ If you would like to retain the previous behavior of group by being cleared afte
 ```js
 features: [
   { 
-     name: “GroupBy”, 
+     name: "GroupBy", 
      persist: false 
   }
 ] 
 ```
 
-## <a id="grouping-features"></a> Grouping Features Overview
+## <a id="grouping-features"></a> GroupBy Features Overview
 
-The table below briefly explains the grouping main features and the Group By widget properties that manage them.
+The table below briefly explains the grouping main features and the GroupBy widget properties that manage them.
 
 > **Note:** In the following table, the properties and events specific to the [Group By Dialog](igGrid-Group-By-Dialog-Overview.html) are not listed. They are available in the [Group By Dialog](igGrid-Group-By-Dialog-Overview.html) topic.
 
@@ -79,7 +79,7 @@ The table below briefly explains the grouping main features and the Group By wid
         </tr>
         <tr>
             <td>Grouping mode</td>
-            <td>There are several grouping modes supported by the Group By widget.</td>
+            <td>There are several grouping modes supported by the GroupBy widget.</td>
             <td>[type](%%jQueryApiUrl%%/ui.iggridgroupby#options:type)</td>
             <td>[Type](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridGroupBy~Type.html)</td>
         </tr>
@@ -90,8 +90,8 @@ The table below briefly explains the grouping main features and the Group By wid
             <td>[ColumnSettings](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridGroupBy~ColumnSettings.html)</td>
         </tr>
         <tr>
-            <td>Group summaries in group row</td>
-            <td>Group summaries are provide some group-specific information about every group, like the the count of the rows in the group. Group summaries are configured individually for every group.</td>
+            <td>GroupBy Summaries in the group row</td>
+            <td>GroupBy Summaries provide some group-specific information about every group, like the count of the rows in the group. GroupBy Summaries are configured individually for every group.</td>
             <td>[summarySettings](%%jQueryApiUrl%%/ui.iggridgroupby#options:summarySettings)</td>
             <td>[SummarySettings](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridGroupBy~SummarySettings.html)</td>
         </tr>
@@ -118,7 +118,7 @@ Template for the text of the grouped row. (Follows the jQuery templating guideli
             <td>
 The Group By widget has special events that can be handled during its lifecycle. They are events, which are fired when: <br />
 the grouping action begins. (This event is cancelable.)<br />
-the grouping action ends. **This event is fired also when group/ungroup from Group By modal dialog.**
+the grouping action ends. **This event is fired also when group/ungroup from GroupBy modal dialog.**
             </td>
             <td>
 [groupedColumnsChanging](%%jQueryApiUrl%%/ui.iggridgroupby#events:groupedColumnsChanging) <br />
@@ -198,7 +198,7 @@ var expressions = $('#grid1').data('igGrid').dataSource.settings.sorting.express
 {compareFunc: <type="function" comparer function>, dir: <type="string" sort direction>, fieldName: <type="string" column key>, isGroupBy: <type="bool" is the expression created by the Group By widget>, layout: <type="string" the key of the layout if done in igHierarchicalGrid>}
 ```
 
-Expressions created by the Group By widget have a property "isGroupBy" equals to "true" to distinguish them from the ones created by the Sorting widget.
+Expressions created by the GroupBy widget have a property "isGroupBy" equals to "true" to distinguish them from the ones created by the Sorting widget.
 
 To get the grouped data (data rows and group rows) programmatically you need to do this:
 
@@ -247,7 +247,7 @@ The following topics provide additional information related to this topic.
 
 - [Enabling Column Grouping (igGrid)](igGrid-Enabling-GroupBy.html)
 
-- [Grid Group By Properties Reference](%%jQueryApiUrl%%/ui.iggridgroupby#options)
+- [Grid GroupBy Properties Reference](%%jQueryApiUrl%%/ui.iggridgroupby#options)
 
 - [Grid Known Issues and Breaking Changes](igGrid-Known-Issues.html)
 
