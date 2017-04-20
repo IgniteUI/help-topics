@@ -44,7 +44,7 @@ npm config set @infragistics:registry https://packages.infragistics.com/npm/js-l
 After this is done, you will be logged in and you will be able to install the latest version of Ignite UI into your project:
 
 ```js
-npm install @infragistics\ignite-ui-full
+npm install @infragistics/ignite-ui-full
 ```
 Have in mind that we have set the Ignite UI package to be scoped, meaning that no changing the registries is needed if you want to install packages from our private feed and from npmjs.org simultaneously.
 
