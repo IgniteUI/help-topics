@@ -153,8 +153,8 @@ This example demonstrates the use of Major and Minor Axis Intervals on the Numer
 
 #### Related Samples
 
--   [NumericAxesIntervals](%%SamplesUrl%%/data-chart/numeric-xaxis-intervals) : This sample demonstrates the use of Major and Minor Axis Intervals on the ScatterLineSeries, using NumericX and NumericY Axes.
--   [CategoryXAxisIntervals](%%SamplesUrl%%/data-chart/category-xaxis-intervals) : This sample demonstrates the use of Major and Minor Axis Intervals on the ColumnSeries, using CategoryXAxis.
+-   [NumericAxesIntervals](igDataChart-Axis-Intervals.html#preview) : This sample demonstrates the use of Major and Minor Axis Intervals on the ScatterLineSeries, using NumericX and NumericY Axes.
+-   [CategoryXAxisIntervals](igDataChart-Axis-Intervals.html#categoryxexample) : This sample demonstrates the use of Major and Minor Axis Intervals on the ColumnSeries, using CategoryXAxis.
 
 ## Editors
 

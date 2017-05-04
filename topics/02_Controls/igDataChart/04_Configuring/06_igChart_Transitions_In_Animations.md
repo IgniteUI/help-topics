@@ -53,7 +53,7 @@ This topic contains the following sections:
 
 ###<a id="overview"></a> Overview
 
-This feature allows you to animate the series as it loads a new data source. The available animation differs depending on the type of series involved. For example, the `columnSeries` animates by rising from the x-axis, a `lineSeries` animates by drawing from the y-axis. Refer to the following sample to see how the different series animate visually, [Transition Animation](%%SamplesUrl%%/data-chart/transition-animation) and [Transition Animation (Financial)](%%SamplesUrl%%/data-chart/transition-animation-financial).
+This feature allows you to animate the series as it loads a new data source. The available animation differs depending on the type of series involved. For example, the `columnSeries` animates by rising from the x-axis, a `lineSeries` animates by drawing from the y-axis. Refer to the following sample to see how the different series animate visually, [Transition Animation](%%SamplesUrl%%/data-chart/transition-animation) and [Transition Animation (Financial)](igChart-transitions-in-animations.html#transition-example).
 
 Enable animated transitions by setting the `isTransitionInEnabled` property to “`true`”.
 
@@ -125,63 +125,11 @@ The transition type is configured by setting the `transitionInMode` property to 
 
 ###<a id="transition-example"></a> Example
 
-The following example demonstrates how to enable transition in animations and have the column series accordion in from the right as a result of the following settings:
+The following example demonstrates how to enable and change transition in animations for the financial chart:
 
-<table class="table">
-	<thead>
-		<tr>
-			<th>Property</th>
-			<th>Value</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>isTransitionInEnabled</td>
-			<td>“true”</td>
-		</tr>
-		<tr>
-			<td>transitionInSpeed</td>
-			<td>“indexScaled”</td>
-		</tr>
-		<tr>
-			<td>transitionInEasingFunction</td>
-			<td>“cubicEase”</td>
-		</tr>
-		<tr>
-			<td>transitionInMode</td>
-			<td>“accordionFromRight”</td>
-		</tr>
-	</tbody>
-</table>
-
-Following is the code that implements this example:
-
-**In HTML:**
-
-```html
-$("#chart").igDataChart({
-   ...
-   ...
-   series: [
-      {
-         name: "2005Population",
-         type: "column",
-         title: "2005",
-         xAxis: "NameAxis",
-         yAxis: "PopulationAxis",
-         valueMemberPath: "Pop2005",
-         isTransitionInEnabled: true,
-         transitionInSpeed: "indexSpeed",
-         transitionInEasingFunction: "cubicEase",
-         transitionInMode: "accordionFromRight
-      }
-   ]
-});
-```
-
- 
-
-
+<div class="embed-sample">
+   [Transition Animation (Financial)](%%SamplesEmbedUrl%%/data-chart/transition-animation-financial)
+</div>
 
 ##<a id="related-content"></a>Related Content
 
@@ -202,5 +150,3 @@ The following samples provide additional information related to this topic.
 
 
 -	[Transition Animation](%%SamplesUrl%%/data-chart/transition-animation): This sample demonstrates the animation feature that is displayed at the chart initialization.
-
--	[Transition Animation (Financial)](%%SamplesUrl%%/data-chart/transition-animation-financial): This sample demonstrates the animation feature that is displayed at the financial charts initialization.

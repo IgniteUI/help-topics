@@ -505,7 +505,7 @@ The following topics provide additional information related to this topic.
 
 The following samples provide additional information related to this topic.
 
-- [Basic Usage](%%SamplesUrl%%/popover/basic-popover): This sample demonstrates the basic initialization scenarios (on a single target element and on multiple target elements) of `igPopover` in JavaScript.
+- [Basic Usage](%%SamplesUrl%%/popover/overview): This sample demonstrates the basic initialization scenarios (on a single target element and on multiple target elements) of `igPopover` in JavaScript.
 
 - [ASP.NET MVC Usage](%%SamplesUrl%%/popover/aspnet-mvc-helper): This sample demonstrates the `igPopover` control in an ASP.NET MVC scenario. The control is initialized in the View using chaining syntax.
 

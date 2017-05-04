@@ -319,9 +319,8 @@ public class Order
 
 ### Samples
 
-- [DataSet binding](%%SamplesUrl%%/hierarchical-grid/dataset-binding): This sample demonstrates how to bind the igHierarchicalGrid to a DataSet.
-- [Editing DataSet](%%SamplesUrl%%/hierarchical-grid/editing-dataset): This sample demonstrates how to use the updating feature when binding to a DataSet.
-- [Load On Demand](%%SamplesUrl%%/hierarchical-grid/load-on-demand): This sample demonstrates how to use Load On Demand when binding to a DataSet.
+- [Editing - Edit Dialog](%%SamplesUrl%%/hierarchical-grid/row-edit-dialog): This sample demonstrates how to use the updating feature with edit dialog.
+- [Load On Demand](%%SamplesUrl%%/hierarchical-grid/load-on-demand): This sample demonstrates how to use Load On Demand.
 
 
 

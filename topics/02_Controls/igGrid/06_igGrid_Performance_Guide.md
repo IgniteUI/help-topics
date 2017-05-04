@@ -62,7 +62,7 @@ If the data source contains data values which are not directly suitable for rend
 
 ## <a id="grid-features"></a> Grid Features
 
-Grid features such as filtering, paging, sorting and the like do have an impact on grid performance. The processing time and memory overhead for operations such as filtering or sorting can be broken down into three parts:
+Grid features such as Filtering, Paging, Sorting and the like do have an impact on grid performance. The processing time and memory overhead for operations such as filtering or sorting can be broken down into three parts:
 
 -   Perform the business logic (such as sorting or filtering data)
 -   Clear the existing records in the grid
@@ -81,7 +81,7 @@ The following section describes in detail each of the `igGrid` widget options an
 
 ### <a id="options-virtualization"></a> virtualization (default: false)
 
-Virtualization is a unique feature of the `igGrid` control that is simply stated as a technique that only renders visible parts of the grid to the user. Existing DOM elements are reused as the user scrolls the grid. When the grid is scrolling to view more data, new data is added to the grid in real time. “Real time” refers to the fact that no server-side requests are involved as all the data is waiting on the client not just the data shown upon initial rendering.
+Virtualization is a unique feature of the `igGrid` control that is simply stated as a technique that only renders visible parts of the grid to the user. Existing DOM elements are reused as the user scrolls the grid. When the grid is scrolling to view more data, new data is added to the grid in real time. "Real time" refers to the fact that no server-side requests are involved as all the data is waiting on the client not just the data shown upon initial rendering.
 
 Using this approach, the rendering overhead, both time and memory usage, remains constant regardless of the number of records that are data-bound. The user experience still remains the same as if users are viewing all data at once. By enabling [`virtualization`](%%jQueryApiUrl%%/ui.iggrid#options:virtualization), a significant performance boost is available in terms of speed, CPU utilization, and memory.
 
@@ -96,7 +96,11 @@ Usually the grid is smart enough to render and fit the virtual UI without an exp
 
 Therefore consider that the bigger your grid height and the larger amount of visible records you have loaded at a time, the greater the likelihood that real-time scrolling performance will suffer. On the contrary, the smaller the height of the grid combined with a smaller number of visible records at a time results in faster scrolling.
 
+Virtualization is optimal for scenarios handling 1000 - 10000 records. For greater number of records please consider using remote Paging.
+
 > **Note:** Scrolling performance is also affected by the browser in which the grid is loaded. Chrome, WebKit, Opera, FireFox and IE9 all tend to demonstrate better results with the grid than IE7 and IE8.
+
+Virtualization does impose some restictions on the supported functionalities and grid features which should be considered when designing your grid configuration (please see the [Feature Compatibility Matrix (igGrid)](Feature-Compatibility-Matrix(igGrid).html) and [Known Issues and Limitations (igGrid)](igGrid-Known-Issues.html) topics for details). It's recommended that you first consider using local or remote Paging, because Paging has better integration with other igGrid features. 
 
 ### <a id="options-column-template"></a> Infragistics Templating Engine (columns.template)
 
@@ -114,7 +118,7 @@ If [`autoAdjustHeight`](%%jQueryApiUrl%%/ui.iggrid#options:autoAdjustHeight) is 
 
 This calculation is an expensive operation in most modern browsers (primarily FireFox and Internet Explorer), because it causes a [reflow](http://code.google.com/speed/articles/reflow.html) of the document. The DOM property which causes the reflow, simply by accessing it, is `offsetHeight`. Therefore, you can significantly decrease the initial rendering time of the `igGrid` control by setting `autoAdjustHeight` to false.
 
-Then `autoAdjustHeight` is disabled, the height specified as option during initialization is applied directly to the scrolling data container. Once the height is a known value then all other elements are added resulting in the final height of the grid. The ultimate height of the grid can more than the actual height setting depending on whether features such as paging or filtering enabled or whether [`fixedHeaders`](%%jQueryApiUrl%%/ui.iggrid#options:fixedHeaders) is enabled, and so on.
+Then `autoAdjustHeight` is disabled, the height specified as option during initialization is applied directly to the scrolling data container. Once the height is a known value then all other elements are added resulting in the final height of the grid. The ultimate height of the grid can more than the actual height setting depending on whether features such as paging or Filtering enabled or whether [`fixedHeaders`](%%jQueryApiUrl%%/ui.iggrid#options:fixedHeaders) is enabled, and so on.
 
 Figure 1: `autoAdjustHeight` - depicted
 
@@ -142,15 +146,15 @@ When a column is sorted, by default all cells in that column get a specific CSS 
 
 ## <a id="best-practices"></a> Best practices
 
--   If you need to load more than 1,000 records at the a time in the grid and you select not to use paging or any similar feature, it is strongly advised that you enable row virtualization.
+-   If you need to load more than 1,000 records at the a time in the grid and you select not to use Paging or any similar feature, it is strongly advised that you enable Row Virtualization.
 -   If you do not need custom templates, then do not set columns.template options, because they are implicilty using the Infragistics Templating Engine.
--   If you must configure the grid with more than 20 columns, consider enabling column virtualization. By default, when virtualization is set to true it applies to both rows and columns.
--   If you have grid filtering enabled in simple mode, and your grid renders more than 20 columns, consider using the advanced filtering mode. Advanced filtering only renders filtering editors on demand.
--   If your data source contains thousands or millions of records and you would like to render all currently bound local data at once, the best way to achieve this is to enable paging.
--   Even if you enable virtualization, be careful about the amount of data you transfer to the client. Large data sets sent to the client may turn out to be the bottleneck of your page. For example, the rough JSON size for 10,000 records for 5 columns is over 2 MB of uncompressed data for a single request. To accommodate this type of configuration you can enable paging with a large page size (ex: 1,000 records per page) and enable virtualization. This approach ensures that large amounts of JSON data are not transferred to the client at once. Additionally you benefit from having virtualization enabled on a per-page level basis.
+-   If you must configure the grid with more than 20 columns, consider enabling Column Virtualization. By default, when `virtualization` is set to true it applies to both rows and columns.
+-   If you have grid Filtering enabled in simple mode, and your grid renders more than 20 columns, consider using the Advanced Filtering mode. Advanced Filtering only renders filtering editors on demand.
+-   If your data source contains thousands or millions of records and you would like to render all currently bound local data at once, the best way to achieve this is to enable remote Paging.
+-   Even if you enable Virtualization, be careful about the amount of data you transfer to the client. Large data sets sent to the client may turn out to be the bottleneck of your page. For example, the rough JSON size for 10,000 records for 5 columns is over 2 MB of uncompressed data for a single request. The recommended number of records to use with Virtualization is 1000 - 10000. If you want to handle more records than that use remote Paging.
 -   As often as possible enable gzip compression in your web server. This is a general guideline that will affect both download times, and bandwidth consumption.
--   If your application does not impose specific height constraints on the grid, to set the autoAdjustHeight option to false as often as possible. Disabling this option guarantees that no additional reflows are required by the browser to calculate and size the inner containers of the grid.
--   If you are not binding the grid to numeric or date columns, for which you need additional formatting, set autoFormat to false as often as possible. In the end the performance difference may be minimal, but if you are trying to fine-tune the grid for performance you may want to consider this option.
+-   If your application does not impose specific height constraints on the grid, to set the `autoAdjustHeight` option to false as often as possible. Disabling this option guarantees that no additional reflows are required by the browser to calculate and size the inner containers of the grid.
+-   If you are not binding the grid to numeric or date columns, for which you need additional formatting, set `autoFormat` to false as often as possible. In the end the performance difference may be minimal, but if you are trying to fine-tune the grid for performance you may want to consider this option.
 
 
 ## <a id="related-content"></a> Related Content
@@ -158,14 +162,8 @@ When a column is sorted, by default all cells in that column get a specific CSS 
 ### <a id="topics"></a> Topics
 
 -   [igGrid Overview](igGrid-Overview.html)
+-   [Virtualization Overview](igGrid-Virtualization-Overview.html): This topic introduces the Virtualization feature of the `igGrid` control.
 
 ### <a id="samples"></a> Samples
 
 -   [Performance Options](%%SamplesUrl%%/grid/grid-performance)
-
-
- 
-
- 
-
-

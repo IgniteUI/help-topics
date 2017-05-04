@@ -78,6 +78,12 @@ When you enable `igGridSelection` you are already using it in a [`persist`](%%jQ
 
 Selection persistence is implemented for `igHierarchicalGrid` too.
 
+The following sample demonstrates the persistance capabilities of the Selection feature.
+
+<div class="embed-sample">
+   [Feature Persistence](%%SamplesEmbedUrl%%/grid/feature-persistence)
+</div>
+
 Persisting depends on the feature’s ability to unambiguously distinguish rows and columns from one another.
 
 As row indexes are not stable and therefore unusable for this purpose, `igGridSelection` will use either the user-defined primary key of the grid or will generate pseudo-unique identifiers for each row based on the corresponding record’s property values.

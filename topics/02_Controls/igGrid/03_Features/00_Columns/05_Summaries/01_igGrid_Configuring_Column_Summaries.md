@@ -41,6 +41,8 @@ This topic contains the following sections:
     -   [Code](#menu-button-code)
 -   [**Canceling Summary Calculation**](#cancel-calculation)
     -   [Steps](#cancel-calculation-steps)
+-   [**Custom Summaries**](#custom-summaries)
+    - [Running sample](#demo)
 -   [**Related Topics**](#topics)
 
 ## Required background
@@ -484,8 +486,14 @@ Following is a conceptual overview of the process:
 	     };   
 	</script>
 	```
+## <a id="custom-summaries"></a> Custom Summaries
+By defining a custom summaryOperands object (`summaryOperands` with type *custom*) you point the Summaries feature to a custom function to calculate the row summary. When the `compactRenderingMode` option is set to false, the results from both the predefined and the custom methods are positioned in summary rows according to their sort order. The sample below has two custom summary functions (*countTrueValues*, *countFalseValues*) each calculating the number of *true* or *false* values in a boolean column. Those summary functions are then used for the "Make Flag" column.
+### <a id="demo"></a> Running sample
+    <div class="embed-sample">
+        [igGrid Custom Summaries](%%SamplesEmbedUrl%%/grid/summaries-custom)
+    </div>
 
-### <a id="topics"></a> Related Topics
+## <a id="topics"></a> Related Topics
 
 Following are some other topics you may find useful.
 

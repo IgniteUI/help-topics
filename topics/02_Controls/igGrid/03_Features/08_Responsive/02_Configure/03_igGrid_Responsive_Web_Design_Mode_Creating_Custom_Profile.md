@@ -50,7 +50,6 @@ This topic contains the following sections:
     -   [Example](#extending-example)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
 
 
 
@@ -114,46 +113,15 @@ Create custom RWD mode profile inline | `responsiveModes.<custom_name>` | An ide
 
 ### <a id="inline-example"></a> Example
 
-The following code demonstrates how to define inline custom RWD mode profile named `custom_phone`. The `custom_phone` setting is an object with the properties `minWidth` and `maxWidth` defining the width range which will activate the mode based on the screen width (respective height range properties, e.g. `minHeight` and `maxHeight`, are not defined, because covering mode-based changes of the height is beyond the scope of this example). The options defined in `custom_phone` are used to initialize the `$.ig.ResponsiveMode` class.
+The following code demonstrates how to define inline custom RWD mode profile named `customPhone`. The `customPhone` setting is an object with the properties `minWidth` and `maxWidth` defining the width range which will activate the mode based on the screen width (respective height range properties, e.g. `minHeight` and `maxHeight`, are not defined, because covering mode-based changes of the height is beyond the scope of this example). The options defined in `customPhone` are used to initialize the `$.ig.ResponsiveMode` class.
 
-With these settings, the Name column is configured as hidden in `custom_phone` mode.
+With these settings, the Name column is configured as hidden in `customPhone` mode.
 
 **In JavaScript:**
 
-```js
-$("#grid1").igGrid({
-    width: "100%",
-    columns: [
-        { headerText: "Product ID", key: "ProductID", dataType: "number"},
-        { headerText: "Product Name", key: "Name", dataType: "string" },
-        { headerText: "Product Number", key: "ProductNumber", dataType: "string" }
-    ],
-    autoGenerateColumns: false,
-    dataSource: adventureWorks,
-    responseDataKey: "Records",
-    features: [
-    {
-        name: "Responsive",
-        columnSettings: [
-            {
-                columnKey: "Name",
-                configuration: {
-                    custom_phone: {
-                        hidden: true
-                    }
-                }
-            }
-        ],
-        responsiveModes: {
-            custom_phone: {
-                minWidth: 0,
-                maxWidth: 767
-            }
-        }
-    }
-]
-});
-```
+<div class="embed-sample">
+   [Responsive Web Design Mode](%%SamplesEmbedUrl%%/grid/responsive-web-design-mode)
+</div>
 
 **In C#:**
 
@@ -172,11 +140,11 @@ $("#grid1").igGrid({
 	})
 	.Features(feature =>
 	{
-	    feature.Responsive().ResponsiveConfig(config => config.AddExplicitMode("custom_phone", m => m.MinWidth(0).MaxHeight(767)))
+	    feature.Responsive().ResponsiveConfig(config => config.AddExplicitMode("customPhone", m => m.MinWidth(0).MaxHeight(767)))
 	    .ColumnSettings(cs =>
 	    {
 	        cs.ColumnSetting().ColumnKey("Name").Configuration(conf => {
-	            conf.AddColumnModeConfiguration("custom_phone", c => c.Hidden(true));
+	            conf.AddColumnModeConfiguration("customPhone", c => c.Hidden(true));
 	        });
 	    });
 	})
@@ -328,18 +296,3 @@ The following topics provide additional information related to this topic.
 - [Configuring Column Hiding (igGrid, RWD Mode)](igGrid-Responsive-Web-Design-Mode-Configuring-Column-Hiding.html): This topic explains, with code examples, how to configure column hiding for the `igGrid` control in Responsive Web Design (RWD) mode.
 
 - [Configuring Column Templates (igGrid, RWD Mode)](igGrid-Responsive-Web-Design-Mode-Configuring-Row-and-Column-Templates.html): This topic explains, with code examples, how to define column templates for the individual Responsive Web Design (RWD) mode profiles of the `igGrid` control and how to configure automatic change of template when switching the active RWD mode profile.
-
-
-### <a id="samples"></a> Samples
-
-The following samples provide additional information related to this topic.
-
-- [Responsive Web Design Mode](%%SamplesUrl%%/grid/responsive-web-design-mode): This sample demonstrates the `igGrid`’s Responsive Web Design mode feature. Responsive Web Design mode allows you to support multiple screen sizes and form factors with single code base and design.
-
-- [Responsive Vertical Rendering](%%SamplesUrl%%/grid/responsive-vertical-rendering): This sample demonstrates the `igGrid`’s Responsive Web Design feature in vertical mode. Responsive vertical rendering mode renders the grid data in two columns. The left column holds the columns captions and the right column holds the data.
-
-
-
-
-
-

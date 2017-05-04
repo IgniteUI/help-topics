@@ -35,6 +35,7 @@ This topic contains the following sections:
 -   [Preview](#preview)
 -   [Label Properties and Events](#lable-properties)
 -   [Configuring the Label](#config-lable)
+-	[Example](#lable-example)
 -   [Related Content](#related-content)
 
 
@@ -99,6 +100,13 @@ $("#gauge").igRadialGauge({
 	labelInterval: 15 
 });                                                                  
 ```
+## <a id="lable-example"></a>Example
+
+The following example demonstrates how to configure the Radial Gauge control's Label settings. Use the slider to see how the labelExtent and labelInterval properties affect the Label.
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/radial-gauge/label-settings](%%SamplesEmbedUrl%%/radial-gauge/label-settings)
+</div>
 
 ## <a id="related-content"></a>Related Content
 ### Topics
@@ -128,8 +136,6 @@ The following samples provide additional information related to this topic:
 - [Gauge Animation](%%SamplesUrl%%/radial-gauge/motion-framework): This sample demonstrates how you can easily animate the Radial Gauge by setting the `transitionDuration` property.
 
 - [Gauge Needle](%%SamplesUrl%%/radial-gauge/gauge-needle): Displayed as a pointer, the Needle indicates a single value on a scale. The options pane below allows you to interact with the Radial Gauge control’s Needle.
-
-- [Label Settings](%%SamplesUrl%%/radial-gauge/label-settings): This sample demonstrates how to configure the Radial Gauge control’s Label settings. Use the slider to see how the `labelInterval` and `labelExtent` properties affect the Label.
 
 - [Needle Dragging](%%SamplesUrl%%/radial-gauge/drag-needle): This sample demonstrates how you can drag the Radial Gauge control’s needle by using the Mouse events.
 

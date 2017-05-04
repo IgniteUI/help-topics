@@ -1295,7 +1295,7 @@ The following samples provide additional information related to this topic.
 
 -	[Bar and Column Series](%%SamplesUrl%%/data-chart/bar-and-column-series): Demonstrates how bar and column charts can be implemented using the `igDataChart` control.
 
--	[Chart Navigation](%%SamplesUrl%%/data-chart/chart-navigation): Demonstrates user interaction with a chart including zoom, panning, dragging, and how these can be controlled from the API.
+-	[Chart Navigation](igDataChart-Configuring-Navigation-Features.html#example): Demonstrates user interaction with a chart including zoom, panning, dragging, and how these can be controlled from the API.
 
 -	[Binding Real-Time Data](%%SamplesUrl%%/data-chart/binding-real-time-data): Demonstrates how real-time data can by dynamically bound to a data chart.
 

@@ -31,7 +31,7 @@ This topic contains the following sections:
     -   [Row selection](#row-selection)
     -   [Cell selection](#cell-selection)
 -   [Related Content](#related-content)
--   
+
 ## <a id="introduction"></a> Introduction
 
 The selection feature enables the selection of the rows and cells in the igHierarchicalGrid™ control. Its functionality closely follows the Microsoft® Windows Explorer™ and Microsoft® Excel™ selection and activation behaviors.
@@ -79,7 +79,7 @@ The following topics provide additional information related to this topic.
 
 The following sample provides additional information related to this topic.
 
-- [Selection](%%SamplesUrl%%/hierarchical-grid/selection): This sample demonstrates configuration of selection feature in igHierarchicalGrid.
+- [Selection](%%SamplesUrl%%/hierarchical-grid/selection-rowselectors): This sample demonstrates configuration of selection feature in igHierarchicalGrid.
 
 ### Resources
 

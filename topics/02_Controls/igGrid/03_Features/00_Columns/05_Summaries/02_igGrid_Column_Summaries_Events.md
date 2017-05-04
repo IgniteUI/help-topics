@@ -24,7 +24,6 @@ This topic contains the following sections:
 -   [Attaching Handlers to Events in jQuery and MVC](#attach-handlers)
 -   [Events Reference Chart](#reference-chart)
 -   [Related Topics](#topics)
--   [Related Samples](#samples)
 
 ## <a id="overview"></a> Events Overview 
 
@@ -103,10 +102,6 @@ Event | Description | Cancelable
 [Enabling Column Summaries](igGrid-Enabling--Column-Summaries.html)
 
 [igGrid Configuration: Column Summaries](igGrid-Configuring-Column-Summaries.html)
-
-## <a id="samples"></a> Related Samples 
-
--   [API and Events](%%SamplesUrl%%/grid/grid-api-events)
 
  
 

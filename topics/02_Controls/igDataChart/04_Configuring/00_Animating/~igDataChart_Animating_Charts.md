@@ -47,7 +47,7 @@ The following topics provide additional information related to this topic.
 The following samples provide additional information related to this topic.
 
 
--	[Motion Framework](%%SamplesUrl%%/data-chart/motion-framework): This sample demonstrates how to use the Motion Framework™ with the jQuery chart to build highly engaging visualizations and provide smooth playback of changes in data over time.
+-	[Motion Framework](igDataChart-Motion-Framework.html#motion-framework-sample): This sample demonstrates how to use the Motion Framework™ with the jQuery chart to build highly engaging visualizations and provide smooth playback of changes in data over time.
 
 
 

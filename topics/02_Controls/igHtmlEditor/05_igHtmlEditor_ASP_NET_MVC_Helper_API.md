@@ -55,7 +55,7 @@ The following topics provide additional information related to this topic.
 
 The following samples provide additional information related to this topic.
 
--	[API and Events](%%SamplesUrl%%/html-editor/api-and-events):  This sample demonstrates how to handle events in the `igHtmlEditor` control and API usage.
+-	[API and Events](ightmleditor-modifying-contents-programmatically#api-and-events-demo):  This sample demonstrates how to handle events in the `igHtmlEditor` control and API usage.
 
 
 

@@ -591,13 +591,6 @@ The following topics provide additional information related to this topic.
 - [Getting started with igGrid, OData and WCF Data Services](igGrid-Getting-Started-With-igGrid-oData-and-WCF-Data-Services.html): This topic demonstrates how to setup a client-side jQuery grid with remote paging, filtering, and sorting by setting up a WCF Data Service in an ASP.NET Web Application and setting two options on the `igGrid`.
 
 
-### <a id="samples"></a> Samples
-
-The following samples provide additional information related to this topic.
-
-- [REST Editing](%%SamplesUrl%%/grid/rest-editing): This sample shows how to configure Updating to work with REST Service
-
-
 
 
 

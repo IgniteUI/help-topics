@@ -48,17 +48,23 @@ When you enable `igGridFiltering` you are already using it in a [`persist`](%%jQ
 
 Filtering persistence is implemented for `igHierarchicalGrid` too.
 
+The following sample demonstrates the persistance capabilities of the Filtering feature.
+
+<div class="embed-sample">
+   [Feature Persistence](%%SamplesEmbedUrl%%/grid/feature-persistence)
+</div>
+
 If you would like to retain the previous behavior of filtering being cleared after user re-binds the *igGrid*, you can do this by disabling the feature through the [`persist`](%%jQueryApiUrl%%/ui.iggridfiltering#options:persist) option as shown in the code snippet below:
 
 **In JavaScript:**
 
 ```js
 features: [
-  { 
+  {
      name: "Filtering",
-     persist: false 
+     persist: false
   }
-] 
+]
 ```
 
 ## <a id="modes"></a> Filtering Modes
@@ -92,19 +98,19 @@ $(document).delegate("#grid1", "iggridfilteringdatafiltering", function (evt, ui
 ```
 
 
-![](images/igGrid_Filtering_01.png)
+![](images/simple.png)
 
 Figure 1: Simple Filtering (mode: “simple”)
 
-![](images/igGrid_Filtering_02.png)
+![](images/advanced.png)
 
 Figure 2: Advanced Filtering (mode: “advanced”)
 
-![](images/igGrid_Filtering_03.png)
+![](images/dialog.png)
 
 Figure 3: Advanced Filtering dialog
 
-![](images/igGrid_Filtering_04.png)
+![](images/tooltip.png)
 
 Figure 4: Filtering tooltips (mode: “advanced”)
 
@@ -135,8 +141,10 @@ Listing 2: Minimal set of CSS and JavaScript references (not minified and combin
 <script type="text/javascript" src="infragistics.util.js"></script>
 <script type="text/javascript" src="infragistics.dataSource.js"></script>
 <script type="text/javascript" src="infragistics.ui.shared.js"></script>
+<script type="text/javascript" src="infragistics.ui.popover.js"></script>
 <script type="text/javascript" src="infragistics.ui.editors.js"></script>
 <script type="text/javascript" src="infragistics.ui.grid.framework.js"></script>
+<script type="text/javascript" src="infragistics.ui.grid.shared.js"></script>
 <script type="text/javascript" src="infragistics.ui.grid.filtering.js"></script>
 ```
 
@@ -157,12 +165,12 @@ $("#myGrid").igGrid({
     ]
     features:[
         {
-            name: "Filtering", 
+            name: "Filtering",
             allowFiltering: true,
             caseSensitive: false,
             columnSettings: [
-                {columnKey: "StateName", allowFiltering: false} 
-            ]            
+                {columnKey: "StateName", allowFiltering: false}
+            ]
         }
     ]
 });
@@ -188,15 +196,19 @@ Listing 5: HTML element required to instantiate the grid
 ```html
 <table id="myGrid"></table>
 ```
+**Running sample with advanced filtering**
+<div class="embed-sample">
+   [igGrid Advanced Filtering](%%SamplesEmbedUrl%%/grid/advanced-filtering)
+</div>
 
-Listing 6: ASPX or CSHTML markup for use with the ASP.NET MVC wrapper
+Listing 6: Razor or CSHTML markup for use with the ASP.NET MVC wrapper
 
 
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
-<%= Html.Infragistics().Grid(Model).ID("grid1").PrimaryKey("ProductID").Height("400px").Columns(column =>
+@(Html.Infragistics().Grid(Model).ID("grid1").PrimaryKey("ProductID").Height("400px").Columns(column =>
     {
         column.For(x => x.ProductID).HeaderText("Product ID").DataType("number");
         column.For(x => x.Name).HeaderText("Product Name");
@@ -207,7 +219,8 @@ Listing 6: ASPX or CSHTML markup for use with the ASP.NET MVC wrapper
     })
 	.DataSourceUrl(Url.Action("GridGetData"))
 	.DataBind()
-	.Render()%>
+	.Render()
+)
 ```
 
 ## <a id="remote"></a> Remote Filtering
@@ -267,14 +280,14 @@ $("#grid1").igGrid({
 ```
 ## <a id="client-side-events"></a> Client-Side events
 
-You can bind to Filtering client-side events in two ways, which are described in Listing 8 and Listing 9, respectively. If you would like to bind using the approach described in Listing 8, you must use the jQuery `delegate()` method instead of `bind` if filtering is not yet instantiated.
+You can bind to Filtering client-side events in two ways, which are described in Listing 8 and Listing 9, respectively. If you would like to bind using the approach described in Listing 8, you can use the jQuery `on()` method.
 
 Listing 8: Binding to client-side events from anywhere in your application
 
 
 **In JavaScript:**
 ```
-$("#grid1").bind("iggridfilteringdatafiltered", handler);
+$("#grid1").on("iggridfilteringdatafiltered", handler);
 ```
 
 Listing 9: Binding to client-side events by specifying the event name as an option when you initialize the filtering feature (case sensitive)
@@ -544,7 +557,11 @@ Listing 10: Filtering expression object structure
 **In JavaScript:**
 
 ```js
-{expr: <filter expression string>, cond: [<filtering condition>](#default-conditions-list), fieldName: [<column key>](%%jQueryApiUrl%%/ui.iggrid#options:columns.key)}
+{
+    expr: <filter expression string>,
+    cond: [<filtering condition>](#default-conditions-list),
+    fieldName: [<column key>](%%jQueryApiUrl%%/ui.iggrid#options:columns.key)
+}
 ```
 
 Listing 11 and Listing 12 show examples of using the filter() function off the `igGridFiltering` widget.
@@ -627,7 +644,7 @@ The following conditions (grouped by data type) are available to perform filteri
   -   notNull
   -   empty
   -   notEmpty
-  
+
 ## <a id="properties"></a> List of Filtering Options (Properties)
 
 Option and default value shows in brackets
@@ -672,19 +689,19 @@ The condition needs to be defined in the column settings for the related column 
 The assigned value should be an object, where each property name represents an unique condition key and the value represents the custom condition's declaration.
 
 There are additional options that further affect the behavior and visualization of the conditions:
--	`requireExpr` - specifies whether this condition requires the user to input a filtering expression or not. 
+-	`requireExpr` - specifies whether this condition requires the user to input a filtering expression or not.
 -	`labelText`  -  specifies the label text that will appear in the column's condition dropdown.
 - 	`expressionText` - specifies the text that will display in the editor if requireExpr is false and the condition is selected from the dropdown.
 -	`filterImgIcon` - specifies the css class applied to the dropdown item when in simple filtering mode.
 -	`filterFunc` - specifies the custom comparing filter function(or name of a function) that will be used when the condition is applied.
- 
- Listing 14: Example usage of custom conditions
+
+ Listing 14: Example usage of custom conditions with running sample
 
 
 **In JavaScript:**
 ```
 $("#grid1").igGrid({
-   columns: [ 
+   columns: [
                 { headerText: "Employee ID", key: "EmployeeID", dataType: "string", hidden: true },
                 { headerText: "First Name", key: "FirstName", dataType: "string" },
                 { headerText: "Last Name", key: "LastName", dataType: "string" },
@@ -720,7 +737,11 @@ $("#grid1").igGrid({
     ]
 });
 ```
- 
+ **Demo:**
+ <div class="embed-sample">
+   [igGrid Filtering Custom Conditions](%%SamplesEmbedUrl%%/grid/custom-conditions-filtering)
+</div>
+
 
 ## <a id="css"></a> Filtering CSS Classes
 
@@ -845,6 +866,4 @@ _Note_: There is a difference between the drop-down for selecting the column and
 
 ### <a id="samples"></a> Samples
 
--   [Simple Filtering](%%SamplesUrl%%/grid/simple-filtering)
--   [Advanced Filtering](%%SamplesUrl%%/grid/grid/advanced-filtering)
--   [Custom Conditions Filtering](%%SamplesUrl%%/grid/custom-conditions-filtering)
+-   [Filtering](%%SamplesUrl%%/grid/simple-filtering)

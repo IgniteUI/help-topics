@@ -82,7 +82,8 @@ The following code sample demonstrates the scripts as added to the header code o
 ```html
 <script type="text/javascript"src="jquery.min.js"></script>
 <script type="text/javascript" src="jquery-ui.min.js"></script>
-<script type="text/javascript" src="infragistics.core.js"></script><script type="text/javascript" src="infragistics.lob.js"></script>
+<script type="text/javascript" src="infragistics.core.js"></script>
+<script type="text/javascript" src="infragistics.lob.js"></script>
 ```
 
 ### <a id="database-requirements"></a> Database Requirements
@@ -92,7 +93,7 @@ For the purpose of this example only:
 -   jQuery – Adventure Works in JSON format.
 -   MVC – Adventure Works database.
 
-## <a id="enabling-grouping-jquery"></a> Enabling grouping in jQuery 
+## <a id="enabling-grouping-jquery"></a> Enabling grouping in jQuery
 
 Inside the `$(document).ready()` event handler you create an `igGrid` with grouping feature configuration to allow grouping by column. In the example code below the grid is sorted by default by one of its columns (SafetyStockLevel).
 
@@ -101,19 +102,19 @@ Inside the `$(document).ready()` event handler you create an `igGrid` with group
 ```js
 $("#grid1").igGrid({
      features: [
-         {
-           name: 'GroupBy',
-        columnSettings: [
         {
-            columnKey: "SafetyStockLevel",
-            isGroupBy: true,
-               dir: "asc"
+            name: 'GroupBy',
+            columnSettings: [
+                {
+                    columnKey: "SafetyStockLevel",
+                    isGroupBy: true,
+                    dir: "asc"
+                }
+            ]
         }
-        ]
-       }
     ],
     dataSource: adventureWorks,
-       responseDataKey: 'Records',
+    responseDataKey: 'Records',
     autoGenerateColumns: true
 });
 ```
@@ -129,15 +130,15 @@ To verify the result, open the HTML file in your browser. You should see the gri
 2. Create an MVC Controller method.
 
 	Create MVC Controller method to get the data from the SQL Model and to call the View.
-	
+
 	**In MVC:**
-	
+
 	```csharp
 	public ActionResult Default()
 	{
 	    var ctx = new AdventureWorksDataContext("ConnString");
 	    var ds = ctx.Products;
-	
+
 	    return View("Events", ds);
 	}
 	```
@@ -145,24 +146,25 @@ To verify the result, open the HTML file in your browser. You should see the gri
 3. Create the grid.
 
 	Define the grid itself along with the Group By feature and all his configurations:
-	
-	**In ASPX:**
-	
+
+	**In Razor:**
+
 	```csharp
-	<%= Html.Infragistics()
-	.Grid(Model)
-	.ID("grid1")
-	.Features(feature => {
-	    feature.GroupBy().ColumnSettings(groupedGolumn =>
-	    {
-	        groupedGolumn.ColumnSetting().ColumnKey("Color").IsGroupBy(true);
-	    });
-	})
-	.AutoGenerateColumns(true)
-	.PrimaryKey("ProductID")
-	.Width("750px")
-	.DataBind()
-	.Render()%>
+	@(Html.Infragistics()
+        .Grid(Model)
+        .ID("grid1")
+        .Features(feature => {
+            feature.GroupBy().ColumnSettings(groupedGolumn =>
+            {
+                groupedGolumn.ColumnSetting().ColumnKey("Color").IsGroupBy(true);
+            });
+        })
+        .AutoGenerateColumns(true)
+        .PrimaryKey("ProductID")
+        .Width("750px")
+        .DataBind()
+        .Render()
+    )
 	```
 
 4. Save the project.
@@ -192,12 +194,10 @@ The following topics provide additional information related to this topic.
 
 The following samples provide additional information related to this topic.
 
-- [Grouping with summaries](%%SamplesUrl%%/grid/grouping)
+- [Grouping](%%SamplesUrl%%/grid/grouping)
 
-- [Grouping Customization](%%SamplesUrl%%/grid/grouping-customization)
 
- 
 
- 
+
 
 

@@ -38,6 +38,7 @@ This topic contains the following sections:
 -   [**Code Examples Summary**](#examples-summary)
 -   [**Code Example: Binding *igFunnelChart* to a JavaScript Array**](#javascript-array)
 -   [**Code Example: Binding *igFunnelChart* to XML data**](#xml)
+    -   [**Full sample illustrating XML binding**](#full-sample)
 -   [**Code Example: Binding *igFunnelChart* in a Strongly Typed MVC View**](#mvc-model)
 -   [**Code Example: Binding *igFunnelChart* to a JSON Response from a Remote Service**](#remote-service-json)
 -   [**Related Content**](#related-content)
@@ -216,7 +217,13 @@ $("#chartNormal").igFunnelChart({
 });
 ```
 
+### <a id="full-sample"></a> Full sample illustrating XML binding
 
+This sample shows how to bind an `igFunnelChart` to data available in XML structure. For that purpose the XML data is passed to an `igDataSource` which provides the data to the funnel chart.
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/funnel-chart/xml-binding](%%SamplesEmbedUrl%%/funnel-chart/xml-binding)
+</div>
 
 ## <a id="mvc-model"></a> Code Example: Binding *igFunnelChart* in a Strongly Typed MVC View
 
@@ -332,7 +339,6 @@ The following topics provide additional information related to this topic.
 The following samples provide additional information related to this topic.
 
 - [Funnel Chart](%%SamplesUrl%%/funnel-chart/funnel-chart): This sample demonstrates using the Funnel Chart control to render data as slices from the largest value to the smallest value with the capability to invert the positions of the slices.
-
 
 
 

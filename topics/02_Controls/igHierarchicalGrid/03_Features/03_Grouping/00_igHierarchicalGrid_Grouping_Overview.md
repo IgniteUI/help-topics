@@ -298,9 +298,3 @@ The following topics provide additional information related to this topic.
 
 - [Enabling and Configuring Grouping](igHierarchicalGrid-Grouping-Enabling-and-Configuring.html): This topic demonstrates, with code examples, how to enable and configure the Grouping feature of the igHierarchicalGrid™ control in both jQuery and MVC.
 - [igGridGroupBy jQuery Reference](%%jQueryApiUrl%%/ui.iggridselection_hg): A complete reference to the jQuery options, methods, events and style classes for the igGridGroupBy control.
-
-### Samples
-The following samples provide additional information related to this topic.
-
-- [Grouping Customization](%%SamplesUrl%%/grid/grouping-customization): This sample demonstrates how to configure a custom grouping function.
-- [Grouping with summaries](%%SamplesUrl%%/grid/grouping): This sample demonstrates the grouping feature of igHierarchicalGrid control
