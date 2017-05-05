@@ -74,7 +74,7 @@ The following table summarizes the main user interaction capabilities of the `ig
 | Navigate page right									| Press <kbd>Alt</kbd>+<kbd>Page Down</kbd>											| Move active cell as much cells to the right as much columns are visible in the current sheet pane |
 | Navigate a specific amount of rows up or down			| Scroll using the vertical scroll bar												| This changes the visible rows of the current sheet pane without changing the current active cell	   |
 |Navigate a specific amount of columns left or right	| Scroll using the horizontal scroll bar											| This changes the visible columns of the current sheet pane without changing the current active cell |
-| Enter/exit end mode navigation						| Press <kbd>End</kbd>																| Thistoggles the end mode navigation	|
+| Enter/exit end mode navigation						| Press <kbd>End</kbd>																| This toggles the end mode navigation	|
 
 Have in mind that all those interactions are not configurable.
 
