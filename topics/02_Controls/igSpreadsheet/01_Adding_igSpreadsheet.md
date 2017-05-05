@@ -17,9 +17,9 @@ The `igSpreadsheet`™ is a jQuery widget that visualize excel documents in all 
 
 ###Required background
 
-To understand this topic you need to be familiar with the concept ant topics related to the [Infragistics JavaScript Excel Library](javascript-excel-library.html).
+To understand this topic you need to be familiar with the concept and topics related to the [Infragistics JavaScript Excel Library](javascript-excel-library.html).
 
-Before we get started we need to make sure we have loaded all of the needed resources. We first need to load the needed jQuery resources and then we need to add the required Ignite UI resources. There are two ways to add the Ignite UI resources to your project. You can either use the igLoader or you can load the required modules separately. For the purpose of our guidance we will use the igLoader.
+Before we get started we need to make sure we have loaded all of the needed resources. We first need to load the needed jQuery resources and then we need to add the required Ignite UI resources. There are two ways to add the Ignite UI resources to your project. You can either use the `igLoader` or you can load the required modules separately. For the purpose of our guidance we will use the `igLoader`.
 
 ```js
 $.ig.loader({
@@ -75,9 +75,3 @@ xhr.send();
 
 ## Related Links
 -   [igSpreadsheet Overview](igSpreadsheet-Overview.html)
-
- 
-
- 
-
-
