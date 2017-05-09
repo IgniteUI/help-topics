@@ -80,5 +80,6 @@ Enter/Exit **AddToSelection** mode | Press <kbd>Shift</kbd> + <kbd>F8</kbd> | Th
 ## Related Links
 -   [igSpreadsheet Overview](igSpreadsheet-Overview.html)
 -   [igSpreadsheet Overview](igSpreadsheet-Activation-and-Navigation-Interaction.html)
+-   [igSpreadsheet Feature Overview](igSpreadsheet-Feature-Overview.html)
 
 
