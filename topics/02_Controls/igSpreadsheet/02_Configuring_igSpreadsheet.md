@@ -24,13 +24,13 @@ This topic contains the following sections:
 
 ###Required background
 
-To understand this topic you need to be familiar with the concept ant topics related to the [Infragistics JavaScript Excel Library](javascript-excel-library.html).
+To understand this topic you need to be familiar with the concept and topics related to the [Infragistics JavaScript Excel Library](javascript-excel-library.html).
 
 ##<a id="configuring_navigation"></a>Configuring Navigation
 
-The igSpreadsheet supports navigation of the active cell through the cells of the active pane of the currently selected worksheet. The user may change the active cell using the keyboard or mouse and also use the horizontal and vertical scroll bars to change the visible columns and rows of the active sheet pane.
+The igSpreadsheet supports navigation of the active cell through the cells of the active pane of the currently selected worksheet. The user may change the active cell using the keyboard or mouse and use the horizontal and vertical scroll bars to change the visible columns and rows of the active sheet pane.
 
-In addition to the normal navigation behavior the XamSpreadsheet control supports one more navigation mode:
+In addition to the normal navigation behavior, the `igSpreadsheet` control supports one more navigation mode:
 
  - **End Mode** - in this mode the arrow keys are used to navigate adjacent cells with data.
  
@@ -92,7 +92,7 @@ The following table maps the desired configuration to the property settings that
 
 ##<a id="configuring_worksheets"></a>Configuring Worksheets
 
-You can configure several worksheet aspects using properties defined directly on the igSpreadsheet control (listed in the table below). However these properties are convenient when you want to update several worksheets, because they will affect all worksheets selected by the user.
+You can configure several worksheet aspects using properties defined directly on the igSpreadsheet control (listed in the table below). However, these properties are convenient when you want to update several worksheets, because they will affect all worksheets selected by the user.
 
 The following table explains briefly the configurable aspects of the worksheets and maps them to the properties that configure them.
 
@@ -125,9 +125,3 @@ The following table explains briefly the configurable aspects of the worksheets 
 
 ## Related Links
 -   [igSpreadsheet Overview](igSpreadsheet-Overview.html)
-
- 
-
- 
-
-

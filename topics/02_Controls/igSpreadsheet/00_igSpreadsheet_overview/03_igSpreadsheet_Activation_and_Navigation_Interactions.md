@@ -21,6 +21,7 @@ To understand this topic you need to be familiar with the concept and topics rel
 ### In this topic
 
 This topic contains the following sections:
+
 -   [Activation](#activation)
 -   [Spreadsheet Panes](#spreadsheet_panes)
 -   [Navigation](#navigation)
