@@ -11,14 +11,14 @@
 # igSpreadsheet
 
 
-Click on the links below to find information on how to get `igSpreadsheet` quickly up and running.
+This topic provides you a quick access to all of the avaliable help regarding the igSpreadsheet. Click on the links below to find information on how to get `igSpreadsheet` quickly up and running.
 
--   [igSpreadsheet Overview](igSpreadsheet-Overview.html)
+-   [Features Overview (igSpreadsheet)](igspreadsheet-feature-overview.html)
+-   [Visual Elements Overview (igSpreadsheet)](igspreadsheet-visual-elements.html)
+-   [Activation and Navigation Interactions (igSpreadsheet)](igspreadsheet-activation-and-navigation-interactions.html)
+-   [Selection (igSpreadsheet)](igspreadsheet-selection.html)
+-   [Context Menu (igSpreadsheet)](igspreadsheet-context-menu.html)
+-   [Adding igSpreadsheet](adding-igspreadsheet.html)
+-   [Configuring igSpreadsheet](configuring-igspreadsheet.html)
 -   [igSpreadsheet Accessibility Compliance](igSpreadsheet-Accessibility-Compliance.html)
 -   [igSpreadsheet Known Issues](igSpreadsheet-Known-Issues.html)
-
- 
-
- 
-
-
