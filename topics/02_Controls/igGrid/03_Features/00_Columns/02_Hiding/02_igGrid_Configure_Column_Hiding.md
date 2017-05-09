@@ -46,9 +46,8 @@ The table bellows lists the required background you need for fully understanding
 - Topics
 	- You need to first read the [Enabling Column Hiding](igGrid-Column-Hiding-Enabling-Column-Hiding.html) topic.
 - External Resources
-	- You need to first read the following articles:
-	- [jQuery bind() API](http://api.jquery.com/bind/)
-	- [jQuery live() API](http://api.jquery.com/live/)
+	- You need to first read the following article:
+	- [jQuery on() API](http://api.jquery.com/on/)
 
 ## <a id="column-configuration-overview"></a> Column Configuration Overview
 
@@ -91,9 +90,9 @@ Property | Setting
 
 ### <a id="example-hiding-column-by-default-code"></a> Code
 
-**In HTML:**
+**In JavaScript:**
 
-```html
+```javascript
 <script type="text/javascript">
 $(function () {
     $("#grid1").igGrid({
@@ -113,18 +112,18 @@ $(function () {
 ```
 
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
-<%= Html.Infragistics().Grid(Model)
+@(Html.Infragistics().Grid(Model)
     .AutoGenerateColumns(true)
-    .Features(feature =>{       
+    .Features(feature =>{
         feature.Hiding().ColumnSettings(settings =>    settings.ColumnSetting()
         .ColumnKey("ReorderPoint")
         .AllowHiding(true)
         .Hidden(true));
     }).DataBind().Render()
-%>
+)
 ```
 
 ## <a id="example-hiding-column-completely"></a> Example: Hiding a Column Completely
@@ -146,9 +145,9 @@ Property | Setting
 
 ### <a id="example-hiding-column-completely-code"></a> Code
 
-**In HTML:**
+**In JavaScript:**
 
-```html
+```javascript
 <script type="text/javascript">
 $(function () {
     $("#grid1").igGrid({
@@ -168,20 +167,20 @@ $(function () {
 </script>
 ```
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
-<%= Html.Infragistics().Grid(Model)
+@(Html.Infragistics().Grid(Model)
     .AutoGenerateColumns(true)
-    .Features(feature =>{       
+    .Features(feature =>{
         feature.Hiding().
         .ColumnSettings(settings =>
-        {                             
-            settings.ColumnSetting().ColumnKey("Address").Hidden(true).AllowHiding(false);                                
+        {
+            settings.ColumnSetting().ColumnKey("Address").Hidden(true).AllowHiding(false);
             settings.ColumnSetting().ColumnKey("BirthDate").Hidden(true).AllowHiding(false);
         })
     ).DataBind().Render()
-%>
+)
 ```
 
 ### <a id="example-canceling-column-hiding"></a> Canceling Column Hiding
@@ -202,23 +201,23 @@ Following is a conceptual overview of the process:
 
         Define a function that will be called when the `columnHiding` event fires.
 
-        **In HTML:**
+        **In JavaScript:**
 
-        ```html
-        <script type="text/javascript">     
-        function gridColumnHiding (evt, ui) {
-         
-        };   
+        ```javascript
+        <script type="text/javascript">
+            function gridColumnHiding (evt, ui) {
+
+            };
         </script>
         ```
 
 	2. Set the handler to the `columnHiding` event of the `igGrid`.
-		
-		Once you have a handler defined, it has to be set as the handler for the `columnHiding` event. In jQuery, this can be done when the widget is instantiated. In ASP.NET MVC, the event must be attached using the jQuery `live` or `bind` API. Using the live or bind API is an option for attaching the event in a pure jQuery implementation as well. The type for this event is `iggridhidingcolumnhiding`.
 
-		**In HTML:**
-		
-		```html
+		Once you have a handler defined, it has to be set as the handler for the `columnHiding` event. In jQuery, this can be done when the widget is instantiated. In ASP.NET MVC, the event must be attached using the jQuery `on` API. Using the on API is an option for attaching the event in a pure jQuery implementation as well. The type for this event is `iggridhidingcolumnhiding`.
+
+		**In JavaScript:**
+
+		```javascript
 		$(function () {
 			$("#grid1").igGrid({
 				autoGenerateColumns: true,
@@ -233,26 +232,25 @@ Following is a conceptual overview of the process:
 			});
 		});
 		```
-		
+
 		**In JavaScript:**
-		
+
 		```js
-		$("# grid1").live("iggridhidingcolumnhiding", comboSelectionChanging);
+		$("# grid1").on("iggridhidingcolumnhiding", comboSelectionChanging);
 		```
 
 2.  Cancel the event.
 
     To cancel the event, return false.
 
-    **In HTML and JavaScript:**
+    **In JavaScript:**
 
-    ```html
+    ```javascript
     <script type="text/javascript">
-            
         function gridColumnHiding (evt, ui) {
            if (conditionNotMet)
               return false;
-         };   
+         };
     </script>
     ```
 
@@ -269,7 +267,7 @@ In this example, the Column Chooser is configured with the following settings:
 -   caption saying New caption text
 -   Chooser button saying New caption text
 
-### <a id="example-configuring-column-chooser-preview"></a> Preview 
+### <a id="example-configuring-column-chooser-preview"></a> Preview
 
 Following is a preview of the final result.
 
@@ -290,7 +288,7 @@ Property | Setting
 
 ### <a id="example-configuring-column-chooser-code"></a> Code
 
-**In HTML:**
+**In JavaScript:**
 
 ```html
 <script type="text/javascript">
@@ -311,19 +309,19 @@ $(function () {
 </script>
 ```
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
-<%= Html.Infragistics().Grid(Model)
+@(Html.Infragistics().Grid(Model)
     .AutoGenerateColumns(true)
-    .Features(feature =>{       
+    .Features(feature =>{
             feature.Hiding()
             .ColumnChooserHeight(300)
             .ColumnChooserWidth(300)
             .ColumnChooserCaptionText("New Caption Text")
             .ColumnChooserDisplayText("New Chooser Text");
         }).DataBind().Render()
-%>
+)
 ```
 
 ## <a id="related-content"></a> Related Content

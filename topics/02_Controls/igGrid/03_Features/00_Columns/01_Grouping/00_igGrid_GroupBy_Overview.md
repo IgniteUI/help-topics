@@ -34,7 +34,7 @@ The `igGrid` supports a column grouping functionality that enables the user to e
 
 ![](images/igGrid_GroupBy_Overview_01.png)
 
-Grouping in the `igGrid` works the same as the analogous functionality in Microsoft® Office Outlook® – you drag a column that you want to group by and drop it into a special grouping area above the grid. This re-arranges the grid with as many groups as distinct value are there in the selected column. In addition, inside the groups, the records are sorted. If you drop additional columns, then, within the already existing groups, further gropings are applied.
+Grouping in the `igGrid` works the same as the analogous functionality in Microsoft® Office Outlook® – you drag a column that you want to group by and drop it into a special grouping area above the grid. This re-arranges the grid with as many groups as distinct value are there in the selected column. In addition, inside the groups, the records are sorted. If you drop additional columns, then, within the already existing groups, further groupings are applied.
 
 You can define your own custom grouping method. For details about custom grouping, refer to the Grid Group By Overview topic.
 
@@ -49,6 +49,12 @@ Persisting grouped columns between `igGrid` re-bindings is made easy in version 
 When you enable `igGridGroupBy` you are already using it in a [`persist`](%%jQueryApiUrl%%/ui.iggridgroupby#options:persist) mode. This means that after explicitly calls of `dataBind()`, that persistence is applied for UI and data source view (the grouped columns are not cleared and the data source remains sorted)
 
 GroupBy persistence is implemented for `igHierarchicalGrid` too.
+
+The following sample demonstrates the persistance capabilities of the GroupBy feature.
+
+<div class="embed-sample">
+   [Feature Persistence](%%SamplesEmbedUrl%%/grid/feature-persistence)
+</div>
 
 If you would like to retain the previous behavior of group by being cleared after user re-binds the `igGrid`, you can do this by disabling the feature through the [`persist`](%%jQueryApiUrl%%/ui.iggridgroupby#options:persist) option as shown in the code snippet below:
 
@@ -95,7 +101,7 @@ The table below briefly explains the grouping main features and the Group By wid
             <td>[summarySettings](%%jQueryApiUrl%%/ui.iggridgroupby#options:summarySettings)</td>
             <td>[SummarySettings](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridGroupBy~SummarySettings.html)</td>
         </tr>
-         <tr>
+        <tr>
             <td>GroupBy Summaries per data-island</td>
             <td> Allows an additional summary row to be displayed below each group data island that displays summary information for the data columns in that island.</td>
             <td>[groupSummaries](%%jQueryApiUrl%%/ui.iggridgroupby#options:groupSummaries)</td>
@@ -177,6 +183,13 @@ the grouping action ends. **This event is fired also when group/ungroup from Gro
         </tr>
     </tbody>
 </table>
+
+The following sample demonstrates how to use the [compareFunc](%%jQueryApiUrl%%/ui.iggridgroupby#options:columnSettings.compareFunc) to customize the grouping: 
+ 
+<div class="embed-sample">    
+    [Grouping Customization](%%SamplesEmbedUrl%%/grid/grouping-customization)
+</div>
+
 ## <a id="api-usage"></a> API Usage
 
 In order to group a column programmatically, you need to do this in the following way:
@@ -222,6 +235,13 @@ $('#grid1').igGridGroupBy("collapse", id);
 // expand
 $('#grid1').igGridGroupBy("expand", id);
 ```
+
+The following sample provides additional information related to the API usage: 
+
+<div class="embed-sample">
+   [Grouping API](%%SamplesEmbedUrl%%/grid/grouping-api)
+</div>
+
 ## <a id="keyboard-interaction"></a> Keyboard Interactions
 
 The following keyboard interactions are available.
@@ -255,8 +275,7 @@ The following topics provide additional information related to this topic.
 
 The following samples provide additional information related to this topic.
 
-- [Grouping with summaries](%%SamplesUrl%%/grid/grouping)
-- [Grouping API](%%SamplesUrl%%/grid/grouping-api)
+- [GroupBy](%%SamplesUrl%%/grid/grouping)
 
  
 

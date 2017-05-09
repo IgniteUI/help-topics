@@ -63,6 +63,12 @@ In the following screenshot, you can see a multi-column header configured for th
 
 ![](images/igGrid_MultiColumnHeaders_1.png)
 
+The following sample demonstrates how to configure Multi-Column Headers:
+
+<div class="embed-sample">
+   [Multi-Column Headers](%%SamplesEmbedUrl%%/grid/multi-column-headers)
+</div>
+
 
 ## <a id="collapsible-column-groups"></a> Collapsible column groups
 
@@ -231,7 +237,7 @@ The following topics provide additional information related to this topic.
 
 The following samples provide additional information related to this topic.
 
-- [Multi-Column Headers](%%SamplesUrl%%/grid/multi-column-headers): This sample shows how to configure multi-column headers.
+- [Collapsible Multi-Column Headers](%%SamplesUrl%%/grid/collapsible-column-groups): This sample shows how to configure collapsible multi-column headers.
 
 
 

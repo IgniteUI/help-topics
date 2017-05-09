@@ -48,6 +48,7 @@ This topic contains the following sections:
 -   [Set the contents of the igHtmlEditor](#set-the-content)
 -   [Apply formatting to the igHtmlEditor’s contents](#apply-formatting)
 -   [Printing the igHtmlEditor’s contents](#printing-the-content)
+-   [API and Events Demo](#api-and-events-demo)
 -   [Related Content](#related-content)
 
 
@@ -295,6 +296,12 @@ The following steps demonstrate how to print the `igHtmlEditor` contents.
 
 	>**Note:** This approach prints the entire `igHtmlEditor` control in addition to the contents.
 
+##<a id="api-and-events-demo"></a>API and Events Demo
+The following sample demonstrates how to handle events and use the API of the `igHtmlEditor` control:
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/html-editor/api-and-events](%%SamplesEmbedUrl%%/html-editor/api-and-events)
+</div>
 
 ##<a id="related-content"></a>Related Content
 
@@ -304,21 +311,3 @@ The following steps demonstrate how to print the `igHtmlEditor` contents.
 The following topics provide additional information related to this topic.
 
 -	[Configuring Toolbars and Buttons](igHtmlEditor-Configuring-Toolbars-and-Buttons.html): This topic explains how to configure the igHtmlEditor toolbars and buttons.
-
-
-
-### Samples
-
-The following samples provide additional information related to this topic.
-
--	[API and Events](%%SamplesUrl%%/html-editor/api-and-events): This sample demonstrates how to handle events in the Html Editor control and API usage.
-
-
-
-
-
- 
-
- 
-
-

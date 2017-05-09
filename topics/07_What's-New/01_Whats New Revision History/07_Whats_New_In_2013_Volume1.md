@@ -565,9 +565,9 @@ UI grids.
 
 The Knockout support is implemented as a Knockout extension which is invoked initially when Knockout bindings are applied to a page and during the page life when external updates to the View-Model happen. You can specify any of the editor control options that have relevance for your business case in the data-bind attribute.
 
-#### Related Samples
+#### Related
 
-[**Grid Knockoutjs Integration**](%%SamplesUrl%%/grid/bind-grid-with-ko)
+[**Grid Knockoutjs Integration**](igGrid-Configuring-Knockout-Support.html)
 
 ### <a id="column-fixing-ctp"></a>Column Fixing (CTP)
 

@@ -59,6 +59,16 @@ No | No | If column widths are defined, the grid stretches according to the widt
 Yes | Yes | Headers are rendered in a separate table, inside of a DIV (so that if there is width set on the grid and it has horizontal scrollbar, the headers table is in sync with the contents, while scrolling).
 No | Yes | The header’s element is rendered inside of a single table – where the data is hosted. There is no separate TABLE or DIV.
 
+The sample below demonstrates how to set up different layout properties of the `igGrid`. The following properties are exposed: 
+- `caption` – caption text that will be shown above the grid header.
+- `fixedHeaders` - the column headers can be fixed so they are visible while scrolling.
+- `defaultColumnWidth` - when columns don’t have width assigned in the columns collection.
+- `width` (columns) – the width that is applied to the column.
+- `width` - the width of the grid. If a column’s width exceeds the grid’s width then a horizontal scroll bar appears.
+
+<div class="embed-sample">
+    [Grid Layout](%%SamplesEmbedUrl%%/grid/grid-layout)
+</div>
 
 ## <a id="defining-columns"></a> Defining Columns
 
@@ -147,13 +157,20 @@ Column formatting (rendering) is affected by several `igGrid` options. These are
  var formattedValue = $.ig.formatter(1000000); //formats the number according to the current regional settings.
  ```
 
- [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) and [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) options do not operate at the same time. When defined, [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) function is considered with priority and [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) is not used. However value from the [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) function is further decorated with a [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template).
+ [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) and [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) options do not operate at the same time. When defined, [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) function is considered with priority and 
+ [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) is not used. However value from the [`formatter`](%%jQueryApiUrl%%/ui.iggrid#options:columns.formatter) function is further decorated with a [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template).
 
  Here is the flow of column rendering when formatter is used:
+ 
  ```
  Raw Value -> formatter -> (template)* -> Cell Value
  * - optional setting
  ```
+ 
+This sample below shows how to format column values before displaying them in the grid. The "Make Flag" boolean column has a `formatter` function which transforms the true/false values into Yes/No values.
+<div class="embed-sample">
+   [Column Format Function](%%SamplesEmbedUrl%%/grid/column-format-function)
+</div>
 
 -  [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) - is a string identifying a format patterns. Internally [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) option uses the `$.ig.formatter(rawValue, dataType, formatPattern)` function. When set, [`format`](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) overrides the setting of the [`autoFormat`](%%jQueryApiUrl%%/ui.iggrid#options:autoFormat) option and also the default regional settings.
 
@@ -163,6 +180,12 @@ Column formatting (rendering) is affected by several `igGrid` options. These are
  Raw Value -> format -> (template)* -> Cell Value 
  * - optional setting
  ```
+
+The sample below demonstrates the grid column formatting capabilities. The Sell Start Date and Modified Date columns use different date formatting. The List Price number column uses the currency format.
+
+<div class="embed-sample">
+   [igGrid Column Formats](%%SamplesEmbedUrl%%/grid/column-formats)
+</div>
 
 - [`template`](%%jQueryApiUrl%%/ui.iggrid#options:columns.template) - is a templated string (templating engine used is defined in the `templatingEngine` option). See [Templating Engine Overview](igTemplating-Overview.html) topic for details on template syntax. 
  
@@ -181,7 +204,7 @@ Column formatting (rendering) is affected by several `igGrid` options. These are
  Raw Value -> (autoFormat|format|formatter)* -> columnCssClass -> template* -> Cell Value 
  * - optional setting
  ```
-
+ 
 Example:
 ```js
 $("#grid1").igGrid({
@@ -216,37 +239,11 @@ $("#grid1").igGrid({
 
 By default the cell text in igGrid is left aligned. To customize the cell text alignment use [`columnCssClass`](%%jQueryApiUrl%%/ui.iggrid#options:columns.columnCssClass) option. Just create custom CSS classes to align the text to the desired direction and then apply them to the column using the `columnCssClass`.
 
-**In Html**
-```html
-<style>
-    .align-right {
-        text-align: right;
-    }
-    .align-center {
-        text-align: center;
-    }
-</style>
-```
+The sample below demonstrates how to customize the grid cell text alignment. The grid's "Product ID" and "Reorder Point" numeric columns text is aligned to the right. This is done by applying a custom CSS class to the column cells. The CSS class is configured in the grid column's `columnCssClass` property.
 
-**In Javascript:**
-
-```js
-$("#grid1").igGrid({
-    autoGenerateColumns: false,
-    columns: [ {
-            headerText: "Product Number", 
-            key: "ProductNumber",
-            dataType: "number",
-            columnCssClass: "align-right"
-        }, {
-            headerText: "Modified Date",  
-            key: "ModifiedDate",  
-            dataType: "date",
-            columnCssClass: "align-center"
-        }
-    ]
-});
-``` 
+<div class="embed-sample">
+   [igGrid Configure Text Alignment](%%SamplesEmbedUrl%%/grid/configure-text-alignment)
+</div>
 
 ## <a id="defining-mapper"></a> Defining Mapper function for column
 
@@ -301,6 +298,12 @@ Listing 2: Defining mapper function for a column in igGrid
 
 ```
 
+The below sample demonstrates how to handle complex data objects via the column's mapper function. In it Sorting and Filtering will be executed based on the values returned by the mapper function and Updating via the combo editor provider will allow updating the whole complex object with the selected combo item's record data.
+
+<div class="embed-sample">
+   [Handling Complex Objects](%%SamplesEmbedUrl%%/grid/handling-complex-objects)
+</div>
+
 ## <a id="autoGenerateColumns"></a> AutoGenerateColumns
 
 Whenever `autoGenerateColumns` is set to *false*, you are required to manually define columns in the columns array. When `autoGenerateColumns` is *true* (default), you are not required to specify columns. In that case the grid will infer columns automatically from the data source (assuming there is at least one row in it) and add them to the columns collection. Header texts are automatically generated as well, and are equivalent to the keys in the data source. Setting column widths for auto-generated columns is done with `defaultColumnWidth` option, which will apply one and the same column width for all generated columns. When remote data binding is used, header texts are automatically generated only when data is available from the backend on the client. However, in most real-world scenarios it’s best to explicitly define columns.
@@ -318,7 +321,10 @@ You can also specify widths for every individual column separately. If you have 
 
 > **Note:** Updating feature requires `dataType` property to be set when `autoGenerateColumns` is set to false. That's because Updating feature uses primary key to synchronize records between the grid and the underlying data source and the primary key is compared by value and type.
 
-
+The sample below shows the auto-generate columns functionality of igGrid. When columns are auto-generated their header captions are taken from the data source field names. The `autoGenerateColumns` option is used in combination with `defaultColumnWidth` option.
+<div class="embed-sample">
+   [igGrid Auto-Generate Columns](%%SamplesEmbedUrl%%/grid/auto-generate-columns)
+</div>
 
 ## <a id="styling"></a> Styling
 
@@ -434,44 +440,14 @@ $("#grid1").igGrid({
             dataType: "date"
         }
     ],
-    features: [ {
-        name: "Selection",
-        mode: "row"
-    }, {
-        name: "Updating",
-        enableAddRow: false,
-        editMode: "row",
-        // event raised after end row editing but before dataSource was updated
-        editCellEnding: function (evt, ui) {
-            // get cell’s checkbox value when it is changed
-            if (ui.update) {
-                if (ui.columnKey === 'MakeFlag' ) {
-                    logEvent("editCellEnded event fired Column Key = " + 
-                    ui.columnKey + "; Row ID = " + 
-                    ui.rowID + "; Cell Value = " + 
-                    ui.value + "; Update = " + 
-                    ui.update);
-                }
-            }
-        },
-        enableDeleteRow: false,
-        columnSettings: [ {
-            columnKey: "ProductID",
-            readOnly: true
-        }, {
-            columnKey: "ProductNumber"
-        }, {
-            columnKey: "MakeFlag"
-        }, {
-            columnKey: "OrderDate",
-            editorType: "datepicker",
-            validation: true
-        } ]
-    } ],
     dataSource: gridData,
     height: "300px"
 });
 ```
+The sample below demonstrates how to enable checkboxes in a boolean column instead of the true/false values.
+<div class="embed-sample">
+   [igGrid Checkbox Column](%%SamplesEmbedUrl%%/grid/checkbox-column)
+</div>
 
 **In ASPX:**
 
@@ -482,27 +458,11 @@ $("#grid1").igGrid({
         column.For(x => x.ProductNumber).HeaderText("Product Number").DataType("string");
         column.For(x => x.MakeFlag).HeaderText("Make Flag").DataType("bool");
         column.For(x => x.ModifiedDate).HeaderText("Modified Date").DataType("date");
-        }).Features(features => {
-            features.Selection().Mode(SelectionMode.Row);
-            features.Updating().EnableAddRow(false).EditMode(GridEditMode.Row).EnableDeleteRow(false).ColumnSettings(columnSettings => {
-                columnSettings.ColumnSetting().ColumnKey("ProductID").ReadOnly(true);
-                columnSettings.ColumnSetting().ColumnKey("ProductNumber");
-                columnSettings.ColumnSetting().ColumnKey("MakeFlag");
-                columnSettings.ColumnSetting().ColumnKey("ModifiedDate").EditorType(ColumnEditorType.DatePicker).Validation(true);
-        });
-    }).DataBind().Height("300px").Render()
+        })
+        .DataBind().Height("300px").Render()
 %>
 ```
-
-
 ## <a id="related-content"></a> Related Content
-
-### Samples
-
--   [Auto-Generate Columns](%%SamplesUrl%%/grid/auto-generate-columns)
--   [Handling Complex Objects](%%SamplesUrl%%/grid/handling-complex-objects)
--   [Column Formats](%%SamplesUrl%%/grid/column-formats)
--   [Configure Text Alignment](%%SamplesUrl%%/grid/configure-text-alignment)
 
 ### Topic
 -   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)

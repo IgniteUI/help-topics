@@ -51,9 +51,12 @@ The Major and Minor intervals feature of the `igDataChart` control allows you to
 
 ###<a id="preview"></a> Preview
 
-The following screenshot is a preview of the `igDataChart` control using NumericX and Y axes - with Interval set to 10000 and MajorStroke set to Green and a MinorInterval is set to 5000 and MinorStroke is set to Red, on the y-axis; while displaying an Interval of 10 with a MajorStroke of Green and a MinorInterval of 2 with a MinorStroke of Red, on the x-axis.
+The following example is configurable `igDataChart` control, using NumericX and Y axes, where the following options can be set - Interval, MinorInterval, MajorStroke and MinorStroke.
 
-![](images/jQuery_AxisIntervals_NumericXY_01.png)
+<div class="embed-sample">
+   [NumericXAxis Intervals](%%SamplesEmbedUrl%%/data-chart/numeric-xaxis-intervals)
+   ![](images/jQuery_AxisIntervals_NumericXY_01.png)
+</div>
 
 Axis major and minor intervals are implemented by setting the Interval and MinorInterval properties on an axis to a value greater than zero. In order to display minor gridlines that correspond to minor interval, one needs to set MinorStroke and MinorStrokeThickness properties on the axis, (as minor gridlines do not have a default color or thickness, and they will not be displayed without first assigning them).
 
@@ -237,65 +240,14 @@ $("#container").igDataChart({
 
 ###<a id="categoryxexample"></a> CategoryXExample
 
-The screenshot, following the table, illustrates how the `igDataChart` control with the axis major and minor interval properties configured on the CategoryXAxis will be displayed as a result of the following settings, (using the ColumnSeries):
+This sample illustrates how the `igDataChart` control, with the axis major and minor interval properties configured on the CategoryXAxis,
+will be displayed as a result of the usage of the following settings - MinorInterval, MinorStroke, MinorStrokeThickness, Interval, MajorStroke and MajorStrokeThickness.
 
-<table class="table">
-	<thead>
-		<tr>
-			<th>Property</th>
-			<th>Value</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>MinorInterval</td>
-			<td>0.25</td>
-		</tr>
-		<tr>
-			<td>MinorStroke</td>
-			<td>"Red"</td>
-		</tr>
-		<tr>
-			<td>MinorStrokeThickness</td>
-			<td>1</td>
-		</tr>
-		<tr>
-			<td>Interval</td>
-			<td>2</td>
-		</tr>
-		<tr>
-			<td>MajorStroke</td>
-			<td>“Green”</td>
-		</tr>
-		<tr>
-			<td>MajorStrokeThickness</td>
-			<td>2</td>
-		</tr>
-		
-	</tbody>
-</table>
+<div class="embed-sample">
+   [CategoryXAxis Intervals](%%SamplesEmbedUrl%%/data-chart/category-xaxis-intervals)
+   ![](images/jquery_axisintervals_categoryx_01.png)
+</div>
 
-![](images/jquery_axisintervals_categoryx_01.png)
-
-Following is the code that implements this example:
-
-**In JavaScript:**
-
-```js
-$("#container").igDataChart({
-	…
-	axes: [{
-                    name: "xAxis",
-                    type: "categoryX",
-                    title: "Country",
-                    label: "CountryName",
-                    majorStroke: "Green",
-                    minorStroke: 'Red',
-                    minorInterval: 0.25,
-                    interval: 2,
-                    majorStrokeThickness: 2,
-                }, …
-```
 
 ##<a id="related-content"></a>Related Content
 
@@ -305,11 +257,3 @@ $("#container").igDataChart({
 The following topic provides additional information related to this topic:
 
 -	[Adding igDataChart](igDataChart-Adding.html):  This topic demonstrates how to add the `igDataChart` control to a page and bind it to data.
-
-
-### Samples
-
-The following samples provide additional information related to this topic.
-
--	[NumericAxesIntervals](%%SamplesUrl%%/data-chart/numeric-xaxis-intervals) : This sample demonstrates the use of Major and Minor Axis Intervals on the ScatterLineSeries, using NumericX and NumericY Axes.
--	[CategoryXAxisIntervals](%%SamplesUrl%%/data-chart/category-xaxis-intervals) : This sample demonstrates the use of Major and Minor Axis Intervals on the ColumnSeries, using CategoryXAxis.

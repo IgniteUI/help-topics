@@ -49,7 +49,6 @@ This topic contains the following sections:
     -   [Example](#profile-objects-example)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
 
 
 
@@ -162,7 +161,7 @@ Column hiding defined with CSS classes uses CSS 3 Media Queries. CSS classes are
 
 The following table maps the desired configuration to property settings.
 
-I<table class="table table-striped">
+<table class="table table-striped">
 	<thead>
 		<tr>
             <th>
@@ -662,15 +661,6 @@ The following topics provide additional information related to this topic.
 - [Configuring Row and Column Templates (igGrid, RWD Mode)](igGrid-Responsive-Web-Design-Mode-Configuring-Row-and-Column-Templates.html): This topic explains, with code examples, how to define row and column templates for the individual Responsive Web Design (RWD) mode profiles of the `igGrid` control and how to configure automatic change of template when switching the active RWD mode profile.
 
 - [Creating Custom Responsive Web Design (RWD) Profiles (igGrid)](igGrid-Responsive-Web-Design-Mode-Creating-Custom-Profile.html): This topic explains, with code examples, how to create custom Responsive Web Design (RWD) mode profiles for the `igGrid` control.
-
-### <a id="samples"></a> Samples
-
-The following samples provide additional information related to this topic.
-
-- [Responsive Web Design Mode](%%SamplesUrl%%/grid/responsive-web-design-mode): This sample demonstrates the `igGrid`’s Responsive Web Design mode feature. Responsive Web Design mode allows you to support multiple screen sizes and form factors with single code base and design.
-
-- [Responsive Vertical Rendering](%%SamplesUrl%%/grid/responsive-vertical-rendering): This sample demonstrates the `igGrid`’s Responsive Web Design feature in vertical mode. Responsive vertical rendering mode renders the grid data in two columns. The left column holds the columns captions and the right column holds the data.
-
 
 
 

@@ -332,7 +332,7 @@ In the following examples there are separate sections each for the bind and unbi
 -   [igCombo Events](%%jQueryApiUrl%%/ui.igcombo#events)
 -   [igDatePicker Events](%%jQueryApiUrl%%/ui.igdatepicker#events)
 -   [igRating Events](%%jQueryApiUrl%%/ui.igrating#events)
--   [igTree Events](%%jQueryApiUrl%%/ui.igtree#events)
+-   [igTree Events](igtree-event-reference.html)
 -   [igUpload Events](%%jQueryApiUrl%%/ui.igupload#events)
 -   [igVideoPlayer Events](%%jQueryApiUrl%%/ui.igvideoplayer#events)
 
@@ -341,7 +341,7 @@ In the following examples there are separate sections each for the bind and unbi
 
 -   [Editing API and Events](%%SamplesUrl%%/grid/editing-api-events)
 -   [Grid API and Events](%%SamplesUrl%%/grid/grid-api-events)
--   [Tree API and Events](%%SamplesUrl%%/tree/api-and-events)
+-   [Tree API and Events](igtree-event-reference.html#attaching-handlers-jquery)
 -   [File Upload API and Events](%%SamplesUrl%%/file-upload/api-events)
 
  

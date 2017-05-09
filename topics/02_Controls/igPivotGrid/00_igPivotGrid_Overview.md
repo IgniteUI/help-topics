@@ -160,9 +160,21 @@ The `igPivotGrid` control uses as a data source an instance of either the `igOla
 
 The `igPivotGrid` control integrates with the `igPivotDataSelector` control. This integration allows you to provide users with the ability to add/remove hierarchies and measures to/from the pivot grid.
 
+### igGrid features
+
+The `igPivotGrid` control's content is rendered via a `igGrid` control, whose options can be set via the [gridOptions](%%jQueryApiUrl%%/ui.igPivotGrid#options:gridOptions).
+The following features of the igGrid can be enabled via the gridOptions.[features](%%jQueryApiUrl%%/ui.igPivotGrid#options:gridOptions.features) option:
+- Resizing 
+- Tooltips
+
+The below sample demonstrates how to enable all the igGrid features supported by the igPivotGrid.
+
+<div class="embed-sample">
+   [All Grid Features](%%SamplesEmbedUrl%%/pivot-grid/all-grid-features)
+</div>
 
 
-##<a id="user-interaction"></a>User Interactions and Usability
+## <a id="user-interaction"></a>User Interactions and Usability
 
 ### User interactions summary chart
 

@@ -192,7 +192,15 @@ When the control is bound to the View-Model through Knockout it will receive not
 
 The control can be bound to a non-observable array and object fields, but doing so will cause you to lose the updating functionality making such a scenario pointless to use in the context of KnockoutJS.
 
+##<a id="Live_Example_igDataChart"></a>Live Example: Edit Chart Items with KnockoutJS
 
+This example demonstrates the igDataChart control reacting to changes in the data source by the Knockout View-Model. Note that the chart is updated without having to re-bind the control. By default, the sample shows the market revenue and expenses for the first 10 days of the month. You can add/remove days and move items along the chart and observe money flow on the market changing accordingly.
+
+>**Note:** The Knockout extensions do not work with the ASP.NET MVC Helpers.
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/data-chart/edit-chart-items-with-knockout](%%SamplesEmbedUrl%%/data-chart/edit-chart-items-with-knockout)
+</div>
 
 ##Related Content
 
@@ -220,8 +228,6 @@ The following topics provide additional information related to this topic.
 The following samples provide additional information related to this topic.
 
 -	[Bind igDataChart with KnockoutJS](%%SamplesUrl%%/data-chart/bind-data-chart-with-ko):  The sample demonstrates binding `igDataChart` with Knockout View-Model, using Infragistics Knockout extension for the control.
-
--	[Add, Delete, Move Chart Item with KnockoutJS (igDataChart)](%%SamplesUrl%%/data-chart/edit-chart-items-with-knockout):  The sample demonstrates the `igDataChart` control reacting to changes in the data source from the Knockout View-Model.
 
 
 

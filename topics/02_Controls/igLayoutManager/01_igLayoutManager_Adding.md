@@ -63,7 +63,7 @@ This topic contains the following sections:
 
 The `igLayoutManager` initializes on an unordered list (`<ul>`) element with list items (`<li>`) elements or `<div>` elements. The list can be created in any of the following ways:
 
--   Directly in the HTML markup The `<li>` or `<div>` elements can be defined in the HTML markup of the host element, and upon initialization, the control will add the respective CSS classes
+-   Directly in the HTML markup the `<li>` or `<div>` elements can be defined in the HTML markup of the host element, and upon initialization, the control will add the respective CSS classes
 -   As an array of item objects in the control options
 
 With this approach, an [items](%%jQueryApiUrl%%/ui.iglayoutmanager#options) collection and the [itemCount](%%jQueryApiUrl%%/ui.iglayoutmanager#options) property are used and the `igLayoutManager` generates the corresponding markup.
@@ -80,47 +80,38 @@ The following table summarizes the requirements for `igLayoutManager` control.
 			<th>
 				Requirement / Required Resource
 			</th>
-
 			<th>
 				Description
 			</th>
-
 			<th>
 				What you need to do…
 			</th>
 		</tr>
-
 		<tr>
 			<td>
 				jQuery and jQuery UI JavaScript resources
 			</td>
-
 			<td>
 				%%ProductName%% is built on top of these frameworks:
 
 				<ul>
 					<li><a class="ig-topic-link" href="http://jquery.com/" target="_blank">jQuery</a></li>
-
 					<li><a class="ig-topic-link" href="http://jqueryui.com/" target="_blank">jQuery UI</a></li>
 				</ul>
 			</td>
-
 			<td>
 				Add script references to both libraries in the &lt;head&gt; section of your page.
 			</td>
 		</tr>
-
 		<tr>
 			<td>
 				igLayoutManager JavaScript resources
 			</td>
-
 			<td>
 				The igLayoutManager functionality of the %%ProductName%% library is distributed across several files. You can load the required resources in one of the following ways:
 
 				<ul>
 					<li>(Recommended) <a href="Using-Infragistics-Loader.html" data-auto-update-caption="true">**Using Infragistics Loader**</a> (igLoader™). You only need to include a script reference to igLoader on your page.</li>
-
 					<li>Load the required resources manually. You need to use the dependencies listed in the table below.</li>
 				</ul>
 
@@ -148,45 +139,34 @@ The following table summarizes the requirements for `igLayoutManager` control.
 					</tbody>
 				</table><br>
 			</td>
-
 			<td>
 				Add one of the following:
-
 				<ul>
 					<li>A reference to igLoader</li>
-
 					<li>A reference to all the required JavaScript files (listed in the table on the left).</li>
 				</ul>
 			</td>
 		</tr>
-
 		<tr>
 			<td>
 				IG theme
-
 				*(Optional)*
 			</td>
-
 			<td>
 				This theme contains the visual styles for the %%ProductName%% library. The theme file is:
 
 				{IG CSS root}/themes/Infragistics/infragistics.theme.css
 			</td>
-
 			<td></td>
 		</tr>
-
 		<tr>
 			<td>
 				igLayoutManager structure
 			</td>
-
 			<td>
 				The styles from the following CSS file are used for rendering various elements of the control:
-
 				{IG CSS root}/structure/modules/infragistics.ui.layout.css
 			</td>
-
 			<td>
 				Add style reference to the file in your page.
 			</td>
@@ -256,9 +236,9 @@ The required resources added and properly referenced. (For a conceptual overview
         $.ig.loader({
             scriptPath: "Scripts/ig/",
             cssPath: "Content/ig/",
-            resources: “igLayoutManager"
+            resources: "igLayoutManager"
         });
-    <script>
+    </script>
     ```
 
 ### <a id="html-markup-steps"></a>Steps
@@ -353,9 +333,9 @@ The required resources added and properly referenced. (For a conceptual overview
         $.ig.loader({
             scriptPath: "Scripts/ig/",
             cssPath: "Content/ig/",
-            resources: “igLayoutManager"
+            resources: "igLayoutManager"
         });
-    <script>
+    </script>
     ```
 
 ### <a id="js-steps"></a>Steps
@@ -392,8 +372,16 @@ The following steps demonstrate how to add a basic `igLayoutManager` control wit
     });
 	```
 
+#### Sample ilustrating an alternative approach when using itemRendered event:
 
-##<a id="mvc-procedure"></a>Adding igLayoutManager in the ASP.NET MVC – Procedure 
+The following sample demonstrates initializing the Layout Manager control's Border layout from JavaScript, by handling [`itemRendered`](%%jQueryApiUrl%%/ui.iglayoutmanager#events:itemRendered) events and assigning content to the created regions.
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/layout-manager/border-layout](%%SamplesEmbedUrl%%/layout-manager/border-layout)
+</div>
+
+
+##<a id="mvc-procedure"></a>Adding igLayoutManager in the ASP.NET MVC – Procedure
 
 ### <a id="mvc-introduction"></a>Introduction
 
@@ -436,7 +424,7 @@ The required resources added and properly referenced. (For a conceptual overview
 
     ```csharp
     @(Html.Infragistics()
-            .Loader()     
+            .Loader()
             .ScriptPath("http://localhost/ig_ui/js/")
             .CssPath("http://localhost/ig_ui/css/")
             .Render()
@@ -501,8 +489,6 @@ The following samples provide additional information related to this topic.
 
 -	[Border Layout from HTML Markup](%%SamplesUrl%%/layout-manager/border-layout-markup): This sample demonstrates initializing the `igLayoutManager` control’s Border layout from the HTML markup by assigning *"center"*/*"left"*/*"right"*/*"header"*/*"footer"* CSS classes.
 
--	[Border Layout – Initializing with JavaScript](%%SamplesUrl%%/layout-manager/border-layout): This sample demonstrates initializing the `igLayoutManager` control’s Border layout from JavaScript, by handling `itemrendered` events and assigning content to the created regions.
-
 -	[Responsive Column Layout](%%SamplesUrl%%/layout-manager/column-layout-markup):This sample demonstrates how the `igLayoutManager` control’s Column layout can be used by assigning classes to items thus specifying the area their content will span over. This sample does not use JavaScript initialization code: it is done with CSS and HTML only.
 
 -	[Responsive Flow Layout](%%SamplesUrl%%/layout-manager/flow-layout): This sample demonstrates the responsiveness of the `igLayoutManager` control’s Flow layout with various item sizes set either in pixels or percentages and setting the number of items in the `igLayoutManager`'s options without the need for any initial markup.
@@ -515,8 +501,8 @@ The following samples provide additional information related to this topic.
 
 
 
- 
 
- 
+
+
 
 

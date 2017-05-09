@@ -1760,7 +1760,7 @@ The following samples provide additional information related to this topic:
 
 - [Basic Usage](%%SamplesUrl%%/dialog-window/basic-usage): This sample shows you how to configure the `igDialog` height, width and state.
 
-- [API and Events](%%SamplesUrl%%/dialog-window/api-and-events): This sample demonstrates how to handle events in the Dialog Window control and API usage.
+- [API and Events](igdialog-event-reference.html#attaching-handlers-jquery): This sample demonstrates how to handle events in the Dialog Window control and API usage.
 
 - [ASP.NET MVC Basic Usage](%%SamplesUrl%%/dialog-window/aspnet-mvc-helper): This example demonstrates how you can utilize the ASP.NET MVC helper for the Dialog Window.
 

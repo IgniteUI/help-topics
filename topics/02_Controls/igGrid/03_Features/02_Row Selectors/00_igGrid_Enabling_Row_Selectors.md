@@ -210,7 +210,7 @@ Following are some other topics you may find useful.
 
 ### <a id="samples"></a> Samples
 
--   [Row Selectors](%%SamplesUrl%%/grid/row-selectors)
+-   [Row Selectors](%%SamplesUrl%%/grid/selection)
 
  
 

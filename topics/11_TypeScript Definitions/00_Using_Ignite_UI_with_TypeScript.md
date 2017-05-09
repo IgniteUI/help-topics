@@ -142,9 +142,6 @@ When considering the required resources the same requirements and options apply 
 
 The following samples provide additional information related to this topic.
 
--   [igGrid TypeScript](%%SamplesUrl%%/grid/typescript)
 -   [igHierarchicalGrid TypeScript](%%SamplesUrl%%/hierarchical-grid/typescript)
 -   [igTreeGrid TypeScript](%%SamplesUrl%%/tree-grid/typescript)
 -   [igPivotGrid TypeScript](%%SamplesUrl%%/pivot-grid/typescript)
--   [igDataChart TypeScript](%%SamplesUrl%%/data-chart/typescript)
--   [Editors TypeScript](%%SamplesUrl%%/editors/typescript)

@@ -47,8 +47,6 @@ This topic contains the following sections:
 -   [**CSS Classes Reference**](#css-reference)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
-
 
 
 ## <a id="overview"></a> Vertical column rendering Overview
@@ -71,6 +69,11 @@ The rows render as key/value pair lists, have the alternating row/record styles 
 
 You can control the width of the headers and values columns with the `propertiesColumnWidth` and `valuesColumnWidth` properties.
 
+The sample below demonstrates the `igGrid`’s Responsive Web Design feature in vertical mode. Responsive vertical rendering mode renders the grid data in two columns. The left column holds the columns captions and the right column holds the data.
+
+<div class="embed-sample">
+   [Responsive Vertical Rendering](%%SamplesEmbedUrl%%/grid/responsive-vertical-rendering)
+</div>
 
 ### <a id="summary"></a> Configuring vertical column rendering summary
 
@@ -332,20 +335,3 @@ The following topics provide additional information related to this topic.
 - [Creating Custom Responsive Web Design (RWD) Profiles (igGrid)](igGrid-Responsive-Web-Design-Mode-Creating-Custom-Profile.html): This topic explains, with code examples, how to create custom Responsive Web Design (RWD) mode profiles for the `igGrid` control.
 
 - [Configuring Bootstrap Support (igGrid, RWD Mode)](igGrid-Responsive-Web-Design-Mode-Configuring-Bootstrap-Support.html): This topic explains how to configure Responsive Web Design (RWD) mode for the `igGrid` control using Twitter Bootstrap’s RWD classes.
-
-
-### <a id="samples"></a> Samples
-
-The following samples provide additional information related to this topic.
-
-- [Responsive Vertical Rendering](%%SamplesUrl%%/grid/responsive-vertical-rendering): This sample demonstrates the `igGrid`’s Responsive Web Design feature in vertical mode. Responsive vertical rendering mode renders the grid data in two columns. The left column holds the columns captions and the right column holds the data.
-
-
-
-
-
- 
-
- 
-
-

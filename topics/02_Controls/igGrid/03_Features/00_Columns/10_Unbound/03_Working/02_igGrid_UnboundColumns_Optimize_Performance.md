@@ -43,7 +43,6 @@ This topic contains the following sections:
     -   [Merge Unbound Column on the Server Performance](#server-performance)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
 
 
 
@@ -190,12 +189,6 @@ In a large data source scenario using of paging is advisable, because merging wi
 The following topic provides additional information related to this topic.
 
 - [Known Issues and Limitations](igGrid-UnboundColumns-Known-Issues.html): This topic describes the Known Issues and Limitations of `igGrid`’s Unbound Columns feature.
-
-### <a id="samples"></a> Samples
-
-The following sample provides additional information related to this topic.
-
-- [Unbound Column](%%SamplesUrl%%/grid/unbound-column): The sample demonstrates how to add and configure unbound columns in `igGrid`.
 
 
  

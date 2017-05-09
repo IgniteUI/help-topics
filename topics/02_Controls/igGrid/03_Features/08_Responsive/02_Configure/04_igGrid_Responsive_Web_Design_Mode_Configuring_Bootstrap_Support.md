@@ -86,3 +86,11 @@ Class | Phone (up to 767 px) | Tablet (768 ÷ 979 px) | Desktop (980 px or more)
 `.hidden-phone` | Hidden | Visible | Visible
 `.hidden-tablet` | Visible | Hidden | Visible
 `.hidden-desktop` | Visible | Visible | Hidden
+
+### Sample
+
+The below sample demonstrates how to configure Responsive Web Design Mode feature to use Twitter Bootstrap Framework utility class for profile activation.
+
+<div class="embed-sample">
+   [Twitter Bootstrap](%%SamplesEmbedUrl%%/grid/twitter-bootstrap)
+</div>

@@ -1118,11 +1118,12 @@ Scatter charts are used to represent scientific measurement or other data collec
 
 Composite charts plot at least two data series that either use different axis ranges or are visualized by two different types of graphs. That means that, for example, one function spans between 1 and 100, and the other between 5 and 500, or even has a logarithmic scale, or one function is depicted by columns and the other by line.
 
-![](images/igDataChart_Types_9.png)
-
+This sample demonstrates how to configure a composite chart with two Y-axes with different range and two different data series types: column and line series.
 There are no specific settings for creating composite charts but rather you can mix different series types and use multiple axes.
-
-
+<div class="embed-sample">
+   [Composite Chart](%%SamplesEmbedUrl%%/data-chart/composite-chart)
+   ![](images/igDataChart_Types_9.png)
+</div>
 
 ##<a id="related-content"></a>Related Content
 

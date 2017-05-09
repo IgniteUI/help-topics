@@ -926,8 +926,8 @@ Issue | Description | Status
 ---|---|---
 Fixed headers always enabled (limitation) | When virtualization is enabled, there is a limitation in the form of the [fixedHeaders](%%jQueryApiUrl%%/ui.iggrid#options:fixedHeaders) option being unchangeable and always set to true. | ![](../../images/images/negative.png)
 Grid height settings limitation | The height of the igGrid must always be exactly divisible by the average row height. (The remainder of the division must be 0.) | ![](../../images/images/negative.png)
-Columns visible width settings limitation | The columns visible width must be equal to the igGrid’s width (for horizontal virtualization) | ![](../../images/images/negative.png)
-Keyboard navigation not supported for horizontal virtualization (limitation) | Keyboard navigation is not supported for horizontal virtualization. | ![](../../images/images/negative.png)
+Columns visible width settings limitation | The columns visible width must be equal to the igGrid’s width (for column virtualization) | ![](../../images/images/negative.png)
+Keyboard navigation not supported for column virtualization (limitation) | Keyboard navigation is not supported for column virtualization. | ![](../../images/images/negative.png)
 Limitation to applying cell classes | Applying a specific cell class to every cell that is in a sorted column is not supported, i.e. [applySortedColumnCss](%%jQueryApiUrl%%/ui.iggridsorting#options:applySortedColumnCss) is automatically set to false. | ![](../../images/images/negative.png)
 When virtualization is enabled the autofitLastColumn is not effective | When virtualization is enabled the [autofitLastColumn](%%jQueryApiUrl%%/ui.iggrid#options:autofitLastColumn) has no effect, which will result in columns expanding to take up the whole grid width when the sum of the columns widths is less than the width of the grid (it will act as autofitLastColumn = true). | ![](../../images/images/negative.png)
 Column virtualization will not work when grid width is defined in percentage units | When grid width is defined in percentage units and column virtualization is enabled ([columnVirtualization](%%jQueryApiUrl%%/ui.iggrid#options:columnVirtualization) = true) horizontal scrollbar will not render. | ![](../../images/images/negative.png)
@@ -1149,7 +1149,7 @@ Go up to [Known Issues and Limitations Summary](#summary)
 Issue | Description | Status
 ---|---|---
 Resizing not working with some jQuery versions | `igGrid` Resizing does not support jQuery versions 1.8.0 ÷ 1.8.5. | ![](../../images/images/positive.png)
-Resizing not working with fixed virtualization |The column resizing feature does not work when fixed virtualization is enabled.| ![](../../images/images/positive.png)
+Resizing not working with fixed and column virtualization |The column resizing feature does not work when fixed and/or column virtualization are enabled.| ![](../images/images/positive.png)
 Columns not resizing correctly, when column widths are not set (in Firefox) | Due to a bug in Firefox, the `igGrid` columns cannot be resized correctly when the column widths are not set. | ![](../../images/images/negative.png)
 Columns not resizing correctly when column widths are set relatively (in Firefox) | Due to a bug in Firefox, the `igGrid` columns cannot be resized correctly when the column widths are set relatively (in percentages). | ![](../../images/images/positive.png)
 Resizing a column occurs at an accelerated speed when the grid is scrolled to the far right.|The resizing speed is accelerated when the grid is scrolled to the far right and a column is resized by dragging from its right edge to the left. This specific behavior is caused by the browser’s layout engine.|![](../../images/images/negative.png)
@@ -1219,6 +1219,7 @@ Adding and updating a virtual grid doesn’t work if it is grouped | When using 
 `rowEditDialogMaxHeight` property renamed to [rowEditDialogContentHeight](%%jQueryApiUrl%%/ui.iggridupdating#options:rowEditDialogContentHeight) | This property is related to the Row Edit Template ([`editMode`](%%jQueryApiUrl%%/ui.iggridupdating#options:editMode)=*“rowedittemplate”*). It is used to set the height of the row edit dialog content. This is a breaking change from the previous versions’ functionality. | ![](../../images/images/negative.png)
 Column template including `<td>` tag attributes is ignored when updating rows | When updating rows, the `igGrid` correctly changes only the content of the `<td>` tags so that styles and/or attributes applied internally to the `<td>` elements are not lost. | ![](../../images/images/positive.png)
 Updating rows/cells when the Updating and Continuous Virtualization features are enabled while [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) is disabled is not supported. | Editing rows/cells with Updating when the [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) grid option is set to false and Continuous Virtualization is enable will throw exception. | ![](../../images/images/positive.png)
+Keyboard navigation not supported for column virtualization | Keyboard navigation is not supported for column virtualization. | ![](../../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 

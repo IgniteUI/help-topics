@@ -109,6 +109,14 @@ A catalog of the Infragistics Motion Network supported configurable chart animat
 	</tbody>
 </table>
 
+###<a id="motion-framework-sample"></a> Sample
+
+The following sample demonstrates how to use the Motion Framework™ with igDataChart to build highly engaging visualizations and provide smooth playback of changes in data over time.
+
+<div class="embed-sample">
+   [Motion Framework](%%SamplesEmbedUrl%%/data-chart/motion-framework)
+</div>
+
 
 ##Related Content
 
@@ -125,16 +133,6 @@ This topic demonstrates, with code examples, how to add a simple animated column
 
 This topic demonstrates, with code examples, how to add a simple animated column chart in MVC using AJAX POST request for adding data dynamically.
 
-
-
-### Samples
-
-The following samples provide additional information related to this topic.
-
-
--	[Motion Framework](%%SamplesUrl%%/data-chart/motion-framework)
-
-This sample demonstrates how to use the Motion Framework™ with the jQuery chart to build highly engaging visualizations and provide smooth playback of changes in data over time.
 
 
 

@@ -26,7 +26,6 @@ This topic contains the following sections:
 -   [Events Reference Chart](#events-reference)
 -   [Related Content](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
 
 ## <a id="events-overview"></a> Events Overview
 
@@ -62,7 +61,7 @@ $("#grid1").igGrid({
     features: [{
         name: 'Hiding',
         columnHiding: function (e, args) {
-            // Handle event  
+            // Handle event
         }
     }]
 });
@@ -73,12 +72,12 @@ When attaching a handler in MVC, you need to use the jQuery User Interface (UI) 
 **In Javascript:**
 
 ```js
-$("#grid1").live("iggridhidingcolumnhiding ", function (e, args) {
-     // Handle event  
+$("#grid1").on("iggridhidingcolumnhiding ", function (e, args) {
+     // Handle event
 });
 ```
 
-> **Note**: The jQuery’s `live` function is used in case some DOM elements are added after attaching to the handler.
+> **Note**: The jQuery’s `on` function is used in case some DOM elements are added after attaching to the handler.
 
 ## <a id="events-reference"></a> Events Reference Chart
 
@@ -108,10 +107,3 @@ The following topics provide additional information related to this topic.
 
 -   [Enable Column Hiding](igGrid-Column-Hiding-Enabling-Column-Hiding.html)
 -   [Configure igGrid Column Hiding](igGrid-Configure-Column-Hiding.html)
-
-### <a id="samples"></a> Samples
-
-The following samples provide additional information related to this topic.
-
--   [API and Events](%%SamplesUrl%%/grid/grid-api-events)
-

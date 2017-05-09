@@ -40,7 +40,6 @@ This topic contains the following sections:
     -   [Code](#mvc-code)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
 
 
 
@@ -200,13 +199,6 @@ The following topics provide additional information related to this topic.
 - [Populating Unbound Columns Remotely (igGrid)](igGrid-UnboundColumns-Populating-with-Data-Remotely.html): This topic demonstrates, with code samples how to set unbound column values on the server.
 
 - [Optimizing the Grid Performance When Unbound Columns Are Used](igGrid-UnboundColumns-Optimize-Performance.html): This topic discusses client-based vs. server-based merging of unbound columns and the optimization considerations for each. It also demonstrates how the developer can programmatically control where merging can take place.
-
-
-### <a id="samples"></a> Samples
-
-The following sample provides additional information related to this topic.
-
-- [Unbound Column](%%SamplesUrl%%/grid/unbound-column): The sample demonstrates how to add and configure unbound columns in `igGrid`.
 
 
 
