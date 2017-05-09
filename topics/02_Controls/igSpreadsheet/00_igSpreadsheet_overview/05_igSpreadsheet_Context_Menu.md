@@ -13,13 +13,13 @@
 ### Purpose
 This topic provides an overview of the visual elements of the control.
 
-### Requred background
+### Required background
 To understand this topic you need to be familiar with the concept and topics related to the [Infragistics JavaScript Excel Library](javascript-excel-library.html).
 
 ## Context menu summary
-The igSpreadsheet control provides a context menu which is opened by right clicking on the control elements. The context menu allows the user to perform different operations depending on the elements on which the right click were performed.
+The `igSpreadsheet` control provides a context menu, which is opened by right clicking on the control elements. The context menu allows the user to perform different operations depending on the elements on which the right click is performed.
 
-The following igSpreadsheet elements have their specific context menus:
+The following `igSpreadsheet` elements have their specific context menus:
 
 - Worksheet column(s) or rows(s)
 
@@ -42,9 +42,9 @@ The worksheet column(s) or row(s) context menu allows the user to:
 
 The following screenshot shows the worksheet column(s) or row(s) context menu:
 
-!!!IMAGE WHEN THE STYLING IS READY
+![](images/!!!IMAGE WHEN THE STYLING IS READY.png)
 
-## Contex Menu on Worksheet cells
+## Context Menu on Worksheet cells
 
 The worksheet cells context menu allows the user to:
 
@@ -53,7 +53,7 @@ The worksheet cells context menu allows the user to:
 - Insert new empty cells
 
 - Delete cells or delete cells' content only
-!!!IMAGE WHEN THE STYLING IS READY
+![](images/!!!IMAGE WHEN THE STYLING IS READY.png)
 
 ## Context Menu for worksheets
 
@@ -70,10 +70,10 @@ The context menu of the worksheets tabs area allows the user to:
 - Unselect all worksheets ("Ungroup Sheets" menu item)
 
 The following screenshot shows the worksheets tab bar area context menu when one worksheet is selected:
-!!!!IMAGE
+![](images/!!!IMAGE WHEN THE STYLING IS READY.png)
 
 The following screenshot shows the worksheets tab bar area context menu when several worksheets are selected:
-!!!IMAGE
+![](images/!!!IMAGE WHEN THE STYLING IS READY.png)
 
 ## Related Links
 
