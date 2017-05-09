@@ -14,7 +14,7 @@
 ### Purpose
 This topic provides an overview of the visual elements of the control.
 
-### Requred background
+### Required background
 To understand this topic you need to be familiar with the concept and topics related to the [Infragistics JavaScript Excel Library](javascript-excel-library.html).
 
 ## Visual Elements of igSpreadsheet control
@@ -29,7 +29,7 @@ The following screenshot depicts the visual elements of the igSpreadsheet contro
 5. Column headers
 6. Row headers
 7. Speadsheet data cells
-8. Buttons for scolling the worksheet tabs listed
+8. Buttons for scrolling the worksheet tabs listed
 9. Button for activating the previous worksheet
 10. List of worksheets available in the opened workbook (the current worksheet is displayed with different color)
 11. Button for activating the next worksheet
@@ -42,7 +42,7 @@ The following screenshot depicts the visual elements of the igSpreadsheet contro
 
 ## Visual elements and related properties
 
-The following table maps the visual elements of the igSpreadsheet control and the properties that configure them.
+The following table maps the visual elements of the `igSpreadsheet` control and the properties that configure them.
 
 Visual Element|Property
 ---|---
@@ -51,3 +51,6 @@ Column and row headers| [areHeadersVisible](%%jQueryApiUrl%%/ui.igspreadsheet#op
 Spreadsheet data cells| [areGridlinesVisible](%%jQueryApiUrl%%/ui.igspreadsheet#options:areGridlinesVisible)
 
 ## Related Links
+
+-	[igSpreadsheet Overview](igspreadsheet-overview.html)
+-   [Configuring igSpreadsheet](igspreadsheet-configuring.html)

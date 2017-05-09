@@ -13,13 +13,13 @@
 ## Topic Overview 
 ###Purpose
 
-The `igSpreadsheet`™ is a jQuery widget that visualize excel documents in all modern browsers. The purpose of this topic is to provide a step-by-steb guidence on how to add this control to your project.
+The `igSpreadsheet`™ is a jQuery widget that visualize excel documents in all modern browsers. The purpose of this topic is to provide a step-by-step guidance on how to add this control to your project.
 
 ###Required background
 
 To understand this topic you need to be familiar with the concept and topics related to the [Infragistics JavaScript Excel Library](javascript-excel-library.html).
 
-Before we get started we need to make sure we have loaded all of the needed resources. We first need to load the needed jQuery resources and then we need to add the required Ignite UI resources. There are two ways to add the Ignite UI resources to your project. You can either use the `igLoader` or you can load the required modules separately. For the purpose of our guidance we will use the `igLoader`.
+Before we get started we need to make sure we have loaded all of the needed resources. We first need to load the jQuery resources and then we need to add the required Ignite UI resources. There are two ways to add the Ignite UI resources to your project. You can either use the `igLoader` or you can load the required modules separately. For the purpose of our guidance we will use the `igLoader`.
 
 ```js
 $.ig.loader({
@@ -28,15 +28,15 @@ $.ig.loader({
     resources: "igSpreadsheet"
 });
 ```
-In case you are going to create a new excel file and not load your own one, you can load only igSpreadsheet but if you need to load an extrenal file, please note that you will have to load additionally `igExcel.LoadSaveXlsx` resource.
-In the folloing topic you can find more about the igLoader and how to work with it. 
+In case you are going to create a new excel file instead of loading your own file, you can load only `igSpreadsheet` but if you need to load an external file, please note that you will have to load additionally `igExcel.LoadSaveXlsx` resource.
+In the following topic you can find more about the `igLoader` and how to work with it. 
 
 [Adding Required Resources Automatically with the Infragistics Loader](using-infragistics-loader.html)
 
 ## Creating a basic igSpreadsheet implementation
 
 
-As we have our resources loaded, now we can step up to the initialization of the control. The following code snippet demonstrates how to create a basic widget that will load an empty spreadsheet. 
+As we have our resources loaded, now we can step up to the initialization of the control. The following code demonstrates how to create a basic widget that will load an empty spreadsheet. 
 
 ```js
 $("#spreadsheet").igSpreadsheet({
@@ -45,7 +45,7 @@ $("#spreadsheet").igSpreadsheet({
 });
 ```
 
-Note that when you initialize an empty igSpreadsheet you can use all avaliable options in you intialization code, but if you need to load an external file that will be opened and visualized through the igSpreadsheet, then the initial settings such as [`areGridlinesVisible`](%%jQueryApiUrl%%/ui.igspreadsheet#options:areGridlinesVisible) , [`zoomLevel`](%%jQueryApiUrl%%/ui.igspreadsheet#options:zoomLevel) and ect. will not be respected. The visual appearance of the loaded file will be the same as the visual appearance of the file itself. That is because the loading of the external file comes after the initial rendering of the control. So if you want to apply any of the options to your external file you need to call them after the  file is loaded (At runtime).
+Note that when you initialize an empty `igSpreadsheet` you can use all the available options in you initialization code, but if you need to load an external file that will be opened and visualized through the `igSpreadsheet`, then the initial settings such as [`areGridlinesVisible`](%%jQueryApiUrl%%/ui.igspreadsheet#options:areGridlinesVisible) , [`zoomLevel`](%%jQueryApiUrl%%/ui.igspreadsheet#options:zoomLevel) and etc. will not be respected. The visual appearance of the loaded file will be the same as the visual appearance of the file itself. That is because the loading of the external file comes after the initial rendering of the control. So if you want to apply any of the options to your external file you need to call them after the  file is loaded (at runtime).
 
 ```js
 $("#spreadsheet").igSpreadsheet({
