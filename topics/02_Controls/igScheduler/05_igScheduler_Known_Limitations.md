@@ -28,19 +28,17 @@ Below are listed all current limitations for the initial version of the `igSched
 
 Issue | Description | Status
 ---|---|---
-[Reoccurring events](#NoReccuringEvents) | No reccuring events |![](../../images/images/negative.png)
-[Time-zone offsetting](#NoTimeZoneOffsetting) | No time-zone offset settings |![](../../images/images/negative.png)
-[Custom color scheme](#NoCustomColorScheme) | No custom color scheme |![](../../images/images/negative.png)
-[Day and week views](#NoDayAndWeekViews) | No day and week views |![](../../images/images/negative.png)
-[Templating](#NoTemplating) | No templating |![](../../images/images/negative.png)
+[Reoccurring events](#NoReccuringEvents) | Reoccurring appointments are currently not supported |![](../../images/images/negative.png)
+[Time-zone offsetting](#NoTimeZoneOffsetting) | Time-zone offset settings details|![](../../images/images/negative.png)
+[Custom color scheme](#NoCustomColorScheme) | Pre-defined custom color scheme is used |![](../../images/images/negative.png)
+[Day and week views](#NoDayAndWeekViews) | Day and Week views are missing for this version |![](../../images/images/negative.png)
+[Templating](#NoTemplating) | Templating and changing of appointment appearance |![](../../images/images/negative.png)
 [ARIA support for appointments in calendar (Canvas)](#ARIASupport) | No ARIA support for appointments in calendar (Canvas) |![](../../images/images/negative.png)
-[First day of the week setting](#FirstDayOfWeek) | No first day of the week setting |![](../../images/images/negative.png)
+[First day of the week setting](#FirstDayOfWeek) | First day of the week settings are set to `Sunday` by design |![](../../images/images/negative.png)
 [Swipe-gestures support](#SwipeGesture) | No swipe-gestures support |![](../../images/images/negative.png)
 [Tab navigation to appointment popover](#NavigationToAppointmentPopover) | No tab navigation to appointment popover |![](../../images/images/negative.png)
-[Min width support – 320 px](#MinWidthSupport) | Min width support – 320 px |![](../../images/images/negative.png)
+[Min width support – 320 px](#MinWidthSupport) | Minimum width resolution support on mobile devices is 320 px |![](../../images/images/negative.png)
 [MVC wrappers ](#MVCWrappers) | No MVC wrappers  |![](../../images/images/negative.png)
-
-MVC wrappers
 
 
 ## Known Issues and Limitations Details
@@ -57,6 +55,8 @@ Time in the `igScheduler` is always shown according to the current browser offse
 ### <a id="NoCustomColorScheme"></a>No custom color scheme
 
 Pre-defined color scheme with twelve colors is provided by the scheduler, which cannot be changed by the end user.
+
+![](images/preDefinedColors.png)
 
 ### <a id="NoDayAndWeekViews"></a>No day and week views
 
@@ -75,7 +75,8 @@ $("#scheduler").igScheduler({
 
 Currently it is not possible to customize the appearance of the scheduler events by using templates.
 
-### <a id="ARIASupport"></a>No ARIA support for appointments in calendar (Canvas)
+### <a id="ARIASupport"></a>igScheduler ARIA support
+Scheduler appointments are visualized using canvas which could not be processed by screen readers. Consider listing selected appointments separately, in igGrid for instance, for accessibility purposes.
 
 The list below provides links to more details related to how WAI-ARIA support has been implemented in Widgets that are part of the scheduler.
 
@@ -101,7 +102,7 @@ There is accesabillity limitation with `tab navigation` and `selection` of appoi
 
 `320 pixels` is the minimum resolution under which `igScheduler` will be fully visible with properly aligned html elements. This applies for mobile devices.
 
-For the version two is planned to add a message that will be shown when minimum resolution is reached.
+For next releases is planned to add a message that will be shown when minimum resolution is reached.
 
 ### <a id="MVCWrappers"></a>MVC Wrappers
 
