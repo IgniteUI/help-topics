@@ -81,5 +81,4 @@ Enter/Exit **addToSelection** mode | Press <kbd>Shift</kbd> + <kbd>F8</kbd> | Th
 -   [igSpreadsheet Overview](igSpreadsheet-Overview.html)
 -   [igSpreadsheet Overview](igSpreadsheet-Activation-and-Navigation-Interaction.html)
 -   [igSpreadsheet Feature Overview](igSpreadsheet-Feature-Overview.html)
-
-
+-   [igSpreadsheet API](%%jQueryApiUrl%%/ui.igSpreadsheet)
