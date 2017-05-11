@@ -85,8 +85,4 @@ Have in mind that all those interactions are not configurable.
 
 -   [igSpreadsheet Overview](igSpreadsheet-Overview.html)
 -   [Configuring igSpreadsheet](igspreadsheet-configuring.html)
- 
-
- 
-
-
+-   [igSpreadsheet API](%%jQueryApiUrl%%/ui.igSpreadsheet)

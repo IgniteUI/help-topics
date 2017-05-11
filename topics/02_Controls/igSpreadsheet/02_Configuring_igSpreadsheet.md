@@ -125,3 +125,4 @@ The following table explains briefly the configurable aspects of the worksheets 
 
 ## Related Links
 -   [igSpreadsheet Overview](igSpreadsheet-Overview.html)
+-   [igSpreadsheet API](%%jQueryApiUrl%%/ui.igSpreadsheet)
