@@ -65,7 +65,4 @@ The following table summarizes the main features of the `igSpreadsheet` control.
 -   [igSpreadsheet Overview](igSpreadsheet-Overview.html)
 -   [igSpreadsheet Selection](igspreadsheet-selection.html)
 -   [igSpreadsheet Context Menu](igspreadsheet-context-menu.html)
-
- 
-
-
+-   [igSpreadsheet API](%%jQueryApiUrl%%/ui.igSpreadsheet)

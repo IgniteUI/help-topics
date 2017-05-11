@@ -80,3 +80,4 @@ The following screenshot shows the worksheets tab bar area context menu when sev
  -   [igSpreadsheet Overview](igSpreadsheet-Overview.html)
  -   [igSpreadsheet Activation and Navigation Interactions](igSpreadsheet-Activation-and-Navigation-Interactions.html)
  -   [igSpreadsheet Selection](igSpreadsheet-Selection.html)
+ -   [igSpreadsheet API](%%jQueryApiUrl%%/ui.igSpreadsheet)

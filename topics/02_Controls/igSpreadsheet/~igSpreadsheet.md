@@ -22,3 +22,4 @@ This topic provides you a quick access to all of the available help topics regar
 -   [Configuring igSpreadsheet](configuring-igspreadsheet.html)
 -   [igSpreadsheet Accessibility Compliance](igspreadsheet-accessibility-compliance.html)
 -   [igSpreadsheet Known Issues](igspreadsheet-known-issues.html)
+-   [igSpreadsheet API](%%jQueryApiUrl%%/ui.igSpreadsheet)

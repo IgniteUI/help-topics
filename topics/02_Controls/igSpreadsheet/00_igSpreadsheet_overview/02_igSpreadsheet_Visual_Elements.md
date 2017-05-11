@@ -54,3 +54,4 @@ Spreadsheet data cells| [areGridlinesVisible](%%jQueryApiUrl%%/ui.igspreadsheet#
 
 -	[igSpreadsheet Overview](igspreadsheet-overview.html)
 -   [Configuring igSpreadsheet](igspreadsheet-configuring.html)
+-   [igSpreadsheet API](%%jQueryApiUrl%%/ui.igSpreadsheet)
