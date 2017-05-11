@@ -32,7 +32,7 @@ Issue | Description | Status
 [Time-zone offsetting](#NoTimeZoneOffsetting) | Time-zone offset settings details|![](../../images/images/negative.png)
 [Custom color scheme](#NoCustomColorScheme) | Pre-defined custom color scheme is used |![](../../images/images/negative.png)
 [Day and week views](#NoDayAndWeekViews) | Day and Week views are missing for this version |![](../../images/images/negative.png)
-[Templating](#NoTemplating) | Templating and changing of appointment appearance |![](../../images/images/negative.png)
+[Templating](#NoTemplating) | Templating and changing of appointment appearance is not supported |![](../../images/images/negative.png)
 [ARIA support for appointments in calendar (Canvas)](#ARIASupport) | No ARIA support for appointments in calendar (Canvas) |![](../../images/images/negative.png)
 [First day of the week setting](#FirstDayOfWeek) | First day of the week settings are set to `Sunday` by design |![](../../images/images/negative.png)
 [Swipe-gestures support](#SwipeGesture) | No swipe-gestures support |![](../../images/images/negative.png)
@@ -102,7 +102,7 @@ There is accesabillity limitation with `tab navigation` and `selection` of appoi
 
 `320 pixels` is the minimum resolution under which `igScheduler` will be fully visible with properly aligned html elements. This applies for mobile devices.
 
-For next releases is planned to add a message that will be shown when minimum resolution is reached.
+For next releases it is planned to add a message that will be shown when minimum resolution is reached.
 
 ### <a id="MVCWrappers"></a>MVC Wrappers
 
