@@ -23,7 +23,7 @@ The `igSpreadsheet` control supports three selection modes: normal, extendSelect
 
 ### normal
 
-The default value for the `selectionMode` option is normal. When the selection mode is set to normal the selection is done by dragging the mouse to select a cell or range of cells. In this mode every new selection replaces the old one.Similarly when you use the keyboard navigation to select a cell or a range of cells, a new selection is created. If you want instead of replacing the selection to add a new selection to the existing one, you need to hold the <kbd>Ctrl</kbd> button and select the new range with your mouse. If you need to alter the selected range containing the active cell, you need to hold the <kbd>Shift</kbd> button and click with the mouse or navigate via keyboard with arrow keys.
+The default value for the `selectionMode` option is normal. When the selection mode is set to normal the selection is done by dragging the mouse to select a cell or range of cells. In this mode every new selection replaces the old one. Similarly when you use the keyboard navigation to select a cell or a range of cells, a new selection is created. If you want instead of replacing the selection to add a new selection to the existing one, you need to hold the <kbd>Ctrl</kbd> button and select the new range with your mouse. If you need to alter the selected range containing the active cell, you need to hold the <kbd>Shift</kbd> button and click with the mouse or navigate via keyboard with arrow keys.
 
 ![](images/igSpreadsheet_Normal.png)
 
@@ -49,7 +49,7 @@ $("#spreadsheet").igSpreadsheet({
 
 ### addToSelection
 
-The last available value for the `selectionMode` option is addToSelection. This mode allows new cells ranges to be added without the need of holding the <kbd>Ctrl</kbd> button. The user may click on cell(s) to add it (them) to the current selection.
+This mode allows new cells ranges to be added without the need of holding the <kbd>Ctrl</kbd> button. The user may click on cell(s) to add it (them) to the current selection.
 
 ![](images/igSpreadsheet_addToSelection.png)
 
@@ -65,7 +65,7 @@ $("#spreadsheet").igSpreadsheet({
 
 ## User Interaction and Usability
 
-The following table summarizes the user interaction capabilities of the `igSpreasheet` control.
+The following table summarizes the user interaction capabilities of the `igSpreadsheet` control.
 
 The user can...| Using...|Details
 ---|---|---
@@ -79,6 +79,6 @@ Enter/Exit **addToSelection** mode | Press <kbd>Shift</kbd> + <kbd>F8</kbd> | Th
 
 ## Related Links
 -   [igSpreadsheet Overview](igSpreadsheet-Overview.html)
--   [igSpreadsheet Overview](igSpreadsheet-Activation-and-Navigation-Interaction.html)
+-   [igSpreadsheet Activation And Navigation Interaction](igspreadsheet-activation-and-navigation-interactions.html)
 -   [igSpreadsheet Feature Overview](igSpreadsheet-Feature-Overview.html)
--   [igSpreadsheet API](%%jQueryApiUrl%%/ui.igSpreadsheet)
+-   [igSpreadsheet API](%%jQueryApiUrl%%/ui.igspreadsheet)
