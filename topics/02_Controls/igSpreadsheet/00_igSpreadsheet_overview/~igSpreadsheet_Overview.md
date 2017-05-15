@@ -16,7 +16,7 @@ The topics in this group provide you with an overview of the features, visual el
 
 ## Topics
 
-| Topics																		 									  | Purpose	     									|
+| Topic																		 									  | Purpose	     									|
 | ------------- 																 									  |:-------------:									|
 | [Features Overview (igSpreadsheet)](igspreadsheet-feature-overview.html)		 									  | This topic explains the features supported by the control from developer perspective.    |
 | [Visual Elements Overview (igSpreadsheet)](igspreadsheet-visual-elements.html) 									  | This topic provides an overview of the visual elements of the control.    	  | 

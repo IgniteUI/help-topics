@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# igSpreadsheet
+# Adding igSpreadsheet
 
 ## Topic Overview 
 ###Purpose
