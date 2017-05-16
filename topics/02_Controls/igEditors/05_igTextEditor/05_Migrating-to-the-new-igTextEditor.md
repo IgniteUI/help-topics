@@ -66,7 +66,7 @@ Option| Description
 [dropDownAttachedToBody](%%jQueryApiUrl%%/ui.igtexteditor#options:dropDownAttachedToBody)|<a name='dropDownAttachedToBody'></a>Gets sets location of drop-down list.
 [dropDownAnimationDuration](%%jQueryApiUrl%%/ui.igtexteditor#options:dropDownAnimationDuration)|<a name='dropDownAnimationDuration'></a>Gets sets show/hide drop-down list animation duration in milliseconds.
 [visibleItemsCount](%%jQueryApiUrl%%/ui.igtexteditor#options:visibleItemsCount)|<a name='visibleItemsCount'></a>Use to set how many items should be shown at once: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], visibleItemsCount: 2 })`.
-[isLimitedToListValues](%%jQueryApiUrl%%/ui.igtexteditor#options:isLimitedToListValues)|<a name='isLimitedToListValues'></a>Use to set the ability to allow values only set into the list items. This validation is done only when the editor is blured, or enter key is pressed: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], isLimitedToListValues: true })`.
+[isLimitedToListValues](%%jQueryApiUrl%%/ui.igtexteditor#options:isLimitedToListValues)|<a name='isLimitedToListValues'></a>Use to set the ability to allow values only set into the list items. Matching is case-insensitive: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], isLimitedToListValues: true })`.
 [placeHolder](%%jQueryApiUrl%%/ui.igtexteditor#options:placeHolder)|<a name='placeHolder'></a>Gets sets text which appears in editor when editor has no focus and "value" in editor is null or empty string.
 [revertIfNotValid](%%jQueryApiUrl%%/ui.igtexteditor#options:revertIfNotValid)|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key. If set to false clear is called: `$('#textEditor').igTextEditor({ listItems: ["A", "B", "C", "D"], isLimitedToListValues: true, revertIfNotValid: false })`.
 [preventSubmitOnEnter](%%jQueryApiUrl%%/ui.igtexteditor#options:preventSubmitOnEnter)|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#textEditor').igTextEditor({ preventSubmitOnEnter: true })`.
@@ -97,7 +97,7 @@ removeListItem|Used to remove item from list.|This method is removed. You should
 removeListItemAt|Used to remove item from list at index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 select|Used to select text in editor. Valid parameters: `sel0`, `sel1`, `val`|`sel0` is renamed to `start` and `sel1` is renamed to `end` to prevent exchanging the two parameters. 
 setFocus|Used to set focus to editor with delay.  If parameter was -1, then focus was set without delay.|It now supports only positive values for the delay and 0 is default that signifies that it is immediately given the focus.
-spin|Used to increment (positive delta) or decrement (negative delta) value in editor according to the parameter.|This method is replaced by two new methods: `spinUp` and `spinDown`. If editor has listItems, then those methods increment or decrement active index in the list, without setting the vew value.
+spin|Used to increment (positive delta) or decrement (negative delta) value in editor according to the parameter.|This method is replaced by two new methods: `spinUp` and `spinDown`.
 text|Used to get or set text in editor.|This is replaced by a getter method `displayValue` that takes no parameters and returns a string with all the characters shown in the input.
 
 <a name='new_methods'></a>
@@ -117,8 +117,8 @@ Method|Description
 [getSelectionStart](%%jQueryApiUrl%%/ui.igtexteditor#methods:getSelectionStart)|<a name='getSelectionStart'></a>Gets start index of the selected text in editor.
 [getSelectionEnd](%%jQueryApiUrl%%/ui.igtexteditor#methods:getSelectionEnd)|<a name='getSelectionEnd'></a>Gets end index of the selected text in editor.
 [insert](%%jQueryApiUrl%%/ui.igtexteditor#methods:insert)|<a name='insert'></a>Paste text at location of caret.
-[spinUp](%%jQueryApiUrl%%/ui.igtexteditor#methods:spinUp)|<a name='spinUp'></a>If editor has listItems, then this method increments the active index in the list, without setting the vew value.
-[spinDown](%%jQueryApiUrl%%/ui.igtexteditor#methods:spinDown)|<a name='spinDown'></a>If editor has listItems, then this method decrements the active index in the list, without setting the vew value.
+[spinUp](%%jQueryApiUrl%%/ui.igtexteditor#methods:spinUp)|<a name='spinUp'></a>Selects the previous item from the drop-down list.
+[spinDown](%%jQueryApiUrl%%/ui.igtexteditor#methods:spinDown)|<a name='spinDown'></a>Selects the next item from the drop-down list.
 [spinUpButton](%%jQueryApiUrl%%/ui.igtexteditor#methods:spinUpButton)|<a name='spinUpButton'></a>Returns a reference to the spin up button of the editor.
 [spinDownButton](%%jQueryApiUrl%%/ui.igtexteditor#methods:spinDownButton)|<a name='spinDownButton'></a>Returns a reference to the spin down button of the editor.
 
