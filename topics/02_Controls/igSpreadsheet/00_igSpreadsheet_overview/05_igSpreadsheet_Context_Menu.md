@@ -40,9 +40,10 @@ The worksheet column(s) or row(s) context menu allows the user to:
 
 - Hide/unhide and auto-size column(s) and row(s)
 
-The following screenshot shows the worksheet column(s) or row(s) context menu:
+The following screenshots show the worksheet column(s) and row(s) context menu:
 
-![](images/!!!IMAGE WHEN THE STYLING IS READY.png)
+![](images/igSpreadsheet_context_menu_rows.png)
+![](images/igSpreadsheet_context_menu_columns.png)
 
 ## Context Menu on Worksheet cells
 
@@ -53,7 +54,10 @@ The worksheet cells context menu allows the user to:
 - Insert new empty cells
 
 - Delete cells or delete cells' content only
-![](images/!!!IMAGE WHEN THE STYLING IS READY.png)
+
+![](images/igSpreadsheet_context_menu.png)
+![](images/igSpreadsheet_context_menu_insert.png)
+![](images/igSpreadsheet_context_menu_delete.png)
 
 ## Context Menu for worksheets
 
@@ -70,10 +74,10 @@ The context menu of the worksheets tabs area allows the user to:
 - Unselect all worksheets ("Ungroup Sheets" menu item)
 
 The following screenshot shows the worksheets tab bar area context menu when one worksheet is selected:
-![](images/!!!IMAGE WHEN THE STYLING IS READY.png)
+![](images/igSpreadsheet_context_menu_sheet_tabs.png)
 
 The following screenshot shows the worksheets tab bar area context menu when several worksheets are selected:
-![](images/!!!IMAGE WHEN THE STYLING IS READY.png)
+![](images/igSpreadsheet_context_menu_sheet_multiple.png)
 
 ## Related Links
 
