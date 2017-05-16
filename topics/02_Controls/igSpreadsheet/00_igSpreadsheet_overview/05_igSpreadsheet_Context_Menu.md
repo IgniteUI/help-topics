@@ -40,7 +40,7 @@ The worksheet column(s) or row(s) context menu allows the user to:
 
 - Hide/unhide and auto-size column(s) and row(s)
 
-The following screenshots shows the worksheet column(s) and row(s) context menu:
+The following screenshots show the worksheet column(s) and row(s) context menu:
 
 ![](images/igSpreadsheet_context_menu_rows.png)
 ![](images/igSpreadsheet_context_menu_columns.png)
