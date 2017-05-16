@@ -34,7 +34,7 @@ The `igSpreadsheet` control's active cell is the cell on which the user may oper
 
 The following screenshot shows the `igSpreadsheet` control with the cell at address B3 activated:
 
-![](images/igSpreadsheet_Activation.jpg)
+![](images/igSpreadsheet_activeCell.png)
 
 ## <a id="spreadsheet_panes"></a>Spreadsheet Panes
 

@@ -30,7 +30,7 @@ The `igSpreadsheet` control allows visualizing and editing of spreadsheet data, 
 
 The following screenshot shows the `igSpreadsheet` control displaying some spreadsheet data:
 
-![](images/igSpreadsheet_FeatureOverview.jpg)
+![](images/igSpreadsheet.png)
 
 ## <a id="main_features"></a>Main Features
 
