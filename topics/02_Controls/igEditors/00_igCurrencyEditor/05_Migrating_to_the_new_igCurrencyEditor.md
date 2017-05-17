@@ -67,7 +67,7 @@ Option| Description
 [dropDownAttachedToBody](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:dropDownAttachedToBody)|<a name='dropDownAttachedToBody'></a>Gets sets location of drop-down list.
 [dropDownAnimationDuration](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:dropDownAnimationDuration)|<a name='dropDownAnimationDuration'></a>Gets sets show/hide drop-down list animation duration in milliseconds.
 [visibleItemsCount](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:visibleItemsCount)|<a name='visibleItemsCount'></a>Use to set how many items should be shown at once: `$('#currencyEditor').igCurrencyEditor({ listItems: [10, 20, 30, 40], visibleItemsCount: 2 })`.
-[isLimitedToListValues](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:isLimitedToListValues)|<a name='isLimitedToListValues'></a>Use to set the ability to allow values only set into the list items. This validation is done only when the editor is blured, or enter key is pressed: `$('#currencyEditor').igCurrencyEditor({ listItems: [10, 20, 30, 40], isLimitedToListValues: true })`.
+[isLimitedToListValues](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:isLimitedToListValues)|<a name='isLimitedToListValues'></a>Use to set the ability to allow values only set into the list items. Enabling this also causes spin actions to cycle through list items instead: `$('#currencyEditor').igCurrencyEditor({ listItems: [10, 20, 30, 40], isLimitedToListValues: true })`.
 [placeHolder](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:placeHolder)|<a name='placeHolder'></a>Gets sets text which appears in editor when editor has no focus and "value" in editor is null or empty string.
 [revertIfNotValid](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:revertIfNotValid)|<a name='revertIfNotValid'></a>Use to set the editor to revert value to previous value in case of not valid value on blur, or enter key. If set to false clear is called: `$('#currencyEditor').igCurrencyEditor({ listItems: [10, 20, 30, 40], isLimitedToListValues: true, revertIfNotValid: false })`.
 [preventSubmitOnEnter](%%jQueryApiUrl%%/ui.igcurrencyeditor#options:preventSubmitOnEnter)|<a name='preventSubmitOnEnter'></a>Use to set the ability of the editor to prevent form submition on enter key pressed: `$('#currencyEditor').igCurrencyEditor({ preventSubmitOnEnter: true })`.
@@ -99,7 +99,7 @@ removeListItem|Used to remove item from list.|This method is removed. You should
 removeListItemAt|Used to remove item from list at index.|This method is removed. You should manipulate your data object and rebind the UI component to the updated data for such a scenario.
 select|Used to select text in editor. Valid parameters: `sel0`, `sel1`, `val`|`sel0` is renamed to `start` and `sel1` is renamed to `end` to prevent exchanging the two parameters. 
 setFocus|Used to set focus to editor with delay.  If parameter was -1, then focus was set without delay.|It now supports only positive values for the delay and 0 is default that signifies that it is immediately given the focus.
-spin|Used to increment (positive delta) or decrement (negative delta) value in editor according to the parameter.|This method is replaced by two new methods: `spinUp` and `spinDown`. This method works only on the value and not with the dropdown navigation. For the latter you should use [selectListIndexUp](#selectListIndexUp) or [selectListIndexDown](#selectListIndexDown) method.
+spin|Used to increment (positive delta) or decrement (negative delta) value in editor according to the parameter.|This method is replaced by two new methods: `spinUp` and `spinDown`. Those methods work both with the value or the dropdown navigation if `isLimitedToListValues` is enabled.
 text|Used to get or set text in editor.|This is replaced by a getter method `displayValue` that takes no parameters and returns a string with all the characters shown in the input.
 
 <a name='new_methods'></a>
@@ -116,12 +116,10 @@ Method|Description
 [hideDropDown](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:hideDropDown)|<a name='hideDropDown'></a>Hide the dropdown list.
 [dropDownVisible](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:dropDownVisible)|<a name='dropDownVisible'></a>Returns the visibility state of the drop down listing the items.
 [dropDownButton](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:dropDownButton)|<a name='dropDownButton'></a>Returns a reference to the dropdown button of the editor.
-[selectListIndexUp](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:selectListIndexUp)|<a name='selectListIndexUp'></a>Moves the selection index to the item that appears above the current one in the list.
-[selectListIndexDown](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:selectListIndexDown)|<a name='selectListIndexDown'></a>Moves the selection index to the item that appears above the current one in the list.
 [clearButton](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:clearButton)|<a name='clearButton'></a>Returns a reference to the clear button of the editor.
 [insert](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:insert)|<a name='insert'></a>Paste text at location of caret.
-[spinUp](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:spinUp)|<a name='spinUp'></a>Increments value in editor according to the parameter.
-[spinDown](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:spinDown)|<a name='spinDown'></a>Decrements  value in editor according to the parameter.
+[spinUp](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:spinUp)|<a name='spinUp'></a>Increments value in editor according to the parameter or selects the previous item from the drop-down list if `isLimitedToListValues` is enabled.
+[spinDown](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:spinDown)|<a name='spinDown'></a>Decrements value in editor according to the parameter selects the next item from the drop-down list if `isLimitedToListValues` is enabled.
 [spinUpButton](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:spinUpButton)|<a name='spinUpButton'></a>Returns a reference to the spin up button of the editor.
 [spinDownButton](%%jQueryApiUrl%%/ui.igcurrencyeditor#methods:spinDownButton)|<a name='spinDownButton'></a>Returns a reference to the spin down button of the editor.
 
