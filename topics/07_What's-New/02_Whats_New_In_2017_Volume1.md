@@ -30,6 +30,12 @@ Feature | Description
 ---|---
 [Date Handling](#dateHandling)| New editors' settings are needed when handling date transfers.
 
+### igDatePicker
+
+Feature | Description
+---|---
+[Date Picker Options MVC wrapper](#pickerOptionsWrapper) | When using DatePicker MVC wrapper, now additional wrapper for the date picker options is available.
+
 ## igGrid
 
 ### <a id="groupSummaries"></a> GroupBy Summaries
@@ -53,3 +59,39 @@ When the dates in the editors are transferred from the client to the server аnd
 #### Related Topics
 -   [Migrating enableUTCDate option in 17.1](Migrating-enableUTCDates-option-in-17-1.html)
 -   [Ignite UI controls in different time zones](Using-IgniteUI-controls-in-different-time-zones.html)
+
+## igDatePicker
+
+### <a id="pickerOptionsWrapper"></a> Date Picker Options MVC wrapper
+
+The DatePicker MVC wrapper is extended to allow the definition of the date picker options, using additional MVC wrapper. The new wrapper contains all the jQuery UI datepicker options that can be applied to our igDatePicker. Here is an example of how it can be configured in MVC:
+
+```
+@(Html.Infragistics()
+	.DatePicker()
+	.DropDownAnimationDuration(1000)
+	.DatePickerOptions(options => {
+		 options.DefaultDate("+8");
+		 options.MinDate("-5d");
+		 options.MaxDate("+10d");
+
+		 options.FirstDay(FirstWeekDay.Monday);
+		 options.ShowWeek(true);
+
+		 options.ShowOtherMonths(true);
+		 options.SelectOtherMonths(true);
+
+		 options.ChangeMonth(true);
+		 options.ChangeYear(true);
+		 options.AddClientEvent("onChangeMonthYear", "onChangeMonthYearHandler");
+
+		 options.ShowButtonPanel(true);
+		 options.GoToCurrent(true);
+
+		 options.ShowAnim(AnimationEffect.Show);
+
+		 options.AddClientEvent("onSelect", "onSelectHandler");
+		 options.AddClientEvent("onClose", "onCloseHandler");
+	})
+	.Render())
+```
