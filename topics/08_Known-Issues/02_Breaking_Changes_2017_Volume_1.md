@@ -18,11 +18,11 @@ The following topic summarizes the breaking changes of the 2017 Volume 1 release
 
 From version 17.1 the `infragistics.util.js` file has been split into a non-jQuery specific file and jQuery specific files. The new structure is the following:
 
--   `infragistics.util.js` - holds only utility functions that depend on jQuery framework.
+-   `infragistics.util.js` - holds only utility functions that do not depend on jQuery framework.
 -   `infragistics.util.jquery.js` - holds jQuery dependant utility functions.
 -   `infragistics.util.jquerydeferred.js` - custom CommonJS Promises/A implementation, for users that are using versions of the jQuery, prior to version 1.5, which doesn't support $.Deferred.
 
-For applications that are using the igLoader to load Ignite IU controls' dependencies, no change is required, because the loader is handling this internally. The other applications may take advantage and not include the unnecessary utility references.
+For applications that are using the igLoader to load Ignite IU controls' dependencies, no change is required, because the loader is handling this internally. The other applications that load manaully the files, may take advantage and not include the unnecessary utility references.
 
 ## igGrid
 
