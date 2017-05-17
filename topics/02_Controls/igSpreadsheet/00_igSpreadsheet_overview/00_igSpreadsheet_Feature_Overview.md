@@ -22,7 +22,7 @@ This topic contains the following sections:
 
 -   [Introduction](#introduction)
 - 	[Main Features](#main_features)
-- 	[Related Links](#main_features)
+- 	[Related Links](#related_links)
 
 ## <a id="introduction"></a>Introduction
 
@@ -30,7 +30,7 @@ The `igSpreadsheet` control allows visualizing and editing of spreadsheet data, 
 
 The following screenshot shows the `igSpreadsheet` control displaying some spreadsheet data:
 
-![](images/igSpreadsheet_FeatureOverview.jpg)
+![](images/igSpreadsheet.png)
 
 ## <a id="main_features"></a>Main Features
 
@@ -60,9 +60,9 @@ The following table summarizes the main features of the `igSpreadsheet` control.
 | Undo and Redo		| The control provides unlimited undo and redo operations. You can enable/disable the undo and redo and also use separate or shared undo managers for each `igSpreadsheet` control.		|
 | Zooming			| The control supports content zooming. The entire workbook content is scaled.<br> **Note:** The cell borders and cell gridlines are not scaled.	|
 
-## Related Links
+## <a id="#related_links"></a>## Related Links
 
 -   [igSpreadsheet Overview](igSpreadsheet-Overview.html)
 -   [igSpreadsheet Selection](igspreadsheet-selection.html)
 -   [igSpreadsheet Context Menu](igspreadsheet-context-menu.html)
--   [igSpreadsheet API](%%jQueryApiUrl%%/ui.igSpreadsheet)
+-   [igSpreadsheet API](%%jQueryApiUrl%%/ui.igspreadsheet)

@@ -32,9 +32,9 @@ This topic contains the following sections:
 
 The `igSpreadsheet` control's active cell is the cell on which the user may operate. This active cell is highlighted with an additional border and also its row and column are highlighted with different background color.
 
-The following screenshot shows the igSpreadsheet control with the cell at address B3 activated:
+The following screenshot shows the `igSpreadsheet` control with the cell at address B3 activated:
 
-![](images/igSpreadsheet_Activation.jpg)
+![](images/igSpreadsheet_activeCell.png)
 
 ## <a id="spreadsheet_panes"></a>Spreadsheet Panes
 
@@ -49,7 +49,7 @@ There can be only one active sheet pane at a time and this is the sheet pane tha
 
 ## <a id="navigation"></a>Navigation
 
-The `igSpreadsheet` supports navigation of the active cell through the cells of the active pane of the currently selected worksheet. The user may change the active cell using the keyboard or mouse and also use the horizontal and vertical scroll bars to change the visible columns and rows of the active sheet pane.
+You can navigate through the cells of the active pane of the currently selected worksheet. The active cell can be changed using the keyboard or mouse and also using the horizontal and vertical scroll bars to change the visible columns and rows of the active sheet pane.
 
 >**Note:** The active cell is also part of the active pane’s selection.
 
@@ -84,5 +84,5 @@ Have in mind that all those interactions are not configurable.
 ## <a id="related_link"></a>Related Links
 
 -   [igSpreadsheet Overview](igSpreadsheet-Overview.html)
--   [Configuring igSpreadsheet](igspreadsheet-configuring.html)
--   [igSpreadsheet API](%%jQueryApiUrl%%/ui.igSpreadsheet)
+-   [Configuring igSpreadsheet](configuring-igspreadsheet.html)
+-   [igSpreadsheet API](%%jQueryApiUrl%%/ui.igspreadsheet)

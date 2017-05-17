@@ -18,7 +18,7 @@ This topic provides an overview of the visual elements of the control.
 To understand this topic you need to be familiar with the concept and topics related to the [Infragistics JavaScript Excel Library](javascript-excel-library.html).
 
 ## Visual Elements of igSpreadsheet control
-The following screenshot depicts the visual elements of the igSpreadsheet control. The configurable elements are listed after the image.
+The following screenshot depicts the visual elements of the `igSpreadsheet` control. The configurable elements are listed after the image.
 
 ![](images/igSpreadsheet_visual_elements.png)
 
@@ -53,5 +53,5 @@ Spreadsheet data cells| [areGridlinesVisible](%%jQueryApiUrl%%/ui.igspreadsheet#
 ## Related Links
 
 -	[igSpreadsheet Overview](igspreadsheet-overview.html)
--   [Configuring igSpreadsheet](igspreadsheet-configuring.html)
--   [igSpreadsheet API](%%jQueryApiUrl%%/ui.igSpreadsheet)
+-   [Configuring igSpreadsheet](configuring-igspreadsheet.html)
+-   [igSpreadsheet API](%%jQueryApiUrl%%/ui.igspreadsheet)
