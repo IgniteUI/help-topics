@@ -51,6 +51,7 @@ This topic contains the following sections:
     -   [Configuring a Scaling Factor (igPercentEditor)](#_Configuring_a_Scaling_Factor)
     -   [Complete code example](#complete-sample)
 -   [Code Example: Configuring Immediate Update Mode (igTextEditor)](#_Configuring_Immediate_Update_Mode)
+-   [Code Example: Configuring Editors Disable Handler (igTextEditor)](#_Configuring_Disable_Handler)
 -   [Related Content](#_Related_Content)
     -   [Topics](#_Topics)
     -   [Resources](#_Resources)
@@ -203,7 +204,23 @@ Following is the code that implements this example.
 
 >**Note:** The update mode option can be configured only on initialization. It cannot be changed at run-time.
 
+##<a id="_Configuring_Disable_Handler"></a>Code Example: Configuring Editors Disable Handler (igTextEditor)
 
+If a developer wants to apply the Knockout [`disabled`](http://knockoutjs.com/documentation/disable-binding.html) binding handler this will not automatically enables/disables the editors, because they has a special logic that handles enabling/disabling the control. For that puprose an additional `igEditorDisable` binding handler is created. The following code demonstrates how to declare the `igEditorDisable` binding: 
+
+**In JavaScript:**
+
+```js
+function viewModel() {
+    this.isDisabled =  ko.observable(false);
+}
+```
+
+**In HTML:**
+
+```html
+<div data-bind="igTextEditor: { ...}, igEditorDisable: isDisabled"></div>
+```
 
 ##<a id="_Related_Content"></a>Related Content
 

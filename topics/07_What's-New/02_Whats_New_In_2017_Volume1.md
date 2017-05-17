@@ -23,6 +23,17 @@ Feature | Description
 ---|---
 [GroupBy Summaries](#groupSummaries)| The GroupBy feature now allows a summary row to be displayed below each group data island.
 
+### igCombo
+
+Feature | Description
+---|---
+[Knockout Disable Handler](#comboKnockoutDisable)| Knockout Disable binding handler has been implemnted for the combo.
+
+### Editors
+
+Feature | Description
+---|---
+[Knockout Disable Handler](#editorsKnockoutDisable)| Knockout Disable binding handler has been implemnted for the editors.
 ### igNumericEditor
 
 Feature | Description
@@ -44,6 +55,23 @@ The GroupBy Summaries feature allows an additional summary row to be displayed b
 #### Related Samples
 -   [Grouping with summaries](%%SamplesUrl%%/grid/grouping)
 
+## igCombo
+
+### <a id="comboKnockoutDisable"></a> Knockout Disable Handler
+
+If a developer wants to apply the Knockout [`disabled`](http://knockoutjs.com/documentation/disable-binding.html) binding handler to the combo control, it will not work and will not automatically enables/disables it. This is because combo has a special logic that handles enabling/disabling of the control. For that purpose additional `igComboDisable` binding handler is created, which implements the behavior, expected, when using the Knockout `disabled` handler.
+
+#### Related Topics
+-   [Configuring Knockout Support (igCombo)](igCombo-KnockoutJS-Support.html#)
+
+## Editors
+
+### <a id="editorsKnockoutDisable"></a> Knockout Disable Handler
+
+If a developer wants to apply the Knockout [`disabled`](http://knockoutjs.com/documentation/disable-binding.html) binding handler to the editors, it will not work and will not automatically enables/disables them. This is because editors have a special logic that handles enabling/disabling of the control. For that purpose additional `igEditorDisable` binding handler is created, which implements the behavior, expected, when using the Knockout `disabled` handler.
+
+#### Related Topics
+-   [Configuring Knockout Support (Editors)](Configuring-Knockout-Support-%28Editors%29.html)
 ## igNumericEditor
 
 ### <a id="roundDecimals"></a> Round Decimals
