@@ -38,15 +38,18 @@ The GroupBy Summaries feature allows an additional summary row to be displayed b
 
 ![](images/group-summaries.png)
 
-## igDateEditor/igDatePicker
-
-### <a id="dateHandling"></a> Date Handling
-
-When the dates in the editors are transferred from the client to the server аnd vice versa, the options `enableUTCDates` and `displayTimeOffset` can be used to configure the editоrs and to properly handle date transfer.
-
-
 #### Related Topics
 -   [GroupBy Summaries Feature Overview (igGrid)](igGrid-GroupBy-Summaries.html)
 
 #### Related Samples
 -   [Grouping with summaries](%%SamplesUrl%%/grid/grouping)
+
+## igDateEditor/igDatePicker
+
+### <a id="dateHandling"></a> Date Handling
+
+When the dates in the editors are transferred from the client to the server аnd vice versa, the options [`enableUTCDates`](%%jQueryApiUrl%%/ui.igdateeditor#options:enableUTCDates) and [`displayTimeOffset`](%%jQueryApiUrl%%/ui.igdateeditor#options:displayTimeOffset) can be used to configure the editоrs and to properly handle date transfer.
+
+#### Related Topics
+-   [Migrating enableUTCDate option in 17.1](Migrating-enableUTCDates-option-in-17-1.html)
+-   [Ignite UI controls in different time zones](Using-IgniteUI-controls-in-different-time-zones.html)
