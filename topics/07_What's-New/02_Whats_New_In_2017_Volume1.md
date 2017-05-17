@@ -23,6 +23,13 @@ Feature | Description
 ---|---
 [GroupBy Summaries](#groupSummaries)| The GroupBy feature now allows a summary row to be displayed below each group data island.
 
+
+### igDateEditor/igDatePicker
+
+Feature | Description
+---|---
+[Date Handling](#dateHandling)| New editors' settings are needed when handling date transfers.
+
 ## igGrid
 
 ### <a id="groupSummaries"></a> GroupBy Summaries
@@ -30,6 +37,13 @@ Feature | Description
 The GroupBy Summaries feature allows an additional summary row to be displayed below each group data island that displays summary information for the data columns in that island. The summary row is visible only when the related group is expanded.
 
 ![](images/group-summaries.png)
+
+## igDateEditor/igDatePicker
+
+### <a id="dateHandling"></a> Date Handling
+
+When the dates in the editors are transferred from the client to the server аnd vice versa, the options `enableUTCDates` and `displayTimeOffset` can be used to configure the editоrs and to properly handle date transfer.
+
 
 #### Related Topics
 -   [GroupBy Summaries Feature Overview (igGrid)](igGrid-GroupBy-Summaries.html)

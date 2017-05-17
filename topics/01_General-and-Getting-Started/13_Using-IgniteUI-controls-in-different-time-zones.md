@@ -11,13 +11,15 @@
 # Using %%ProductName%% controls in different time zones
 
 ##Introduction
-Users of a web application are often in a different time zone than the web server and in some circumstances you may want to render the server-based date values adjusted to the client's time zone. In this topic you learn to customize the `enableUTCDates` property in the `igGrid`, `igDatePicker` and `igDateEditor` to display and edit date values that reflect the client's time zone.
+Users of a web application are often in a different time zone than the web server and in some circumstances you may want to render the server-based date values adjusted to the client's time zone or to other specific time zone. It also important to properly format dates while transferring them between server and client. In this topic you learn to customize the `enableUTCDates` and `displayTimeOffset` properties in the `igGrid`, `igDatePicker` and `igDateEditor` to display and edit date values that reflect the client's time zone.
 
 ##Configuring Client-Side Dates
 
-When enabled, the `EnableUTCDates` option allows dates to be formatted as UTC dates on the client side. As a date value is received from the server it goes through a formatter function to display the date. If `enableUTCDates` is set to false, the final result returns date values via the standard date object methods (getFullYear(), getMonth(), getDate(),getHours() etc.) and if set to true UTC equivalents ( getUTCFullYear(), getUTCMonth(), getUTCDate(), getUTCHours() etc.) are used. Therefore, when the option is enabled the dates received from the server are converted to UTC. 
- 
-There are some distinctive behaviors to consider when used with specific controls.
+The `igDateEditor` and `igDatePicker` propose several options, which allows to properly handles dates in the different time zones. The properties below describe how the both editors show dates and how they serialize them, in order to be transferred correctly.
+-	`displayTimeOffset` - gets/sets time zone offset from UTC, in minutes. The client date values are displayed with this offset instead of the local one, which are automatically transformed by the client browser. If you want to display UTC dates, then the value needs to be set to 0.
+-	`enableUTCDates` - is not related anymore to the display value of the editor, it only cares of how the date will be serialized. Enables/Disables serializing client date as UTC ISO 8061 string instead of using the local time and zone values. The option is only applied in "date" dataMode. The enableUTCDates option can be used to output an UTC ISO string instead. For example 10:00 AM from a client with local offset of 5 hours ahead of GMT will be serialized as: "2016-11-11T10:00:00+05:00". This is when the option gets the default ‘false’ value. Otherwise the date will use the ISO UTC format: “2016-11-11T05:00:00Z”
+
+For more information of how you can migrate editors, configured with enableUTCDates option, from 16.2 to 17.1 follow the [Migrate enableUTCDates option in 17.1][Migrating enableUTCDate option in 17.1](Migrating-enableUTCDates-option-in-17-1.html) document.
 
 ##igGrid/igHierarchicalGrid
  
@@ -29,7 +31,7 @@ There are two possible scenarios where the enableUTCDates option is relevant.
 It is important to note that the igGrid/igHierarchicalGrid take the timezone offset of the server into account when:
 
 -	The data source is processed via their respective MVC Wrappers ( set via the Model for example)
--	 The data source is remote and the `GridDataSourceAction` attribute is used on the remote method. 
+-	The data source is remote and the `GridDataSourceAction` attribute is used on the remote method. 
 In those cases the time zone offset is added to the data source in the form of metadata. For example:
 
 ```
@@ -104,26 +106,129 @@ So after updating the value and saving the changes to the server, the value rece
 
 ##igDatePicker and igDateEditor
 
-The editors behave in a slightly different way since they're not databound controls. They don't take the server's offset into consideration. They directly pass the value set via the MVC Wrapper to the client.
+Client `igDateEditor`/`igDatePicker` widget serialize the date either in the UTC format or in the format containing local time and offset. In either both formats the data is sent to the server. If the MVC wrapper of the date editor and date picker is used, then it sends the date serialized only using the UTC format. It doesn’t matter for the client widget, in which format will receive the date – UTC or local time, it will always transform it in the same correct date. In our MVC wrapper we stick to the UTC format. It is always recommended to set UTC standard values for `igDateEditor` and `igDatePicker` and their wrappers, especially when `displayTimeOffset` option is defined, otherwise values with ambiguous time zone could map to unpredictable times depending on the user agent local zone.
+In addition to the UTC serialized date, set as a value to the client widget, the MVC wrapper renders always the `displayTimeOffset` option in the response. No matter the latter has a value or not in the MVC configuration of the date editor or date picker, what the MVC wrapper is doing, is converting and serializing the server date to UTC, which means it need to send the server offset to the client. If the DisplayTimeOffset is set as MVC wrapper option, then this value is sent to the client. The following examples will demonstrate how MVC wrapper and client widget works, when `displayTimeOffset` and `enableUTCDates` options are used.
 
-When `EnableUTCDates` is used they'll convert that value directly to UTC without considering the timezone offset of the server. Since the editors are not data bound controls they don't apply any additional data manipulation on the applied values like the igGrid.
+###Default Behavior
 
-Consider the following scenario:
-
--	The data comes from a backend that is in UTC + 2:00
--	The client is in UTC - 5:00 
--	`EnableUTCDate` is enabled 
-
-The value is set via the model:
+Let’s define in MVC a date editor, with the following configuration and set the value in the server in “Central Europe Standard Time”, which is GMT+01:00. Let’s assume the client browser is in the “FLE Standard Time”, which is GMT+02:00. The same result will be valid for the date picker.
 
 ```
-@Html.Infragistics().DatePickerFor(m => m.ExpirationDate).EnableUTCDates(true)...
+@(Html.Infragistics()
+	.DateEditor()
+	.Value(new DateTime(2016, 1, 9, 10, 55, 55))
+	.ID("StartHour")
+	.EnableUTCDates(true)
+	.DateInputFormat("dd/MM/yyyy HH:mm")
+	.DateDisplayFormat("yyyy-MM-dd HH:mm")
+	.PlaceHolder("Select start hour")
+	.Width(280)
+	.Render())
 ```
-If a date with 11:00 AM is send on the client the value of the control will be directly be set to 11 am via the generated javascript:
+
+In that case the hour is 10 AM, and because the time zone is GMT+01:00, then the MVC wrapper will transform that value to UTC, in the following format: 2016-01-09T09:35:55.0000000Z. In addition it will add displayTimeOffset of 60 minutes. This is what will be rendered by the wrapper in the response:
 
 ```
-value: new Date(x, x, x, 11, x, x, x );
+$('#StartHour').igDateEditor({
+	value: '2016-01-09T09:35:55.0000000Z',
+	displayTimeOffset: 60,
+	enableUTCDates: true,
+	dateInputFormat: 'dd/MM/yyyy HH:mm',
+	dateDisplayFormat: 'yyyy-MM-dd HH:mm',
+	placeHolder: 'Select start hour',
+	width: '280' });
 ```
-When a new date is created on the client it will always be created in local time, however since enableUTCDates is set that date will be converted to UTC. So the end result will be: 11:00 AM + 5:00 (due to the timezone offset on the client) = 4:00 PM
 
-In the case of the editors if you aim to have consistent values the send dates from the server need to be always in UTC since the server timezone offset is not taken into account. Similarly when posting the values from the client to the server you'll receive the date in UTC which you can then convert to the server's local time if needed.
+The above configuration will render the following value in the editor:
+
+![](images/Time_Zones_Editor_1.png)
+
+###Ignoring server date and displaying the specific client one
+
+From the example above, it can be seen that when we define a server hour in the editor MVC wrapper, in the client we will always see that server hour, ignoring the client time zone offset. This is the default behavior, when we don’t define `DisplayTimeOffset` wrapper option. If we want each of the clients to display the time, valid for their time zones, then we need to set the `DisplayTimeOffset` as null. Using the previous example and setting the option, on the client the `dispalyTimeOffset` option will be ignored and the time will show according the specific time zone:
+
+```
+@(Html.Infragistics()
+	.DateEditor()
+	.Value(new DateTime(2016, 1, 9, 10, 55, 55))
+	.ID("StartHour")
+	.EnableUTCDates(true)
+       .DisplayTimeOffset(null)
+	.DateInputFormat("dd/MM/yyyy HH:mm")
+	.DateDisplayFormat("yyyy-MM-dd HH:mm")
+	.PlaceHolder("Select start hour")
+	.Width(280)
+	.Render())
+```
+
+```
+$('#StartHour').igDateEditor({
+	value: '2016-01-09T09:35:55.0000000Z',
+	displayTimeOffset: null,
+	enableUTCDates: true,
+	dateInputFormat: 'dd/MM/yyyy HH:mm',
+	dateDisplayFormat: 'yyyy-MM-dd HH:mm',
+	placeHolder: 'Select start hour',
+	width: '280' });
+```
+
+The above configuration will render the following value in the editor, if our time is “FLE Standard Time”, which is GMT+02:00:
+
+![](images/Time_Zones_Editor_2.png)
+
+###Configuring EnableUTCDates option
+
+As we talked earlier setting the EnableUTCDates in the wrapper, is not the reason the MVC wrapper set the value in UTC format. It only affects the way the client-widget serialize the date. In this case, if we inspect the hidden input of the editor on the client, we will see that the value is '2016-01-09T09:35:55.0000000Z', which is the same the MVC wrapper has sent to the client. In this way we manage to have a standardized communication between client and server.
+If we decide to change the MVC wrapper setting:
+
+
+```
+@(Html.Infragistics()
+	.DateEditor()
+	.Value(new DateTime(2016, 1, 9, 10, 55, 55))
+	.ID("StartHour")
+	.EnableUTCDates(false)
+       .DisplayTimeOffset(null)
+	.DateInputFormat("dd/MM/yyyy HH:mm")
+	.DateDisplayFormat("yyyy-MM-dd HH:mm")
+	.PlaceHolder("Select start hour")
+	.Width(280)
+	.Render())
+```
+
+Then the hidden client-side input will hold the value as local time and offset. And because our client is GMT+02:00, then the result will be: 2016-01-09T11:35:55+02:00. 
+
+###Configuring DisplayTimeOffset option
+
+If we decide to define an “Russian Standard Time”, GMT+03:00, then what we need is to define the appropriate offset, in minutes, according to the UTC time:
+
+```
+@(Html.Infragistics()
+	.DateEditor()
+	.Value(new DateTime(2016, 1, 9, 10, 55, 55))
+	.ID("StartHour")
+	.EnableUTCDates(true)
+	.DisplayTimeOffset(180)
+	.DateInputFormat("dd/MM/yyyy HH:mm")
+	.DateDisplayFormat("yyyy-MM-dd HH:mm")
+	.PlaceHolder("Select start hour")
+	.Width(280)
+	.Render())
+
+```
+
+The MVC wrapper will render the following `igDateEditor` widget configuration:
+
+```
+$('#StartHour').igDateEditor({
+	value: '2016-01-09T09:35:55.0000000Z',
+	displayTimeOffset: 180,
+	enableUTCDates: true,
+	dateInputFormat: 'dd/MM/yyyy HH:mm',
+	dateDisplayFormat: 'yyyy-MM-dd HH:mm',
+	placeHolder: 'Select start hour',
+	width: '280' });
+```
+The result on the browser will be:
+
+![](images/Time_Zones_Editor_3.png)
