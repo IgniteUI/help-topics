@@ -66,48 +66,38 @@ The table below briefly explains the main features of the `igCombo`.
     <tbody>
         <tr>
             <th>Feature</th>
-
             <th>Description</th>
         </tr>
         <tr>
             <td>Virtualization</td>
-
             <td>The igCombo control can re-use HTML elements when binding large amounts of data to improve performance.</td>
         </tr>
 		<tr>
             <td>Auto-complete</td>
-
             <td>Enabling this allows the igCombo control to automatically fill in the remaining input text based off of the first match in the list of choices.</td>
         </tr>
         <tr>
             <td>Auto-suggest</td>
-
             <td>The igCombo control can filter the list of choices based of the text entered in the input box.</td>
         </tr>
         <tr>
             <td>Multiple selection</td>
-
             <td>Users can select single items or multiple items and can perform multiple selections using checkboxes.</td>
         </tr>
         <tr>
             <td>Keyboard navigation</td>
-
             <td>Users can easily and quickly navigate through items or change the selected/highlighted items thanks to the rich keyboard navigation that igCombo supports.</td>
         </tr>
-
         <tr>
             <td>Load-on-Demand</td>
-
             <td>The igCombo control supports Load-on-Demand feature. Enabling Load-on-Demand significantly reduces the bandwidth and processing overhead on both the server and the client.</td>
         </tr>
         <tr>
             <td>Highlighting</td>
-
             <td>When a user type a text in igCombo input the matching results in the dropdown items are displayed with a visual highlighting of the matching text.</td>
         </tr>
         <tr>
             <td>ASP.NET MVC helper</td>
-
             <td>You can use managed .NET code to configure the igCombo control.</td>
         </tr>
     </tbody>
@@ -466,7 +456,7 @@ Following are some other topics you may find useful.
 - [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 
 - [Styling and Theming in %%ProductName%%](Deployment-Guide-Styling-and-Theming.html)
- 
+
 - [igGrid/igDataSource Architecture Overview](igGrid-igDataSource-Architecture-Overview.html)
 
 - [Adding igCombo](igCombo-Getting-Started.html)
