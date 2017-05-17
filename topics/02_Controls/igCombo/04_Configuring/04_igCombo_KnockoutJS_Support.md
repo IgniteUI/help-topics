@@ -185,6 +185,7 @@ $.ig.loader({
 
 #### Declare the binding properties for igCombo in the View
 
+##### igCombo handler
 The following code demonstrates how to declare the binding properties for `igCombo` in your View. The most important part is the declaration of the instantiation properties in the data-bind attribute of the corresponding span element.
 
 **In HTML:**
@@ -200,7 +201,17 @@ The following code demonstrates how to declare the binding properties for `igCom
 
 Notice that both the `selectedItems` and `dataSource` properties of the View-Model object are observable. For the selectedItems property, this means that the View-Model object will be able to update the `igCombo` selected items dynamically and vice-versa: `igCombo` will be able to update the View-Model object. If you configure the `dataSource` to be an observable array, `igCombo` will be able to track additions and removals of elements and update the drop-down list accordingly. It is possible to declare any of these properties as non-observable, which means that you will lose the corresponding functionalities. If no View-Model object properties are defined as observables, you will not have Knockout support for the `igCombo` and it does not make sense to use the declarative syntax and the Knockout binding extension.
 
+##### igComboVisible handler
+
 The following code demonstrates how to declare the `igComboVisible` binding, which has the same functionality as the Knockout visible binding.
+
+**In JavaScript:**
+
+```js
+function viewModel() {
+    this.isVisible =  ko.observable(true);
+}
+```
 
 **In HTML:**
 
@@ -209,6 +220,26 @@ The following code demonstrates how to declare the `igComboVisible` binding, whi
 ```
 
 The `igCombo` control is displayed in a HTML element with inline-block property, and because Knockout visible binding sets the display of the element to block, this breaks the `igCombo` appearance. Use the custom `igComboVisible` binding to display `igCombo` properly and in the same time to use the Knockout visible binding functionality.
+
+##### igComboDisable handler
+
+The following code demonstrates how to declare the `igComboDisable` binding, which has the same functionality as the Knockout [`disabled`](http://knockoutjs.com/documentation/disable-binding.html) binding.
+
+**In JavaScript:**
+
+```js
+function viewModel() {
+    this.isDisabled =  ko.observable(false);
+}
+```
+
+**In HTML:**
+
+```html
+<span id="comboActors" data-bind="igCombo: { ... }, igComboDisable: isDisabled"></span>
+```
+
+Using the Knockout [`disabled`](http://knockoutjs.com/documentation/disable-binding.html) binding handler is not enough, because the igCombo has a special logic that handles enabling/disabling the control.
 
 ## <a id="related-content"></a>Related Content
 
