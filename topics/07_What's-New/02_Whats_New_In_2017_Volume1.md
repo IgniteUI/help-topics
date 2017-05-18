@@ -48,9 +48,51 @@ Feature | Description
 
 ## <a id="spreadsheet"></a>igSpreadsheet
 
-In version 2017.1 we introduce the igSpreadsheet control. It is a jQuery widget that visualize excel documents in all modern browsers.
+In version 2017.1 we introduce the igSpreadsheet control. It is a jQuery widget that visualize excel documents in all modern browsers. For MVP version, the control has the following areas and features available:
+
+-   Configurable component areas
+    -   Formula Bar 
+    -   Context Menu
+    -   Tab Bar Area
+    -   Headers
+
+-   Control manupaltions
+    -   Freezing Panes
+    -   Hiding
+    -   Resizing
+    -   Selection
+    -   Splitting Panes
+    -   Zooming
+
+-   Data manipualtions
+    -   Inserting and Deleting Cells, Columns and Rows
+    -   Undo and Redo
+    -   Copy and Paste
+    -   Data Validation
+    -   Hyperlinks
+    
+-   Visual configurations 
+    -   Gridlines
+    -   Cell Alignment
+    -   Cell Borders
+    -   Font Styles
+
 
 ![](images/spreadsheet.png)
+
+#### Related Topics
+-   [igSpreadsheet Overview](igspreadsheet-overview.html)
+-   [Adding igSpreadsheet](adding-igspreadsheet.html)
+-   [Configuring igSpreadsheet](igspreadsheet-configuring.html)
+-   [igSpreadsheet Accessibility Compliance](igspreadsheet-accessibility-compliance.html)
+-   [igSpreadsheet Known Issues](igspreadsheet-known-issues.html)
+
+
+#### Related Samples
+-   [Overview](%%SamplesUrl%%/spreadsheet/overview)
+-   [View Configuration](%%SamplesUrl%%/spreadsheet/create-view-save)
+-   [Import Data From Excel File](%%SamplesUrl%%/spreadsheet/loading-data)
+-   [Generate View and Save Data](%%SamplesUrl%%/spreadsheet/create-view-save)
 
 ## igGrid
 
