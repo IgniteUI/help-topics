@@ -17,6 +17,12 @@ This topic presents the controls and the new and enhanced features for the Ignit
 
 The following summarizes what’s new in 2017 Volume 1. Additional details follow.
 
+### igSpreadsheet
+
+Feature | Description
+---|---
+[New control igSpreadsheet (MVP)](#spreadsheet)| The igSpreadsheet is a jQuery widget that visualize excel documents in all modern browsers.
+
 ### igGrid
 
 Feature | Description
@@ -40,6 +46,11 @@ Feature | Description
 ---|---
 [Round Decimals](#roundDecimals)| The numeric editor introduces new option [`roundDecimals`](ui.ignumericeditor#options:roundDecimals), that allows to round values with decimal point.
 
+## <a id="spreadsheet"></a>igSpreadsheet
+
+In version 2017.1 we introduce the igSpreadsheet control. It is a jQuery widget that visualize excel documents in all modern browsers.
+
+![](images/spreadsheet.png)
 
 ## igGrid
 
