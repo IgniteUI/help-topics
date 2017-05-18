@@ -27,13 +27,14 @@ Feature | Description
 
 Feature | Description
 ---|---
-[Knockout Disable Handler](#comboKnockoutDisable)| Knockout Disable binding handler has been implemnted for the combo.
+[Knockout Disable Handler](#comboKnockoutDisable)| Knockout Disable binding handler has been implemented for the combo.
 
 ### Editors
 
 Feature | Description
 ---|---
-[Knockout Disable Handler](#editorsKnockoutDisable)| Knockout Disable binding handler has been implemnted for the editors.
+[Knockout Disable Handler](#editorsKnockoutDisable)| Knockout Disable binding handler has been implemented for the editors.
+
 ### igNumericEditor
 
 Feature | Description
@@ -77,3 +78,26 @@ If a developer wants to apply the Knockout [`disabled`](http://knockoutjs.com/do
 ### <a id="roundDecimals"></a> Round Decimals
 
 In previous versions of the product, if user sets or enters a value in a numeric editor that has more decimal places than the one defined in the `maxDecimals` option, then the value was truncated. E.g. If an editor with defined 'maxDecimals' to `3`, receives a value `123.4567`, then it will be truncated to `123.456`. With version 17.1 of the product, a new option [`roundDecimals`](ui.ignumericeditor#options:roundDecimals) is introduced, which is enabled by default and rounds the numeric values, using the JavaScript `Math.round()` function. This means that the value of `123.4567` will be rounded and displayed in the editor as `123.457`. If the [`roundDecimals`](ui.ignumericeditor#options:roundDecimals) is disabled, then it will truncate the value and will show it as `123.456`, like in the old versions.
+
+## <a id="igScheduler"></a> igScheduler
+### New Control (RTM)
+
+The `igScheduler`™ control provides a common scheduling solution for presenting and managing time periods and the associated activities.
+
+### Supported features in the RTM are:
+-   Creating, editing and deleting of appointment.
+    -   Configurable appointments display mode in the month view calendar (indicator or event subject).
+    -   Assigning appointments to color themed resources.
+-   Using different views (month and agenda view).
+    -   Month and agenda views switching support
+    -   Agenda view in month view support.
+    -   Configurable agenda view days display range.
+-   All day events supported.
+-   Desktop, tablet and phone layout.
+-   Responsive design.
+    -   Desktop environment optimized UI.
+-   Resources color scheme support.
+-   Keyboard navigation support.
+-   Localization support.
+
+![](../02_Controls/igScheduler/images/scheduler.png)

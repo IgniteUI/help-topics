@@ -18,8 +18,8 @@ This topic contains the following sections:
 - [Adding igScheduler](#adding)
 - [Required Background](#background)
 - [Adding an igScheduler to Web Page](#webpage)
-- [Preview](#preview)
 - [Creating a basic igScheduler implementation, step by step](#basic-implementation)
+- [Result](#result)
 - [Related topics](#related)
 
 # <a id="adding"></a>Adding igScheduler
@@ -47,11 +47,6 @@ $.ig.loader({
 
 This procedure takes you step-by-step toward adding an `igScheduler` to a web page. This sample demonstrates how to instantiate the igScheduler with a Month View and appointments subjects. You can navigate between time periods and create, edit and delete scheduled activities.
 
-### <a id="preview"></a>Preview
-
-The following screenshot is a preview of the final result
-
-![](images/scheduler.png)
 
 ### Requirements
 
@@ -119,6 +114,12 @@ $("#scheduler").igScheduler({
     dataSource: scheduleListDataSource
 });
 ```
+
+### <a id="result"></a>Result
+
+The following screenshot is a preview of the final result
+
+![](images/scheduler.png)
 
 ## <a id="related"></a>Related Topics
 
