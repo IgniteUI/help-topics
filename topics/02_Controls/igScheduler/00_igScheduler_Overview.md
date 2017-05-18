@@ -326,11 +326,17 @@ Following are some other topics you may find useful.
 
 -   [igScheduler Overview](igScheduler-Overview.html)
 
+-   [Configuring igScheduler](igscheduler-configuring.html)
+
+-   [Configuring Appointments](igscheduler-configure-appointments.html)
+
+-   [Configuring Resources](igscheduler-configure-resources.html)
+
 -	[Adding igScheduler](igscheduler-adding-igscheduler.html)
 
 -	[Configuring igScheduler](igscheduler-Configuring.html)
 
--	[Styling igScheduler](igscheduler-Using-Themes.html)
+-	[Styling igScheduler](igscheduler-using-themes.html)
 
 -	[Accessibility Compliance (igScheduler)](igscheduler-accessibility-compliance.html)
 
