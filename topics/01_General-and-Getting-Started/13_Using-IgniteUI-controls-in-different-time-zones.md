@@ -19,20 +19,24 @@ When enabled, the `EnableUTCDates` option allows dates to be formatted as UTC da
  
 There are some distinctive behaviors to consider when used with specific controls.
 
-##igGrid/igHierarchicalGrid
+## igGrid, igHierarchicalGrid and igTreeGrid
  
-There are two possible scenarios where the enableUTCDates option is relevant.
+Date handling in igGrid is done mostly by igDataSource and spans a few different behaviors. First of all, all values for date columns are stored in the data source as JavaScript Date objects (and therefore are always in local timezone). When rendering cells with Date values the grid uses $.ig.formatter. Depending on the option in the date columns’ definition ([`dateDisplayType`](%%jQueryApiUrl%%/ui.iggrid#options:columns.dateDisplayType)) one of three renderings is chosen:
+-	`local` (default) – results in $.ig.formatter using local variants of the extraction API essentially rendering dates in the local time zone. Filtering and Updating editors for such columns receive displayTimeOffset explicitly set to null which tells the editor to render and edit the Date object in the local time zone as well.
+-	`utc` – results in $.ig.formatter using UTC variants of the extraction API rendering the Date objects in their UTC variants. Filtering and Updating editors for such columns receive displayTimeOffset set to 0 which tells the editor to render and edit the UTC-conversion of the Date object set.
+-	The third option is default for the MVC wrappers scenario but cannot be explicitly enabled by users. It triggers when the server response contains offset metadata and the column option is left undefined. In this case, the Date is rendered using the UTC extraction API with the added offset resulting in a visualization that is the same as the one the user sees on the server. Filtering and Updating editors for such columns receive displayTimeOffset set to the offset found in the metadata (in minutes) which tells the editor to render and edit the same Date visualization.
 
--	When the dates are created on a remote backend where they could be created in a different timezone than the client. (In this case to have consistent values shown on all client machines the `enableUTCDates` option should be enabled.)
--	When the dates are created locally on the client (local data source) and need to be displayed in the local time zone.
+The most relevant scenarios with dates handling are:
+-	When the dates are created on a remote backend where they could be created in a different timezone than the client. (the third option)
+-	When the dates are created locally on the client (local data source) and need to be displayed in the local time zone. (`dateDisplayType` is `local`)
 
-It is important to note that the igGrid/igHierarchicalGrid take the timezone offset of the server into account when:
+It is important to note that the igGrid/igHierarchicalGrid/igTreeGrid take the timezone offset of the server into account when:
 
 -	The data source is processed via their respective MVC Wrappers ( set via the Model for example)
--	 The data source is remote and the `GridDataSourceAction` attribute is used on the remote method. 
+-	The data source is remote and the `GridDataSourceAction` attribute is used on the remote method. 
 In those cases the time zone offset is added to the data source in the form of metadata. For example:
 
-```
+```js
 "Metadata": {
                 "timezoneOffset": 7200000,
                 "timezoneOffsets": {
@@ -48,17 +52,17 @@ In those cases the time zone offset is added to the data source in the form of m
 ```
 
 As the different dates may have a different type (UTC or Local) the specific date values for each row have their specific offset send as part of the metadata as demonstrated above.
->**Note:** If the data source contains information on the timezone offset of the server, that offset is always taken into consideration when rendering the date on the client. Therefore when the grid is instantiated via the MVC wrapper the EnableUTCDates option is enabled by default, otherwise the option is disabled by default.
+>**Note:** If the data source contains information on the timezone offset of the server, that offset is always taken into consideration when rendering the date on the client. Therefore when the grid is instantiated via the MVC wrapper the third option for `dateDisplayType` is used by default.
 
 ###Practical Example:
 Consider the following scenario:
 
 -	A website is hosted in US (Eastern Time UTC - 5:00). In it there's an igGrid showing a column with date values. The date values are created in the US time zone and are formatted as follows: "dd/MM/yyyy HH:mm:ss".
 -	A client from Singapore (UTC + 8:00) is viewing and interacting with the website.
--	EnableUTCDate is enabled and the timezone offset is available in the data source
+-	`dateDisplayType` is set to `utc` for a column and the timezone offset is available in the data source
 
 The date is created in local time on the server, for example:
-```
+```csharp
 //10 Jan 2015 7:00 AM in Eastern Time UTC -5:00 
 DateTime date = new DateTime(2015, 1, 10, 7, 0, 0, 0, DateTimeKind.Local);  
 
@@ -75,12 +79,12 @@ Here's what exactly happens in the upper example:
 We have a date in Eastern Time 1 Jan 2015. That date needs to be parsed to Json, it will be send in the form of Ticks. The timezoneOffset of the server will be - 18000000 ticks (- 5:00 hours).
  So the json data will look like this:
  
- ```
+ ```js
  {
     "Records": [{
         "ID": 0,
         "Name": "Name0",
-        "ExpirationDate": "\/Date(1420866000000)\/"
+        "ExpirationDate": "2015-01-10T05:00:00.000Z"
     }],
     "TotalRecordsCount": 0,
     "Metadata": {
@@ -93,7 +97,6 @@ We have a date in Eastern Time 1 Jan 2015. That date needs to be parsed to Json,
     }
 }
  ```
-When creating the date object on the client the timezone offset from the server is added to the original ticks from the data source and a new date object is created from those ticks(in JavaScript the date object is always created in local time). Then that value is formatted to UTC due to the EnableUTCDate option being enabled.
 
  The original date send from the server, converted in local time would be Jan 10 2015 20:00:00 (13 hours difference), we add to that the time zone offset of the server ( - 5:00:00 )  and format the result to UTC (- 8:00:00) and we get the display value of *Jan 10 2015 7:00*.
  
