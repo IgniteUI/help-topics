@@ -70,6 +70,7 @@ In version 2017.1 we introduce the igSpreadsheet control. It is a jQuery widget 
     -   Undo and Redo
     -   Copy and Paste
     -   Data Validation
+    -   Worksheets
     -   Hyperlinks
     
 -   Visual configurations 
