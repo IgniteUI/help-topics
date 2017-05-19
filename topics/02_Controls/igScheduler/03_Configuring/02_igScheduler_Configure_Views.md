@@ -17,7 +17,7 @@ The topics in this section provide information about the different views used by
 
 ## Overview
 
-The XamScheduler control can be configured to present calendar information in different ways called "views". The view type can be configured using the [ViewMode](%%jQueryApiUrl%%/ui.igscheduler#options:viewMode) property.
+The igScheduler control can be configured to present calendar information in different ways called "views". The view type can be configured using the [ViewMode](%%jQueryApiUrl%%/ui.igscheduler#options:viewMode) property.
 
 ## Agenda View
 
@@ -48,7 +48,7 @@ Changing the range | Fired before agenda view range is changed when using previo
 
 ## Month View
 
-This topic explains how data is presented in the XamScheduler's month view.
+This topic explains how data is presented in the igScheduler's month view.
 
 ### Required Background
 
