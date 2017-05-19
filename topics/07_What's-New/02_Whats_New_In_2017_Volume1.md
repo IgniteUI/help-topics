@@ -21,7 +21,7 @@ The following summarizes what’s new in 2017 Volume 1. Additional details follo
 
 Feature | Description
 ---|---
-[New control igSpreadsheet (MVP)](#spreadsheet)| The igSpreadsheet is a jQuery widget that visualize excel documents in all modern browsers.
+[New control igSpreadsheet](#spreadsheet)| The igSpreadsheet is a jQuery widget that visualize excel documents in all modern browsers.
 
 ### igScheduler
 
@@ -52,7 +52,7 @@ Feature | Description
 
 Feature | Description
 ---|---
-[Round Decimals](#roundDecimals)| The numeric editor introduces new option [`roundDecimals`](ui.ignumericeditor#options:roundDecimals), that allows to round values with decimal point.
+[Round Decimals](#roundDecimals)| The numeric editor introduces new option [`roundDecimals`](ui.ignumericeditor#options:roundDecimals) that allows to round values with decimal point.
 
 ### igDateEditor/igDatePicker
 
@@ -77,10 +77,11 @@ In version 2017.1 we introduce the igSpreadsheet control. It is a jQuery widget 
     -   Headers
 
 -   Control manupaltions
-    -   Freezing Panes
-    -   Hiding
-    -   Resizing
+
     -   Selection
+    -   Resizing
+    -   Hiding
+    -   Freezing Panes
     -   Splitting Panes
     -   Zooming
 
@@ -105,15 +106,12 @@ In version 2017.1 we introduce the igSpreadsheet control. It is a jQuery widget 
 -   [igSpreadsheet Overview](igspreadsheet-overview.html)
 -   [Adding igSpreadsheet](adding-igspreadsheet.html)
 -   [Configuring igSpreadsheet](igspreadsheet-configuring.html)
--   [igSpreadsheet Accessibility Compliance](igspreadsheet-accessibility-compliance.html)
--   [igSpreadsheet Known Issues](igspreadsheet-known-issues.html)
 
 
 #### Related Samples
 -   [Overview](%%SamplesUrl%%/spreadsheet/overview)
 -   [View Configuration](%%SamplesUrl%%/spreadsheet/create-view-save)
 -   [Import Data From Excel File](%%SamplesUrl%%/spreadsheet/loading-data)
--   [Generate View and Save Data](%%SamplesUrl%%/spreadsheet/create-view-save)
 
 ## <a id="scheduler"></a> igScheduler
 ### New Control
