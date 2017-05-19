@@ -19,17 +19,17 @@ The topics in this section provide information about the different views used by
 
 The igScheduler control can be configured to present calendar information in different ways called "views". The view type can be configured using the [ViewMode](%%jQueryApiUrl%%/ui.igscheduler#options:viewMode) property.
 
-## Agenda View
-
-This topic explains how data is presented in the `igScheduler`'s agenda view.
-
-### Required Background
+## Required Background
 
 Topic |	Purpose
 ---|---
 [Overview (igScheduler)](igScheduler-Overview.html) | This topic provides conceptual information for the `igScheduler`™ control including information regarding: features, configuration, requirements and theming.
 [Configuring Appointments (igScheduler)](igScheduler-Configure-Appointments.html) | This topic shows how to setup and configure Appointments DataSource for the `igScheduler`.
  [Configuring Resources (igScheduler)](igScheduler-Configure-Resources.html) | The topics in this section provide information about the resources concept of the `igScheduler` control.
+
+## Agenda View
+
+This topic explains how data is presented in the `igScheduler`'s agenda view.
 
 ### Configuring
 
@@ -49,14 +49,6 @@ Changing the range | Fired before agenda view range is changed when using previo
 ## Month View
 
 This topic explains how data is presented in the igScheduler's month view.
-
-### Required Background
-
-Topic |	Purpose
----|---
-[Overview (igScheduler)](igScheduler-Overview.html) | This topic provides conceptual information for the `igScheduler`™ control including information regarding: features, configuration, requirements and theming.
-[Configuring Appointments (igScheduler)](igScheduler-Configure-Appointments.html) | This topic shows how to setup and configure Appointments DataSource for the `igScheduler`.
- [Configuring Resources (igScheduler)](igScheduler-Configure-Resources.html) | The topics in this section provide information about the resources concept of the `igScheduler` control.
 
 ### Configuring
 
