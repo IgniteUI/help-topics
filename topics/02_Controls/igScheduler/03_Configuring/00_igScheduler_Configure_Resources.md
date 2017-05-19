@@ -27,7 +27,7 @@ Property |	Purpose
 ---|---
 id | The resource’s ID must be unique amongst all resources.
 displayName | The display name identifies a resource in the application’s user interface.
-colorScheme | The color scheme is used to highlight the activities associated with this resource. The color scheme is optional, and is auto generated from one when not set. Color scheme ca be set by using the `$.ig.scheduler.ScheduleResourceColorScheme` enumeration.
+colorScheme | The color scheme is used to highlight the activities associated with this resource. The color scheme is optional, and is auto generated from one when not set. Color scheme can be set by using the `$.ig.scheduler.ScheduleResourceColorScheme` enumeration.
 
 ## Resources color scheme
 There are 12 color predefined for the color scheme of the resources which can be used. `Stone` color is applied only when no resource is associated with appointment and cannot be set manually. 
