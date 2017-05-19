@@ -181,7 +181,7 @@ If a developer wants to apply the Knockout [`disabled`](http://knockoutjs.com/do
 If a developer wants to apply the Knockout [`disabled`](http://knockoutjs.com/documentation/disable-binding.html) binding handler to the editors, it will not work and will not automatically enables/disables them. This is because editors have a special logic that handles enabling/disabling of the control. For that purpose additional `igEditorDisable` binding handler is created, which implements the behavior, expected, when using the Knockout `disabled` handler.
 
 #### Related Topics
--   [Configuring Knockout Support (Editors)](Configuring-Knockout-Support-%28Editors%29.html)-   [Grouping with summaries](%%SamplesUrl%%/grid/grouping)
+-   [Configuring Knockout Support (Editors)](Configuring-Knockout-Support-%28Editors%29.html)
 
 
 ## igNumericEditor
