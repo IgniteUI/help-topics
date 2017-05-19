@@ -317,11 +317,11 @@ The following steps demonstrate how to export and add a Bootstrap theme in your 
 3. **Updating the CSS links to replace the Infragistics Theme with the chosen theme**
 	1. Unzip the downloaded file and drag the directory it contains into the themes directory of your website.
 		![](images/Theming_Guide_Changes_6.png)
-	2. Add CSS reference to the exported theme. The code samples below assume the chosen theme is Cyborg and the theme folder has the same name.
+	2. Add CSS reference to the exported theme. The code samples below assume the chosen theme is Metro and the theme folder has the same name.
 	
 	**In HTML:**
 	```html
-	<link href="/css/themes/cyborg/infragistics.theme.css" rel="stylesheet" type="text/css" />
+	<link href="/css/themes/metro/infragistics.theme.css" rel="stylesheet" type="text/css" />
 	```
 	**In ASPX:**
 	```csharp
@@ -329,7 +329,7 @@ The following steps demonstrate how to export and add a Bootstrap theme in your 
 	<!DOCTYPE html>
 	<html>
 	<head runat="server">
-	<link href="<%= Url.Content("~css/themes/cyborg/infragistics.theme.css") %>” rel="stylesheet" type="text/css" />                                
+	<link href="<%= Url.Content("~css/themes/metro/infragistics.theme.css") %>” rel="stylesheet" type="text/css" />                                
 	```
 	3. Add CSS reference to structure theme.
 	
