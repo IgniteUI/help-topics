@@ -334,14 +334,14 @@ Minimum and maximum values on date editors
 
             <td>
 Using `new Date()` for the for the `minValue`, `maxValue` and the `value` options can cause issues as it also has a time component that will be taken into account when evaluating limits (but not included and parsed from the default input format), so it's suggested to parse fixed dates or remove the time component.
-            </td>
+			</td>
 
             <td>
 ![](../images/images/positive.png)
 			</td>
         </tr>
        
-               <tr>
+        <tr>
             <td>
 Android Web View (chrome mobile and android internet browser) doesn’t fire keypress event
 			</td>
