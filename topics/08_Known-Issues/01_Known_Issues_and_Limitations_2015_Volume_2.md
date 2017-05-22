@@ -361,9 +361,9 @@ Exceeding Minimum and maximum values
 
             <td>
 When you use the minValue and maxValue options in the igEditors, you should be aware that if you exceed the maxValue the editor will automatically revert the value to be equal to the maxValue property value. If you enter value that is prior to the minValue, the editor will automatically revert it to the minValue property value. In both cases you will recieve a visual warning that explains why the editor changes the value. 
-         <blockquote>
+                <blockquote>
 **Note**: This limitation is not valid for the igTextEditor, igCheckboxEditor and igMaskEditor.
-        </blockquote>
+                </blockquote>
             </td>
 
             <td>
@@ -847,7 +847,7 @@ The column widths are mandatory and should be defined in pixels units (either ex
 			</td>
         </tr>
 
-<tr>
+        <tr>
             <td>
 The grid scrolls to the top, when a column is unfixed and continuous virtualization is enabled
 			</td>
