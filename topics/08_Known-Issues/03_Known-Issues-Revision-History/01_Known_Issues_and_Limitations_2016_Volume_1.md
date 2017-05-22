@@ -46,6 +46,7 @@ This topic contains the following sections:
     -   [igGridSummaries](#grid-summaries)
     -   [igGridTooltips](#grid-tooltips)
     -   [igGridUpdating](#grid-updating)
+    -   [igGridHiding](#grid-hiding)
     -   [igGridExcelExporter](#grid-exporter)
     -   [Feature Chooser](#feature-chooser)
     -   [igTreeGrid](#tree-grid)
@@ -545,7 +546,7 @@ With auto-generated columns, the source must contain key/value pairs | When the 
 Defining a feature more than once not possible | **In JavaScript:** <br /> In both `igGrid` and `igHierarchicalGrid`™, defining a feature more than once throws an error. <br /> **In MVC:** <br /> In both `igGrid` and `igHierarchicalGrid`, defining a feature more than once in the MVC Wrapper, causes only the last definition to be taken into account. | ![](../images/images/negative.png)
 Checkbox rendering not compatible with templates (row and column) | When using templating and the `renderCheckboxes` option is set to true, the Boolean columns do not render checkboxes because it is not possible to examine if the Boolean column has a template defined. | ![](../images/images/positive.png)
 Setting attributes to table rows with a row template not possible | In both `igGrid` and `igHierarchicalGrid`, setting attributes to table rows cannot be done possible using a row template. | ![](../images/images/positive.png)
-Events not triggered | By design, events only trigger on user interaction. Events do not trigger when the public API is used. | ![](../images/images/negative.png)
+Calling API methods does not raise the directly related events. | Calling API methods programmatically does not raise events related to their operation. Those events are only raised by their respective user interaction. | ![](../images/images/negative.png)
 KnockoutJS observable array functions’ limitations | The use of `unshift`, `reverse` and `sort` observable array functions results in incorrect visual appearance of the grid. | ![](../images/images/positive.png)
 The id attribute is mandatory for the DOM control placeholder| The id attribute should be set on the DOM element on which the grid is initialized. Grid use jQuery ID selector internally for faster selection.| ![](../images/images/negative.png)
 Column keys which contain spaces are not supported|Column keys are used for generating some DOM elements IDs. Having spaces in an HTML id attribute is not allowed according to the <a href="http://www.w3.org/TR/html5/dom.html#the-id-attribute" target="_blank">HTML 5 specification</a>.| ![](../images/images/negative.png)
@@ -1052,6 +1053,14 @@ Adding and updating a virtual grid doesn’t work if it is grouped | When using 
 Updating rows/cells when the Updating and Continuous Virtualization features are enabled while [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) is disabled is not supported. | Editing rows/cells with Updating when the [`autoCommit`](%%jQueryApiUrl%%/ui.iggrid#options:autoCommit) grid option is set to false and Continuous Virtualization is enable will throw exception. | ![](../images/images/positive.png)
 Keyboard navigation while in edit mode does not wrap-around if virtualization is enabled. | When virtualization is enabled keyboard navigation with Tab/Shift+Tab when edit mode is "cell" and keyboard navigation with Enter/Shift+Enter when edit mode is "row" will not wrap-around. When reaching the last row/cell and navigating to the next one the first row/cell will not enter edit mode and the same will happend when reaaching the first row/cell and navigating to the previous one - the last row/cell will not enter edit mode. | ![](../images/images/negative.png)
 Keyboard navigation not supported for column virtualization | Keyboard navigation is not supported for column virtualization. | ![](../../images/images/negative.png)
+
+Go up to [Known Issues and Limitations Summary](#summary)
+
+### <a id="grid-hiding"></a> igGridHiding
+
+Issue | Description | Status
+---|---|---
+Hidden column indicator is not displayed correctly when having MultiColumnHeaders. | When hiding a root header element the hiding indicator may be shown under another visible column group, creating the incorrect impression that the hidden column belongs to that group.| ![](../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
