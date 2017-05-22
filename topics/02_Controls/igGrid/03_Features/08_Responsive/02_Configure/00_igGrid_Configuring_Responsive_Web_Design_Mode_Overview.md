@@ -44,8 +44,6 @@ This topic contains the following sections:
     -   [Custom RWD mode configurations](#custom-configurations)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
-
 
 
 ## <a id="overview"></a> Configuring Responsive Web Design (RWD) Overview
@@ -110,20 +108,3 @@ The following topics provide additional information related to this topic.
 - [Creating Custom Responsive Web Design (RWD) Profiles (igGrid)](igGrid-Responsive-Web-Design-Mode-Creating-Custom-Profile.html): This topic explains, with code examples, how to create custom Responsive Web Design (RWD) mode profiles for the `igGrid` control.
 
 - [Configuring Bootstrap Support (igGrid, RWD Mode)](igGrid-Responsive-Web-Design-Mode-Configuring-Bootstrap-Support.html): This topic explains how to configure Responsive Web Design (RWD) mode for the `igGrid` control using Twitter Bootstrap’s RWD classes.
-
-
-### <a id="samples"></a> Samples
-
-The following samples provide additional information related to this topic.
-
-- [Responsive Web Design Mode](%%SamplesUrl%%/grid/responsive-web-design-mode): This sample demonstrates the `igGrid`’s Responsive Web Design mode feature. Responsive Web Design mode allows you to support multiple screen sizes and form factors with single code base and design.
-
-
-
-
-
- 
-
- 
-
-

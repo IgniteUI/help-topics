@@ -52,8 +52,6 @@ This topic contains the following sections:
     -   [RWD mode default profiles configuration](#profiles-configuration)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
-
 
 
 ## <a id="introduction"></a> Introduction
@@ -383,13 +381,6 @@ The following topics provide additional information related to this topic.
 - [Enabling Responsive Web Design (RWD) Mode (igGrid)](igGrid-Enabling-Responsive-Web-Design-Mode.html): This topic explains, with code examples, how to enable the Responsive Web Design (RWD) mode in the `igGrid` control.
 
 - [Configuring Responsive Web Design (RWD) Mode (igGrid)](igGrid-Configuring-Responsive-Web-Design-Mode-LandingPage.html): This is a group of topics explaining the various configuration tasks related to the Responsive Web Design (RWD) mode in the `igGrid` control, like configuring column hiding, creating custom row and column templates, creating custom RWD configurations, and configuring RWD mode for use with Twitter Bootstrap.
-
-
-### <a id="samples"></a> Samples
-
-The following samples provide additional information related to this topic.
-
-- [Responsive Web Design Mode](%%SamplesUrl%%/grid/responsive-web-design-mode): This sample demonstrates the `igGrid`’s Responsive Web Design mode feature. Responsive Web Design mode allows you to support multiple screen sizes and form factors with single code base and design.
 
 
 

@@ -387,7 +387,7 @@ Following is a conceptual overview of the process:
 
 2.  **Configure remote filtering.**
 
-    Finally, the `ComboDataSourceAction` requires some properties set. The `DataSourceUrl` points to the `ActionResult` method name. Also, the `FilterExprUrlKey` should be set to “filter” which is the URL parameter required by the ComboDataSourceAction. The value of the `FilterExprUrlKey` option can be set to any string. This string is passed as a token in the request URL to identify the filtering expression to the server. The reason the `FilterExprUrlKey` is set to ‘filter’ when using the ASP.NET MVC Helper is because the logic of the `ComboDataSourceAction` specifically looks for ‘filter’ in the request URL query parameters to extract the filtering expression information.
+    Finally, the `ComboDataSourceAction` requires some properties set. The `DataSourceUrl` points to the `ActionResult` method name. Also, the `FilterExprUrlKey` should be set to "filter" which is the URL parameter required by the `ComboDataSourceAction`. This string is passed as a parameter in the request URL to send the filtering expression to the server. The reason the `FilterExprUrlKey` is set to "filter" when using the ASP.NET MVC Helper is because the logic of the `ComboDataSourceAction` specifically looks for "filter" in the request URL query parameters to extract the filtering expression information.
 
     **In C#:**
 

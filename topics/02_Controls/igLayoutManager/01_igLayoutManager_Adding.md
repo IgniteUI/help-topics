@@ -80,121 +80,82 @@ The following table summarizes the requirements for `igLayoutManager` control.
 			<th>
 				Requirement / Required Resource
 			</th>
-
 			<th>
 				Description
 			</th>
-
 			<th>
 				What you need to do…
 			</th>
 		</tr>
-
 		<tr>
 			<td>
 				jQuery and jQuery UI JavaScript resources
 			</td>
-
 			<td>
 				Ignite UI is built on top of these frameworks:
-
 				<ul>
 					<li><a class="ig-topic-link" href="http://jquery.com/" target="_blank">jQuery</a></li>
-
 					<li><a class="ig-topic-link" href="http://jqueryui.com/" target="_blank">jQuery UI</a></li>
 				</ul>
 			</td>
-
 			<td>
 				Add script references to both libraries in the &lt;head&gt; section of your page.
 			</td>
 		</tr>
-
 		<tr>
 			<td>
 				igLayoutManager JavaScript resources
 			</td>
-
 			<td>
 				The igLayoutManager functionality of the Ignite UI library is distributed across several files. You can load the required resources in one of the following ways:
-
 				<ul>
 					<li>(Recommended) <a href="Using-Infragistics-Loader.html" data-auto-update-caption="true">**Using Infragistics Loader**</a> (igLoader™). You only need to include a script reference to igLoader on your page.</li>
-
 					<li>Load the required resources manually. You need to use the dependencies listed in the table below.</li>
 				</ul>
-
-				The following table lists the Ignite UI library dependences related to the igLayoutManager control. These resources need to be referred to explicitly if you chose to load resources manually (i.e. not to use igLoader).
-
-				<table cellspacing="0" cellpadding="0">
-					<tbody>
-						<tr>
-							<th>
-								JS Resource
-							</th>
-
-							<th>
-								Description
-							</th>
-						</tr>
-
-						<tr>
-							<td>infragistics.ui.layoutmanager.js</td>
-
-							<td>
-								The igLayoutManager control
-							</td>
-						</tr>
-					</tbody>
-				</table><br>
+				<div>Below are listed the Ignite UI library dependences related to the igLayoutManager control. These resources need to be referred explicitly if you choоse to load resources manually (i.e. not to use igLoader).
+				</div>
+                <br />
+                <div>
+                    <b>JS Resource</b> - infragistics.ui.layoutmanager.js
+				</div>
+                <div>
+                    <b>Description</b> - The igLayoutManager control
+                </div>
+                <br />
 			</td>
-
 			<td>
 				Add one of the following:
-
 				<ul>
 					<li>A reference to igLoader</li>
-
 					<li>A reference to all the required JavaScript files (listed in the table on the left).</li>
 				</ul>
 			</td>
 		</tr>
-
 		<tr>
 			<td>
 				IG theme
-
 				*(Optional)*
 			</td>
-
 			<td>
 				This theme contains the visual styles for the Ignite UI library. The theme file is:
-
 				{IG CSS root}/themes/Infragistics/infragistics.theme.css
 			</td>
-
 			<td></td>
 		</tr>
-
 		<tr>
 			<td>
 				igLayoutManager structure
 			</td>
-
 			<td>
 				The styles from the following CSS file are used for rendering various elements of the control:
-
 				{IG CSS root}/structure/modules/infragistics.ui.layout.css
 			</td>
-
 			<td>
 				Add style reference to the file in your page.
 			</td>
 		</tr>
 	</tbody>
 </table>
-
-
 
 >**Note:**It is recommended to use the `igLoader` component to load JavaScript and CSS resources. For information on how to do this, refer to the [Adding Required Resources Automatically with the Infragistics Loader](Using-Infragistics-Loader.html) topic. In addition to that, in the online [Ignite UI Samples Browser](%%SamplesUrl%%), you can find some specific examples on how to use the `igLoader` with the `igLayoutManager` component.
 
@@ -401,7 +362,7 @@ The following sample demonstrates initializing the Layout Manager control's Bord
 </div>
 
 
-##<a id="mvc-procedure"></a>Adding igLayoutManager in the ASP.NET MVC – Procedure 
+##<a id="mvc-procedure"></a>Adding igLayoutManager in the ASP.NET MVC – Procedure
 
 ### <a id="mvc-introduction"></a>Introduction
 
@@ -444,7 +405,7 @@ The required resources added and properly referenced. (For a conceptual overview
 
     ```csharp
     @(Html.Infragistics()
-            .Loader()     
+            .Loader()
             .ScriptPath("http://localhost/ig_ui/js/")
             .CssPath("http://localhost/ig_ui/css/")
             .Render()
@@ -521,8 +482,8 @@ The following samples provide additional information related to this topic.
 
 
 
- 
 
- 
+
+
 
 

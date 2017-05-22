@@ -244,7 +244,7 @@ The following topics provide additional information related to this topic.
 
 The following samples provide additional information related to this topic.
 
-- [Selection](%%SamplesUrl%%/hierarchical-grid/selection): This sample demonstrates configuration of selection feature in igHierarchicalGrid.
+- [Selection](%%SamplesUrl%%/hierarchical-grid/selection-rowselectors): This sample demonstrates configuration of selection feature in igHierarchicalGrid.
 
 
 

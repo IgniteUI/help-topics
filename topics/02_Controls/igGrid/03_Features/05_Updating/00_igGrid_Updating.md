@@ -108,8 +108,7 @@ By enabling the Updating feature, you enable adding, removing or updating the da
 
 The `igLoader` control is the recommended way to load JavaScript and CSS resources required by the Ignite UI library controls. First the `igLoader` script must be included in the page:
 
-**In JavaScript:**
-
+**In HTML:**
 ```js
 <script type="text/javascript" src="ig_ui/js/infragistics.loader.js"></script>
 ```
@@ -135,6 +134,8 @@ $.ig.loader({
 ```html
 <script src="scripts/jquery.min.js" type="text/javascript"></script>
 <script src="scripts/ig_ui/js/modules/infragistics.ui.grid.updating.js" type="text/javascript"></script>
+<script src="scripts/ig_ui/js/modules/infragistics.ui.grid.shared.js" type="text/javascript"></script>
+<script src="scripts/ig_ui/js/modules/infragistics.ui.editors.js" type="text/javascript"></script>
 ```
 
 The snippet below demonstrates how to configure the `igGrid` to support updating.
@@ -161,18 +162,26 @@ $("#grid1").igGrid({
 
 > **Note:** Updating requires `primaryKey` option to be set and also `dataType` property for the primary key column, otherwise underlying data source may not work as expected.
 
-**In ASPX (MVC):**
+**In Razor:**
 
 ```csharp
-<%= Html.Infragistics().Grid(Model).ID("grid1").PrimaryKey("ProductID").UpdateUrl(Url.Action("UpdatingSaveChanges")).Columns(column =>
+<%= Html.Infragistics().Grid(Model)
+.ID("grid1")
+.PrimaryKey("ProductID")
+.UpdateUrl(Url.Action("UpdatingSaveChanges"))
+.Columns(column =>
     {
         column.For(x => x.ProductID).HeaderText("Product ID").Width("100px");
         column.For(x => x.Name).HeaderText("Product Name").Width("200px");
         column.For(x => x.ProductNumber).HeaderText("Product Number").Width("200px");
-    }).Features(features => {
+    })
+.Features(features => {
         features.Updating();
-    }).Height("500").DataSourceUrl(Url.Action("UpdatingGetData"))
-	.DataBind().Render()%>
+    })
+.Height("500")
+.DataSourceUrl(Url.Action("UpdatingGetData"))
+.DataBind()
+.Render()%>
 ```
 
 ## <a id="disable-row-add-delete"></a> Disabling row adding, row updating and row deleting 
@@ -191,17 +200,15 @@ $("#grid1").igGrid({
     features: [
         {
             name : 'Updating',
-                     enableAddRow: true,
-                     enableDeleteRow: true,
-                     editMode: 'none'
-            columnSettings: [
-            ]
+            enableAddRow: true,
+            enableDeleteRow: true,
+            editMode: 'none'
         }
     ]
 });
 ```
 
-**In ASPX (MVC):**
+**In Razor:**
 
 ```csharp
 <%=Html.Infragistics().Grid(Model).ID("grid1").PrimaryKey("ProductID").UpdateUrl(Url.Action("UpdatingSaveChanges")).Columns(column =>
@@ -234,13 +241,32 @@ Property name (default values in parenthesis) | Description
 
 
 
-### <a id="retrieving-columnsettings"></a> Retrieving the columnSettings object 
+### <a id="retrieving-columnsettings"></a> Updating columnSettings 
 
 **In Javascript:**
 
 ```js
-var grid = $('#grid1').data('igGridUpdating');
-var updating = grid.options.columnSettings;
+$("#grid").igGrid({
+    features: [
+        {
+            name: "Updating",
+            columnSettings: [
+                {
+                    columnKey : "Name",
+                    defaultValue: "Infragistics",
+                    editorType: "text",
+                    editorOptions: {
+                        buttonType: "dropdown",
+                        listItems: names,
+                        readOnly: true
+                    },
+                    required: true,
+                    validation: true
+                }
+            ]
+        }
+    ]
+});
 ```
 
 ### <a id="columnsettings-example"></a> Example usage of columnSettings and adding editors 
@@ -250,64 +276,93 @@ var updating = grid.options.columnSettings;
 ```js
 $("#grid1").igGrid({
     columns: [
-	    {headerText:"Product ID", key:"ProductID", width: "100px" , dataType:"number"},
-	    {headerText:"Product Name", key:"Name", width: "180px" , dataType:"string"},
-	    {headerText:"ProductNumber", key:"ProductNumber", width: "100px", dataType:"string" },
-	    {headerText:"Color", key:"Color", width: "100px", dataType:"string" },
-	    {headerText:"SafetyStockLevel", key:"SafetyStockLevel", width: "100px", dataType:"string" },
-	    {headerText:"ReorderPoint", key:"ReorderPoint", width: "100px", dataType:"number" },
-	    {headerText:"ListPrice", key:"ListPrice", width: "100px", dataType:"number" },
+	    { headerText:"Product ID", key:"ProductID", width: "100px" , dataType:"number" },
+	    { headerText:"Product Name", key:"Name", width: "180px" , dataType:"string" },
+	    { headerText:"ProductNumber", key:"ProductNumber", width: "100px", dataType:"string" },
+	    { headerText:"Color", key:"Color", width: "100px", dataType:"string" },
+	    { headerText:"SafetyStockLevel", key:"SafetyStockLevel", width: "100px", dataType:"string" },
+	    { headerText:"ReorderPoint", key:"ReorderPoint", width: "100px", dataType:"number" },
+	    { headerText:"ListPrice", key:"ListPrice", width: "100px", dataType:"number" },
 	],
 	dataSource: adventureWorks,
     features: [
         {
             name: 'Updating',
-               columnSettings: [ {
-            columnKey: "ProductID",
-            editorOptions: {readOnly: true}
-         }, {
-            columnKey: "Name",
-            editorType: 'string',
-            validation: true,
-            editorOptions: {required: true}
-         }, {
-            columnKey: "ProductNumber",
-            editorType: 'string',
-            validation: true,
-            editorOptions: {required: true}
-         }, {
-            columnKey: "Color",
-            editorType: 'string',
-            validation: false,
-            editorOptions: {required: false}
-         }, {
-            columnKey: "SafetyStockLevel",
-            editorType: 'numeric',
-            validation: true,
-            editorOptions: {required: true}
-         }, {
-            columnKey: "ReorderPoint",
-            editorType: 'numeric',
-            validation: true,
-            editorOptions: {required: true}
-         }, {
-            columnKey: "ListPrice",
-            editorType: 'numeric',
-            validation: true,
-            editorOptions: {button: 'spin', minValue: 0, maxValue: 99, required: true}
-         }, {
-            columnKey: "StandardCost",
-            editorType: 'currency',
-            validation: true,
-            editorOptions: {button: 'spin', required: true}
-         } ]
+            columnSettings: [ 
+            {
+                columnKey: "ProductID",
+                editorOptions: {
+                    readOnly: true
+                }
+            }, 
+            {
+                columnKey: "Name",
+                editorType: 'string',
+                validation: true,
+                editorOptions: {
+                    required: true
+                }
+            },
+            {
+                columnKey: "ProductNumber",
+                editorType: 'string',
+                validation: true,
+                editorOptions: {
+                    required: true
+                }
+             },
+            {
+                columnKey: "Color",
+                editorType: 'string',
+                validation: false,
+                editorOptions: {
+                    required: false
+                }
+            },
+            {
+                columnKey: "SafetyStockLevel",
+                editorType: 'numeric',
+                validation: true,
+                editorOptions: {
+                    required: true
+                }
+            }, 
+            {
+                columnKey: "ReorderPoint",
+                editorType: 'numeric',
+                validation: true,
+                editorOptions: {
+                    required: true
+                }
+            },
+            {
+                columnKey: "ListPrice",
+                editorType: 'numeric',
+                validation: true,
+                editorOptions: {
+                    button: 'spin', 
+                    minValue: 0, 
+                    maxValue: 99, 
+                    required: true
+                }
+            }, 
+            {
+                columnKey: "StandardCost",
+                editorType: 'currency',
+                validation: true,
+                editorOptions: {
+                    button: 'spin', 
+                    required: true
+                }
+            } 
+            ]
           
         }
     ]
 });
 ```
 
-**In ASPX (MVC):**
+**In Razor:**
 
 ```csharp
 <%= Html.Infragistics().Grid(Model).ID("grid1").PrimaryKey("ProductID").UpdateUrl(Url.Action("UpdatingSaveChanges")).Columns(column =>
@@ -343,21 +398,28 @@ function getTempKey(){
 
 $("#grid1").igGrid({
     columns: [
-      {headerText:"Product ID", key:"ProductID", width: "100px" , dataType:"number"},
-      {headerText:"Product Name", key:"Name", width: "180px" , dataType:"string"}
+      { headerText:"Product ID", key:"ProductID", width: "100px" , dataType:"number" },
+      { headerText:"Product Name", key:"Name", width: "180px" , dataType:"string" }
     ],
-    dataSource: adventureWorks,        primaryKey: 'ProductID',
-    features: [ {
-       name: 'Updating',
-       generatePrimaryKeyValue: function (evt, ui) {
-          // setting a temporary key for the new row          
-          ui.value = getTempKey();
-       },
-       columnSettings: [ {
-         columnKey: "ProductID",
-         editorOptions: {readOnly: true}
-       } ]
-    } ]
+    dataSource: adventureWorks,        
+    primaryKey: 'ProductID',
+    features: [ 
+        {
+            name: 'Updating',
+            generatePrimaryKeyValue: function (evt, ui) {
+                // setting a temporary key for the new row          
+                ui.value = getTempKey();
+            },
+            columnSettings: [ 
+                {
+                    columnKey: "ProductID",
+                    editorOptions: {
+                        readOnly: true
+                    }
+                } 
+            ]
+        } 
+    ]
 });
 ```
 
@@ -368,9 +430,9 @@ When save changes to the data in the grid to the server, the `saveChanges` is ca
 ### <a id="persist-changes"></a> Persisting the changes to the server 
 Adding batch updates to an instantiated grid requires that you use the live method instead of bind in order to add batch updates to an existing grid.
 
-**In C#:**
+**In JavaScript:**
 
-```csharp
+```js
 <script type="text/javascript">  $("#saveChanges").bind({
             click: function (e) {
                 $("#grid1").igGrid("saveChanges");
@@ -378,7 +440,7 @@ Adding batch updates to an instantiated grid requires that you use the live meth
         });
 </script> 
 ```
-
+**In Razor:**
 ```
 	<%= Html.Infragistics().Grid(Model).ID("grid1").PrimaryKey("ProductID").UpdateUrl(Url.Action("UpdatingSaveChanges")).Columns(column =>
 	{
@@ -409,7 +471,7 @@ The action methods implemented below demonstrate how to accept an Ajax post to p
 
 Use the [GridModel.LoadTransactions](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridModel~LoadTransactions.html) method to convert the post data to [Transaction](Infragistics.Web.Mvc~Infragistics.Web.Mvc.Transaction`1.html) objects. Row data is saved in [Transaction.row](Infragistics.Web.Mvc~Infragistics.Web.Mvc.Transaction`1~row.html) field.
 
-**In ASPX(MVC):**
+**In C#:**
 
 ```csharp
 public ActionResult UpdatingSaveChanges()
@@ -452,7 +514,7 @@ Use the [GridModel.LoadTransactions](Infragistics.Web.Mvc~Infragistics.Web.Mvc.G
 
 > **Note:** The cell values of DateTime fields should be parsed using the [GridModel.JsonStringToDateTime](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridModel~JsonStringToDateTime.html) method, because they are serialized using Microsoft format for serializing dates (Example: /Date(1356991200000)/).
 
-**In ASPX(MVC):**
+**In C#**
 
 ```csharp
 public ActionResult UpdatingSaveChanges()
@@ -674,8 +736,8 @@ Following are some other topics you may find useful.
 ## <a id="samples"></a> Related Samples 
 
 Following are some samples you may find useful.
--   [Basic Editing](%%SamplesUrl%%/grid/basic-editing)
--   [Binding Real-Time Data](%%SamplesUrl%%/grid/binding-real-time-data)
+-   [Editing](%%SamplesUrl%%/grid/basic-editing)
+-   [Live Updates](%%SamplesUrl%%/grid/binding-real-time-data)
  
 
  

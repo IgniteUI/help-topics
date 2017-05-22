@@ -17,6 +17,9 @@ This topic covers samples with Ignite UI directives for AngularJS.
 
 This topic contains the following sections:
 -   [Requirements](#requirements)
+-   [Grid Sample](#grid_sample)
+    -   [Preview](#grid_sample_preview)
+    -   [Details](#grid_sample_details)
 -   [Editors Sample](#editors_sample)
     -   [Preview](#editors_sample_preview)
     -   [Details](#editors_sample_details)
@@ -29,6 +32,9 @@ This topic contains the following sections:
 -   [Tree Sample](#tree_sample)
     -   [Preview](#tree_sample_preview)
     -   [Details](#tree_sample_details)
+-   [Map Sample](#map_sample)
+    -   [Preview](#map_sample_preview)
+    -   [Details](#map_sample_details)
 -   [Layout Manager Sample](#lm_sample)
     -   [Preview](#lm_preview)
     -   [Details](#lm_details)
@@ -41,6 +47,19 @@ This topic contains the following sections:
 In order to run this sample, you need to have:
 -   The required Ignite UI JavaScript and CSS files
 -   The Ignite UI AngularJS directives
+
+### <a id="grid_sample"></a>Grid Sample​
+This sample will demonstrate how we can use `igGrid` with AngularJS.
+
+#### <a id="grid_sample_preview"></a>Preview
+The following is a preview of the final result.
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/grid/angular](%%SamplesEmbedUrl%%/grid/angular)
+</div>
+
+#### <a id="grid_sample_details"></a>Details
+This sample demonstrates how AngularJS directives are used with the igGrid when `Updating`, `Paging` and `Sorting` features are activated.
 
 ### <a id="editors_sample"></a>Editors Sample​
 This sample will demonstrate how we can use `igEditors` with AngularJS.
@@ -94,8 +113,20 @@ The following is a preview of the final result.
 #### <a id="tree_sample_details"></a>Details
 In this sample we use the `igTree` AngularJS directive. Firstly we introduce a `data` variable in our controller which holds the data source. Then we declare an `igTree` AngularJS directive and bind it to the `data` variable.
 
+### <a id="map_sample"></a>Map Sample
+This sample will demonstrate how we can use `igMap` with AngularJS.
 
-### <a id="lm_sample"></a>Layout Manager Sample​
+#### <a id="map_sample_preview"></a>Preview
+The following is a preview of the final result.
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/map/angular](%%SamplesEmbedUrl%%/map/angular)
+</div>
+
+#### <a id="map_sample_details"></a>Details
+In the sample above we show how a zoomable map can be initialized using an AngularJS directive.
+
+### <a id="lm_sample"></a>Layout Manager Sample
 This sample demonstrates how `AngularJS` directives are used to instantiate `igLayoutManager`.
 
 #### <a id="lm_preview"></a>Preview

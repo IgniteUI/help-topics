@@ -91,7 +91,7 @@ The code below demonstrates how to inherit the Sorting feature, when using the i
 ```
 
 ## <a id="custom"></a> Customizing the Features and Properties Defined Through Inheritance 
-There are cases when you inherit some feature in the parent grid and then define new settings in the child one. Then the igHierarchicalGrid internally merges the both option sets and, if some of the options are duplicated, the custom ones t in the child layout will have higher selection priority.
+There are cases when you inherit some feature in the parent grid and then define new settings in the child one. Then the igHierarchicalGrid internally merges the both option sets and, if some of the options are duplicated, the custom ones in the child layout will have higher selection priority.
 
 ## <a id="remote"></a> Enable Remote features for the child layouts in MVC
 When one or more of the child layouts has a remote feature enabled(either explicitly or by inheritance) igHierarchicalGrid cannot be initialized in the View. Since MVC is stateless, the grid needs to be aware on each remote request of the layout hierarchy and the features enabled on each layout. This is accomplished by configuring the igHierarchicalGrid properties in either the Controller or in the Model. Each child layout needs to have a separate action method which will process its remote feature(s) requests, thus a DataSourceUrl must be set. For an example configuration see the [Loading data on demand](igHierarchicalGrid-Load-on-Demand.html) topic.

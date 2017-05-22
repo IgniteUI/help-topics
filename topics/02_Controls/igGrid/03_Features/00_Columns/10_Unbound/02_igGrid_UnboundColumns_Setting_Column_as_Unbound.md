@@ -33,7 +33,6 @@ This topic contains the following sections:
 -   [Setting a Column as Unbound in ASP.NET MVC (Code Example)](#mvc)
 -   [Related Content](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
 
 
 
@@ -185,12 +184,6 @@ The Controller contains 2 methods, the `GetEmployees` method returns a list of E
 The following topic provides additional information related to this topic.
 
 - [Working with Unbound Columns(igGrid)](igGrid-UnboundColumns-Working-with-LandingPage.html): This group of topics explains how an unbound column can be populated with data on the client or on the server.
-
-### <a id="samples"></a> Samples
-
-The following samples provide additional information related to this topic.
-
-- [Unbound Column](%%SamplesUrl%%/grid/unbound-column): The sample demonstrates adding and configuring unbound columns in the `igGrid` control.
 
  
 

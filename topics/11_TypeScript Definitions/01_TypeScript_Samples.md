@@ -17,6 +17,9 @@ This topic covers samples with Ignite UI controls and TypeScript.
 
 This topic contains the following sections:
 -   [Requirements](#requirements)
+-   [Grid Sample](#grid_sample)
+    -   [Preview](#grid_sample_preview)
+    -   [Details](#grid_sample_details)
 -   [Editors Sample](#editors_sample)
     -   [Preview](#editors_sample_preview)
     -   [Details](#editors_sample_details)
@@ -29,6 +32,9 @@ This topic contains the following sections:
 -   [Templating Engine Sample](#templating_engine_sample)
     -   [Preview](#templating_engine_preview)
     -   [Details](#templating_engine_steps)
+-   [Data Chart Sample](#data_chart_sample)
+    -   [Preview](#data_chart_preview)
+    -   [Details](#data_chart_details)
 -   [Pie Chart Sample](#pie_chart_sample)
     -   [Preview](#pie_chart_preview)
     -   [Details](#pie_chart_details)
@@ -44,12 +50,76 @@ This topic contains the following sections:
 -   [Pivot View Sample](#pivot_view_sample)
     -   [Preview](#pivot_view_preview)
     -   [Details](#pivot_view_details)
+-   [Map Sample](#map_sample)
+    -   [Preview](#map_sample_preview)
+    -   [Details](#map_sample_details)
+-   [Loader Sample](#loader_sample)
+    -   [Preview](#loader_sample_preview)
+    -   [Details](#loader_sample_details)
 -   [Related Content](#related_content)
 
 ### <a id="requirements"></a>Requirements
 In order to run these samples, you need to have:
 -   The required Ignite UI JavaScript and CSS files
 -   The required Ignite UI TypeScript definitions
+
+
+### <a id="grid_sample"></a>Grid Sample​
+This sample will demonstrate how we can use `igGrid` with TypeScript.
+
+#### <a id="grid_sample_preview"></a>Preview
+The following screenshot is a preview of the final result.
+
+![](images/igGrid_TypeScript.PNG)
+
+#### <a id="grid_sample_details"></a>Details
+This sample will demonstrate how to use TypeScript for creating igGrid and features like Paging, Filtering and Sorting.
+
+**In HTML:**
+```html
+	<table id="grid1"></table>
+```
+We use the adventureWorks data source to populate the igGrid.
+
+```js
+var adventureWorks = [
+    { "ProductID": 1, "Name": "Adjustable Race", "ProductNumber": "AR-5381", "MakeFlag": false, "FinishedGoodsFlag": false, "Color": null, "SafetyStockLevel": 1000, "ReorderPoint": 750, "StandardCost": 0.0000, "ListPrice": 0.0000, "Size": null, "SizeUnitMeasureCode": null, "WeightUnitMeasureCode": null, "Weight": null, "DaysToManufacture": 0, "ProductLine": null, "Class": null, "Style": null, "ProductSubcategoryID": null, "ProductModelID": null, "SellStartDate": "\/Date(896648400000)\/", "SellEndDate": null, "DiscontinuedDate": null, "rowguid": "694215b7-08f7-4c0d-acb1-d734ba44c0c8", "ModifiedDate": "\/Date(1078992096827)\/" }, 
+    { "ProductID": 2, "Name": "Bearing Ball", "ProductNumber": "BA-8327", "MakeFlag": false, "FinishedGoodsFlag": false, "Color": null, "SafetyStockLevel": 1000, "ReorderPoint": 750, "StandardCost": 0.0000, "ListPrice": 0.0000, "Size": null, "SizeUnitMeasureCode": null, "WeightUnitMeasureCode": null, "Weight": null, "DaysToManufacture": 0, "ProductLine": null, "Class": null, "Style": null, "ProductSubcategoryID": null, "ProductModelID": null, "SellStartDate": "\/Date(896648400000)\/", "SellEndDate": null, "DiscontinuedDate": null, "rowguid": "58ae3c20-4f3a-4749-a7d4-d568806cc537", "ModifiedDate": "\/Date(1078992096827)\/" } ...
+]
+```
+
+We initialize the grid in TypeScript.
+
+**In TypeScript:**
+```typescript
+/// <reference path="http://www.igniteui.com/js/typings/jqueryui.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/jquery.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/igniteui.d.ts" />
+declare var adventureWorks: any;
+$(function () {
+    $("#grid1").igGrid({
+        width: "100%",
+        columns: [
+            { headerText: "Product ID", key: "ProductID", dataType: "number", width: "15%" },
+            { headerText: "Product Name", key: "Name", dataType: "string", width: "40%" },
+            { headerText: "Product Number", key: "ProductNumber", dataType: "string", width: "30%" },
+            { headerText: "Make Flag", key: "MakeFlag", dataType: "bool", width: "15%" }
+        ],
+        dataSource: adventureWorks,
+        features: [
+            {
+                name: "Paging"
+            },
+            {
+                name: "Sorting"
+            },
+            {
+                name: "Filtering"
+            }
+        ],
+	});
+});
+```
 
 ### <a id="editors_sample"></a>Editors Sample​
 This sample will demonstrate how we can use `igEditors` with TypeScript.
@@ -100,7 +170,7 @@ Create the HTML - we are going to have different editors - Text Editor, Date Edi
 			Percent editor
 		</h4>
 		<div id="percentEditor"></div>
-	</div> 
+	</div>
 </div>
 ```
 We initialize the editors in TypeScript.
@@ -479,8 +549,123 @@ $(function () {
 });
 ```
 
+### <a id="data_chart_sample"></a>Data Chart Sample
+This sample demonstrates how to create Data Chart in TypeScript using class-based approach for configuring data.
+#### <a id="data_chart_preview"></a>Preview
+The following screenshot is a preview of the final result.
+
+![](images/igDataChart_TypeScript.png)
+
+#### <a id="data_chart_details"></a></a>Details
+
+Create the HTML
+**In HTML:**
+```html
+<div id="data-chart"></div>
+
+<div class="USCensus-attribution">
+	Population data from:<br>
+	<a href="http://www.census.gov/" target="_blank">U.S. Census Bureau</a>
+</div>
+```
+
+Create the Data Source abd the `igPieChart` in TypeScript
+**In TypeScript:**
+```typescript
+/// <reference path="http://www.igniteui.com/js/typings/jquery.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/jqueryui.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/igniteui.d.ts" />
+
+class CountryPopulation {
+    countryName: string;
+    population2005: number;
+    population1995: number;
+    constructor(inName: string, populationIn1995: number, populationIn2005: number) {
+        this.countryName = inName;
+        this.population2005 = populationIn2005;
+        this.population1995 = populationIn1995;
+    }
+
+}
+
+var samplePopulation: CountryPopulation[] = [];
+samplePopulation.push(new CountryPopulation("China", 1216,  1297));
+samplePopulation.push(new CountryPopulation("India", 920, 1090));
+samplePopulation.push(new CountryPopulation("United States", 266, 295));
+samplePopulation.push(new CountryPopulation("Indonesia", 197, 229));
+samplePopulation.push(new CountryPopulation("Brazil", 161, 186));
+
+$(function () {
+    $("#data-chart").igDataChart({
+        width: "80%",
+        height: "400px",
+        title: "Population per Country",
+        subtitle: "Five largest projected populations for 1995 and 2005",
+        dataSource: samplePopulation,
+        axes: [
+            {
+                name: "NameAxis",
+                type: "categoryX",
+                title: "Country",
+                label: "countryName"
+            },
+            {
+                name: "PopulationAxis",
+                type: "numericY",
+                minimumValue: 0,
+                title: "Millions of People",
+            }
+        ],
+        series: [
+            {
+                name: "1995Population",
+                title: "1995",
+                type: "column",
+                isDropShadowEnabled: true,
+                useSingleShadow: false,
+                shadowColor: "#666666",
+                isHighlightingEnabled: true,
+                isTransitionInEnabled: true,
+                xAxis: "NameAxis",
+                yAxis: "PopulationAxis",
+                valueMemberPath: "population1995",
+                showTooltip: true
+            },
+            {
+                name: "2005Population",
+                title: "2005",
+                type: "column",
+                isDropShadowEnabled: true,
+                useSingleShadow: false,
+                shadowColor: "#666666",
+                isHighlightingEnabled: true,
+                isTransitionInEnabled: true,
+                xAxis: "NameAxis",
+                yAxis: "PopulationAxis",
+                valueMemberPath: "population2005",
+                showTooltip: true
+            },
+            {
+                name: "categorySeries",
+                type: "categoryToolTipLayer",
+                useInterpolation: false,
+                transitionDuration: 150
+            },
+            {
+                name: "crosshairLayer",
+                title: "crosshair",
+                type: "crosshairLayer",
+                useInterpolation: false,
+                transitionDuration: 500
+            }
+        ]
+    });
+})
+```
+
 ### <a id="pie_chart_sample"></a>Pie Chart Sample
 This sample will demonstrate the use of TypeScript for creating Pie Chart control with a legend and different options for the layout.
+
 #### <a id="pie_chart_preview"></a>Preview
 The following screenshot is a preview of the final result.
 
@@ -1097,6 +1282,236 @@ $(function () {
 
 ```
 
+### <a id="map_sample"></a>Map Sample
+This sample demonstrates how to use TypeScript to bind database and shape files with countries of the world to the Map control using a geographic shapes series.
+
+#### <a id="map_sample_preview"></a>Preview
+The following screenshot is a preview of the final result.
+
+![](images/igMap_TypeScript.png)
+
+#### <a id="map_sample_details"></a></a>Details
+
+Create the HTML - we are going to create a map that is showing a tooltip when a country is hovered.
+
+**In HTML:**
+```html
+<script id="geoShapeTooltip" type="text/x-jquery-tmpl">
+	<table id="tooltipTable">
+		<tr>
+			<th colspan="2">
+				${item.fieldValues.NAME}, ${item.fieldValues.REGION}
+			</th>
+		</tr>
+		<tr>
+			<td>Population:</td>
+			<td>${item.fieldValues.POP2005}</td>
+		</tr>
+	</table>
+</script>
+
+<div id="map"></div>
+```
+Initialize the `igMap` and define the geographic shapes series.
+
+**In TypeScript:**
+```typescript
+/// <reference path="http://www.igniteui.com/js/typings/jquery.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/jqueryui.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/igniteui.d.ts" />
+
+class ColorPicker {
+    brushes: string[];
+    interval: number;
+    constructor(_min: number, _max: number) {
+        this.brushes = ["#d9c616", "#d96f17", "#d1150c"];
+        this.interval = (_max - _min) / (this.brushes.length - 1);
+    }
+
+    getColorByIndex(val) {
+        var index = Math.round(val / this.interval);
+        if (index < 0) {
+            index = 0;
+        } else if (index > (this.brushes.length - 1)) {
+            index = this.brushes.length - 1;
+        }
+        return this.brushes[index];
+    }
+}
+
+var colorPicker = new ColorPicker(100000, 500000000);
+
+$(function () {
+    $("#map").igMap({
+        width: "700px",
+        height: "500px",
+        windowRect: { left: 0.1, top: 0.1, height: 0.7, width: 0.7 },
+        overviewPlusDetailPaneVisibility: "visible",
+        overviewPlusDetailPaneBackgroundImageUri: "http://www.igniteui.com/images/samples/maps/world.png",
+        series: [{
+            type: "geographicShape",
+            name: "worldCountries",
+            markerType: "none",
+            shapeMemberPath: "points",
+            shapeDataSource: 'http://www.igniteui.com/data-files/shapes/world_countries_reg.shp',
+            databaseSource: 'http://www.igniteui.com/data-files/shapes/world_countries_reg.dbf',
+            opacity: 0.8,
+            outlineThickness: 1,
+            showTooltip: true,
+            tooltipTemplate: "geoShapeTooltip",
+            shapeStyleSelector: {
+                selectStyle: function (s, o) {
+                    var pop = s.fields.item("POP2005");
+                    var popInt = parseInt(pop);
+                    var colString = colorPicker.getColorByIndex(popInt); //getColorValue(popInt);
+                    return {
+                        fill: colString,
+                        stroke: "gray"
+                    };
+                }
+            }
+        }]
+    });
+    $("#map").find(".ui-widget-content").append("<span class='copyright-notice'><a href='http://www.openstreetmap.org/copyright'>© OpenStreetMap contributors</a></span>");
+});
+```
+
+### <a id="loader_sample"></a>Loader Sample
+This sample demonstrates how to use TypeScript to load multiple components and features with the Infragistics Loader. Using a Combo Box can be chosen what is the type for the Data Chart that will be displayed. A legend for the Data Chart is included as well.
+
+#### <a id="loader_sample_preview"></a>Preview
+The following screenshot is a preview of the final result.
+
+![](images/igLoader_TypeScript.png)
+
+#### <a id="loader_sample_details"></a></a>Details
+
+Create the HTML.
+
+**In HTML:**
+```html
+<div class="selectionOptions">
+	<select id="seriesType">
+		<option value="radialLine" selected="selected">Radial Line</option>
+		<option value="radialColumn">Radial Column</option>
+		<option value="radialPie">Radial Pie</option>
+	</select>
+</div>
+
+<div id="chart"></div>
+<div id="legend"></div>
+```
+
+In TypeScript we create the Data, the `igLoader`, 'igDataChart' and 'igCombo'.
+**In TypeScript:**
+```typescript
+/// <reference path="http://www.igniteui.com/js/typings/jquery.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/jqueryui.d.ts" />
+/// <reference path="http://www.igniteui.com/js/typings/igniteui.d.ts" />
+
+class DepartmentData {
+    label: string;
+    budget: number;
+    spending: number;
+    constructor(_label: string, _budget: number, _spending: number) {
+        this.label = _label;
+        this.budget = _budget;
+        this.spending = _spending;
+    }
+}
+
+var companyData: DepartmentData[] = [];
+companyData.push(new DepartmentData("Administration", 75, 35));
+companyData.push(new DepartmentData("Sales", 30, 80));
+companyData.push(new DepartmentData("IT", 60, 20));
+companyData.push(new DepartmentData("Marketing", 50, 70));
+companyData.push(new DepartmentData("Development", 80, 40));
+companyData.push(new DepartmentData("Support", 20, 45));
+
+$.ig.loader({
+    scriptPath: "http://www.igniteui.com/igniteui/js/",
+    cssPath: "http://www.igniteui.com/igniteui/css/",
+    resources: "igDataChart.Radial,igCombo, igChartLegend"
+});
+
+// jQuery's ready event can be used with the loader.
+// The loader calls holdReady until all JS and CSS files are loaded.
+$(function () {
+
+    $("#chart").igDataChart({
+        width: "500px",
+        height: "500px",
+        dataSource: companyData,
+        legend: { element: "legend" },
+        axes: [{
+            name: "angleAxis",
+            type: "categoryAngle",
+            label: "label",
+            interval: 1
+        }, {
+                name: "radiusAxis",
+                type: "numericRadius",
+                innerRadiusExtentScale: .1,
+                maximumValue: 100,
+                minimumValue: 0,
+                interval: 25,
+                radiusExtentScale: .6
+            }],
+        series: [{
+            name: "series1",
+            title: 'Budget',
+            type: "radialLine",
+            angleAxis: "angleAxis",
+            valueAxis: "radiusAxis",
+            valueMemberPath: "budget",
+            thickness: 5,
+            markerType: "circle"
+        }, {
+                name: "series2",
+                title: 'Spending',
+                type: "radialLine",
+                angleAxis: "angleAxis",
+                valueAxis: "radiusAxis",
+            valueMemberPath: "spending",
+                thickness: 5,
+                markerType: "circle"
+            }],
+        horizontalZoomable: true,
+        verticalZoomable: true,
+        windowResponse: "immediate"
+    });
+
+    $("#seriesType").igCombo({
+        selectionChanged: function (evt, ui) {
+            if (ui.items[0].data.value != undefined) {
+                $("#chart").igDataChart("option", "series", [{
+                    name: "series1", remove: true
+                }, {
+					name: "series2", remove: true
+				}, {
+					name: "series1",
+					title: "Budget",
+					type: ui.items[0].data.value,
+					angleAxis: "angleAxis",
+					valueAxis: "radiusAxis",
+					valueMemberPath: "budget",
+					thickness: 5,
+					markerType: "circle"
+				}, {
+					name: "series2",
+					title: 'Spending',
+					type: ui.items[0].data.value,
+					angleAxis: "angleAxis",
+					valueAxis: "radiusAxis",
+					valueMemberPath: "spending",
+					thickness: 5,
+					markerType: "circle"
+				}]);
+            }
+        }
+    });
+});
+```
 
 ### <a id="related_content"></a>Related Content
 The following topic provides additional information related to this one:

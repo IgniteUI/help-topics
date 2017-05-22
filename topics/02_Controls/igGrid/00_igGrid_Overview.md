@@ -14,7 +14,7 @@
 
 The `igGrid` is a jQuery-based client-side grid that is responsible for presenting and manipulating tabular data. Its whole lifecycle is on the client-side, which makes it independent from server-side technology.
 
-![](images/igGrid_Overview_01.png) 
+![](images/igGrid_Overview_01.png)
 
 ## Features
 
@@ -86,9 +86,9 @@ To get started, include the required and localized resources for your applicatio
 	    -   XML
 	    -   Remote data
 	    -   Table DOM element
-	    
+
 	    **In Javascript:**
-	
+
 	    ```js
 	    $(function () {
             $("#grid").igGrid({
@@ -148,21 +148,23 @@ To get started, include the required and localized resources for your applicatio
      ![](images/igGrid_Overview_02.png)
 
 6. Working sample
-    <div class="embed-sample">
-        [igGrid Grid API and Events](%%SamplesEmbedUrl%%/grid/grid-api-events)
-    </div>
+
+<div class="embed-sample">
+    [igGrid Grid API and Events](%%SamplesEmbedUrl%%/grid/grid-api-events)
+</div>
+
 ## Related Content
 
 ### Topics
 
 -   [igGrid/igDataSource Architecture Overview](igGrid-igDataSource-Architecture-Overview.html)
--   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html) 
+-   [Ignite UI Overview](NetAdvantage-for-jQuery-Overview.html)
 -   [Using JavaScript Resources in Ignite UI](Deployment-Guide-JavaScript-Resources.html)
 
 
 
- 
 
- 
+
+
 
 

@@ -211,13 +211,12 @@ If you want to use Angular’s syntax there are two options that handle evaluati
 The following topics provide additional information related to this topic.
 
 -   [Using different template engines with Ignite UI controls](http://www.infragistics.com/community/blogs/marina_stoyanova/archive/2014/05/30/using-different-template-engines-with-ignite-ui-controls.aspx)
+-   [jsRender Integration](iggrid-jsrender-integration.html)
 
 ### <a id="samples"></a>Samples
 
 The following samples provide additional information related to this topic.
 
 -   [igGrid Sample](http://igniteui.github.io/igniteui-angular/samples/igGrid.html)
--   [Conditional Templates](%%NewSamplesUrl%%/templating-engine/conditional-templates)
--   [JsRender Integration](%%NewSamplesUrl%%/grid/jsrender-integration)
 
                     

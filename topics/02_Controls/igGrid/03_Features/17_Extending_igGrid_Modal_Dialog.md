@@ -79,7 +79,7 @@ The custom dialog widget should include certain functions and fire certain event
 
 The following sample shows a custom dialog being used to edit the grid.
 
-- [Custom Modal Dialog](%%SamplesUrl%%/grid/custom-modal-dialog)
+- [Custom Modal Dialog](%%SamplesUrl%%/grid/customize-updating)
 
 ### <a id="topics"></a> Topics
 
