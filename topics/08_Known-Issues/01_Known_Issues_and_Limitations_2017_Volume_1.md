@@ -55,6 +55,7 @@ This topic contains the following sections:
     -   [igHierarchicalGrid GroupBy](#hierarchical-grid-grouping)
     -   [igHierarchicalGrid RowSelectors](#hierarchical-grid-row-selectors)
     -   [igHierarchicalGrid Tooltips](#hierarchical-grid-tooltips)
+    -   [igHierarchicalGrid Updating](#hierarchical-grid-updating)
     -   [igLinearGauge](#linear-gauge)
     -   [%%ProductName%% ASP.NET MVC Wrappers](#mvc)
     -   [%%ProductName%% ASP.NET MVC Wrappers (mobile)](#mvc-mobile)
@@ -1175,6 +1176,13 @@ Tooltips are not shown for child layout when options for Tooltips are different 
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
+### <a id="hierarchical-grid-updating"></a> [igHierarchicalGrid Updating](igHierarchicalGrid-Known-Issues.html)
+
+Issue | Description | Status
+---|---|---
+Done/Cancel buttons are cut off for child layouts when their height is too small | Certain configurations and use-cases allow for child layouts with small heights that makes positioning floating elements outside the visibility-critical elements impossible.  | ![](../../images/images/positive.png)
+
+Go up to [Known Issues and Limitations Summary](#summary)
 
 ### <a id="linear-gauge"></a> [igLinearGauge](igLinearGauge-Known-Issues-and-Limitations.html)
 
