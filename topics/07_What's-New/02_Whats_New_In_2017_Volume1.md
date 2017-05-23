@@ -29,11 +29,19 @@ Feature | Description
 ---|---
 [New control igScheduler](#scheduler)| The igSpreadsheet is a jQuery widget that provides a common scheduling solution for presenting and managing time periods and the associated activities.
 
+### igDataSource
+
+Feature | Description
+---|---
+[Filter By Text](#filterbytext)| The igDataSource component provides a way to search for a specific words or phrases in all of its fields.
+
 ### igGrid
 
 Feature | Description
 ---|---
-[GroupBy Summaries](#groupSummaries)| The GroupBy feature now allows a summary row to be displayed below each group data island.
+[Date Handling](#griddatehandling)| The igGrid provides a way to control the display and edit of date values for clients in different time zones.
+[More Flexible Caption](#gridcaption)| igGrid's new caption is designed to be more flexible and customizable.
+[GroupBy Summaries](#groupSummaries)| The GroupBy feature now allows a summary row to be displayed below and/or above each group data island.
 
 ### igCombo
 
@@ -150,11 +158,25 @@ The `igScheduler`™ control provides a common scheduling solution for presentin
 -   [igScheduler Agenda View](%%SamplesUrl%%/scheduler/agenda-view)
 -   [igScheduler Agenda View](%%SamplesUrl%%/scheduler/appointment-indicators)
 
+## igDataSource
+
+### <a id="filterbytext"></a> Filter By Text
+
+The igDataSource component provides a way to search for a specific words or phrases in all of its fields via the 'filterByText' method.
+
 ## igGrid
+
+### <a id="griddatehandling"></a> Date Handling
+
+When enabled for the igGrid, the EnableUTCDates option allows dates to be formatted as UTC dates on the client side. As a date value is received from the server it goes through a formatter function to display the date. If enableUTCDates is set to false, the final result returns date values via the standard date object methods (getFullYear(), getMonth(), getDate(),getHours() etc.) and if set to true UTC equivalents ( getUTCFullYear(), getUTCMonth(), getUTCDate(), getUTCHours() etc.) are used. 
+
+### <a id="gridcaption"></a> Grid's Caption
+
+The igGrid's caption now provides the ability to render HTML elements in it in order to give the user more customizability and flexability. It also comes with useful events for full control of its initialization.
 
 ### <a id="groupSummaries"></a> GroupBy Summaries
 
-The GroupBy Summaries feature allows an additional summary row to be displayed below each group data island that displays summary information for the data columns in that island. The summary row is visible only when the related group is expanded.
+The GroupBy Summaries feature allows an additional summary row to be displayed below and/or above each group data island that displays summary information for the data columns in that island. The summary row is visible only when the related group is expanded.
 
 ![](images/group-summaries.png)
 
