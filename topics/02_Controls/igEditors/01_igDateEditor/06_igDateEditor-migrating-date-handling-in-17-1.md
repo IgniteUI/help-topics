@@ -1,7 +1,7 @@
 <!--
 |metadata|
 {
-    "fileName": "migrating-enableUTCDates-option-in-17-1",
+    "fileName": "igDateEditor-migrating-date-handling-in-17-1",
     "controlName": "igEditors",
     "tags": ["Migration","Getting Started"]
 }
