@@ -136,7 +136,8 @@ Description
 
                         <tr>
                             <td>
-`infragistics.util.js`
+`infragistics.util.js`<br/>
+`infragistics.util.jquery.js`
 			</td>
 
                             <td>
@@ -252,6 +253,7 @@ To complete the procedure, you need the required JavaScript and CSS files refere
       
       <!-- %%ProductName%% Required Common JavaScript Files -->
       <script src="../../igniteui/js/modules/infragistics.util.js"></script>
+      <script src="../../igniteui/js/modules/infragistics.util.jquery.js"></script>
       <script src="../../igniteui/js/modules/infragistics.dv.simple.core.js"></script>      
       
       <!-- QR Code Barcode Specific JavaScript Files -->
@@ -329,6 +331,7 @@ Following is the full code for this procedure.
       
       <!-- %%ProductName%% Required Common JavaScript Files -->
       <script src="../../igniteui/js/modules/infragistics.util.js"></script>
+      <script src="../../igniteui/js/modules/infragistics.util.jquery.js"></script>
       <script src="../../igniteui/js/modules/infragistics.dv.simple.core.js"></script>
       
       <!-- QR Code Barcode Specific JavaScript Files -->

@@ -84,6 +84,7 @@ The table below lists the requirements for the `igScheduler` control.
 			<td>There are several shared JavaScript resources in %%ProductName%% that most widgets use:
 				<ul>
 					<li>infragistics.util.js</li>
+					<li>infragistics.util.jquery.js</li>
 				</ul>
 			</td>
 		</tr>

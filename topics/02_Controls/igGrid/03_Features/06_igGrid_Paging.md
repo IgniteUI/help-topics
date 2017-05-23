@@ -85,7 +85,9 @@ In order to enable Paging, you first need to include the necessary JavaScript an
 	**In HTML:**
 	
 	```html
-	<script type="text/javascript" src="infragistics.util.js"></script><script type="text/javascript" src="infragistics.dataSource.js"></script>
+	<script type="text/javascript" src="infragistics.util.js"></script>
+	<script type="text/javascript" src="infragistics.util.jquery.js"></script>
+	<script type="text/javascript" src="infragistics.dataSource.js"></script>
 	<script type="text/javascript" src="infragistics.ui.shared.js"></script>
 	<script type="text/javascript" src="infragistics.ui.popover.js"></script>
 	<script type="text/javascript" src="infragistics.ui.editors.js"></script>

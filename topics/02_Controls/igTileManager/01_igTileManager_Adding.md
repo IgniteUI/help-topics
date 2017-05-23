@@ -128,6 +128,7 @@ Description
                         <tr>
                             <td>
 `Infragistics.util.js`
+`infragistics.util.jquery.js`
 			</td>
 
                             <td>
