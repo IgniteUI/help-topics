@@ -129,7 +129,8 @@ Description
 
                         <tr>
                             <td>
-`infragistics.util.js`
+`infragistics.util.js`<br/>
+`infragistics.util.jquery.js`
 			</td>
 
                             <td>
@@ -241,6 +242,7 @@ Following is the full code for this procedure.
     <script type="text/javascript" src="../../js/jquery-ui.js"></script>
     <!-- Infragistics Shared JavaScript Files -->
     <script src="../../igniteui/js/modules/infragistics.util.js" type="text/javascript"></script>
+    <script src="../../igniteui/js/modules/infragistics.util.jquery.js"></script>
     <script src="../../igniteui/js/modules/infragistics.dv.simple.core.js" type="text/javascript"></script>
     <!-- Radial Menu Required JavaScript Files -->
     <script src="../../igniteui/js/modules/infragistics.radialmenu_core.js" type="text/javascript"></script>
@@ -397,6 +399,7 @@ Following is the full code for this procedure.
     <script type="text/javascript" src="../../js/jquery-ui.js"></script>
     <!-- Infragistics Shared JavaScript Files -->
     <script src="../../igniteui/js/modules/infragistics.util.js" type="text/javascript"></script>
+    <script src="../../igniteui/js/modules/infragistics.util.jquery.js"></script>
     <script src="../../igniteui/js/modules/infragistics.dv.simple.core.js" type="text/javascript"></script>
     <!-- Radial Menu Required JavaScript Files -->
     <script src="../../igniteui/js/modules/infragistics.radialmenu_core.js" type="text/javascript"></script>

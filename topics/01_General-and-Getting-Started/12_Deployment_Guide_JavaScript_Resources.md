@@ -222,7 +222,7 @@ JavaScript files provide localized formats including dates, numbers, and currenc
 
 >**Note**: In case that Infragistics Loader is **NOT** used, localization scripts must always be included before the actual JavaScript files. The same applies for regional scripts.
 
->**Note:** In case that Infragistics Loader is **NOT** used and we want to configure any regional settings, the *infragistics.util.js* file must be included before any regional JavaScript files. This is because the regional JavaScript files are dependent of *infragistics.util.js* functionality and use it internally.
+>**Note:** In case that Infragistics Loader is **NOT** used and we want to configure any regional settings, the *infragistics.util* files must be included before any regional JavaScript files. This is because the regional JavaScript files are dependent of *infragistics.util* functionality and use it internally.
 
 There are two ways to reference localization resources:
 

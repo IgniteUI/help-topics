@@ -257,6 +257,7 @@ Description
                         <tr>
                             <td>
 `js/modules/infragistics.util.js`
+`js/modules/infragistics.util.jquery.js`
 			</td>
 
                             <td>

@@ -139,7 +139,8 @@ The following table summarizes the requirements for using the `igDoughnutChart` 
 
 						<tr>
 							<td>
-								infragistics.util.js
+								infragistics.util.js<br>
+								infragistics.util.jquery.js
 							</td>
 
 							<td>
@@ -349,6 +350,7 @@ Follow these steps to add an `igDoughnutChart` to an HTML page.
 	<script src="../../js/jquery-ui.min.js"></script>
 	<!-- %%ProductName%% Required JavaScript Files -->
 	<script src="../../igniteui/js/modules/infragistics.util.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.util.jquery.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.datasource.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.templating.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.ext_core.js" type="text/javascript"></script>
@@ -463,6 +465,7 @@ Follow these steps to add an `igDoughnutChart` to an HTML page.
 	<script src="../../js/jquery-ui.min.js"></script>
 	<!-- %%ProductName%% Required JavaScript Files -->
 	<script src="../../igniteui/js/modules/infragistics.util.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.util.jquery.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.datasource.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.templating.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.ext_core.js" type="text/javascript"></script>

@@ -139,6 +139,7 @@ Adding the `igFunnelChart` control to an HTML page requires referencing the reso
 						<tr>
 							<td>
 								infragistics.util.js
+								infragistics.util.jquery.js
 							</td>
 
 							<td>

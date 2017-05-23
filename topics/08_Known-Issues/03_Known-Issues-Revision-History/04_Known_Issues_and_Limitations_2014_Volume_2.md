@@ -105,7 +105,7 @@ On Internet Explorer 7 and 8 Array.prototype is extended with some helper functi
 			</td>
 
             <td>
-                On Internet Explorer 7 and 8 Array.prototype is extended with the following functions (by the infragistics.util.js file):
+                On Internet Explorer 7 and 8 Array.prototype is extended with the following functions (by the infragistics.util files):
 
                 <ul>
                     <li>

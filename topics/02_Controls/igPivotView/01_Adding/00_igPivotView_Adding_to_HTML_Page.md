@@ -145,7 +145,8 @@ The following table summarizes the requirements for using the `igPivotView` cont
 
 						<tr>
 							<td>
-								`infragistics.util.js`
+								`infragistics.util.js`<br/>
+								`infragistics.util.jquery.js`
 							</td>
 
 							<td>

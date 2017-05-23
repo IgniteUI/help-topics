@@ -36,6 +36,7 @@ In the following topic you can find more about the `igLoader` and how to work wi
 ```html
 <!-- util -->
 <script src="js/modules/infragistics.util.js"></script>
+<script src="js/modules/infragistics.util.jquery.js"></script>
 
 <!-- ext -->
 <script src="js/modules/infragistics.ext_core.js"></script>

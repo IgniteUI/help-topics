@@ -356,7 +356,8 @@ The functionality of the igMap control is based on the HTML5 Canvas tag and its 
                     <tbody>
 						<tr>
 							<td>
-								`infragistics.util.js`
+								`infragistics.util.js`<br/>
+								`infragistics.util.jquery.js`
 							</td>
 
 							<td>

@@ -117,7 +117,8 @@ Description
 						</tr>
 						<tr>
 							<td>
-*infragistics.util.js*
+*infragistics.util.js*<br>
+*infragistics.util.jquery.js*
 							</td>
 							<td>
 %%ProductName%% utilities
@@ -214,6 +215,7 @@ To complete the procedure, you need the required JavaScript and CSS files refere
 	<script type="text/javascript" src="../../js/jquery-ui.js"></script>
 	<!-- Bullet Graph Required JavaScript Files -->
 	<script src="../../igniteui/js/modules/infragistics.util.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.util.jquery.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.ext_core.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.ext_collections.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.ext_ui.js" type="text/javascript"></script>
@@ -377,6 +379,7 @@ Following is the full code for this procedure.
 	<script type="text/javascript" src="../../js/jquery-ui.js"></script>
 	<!-- Bullet Graph Required JavaScript Files -->
 	<script src="../../igniteui/js/modules/infragistics.util.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.util.jquery.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.ext_core.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.ext_collections.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.ext_ui.js" type="text/javascript"></script>

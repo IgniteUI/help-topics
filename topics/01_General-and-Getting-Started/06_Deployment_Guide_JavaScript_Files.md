@@ -118,9 +118,11 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 				infragistics.util.js<br>
+				infragistics.util.jquery.js<br>
 				infragistics.ext_core.js<br>
 				infragistics.ext_collections.js<br>
 				infragistics.ext_ui.js<br>
+				infragistics.dv_jquerydom.js<br>
 				infragistics.dv_core.js<br>
 				infragistics.dv_geometry.js			
 			</td>
@@ -149,6 +151,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 				infragistics.util.js
+				<br>infragistics.util.jquery.js
 				<br>infragistics.datasource.js
 				<br>infragistics.templating.js
 				<br>infragistics.ext_core.js
@@ -189,6 +192,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 				infragistics.util.js
+				<br>infragistics.util.jquery.js
 				<br>infragistics.ext_core.js
 				<br>infragistics.ext_collections.js
 				<br>infragistics.ext_ui.js
@@ -222,6 +226,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 			    infragistics.util.js
+				<br>infragistics.util.jquery.js
 			    <br>infragistics.dataSource.js
 			    <br>infragistics.templating.js
 			    <br>infragistics.ui.shared.js
@@ -250,6 +255,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 				infragistics.util.js
+				<br>infragistics.util.jquery.js
 			</td>
 		</tr>
 		<tr>
@@ -275,6 +281,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 				infragistics.util.js
+				<br>infragistics.util.jquery.js
 				<br>infragistics.datasource.js
 				<br>infragistics.templating.js
 			</td>
@@ -323,6 +330,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 				infragistics.util.js<br>
+				infragistics.util.jquery.js<br>
 				infragistics.ext_core.js<br>
 				infragistics.ext_collections.js<br>
 				infragistics.ext_ui.js<br>
@@ -355,6 +363,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
     			infragistics.util.js
+				<br>infragistics.util.jquery.js
 			</td>
 		</tr>
 		<tr>
@@ -379,6 +388,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 			    infragistics.util.js<br>
+				infragistics.util.jquery.js<br>
 				infragistics.datasource.js<br>
 				infragistics.templating.js<br>
 				infragistics.ext_core.js<br>
@@ -416,6 +426,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 				infragistics.util.js
+				<br>infragistics.util.jquery.js
 			</td>
 		</tr>
 		<tr>
@@ -440,6 +451,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 				infragistics.util.js<br>
+				infragistics.util.jquery.js<br>
 				infragistics.datasource.js<br>
 				infragistics.templating.js<br>
 				infragistics.ext_core.js<br>
@@ -475,6 +487,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 			    infragistics.util.js
+				<br>infragistics.util.jquery.js
 			    <br>infragistics.datasource.js
 			    <br>infragistics.templating.js
 			    <br>infragistics.ui.shared.js
@@ -525,6 +538,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 			    infragistics.util.js
+				<br>infragistics.util.jquery.js
 			    <br>infragistics.datasource.js
 			    <br>infragistics.templating.js
 			    <br>infragistics.ui.shared.js				
@@ -572,6 +586,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 			    infragistics.util.js
+				<br>infragistics.util.jquery.js
 			    <br>infragistics.datasource.js
 			    <br>infragistics.templating.js
 			    <br>infragistics.ui.shared.js
@@ -607,6 +622,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 				infragistics.util.js
+				<br>infragistics.util.jquery.js
 			</td>
 		</tr>
 		<tr>
@@ -629,6 +645,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 				infragistics.util.js<br>
+				infragistics.util.jquery.js<br>
 				infragistics.ext_core.js<br>
 				infragistics.ext_collections.js<br>
 				infragistics.ext_ui.js<br>
@@ -660,6 +677,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 				infragistics.util.js<br>
+				infragistics.util.jquery.js<br>
 				infragistics.datasource.js<br>
 				infragistics.templating.js<br>
 				infragistics.ext_core.js<br>
@@ -701,6 +719,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 				infragistics.util.js<br>
+				infragistics.util.jquery.js<br>
 				infragistics.ext_core.js<br>
 				infragistics.ext_collections.js<br>
 				infragistics.ext_ui.js<br>
@@ -728,6 +747,7 @@ To navigate to the required JavaScript files listing for the particular control,
 		<tr>
 			<td>Dependency Scripts</td>
 			<td>infragistics.util.js</td>
+			<td>infragistics.util.jquery.js</td>
 		</tr>
 		<tr>
 			<td>Scripts</td>
@@ -748,6 +768,7 @@ To navigate to the required JavaScript files listing for the particular control,
 		<tr>
 			<td>Dependency Scripts</td>
 			<td>infragistics.util.js</td>
+			<td>infragistics.util.jquery.js</td>
 		</tr>
 		<tr>
 			<td>Scripts</td>
@@ -769,6 +790,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 				infragistics.util.js<br>
+				infragistics.util.jquery.js<br>
 				infragistics.datasource.js<br>
 				infragistics.templating.js<br>
 				infragistics.ext_core.js<br>
@@ -803,6 +825,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 			    infragistics.util.js
+				<br>infragistics.util.jquery.js
 			    <br>infragistics.datasource.js
 			    <br>infragistics.olapflatdatasource.js
 			
@@ -838,6 +861,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 			    infragistics.util.js
+				<br>infragistics.util.jquery.js
 			    <br>infragistics.datasource.js
 			    <br>infragistics.olapflatdatasource.js
 			
@@ -872,7 +896,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 			    infragistics.util.js
-			    
+			    <br>infragistics.util.jquery.js
 			    <br>infragistics.datasource.js
 			    <br>infragistics.olapflatdatasource.js
 			
@@ -910,6 +934,7 @@ To navigate to the required JavaScript files listing for the particular control,
 		<tr>
 			<td>Dependency Scripts</td>
 			<td>infragistics.util.js</td>
+			<td>infragistics.util.jquery.js</td>
 		</tr>
 		<tr>
 			<td>Scripts</td>
@@ -933,6 +958,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 			    infragistics.util.js
+				<br>infragistics.util.jquery.js
 			    <br>infragistics.dv.simple.core.js
 			</td>
 		</tr>
@@ -960,6 +986,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 				infragistics.util.js<br>
+				infragistics.util.jquery.js<br>
 				infragistics.ext_core.js<br>
 				infragistics.ext_collections.js<br>
 				infragistics.ext_ui.js<br>
@@ -989,6 +1016,7 @@ To navigate to the required JavaScript files listing for the particular control,
 		<tr>
 			<td>Dependency Scripts</td>
 			<td>infragistics.util.js</td>
+			<td>infragistics.util.jquery.js</td>
 		</tr>
 		<tr>
 			<td>Scripts</td>
@@ -1010,6 +1038,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 			    infragistics.util.js
+				<br>infragistics.util.jquery.js
 			    <br>infragistics.datasource.js
 			    <br>infragistics.dv.core.js
 			    <br>infragistics.dvcommonwidget.js
@@ -1039,6 +1068,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 				infragistics.util.js
+				<br>infragistics.util.jquery.js
 				<br>modernizr.js
 			</td>
 		</tr>
@@ -1064,6 +1094,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 				infragistics.util.js<br>
+				infragistics.util.jquery.js<br>
 				infragistics.datasource.js<br>
 				infragistics.templating.js<br>
 				infragistics.ext_core.js<br>
@@ -1097,6 +1128,7 @@ To navigate to the required JavaScript files listing for the particular control,
 		<tr>
 			<td>Dependency Scripts</td>
 			<td>infragistics.util.js</td>
+			<td>infragistics.util.jquery.js</td>
 		</tr>
 		<tr>
 			<td>Scripts</td>
@@ -1120,6 +1152,7 @@ To navigate to the required JavaScript files listing for the particular control,
 		<tr>
 			<td>Dependency Scripts</td>
 			<td>infragistics.util.js</td>
+			<td>infragistics.util.jquery.js</td>
 		</tr>
 		<tr>
 			<td>Scripts</td>
@@ -1141,11 +1174,11 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 			    infragistics.util.js
+				<br>infragistics.util.jquery.js
 			    <br>infragistics.datasource.js
 			    <br>infragistics.templating.js
 			    <br>infragistics.ui.splitter.js
 			    <br>infragistics.ui.layoutmanager.js
-			    <br>infragistics.util.js
 			</td>
 		</tr>
 		<tr>
@@ -1170,6 +1203,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 			    infragistics.util.js
+				<br>infragistics.util.jquery.js
 			    <br>infragistics.datasource.js
 			    <br>infragistics.templating.js
 			    <br>infragistics.ui.shared.js
@@ -1196,6 +1230,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 			    infragistics.util.js
+				<br>infragistics.util.jquery.js
 			    <br>infragistics.dataSource.js
 			    <br>infragistics.templating.js
 			    <br>infragistics.ui.shared.js
@@ -1248,6 +1283,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 			    infragistics.util.js
+				<br>infragistics.util.jquery.js
 			    <br>infragistics.ui.shared.js
 			</td>
 		</tr>
@@ -1271,6 +1307,7 @@ To navigate to the required JavaScript files listing for the particular control,
 		<tr>
 			<td>Dependency Scripts</td>
 			<td>infragistics.util.js</td>
+			<td>infragistics.util.jquery.js</td>
 		</tr>
 		<tr>
 			<td>Scripts</td>
@@ -1292,6 +1329,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 			    infragistics.util.js
+				<br>infragistics.util.jquery.js
 			    <br>infragistics.ui.shared.js
 			</td>
 		</tr>
@@ -1317,6 +1355,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 				infragistics.util.js
+				<br>infragistics.util.jquery.js
 				<br>infragistics.ui.shared.js
 			</td>
 		</tr>
