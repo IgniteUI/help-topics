@@ -197,7 +197,7 @@ In previous versions of the product, if user sets or enters a value in a numeric
 When the dates in the editors are transferred from the client to the server аnd vice versa, the options [`enableUTCDates`](%%jQueryApiUrl%%/ui.igdateeditor#options:enableUTCDates) and [`displayTimeOffset`](%%jQueryApiUrl%%/ui.igdateeditor#options:displayTimeOffset) can be used to configure the editоrs and to properly handle date transfer.
 
 #### Related Topics
--   [Migrating enableUTCDate option in 17.1](Migrating-enableUTCDates-option-in-17-1.html)
+-   [Migrating date handling in 17.1](igDateEditor-migrating-date-handling-in-17-1.html)
 -   [Ignite UI controls in different time zones](Using-IgniteUI-controls-in-different-time-zones.html)
 
 ## igDatePicker

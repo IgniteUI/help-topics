@@ -112,7 +112,7 @@ The `igDateEditor` and `igDatePicker` offer several options to properly handle d
 
 > **Note:** The functionality of the `enableUTCDates` has changed since 17.1.
 > 
-> For more information of how you can migrate editors, configured with enableUTCDates option, from 16.2 to 17.1 follow the [Migrate enableUTCDates option in 17.1](Migrating-enableUTCDates-option-in-17-1.html) document.
+> For more information of how you can migrate editors, configured with enableUTCDates option, from 16.2 to 17.1 follow the [Migrating date handling in 17.1](igDateEditor-migrating-date-handling-in-17-1.html) document.
 
 Client `igDateEditor`/`igDatePicker` widgets can serialize the date either in UTC format or containing local time and offset based on the `enableUTCDates` option. Both values refer to the same point in time, however one also carries additional information for the client and depending on the server platform it can make a difference when parsing submitted values. For example in .NET [`DateTimeOffset`](https://msdn.microsoft.com/en-us/library/system.datetimeoffset(v=vs.110).aspx) allows handling the client offset separately.
 
