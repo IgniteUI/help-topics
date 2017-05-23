@@ -24,6 +24,18 @@ From version 17.1 the `infragistics.util.js` file has been split into a non-jQue
 
 For applications that are using the igLoader to load %%ProductName%% controls' dependencies, no change is required, because the loader is handling this internally. The other applications that load manually the files, may take advantage and not include the unnecessary utility references.
 
+There is a new, jQuery dependant file, explicitly needed for Ignite UI DV components - `infragsitics.dv_jquerydom.js`. It needs to be loaded prior to the `infragistics.dv_core.js` dependancy.
+
+```
+...
+<script src="js/modules/infragistics.dv_jquerydom.js"></script>
+<script src="js/modules/infragistics.dv_core.js"></script>
+...
+```
+
+#### Related Topics
+-   [JavaScript Files in %%ProductName%%](Deployment-Guide-JavaScript-Files.html)
+
 ### New Bootstrap themes structure
 
 The default and all Bootstrap 3 based themes have moved under a common "/bootstrap3" folder. The following lists the current Bootstrap 3 themes currently shipped with %%ProductName%% and the location of the `infragistics.theme.css` relative to the product source root ("~"):

@@ -380,6 +380,7 @@ The functionality of the igMap control is based on the HTML5 Canvas tag and its 
 						        `infragistics.ext_core.js`<br/>
 						        `infragistics.ext_collections.js`<br/>
 						        `infragistics.ext_ui.js`<br/>
+								`infragistics.dv_jquerydom.js`<br/>
 						        `infragistics.ext_text.js`<br/>
 						        `infragistics.ext_io.js`<br/>
 						        `infragistics.ext_threading.js`<br/>

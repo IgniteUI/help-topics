@@ -683,6 +683,7 @@ The igDataSource control.
 infragistics.ext_core.js<br>
 infragistics.ext_collections.js<br>
 infragistics.ext_ui.js<br>
+infragistics.dv_jquerydom.js<br>
 infragistics.dv_core.js<br>
 infragistics.dv_geometry.js<br>
 infragistics.datachart_core.js

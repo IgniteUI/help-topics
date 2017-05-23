@@ -157,6 +157,7 @@ To navigate to the required JavaScript files listing for the particular control,
 				<br>infragistics.ext_core.js
 				<br>infragistics.ext_collections.js
 				<br>infragistics.ext_ui.js
+				<br>infragistics.dv_jquerydom.js
 				<br>infragistics.dv_core.js
 				<br>infragistics.dv_datasource.js
 				<br>infragistics.dv_dataseriesadapter.js
@@ -196,6 +197,7 @@ To navigate to the required JavaScript files listing for the particular control,
 				<br>infragistics.ext_core.js
 				<br>infragistics.ext_collections.js
 				<br>infragistics.ext_ui.js
+				<br>infragistics.dv_jquerydom.js
 				<br>infragistics.dv_core.js
 				<br>infragistics.dv_geometry.js
 				<br>infragistics.datachart_core.js
@@ -292,6 +294,7 @@ To navigate to the required JavaScript files listing for the particular control,
 				infragistics.ext_core.js
 				<br>infragistics.ext_collections.js
 				<br>infragistics.ext_ui.js
+				<br>infragistics.dv_jquerydom.js
 				<br>infragistics.dv_core.js
 				<br>infragistics.dv_geometry.js
 				<br>infragistics.datachart_core.js
@@ -334,6 +337,7 @@ To navigate to the required JavaScript files listing for the particular control,
 				infragistics.ext_core.js<br>
 				infragistics.ext_collections.js<br>
 				infragistics.ext_ui.js<br>
+				infragistics.dv_jquerydom.js<br>
 				infragistics.dv_core.js<br>
 				infragistics.dv_geometry.js<br>
 				infragistics.datachart_core.js<br>
@@ -394,6 +398,7 @@ To navigate to the required JavaScript files listing for the particular control,
 				infragistics.ext_core.js<br>
 				infragistics.ext_collections.js<br>
 				infragistics.ext_ui.js<br>
+				infragistics.dv_jquerydom.js<br>
 				infragistics.dv_core.js<br>
 				infragistics.dv_geometry.js<br>
 				infragistics.datachart_core.js<br>
@@ -457,6 +462,7 @@ To navigate to the required JavaScript files listing for the particular control,
 				infragistics.ext_core.js<br>
 				infragistics.ext_collections.js<br>
 				infragistics.ext_ui.js<br>
+				infragistics.dv_jquerydom.js<br>
 				infragistics.dv_core.js<br>
 				infragistics.dv_geometry.js<br>
 				infragistics.datachart_core.js<br>
@@ -649,6 +655,7 @@ To navigate to the required JavaScript files listing for the particular control,
 				infragistics.ext_core.js<br>
 				infragistics.ext_collections.js<br>
 				infragistics.ext_ui.js<br>
+				infragistics.dv_jquerydom.js<br>
 				infragistics.dv_core.js<br>
 				infragistics.dv_geometry.js
 			</td>
@@ -683,6 +690,7 @@ To navigate to the required JavaScript files listing for the particular control,
 				infragistics.ext_core.js<br>
 				infragistics.ext_collections.js<br>
 				infragistics.ext_ui.js<br>
+				infragistics.dv_jquerydom.js<br>
 				infragistics.dv_core.js<br>
 				infragistics.dv_geometry.js<br>
 				infragistics.datachart_core.js<br>
@@ -723,6 +731,7 @@ To navigate to the required JavaScript files listing for the particular control,
 				infragistics.ext_core.js<br>
 				infragistics.ext_collections.js<br>
 				infragistics.ext_ui.js<br>
+				infragistics.dv_jquerydom.js<br>
 				infragistics.dv_core.js
 			</td>
 		</tr>
@@ -796,6 +805,7 @@ To navigate to the required JavaScript files listing for the particular control,
 				infragistics.ext_core.js<br>
 				infragistics.ext_collections.js<br>
 				infragistics.ext_ui.js<br>
+				infragistics.dv_jquerydom.js<br>
 				infragistics.dv_core.js<br>
 				infragistics.dv_geometry.js<br>
 				infragistics.datachart_core.js<br>
@@ -990,6 +1000,7 @@ To navigate to the required JavaScript files listing for the particular control,
 				infragistics.ext_core.js<br>
 				infragistics.ext_collections.js<br>
 				infragistics.ext_ui.js<br>
+				infragistics.dv_jquerydom.js<br>
 				infragistics.dv_core.js<br>
 				infragistics.dv_geometry.js
 			</td>
@@ -1100,6 +1111,7 @@ To navigate to the required JavaScript files listing for the particular control,
 				infragistics.ext_core.js<br>
 				infragistics.ext_collections.js<br>
 				infragistics.ext_ui.js<br>
+				infragistics.dv_jquerydom.js<br>
 				infragistics.dv_core.js<br>
 				infragistics.dv_geometry.js<br>
 				infragistics.dv.simple.core.js<br>

@@ -141,6 +141,7 @@ The following table summarizes the requirements for using the `igLinearGauge` co
                                 `infragistics.ext_core.js`
                                 `infragistics.ext_collections.js`
                                 `infragistics.ext_ui.js`
+                                `infragistics.dv_jquerydom.js`
                                 `infragistics.dv_core.js`
                                 `infragistics.dv_geometry.js`
                             </td>
@@ -241,6 +242,7 @@ To complete the procedure, you need the required JavaScript and CSS files refere
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.ext_core.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.ext_collections.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.ext_ui.js"></script>
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_jquerydom.js" ></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_core.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_geometry.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.lineargauge.js"></script>
@@ -391,6 +393,7 @@ Following is the full code for this procedure.
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.ext_core.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.ext_collections.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.ext_ui.js"></script>
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_jquerydom.js" ></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_core.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_geometry.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.lineargauge.js"></script>
