@@ -78,7 +78,7 @@ This sample demonstrates the Item Tooltip Layer that displays tooltips for all t
 The sample options pane allows you to edit the properties of the layer, such as changing the transition duration.
 
 <div class="embed-sample">
-   [Category Tooltip Layer](%%SamplesEmbedUrl%%/data-chart/category-tooltip-layer)
+   [Item Tooltip Layer](%%SamplesEmbedUrl%%/data-chart/item-tooltip-layer)
    ![](images/jQuery_Item_Tooltip_Layer_01.png)
 </div>
 
