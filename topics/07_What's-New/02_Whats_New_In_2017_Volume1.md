@@ -66,6 +66,26 @@ Feature | Description
 ---|---
 [Date Picker Options MVC wrapper](#pickerOptionsWrapper) | When using DatePicker MVC wrapper, now additional wrapper for the date picker options is available.
 
+<!-- TODO: comment back in if new RC is created
+### igDataChart
+
+Feature | Description
+---|---
+[Zoom Enabling Options](#zoomEnablingProperties) | New options called [`isHorizontalZoomEnabled`](%%jQueryApiUrl%%/ui.igDataChart#options:isHorizontalZoomEnabled) and [`isVerticalZoomEnabled`](%%jQueryApiUrl%%/ui.igDataChart#options:isHorizontalZoomEnabled) have been added which control whether zooming is allowed on either the horizontal or vertical axis.
+-->
+
+### igMap
+
+Feature | Description
+---|---
+[Map Imagery Tile Path](#tilePathProperty) | The option called [`tilePath`](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent.tilePath) has been added to the [`backgroundContent`](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent) options.  Users can use this property to specify a URL where the tile images are located.
+
+### igRadialGauge, igLinearGauge, igBulletGraph
+Feature | Description
+---|---
+[Design Changes](#gaugeDesignChanges) | The visuals for the gauges have been updated.
+
+
 ## <a id="spreadsheet"></a>igSpreadsheet
 
 In version 2017.1 we introduce the igSpreadsheet control. It is a jQuery widget that visualize excel documents in all modern browsers. For MVP version, the control has the following areas and features available:
@@ -235,3 +255,37 @@ The DatePicker MVC wrapper is extended to allow the definition of the date picke
 	})
 	.Render())
 ```
+<!-- TODO: comment back in if new RC is created
+## </a>igDataChart
+### <a id="zoomEnablingProperties"></a> Zoom Enabling Options
+
+New options called [`isHorizontalZoomEnabled`](%%jQueryApiUrl%%/ui.igDataChart#options:isHorizontalZoomEnabled) and [`isVerticalZoomEnabled`](%%jQueryApiUrl%%/ui.igDataChart#options:isVerticalZoomEnabled) were added, deprecating the existing [`horizontalZoomable`](%%jQueryApiUrl%%/ui.igDataChart#options:horizontalZoomable) and [`verticalZoomable`](%%jQueryApiUrl%%/ui.igDataChart#options:verticalZoomable) options respectively.  The older options are being left as-is in this release for backwards compatibility with existing applications.
+-->
+## igMap
+### <a id="tilePathProperty"></a> Map Imagery Tile Path
+
+A new option called [`tilePath`](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent.tilePath) has been added to the [`backgroundContent`](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent) option.  This option allows you to specify a URL pointing to the location where the tile images are stored.  Below is an example of its usage.
+
+```
+$("#map").igMap({
+    backgroundContent: {
+        type: "bing",
+        key: "abcdefghijk123456",
+		tilePath: "http://www.example.com/tiles/"
+    }
+});
+```
+
+## igRadialGauge, igLinearGauge, igBulletGraph
+### <a id="gaugeDesignChanges"></a> Design Changes
+
+The igRadialGauge, igLinearGauge and igBulletGraph have new styling provided when you include `infragistics.theme.css`.  The new styling looks as follows:
+
+#### igRadialGauge:
+![](images/radialgauge_igtheme_17_1.png)
+
+#### igLinearGauge:
+![](images/lineargauge_igtheme_17_1.png)
+
+#### igBulletGraph:
+![](images/bulletgraph_igtheme_17_1.png)
