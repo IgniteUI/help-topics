@@ -78,7 +78,7 @@ This sample demonstrates the Item Tooltip Layer that displays tooltips for all t
 The sample options pane allows you to edit the properties of the layer, such as changing the transition duration.
 
 <div class="embed-sample">
-   [Category Tooltip Layer](%%SamplesEmbedUrl%%/data-chart/category-tooltip-layer)
+   [Item Tooltip Layer](%%SamplesEmbedUrl%%/data-chart/item-tooltip-layer)
    ![](images/jQuery_Item_Tooltip_Layer_01.png)
 </div>
 
@@ -114,7 +114,3 @@ The following samples provide additional information related to this topic.
 - [Hover Interactions – Crosshair Layer](HoverInteractions-Crosshair-Layer.html#example): This sample demonstrates the Crosshair Layer that provides crossing lines that meet at the actual value of every series that they are targeting. The sample options pane allows you to edit the properties of the layer, such as changing the thickness of the crosshair.
 
 - [Hover Interactions – Multiple Layers](%%SamplesUrl%%/data-chart/multiple-layers): This sample demonstrates how multiple layers interact within the `igDataChart` control. This sample displays the Item Tooltip Layer, the Crosshair layer and the Category Highlight Layer.
-
- 
-
-
