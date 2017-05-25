@@ -30,7 +30,7 @@ This topic contains the following sections:
 - [Binding to Data Sources](#binding-to-data-source)
 
 - [Minimum Requirements](#minimum-requirements)
- 
+
 - [Template Use and Selection](#template-use-and-selection)
 
 ### Required background
@@ -66,48 +66,38 @@ The table below briefly explains the main features of the `igCombo`.
     <tbody>
         <tr>
             <th>Feature</th>
-
             <th>Description</th>
         </tr>
         <tr>
             <td>Virtualization</td>
-
             <td>The igCombo control can re-use HTML elements when binding large amounts of data to improve performance.</td>
         </tr>
 		<tr>
             <td>Auto-complete</td>
-
             <td>Enabling this allows the igCombo control to automatically fill in the remaining input text based off of the first match in the list of choices.</td>
         </tr>
         <tr>
             <td>Auto-suggest</td>
-
             <td>The igCombo control can filter the list of choices based of the text entered in the input box.</td>
         </tr>
         <tr>
             <td>Multiple selection</td>
-
             <td>Users can select single items or multiple items and can perform multiple selections using checkboxes.</td>
         </tr>
         <tr>
             <td>Keyboard navigation</td>
-
             <td>Users can easily and quickly navigate through items or change the selected/highlighted items thanks to the rich keyboard navigation that igCombo supports.</td>
         </tr>
-
         <tr>
             <td>Load-on-Demand</td>
-
             <td>The igCombo control supports Load-on-Demand feature. Enabling Load-on-Demand significantly reduces the bandwidth and processing overhead on both the server and the client.</td>
         </tr>
         <tr>
             <td>Highlighting</td>
-
             <td>When a user type a text in igCombo input the matching results in the dropdown items are displayed with a visual highlighting of the matching text.</td>
         </tr>
         <tr>
             <td>ASP.NET MVC helper</td>
-
             <td>You can use managed .NET code to configure the igCombo control.</td>
         </tr>
     </tbody>
@@ -169,7 +159,7 @@ The `igCombo` control supports single and multiple selection. With multiple sele
 
 If Load-on-Demand is enabled, the user should first be able to see a scrollbar in the drop-down container, and the first page of list items. If the user scrolls to the end of the list, the next page of items are fetched and appended at the bottom of the list through asynchronous callbacks.
 
-#### Related Topics 
+#### Related Topics
 - [Configuring Load-on-Demand ](igCombo-Load-on-Demand.html)
 
 #### Related Sample
@@ -178,10 +168,10 @@ If Load-on-Demand is enabled, the user should first be able to see a scrollbar i
 
 ### Keyboard navigation
 
-The combo provides very important accessibility feature, which is the ability to navigate by using the keyboard. This feature improves the User 
+The combo provides very important accessibility feature, which is the ability to navigate by using the keyboard. This feature improves the User
 Experience by saving time and allowing the end-user to easily and quickly navigate through dropdown items.
- 
-#### Related Topics 
+
+#### Related Topics
 - [igCombo Keyboard Navigation](igCombo-Keyboard-Navigation.html)
 
 #### Related Sample
@@ -213,7 +203,7 @@ You can use the ASP.NET MVC Helper to use managed code languages to configure th
 
 The `igCombo` control is a jQuery UI Widget and therefore is dependent upon the jQuery core and jQuery UI JavaScript libraries. In addition, there are several %%ProductName%%™ JavaScript resources that the `igCombo` control uses for shared functionality and data binding. These JavaScript references are required whether the `igCombo` control is used in a pure JavaScript context or in ASP.NET MVC. When using the `igCombo` in ASP.NET MVC, the Infragistics.Web.Mvc assembly is required to configure the `igCombo` with .NET languages.
 
-###Requirements 
+###Requirements
 
 
 The table below lists the requirements for the `igCombo` control.
@@ -240,6 +230,7 @@ The table below lists the requirements for the `igCombo` control.
 			<td>There are several shared JavaScript resources in %%ProductName%% that most widgets use:
 				<ul>
 					<li>infragistics.util.js</li>
+                    <li>infragistics.util.jquery.js</li>
 				</ul>
 			</td>
 		</tr>
@@ -319,7 +310,7 @@ The following table lists the requirements for binding the `igCombo` control to 
                 <li>String</li>
 				<li>Number</li>
 				<li>Boolean</li>
-				<li>Date</li> 
+				<li>Date</li>
 				</ul>
             </td>
         </tr>
@@ -354,7 +345,7 @@ The `igDataSource` is used internally by the `igCombo` control to manage data op
         </tr>
         <tr>
             <td>
-[HTML SELECT element](%%SamplesUrl%%/combo/html-binding)
+[Binding igCombo to Data](igCombo-Binding-to-Data.html)
 			</td>
             <td>
 You can point to a SELECT element in the jQuery selector for `igCombo` control and it will convert the SELECT element to the `igCombo` control automatically inheriting the options of the base element.
@@ -370,7 +361,7 @@ In ASP.NET MVC, supply an IQueryable as the igCombo’s datasource and the colle
         </tr>
         <tr>
             <td>
-[KnockoutJS](%%SamplesUrl%%/combo/bind-combo-with-ko)
+[KnockoutJS](igcombo-knockoutjs-support.html)
 			</td>
             <td>
 The support for the Knockout library in the `igCombo` control is intended to provide easy means for developers to use the Knockout library and its declarative syntax to instantiate and configure combo controls.
@@ -466,11 +457,11 @@ Following are some other topics you may find useful.
 - [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 
 - [Styling and Theming in %%ProductName%%](Deployment-Guide-Styling-and-Theming.html)
- 
+
 - [igGrid/igDataSource Architecture Overview](igGrid-igDataSource-Architecture-Overview.html)
- 
+
 - [Adding igCombo](igCombo-Getting-Started.html)
- 
+
 - [Binding igCombo to Data](igCombo-Binding-to-Data.html)
 
 - [Configuring igCombo](igCombo-Configuring.html)
@@ -485,4 +476,3 @@ Following are some other topics you may find useful.
 
 - [jQuery and ASP.NET MVC Helper API Links (igCombo)](igCombo-jQuery-And-ASP-NET-MVC-Helper-API-Links.html)
 
- 

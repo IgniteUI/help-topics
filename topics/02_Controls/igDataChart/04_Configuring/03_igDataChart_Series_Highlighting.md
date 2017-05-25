@@ -112,74 +112,19 @@ The following table summarizes the properties used for series highlighting. Thes
 
 
 
-### <a id="example"></a>Example
+### <a id="series-highlighting-examples"></a>Examples
+This sample demonstrates the series highlighting feature on different series types by configuring the `isHighlightingEnabled` and `highlightingTransitionDuration` series properties.
 
-The screenshot, following the table, demonstrates how a chart with the `isHighlightingEnabled` and  `highlightingTransitionDuration` properties of the `columnSeries` looks as a result of the following settings:
+<div class="embed-sample">
+   [Series Highlighting](%%SamplesEmbedUrl%%/data-chart/series-highlighting)
+   ![](images/jQuery_Series_Highlighting_01.png)
+</div>
 
-<table class="table">
-	<tbody>
-		<tr>
-			<th>
-				Property
-			</th>
+The following example shows the same functionality, applied to a financial chart.
+<div class="embed-sample">
+   [Series Highlighting (Financial)](%%SamplesEmbedUrl%%/data-chart/series-highlighting-financial)
+</div>
 
-			<th>
-				Value
-			</th>
-		</tr>
-
-		<tr>
-			<td>isHighlightingEnabled</td>
-
-			<td>
-				True
-			</td>
-		</tr>
-
-		<tr>
-			<td>highlightingTransitionDuration</td>
-
-			<td>
-				00:00:10
-			</td>
-		</tr>
-	</tbody>
-</table>
-
-
-
-![](images/jQuery_Series_Highlighting_01.png)
-
-Following is the code that implements this example:
-
-```
-$("#chart").igDataChart({
-   ...
-   ...
-   series: [
-      {
-         name: "2005Population",
-         type: "line",
-         title: "2005",
-         xAxis: "NameAxis",
-         yAxis: "PopulationAxis",
-         valueMemberPath: "Pop2005",
-         isHighlightingEnabled: true,
-         thickness: 5
-      },
-      {
-         name: "1995Population",
-         type: "line",
-         title: "1995",
-         xAxis: "NameAxis",
-         yAxis: "PopulationAxis",
-         valueMemberPath: "Pop1995",
-         isHighlightingEnabled: true,
-         thickness: 5
-      }
-   ]
-});
-```
 ## <a id="events"></a>Events
 
 
@@ -427,44 +372,12 @@ The following table summarizes the properties of the     `assigningCategoryMarke
 
 ### <a id="event-example"></a>Example
 
-The following screenshot displays an example of using the `assigningCategoryStyle` event to change the highlighting feature to fade non highlighting columns instead of changing the highlighting column.
+The following example shows the usage of the `assigningCategoryStyle` event to change the highlighting feature to fade non highlighting columns instead of changing the highlighting column.
 
-![](images/jQuery_Series_Highlighting_02.png)
-
-Following is the code implemented for this example:
-
-```
-$("#chart").igDataChart({
-   ...
-   series: [{
-      name: "2005Population",
-      type: "column",
-      title: "2005 Population",  
-      isHighlightingEnabled: true,
-      isTransitionInEnabled: true,
-      xAxis: "NameAxis",
-      yAxis: "PopulationAxis",
-      valueMemberPath: "Pop2005",
-      showTooltip: true,
-      isCustomCategoryStyleAllowed: true,
-      isAssigningCategoryStyleAssigned: true
-   }],
-   assigningCategoryStyle: function (e, ui) {
-      var minOpacity = .3, opacity = 1.0, curr;
-      if (ui.sumAllSeriesHighlightingProgress > 0.0) {
-         var progress = 0;
-         if (ui.highlightingInfo !== null) {
-            progress = ui.highlightingInfo.progress;
-         }
-
-         progress = progress - ui.sumAllSeriesHighlightingProgress;
-         opacity = minOpacity + (1.0 + progress) * (1.0 - minOpacity);
-         ui.opacity = opacity;
-         ui.highlightingHandled = true;         
-      }
-   }
-});
-```
+<div class="embed-sample">
+   [Custom Series Highlighting](%%SamplesEmbedUrl%%/data-chart/custom-series-highlighting)
+   ![](images/jQuery_Series_Highlighting_02.png)
+</div>
 
 ## <a id="related-content"></a>Related Content
 
@@ -475,17 +388,6 @@ The following topic provides additional information related to this topic:
 
 
 -	[Adding igDataChart](igDataChart-Adding.html):  This topic demonstrates how to add the `igDataChart` control to a page and bind it to data.
-
-
-### Samples
-
-The following sample provides additional information related to this topic.
-
--	[Series Highlighting](%%SamplesUrl%%/data-chart/series-highlighting):  This sample demonstrates the series highlighting feature which allows you to highlight either an entire series or individual items within a series.
-
--	[Series Highlighting (Financial)](%%SamplesUrl%%/data-chart/series-highlighting-financial): This sample demonstrates the series highlighting feature which allows you to highlight the financial series.
-
--	[Custom Series Highlighting](%%SamplesUrl%%/data-chart/custom-series-highlighting):  This sample demonstrates how to use the `assigningCategoryStyle` event to change the highlighting to fade non highlighted columns instead of changing the highlighted column.
 
 
 

@@ -42,13 +42,13 @@ This feature provides progressive loading of data records into the page DOM whil
 
 In automatic mode, data is loaded implicitly while the user scrolls the grid and reaches the bottom of the loaded content.
 
-In button mode, the there is a button at the bottom of the grid which loads more rows when the user click/taps on it.
+In button mode, there is a button at the bottom of the grid which loads more rows when the user click/taps on it.
 
 The features is built on top of the [$.ig.DataSource](%%jQueryApiUrl%%/ig.datasource) paging functionality, thus it supports all range of data sources supported by the `$.ig.DataSource`. This however makes the feature incompatible with the Paging feature itself. For the supported integration scenarios please refer to the [Feature Matrix (igGrid)](Feature-Compatibility-Matrix%28igGrid%29.html) topic.
 
 ![](images/igGrid_Append_Rows_on_Demand_Overview_1.png)
 
-Note: The feature was previously called Load on Demand. This caused confusion in some customers which referred to the `igHierarchicalGrid` Load on Demand functionality. In order to differentiate with the Load on Demand functionality in other controls like `igCombo`, `igHierarchicalGrid` and `igTree` the feature is renamed to Append Rows on Demand. For migration instructions see the [CTP Migration Guide](#migration-guide) section.
+> **Note:** The feature was previously called Load on Demand. This caused confusion in some customers which referred to the `igHierarchicalGrid` Load on Demand functionality. In order to differentiate with the Load on Demand functionality in other controls like `igCombo`, `igHierarchicalGrid` and `igTree` the feature is renamed to Append Rows on Demand. For migration instructions see the [CTP Migration Guide](#migration-guide) section.
 
 ## <a id="append-rows-on-demand"></a>Enabling Append Rows on Demand
 
@@ -66,6 +66,7 @@ JavaScript files
 -   jquery.js
 -   jqueryui.js
 -   js\modules\infragistics.util.js
+-   js\modules\infragistics.util.jquery.js
 -   js\modules\infragistics.ui.shared.js
 -   js\modules\infragistics.datasource.js
 -   js\modules\infragistics.ui.grid.framework.js
@@ -113,10 +114,12 @@ As noted previously the feature was renamed from “Load on Demand” to “Appe
 -   The feature file in the “<installation_folder>\js\modules” folder is renamed from “`infragistics.ui.grid.loadondemand.js`” to “`infragistics.ui.grid.appendrowsondemand.js`”
 -   In Infragistics Loader the feature name from “igGrid.LoadOnDemand” to “igGrid.AppendRowsOnDemand”
 -   Feature name is changed from “igGridLoadOnDemand” to “[igGridAppendRowsOnDemand](%%jQueryApiUrl%%/ui.igGridAppendRowsOnDemand)”. You need to replace all your API calls to the new feature name.
--   In igGrid [features](%%jQueryApiUrl%%/ui.iggrid_tg#options:features) option array the feature is renamed from “LoadOnDemand” to “AppendRowsOnDemand”
+-   In igGrid [features](%%jQueryApiUrl%%/ui.iggrid#options:features) option array the feature is renamed from “LoadOnDemand” to “AppendRowsOnDemand”
 -   In Infragistics.Web.Mvc.dll
    -   In Controller – the GridLoadOnDemand class is renamed to [GridAppendRowsOnDemand](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridAppendRowsOnDemand.html)
     -   In View – the GridLoadOnDemand method is renamed to [GridAppendRowsOnDemand](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridFeatureBuilder`1~AppendRowsOnDemand.html)
+
+
 
 ## <a id="related-content"></a>Related Content
 
@@ -128,7 +131,9 @@ The following topics provide additional information related to this topic.
 
 ### <a id="samples"></a>Samples
 
-The following samples provide additional information related to this topic.
+The igGrid Append Rows On Demand feature adds functionality to append data to the grid. It works in two modes: Automatic and Button. Use the upper grid to experience the Automatic mode. Scroll to the bottom of the grid to see that the new data will be appended to the grid. Use the bottom grid to experience the Button mode. Scroll to the bottom of the grid and then press the "Load more data" button to append new data.
 
-- [Append Rows on Demand](%%NewSamplesUrl%%/grid/append-rows-on-demand)
-                    
+
+<div class="embed-sample">
+    [Append Rows on Demand](%%SamplesEmbedUrl%%/grid/append-rows-on-demand)
+</div>

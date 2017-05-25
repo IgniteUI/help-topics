@@ -62,6 +62,12 @@ By default the MVC wrappers don’t support defining the event handlers in the c
 	>**Note:** Remember that if you want to cancel an event (cancellable events are `fileSelecting` and `fileUploading`) you just need to return **false** from the function.
 
  
+This sample demonstrates how to utilize the igUpload's events and methods: 
+
+<div class="embed-sample">
+   [API and Events](%%SamplesEmbedUrl%%/file-upload/api-events)
+</div>
+
 
 
 ## Client Events
@@ -314,7 +320,6 @@ Value |Description
 8 |Error thrown when trying to check if the file could be canceled and `maxSimultaneousFilesUploads` Is less or equal to 0
 
 ## Related Links
--   [igUpload API and Events Sample](%%SamplesUrl%%/file-upload/api-events)
 -   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html)
 -   [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 

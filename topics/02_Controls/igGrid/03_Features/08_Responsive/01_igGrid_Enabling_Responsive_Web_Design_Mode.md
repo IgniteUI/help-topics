@@ -44,7 +44,6 @@ This topic contains the following sections:
     -   [Code](#mvc-code)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
 
 
 
@@ -171,14 +170,6 @@ Following is the code that implements this example.
 The following topics provide additional information related to this topic.
 
 - [Configuring Responsive Web Design (RWD) Mode (igGrid)](igGrid-Configuring-Responsive-Web-Design-Mode-LandingPage.html): This is a group of topics explaining the various configuration tasks related to the Responsive Web Design (RWD) mode in the `igGrid` control, like configuring column hiding, creating custom row and column templates, creating custom RWD configurations, and configuring RWD mode for use with Twitter Bootstrap.
-
-
-### <a id="samples"></a> Samples
-
-The following samples provide additional information related to this topic.
-
-- [Responsive Web Design Mode](%%SamplesUrl%%/grid/responsive-web-design-mode): This sample demonstrates the `igGrid`’s Responsive Web Design mode feature. Responsive Web Design mode allows you to support multiple screen sizes and form factors with single code base and design.
-
 
 
 

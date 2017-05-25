@@ -28,7 +28,10 @@ In order to maintain flexibility the tree grid features a configurable expansion
 - [**igTreeGrid vs. igHierarchicalGrid**](#tree-vs-hierarchical-grids)
 - [**Performance**](#performance)
 - [**Getting Started**](#getting-started)
-	- [Full Page Sample](#full-page-sample)
+  - [Initializing igTreeGrid in JavaScript](#jq-treegrid)
+	  - [Full Page Sample](#full-page-sample)
+  - [Initializing a MVC igTreeGrid](#mvc-treegrid)
+  - [Customize the expand and collapse icons](#customize-icon)
 -  [**Keyboard navigation**](#keyboard-navigation)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
@@ -85,6 +88,13 @@ $('#treegrid').igTreeGrid({
 });
 ```
 
+The tree grid below is bound to a flat data source:
+
+<div class="embed-sample">
+   [JSON Binding](%%SamplesEmbedUrl%%/tree-grid/json-binding)
+</div>
+
+
 ### <a id="hierarchical-data"></a> Hierarchical Data Source
 
 Hierarchical data sources have a nested relationship where child data exists as an array member of the parent data object. An example of a hierarchical data source looks like this:
@@ -120,6 +130,12 @@ $('#treegrid').igTreeGrid({
   ...
 });
 ```
+
+The tree grid below is bound to a hierarchical data source:
+
+<div class="embed-sample">
+   [File Explorer](%%SamplesEmbedUrl%%/tree-grid/file-explorer)
+</div>
 
 ## <a id="feature-differences-iggrid"></a> Feature differences from igGrid
 
@@ -177,6 +193,8 @@ Other features that help increase performance include [Load on Demand](igTreeGri
 
 ## <a id="getting-started"></a> Getting Started with the igTreeGrid
 
+### <a id='jq-treegrid'></a> Initializing igTreeGrid in JavaScript
+
 Initializing the `igTreeGrid` requires that you pass an [`options`](%%jQueryApiUrl%%/ui.igtreegrid#options) object that defines the characteristics of the grid. The following code snippet demonstrates how to create a grid bound to a flat data source that includes filtering, sorting and paging.
 
 ```javascript
@@ -214,7 +232,7 @@ Notice that in this case values for both `primaryKey` and `foreignKey` are prese
 
 The Filtering and Paging features are shown to include commented out option values that are available for these features. For more information you can read about how Sorting, Filtering and Paging are implemented specifically for the tree grid.
 
-### <a id="full-page-sample"></a> Full Page Sample
+#### <a id="full-page-sample"></a> Full Page Sample
 
 ```html
 <!DOCTYPE html>
@@ -312,6 +330,188 @@ The Filtering and Paging features are shown to include commented out option valu
 </html>
 ```
 
+### <a id='mvc-treegrid'></a> Initializing a MVC igTreeGrid
+
+The following steps will guide you through the proccess of initializing the MVC igTreeGrid.
+
+Steps:
+
+	1. Create a new MVC application.
+	2. Add reference to the Infragistics.Web.Mvc assembly.
+	3. Create a model class.
+
+```csharp
+    public class FileExplorer
+    {
+        public string ID { get; set; }
+        public string Name { get; set; }
+        public DateTime DateModified { get; set; }
+        public string Type { get; set; }
+        public int Size { get; set; }
+        public List<FileExplorer> Files { get; set; }
+    }
+```
+
+	4. Create a MVC Controller method that populates a List of data and returns it to the View.
+
+```csharp
+public ActionResult AspMvcHelper()
+		{
+			var files = new List<FileExplorer>();
+			files.Add(new FileExplorer
+			{
+				ID = "1",
+				Name = "Documents",
+				DateModified = new DateTime(2013, 9, 12),
+				Type = "File Folder",
+				Size = 4480,
+				Files = new List<FileExplorer> { 
+                    new FileExplorer { ID = "4", Name = "To do list.txt", DateModified = new DateTime(2013,11,30), Type = "TXT File", Size = 4448 },
+                    new FileExplorer { ID = "5", Name = "To do list.txt", DateModified = new DateTime(11/30/2013), Type = "TXT File", Size = 4448 }
+                }
+			});
+			files.Add(new FileExplorer
+			{
+				ID = "2",
+				Name = "Music",
+				DateModified = new DateTime(2014, 6, 10),
+				Type = "File Folder",
+				Size = 5594,
+				Files = new List<FileExplorer> { 
+                new FileExplorer { ID = "6", Name = "AC/DC", DateModified =new DateTime(2014,6,10), Type = "File Folder", Size = 2726 , 
+                    Files = new List<FileExplorer> { 
+                        new FileExplorer { ID = "8", Name = "Stand Up.mp3", DateModified = new DateTime(2014,6,10), Type = "MP3 File", Size = 456 },
+                        new FileExplorer { ID = "9", Name = "T.N.T.mp3", DateModified = new DateTime(2014,6,10), Type = "MP3 File", Size = 1155 },
+                        new FileExplorer { ID = "10", Name = "The Jack.mp3", DateModified = new DateTime(2014,6,10), Type = "MP3 File", Size = 1115 }
+                    }
+                },
+                new FileExplorer { ID = "7", Name = "WhiteSnake", DateModified = new DateTime(2014,6,11), Type = "File Folder", Size = 2868, 
+                    Files = new List<FileExplorer> { 
+                        new FileExplorer { ID = "11", Name = "Trouble.mp3", DateModified =  new DateTime(2014,6,11), Type = "MP3 File", Size = 1234 },
+                        new FileExplorer { ID = "12", Name = "Bad Boys.mp3", DateModified =  new DateTime(2014,6,11), Type = "MP3 File", Size = 522 },
+                        new FileExplorer { ID = "13", Name = "Is This Love.mp3", DateModified =  new DateTime(2014,6,11), Type = "MP3 File", Size = 1112 }
+                    } 
+                }
+             }
+			});
+			files.Add(new FileExplorer
+			{
+				ID = "3",
+				Name = "Pictures",
+				DateModified = new DateTime(2014, 1, 20),
+				Type = "File Folder",
+				Size = 1825,
+				Files = new List<FileExplorer> { 
+                    new FileExplorer { ID = "14", Name = "Jack's Birthday", DateModified =  new DateTime(2014,6,21), Type = "File Folder", Size = 631, 
+                        Files = new List<FileExplorer> { 
+                            new FileExplorer { ID = "16", Name = "Picture1.png", DateModified = new DateTime(2014,6,21), Type = "PNG image", Size = 493 },
+                            new FileExplorer { ID = "17", Name = "Picture2.png", DateModified = new DateTime(2014,6,21), Type = "PNG image", Size = 88 },
+                            new FileExplorer { ID = "18", Name = "Picture3.gif", DateModified = new DateTime(2014,6,21), Type = "GIF File", Size = 50 }
+                        }  
+                    },
+                    new FileExplorer { ID = "15", Name = "Trip to London", DateModified = new DateTime(2014,3,11), Type = "File Folder", Size = 1194, 
+                        Files = new List<FileExplorer> { 
+                            new FileExplorer { ID = "19", Name = "Picture1.png", DateModified = new DateTime(2014,3,11), Type = "PNG image", Size = 974 },
+                            new FileExplorer { ID = "20", Name = "Picture2.png", DateModified = new DateTime(2014,3,11), Type = "PNG image", Size = 142 },
+                            new FileExplorer { ID = "21", Name = "Picture3.png", DateModified = new DateTime(2014,3,11), Type = "PNG image", Size = 41 },
+                            new FileExplorer { ID = "22", Name = "Picture4.png", DateModified = new DateTime(2014,3,11), Type = "PNG image", Size = 25 },
+                            new FileExplorer { ID = "23", Name = "Picture5.png", DateModified = new DateTime(2014,3,11), Type = "PNG image", Size = 12 }
+                        }  
+                    }
+                }
+			});
+
+			return View("aspnet-mvc-helper", files.AsQueryable());
+		}
+```
+
+	5. Create a View named "aspnet-mvc-helper".
+
+In it reference the Infragistics.Web.Mvc.dll assembly and define the Model for the View:
+
+**In C#:**
+
+```
+@using Infragistics.Web.Mvc
+@model IQueryable<FileExplorer>
+```
+
+Add reference to the jQuery, jQueryUI and the IgniteUI scripts and css classes:
+
+```js
+    <!-- Ignite UI Required Combined CSS Files -->
+    <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+    <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet" />
+
+    <script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+    <!-- Ignite UI Required Combined JavaScript Files -->
+    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+
+```
+
+	6. Define the igTreeGrid in the View.
+
+**In C#:**
+
+```
+@(Html.Infragistics().TreeGrid(Model)
+        .ID("treegrid1")
+        .Width("100%")
+        .AutoGenerateColumns(false)
+        .PrimaryKey("ID")
+        .ChildDataKey("Files")
+        .RenderExpansionIndicatorColumn(true)
+        .InitialExpandDepth(1)
+        .Columns(column =>
+            {
+                column.For(x => x.ID).Hidden(true);
+                column.For(x => x.Name).HeaderText("Name").Width("30%");
+                column.For(x => x.DateModified).HeaderText("Date Modified").Width("20%");
+                column.For(x => x.Type).HeaderText("Type").Width("20%");
+                column.For(x => x.Size).HeaderText("Size in KB").Width("20%");
+            })
+        .DataBind()
+        .Render()
+    )
+```
+
+The below image demonstrates the end result.
+
+![igTreeGrid](images/igtreegrid-overview-mvc.png)
+
+### <a id='customize-icon'></a> Customize the expand and collapse icons
+
+The expand and collapse icons can be customized via the following css classes.
+- For the expansion indicator - ui-icon ui-igtreegrid-expansion-indicator ui-icon-plus
+- For the collapsing indicator - ui-icon ui-igtreegrid-expansion-indicator ui-icon-minus
+
+The below example demonstrates how to customize the default classes to set a custom image.
+
+```
+.ui-icon.ui-igtreegrid-expansion-indicator.ui-icon-minus {
+            background: url(../../images/samples/tree-grid/opened_folder.png) !important;
+            background-repeat: no-repeat;
+}
+.ui-icon.ui-igtreegrid-expansion-indicator.ui-icon-plus {
+            background: url(../../images/samples/tree-grid/folder.png) !important;
+            background-repeat: no-repeat;
+}
+.ui-icon-plus:before {
+		    content: '' !important;
+}
+.ui-icon-minus:before{
+		    content: '' !important;
+}
+```
+
+The below image shows the result.
+
+![igTreeGrid](images/igtreegrid-overview-css.png)
+
 ## <a id="keyboard-navigation"></a> Keyboard navigation 
 
 ### General
@@ -359,6 +559,4 @@ Press|While| To
 
 ### <a id="samples"></a> Samples
 - [igTreeGrid Overview](%%SamplesUrl%%/tree-grid/overview)
-- [igTreeGrid Filtering](%%SamplesUrl%%/tree-grid/file-explorer)
-- [igTreeGrid Sorting](%%SamplesUrl%%/tree-grid/remote-features)
-- [igTreeGrid Paging](%%SamplesUrl%%/tree-grid/file-explorer)
+- [igTreeGrid Paging](%%SamplesUrl%%/tree-grid/paging)

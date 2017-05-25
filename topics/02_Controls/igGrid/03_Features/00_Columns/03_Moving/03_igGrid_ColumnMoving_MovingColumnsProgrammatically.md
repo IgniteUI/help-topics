@@ -280,7 +280,7 @@ The following topics provide additional information related to this topic.
 
 The following samples provide additional information related to this topic.
 
-- [Column Moving](%%SamplesUrl%%/grid/column-moving): This sample demonstrates configuring column moving in the `igGrid`.
+- [Column Moving](%%SamplesUrl%%/grid/column-management): This sample demonstrates configuring column moving in the `igGrid`.
 
 
 

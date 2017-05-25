@@ -34,6 +34,7 @@ This topic demonstrates how to add the `igDataChart` control to a page and bind 
 This topic contains the following sections:
 
 -   [Introduction](#introduction)
+-   [Styling the Chart Series by Applying Linear Gradient Colors](#linear-gradient)
 -   [Styling the Chart Series by Applying Drop-Shadow Effect](#drop-shadow-effect)
     -   [Drop-shadow effect configuration summary](#drop-shadow-effect-config)
     -   [Shadow types](#shadow-types)
@@ -43,7 +44,6 @@ This topic contains the following sections:
     -   [Example – drop-shadow effect with Compound shadow](#example-drop-shadow-effect)
 -   [Related Content](#related-content)
     -   [Topics](#topics)
-    -   [Samples](#samples)
 
 
 
@@ -56,6 +56,14 @@ The igDataChart's series can be styled in many aspects, the main of which are ap
 
 In addition to managing the styling described above, [drop-shadow effect can be applied to the chart series](#drop-shadow-effect) by setting the [`isDropShadowEnabled`](%%jQueryApiUrl%%/ui.igDataChart#options:series.isDropShadowEnabled) property.
 
+##<a id="linear-gradient"></a>Styling the Chart Series by Applying Linear Gradient Colors
+The linear gradient effect is achieved, by setting the type of the [`brush`](%%jQueryApiUrl%%/ui.igDataChart#options:series.brush) or [`outline`](%%jQueryApiUrl%%/ui.igDataChart#options:series.outline) to `"linearGradient"` and providing an array of `colorStops` (at least two) with color and offset for each.
+
+The following sample defines the chart configuration needed to achieve that effect:
+
+<div class="embed-sample">
+   [Chart Fill Gradients](%%SamplesEmbedUrl%%/data-chart/chart-fill-gradients)
+</div>
 
 
 ##<a id="drop-shadow-effect"></a>Styling the Chart Series by Applying Drop-Shadow Effect
@@ -64,7 +72,10 @@ In addition to managing the styling described above, [drop-shadow effect can be 
 
 With the drop-shadow effect, the series appear as if casting a shadow.
 
-![](images/igDataChart_Styling_the_Chart_Series_1.png)
+<div class="embed-sample">
+   [Drop Shadows](%%SamplesEmbedUrl%%/data-chart/drop-shadows)
+   ![](images/igDataChart_Styling_the_Chart_Series_1.png)
+</div>
 
 Applying the drop-shadow effect to the series is done by setting the [`isDropShadowEnabled`](%%jQueryApiUrl%%/ui.igDataChart#options:series.isDropShadowEnabled) property of the series to “true”. Customization of the effect in terms of [configurable shadow type](#shadow-types), blur radius, color, direction, and opacity is supported through the respective shadow-related properties of the [series](igDataChart-Series-Types.html) (See [Drop-shadow effect configuration summary chart](#drop-shadow-effect-chart), [Property settings](#property-settings), and the examples.).
 
@@ -351,13 +362,6 @@ The following topics provide additional information related to this topic.
 -   [Styling and Theming in %%ProductName%%](Deployment-Guide-Styling-and-Theming.html)
 
 General information and a procedure for updating styles and themes in %%ProductName%%™ library.
-
-
-### <a id="samples"></a>Samples
-
-The following samples provide additional information related to this topic.
-
--   [Drop Shadows](%%SamplesUrl%%/data-chart/drop-shadows): This sample demonstrates applying a drop-shadow effect to the data series in the `igDataChart` control.
 
 
 

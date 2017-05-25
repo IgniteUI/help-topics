@@ -193,9 +193,20 @@ Tooltip
     </tbody>
 </table>
 
+### <a id="samples"></a> Samples
 
+This sample configures several of the elements, available in the `igDataChart` control.
+Chart elements such as axis, labels, grid lines, grid stripes, zoom bars, series, trend lines, indicators and crosshairs are all available to enhance the control's presentation.
 
+<div class="embed-sample">
+   [Chart Elements](%%SamplesEmbedUrl%%/data-chart/chart-elements)
+</div>
 
+In addition to the settings above, the sample below demonstrates both enabling the default tooltip for the Chart’s series and configuring a custom tooltip template for the "United States" series.
+
+<div class="embed-sample">
+   [Series Tooltips](%%SamplesEmbedUrl%%/data-chart/series-tooltips)
+</div>
 
 ##Related Content
 
@@ -207,15 +218,6 @@ The following topics provide additional information related to this topic.
 -	[Adding igDataChart](igDataChart-Adding.html): This topic demonstrates how to create add the `igDataChart`™ control and bind it to data.
 
 -	[](igDataChart-API-Links.html)[jQuery and ASP.NET MVC Helper API Reference Links (igDataChart)](igDataChart-API-Links.html): This topic provides links to the API documentation for jQuery and ASP.NET MVC helper class for `igDataChart`™ control.
-
-
-
-### Samples
-
-The following samples provide additional information related to this topic.
-
--	[Series Tooltips](%%SamplesUrl%%/data-chart/series-tooltips):  This sample demonstrates both enabling the default tooltip for the `igDataChart`’s series and configuring custom tooltip templates for the control.
-
 
 
 

@@ -47,12 +47,13 @@ This topic contains the following sections:
 -   [Introduction](#_Introduction)
 -   [Code Examples](#_Code_Examples)
 -   [Code Example: Configuring Value Binding for Editor Controls](#_Configuring_Value_Binding_for_Editor_Controls)
--   [Code Example: Configuring an Input Mask (igMaskEditor)](#_Configuring_an_Input_Mask)
--   [Code Example: Configuring a Scaling Factor (igPercentEditor)](#_Configuring_a_Scaling_Factor)
+    -   [Configuring an Input Mask (igMaskEditor)](#_Configuring_an_Input_Mask)
+    -   [Configuring a Scaling Factor (igPercentEditor)](#_Configuring_a_Scaling_Factor)
+    -   [Complete code example](#complete-sample)
 -   [Code Example: Configuring Immediate Update Mode (igTextEditor)](#_Configuring_Immediate_Update_Mode)
+-   [Code Example: Configuring Editors Disable Handler (igTextEditor)](#_Configuring_Disable_Handler)
 -   [Related Content](#_Related_Content)
     -   [Topics](#_Topics)
-    -   [Samples](#_Samples)
     -   [Resources](#_Resources)
 
 
@@ -76,10 +77,9 @@ The following table lists the code examples included in this topic.
 
 
 -	 [Configuring Value Binding for Editor Controls](#_Configuring_Value_Binding_for_Editor_Controls) : This example shows how to bind the value option of %%ProductName%% editor controls to a View-Model object using the Knockout declarative syntax.
-
--	[Configuring an Input Mask (igMaskEditor)](#_Configuring_an_Input_Mask) : This example shows how to bind an `igMaskEditor`™ to a View-Model object using the Knockout declarative syntax.
-
--	[Configuring a Scaling Factor (igPercentEditor)](#_Configuring_a_Scaling_Factor): This example shows how to bind an `igPercentEditor`™ to a View-Model object using the Knockout declarative syntax.
+    -	[Configuring an Input Mask (igMaskEditor)](#_Configuring_an_Input_Mask) : This example shows how to bind an `igMaskEditor`™ to a View-Model object using the Knockout declarative syntax.
+    -	[Configuring a Scaling Factor (igPercentEditor)](#_Configuring_a_Scaling_Factor): This example shows how to bind an `igPercentEditor`™ to a View-Model object using the Knockout declarative syntax.
+    -	[Complete code example](#complete-sample): This sample demonstrates binding %%ProductName%% Editor controls to data managed by Knockout data bindings.
 
 -	[Code Example: Configuring Immediate Update Mode (igTextEditor)](#_Configuring_Immediate_Update_Mode): This example shows how to instantiate an `igTextEditor` control and configure updates on every key stroke.
 
@@ -87,14 +87,11 @@ The following table lists the code examples included in this topic.
 
 
 
-##<a id="_Configuring_Value_Binding_for_Editor_Controls"></a>Code Example: Configuring Value Binding for Editor Controls
-
-
-### Description
+## <a id="_Configuring_Value_Binding_for_Editor_Controls"></a>Code Example: Configuring Value Binding for Editor Controls
 
 This example shows how to bind the value option of %%ProductName%% editor controls to a View-Model managed by Knockout. It is shown in the context of `igTextEditor`, `igNumericEditor`, `igCurrencyEditor`™ and `igDateEditor` controls. Using the declarative syntax of Knockout, the controls are instantiated from data-bind attribute of input elements and bound to View-Model observable properties.
 
-### Code
+#### Code
 
 The code snippet below shows a View-Model object that declares observable properties managed by Knockout.
 
@@ -102,7 +99,7 @@ The code snippet below shows a View-Model object that declares observable proper
 
 ```js
 var viewModel = {
-    orderDate: ko.observable("2012/10/24"),
+    orderDate: ko.observable(new Date(2017, 0, 21)),
     dueInDays: ko.observable(7),
     customerName: ko.observable("Peter Sanders"),
     contactPhone: ko.observable("(318) 555-6879"),
@@ -141,16 +138,11 @@ The following code snippet shows how to declare binding options for editor contr
 <input data-bind="igCurrencyEditor: { value: advancePayment }"/>
 ```
 
-
-
-##<a id="_Configuring_an_Input_Mask"></a>Code Example: Configuring an Input Mask (igMaskEditor)
-
-
-### Description
+### <a id="_Configuring_an_Input_Mask"></a> Configuring an Input Mask (igMaskEditor)
 
 This example shows how to bind an `igMaskEditor` control to a View-Model object managed by Knockout. Using the declarative syntax of Knockout an `igMaskEditor` is instantiated from a data-bind attribute of an input element and bound to an observable property of a View-Model. The `inputMask` option of the editor is configured also in order to limit user input according to a certain pattern.
 
-### Code
+#### Code
 
 The code snippet below instantiates an `igMaskEditor` control. The control is bound to the `contactPhone` observable property of the View-Model object. In addition the `inputMask` option of the mask editor is set to a mask representing phone numbers.
 
@@ -166,14 +158,11 @@ The code snippet below instantiates an `igMaskEditor` control. The control is bo
 
 
 
-##<a id="_Configuring_a_Scaling_Factor"></a>Code Example: Configuring a Scaling Factor (igPercentEditor)
-
-
-### Description
+### <a id="_Configuring_a_Scaling_Factor"></a> Configuring a Scaling Factor (igPercentEditor)
 
 This example shows how to bind an `igPercentEditor` to a View-Model object managed by Knockout. Using the declarative syntax of Knockout the `igPercentEditor` is instantiated from a data-bind attribute of an input element and bound to a View-Model observable property. The `displayFactor` option of the editor is configured also in order to scale the underlying View-Model value to a proper percentage input.
 
-### Code
+#### Code
 
 The code snippet below instantiates an `igPercentEditor` control. The control is bound to the `discountPercent` observable property of the View-Model object. In addition the `displayFactor` option of the editor is set to 1 in order to scale properly the numeric value in `discountPercent`.
 
@@ -187,12 +176,16 @@ The code snippet below instantiates an `igPercentEditor` control. The control is
     }"/>
 ```
 
+### <a id="complete-sample"></a> Complete code example
+
+This sample demonstrates binding %%ProductName%% Editor controls to data managed by Knockout data bindings:
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/editors/bind-editors-with-ko](%%SamplesEmbedUrl%%/editors/bind-editors-with-ko)
+</div>
 
 
 ##<a id="_Configuring_Immediate_Update_Mode"></a>Code Example: Configuring Immediate Update Mode (igTextEditor)
-
-
-### Description
 
 This example shows how to bind the value option of %%ProductName%% editor control to a View-Model managed by Knockout and configure the control to update the View-Model on every keystroke. By default, any edits in an %%ProductName%% editor control are sent to the View-Model when the control loses focus, i.e. when `onBlur` event occurs. The following code configures the update mode of the `igTextEditor` control to Immediate by setting the `updateMode` option to ‘immediate’.
 
@@ -211,7 +204,23 @@ Following is the code that implements this example.
 
 >**Note:** The update mode option can be configured only on initialization. It cannot be changed at run-time.
 
+##<a id="_Configuring_Disable_Handler"></a>Code Example: Configuring Editors Disable Handler (igTextEditor)
 
+If a developer wants to apply the Knockout [`disabled`](http://knockoutjs.com/documentation/disable-binding.html) binding handler this will not automatically enables/disables the editors, because they has a special logic that handles enabling/disabling the control. For that puprose an additional `igEditorDisable` binding handler is created. The following code demonstrates how to declare the `igEditorDisable` binding: 
+
+**In JavaScript:**
+
+```js
+function viewModel() {
+    this.isDisabled =  ko.observable(false);
+}
+```
+
+**In HTML:**
+
+```html
+<div data-bind="igTextEditor: { ...}, igEditorDisable: isDisabled"></div>
+```
 
 ##<a id="_Related_Content"></a>Related Content
 
@@ -222,15 +231,6 @@ The following topics provide additional information related to this topic.
 
 
 -	[Configuring Knockout Support (igCombo)](igCombo-KnockoutJS-Support.html) : This topic explains how to configure the `igCombo`™ control to bind to View-Model objects managed by the [Knockout library](http://knockoutjs.com/).
-
-
-
-###<a id="_Samples"></a> Samples
-
-The following samples provide additional information related to this topic.
-
-
--	[KnockoutJS Binding](%%SamplesUrl%%/editors/bind-editors-with-ko): This sample demonstrates binding %%ProductName%% Editor controls to data managed by Knockout data bindings.
 
 
 

@@ -699,9 +699,8 @@ The following topics provide additional information related to this topic.
 
 ### <a id="samples"></a> Samples
 
-The following samples provide additional information related to this topic.
+The following sample provides additional information related to this topic.
 
-- [Multi-Column Headers](%%SamplesUrl%%/grid/multi-column-headers): This sample shows how to configure multi-column headers.
 - [Collapsible Column Groups](%%SamplesUrl%%/grid/collapsible-column-groups): This sample shows how to configure multi-column headers with collapsible column groups.
 
 

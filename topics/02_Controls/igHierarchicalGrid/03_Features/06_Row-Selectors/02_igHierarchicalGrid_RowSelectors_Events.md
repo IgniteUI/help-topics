@@ -511,7 +511,7 @@ Refer to the following topics for additional information.
 
 The following samples provide additional information related to this topic.
 
-- [**Row Selectors**](%%SamplesUrl%%/hierarchical-grid/row-selectors): Demonstrates the usage of RowSelectors in igHierarchicalGrid.
+- [**Row Selectors**](%%SamplesUrl%%/hierarchical-grid/selection-rowselectors): Demonstrates the usage of RowSelectors in igHierarchicalGrid.
 
 
 

@@ -37,6 +37,7 @@
 -   [igRadialGauge](igRadialGauge.html)
 -   [igRadialMenu](igRadialMenu.html)
 -   [igRating](igRating-igRating.html)
+-   [igScheduler](igscheduler-landing.html)
 -   [igSparkline](igSparkline-Landing.html)
 -   [igSplitter](igSplitter.html)
 -   [igTree](igTree-igTree.html)

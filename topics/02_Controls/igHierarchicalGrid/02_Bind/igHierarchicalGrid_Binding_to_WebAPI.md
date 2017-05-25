@@ -607,11 +607,6 @@ The following topics provide additional information related to this topic.
 - [REST Updating (igGrid)](igGrid-REST-Updating.html): This topic explains *igGrid* support for REST services.
 - [Binding to REST Services (igHierarchicalGrid)](igHierarchicalGrid-Binding-to-REST-Services.html): This topic explains how to bind the igHierarchicalGrid to a REST Service.
 
-### Samples
-The following samples provide additional information related to this topic.
-
-- [igGrid REST Editing](%%SamplesUrl%%/grid/rest-editing): This sample shows how to configure *igGrid* to work with REST Service.
-
 ### Resources
 The following material (available outside the Infragistics family of content) provides additional information related to this topic.
 

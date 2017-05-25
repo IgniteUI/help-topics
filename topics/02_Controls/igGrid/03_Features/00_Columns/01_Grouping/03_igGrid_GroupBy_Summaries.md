@@ -31,7 +31,7 @@ This topic contains the following sections:
 
 ## <a id="summaries-overview"></a> GroupBy Summmaries Feature Overview
 
-The GroupBy Summaries feature allows an additional summary row to be displayed below each group data island that displays summary information for the data columns in that island. The summary row is visible only when the related group is expanded. The below image demonstrates a grid with grouped columns where below each group the total sum of the "Price" column is displayed in a summary row:
+The GroupBy Summaries feature allows an additional summary row to be displayed below, on top or both for each group data island that displays summary information for the data columns in that island. The summary row is visible only when the related group is expanded. The image below demonstrates a grid with grouped columns where below each group the total sum of the "Price" column is displayed in a summary row:
 
 ![](images/igGrid_GroupBy_Summaries_Overview_01.png)
     
@@ -94,8 +94,9 @@ The following list contains information on the main summaries related options.
 
 | Option | Description | Default values | Valid Values|
 |--------|-------------|----------------|-------------|
-[groupSummaries](%%jQueryApiUrl%%/ui.iggridgroupby#options:groupSummaries) |Controls the default summary methods that will be applied to each column. <br/> When **true** - default summaries are enabled for all columns.  <br/> When **false** - default summaries are disabled  for all columns.  <br/>When **array** - the specified in the array summaries are applied for all columns.  See [groupSummariesObject](#groupSummariesObject) for summary object format. <br/>| false | true, false, array|
-[columnSettings.groupSummaries](%%jQueryApiUrl%%/ui.iggridgroupby#options:columnSettings.groupSummaries)| Array of objects setting the summaries for the column the columnSettings responds to. Takes precedent over the main groupSummaries option.<br/> When **true** - default summaries are enabled for specific column.  <br/> When **false** - default summaries are disabled for specific column.  <br/>When **array** - the specified in the array summaries are applied for specific column. See [groupSummariesObject](#groupSummariesObject) for summary object format.<br/> | null | true, false, array, null|
+|[groupSummaries](%%jQueryApiUrl%%/ui.iggridgroupby#options:groupSummaries) |Controls the default summary methods that will be applied to each column. <br/> When **true** - default summaries are enabled for all columns.  <br/> When **false** - default summaries are disabled  for all columns.  <br/>When **array** - the specified in the array summaries are applied for all columns.  See [groupSummariesObject](#groupSummariesObject) for summary object format. <br/>| false | true, false, array|
+|[groupSummariesPosition](%%jQueryApiUrl%%/ui.iggridgroupby#options:groupSummariesPosition) |Specifies where the summary row should be positioned. <br/> When **"top"** - the summary row will be positioned above the group records. <br/> When **"bottom"** - the summary row will be positioned at the bottom below the group records. <br/> When **"both"** - two identical summary rows will be displayed for the group at the top and the bottom. This is useful when having large amount of data inside the group.| "bottom"| "top", "bottom", "both"|
+|[columnSettings.groupSummaries](%%jQueryApiUrl%%/ui.iggridgroupby#options:columnSettings.groupSummaries)| Array of objects setting the summaries for the column the columnSettings responds to. Takes precedent over the main groupSummaries option.<br/> When **true** - default summaries are enabled for specific column.  <br/> When **false** - default summaries are disabled for specific column.  <br/>When **array** - the specified in the array summaries are applied for specific column. See [groupSummariesObject](#groupSummariesObject) for summary object format.<br/> | null | true, false, array, null|
 
 The groupSummaries option allows enabling/disabling the summaries by setting true/false or specifying an array of the default summary methods that will be applied for all columns that allow that summary type. The below example demonstrates specifying a single default summary of type "Sum":
 
@@ -122,12 +123,12 @@ In this example since the "Sum" summary is only applicable for numeric columns o
 The `columnSettings.groupSummaries` option allows specifying a summary per column, which takes higher priority than the groupSummaries main level option. When this option is set for a particular column any settings related to this column from the main `groupSummaries` option are disregarded.
 
 The <a id="groupSummariesObject"></a>**groupSummariesObject** used for specifying the summary options has the following properties:
-Name| Description | Type | Default value |
-----|-------------|------|---------------|
-summaryFunction|Name or custom function specifying the summary.| string or function |
-label | Sets the label that will be used when displaying the summary value.| string |
-summaryTemplate| Sets the template for each summary result. |string | "{label}{value}"
-format | Applies format for the summary value. | string | The grid’s column.format value.
+|Name| Description | Type | Default value |
+|----|-------------|------|---------------|
+|summaryFunction|Name or custom function specifying the summary.| string or function |
+|label | Sets the label that will be used when displaying the summary value.| string |
+|summaryTemplate| Sets the template for each summary result. |string | "{label}{value}"|
+|format | Applies format for the summary value. | string | The grid’s column.format value.|
 
 They allow futher customization of the look of the summary when it gets displayed in the grid summary row.
 
@@ -144,7 +145,7 @@ When set in: | Custom summary is applied to:
 [groupSummaries](%%jQueryApiUrl%%/ui.iggridgroupby#options:groupSummaries) | All columns.
 $.ig.util.defaultSummaryMethods | All columns.
 
-The function accepsts the data island data and should return the summary result for that data.
+The function accepts the data from the data island and should return the summary result for it.
 
 Custom Summary Example:
 

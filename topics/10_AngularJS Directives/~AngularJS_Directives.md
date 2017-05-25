@@ -19,5 +19,4 @@ The %%ProductName%%® directives for AngularJS allow you to take advantage of th
 
 -   [Using %%ProductName%% with AngularJS](Using-Ignite-UI-with-AngularJS.html) - This topic contains an overview using the %%ProductName%% directives for AngularJS.
 -   [Conditional and Advanced Templating with AngularJS](Conditional-and-Advanced-Templating-with-AngularJS.html) - This topic explains how to use conditional templates and use advanced templating methods to customize controls created with the %%ProductName%% directives for AngularJS.
-
-                    
+-   [AngularJS Samples](angularjs-samples.html) - This topic contains samples using the %%ProductName%% directives for AngularJS.

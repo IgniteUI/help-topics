@@ -60,10 +60,10 @@ The following table summarizes the states of the Hiding Column Chooser Window. T
 
 Additional details are available after the summary table.
 
-State | `columnChooserHideOnClick` value | Description
+State | [`columnChooserHideOnClick`](%%jQueryApiUrl%%/ui.iggridhiding#options:columnChooserHideOnClick) | Description
 ------|----------------------------------|------------
-[Hide multiple columns at once](#hide-multiple-columns) | false | Multiple columns are selected from the column chooser window and columns are hidden when the changes are applied in the window.
-[Hide column on click](#hide-on-click) | true | Columns are immediately hidden by selecting a column from the column chooser window.
+[Hide multiple columns at once](#hide-multiple-columns) | `false` | Multiple columns are selected from the column chooser window and columns are hidden when the changes are applied in the window.
+[Hide column on click](#hide-on-click) | `true` | Columns are immediately hidden by selecting a column from the column chooser window.
 
 
 ### <a id="hide-multiple-columns"></a>Hide multiple columns at once
@@ -172,7 +172,7 @@ The following topics provide additional information related to this topic.
 
 ### <a id="samples"></a> Samples
 
-The following samples provide additional information related to this topic.
+The following sample provides additional information related to this topic.
 
-- [Feature Chooser](%%SamplesUrl%%/grid/feature-chooser): Sample that demonstrates the Feature Chooser.
+- [Feature Chooser](%%SamplesUrl%%/grid/column-management): Sample that demonstrates the Feature Chooser.
 

@@ -186,7 +186,7 @@ The following topics provide additional information related to this topic.
 
 The following samples provide additional information related to this topic.
 
-- [API and Events](%%SamplesUrl%%/tree/api-and-events): This sample demonstrates how to use `igTree` API.
+- [API and Events](igtree-event-reference.html#attaching-handlers-jquery): This sample demonstrates how to use `igTree` API.
 
 
 

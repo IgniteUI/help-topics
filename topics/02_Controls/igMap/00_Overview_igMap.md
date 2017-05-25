@@ -356,7 +356,8 @@ The functionality of the igMap control is based on the HTML5 Canvas tag and its 
                     <tbody>
 						<tr>
 							<td>
-								`infragistics.util.js`
+								`infragistics.util.js`<br/>
+								`infragistics.util.jquery.js`
 							</td>
 
 							<td>
@@ -379,6 +380,7 @@ The functionality of the igMap control is based on the HTML5 Canvas tag and its 
 						        `infragistics.ext_core.js`<br/>
 						        `infragistics.ext_collections.js`<br/>
 						        `infragistics.ext_ui.js`<br/>
+								`infragistics.dv_jquerydom.js`<br/>
 						        `infragistics.ext_text.js`<br/>
 						        `infragistics.ext_io.js`<br/>
 						        `infragistics.ext_threading.js`<br/>
@@ -777,4 +779,4 @@ The following topics provide additional information related to this topic.
 
 The following samples provide additional information related to this topic.
 
--	[Map Tooltips](%%SamplesUrl%%/map/map-tooltips):This sample demonstrates how to set map tooltips in the `igMap` control.
+-	[Map Tooltips](igmap-configuring-visual-features.html#map-tooltips-sample):This sample demonstrates how to set map tooltips in the `igMap` control.

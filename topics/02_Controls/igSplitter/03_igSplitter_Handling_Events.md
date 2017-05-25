@@ -40,6 +40,7 @@ This topic contains the following sections:
 -   [Code Example: Handling the resizeStarted Event at Run-Time in ASP.NET MVC](#run-time-mvc)
     -   [Description](#mvc-description)
     -   [Code](#mvc-code)
+-   [Splitter API and Events Demo](#demo)
 -   [Related Content](#related-content)
 
 
@@ -80,73 +81,56 @@ The following table explains briefly the event handling cases related the `igSpl
             <th>
 Event handling case
 			</th>
-
             <th>
 Details
 			</th>
         </tr>
 	</thead>
 	<tbody>
-        
-
         <tr>
             <td>
 Handling events upon initialization in jQuery
 			</td>
-
             <td>
                 When binding to events on widget initialization, you subscribe to the event using an option which in the following format:
-
                 `eventName`: <handler>
                 </handler>
-
                 The valid settings for the `eventName` option are:
-
                 <ul>
                     <li>
 collapsed
 					</li>
-
                     <li>
 expanded
 					</li>
-
                     <li>
 resizeStarted
 					</li>
-
                     <li>
 resizing
 					</li>
-
                     <li>
 resizeEnded
 					</li>
-
                     <li>
 layoutRefreshed
 					</li>
-
                     <li>
 layoutRefreshing
 					</li>
                 </ul>
             </td>
         </tr>
-
         <tr>
             <td>
 Handling events at run-time in jQuery and ASP.NET MVC
 			</td>
-
             <td>
 You can assing the event handler to the name of a function in order to implement the handler outside control initialization.
 			</td>
         </tr>
     </tbody>
 </table>
-
-
 
 
 
@@ -172,7 +156,7 @@ This example assigns an event handling function to the `resizeStarted` event at 
 
 ```js
 $(".selector").igSplitter({
-    resizeStarted: function(evt, ui) { 
+    resizeStarted: function(evt, ui) {
           // Handle event
     }
 });
@@ -190,12 +174,17 @@ This example assigns an event handler for the `resizeStarted` event at run-time.
 **In JavaScript:**
 
 ```js
-$(document).delegate(".selector", "igsplitterresizestarted", function(evt, ui) { 
+$(document).delegate(".selector", "igsplitterresizestarted", function(evt, ui) {
    // Handle event
 });
 ```
 
+## <a id="demo"></a>Splitter API and Events Demo
+#### Sample below demonstrates how to handle events in the Splitter control and API usage.
 
+<div class="embed-sample">
+	   [%%SamplesEmbedUrl%%/splitter/api-events-splitter](%%SamplesEmbedUrl%%/splitter/api-events-splitter)
+</div>
 
 ## <a id="related-content"></a>Related Content
 ### Samples
@@ -216,8 +205,8 @@ The following samples provide additional information related to this topic.
 
 
 
- 
 
- 
+
+
 
 
