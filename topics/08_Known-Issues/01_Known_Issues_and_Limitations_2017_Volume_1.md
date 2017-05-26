@@ -566,6 +566,7 @@ Column keys which contain spaces are not supported|Column keys are used for gene
 The contextMenu event is renamed to cellRightClick|The event is renamed to be more self-explanatory.|![](../images/images/negative.png)
 Header text and  sorting/filtering/gear icons are misaligned in IE8  | This is a browser limitation due to IE8 not supporting css calc(). For details refer to: http://caniuse.com/#feat=calc| ![](../images/images/negative.png)
 igGrid does not support column keys containing special chars - [, ], \, (, ), etc. | The column keys are used in internal jQuery selectors for many of the grid's features. Currently the selectors are not explicitly escaped so any special characters in the column key would break the selectors. | ![](../images/images/positive.png)
+Microsoft dates formatting is not supported | The igDataSource is not going to accept Microsoft date formatting(`"/Date(1234656000000)/"`). If the provided data source contains this kind of dates they have to be changed to ISO UTC format(`"2009-02-15T00:00:00Z"`). This applies to `igGrid`, `igHierarchicalGrid` and `igTreeGrid`. | ![](../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
