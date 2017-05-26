@@ -8,23 +8,23 @@
 |metadata|
 -->
 
-# Migrating enableUTCDates option in 17.1
+# Migrating enableUTCDates option after 17.1
 
-## Date handling in 17.1 for igGrid, igHierarchicalGrid and igTreeGrid
+## Date handling in 17.1 and above for igGrid, igHierarchicalGrid and igTreeGrid
 
-Grids are handling dates through two options `enableUTCDates` and `dateDisplayType` in 17.1.
+Grids are handling dates through two options [`enableUTCDates`](%%jQueryApiUrl%%/ui.iggrid#options:enableUTCDates) and [`dateDisplayType`](%%jQueryApiUrl%%/ui.iggrid#options:columns.dateDisplayType) after 17.1.
 
--	`enableUTCDates` - this option is similar to what it does for igDateEditor and igDatePicker. It has nothing to do with displaying dates anymore. It serves the purpose to specify dates serialization. Whether the dates are serialized as UTC ISO 8061 string or in local time and zone values. 
+-	[`enableUTCDates`](%%jQueryApiUrl%%/ui.iggrid#options:enableUTCDates) - this option is similar to what it does for igDateEditor and igDatePicker. It has nothing to do with displaying dates anymore. It serves the purpose to specify dates serialization. Whether the dates are serialized as [UTC ISO 8061](https://en.wikipedia.org/wiki/ISO_8601#UTC) string or in local time and zone values. 
 For example 10:00 AM from a client with local offset of 5 hours ahead of GMT will be serialized as: "2016-11-11T10:00:00+05:00". This is when the option gets the default 'false' value. Otherwise, the date will use the ISO UTC format: "2016-11-11T05:00:00Z".
--	`dateDisplayType` – This option is part of the columns definitions and can be used for the date columns. If set to "local" (default) the grid is rendering the dates in local time zone. If set to "utc" the grid is rendering the dates in UTC. There is one more behavior delivered with that option and designed specifically to handle the default MVC wrappers scenario. It requires data source with time zone offset metadata. The dates are rendered as if in "utc" with the added offset. The idea behind this is to show the same dates the user sees on the server. The option dateDisplayType has no effect on non-date type columns and is ignored.
+-	[`dateDisplayType`](%%jQueryApiUrl%%/ui.iggrid#options:columns.dateDisplayType) – This option is part of the columns definitions and can be used for the date columns. If set to "local" (default) the grid is rendering the dates in local time zone. If set to "utc" the grid is rendering the dates in UTC. There is one more behavior delivered with that option and designed specifically to handle the default MVC wrappers scenario. It requires data source with time zone offset metadata. The dates are rendered as if in "utc" with the added offset. The idea behind this is to show the same dates the user sees on the server. The option dateDisplayType has no effect on non-date type columns and is ignored.
 
->**Note:** The `enableUTCDates` option has completely different meaning, but MVC wrappers are enabling it by default, otherwise the option is disabled by default. For example if the option is not set and MVC wrappers are used the dates are serialized in ISO UTC format ("2016-11-11T05:00:00Z"). Otherwise, the default behavior in non-MVC wrappers scenario would serialize the dates to local time and zone values ("2016-11-11T10:00:00+05:00").
+>**Note:** When a grid is initalized through MVC wrappers `enableUTCDates` is set to `true` by default. When a grid is not initialized through the MVC wrappers the option is set to `false` by default. For example if the `enableUTCDates` is not specified(using the default behavior) and MVC wrappers are used the dates are serialized in ISO UTC format ("2016-11-11T05:00:00Z"). In non-MVC wrappers scenario not specifing `enableUTCDates` would serialize the dates to local time and zone values ("2016-11-11T10:00:00+05:00").
 
-The igDataSource transforms and stores the dates as Date objects. $.ig.formatter is responsible to render the dates as they are expected and in accordance with `dateDisplayType` option.
+The main questions to answer in order to understand the date handling are how and where are the dates stored. All records and their values(including dates) are stored by igDataSource. Before storing the dates igDataSource transforms them as Date objects, if they are not already Date objects. Once stored they should be rendered and displayed into the grid cells. The responsibility for this is owned by $.ig.formatter. The formatter renders the dates as they are expected and in accordance with `dateDisplayType` option.
 
 Another behavioral change is that the transaction log will not keep dates serialized. All dates will be preserved as Date objects and serialization will be done only to the passed parameters, when saveChanges is invoked and the enableUTCDates option tells how this should be done.
 
-In 17.1 the MVC wrapper will send the dates into the following format:
+In 17.1 and above the MVC wrapper will send the dates into the following format:
 
 ```js
 {
@@ -108,11 +108,11 @@ The API method `saveChanges()` is sending the serialized accumulated transaction
 >**Note:** In 16.2 version, the MVC wrapper is sending the dates with the Microsoft dates format (`/Date(1485881423759)/`).
 
 
-## Migrate igGrid,igHierarchicalGrid or igTreeGrid from 16.2 to 17.1
+## Migrate igGrid,igHierarchicalGrid or igTreeGrid from 16.2 to 17.1 and above
 
-In 17.1 the igDataSource is not going to accept Microsoft date formatting `/Date(1234656000000)/`. If the provided data source contains this kind of data they have to be changed to ISO UTC format "2009-02-15T00:00:00Z".
+From 17.1 the igDataSource is not going to accept Microsoft date formatting `/Date(1234656000000)/`. If the provided data source contains this kind of data they have to be changed to ISO UTC format "2009-02-15T00:00:00Z".
 If the MVC wrapper is used, for the user perspective there is nothing to configure. Internally MVC wrapper was using Microsoft format in 16.2 and from 17.1 it would send the dates in ISO UTC.
-To display UTC time in 17.1 grid:
+To display UTC time in 17.1 and above versions:
 
 ```js
 $('#Grid1').igGrid({
@@ -146,7 +146,7 @@ $('#Grid1').igGrid({
 });
 ```
 
-In MVC 17.1:
+After MVC 17.1:
 ```csharp
 @(Html.Infragistics().Grid(Model)
 	.ID("Grid1")
@@ -166,7 +166,7 @@ In MVC 17.1:
 	.Render()
 )
 ```
-In MVC 16.2:
+Before MVC 16.2:
 
 ```csharp
 @(Html.Infragistics().Grid(Model)
@@ -189,7 +189,7 @@ In MVC 16.2:
 )
 ```
 
-To display **Local time** in 17.1 grid:
+To display **Local time** from 17.1 grid:
 ```js
 $('#Grid1').igGrid({
 	dataSource: 'http://localhost:3000/testData',
@@ -221,7 +221,7 @@ $('#Grid1').igGrid({
 });
 ```
 
-In MVC 17.1:
+After MVC 17.1:
 ```csharp
 	.ID("Grid1")
 	.AutoGenerateColumns(false)
@@ -240,7 +240,7 @@ In MVC 17.1:
 	.Render()
 )
 ```
-In MVC 16.2:
+Before MVC 16.2:
 ```csharp
 @(Html.Infragistics().Grid(Model)
 	.ID("Grid1")

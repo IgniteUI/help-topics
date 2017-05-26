@@ -21,10 +21,10 @@ There are some distinctive behaviors to consider when used with specific control
 
 ## igGrid, igHierarchicalGrid and igTreeGrid
  
-Date handling in igGrid is done mostly by igDataSource and spans a few different behaviors. First of all, all values for date columns are stored in the data source as JavaScript Date objects (and therefore are always in local timezone). When rendering cells with Date values the grid uses $.ig.formatter. Depending on the option in the date columns’ definition ([`dateDisplayType`](%%jQueryApiUrl%%/ui.iggrid#options:columns.dateDisplayType)) one of three renderings is chosen:
--	`local` (default) – results in $.ig.formatter using local variants of the extraction API essentially rendering dates in the local time zone. Filtering and Updating editors for such columns receive displayTimeOffset explicitly set to null which tells the editor to render and edit the Date object in the local time zone as well.
--	`utc` – results in $.ig.formatter using UTC variants of the extraction API rendering the Date objects in their UTC variants. Filtering and Updating editors for such columns receive displayTimeOffset set to 0 which tells the editor to render and edit the UTC-conversion of the Date object set.
--	The third option is default for the MVC wrappers scenario but cannot be explicitly enabled by users. It triggers when the server response contains offset metadata and the column option is left undefined. In this case, the Date is rendered using the UTC extraction API with the added offset resulting in a visualization that is the same as the one the user sees on the server. Filtering and Updating editors for such columns receive displayTimeOffset set to the offset found in the metadata (in minutes) which tells the editor to render and edit the same Date visualization.
+Date handling in igGrid is done mostly by igDataSource and spans a few different behaviors. First of all, all values for date columns are stored in the data source as JavaScript Date objects (and therefore are always in local timezone). When rendering cells with Date values the grid uses [$.ig.formatter](formatting-dates-numbers-and-strings.html). Depending on the option in the date columns’ definition ([`dateDisplayType`](%%jQueryApiUrl%%/ui.iggrid#options:columns.dateDisplayType)) one of three renderings is chosen:
+-	`local` (default) – results in $.ig.formatter using local variants of the extraction API essentially rendering dates in the local time zone. Filtering and Updating editors for such columns receive [`displayTimeOffset`](%%jQueryApiUrl%%/ui.igdateeditor#options:displayTimeOffset) explicitly set to null which tells the editor to render and edit the Date object in the local time zone as well.
+-	`utc` – results in $.ig.formatter using UTC variants of the extraction API rendering the Date objects in their UTC variants. Filtering and Updating editors for such columns receive [`displayTimeOffset`](%%jQueryApiUrl%%/ui.igdateeditor#options:displayTimeOffset) set to 0 which tells the editor to render and edit the UTC-conversion of the Date object set.
+-	The third option is default for the MVC wrappers scenario but cannot be explicitly enabled by users. It triggers when the server response contains offset metadata and the column option is left undefined. In this case, the Date is rendered using the UTC extraction API with the added offset resulting in a visualization that is the same as the one the user sees on the server. Filtering and Updating editors for such columns receive [`displayTimeOffset`](%%jQueryApiUrl%%/ui.igdateeditor#options:displayTimeOffset) set to the offset found in the metadata (in minutes) which tells the editor to render and edit the same Date visualization.
 
 The most relevant scenarios with dates handling are:
 -	When the dates are created on a remote backend where they could be created in a different timezone than the client. (the third option)
@@ -34,7 +34,7 @@ It is important to note that the igGrid/igHierarchicalGrid/igTreeGrid take the t
 
 -	The data source is processed via their respective MVC Wrappers ( set via the Model for example)
 -	The data source is remote and the `GridDataSourceAction` attribute is used on the remote method. 
-In those cases the time zone offset is added to the data source in the form of metadata. For example:
+In those cases the time zone offset is added to the data source in the form of metadata. This metadata is generated from Ignite UI MVC wrapper For example:
 
 ```js
 "Metadata": {
