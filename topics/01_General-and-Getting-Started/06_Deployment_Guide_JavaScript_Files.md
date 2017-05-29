@@ -760,6 +760,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>
 				infragistics.util.js
 				<br>infragistics.util.jquery.js
+				<br>infragistics.util.jquerydeferred.js
 			</td>
 		</tr>
 		<tr>
@@ -783,6 +784,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>
 				infragistics.util.js
 				<br>infragistics.util.jquery.js
+				<br>infragistics.util.jquerydeferred.js
 			</td>
 		</tr>
 		<tr>
@@ -842,6 +844,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>
 			    infragistics.util.js
 				<br>infragistics.util.jquery.js
+				<br>infragistics.util.jquerydeferred.js
 			    <br>infragistics.datasource.js
 			    <br>infragistics.olapflatdatasource.js
 			
@@ -878,6 +881,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>
 			    infragistics.util.js
 				<br>infragistics.util.jquery.js
+				<br>infragistics.util.jquerydeferred.js
 			    <br>infragistics.datasource.js
 			    <br>infragistics.olapflatdatasource.js
 			
@@ -913,6 +917,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>
 			    infragistics.util.js
 			    <br>infragistics.util.jquery.js
+				<br>infragistics.util.jquerydeferred.js
 			    <br>infragistics.datasource.js
 			    <br>infragistics.olapflatdatasource.js
 			
