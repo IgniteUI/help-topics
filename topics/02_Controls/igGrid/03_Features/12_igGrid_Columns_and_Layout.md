@@ -60,7 +60,7 @@ Yes | Yes | Headers are rendered in a separate table, inside of a DIV (so that i
 No | Yes | The header’s element is rendered inside of a single table – where the data is hosted. There is no separate TABLE or DIV.
 
 The sample below demonstrates how to set up different layout properties of the `igGrid`. The following properties are exposed: 
-- `caption` – caption text that will be shown above the grid header.
+- `caption` – caption text and/or HTML that will be shown above the grid.
 - `fixedHeaders` - the column headers can be fixed so they are visible while scrolling.
 - `defaultColumnWidth` - when columns don’t have width assigned in the columns collection.
 - `width` (columns) – the width that is applied to the column.
