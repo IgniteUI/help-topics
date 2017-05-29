@@ -164,6 +164,13 @@ The `igScheduler`™ control provides a common scheduling solution for presentin
 
 The igDataSource component provides a way to search for a specific words or phrases in all of its fields via the 'filterByText' method.
 
+#### Related Topics
+-   [igDataSource Overview](igspreadsheet-overview.html)
+
+
+#### Related Samples
+-   [Simple Filtering](%%SamplesUrl%%/grid/simple-filtering)
+
 ## igGrid
 
 ### <a id="griddatehandling"></a> Date Handling
