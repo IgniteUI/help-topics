@@ -38,6 +38,9 @@ This topic contains the following sections:
 -   [Layout Manager Sample](#lm_sample)
     -   [Preview](#lm_preview)
     -   [Details](#lm_details)
+-   [Data Chart Sample](#dchart_sample)
+    -   [Preview](#dchart_preview)
+    -   [Details](#dchart_details)
 -   [Related Content](#related_content)
 
 ### <a id="requirements"></a>Requirements
@@ -135,6 +138,20 @@ The following is a preview of the final result.
 
 #### <a id="lm_details"></a>Details
 In this sample we use the `igLayoutManager` AngularJS directive.
+
+### <a id="dchart_sample"></a>Data Chart Sample​
+This sample demonstrates how `AngularJS` directives are used to instantiate `igDataChart`.
+
+#### <a id="dchart_preview"></a>Preview
+The following is a preview of the final result.
+
+<div class="embed-sample">
+   [%%SamplesEmbedUrl%%/data-chart/angular](%%SamplesEmbedUrl%%/data-chart/angular)
+</div>
+
+#### <a id="dchart_details"></a>Details
+This sample demonstrates how to link together the Data Chart and Zoombar Controls using AngularJS directives.
+
 
 ### <a id="related_content"></a>Related Content
 The following topics provide additional information related to this one:
