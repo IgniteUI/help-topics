@@ -24,6 +24,7 @@ Click on the links below to find information on how to get `igGrid` quickly up a
 -   [Selection Overview (igGrid)](igGrid-Selection-Overview.html)
 -   [Sorting Overview (igGrid)](igGrid-Sorting-Overview.html)
 -   [Virtualization (igGrid)](igGrid-Virtualization.html)
+-   [Migrating enableUTCDates option in 17.1](Migrating-enableUTCDates-option-in-17-1.html)
 -   [Styling igGrid](igGrid-Styling-and-Theming.html)
 -   [jQuery and ASP.NET MVC Helper API Links (igGrid)](igGrid-jQuery-API.html)
 -   [Accessibility Compliance (igGrid)](igGrid-Accessibility-Compliance.html)
