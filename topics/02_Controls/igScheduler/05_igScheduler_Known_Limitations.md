@@ -35,6 +35,7 @@ Issue | Description | Status
 [Templating](#NoTemplating) | Templating and changing of appointment appearance is not supported |![](../../images/images/negative.png)
 [ARIA support for appointments in calendar (Canvas)](#ARIASupport) | No ARIA support for appointments in calendar (Canvas) |![](../../images/images/negative.png)
 [First day of the week setting](#FirstDayOfWeek) | First day of the week settings are set to `Sunday` by design |![](../../images/images/negative.png)
+[Using of remote datasource is not supported](#remoteDS) | Local data source should be used. |![](../../images/images/negative.png)
 [Swipe-gestures support](#SwipeGesture) | No swipe-gestures support |![](../../images/images/negative.png)
 [Tab navigation to appointment popover](#NavigationToAppointmentPopover) | No tab navigation to appointment popover |![](../../images/images/negative.png)
 [Min width support – 320 px](#MinWidthSupport) | Minimum width resolution support on mobile devices is 320 px |![](../../images/images/negative.png)
@@ -50,7 +51,7 @@ The scheduler cannot create pre-defined events like weekly meetings, anniversari
 
 ### <a id="NoTimeZoneOffsetting"></a>No time-zone offset settings
 
-Time in the `igScheduler` is always shown according to the current browser offset (hours). For now the sheduler doesn't support showing times in a zone different from the browser's time zone.
+Time in the `igScheduler` is always shown according to the current browser offset (hours). For now the scheduler doesn't support showing times in a zone different from the browser's time zone.
 
 ### <a id="NoCustomColorScheme"></a>No custom color scheme
 
@@ -84,11 +85,14 @@ The list below provides links to more details related to how WAI-ARIA support ha
 - [igDateEditor](igdateeditor-accessibility-compliance.html#wai-aria)
 - [igTextEditor](igtexteditor-accessibility-compliance.html#wai-aria)
 
-Currently the appointments in the calendar doesn`t have ARIA support, only the widgets that are listed above.
+Currently the appointments in the calendar doesn't have ARIA support, only the widgets that are listed above.
 
 ### <a id="FirstDayOfWeek"></a>No first day of the week setting
 
 Sunday is used as the first day of the week by default and currently we do not expose an option that could be used to set a different day of the week (e.g. Monday).
+
+### <a id="remoteDS"></a>Using of remote datasource is not supported
+Currently igScheduler can handle only local datasource, using of remote datasource is not supported for version one.
 
 ### <a id="SwipeGesture"></a>No swipe-gestures support
 
@@ -96,7 +100,7 @@ Currently the `igScheduler` doesn't have swipe gestures support for actions like
 
 ### <a id="NavigationToAppointmentPopover"></a>No tab navigation to appointment popover
 
-There is accesabillity limitation with `tab navigation` and `selection` of appointment, by using the keyboard.
+There is accessibility limitation with `tab navigation` and `selection` of appointment, by using the keyboard.
 
 ### <a id="MinWidthSupport"></a>Min width support – 320 px (Mobile environment)
 
@@ -106,5 +110,5 @@ For next releases it is planned to add a message that will be shown when minimum
 
 ### <a id="MVCWrappers"></a>MVC Wrappers
 
-Currently it is not possible to instantiate Scheduler in a View, `igScheculer` ASP.NET MVC wrappers are planned to be implemented for the next scheduler version.
+Currently it is not possible to instantiate Scheduler in a View, `igScheduler` ASP.NET MVC wrappers are planned to be implemented for the next scheduler version.
 

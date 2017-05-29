@@ -44,7 +44,6 @@ The following table summarizes the main features of the `igSpreadsheet` control.
 | Context Menu 		| The control provides contextual menus allowing the user to perform different operations depending on the selected visual element. <br>**Related Topic:** [igSpreadsheet Context Menu](igspreadsheet-Context-Menu.html) |
 | Copy and Paste 	| The control supports clipboard copying of information between cells, sheets and also between external applications (like MS Excel). |
 | Data Validation 	| The control supports a data validation feature which allows validation of the user input based on validation rules set on the cells. Your rules configuration also includes an input message and an error message dialog shown when the user input does not pass the validation. |
-| Data Validation 	| The control supports a data validation feature which allows validation of the user input based on validation rules set on the cells. Your rules configuration also includes an input message and an error message dialog shown when the user input does not pass the validation. |
 | Font Styles 		| The control supports the following text properties - font family, font size, bold, italic, underline, double underline, strikethrough and color.<br> **Note:** You may notice rendering difference comparing to MS Excel when having underline and large sized text on the same line. |
 | Formula Bar 		| The control allows the user to read the predefined cell text and formulas. The formula bar supports multiple lines. |
 | Freezing Panes	| The control allows freezing of top row(s) and/or left column(s). Frozen row(s) and/or column(s) remain visible at all time while the user is scrolling. <br>**Related Sample:** [View Configuration Sample](%%SamplesUrl%%/spreadsheet/view-configuration) |
@@ -60,7 +59,7 @@ The following table summarizes the main features of the `igSpreadsheet` control.
 | Undo and Redo		| The control provides unlimited undo and redo operations. You can enable/disable the undo and redo and also use separate or shared undo managers for each `igSpreadsheet` control.		|
 | Zooming			| The control supports content zooming. The entire workbook content is scaled.<br> **Note:** The cell borders and cell gridlines are not scaled.	|
 
-## <a id="#related_links"></a>## Related Links
+## <a id="#related_links"></a> Related Links
 
 -   [igSpreadsheet Overview](igSpreadsheet-Overview.html)
 -   [igSpreadsheet Selection](igspreadsheet-selection.html)

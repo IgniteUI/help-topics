@@ -470,7 +470,7 @@ Specific referencing requirements for the numeric and date editors
 			</td>
 
             <td>
-Numeric and Date editors depend on $.ig._regional, therefore, that object should be available in a reference to ig.util.js or to a combined ig-js file.
+Numeric and Date editors depend on $.ig._regional, therefore, that object should be available in a reference to ig.util or to a combined ig-js file.
 			</td>
 
             <td>

@@ -28,7 +28,7 @@ This topic contains the following sections:
 
 ## <a id="introduction"></a> Introduction
 
-The `infragistics.util.js` file contains an utility function `$.ig.formatter` that is used to format dates, numbers and strings across the %%ProductName%% controls. For example the igGrid uses it in the [format](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) option.
+The `infragistics.util` files contain an utility function `$.ig.formatter` that is used to format dates, numbers and strings across the %%ProductName%% controls. For example the igGrid uses it in the [format](%%jQueryApiUrl%%/ui.iggrid#options:columns.format) option.
 The function signature is: `$.ig.formatter = function (val, type, format, notTemplate, enableUTCDates, displayStyle, labelText, tabIndex)`. Result is of type `string`.
 
 The topic will focus only on the first three parameters of the function:

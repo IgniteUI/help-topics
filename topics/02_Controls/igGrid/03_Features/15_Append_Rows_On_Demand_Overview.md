@@ -66,6 +66,7 @@ JavaScript files
 -   jquery.js
 -   jqueryui.js
 -   js\modules\infragistics.util.js
+-   js\modules\infragistics.util.jquery.js
 -   js\modules\infragistics.ui.shared.js
 -   js\modules\infragistics.datasource.js
 -   js\modules\infragistics.ui.grid.framework.js
