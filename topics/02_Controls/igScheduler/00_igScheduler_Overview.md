@@ -284,35 +284,7 @@ The following table lists the Appointment's key properties and their purpose:
 
 ### Binding to data sources overview
 
-In most cases, you will use the `dataSource` option of the `igScheduler` to bind to data. This option provides your data to the `igDataSource` which can handle the various data formats that are supported. The one main exception to using this option is when the `igScheduler` is instantiated using a SELECT element. The `igScheduler` inherits the data and options of its base SELECT element in this case.
-
-### Supported data sources
-
-The following table lists the supported data sources and some basic specifics for their binding
-
-
-<table class="table">
-	<thead>
-		<tr>
-            <th>
-Data Source
-			</th>
-            <th>
-Binding
-			</th>
-        </tr>
-	</thead>
-	<tbody>
-        <tr>
-            <td>
-igDataSource
-			</td>
-            <td>
-The `igDataSource` is used internally by the `igScheduler` control to manage data operations for the control. The data source accepts many different types of local and remote data.
-			</td>
-        </tr>
-    </tbody>
-</table>
+In most cases, you will use the `dataSource` option of the `igScheduler` to bind to data. `ScheduleListDataSource` should be initialized, where the [appointments](igscheduler-configure-appointments.html) and [resources](igscheduler-configure-resources.html) collections should be configured. 
 
 ## <a id="related-topics"></a>Related Topics
 
