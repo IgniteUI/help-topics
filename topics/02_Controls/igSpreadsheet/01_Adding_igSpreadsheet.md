@@ -19,7 +19,7 @@ The `igSpreadsheet`™ is a jQuery widget that visualize excel documents in all 
 
 To understand this topic you need to be familiar with the concept and topics related to the [Infragistics JavaScript Excel Library](javascript-excel-library.html).
 
-Before we get started we need to make sure we have loaded all of the needed resources. We first need to load the jQuery resources and then we need to add the required Ignite UI resources. There are two ways to add the Ignite UI resources to your project. You can either use the `igLoader` or you can load the required modules separately. For the purpose of our guidance we will use the `igLoader`.
+Before we get started we need to make sure we have loaded all of the needed resources. We first need to load the jQuery resources and then we need to add the required Ignite UI resources. There are two ways to add the Ignite UI resources to your project. You can either use the `igLoader` or you can load the required modules separately. You can find both approaches below:
 
 ```js
 $.ig.loader({
@@ -28,10 +28,61 @@ $.ig.loader({
     resources: "igSpreadsheet"
 });
 ```
-In case you are going to create a new excel file instead of loading your own file, you can load only `igSpreadsheet` but if you need to load an external file, please note that you will have to load additionally `igExcel.LoadSaveXlsx` resource.
+In case you are going to create a new excel file instead of loading your own file, you can load only `igSpreadsheet` but if you need to load an external file, please note that you will have to load additionally `igExcel.LoadSaveXlsx` resource. 
 In the following topic you can find more about the `igLoader` and how to work with it. 
 
 [Adding Required Resources Automatically with the Infragistics Loader](using-infragistics-loader.html)
+
+```html
+<!-- util -->
+<script src="js/modules/infragistics.util.js"></script>
+<script src="js/modules/infragistics.util.jquery.js"></script>
+
+<!-- ext -->
+<script src="js/modules/infragistics.ext_core.js"></script>
+<script src="js/modules/infragistics.ext_text.js"></script>
+<script src="js/modules/infragistics.ext_collections.js"></script>
+<script src="js/modules/infragistics.ext_io.js"></script>
+<script src="js/modules/infragistics.ext_ui.js"></script>
+<script src="js/modules/infragistics.dv_jquerydom.js" ></script>
+<script src="js/modules/infragistics.ext_collectionsExtended.js"></script>
+<script src="js/modules/infragistics.ext_threading.js"></script>
+<script src="js/modules/infragistics.ext_web.js"></script>
+
+<!-- xml -->
+<script src="js/modules/infragistics.xml.js"></script>
+
+<!-- documents.core -->
+<script src="js/modules/infragistics.documents.core_core-en.js"></script>
+<script src="js/modules/infragistics.documents.core_core.js"></script>
+<script src="js/modules/infragistics.documents.core_openxml.js"></script>
+
+<!-- excel -->
+<script src="js/modules/infragistics.excel_core-en.js"></script>
+<script src="js/modules/infragistics.excel_core.js"></script>
+<script src="js/modules/infragistics.excel_functions.js"></script>
+<script src="js/modules/infragistics.excel_serialization_biff8.js"></script>
+<script src="js/modules/infragistics.excel_serialization_openxml.js"></script>
+
+<!-- undo -->
+<script src="js/modules/infragistics.undo.js"></script>
+
+<!-- dv -->
+<script src="js/modules/infragistics.dv_core.js"></script>
+<script src="js/modules/infragistics.dv_jquerydom.js"></script>
+
+<!-- combo -->
+<script src="js/modules/infragistics.util.jquery.js"></script>
+<script src="js/modules/infragistics.datasource.js"></script>
+<script src="js/modules/infragistics.templating.js"></script>
+<script src="js/modules/infragistics.ui.scroll.js"></script>
+<script src="js/modules/infragistics.ui.validator.js"></script>
+<script src="js/modules/infragistics.ui.combo.js"></script>
+
+<!-- spreadsheet -->
+<script src="js/modules/infragistics.spreadsheet.js"></script>
+<script src="js/modules/infragistics.ui.spreadsheet.js"></script>
+```
 
 ## Creating a basic igSpreadsheet implementation
 

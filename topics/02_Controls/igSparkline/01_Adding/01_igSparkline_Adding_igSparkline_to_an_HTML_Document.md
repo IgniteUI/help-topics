@@ -257,6 +257,7 @@ Description
                         <tr>
                             <td>
 `js/modules/infragistics.util.js`
+`js/modules/infragistics.util.jquery.js`
 			</td>
 
                             <td>
@@ -289,6 +290,7 @@ Data source framework
 `js/modules/infragistics.ext_core.js`<br>
 `js/modules/infragistics.ext_collections.js`<br>
 `js/modules/infragistics.ext_ui.js`<br>
+`js/modules/infragistics.dv_jquerydom.js`<br>
 `js/modules/infragistics.dv_core.js`<br>
 `js/modules/infragistics.dv_geometry.js`<br>
 `js/modules/infragistics.dv.simple.core.js`

@@ -74,6 +74,12 @@ Issue | Description | Status
 ---|---|---
 Tooltips are not shown for child layout when options for Tooltips are different in child and root options definition | This is no longer supported as all Tooltips instances in an hierarchical grid will use the same DOM elements (to reduce DOM complexity).  | ![](../../images/images/negative.png)
 
+#### [igHierarchicalGrid Updating](#updating)
+
+Issue | Description | Status
+---|---|---
+[Done/Cancel buttons are cut off for child layouts when their height is too small](#buttons-cutoff) | Certain configurations and use-cases allow for child layouts with small heights that makes positioning floating elements outside the visibility-critical elements impossible.  | ![](../../images/images/positive.png)
+
 
 ### <a id="general"></a> igHierarchicalGrid
 
@@ -233,6 +239,35 @@ Tooltips are not shown for child layout when options for Tooltips are different 
     </tbody>
 </table>
 
+## <a id="updating"></a> igHierarchicalGrid Updating
+<table class="table table-striped">
+	<thead>
+        <tr>
+            <th>Issue</th>
+            <th>Description</th>
+			<th>Workaround</th>
+        </tr>
+    </thead>
+    <tbody>
+		<tr id="buttons-cutoff">
+			<td>
+				Done/Cancel buttons are cut off for child layouts when their height is too small
+			</td>
+			<td>
+				Certain configurations and use-cases allow for child layouts with small heights that makes positioning floating elements outside the visibility-critical elements impossible.
+			</td>
+			<td>
+				Use a CSS rule to give minimum height to all child layouts:
+				<br>
+				**In CSS:**
+<pre>[id$=_child_container] {
+	min-height: 100px;
+}
+</pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
 
 ## Related Content
 ### Topics

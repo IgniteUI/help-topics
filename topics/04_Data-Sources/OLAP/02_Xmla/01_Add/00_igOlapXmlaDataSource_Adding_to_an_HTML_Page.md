@@ -95,7 +95,7 @@ To complete the procedure, you need the following:
 
 -   The required JavaScript files (The Infragistics JavaScript files reside by default in the JavaScript modules folder under the %%ProductName%%™ installation path):
     -   Jquery-[versionNumber].js (for example, jquery-1.9.0.js) – the jQuery library (available at the jQuery site)
-    -   infragistics.util.js – the JavaScript file containing shared non-UI logic used by some of the %%ProductName%%™ components
+    -   infragistics.util.js, infragistics.util.jquery.js – the JavaScript file containing shared non-UI logic used by some of the %%ProductName%%™ components
     -   `infragistics.olapxmladatasource.js` – the JavaScript file containing the `igOlapXmlaDataSource` component
     -   (Conditional – if the Infragistics Loader is used) `infragistics.loader.js` – the Infragistics Loader component which can be used to automatically load all the Infragistics JavaScript and CSS files required by a component
 	-   The Adventure Works DW Standard Edition database deployed on a SSAS server instance configured with HTTP access through the `msmdpump.dll`
@@ -120,6 +120,7 @@ To complete the procedure, you need the following:
 	    ```
 	    <script src="js/jquery-1.9.0.js" type="text/javascript"></script>
 	    <script src="js/infragistics.util.js" type="text/javascript"></script>
+        <script src="js/infragistics.util.jquery.js" type="text/javascript"></script>
 	    <script src="js/infragistics.olapxmladatasource.js" type="text/javascript"></script>
 	    ```
 	

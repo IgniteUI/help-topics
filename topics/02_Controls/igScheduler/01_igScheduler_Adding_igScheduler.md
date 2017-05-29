@@ -18,8 +18,8 @@ This topic contains the following sections:
 - [Adding igScheduler](#adding)
 - [Required Background](#background)
 - [Adding an igScheduler to Web Page](#webpage)
-- [Preview](#preview)
 - [Creating a basic igScheduler implementation, step by step](#basic-implementation)
+- [Result](#result)
 - [Related topics](#related)
 
 # <a id="adding"></a>Adding igScheduler
@@ -47,11 +47,6 @@ $.ig.loader({
 
 This procedure takes you step-by-step toward adding an `igScheduler` to a web page. This sample demonstrates how to instantiate the igScheduler with a Month View and appointments subjects. You can navigate between time periods and create, edit and delete scheduled activities.
 
-### <a id="preview"></a>Preview
-
-The following screenshot is a preview of the final result
-
-![](images/scheduler.png)
 
 ### Requirements
 
@@ -66,6 +61,7 @@ The steps below will guide you on how to quickly setup a `igScheduler` component
 
 1. Adding the required JS and CSS files
 
+    1.1. By using igLoader
 Use the loader in order to load the combined JavaScript and CSS files referenced locally in the application.
 
 ```html
@@ -90,7 +86,55 @@ Use the loader in order to load the combined JavaScript and CSS files referenced
 .....
 ```
 
-Html div element with id `scheduler` will be wrapped by the `igScheduler widget` on initiallization.
+Html div element with id `scheduler` will be wrapped by the `igScheduler widget` on initialization.
+
+    1.2. Without the igLoader
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link type="text/css" href="igniteui/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+<link type="text/css" href="igniteui/css/structure/modules/infragistics.ui.shared.css" rel="stylesheet" />
+<link type="text/css" href="igniteui/css/structure/modules/infragistics.ui.editors.css" rel="stylesheet" />
+<link type="text/css" href="igniteui/css/structure/modules/infragistics.ui.popover.css" rel="stylesheet" />
+<link type="text/css" href="igniteui/css/structure/modules/infragistics.ui.notifier.css" rel="stylesheet" />
+
+<link type="text/css" href="igniteui/css/structure/modules/infragistics.ui.toolbarbutton.css" rel="stylesheet" />
+<link type="text/css" href="igniteui/css/structure/modules/infragistics.ui.splitbutton.css" rel="stylesheet" />
+<link type="text/css" href="igniteui/css/structure/modules/infragistics.ui.colorpicker.css" rel="stylesheet" />
+<link type="text/css" href="igniteui/css/structure/modules/infragistics.ui.combo.css" rel="stylesheet" />
+<link type="text/css" href="https://rawgit.com/IgniteUI/ignite-ui/master/src/css/structure/modules/infragistics.ui.scroll.css" rel="stylesheet" />
+
+<link type="text/css" href="igniteui/css/structure/modules/infragistics.ui.scheduler.css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+<script src="igniteui/js/infragistics.core.js"></script>
+<script src="igniteui/js/infragistics.lob.js"></script>
+
+<!-- ext -->
+<script src="igniteui/js/modules/infragistics.ext_core.js"></script>
+<script src="igniteui/js/modules/infragistics.ext_text.js"></script>
+<script src="igniteui/js/modules/infragistics.ext_collections.js"></script>
+<script src="igniteui/js/modules/infragistics.ext_io.js"></script>
+<script src="igniteui/js/modules/infragistics.ext_ui.js"></script>
+<script src="igniteui/js/modules/infragistics.dv_jquerydom.js" ></script>
+<script src="igniteui/js/modules/infragistics.ext_collectionsExtended.js"></script>
+<script src="igniteui/js/modules/infragistics.ext_threading.js"></script>
+<script src="igniteui/js/modules/infragistics.ext_web.js"></script>
+<!-- xml -->
+<script src="igniteui/js/modules/infragistics.xml.js"></script>
+<!-- dv -->
+<script src="igniteui/js/modules/infragistics.dv_core.js"></script>
+<script src="igniteui/js/modules/infragistics.dv_jquerydom.js"></script>
+
+<!-- scheduler -->
+<script src="igniteui/js/modules/infragistics.scheduler.core.js"></script>
+<script src="igniteui/js/modules/infragistics.ui.scheduler.core.js"></script>
+
+<script src="igniteui/js/modules/infragistics.ui.scheduler.js"></script>
+```
 
 2. Load the data that will be used by the `igScheduler`. In the example `igDataSource` is used to create a schedule list data source.
 
@@ -119,6 +163,12 @@ $("#scheduler").igScheduler({
     dataSource: scheduleListDataSource
 });
 ```
+
+### <a id="result"></a>Result
+
+The following screenshot is a preview of the final result
+
+![](images/scheduler.png)
 
 ## <a id="related"></a>Related Topics
 

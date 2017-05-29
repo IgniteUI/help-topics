@@ -184,9 +184,9 @@ The grouping functionality allows for using a custom function to group the data 
 
 The following topics provide additional information related to this topic.
 
-- [Grouping Overview](igGrid-GroupBy-Overview.html)
+- [Column Grouping Overview](igGrid-GroupBy-Overview.html)
 
-- [Grouping Properties Reference](%%jQueryApiUrl%%/ui.igGridGroupBy#options)
+- [Grid GroupBy Properties Reference](%%jQueryApiUrl%%/ui.igGridGroupBy#options)
 
 - [igGrid Known Issues and Breaking Changes](igGrid-Known-Issues.html)
 

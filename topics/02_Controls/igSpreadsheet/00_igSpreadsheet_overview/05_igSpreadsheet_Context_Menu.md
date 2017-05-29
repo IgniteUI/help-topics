@@ -59,6 +59,8 @@ The worksheet cells context menu allows the user to:
 ![](images/igSpreadsheet_context_menu_insert.png)
 ![](images/igSpreadsheet_context_menu_delete.png)
 
+>**Note**: To render its items correctly, the Context menu requires jQuery UI version 1.12.0 or later to be loaded.
+
 ## Context Menu for worksheets
 
 The context menu of the worksheets tabs area allows the user to:

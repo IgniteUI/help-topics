@@ -139,7 +139,7 @@ The table below lists the requirements for the `igTree` control.
 Requirement | Description
 ---|---
 jQuery and jQuery UI JavaScript resources | %%ProductName%% is built on top of these frameworks: [jQuery](http://jquery.com/) [jQuery UI](http://jqueryui.com/) [Templating Engine Overview](igTemplating-Overview.html) (for node templates)
-Shared %%ProductName%% JavaScript resources | There are several shared JavaScript resources in %%ProductName%% that most widgets use: `infragistics.util.js` infragistics.ui.shared.js
+Shared %%ProductName%% JavaScript resources | There are several shared JavaScript resources in %%ProductName%% that most widgets use: `infragistics.util.js` `infragistics.util.jquery.js` infragistics.ui.shared.js
 `igDataSource` JavaScript Resources | The `igTree` control uses the `igDataSource` internally for data operations: `infragistics.dataSource.js`
 `igTree` JavaScript resources | The JavaScript file for the `igTree` control: `infragistics.ui.tree.js`
 IG Theme | This theme contains custom visual styles created especially for %%ProductName%%

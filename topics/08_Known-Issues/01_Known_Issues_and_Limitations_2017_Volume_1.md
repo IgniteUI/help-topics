@@ -8,13 +8,13 @@
 |metadata|
 -->
 
-# Known Issues and Limitations in 2016 Volume 2
+# Known Issues and Limitations in 2017 Volume 1
 
 ## Topic Overview
 
 ### Purpose
 
-This summarizes the known issues and limitations of the %%ProductName%%™ 2016 Volume 2 release. Information about previous releases can be found [here](Known-Issues-Revision-History.html).
+This summarizes the known issues and limitations of the %%ProductName%%™ 2017 Volume 1 release. Information about previous releases can be found [here](Known-Issues-Revision-History.html).
 
 ### In this topic
 
@@ -55,6 +55,7 @@ This topic contains the following sections:
     -   [igHierarchicalGrid GroupBy](#hierarchical-grid-grouping)
     -   [igHierarchicalGrid RowSelectors](#hierarchical-grid-row-selectors)
     -   [igHierarchicalGrid Tooltips](#hierarchical-grid-tooltips)
+    -   [igHierarchicalGrid Updating](#hierarchical-grid-updating)
     -   [igLinearGauge](#linear-gauge)
     -   [%%ProductName%% ASP.NET MVC Wrappers](#mvc)
     -   [%%ProductName%% ASP.NET MVC Wrappers (mobile)](#mvc-mobile)
@@ -77,7 +78,7 @@ This topic contains the following sections:
 
 ## <a id="summary"></a> Known Issues and Limitations Summary
 
-The following table summarizes the known issues and limitations of the %%ProductName%% 2016 Volume 2 release. Detailed explanations of known issues and the possible workarounds are provided in the known issues topics for each control.
+The following table summarizes the known issues and limitations of the %%ProductName%% 2017 Volume 1 release. Detailed explanations of known issues and the possible workarounds are provided in the known issues topics for each control.
 <a id="legend"></a>
 
 Legend | 
@@ -938,19 +939,6 @@ Only one of the two areas can be scrolled at a time while on touch environment.
 ![](../images/images/negative.png)
 		</td>
 	</tr>
-    <tr>
-        <td>
-Caption rendering differs whether there is height set for the grid or not.
-        </td>
-        <td>
-1. When there is grid [caption](%%jQueryApiUrl%%/ui.iggrid#options:caption) and [height](%%jQueryApiUrl%%/ui.iggrid#options:height) set two captions are rendered, one for the fixed and one for the unfixed area.<br />
-2. When there is grid caption without height set only one caption is rendered for the grid.<br />
-The difference is caused by the more complex DOM structure used when there is grid height set.<br />
-        </td>
-        <td>
-![](../../images/images/negative.png)
-        </td>
-    </tr>
     </tbody>
 </table>
 
@@ -1176,6 +1164,13 @@ Tooltips are not shown for child layout when options for Tooltips are different 
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
+### <a id="hierarchical-grid-updating"></a> [igHierarchicalGrid Updating](igHierarchicalGrid-Known-Issues.html)
+
+Issue | Description | Status
+---|---|---
+Done/Cancel buttons are cut off for child layouts when their height is too small | Certain configurations and use-cases allow for child layouts with small heights that makes positioning floating elements outside the visibility-critical elements impossible.  | ![](../../images/images/positive.png)
+
+Go up to [Known Issues and Limitations Summary](#summary)
 
 ### <a id="linear-gauge"></a> [igLinearGauge](igLinearGauge-Known-Issues-and-Limitations.html)
 

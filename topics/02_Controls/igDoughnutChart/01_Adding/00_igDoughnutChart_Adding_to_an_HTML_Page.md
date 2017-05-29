@@ -139,7 +139,8 @@ The following table summarizes the requirements for using the `igDoughnutChart` 
 
 						<tr>
 							<td>
-								infragistics.util.js
+								infragistics.util.js<br>
+								infragistics.util.jquery.js
 							</td>
 
 							<td>
@@ -172,6 +173,7 @@ The following table summarizes the requirements for using the `igDoughnutChart` 
 								infragistics.ext_core.js,<br>
 								infragistics.ext_collections.js,<br>
 								infragistics.ext_ui.js,<br>
+								nfragistics.dv_jquerydom.js,<br>
 								infragistics.dv_core.js,<br>
 								infragistics.dv_geometry.js
 							<td>
@@ -349,11 +351,13 @@ Follow these steps to add an `igDoughnutChart` to an HTML page.
 	<script src="../../js/jquery-ui.min.js"></script>
 	<!-- %%ProductName%% Required JavaScript Files -->
 	<script src="../../igniteui/js/modules/infragistics.util.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.util.jquery.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.datasource.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.templating.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.ext_core.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.ext_collections.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.ext_ui.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.dv_jquerydom.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.dv_core.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.legend.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.dv_geometry.js" type="text/javascript"></script>
@@ -463,11 +467,13 @@ Follow these steps to add an `igDoughnutChart` to an HTML page.
 	<script src="../../js/jquery-ui.min.js"></script>
 	<!-- %%ProductName%% Required JavaScript Files -->
 	<script src="../../igniteui/js/modules/infragistics.util.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.util.jquery.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.datasource.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.templating.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.ext_core.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.ext_collections.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.ext_ui.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.dv_jquerydom.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.dv_core.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.legend.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.dv_geometry.js" type="text/javascript"></script>

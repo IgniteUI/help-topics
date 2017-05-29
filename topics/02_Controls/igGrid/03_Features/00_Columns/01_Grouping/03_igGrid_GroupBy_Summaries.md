@@ -14,7 +14,7 @@
 
 ### Purpose
 
-This topic introduces the Group Summaries functionality of the `igGrid`™.
+This topic introduces the GroupBy Summaries functionality of the `igGrid`™.
 
 
 ### In this topic
@@ -31,7 +31,7 @@ This topic contains the following sections:
 
 ## <a id="summaries-overview"></a> GroupBy Summmaries Feature Overview
 
-The GroupBy Summaries feature allows an additional summary row to be displayed below each group data island that displays summary information for the data columns in that island. The summary row is visible only when the related group is expanded. The below image demonstrates a grid with grouped columns where below each group the total sum of the "Price" column is displayed in a summary row:
+The GroupBy Summaries feature allows an additional summary row to be displayed below, on top or both for each group data island that displays summary information for the data columns in that island. The summary row is visible only when the related group is expanded. The image below demonstrates a grid with grouped columns where below each group the total sum of the "Price" column is displayed in a summary row:
 
 ![](images/igGrid_GroupBy_Summaries_Overview_01.png)
     
@@ -80,7 +80,7 @@ The summary method object in the `$.ig.util.defaultSummaryMethods` array has the
 Name | Description | Type 
 -----| ------------| -----
 label | Label that will be applied to the result of the summary function. | string
-name | Name of the summary function. Ex: {summaryFunction: “count”} | string
+name | Name of the summary function. Ex: {summaryFunction: "count"} | string
 summaryFunction | Speficies the function that will be used when calculating the summary. | function
 dataType | Speficies to which type of column this summary is applicable. Setting it to 'any' will apply this summary to all column types. | 'any' or array 
 active | Sets if the summary should be applied. | boolean | true
@@ -123,12 +123,12 @@ In this example since the "Sum" summary is only applicable for numeric columns o
 The `columnSettings.groupSummaries` option allows specifying a summary per column, which takes higher priority than the groupSummaries main level option. When this option is set for a particular column any settings related to this column from the main `groupSummaries` option are disregarded.
 
 The <a id="groupSummariesObject"></a>**groupSummariesObject** used for specifying the summary options has the following properties:
-Name| Description | Type | Default value |
-----|-------------|------|---------------|
-summaryFunction|Name or custom function specifying the summary.| string or function |
-label | Sets the label that will be used when displaying the summary value.| string |
-summaryTemplate| Sets the template for each summary result. |string | "{label}{value}"
-format | Applies format for the summary value. | string | The grid’s column.format value.
+|Name| Description | Type | Default value |
+|----|-------------|------|---------------|
+|summaryFunction|Name or custom function specifying the summary.| string or function |
+|label | Sets the label that will be used when displaying the summary value.| string |
+|summaryTemplate| Sets the template for each summary result. |string | "{label}{value}"|
+|format | Applies format for the summary value. | string | The grid’s column.format value.|
 
 They allow futher customization of the look of the summary when it gets displayed in the grid summary row.
 
@@ -145,7 +145,7 @@ When set in: | Custom summary is applied to:
 [groupSummaries](%%jQueryApiUrl%%/ui.iggridgroupby#options:groupSummaries) | All columns.
 $.ig.util.defaultSummaryMethods | All columns.
 
-The function accepsts the data island data and should return the summary result for that data.
+The function accepts the data from the data island and should return the summary result for it.
 
 Custom Summary Example:
 
@@ -194,6 +194,6 @@ The following sample provides additional information related to this topic.
 
 The following topics provide additional information related to this topic.
 
-- [Grid Outlook Group By Getting Started](igGrid-Enabling-GroupBy.html)
+- [Enabling Column Grouping (igGrid)](igGrid-Enabling-GroupBy.html)
 
-- [Grid Outlook Group By Properties Reference](%%jQueryApiUrl%%/ui.iggridgroupby#options)
+- [Grid Group By Properties Reference](%%jQueryApiUrl%%/ui.iggridgroupby#options)

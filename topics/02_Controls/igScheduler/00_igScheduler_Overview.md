@@ -20,20 +20,20 @@ This topic provides conceptual information for the `igScheduler`™ control incl
 
 This topic contains the following sections:
 
+- [Minimum Requirements](#minimum-requirements)
+
 - [Main Features](#main-features)
     - [Views](#views)
         - [Agenda View](#agenda-view)
         - [Month View](#month-view)
     - [Activities](#activities)
         - [Appointments](#appointments)
-- [Minimum Requirements](#minimum-requirements)
 
 - [Binding to Data Sources](#binding-to-data-source)
 
 - [Related topics](#related-topics)
 
 ### Required background
-
 
 The table below lists the required background you need for fully understanding the information in this topic.
 
@@ -51,6 +51,69 @@ You need to first read the following topics:
 **External Resources**
 
 You need to first read the following article: [Working with jQuery Widgets](http://learn.jquery.com/jquery-ui/getting-started/)
+
+## <a id="minimum-requirements"></a>Minimum Requirements
+
+### Introduction
+
+The `igScheduler` control is a jQuery UI Widget and therefore is dependent upon the jQuery core and jQuery UI JavaScript libraries. In addition, there are several %%ProductName%%™ JavaScript resources that the `igScheduler` control uses for shared functionality and data binding. These JavaScript references are required whether the `igScheduler` control is used in a pure JavaScript context.
+
+### Requirements
+
+The table below lists the requirements for the `igScheduler` control.
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Requirement</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>jQuery and jQuery UI JavaScript resources</td>
+			<td>%%ProductName%% is built on top of these frameworks:
+				<ul>
+					<li>[jQuery](http://jquery.com) (The required jQuery version for igScheduler is 1.8.3)</li>
+					<li>[jQuery UI](http://jqueryui.com/) (The required jQuery UI version for igScheduler is 1.9.2)</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>Shared %%ProductName%% JavaScript resources</td>
+			<td>There are several shared JavaScript resources in %%ProductName%% that most widgets use:
+				<ul>
+					<li>infragistics.util.js</li>
+					<li>infragistics.util.jquery.js</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>igDataSource JavaScript Resources</td>
+			<td>The igScheduler uses the igDataSource for data operations:
+				<ul>
+					<li>infragistics.dataSource.js</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>igScheduler JavaScript resources</td>
+			<td>The JavaScript file for the igScheduler widget:
+				<ul>
+					<li>infragistics.ui.scheduler.js</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>IG Theme</td>
+			<td>This theme contains custom visual styles created especially for %%ProductName%%</td>
+		</tr>
+		<tr>
+			<td>Base Theme</td>
+			<td>The base theme contains styles that primarily define the form and function for each widget.</td>
+		</tr>
+	</tbody>
+</table>
 
 ## <a id="main-features"></a>Main Features
 
@@ -175,7 +238,7 @@ The following table lists the Appointment's key properties and their purpose:
 	<tbody>
 		<tr>
 			<td>Subject</td>
-			<td>Used as short description of the activity, it is the main information shown in the control’s views and therefor used to distinguish a specific activity amongst the other activities.
+			<td>Used as short description of the activity, it is the main information shown in the control’s views and therefore used to distinguish a specific activity amongst the other activities.
 			</td>
 		</tr>
         <tr>
@@ -215,67 +278,6 @@ The following table lists the Appointment's key properties and their purpose:
 #### Related Sample
 -   [igScheduler Agenda View](%%SamplesUrl%%/scheduler/appointment-indicators)
 
-## <a id="minimum-requirements"></a>Minimum Requirements
-
-### Introduction
-
-The `igScheduler` control is a jQuery UI Widget and therefore is dependent upon the jQuery core and jQuery UI JavaScript libraries. In addition, there are several %%ProductName%%™ JavaScript resources that the `igScheduler` control uses for shared functionality and data binding. These JavaScript references are required whether the `igScheduler` control is used in a pure JavaScript context.
-
-### Requirements
-
-The table below lists the requirements for the `igScheduler` control.
-
-<table class="table">
-	<thead>
-		<tr>
-			<th>Requirement</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>jQuery and jQuery UI JavaScript resources</td>
-			<td>%%ProductName%% is built on top of these frameworks:
-				<ul>
-					<li>[jQuery](http://jquery.com) (The required jQuery version for igScheduler is 1.8.3)</li>
-					<li>[jQuery UI](http://jqueryui.com/) (The required jQuery UI version for igScheduler is 1.9.2)</li>
-				</ul>
-			</td>
-		</tr>
-		<tr>
-			<td>Shared %%ProductName%% JavaScript resources</td>
-			<td>There are several shared JavaScript resources in %%ProductName%% that most widgets use:
-				<ul>
-					<li>infragistics.util.js</li>
-				</ul>
-			</td>
-		</tr>
-		<tr>
-			<td>igDataSource JavaScript Resources</td>
-			<td>The igScheduler uses the igDataSource for data operations:
-				<ul>
-					<li>infragistics.dataSource.js</li>
-				</ul>
-			</td>
-		</tr>
-		<tr>
-			<td>igScheduler JavaScript resources</td>
-			<td>The JavaScript file for the igScheduler widget:
-				<ul>
-					<li>infragistics.ui.scheduler.js</li>
-				</ul>
-			</td>
-		</tr>
-		<tr>
-			<td>IG Theme</td>
-			<td>This theme contains custom visual styles created especially for %%ProductName%%</td>
-		</tr>
-		<tr>
-			<td>Base Theme</td>
-			<td>The base theme contains styles that primarily define the form and function for each widget.</td>
-		</tr>
-	</tbody>
-</table>
 
 ## <a id="binding-to-data-source"></a>Binding to Data Sources
 
@@ -325,11 +327,17 @@ Following are some other topics you may find useful.
 
 -   [igScheduler Overview](igScheduler-Overview.html)
 
+-   [Configuring igScheduler](igscheduler-configuring.html)
+
+-   [Configuring Appointments](igscheduler-configure-appointments.html)
+
+-   [Configuring Resources](igscheduler-configure-resources.html)
+
 -	[Adding igScheduler](igscheduler-adding-igscheduler.html)
 
 -	[Configuring igScheduler](igscheduler-Configuring.html)
 
--	[Styling igScheduler](igscheduler-Using-Themes.html)
+-	[Styling igScheduler](igscheduler-using-themes.html)
 
 -	[Accessibility Compliance (igScheduler)](igscheduler-accessibility-compliance.html)
 
