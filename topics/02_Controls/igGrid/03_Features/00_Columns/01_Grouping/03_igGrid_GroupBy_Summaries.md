@@ -123,6 +123,7 @@ In this example since the "Sum" summary is only applicable for numeric columns o
 The `columnSettings.groupSummaries` option allows specifying a summary per column, which takes higher priority than the groupSummaries main level option. When this option is set for a particular column any settings related to this column from the main `groupSummaries` option are disregarded.
 
 The <a id="groupSummariesObject"></a>**groupSummariesObject** used for specifying the summary options has the following properties:
+
 |Name| Description | Type | Default value |
 |----|-------------|------|---------------|
 |summaryFunction|Name or custom function specifying the summary.| string or function |
