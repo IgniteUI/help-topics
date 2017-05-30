@@ -63,7 +63,8 @@ $.ig.loader({
 
 ## igGrid
 
-When headerText option is not set in columns definition of the grid, then columnKey is used as header text.
+### headerText option behavior changes
+When headerText option is not set in columns definition of the grid, then column key is used as header text.
 
 ### Options changes in igGrid Summaries
 The options [*isGridFormatter*](http://www.igniteui.com/help/api/2016.2/ui.iggridsummaries#options:isGridFormatter) and [*defaultDecimalDisplay*](http://www.igniteui.com/help/api/2016.2/ui.iggridsummaries#options:defaultDecimalDisplay) in the igGrid Summaries main level options have been removed.
