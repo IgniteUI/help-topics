@@ -66,13 +66,11 @@ Feature | Description
 ---|---
 [Date Picker Options MVC wrapper](#pickerOptionsWrapper) | When using DatePicker MVC wrapper, now additional wrapper for the date picker options is available.
 
-<!-- TODO: comment back in if new RC is created
 ### igDataChart
 
 Feature | Description
 ---|---
 [Zoom Enabling Options](#zoomEnablingProperties) | New options called [`isHorizontalZoomEnabled`](%%jQueryApiUrl%%/ui.igDataChart#options:isHorizontalZoomEnabled) and [`isVerticalZoomEnabled`](%%jQueryApiUrl%%/ui.igDataChart#options:isHorizontalZoomEnabled) have been added which control whether zooming is allowed on either the horizontal or vertical axis.
--->
 
 ### igMap
 
@@ -255,12 +253,12 @@ The DatePicker MVC wrapper is extended to allow the definition of the date picke
 	})
 	.Render())
 ```
-<!-- TODO: comment back in if new RC is created
+
 ## </a>igDataChart
 ### <a id="zoomEnablingProperties"></a> Zoom Enabling Options
 
 New options called [`isHorizontalZoomEnabled`](%%jQueryApiUrl%%/ui.igDataChart#options:isHorizontalZoomEnabled) and [`isVerticalZoomEnabled`](%%jQueryApiUrl%%/ui.igDataChart#options:isVerticalZoomEnabled) were added, deprecating the existing [`horizontalZoomable`](%%jQueryApiUrl%%/ui.igDataChart#options:horizontalZoomable) and [`verticalZoomable`](%%jQueryApiUrl%%/ui.igDataChart#options:verticalZoomable) options respectively.  The older options are being left as-is in this release for backwards compatibility with existing applications.
--->
+
 ## igMap
 ### <a id="tilePathProperty"></a> Map Imagery Tile Path
 
