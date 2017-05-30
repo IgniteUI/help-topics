@@ -570,6 +570,7 @@ When grid's data source is remote the custom scrollbars don't show on touch envi
 The scrollable container height is not properly updated if the grid's records are deleted directly via the data source. | If the records are removed directly from the data source the scrollable container height is not properly updated and there may be blank space at the bottom of the grid. | ![](../../images/images/plannedFix.png)
 On touch only environments if the height/width of the container is changed, the custom scrollbars don't get updated. | This applies to changes triggered by different features of the grid as well, for example when hiding/unhiding summaries/filtering. | ![](../../images/images/plannedFix.png)
 If the grid is in a scrollable container but has no scrollbar on touch you cannot scroll the scrollable container while swiping on the grid. | If the grid has no scrollbars swiping on it should trigger scrolling for its container, however it currently does not. | ![](../../images/images/plannedFix.png)
+Page cannot be scrolled in IE11 on touch environment when scrolling over igGrid with Selection enabled | Selection applies "-ms-touch-action: none" to disable the default behavior of the pointer events in IE so that users are able to e.g. touch and drag selected cells instead of executing page scroll | ![](../images/images/negative.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
