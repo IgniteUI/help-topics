@@ -84,7 +84,7 @@ Feature | Description
 
 Feature | Description
 ---|---
-[Map Imagery Tile Path](#tilePathProperty) | The option called [`tilePath`](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent.tilePath) has been added to the [`backgroundContent`](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent) options.  Users can use this property to specify a URL where the tile images are located.
+[OpenStreet Tile Path](#tilePathProperty) | The option called [`tilePath`](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent.tilePath) has been added to the [`backgroundContent`](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent) option for the OpenStreet tile source.
 
 ### igRadialGauge, igLinearGauge, igBulletGraph
 Feature | Description
@@ -291,6 +291,7 @@ The DatePicker MVC wrapper is extended to allow the definition of the date picke
 New options called [`isHorizontalZoomEnabled`](%%jQueryApiUrl%%/ui.igDataChart#options:isHorizontalZoomEnabled) and [`isVerticalZoomEnabled`](%%jQueryApiUrl%%/ui.igDataChart#options:isVerticalZoomEnabled) were added, deprecating the existing [`horizontalZoomable`](%%jQueryApiUrl%%/ui.igDataChart#options:horizontalZoomable) and [`verticalZoomable`](%%jQueryApiUrl%%/ui.igDataChart#options:verticalZoomable) options respectively.  The older options are being left as-is in this release for backwards compatibility with existing applications.
 
 ## igMap
+### <a id="tilePathProperty"></a> OpenStreet Tile Path
 
 Open Street Map can now accept custom tile source by re-purposing the [`tilePath`](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent.tilePath) option off of the [`backgroundContent`](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent) object.
 
