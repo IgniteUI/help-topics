@@ -84,7 +84,7 @@ Feature | Description
 
 Feature | Description
 ---|---
-[Map Imagery Tile Path](#tilePathProperty) | The option called [`tilePath`](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent.tilePath) has been added to the [`backgroundContent`](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent) options.  Users can use this property to specify a URL where the tile images are located.
+[OpenStreet Tile Path](#tilePathProperty) | The option called [`tilePath`](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent.tilePath) has been added to the [`backgroundContent`](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent) option for the OpenStreet tile source.
 
 ### igRadialGauge, igLinearGauge, igBulletGraph
 Feature | Description
@@ -291,19 +291,35 @@ The DatePicker MVC wrapper is extended to allow the definition of the date picke
 New options called [`isHorizontalZoomEnabled`](%%jQueryApiUrl%%/ui.igDataChart#options:isHorizontalZoomEnabled) and [`isVerticalZoomEnabled`](%%jQueryApiUrl%%/ui.igDataChart#options:isVerticalZoomEnabled) were added, deprecating the existing [`horizontalZoomable`](%%jQueryApiUrl%%/ui.igDataChart#options:horizontalZoomable) and [`verticalZoomable`](%%jQueryApiUrl%%/ui.igDataChart#options:verticalZoomable) options respectively.  The older options are being left as-is in this release for backwards compatibility with existing applications.
 
 ## igMap
-### <a id="tilePathProperty"></a> Map Imagery Tile Path
+### <a id="tilePathProperty"></a> OpenStreet Tile Path
 
-A new option called [`tilePath`](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent.tilePath) has been added to the [`backgroundContent`](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent) option.  This option allows you to specify a URL pointing to the location where the tile images are stored.  Below is an example of its usage.
+Open Street Map can now accept custom tile source by re-purposing the [`tilePath`](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent.tilePath) option off of the [`backgroundContent`](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent) object.
 
-```
-$("#map").igMap({
-    backgroundContent: {
-        type: "bing",
-        key: "abcdefghijk123456",
-		tilePath: "http://www.example.com/tiles/"
-    }
-});
-```
+**In JavaScript**
+
+	$(function () {
+            $("#map").igMap({
+                width: "700px",
+                height: "500px",
+                windowRect: { left: 0.1, top: 0.1, height: 0.7, width: 0.7 },
+                // specifies imagery tiles from OpenStreetMap
+                backgroundContent: {
+                    type: "openStreet",
+                    tilePath: "tile.openstreetmap.org/{Z}/{X}/{Y}.png"
+                }
+            });
+        });
+
+Before this change [`tilePath`](%%jQueryApiUrl%%/ui.igMap#options:backgroundContent.tilePath) was only relevant to the Bing Map. After the change it is applicable to the Open Street Map as well.
+
+Omitting the protocol specifier (*http:* or *https:*) in the URL allows for the control to detect and use the protocol of the hosting web site. It is also possible to force the control into desired protocol by explicitely setting it in the *tilePath* option:
+
+**In JavaScript**
+
+    tilePath: "https://tile.openstreetmap.org/{Z}/{X}/{Y}.png"
+
+*{Z}*, *{X}*, and *{Y}* tokens are replaced during tile rendering by Zoom, Horizontal location, and Vertical location of each tile respectively.
+
 
 ## igRadialGauge, igLinearGauge, igBulletGraph
 ### <a id="gaugeDesignChanges"></a> Design Changes
