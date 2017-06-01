@@ -38,7 +38,7 @@ This topic contains the following sections:
 -   An MVC project in Microsoft Visual Studio® with an igGrid bound to a data source
 -   A reference to the Infragistics.Web.Mvc.dll (contains the ASP.NET MVC wrappers)
 
-> **Note:** Events are raised only by user interactions. API method calls do not raise events.
+> **Note:** Calling API methods programmatically does not raise events related to their operation; those events are only raised by their respective user interaction..
 
 ### Scripting requirements
 
