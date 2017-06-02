@@ -27,7 +27,7 @@ Feature | Description
 
 Feature | Description
 ---|---
-[New control igScheduler](#scheduler)| The igSpreadsheet is a jQuery widget that provides a common scheduling solution for presenting and managing time periods and the associated activities.
+[New control igScheduler](#scheduler)| The igScheduler is a jQuery widget that provides a common scheduling solution for presenting and managing time periods and the associated activities.
 
 ### igDataSource
 
@@ -47,13 +47,13 @@ Feature | Description
 
 Feature | Description
 ---|---
-[Knockout Disable Handler](#comboKnockoutDisable)| Knockout Disable binding handler has been implemnted for the combo.
+[Knockout Disable Handler](#comboKnockoutDisable)| Knockout Disable binding handler has been implemented for the combo.
 
 ### Editors
 
 Feature | Description
 ---|---
-[Knockout Disable Handler](#editorsKnockoutDisable)| Knockout Disable binding handler has been implemnted for the editors.
+[Knockout Disable Handler](#editorsKnockoutDisable)| Knockout Disable binding handler has been implemented for the editors.
 
 
 ### igNumericEditor
@@ -102,7 +102,7 @@ In version 2017.1 we introduce the igSpreadsheet control. It is a jQuery widget 
     -   Tab Bar Area
     -   Headers
 
--   Control manupaltions
+-   Control manipulations
 
     -   Selection
     -   Resizing
@@ -111,7 +111,7 @@ In version 2017.1 we introduce the igSpreadsheet control. It is a jQuery widget 
     -   Splitting Panes
     -   Zooming
 
--   Data manipualtions
+-   Data manipulations
     -   Inserting and Deleting Cells, Columns and Rows
     -   Undo and Redo
     -   Copy and Paste
@@ -199,7 +199,7 @@ In order to handle the displaying of the dates, there is an option in the date c
 
 ### <a id="gridcaption"></a> Grid's Caption
 
-The igGrid's caption now provides the ability to render HTML elements in it in order to give the user more customizability and flexability. It also comes with useful events for full control of its initialization.
+The igGrid's caption now provides the ability to render HTML elements in it in order to give the user more customizability and flexibility. It also comes with useful events for full control of its initialization.
 
 ### <a id="groupSummaries"></a> GroupBy Summaries
 
