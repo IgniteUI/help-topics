@@ -76,6 +76,10 @@ With this option can be set how many decimals after the floating point will be d
 
 If no format is set for the summary and the current column the regional settings for the column type will be applied to that summary. Since due to [*autoFormat*](%%jQueryApiUrl%%/ui.iggrid#options:autoFormat) being default to 'date', the regional settings will be applied only to summaries in that type of column and in other type of columns won't receive any formatting. Meaning that if regional settings need to be applied for other type of columns when the *format* option is not set for both summary and column the [*autoFormat*](%%jQueryApiUrl%%/ui.iggrid#options:autoFormat) option needs to be set. It will specify which summaries will receive the regional auto formatting depending the column they are in.
 
+### Date handling
+
+The option [`enableUTCDates`](%%jQueryApiUrl%%/ui.iggrid#options:enableUTCDates) has now a different function. It affects only the dates serialization. You should use the new option [`dateDisplayType`](%%jQueryApiUrl%%/ui.iggrid#options:columns.dateDisplayType) in the grid column's definition to handle date timezone display. Please follow the [Migrating enableUTCDates option after 17.1](migrating-enableutcdates-option-in-17-1.html) topic to see how you can adapt to the new changes and the [Using Ignite UI controls in different time zones](Using-IgniteUI-controls-in-different-time-zones.html) topic for more detailed information of how the both options work.
+
 ## igDateEditor/igDatePicker
 
 The option [`enableUTCDates`](%%jQueryApiUrl%%/ui.igdateeditor#options:enableUTCDates) has now a different function. You can use the [`displayTimeOffset`](%%jQueryApiUrl%%/ui.igdateeditor#options:displayTimeOffset) if you want to show the time in the editor with the desired offset. Please follow the [Migrating date handling in 17.1](igDateEditor-migrating-date-handling-in-17-1.html) topic to see how you can adapt to the new changes and the [Using Ignite UI controls in different time zones](Using-IgniteUI-controls-in-different-time-zones.html) topic for more detailed information of how the both options work.

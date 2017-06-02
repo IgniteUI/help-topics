@@ -193,9 +193,13 @@ The igDataSource component provides a way to search for a specific words or phra
 
 ### <a id="griddatehandling"></a> Date Handling
 
-When enabled for the igGrid, the option [`enableUTCDates`](%%jQueryApiUrl%%/ui.iggrid#options:enableUTCDates) affects only the dates serialization. Enables/Disables serializing client date as [UTC ISO 8061](https://en.wikipedia.org/wiki/ISO_8601#UTC) string instead of using the local time and zone values.
+The [`enableUTCDates`](%%jQueryApiUrl%%/ui.iggrid#options:enableUTCDates) now have new function. It affects only the dates serialization. Dates are now serialized as [UTC ISO 8061](https://en.wikipedia.org/wiki/ISO_8601#UTC) string instead of using the local time and zone values.
 
-In order to handle the displaying of the dates, there is an option in the date columns' definition - [`dateDisplayType`](%%jQueryApiUrl%%/ui.iggrid#options:columns.dateDisplayType). As a date value is received from the server it goes through a formatter function to display the date. If [`dateDisplayType`](%%jQueryApiUrl%%/ui.iggrid#options:columns.dateDisplayType) is set to "local", the final result for the specified column returns date values via the standard date object methods (getFullYear(), getMonth(), getDate(),getHours() etc.) and if set to "utc" UTC equivalents ( getUTCFullYear(), getUTCMonth(), getUTCDate(), getUTCHours() etc.) are used. 
+In order to handle the displaying of the dates a new option [`dateDisplayType`](%%jQueryApiUrl%%/ui.iggrid#options:columns.dateDisplayType) is introduced in the grid column's definition and it works only for columns of type `date`. 
+
+#### Related Topics
+-   [Migrating enableUTCDates option after 17.1](migrating-enableutcdates-option-in-17-1.html)
+
 
 ### <a id="gridcaption"></a> Grid's Caption
 
