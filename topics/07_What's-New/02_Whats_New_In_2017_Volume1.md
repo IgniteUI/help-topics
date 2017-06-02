@@ -180,7 +180,7 @@ The `igScheduler`™ control provides a common scheduling solution for presentin
 
 ### <a id="filterbytext"></a> Filter By Text
 
-The igDataSource component provides a way to search for a specific words or phrases in all of its fields via the [`filterByText`](%%jQueryApiUrl%%/ig.datasource#options:methods.filterByText) method.
+The igDataSource component provides a way to search for a specific words or phrases in all of its fields via the [`filterByText`](%%jQueryApiUrl%%/ig.datasource#methods:filterByText) method.
 
 #### Related Topics
 -   [igDataSource Overview](igdatasource-igdatasource-overview.html)
