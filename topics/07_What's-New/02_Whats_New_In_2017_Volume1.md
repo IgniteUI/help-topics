@@ -174,7 +174,7 @@ The `igScheduler`™ control provides a common scheduling solution for presentin
 #### Related Samples
 
 -   [igScheduler Agenda View](%%SamplesUrl%%/scheduler/agenda-view)
--   [igScheduler Agenda View](%%SamplesUrl%%/scheduler/appointment-indicators)
+-   [igScheduler Appointment Indicators](%%SamplesUrl%%/scheduler/appointment-indicators)
 
 ## igDataSource
 
