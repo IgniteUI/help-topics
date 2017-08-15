@@ -23,9 +23,7 @@ If you choose to use the latest official release of %%ProductName%% you can inst
 npm install ignite-ui
 ```
 
-After executing this command, you will find the %%ProductName%% package inside the node_modules directory of your project.  
-
-> ## **Warning: The private feed installation is currently not working because of an issue with ProGet**
+After executing this command, you will find the %%ProductName%% package inside the node_modules directory of your project.
 
 ## Installing the %%ProductName%% npm package from the Infragistics private feed
 
@@ -50,8 +48,6 @@ npm install @infragistics/ignite-ui-full
 ```
 Have in mind that we have set the %%ProductName%% package to be scoped, meaning that no changing the registries is needed if you want to install packages from our private feed and from npmjs.org simultaneously.
 
-So, if you've already adopted npm and you have an %%ProductName%% license, don't hesitate setting up the Infragistics private feed and boost your productivity, using the full potential of %%ProductName%%. 
-
-> ## **Warning: The private feed installation is currently not working because of an issue with ProGet**
+So, if you've already adopted npm and you have an %%ProductName%% license, don't hesitate setting up the Infragistics private feed and boost your productivity, using the full potential of %%ProductName%%.
 
 And if you don't have a licensed copy of %%ProductName%% yet, you can still use many of the great controls that Infragistics provide for free with the %%ProductName%% OSS package. Among those controls are the powerful igEditors, igCombo and igTree. So, go ahead and give it a try, installing the %%ProductName%% npm package from npmjs.com. 
