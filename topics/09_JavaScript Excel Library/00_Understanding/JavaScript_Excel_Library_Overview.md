@@ -25,25 +25,51 @@ The Excel library can be used to export a grid or table to a workbook document o
 
 ## Setting up the Environment
 
-To use the Excel library, you must reference the following JavaScript files from the %%ProductName%% product:
+To use the Excel library, you must reference the following JavaScript files from the %%ProductName%% product, which are the minimum required:
 
 -   infragistics.util.js
--   infragistics.xml.js [new in 14.2]
--   infragistics.documents.core.js [new in 14.2]
--   infragistics.excel.js [new in 14.2]
+-   infragistics.ext_core.js [new in 17.1]
+-   infragistics.ext_collections.js [new in 17.1]
+-   infragistics.ext_text.js [new in 17.1]
+-   infragistics.ext_io.js [new in 17.1]
+-   infragistics.ext_ui.js [new in 17.1]
+-   infragistics.documents.core_core.js [new in 17.1]
+-   infragistics.ext_collectionsextended.js [new in 17.1]
+-   infragistics.excel_core.js [new in 17.1]
+
+When а worksheet object needs to be loaded from an existing Excel file or saved to a new Excel file (in the default Office Excel 2007 (and later) XML-based file format.), then you must reference the following as well:
+
+-   infragistics.ext_threading.js [new in 17.1]
+-   infragistics.ext_web.js [new in 17.1]
+-   infragistics.xml.js [new in 17.1]
+-   infragistics.documents.core_openxml.js [new in 17.1]
+-   infragistics.excel_serialization_openxml.js [new in 17.1]
 
 In addition, if you are working in Visual Studio, you can include the following IntelliSense annotation files to get better statement completion support and descriptions while coding:
 
--   infragistics.documents.core.intellisense.js [new in 14.2]
--   infragistics.excel.intellisense.js [new in 14.2]
+-   infragistics.documents.core_core.intellisense.js [new in 17.1]
+-   infragistics.excel_core.intellisense.js [new in 17.1]
+-   infragistics.excel_serialization_openxml.intellisense.js [new in 17.1]
 
 Once these references are included, you need to add the following code to the top of your `.js` files which has code using the Excel library:
 
 **In JavaScript:**
 ```js
 /// <reference path="infragistics.util.js" />
-/// <reference path="infragistics.documents.core.js" />
-/// <reference path="infragistics.excel.js" />
+/// <reference path="infragistics.ext_core.js" />
+/// <reference path="infragistics.ext_collections.js" />
+/// <reference path="infragistics.ext_text.js" />
+/// <reference path="infragistics.ext_io.js" />
+/// <reference path="infragistics.ext_ui.js" />
+/// <reference path="infragistics.documents.core_core.js" />
+/// <reference path="infragistics.ext_collectionsextended.js" />
+/// <reference path="infragistics.excel_core.js" />
+/// <reference path="infragistics.ext_threading.js" />
+/// <reference path="infragistics.ext_web.js" />
+/// <reference path="infragistics.xml.js" />
+/// <reference path="infragistics.documents.core_openxml.js" />
+/// <reference path="infragistics.excel_serialization_openxml.js" />
+
 ```
 With this code in place, you will start to see the Excel library types in the `$.ig.excel` namespace:
 
