@@ -30,8 +30,11 @@ This topic contains the following sections:
 -   [Control Localization Files Reference](#Localization)
    -   [Introduction](#subIntroduction)
     -   [Control localization reference summary](#LocalizationSummary)
-- [Changing controls' language runtime](#change)
+- [Changing language and regional settings](#change)
+	- [Changing language](#change-locale)
+	- [Changing regional](#change-regional)
 -   [Walkthrough: Localizing igGridPaging](#Walkthrough)
+-   [Walkthrough: Changing language and locale runtime for all controls on the page](#Walkthrough2)
    -   [Introduction](#WalkthroughIntroduction)
     -   [Preview](#Preview)
     -   [Requirements](#Requirements)
@@ -157,11 +160,11 @@ The following table summarizes localization files for %%ProductName%% controls.
 	</tbody>
 </table>
 
-# <a id="change"></a> Changing controls' regional and language settings
+# <a id="change"></a> Changing language and regional settings
 
 ## <a id="change-locale"></a> Changing language
 
-The controls' language can be set via the `language` option and can changed runtime in one of the following ways:
+The controls' language can be set via the `language` option and can be changed runtime in one of the following ways:
 - Globally for all Ignite UI widgets on the page via the util changeGlobalLanguage function.
 
 	**In JavaScript:**
@@ -295,7 +298,140 @@ The following steps demonstrate how to localize x control.
 	<script src="../../js/modules/i18n/infragistics.ui.grid-es.js"></script>
 	<script src="../../js/infragistics.loader.js"></script>
 	```
-           
+## <a id="Walkthrough2"></a>Walkthrough: Changing language and locale runtime for all controls on the page
+
+The following procedure will guide you to the proccess of changing the language and regional settings globally for all controls on the page.
+
+### <a id="Steps"></a>Steps
+
+1. Load all locale and regional resources using the igLoader.
+
+**In JavaScript:**
+	
+```js
+	$.ig.loader({
+		scriptPath: 'http://localhost/igniteui/js/',
+		cssPath: 'http://localhost/igniteui/css/',
+		resources: 'igGrid.*, igEditors, igCombo',
+		locale: 'en, ja, bg, ru',
+		regional: 'en, ja, bg, ru'
+	});
+```
+
+2. Initialize localazable components - igGrid, igEditors, igCombo.
+
+**In JavaScript:**
+	
+```js
+	$.ig.loader(function () {
+		$("#grid1").igGrid({
+			dataSource: northwindEmployees,
+			primaryKey: "ID",
+			width: "100%",
+			height: "400px",
+			autoCommit: true,
+			autoGenerateColumns: false,
+			columns: [
+					{ headerText: "Employee ID", key: "ID", dataType: "number", hidden: true},					
+					{ headerText: "Name", key: "Name", dataType: "string" },
+					{ headerText: "Title", key: "Title", dataType: "string" },
+					{ headerText: "Phone", key: "Phone", dataType: "string" },
+					{ headerText: "HireDate", key: "HireDate", dataType: "date", format: "date" },
+					{ headerText: "Value", key: "Value", dataType: "number", format: "currency" }
+				],
+			features: [
+				{
+					name: "Updating"
+				},
+				{
+					name: "Filtering",
+					mode: "simple"
+				},
+				{
+					name: "Sorting"
+				},
+				{
+					name: "GroupBy"
+				},
+				{
+					name: "Summaries"
+				},
+				{
+					name: "Hiding"
+				},
+				{
+					name: "Paging"
+				},
+				{ 
+					name: "Selection"
+				}					
+				]
+			});
+			var colors = [{
+                    "Name": "Black"
+                  }, {
+                    "Name": "Blue"
+                  }, {
+                    "Name": "Brown"
+                  }, {
+                    "Name": "Red"
+                  }, {
+                    "Name": "White"
+                  }, {
+                    "Name": "Yellow"
+                  }];
+ 
+            $("#combo1").igCombo({
+                  dataSource: colors,
+                  textKey: "Name",
+                  valueKey: "Name",
+                  width: "200px"
+            });
+			
+			$("#currencyEditor").igCurrencyEditor({
+                         width: 200,
+						 buttonType: "spin"
+            });
+			
+			$("#numericEditor").igNumericEditor({
+                         width: 200
+            });
+
+	})
+```
+3. Create a drop-downs for selecting the different locale and regional settings. On change use the $.ig.util.changeGlobalRegional and $.ig.util.changeGlobalRegional methods to apply the selection for all components on the page.
+
+**In JavaScript:**
+	
+```js
+		$("#globalLanguageSelect").igCombo({
+				dataSource:[
+				{ Name: "English", Value:"en"},
+				{ Name: "Japanesse", Value: "ja"},
+				{ Name: "Bulgarian", Value: "bg"},
+				{ Name: "Rusian", Value: "ru"}],
+					textKey: "Name",
+					valueKey: "Value",
+					selectionChanged: function(e, ui){					
+						$.ig.util.changeGlobalLanguage( ui.items[0].value);
+					}
+			});
+
+			$("#globalRegionalSelect").igCombo({
+				dataSource:[
+				{ Name: "US", Value:"en-US"},
+				{ Name: "GB", Value: "en-GB"},
+				{ Name: "BG", Value: "bg"},
+				{ Name: "RU", Value: "ru"}],
+				textKey: "Name",
+				valueKey: "Value",
+				selectionChanged: function(e, ui){					
+					$.ig.util.changeGlobalRegional( ui.items[0].value);
+				}
+			});
+```
+
+
 ##<a id="RelatedContent"></a>Related Content
 
 ### Topics
