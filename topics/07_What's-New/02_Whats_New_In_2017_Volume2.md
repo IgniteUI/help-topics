@@ -39,7 +39,7 @@ The [`suppressKeyboard`](ui.igtexteditor#options:suppressKeyboard) option preven
 
 ### <a id="spinDeltaObject"></a> Spin Delta as Object
 
-The [`spinDelta`](%%jQueryApiUrl%%/ui.igdateeditor#options:spinDelta) can be configured as an object, which defines specific values for each time period.
+The [`spinDelta`](%%jQueryApiUrl%%/ui.igdateeditor#options:spinDelta) option can be configured as an object, which defines specific values for each time period.
 Accepted values for client-side widget's deltas are positive integer numbers, and the fractional portion of floating point numbers is ignored.
 Accepted values for MVC wrapper's deltas are integer numbers.
 
