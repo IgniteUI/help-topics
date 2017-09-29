@@ -30,6 +30,7 @@ This topic contains the following sections:
 -   [Control Localization Files Reference](#Localization)
    -   [Introduction](#subIntroduction)
     -   [Control localization reference summary](#LocalizationSummary)
+- [Setting language, locale and regional options](#set)
 - [Changing language and regional settings](#change)
 	- [Changing language](#change-locale)
 	- [Changing regional](#change-regional)
@@ -159,6 +160,79 @@ The following table summarizes localization files for %%ProductName%% controls.
 		</tr>
 	</tbody>
 </table>
+
+# <a id="set"></a> Setting `language`, `locale` and `regional` options
+
+The controls `language`, `regional` and `locale` options can be set in both JavaScript and ASP.NET MVC. 
+
+**In JavaScript:**
+```js
+	$("#combo").igCombo({
+			language: "en",
+			regional:"en-GB",
+			locale: {
+				dropDownButtonTitle: 'New drop down title'
+			}
+    	    		dataSource: colors,
+                    	textKey: "Name",
+                    	valueKey: "Name",
+                    	width: "200px"
+        });
+```
+When using IgniteUI MVC Wrappers `locale` option,which is of type object, for igGrid, igTreeGrid and igHierarachicalGrid can be set vie both lambda expression and string. For all other controls is set only via string.
+
+**In Razor:**
+
+igTreeGrid - `locale` option set with lambda expressions
+```csharp
+@(Html.Infragistics().TreeGrid(Model)
+        .ID("treegrid1")
+        .Width("100%")
+		.Language("en")
+		.Regional("en-GB")
+		.Locale(l =>l.ExpandTooltipText("New Expand Tooltip").CollapseTooltipText("New Collapse Tooltip"))
+        .AutoGenerateColumns(false)
+        .PrimaryKey("ID")
+        .ChildDataKey("Files")
+        .RenderExpansionIndicatorColumn(true)
+        .InitialExpandDepth(1)
+        .Columns(column =>
+            {
+                column.For(x => x.ID).Hidden(true);
+                column.For(x => x.Name).HeaderText("Name").Width("30%");
+                column.For(x => x.DateModified).HeaderText("Date Modified").Width("20%");
+                column.For(x => x.Type).HeaderText("Type").Width("20%");
+                column.For(x => x.Size).HeaderText("Size in KB").Width("20%");
+            })
+        .DataBind()
+        .Render()
+    )
+```
+igTreeGrid - `locale` option set with string
+```csharp
+@(Html.Infragistics().TreeGrid(Model)
+        .ID("treegrid1")
+        .Width("100%")
+		.Language("en")
+		.Regional("en-GB")
+		.Locale("{expandTooltipText: 'New Expand Tooltip', collapseTooltipText: 'New Collapse Tooltip' }")
+        .AutoGenerateColumns(false)
+        .PrimaryKey("ID")
+        .ChildDataKey("Files")
+        .RenderExpansionIndicatorColumn(true)
+        .InitialExpandDepth(1)
+        .Columns(column =>
+            {
+                column.For(x => x.ID).Hidden(true);
+                column.For(x => x.Name).HeaderText("Name").Width("30%");
+                column.For(x => x.DateModified).HeaderText("Date Modified").Width("20%");
+                column.For(x => x.Type).HeaderText("Type").Width("20%");
+                column.For(x => x.Size).HeaderText("Size in KB").Width("20%");
+            })
+        .DataBind()
+        .Render()
+    )
+```
 
 # <a id="change"></a> Changing language and regional settings
 
