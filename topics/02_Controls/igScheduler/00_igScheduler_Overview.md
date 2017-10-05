@@ -26,6 +26,8 @@ This topic contains the following sections:
     - [Views](#views)
         - [Agenda View](#agenda-view)
         - [Month View](#month-view)
+        - [Week View](#week-view)
+        - [Day View](#day-view)
     - [Activities](#activities)
         - [Appointments](#appointments)
 
@@ -207,6 +209,21 @@ The following screenshot shows the month view combined with agenda view with its
 
 4. The time associated with this activity
 
+#### <a id="week-view"></a>Week View
+
+The Week View of the `igScheduler` is visualizing all seven week days based on the currently selected day. This view contains time-slot segments with same length and different height based on the time range of the appointment.
+
+
+The following screenshot shown the Week View along with its visual elements:
+
+![](images/weekView.PNG)
+#### <a id="day-view"></a>Day View
+
+Shows hour-based view of the selected day, the hours are listed vertically going from top to bottom. This view contains time-slot segments with same length and different height based on the time range of the appointment.
+
+The following screenshot shown the Day View along with its visual elements:
+
+![](images/dayView.PNG)
 #### Topics
 
 -	[Adding igScheduler](igscheduler-adding-igscheduler.html)
@@ -284,7 +301,7 @@ The following table lists the Appointment's key properties and their purpose:
 
 ### Binding to data sources overview
 
-In most cases, you will use the `dataSource` option of the `igScheduler` to bind to data. `ScheduleListDataSource` should be initialized, where the [appointments](igscheduler-configure-appointments.html) and [resources](igscheduler-configure-resources.html) collections should be configured. 
+In most cases, you will use the `dataSource` option of the `igScheduler` to bind to data. `ScheduleListDataSource` should be initialized, where the [appointments](igscheduler-configure-appointments.html) and [resources](igscheduler-configure-resources.html) collections should be configured.
 
 ## <a id="related-topics"></a>Related Topics
 
