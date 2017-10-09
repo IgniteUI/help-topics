@@ -251,6 +251,8 @@ The following samples provide additional information related to this topic.
 
 -	[Grid Layout with colspan and rowspan Support](%%SamplesUrl%%/layout-manager/grid-layout): This sample demonstrates the ability of the `igLayoutManager` control’s Grid layout to allow items to have arbitrary position in a grid with a predefined size including for items with different rowspan and colspan settings.
 
+-	[Grid Layout with Custom Size](%%SamplesUrl%%/layout-manager/grid-layout-custom-size): This sample demonstrates the `igLayoutManager` control’s Grid layout having specific width and height for each column.
+
 -	[Responsive Vertical Layout](%%SamplesUrl%%/layout-manager/vertical-layout)" This sample s demonstrates the responsiveness of the `igLayoutManager` control’s Vertical layout with various item sizes set either in pixels or percentages and setting the number of items in the `igLayoutManager`'s options without the need for any initial markup.
 
 
