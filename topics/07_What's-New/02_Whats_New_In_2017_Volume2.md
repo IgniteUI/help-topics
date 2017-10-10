@@ -17,6 +17,12 @@ This topic presents the controls and the new and enhanced features for the Ignit
 
 The following summarizes what’s new in 2017 Volume 2. Additional details follow.
 
+### Spreadsheet
+Feature | Description
+---|---
+[Editing](#spreadsheetEditing)| Editing of spreadsheet content.
+[MVC Wrapper](#spreadsheetMVCWrapper)| MVC wrapper for the spreadsheet control.
+
 ### Editors
 
 Feature | Description
@@ -28,6 +34,66 @@ Feature | Description
 Feature | Description
 ---|---
 [Spin Delta as Object](#spinDeltaObject)| Spin delta can be configured as an object, which defines specific values for each time period.
+
+## Spreadsheet
+
+### <a id="spreadsheetEditing"></a> Editing of the spreadsheet content
+
+Editing of the spreadsheet's cells is added in addition to the inaugural features of the Spreadsheet control. There are several new API events, methods and options that can be used when manipulating spreadsheet content.
+
+New events: 
+-   [`editModeEntering`](ui.igspreadsheet#events:editModeEntering) - Invoked when the Spreadsheet is about to start in-place editing of the activeCell.
+-   [`editModeEntered`](ui.igspreadsheet#events:editModeEntered) - Invoked when the Spreadsheet has started in-place editing of the activeCell.
+-   [`editModeExiting`](ui.igspreadsheet#events:editModeExiting) - Invoked when the Spreadsheet is about to end the in-place editing of the activeCell.
+-   [`editModeExited`](ui.igspreadsheet#events:editModeExited) - Invoked when the Spreadsheet has ended the in-place editing of the activeCell.
+-   [`editModeValidationError`](ui.igspreadsheet#events:editModeValidationError) - Invoked when the Spreadsheet is exiting edit mode and the new value for the activeCell is not valid based on the criteria of that cell's ig.excel.DataValidationRule.
+
+
+New methods:
+-   [`getIsInEditMode()`](ui.igspreadsheet#methods:getIsInEditMode) - Indicates if the control is currently editing the value of the activeCell.
+-   [`getCellEditMode()`](ui.igspreadsheet#methods:getCellEditMode) - Returns an enumeration used to indicate the current edit mode state.
+
+New options:
+-   [`isFixedDecimalEnabled`](ui.igspreadsheet#options:isFixedDecimalEnabled) - Indicats whether a fixed decimal place is automatically added when a whole number is entered while in edit mode.
+-   [`fixedDecimalPlaceCount`](ui.igspreadsheet#options:fixedDecimalPlaceCount) - Number of decimal places by which a whole number typed in during edit mode should be adjusted.
+
+#### Related Topics
+-   [igSpreadsheet Overview](igspreadsheet-overview.html)
+-   [Features Overview (igSpreadsheet)](igspreadsheet-feature-overview.html)
+
+#### Related Samples
+-   [Overview](%%SamplesUrl%%/spreadsheet/overview)
+-   [View Configuration](%%SamplesUrl%%/spreadsheet/create-view-save)
+-   [Import Data From Excel File](%%SamplesUrl%%/spreadsheet/loading-data)
+
+### <a id="spreadsheetMVCWrapper"></a> Spreadsheet MVC Wrapper
+The 17.2 version of the Spreadsheet exposes and MVC helper that allows you to difine the control on server-site.
+
+In MVC:
+```
+@(Html.Infragistics()
+	.Spreadsheet()
+    .WorkbookURL("http://localhost:3357/statistic.xlsx")
+    .Width("500")
+    .Height("500")
+    .AddClientEvent("editModeEntering", "editModeEnteringHanlder")
+    .ZoomLevel(120)
+    .ValidationInputMessagePosition(position => {
+        position.X(100);
+        position.Y(200);
+    })
+    .AreHeadersVisible(true)
+)
+```
+
+#### Related Topics
+-   [igSpreadsheet Overview](igspreadsheet-overview.html)
+-   [Adding igSpreadsheet](adding-igspreadsheet.html)
+
+
+#### Related Samples
+-   [Overview](%%SamplesUrl%%/spreadsheet/aspnet-mvc)
+
 
 ## Editors
 
