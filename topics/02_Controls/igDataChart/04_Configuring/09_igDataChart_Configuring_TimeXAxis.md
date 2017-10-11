@@ -2,8 +2,8 @@
 |metadata|
 {
     "fileName": "igdatachart-configuring-axis-intervals",
-    "controlName": "",
-    "tags": []
+    "controlName": "igDataChart",
+    "tags": ["Charting","How Do I","Axis","TimeXAxis"]
 }
 |metadata|
 -->
