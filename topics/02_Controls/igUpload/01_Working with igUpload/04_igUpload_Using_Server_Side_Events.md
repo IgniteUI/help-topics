@@ -269,7 +269,7 @@ After following those steps you’ll have a basic upload control in your MVC app
 
 **Step 1.** Register `igUpload`‘s server-side event handler for the UploadStarting event.
 
-You register the `UploadStarting` event handler in the `Global.asax` in the ` Application_Start()` method. Note that the [AddStartingUploadEventHandler](Infragistics.Infragistics.Web.Mvc~AddStartingUploadEventHandler.html) method takes two parameters: control ID and the event handler. The value for the control ID must match the `ControlId` property defined for the related `igUpload` control(s). The event is raised for each `igUpload` control with the related `ControlId`, regardless of the view/controller they’re defined in. If there are other igUpload controls with different `ControlId` values that need to have this event handler registered for them, then the 
+You register the `UploadStarting` event handler in the `Global.asax` in the ` Application_Start()` method. Note that the [AddStartingUploadEventHandler](Infragistics.Web.Mvc~Infragistics.Web.Mvc.UploadProgressManager~AddStartingUploadEventHandler.html) method takes two parameters: control ID and the event handler. The value for the control ID must match the `ControlId` property defined for the related `igUpload` control(s). The event is raised for each `igUpload` control with the related `ControlId`, regardless of the view/controller they’re defined in. If there are other igUpload controls with different `ControlId` values that need to have this event handler registered for them, then the 
 [AddStartingUploadEventHandler](Infragistics.Infragistics.Web.Mvc~AddStartingUploadEventHandler.html) method should be called again for each one with the first parameter matching the `ControlId` option defined for the related `igUpload` control. 
 
 **In C#**
@@ -295,7 +295,7 @@ public static void igUpload_UploadStarting(object sender, Infragistics.Web.Mvc.U
 
 ```
 
-**Step 2.** In the event handler add your custom validation logic and if the conditions are not met set a custom [ServerMessage](Infragistics.Infragistics.Web.Mvc~ServerMessage.html) and cancel the event.
+**Step 2.** In the event handler add your custom validation logic and if the conditions are not met set a custom [ServerMessage](Infragistics.Web.Mvc~Infragistics.Web.Mvc.UploadCancellableBaseEventArgs~ServerMessage.html) and cancel the event.
 
 **In C#**
 

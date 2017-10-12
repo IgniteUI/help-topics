@@ -35,7 +35,7 @@ The purpose of the gear icon is to toggle the visibility of the Feature Chooser.
 
 The default setting of the gear icon's visibility changes depending on the context in which the grid is running. When the grid is rendered in non-touch contexts, the icon appears in the column header. When the grid is rendered in a touch enabled context, the gear icon is not rendered in the column header and the full column header is responsible for toggling the Feature Chooser instead.
 
-The visibility behavior of the gear icon is controlled by the grid's [`featureChooserIconDisplay`](http://help.infragistics.com/jQuery/2014.2/ui.iggrid#options:featureChooserIconDisplay) option. The default value for this option is `desktopOnly` and behaves as described above. Should you want to make the gear icon available in all contexts, then set `featureChooserIconDisplay` equal to always.
+The visibility behavior of the gear icon is controlled by the grid's [`featureChooserIconDisplay`](%%jQueryApiUrl%%/ui.iggrid#options:featureChooserIconDisplay) option. The default value for this option is `desktopOnly` and behaves as described above. Should you want to make the gear icon available in all contexts, then set `featureChooserIconDisplay` equal to always.
 
 > **Note**: The primary need to have control over the `featureChooserIconDisplay` option is to give you the opportunity to implement your own logic to determine if the application is running in a touch-oriented context which may be different than what `Modernizr` returns.
 
