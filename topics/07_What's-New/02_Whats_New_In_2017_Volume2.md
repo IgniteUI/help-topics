@@ -39,27 +39,27 @@ Feature | Description
 
 ### <a id="spreadsheetEditing"></a> Editing of the spreadsheet content
 
-Editing of the spreadsheet's cells is added in addition to the inaugural features of the Spreadsheet control. There are several new API events, methods and options that can be used when manipulating spreadsheet content.
+In 17.2 version of the product, editing of the spreadsheet's cells is added, extending the inaugural features of the Spreadsheet control, coming with previous 17.1 version. There are several new API events, methods and options that can be used when manipulating spreadsheet content.
 
 New events: 
--   [`editModeEntering`](ui.igspreadsheet#events:editModeEntering) - Invoked when the Spreadsheet is about to start in-place editing of the activeCell.
--   [`editModeEntered`](ui.igspreadsheet#events:editModeEntered) - Invoked when the Spreadsheet has started in-place editing of the activeCell.
--   [`editModeExiting`](ui.igspreadsheet#events:editModeExiting) - Invoked when the Spreadsheet is about to end the in-place editing of the activeCell.
--   [`editModeExited`](ui.igspreadsheet#events:editModeExited) - Invoked when the Spreadsheet has ended the in-place editing of the activeCell.
--   [`editModeValidationError`](ui.igspreadsheet#events:editModeValidationError) - Invoked when the Spreadsheet is exiting edit mode and the new value for the activeCell is not valid based on the criteria of that cell's ig.excel.DataValidationRule.
+-   [`editModeEntering`](ui.igspreadsheet#events:editModeEntering) - Invoked when the Spreadsheet is about to start in-place editing of the [`activeCell`](ui.igspreadsheet#options:activeCell).
+-   [`editModeEntered`](ui.igspreadsheet#events:editModeEntered) - Invoked when the Spreadsheet has started in-place editing of the [`activeCell`](ui.igspreadsheet#options:activeCell).
+-   [`editModeExiting`](ui.igspreadsheet#events:editModeExiting) - Invoked when the Spreadsheet is about to end the in-place editing of the [`activeCell`](ui.igspreadsheet#options:activeCell).
+-   [`editModeExited`](ui.igspreadsheet#events:editModeExited) - Invoked when the Spreadsheet has ended the in-place editing of the [`activeCell`](ui.igspreadsheet#options:activeCell).
+-   [`editModeValidationError`](ui.igspreadsheet#events:editModeValidationError) - Invoked when the Spreadsheet is exiting edit mode and the new value for the [`activeCell`](ui.igspreadsheet#options:activeCell) is not valid based on the criteria of that cell's [`ig.excel.DataValidationRule`](ig.excel.DataValidationRule).
 
 
 New methods:
--   [`getIsInEditMode()`](ui.igspreadsheet#methods:getIsInEditMode) - Indicates if the control is currently editing the value of the activeCell.
+-   [`getIsInEditMode()`](ui.igspreadsheet#methods:getIsInEditMode) - Indicates if the control is currently editing the value of the [`activeCell`](ui.igspreadsheet#options:activeCell).
 -   [`getCellEditMode()`](ui.igspreadsheet#methods:getCellEditMode) - Returns an enumeration used to indicate the current edit mode state.
 
 New options:
--   [`isFixedDecimalEnabled`](ui.igspreadsheet#options:isFixedDecimalEnabled) - Indicats whether a fixed decimal place is automatically added when a whole number is entered while in edit mode.
+-   [`isFixedDecimalEnabled`](ui.igspreadsheet#options:isFixedDecimalEnabled) - Indicates whether a fixed decimal place is automatically added when a whole number is entered while in edit mode.
 -   [`fixedDecimalPlaceCount`](ui.igspreadsheet#options:fixedDecimalPlaceCount) - Number of decimal places by which a whole number typed in during edit mode should be adjusted.
 
 #### Related Topics
 -   [igSpreadsheet Overview](igspreadsheet-overview.html)
--   [Features Overview (igSpreadsheet)](igspreadsheet-feature-overview.html)
+-   [Editing API (igSpreadsheet)](igspreadsheet-editing.html) 
 
 #### Related Samples
 -   [Overview](%%SamplesUrl%%/spreadsheet/overview)
@@ -67,7 +67,7 @@ New options:
 -   [Import Data From Excel File](%%SamplesUrl%%/spreadsheet/loading-data)
 
 ### <a id="spreadsheetMVCWrapper"></a> Spreadsheet MVC Wrapper
-The 17.2 version of the Spreadsheet exposes and MVC helper that allows you to difine the control on server-site.
+The 17.2 version of the Spreadsheet exposes and MVC helper that allows you to define the control on server-site.
 
 In MVC:
 ```

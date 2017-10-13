@@ -134,8 +134,8 @@ xhr.onload = function (e) {
 xhr.send();
 ```
 
-## Creating a basic igSpreadsheet implementation using MVC Helper
-If you want to difine the control on server-side then you can use the MVC wrapper. The code below will achieve the same result as when the control is defined on the client-side.
+## Creating a basic igSpreadsheet implementation using ASP.NET MVC/Core helpers
+If you want to define the control on server-side then you can use the MVC wrapper. The code below will achieve the same result as when the control is defined on the client-side.
 
 In MVC:
 ```
