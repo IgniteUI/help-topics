@@ -38,14 +38,14 @@ The following table summarizes the main features of the `igSpreadsheet` control.
 
 | Feature			| Description     																	|
 | ------------- 	|:-------------:																	|
-| Editing           | The control supports editing and provides several events and methods: [`editModeEntering`](ui.igspreadsheet#events:editModeEntering), [`editModeEntered`](ui.igspreadsheet#events:editModeEntered), [`editModeExiting`](ui.igspreadsheet#events:editModeExiting), [`editModeExited`](ui.igspreadsheet#events:editModeExited), [`editModeValidationError`](ui.igspreadsheet#events:editModeValidationError), [`getIsInEditMode()`](ui.igspreadsheet#methods:getIsInEditMode), [`getCellEditMode()`](ui.igspreadsheet#methods:getCellEditMode)	|
+| Editing           | The control supports editing and provides several events and methods. For more information follow the [Editing API (igSpreadsheet)](igspreadsheet-editing.html) topic.	|
 | Cell Alignment    | The control supports many horizontal and vertical cell content alignments. Indentation, text wrap and cell merging are also supported. <br>**Note:** Content justify, text direction (different from left to right), rotation and vertical text are not supported. 	|
 | Cell Borders		| The control supports cell borders but it does not scale them when zooming. |
 | Actions			| The control provides a lot of actions for activating different features.   |
 | Context Menu 		| The control provides contextual menus allowing the user to perform different operations depending on the selected visual element. <br>**Related Topic:** [igSpreadsheet Context Menu](igspreadsheet-Context-Menu.html) |
 | Copy and Paste 	| The control supports clipboard copying of information between cells, sheets and also between external applications (like MS Excel). |
 | Data Validation 	| The control supports a data validation feature which allows validation of the user input based on validation rules set on the cells. Your rules configuration also includes an input message and an error message dialog shown when the user input does not pass the validation. |
-| Decimal Places Formatting 	| The functionality that enables/disables whether a fixed decimal place is automatically added when a whole number is entered, while in edit mode. Both options [`isFixedDecimalEnabled`](ui.igspreadsheet#options:isFixedDecimalEnabled) and [`fixedDecimalPlaceCount`](ui.igspreadsheet#options:fixedDecimalPlaceCount) allows to enable/disable it and define the count of the decimal places. |
+| Decimal Places Formatting 	| The functionality that enables/disables whether a fixed decimal place is automatically added when a whole number is entered, while in edit mode. For more information follow the [Editing API (igSpreadsheet)](igspreadsheet-editing.html) topic. |
 | Font Styles 		| The control supports the following text properties - font family, font size, bold, italic, underline, double underline, strikethrough and color.<br> **Note:** You may notice rendering difference comparing to MS Excel when having underline and large sized text on the same line. |
 | Formula Bar 		| The control allows the user to read the predefined cell text and formulas. The formula bar supports multiple lines. |
 | Freezing Panes	| The control allows freezing of top row(s) and/or left column(s). Frozen row(s) and/or column(s) remain visible at all time while the user is scrolling. <br>**Related Sample:** [View Configuration Sample](%%SamplesUrl%%/spreadsheet/view-configuration) |
@@ -64,6 +64,7 @@ The following table summarizes the main features of the `igSpreadsheet` control.
 ## <a id="#related_links"></a> Related Links
 
 -   [igSpreadsheet Overview](igSpreadsheet-Overview.html)
+-   [Editing API (igSpreadsheet)](igspreadsheet-editing.html) topic.
 -   [igSpreadsheet Selection](igspreadsheet-selection.html)
 -   [igSpreadsheet Context Menu](igspreadsheet-context-menu.html)
 -   [igSpreadsheet API](%%jQueryApiUrl%%/ui.igspreadsheet)

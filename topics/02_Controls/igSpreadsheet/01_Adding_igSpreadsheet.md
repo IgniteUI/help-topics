@@ -28,6 +28,9 @@ $.ig.loader({
     resources: "igSpreadsheet"
 });
 ```
+
+> **Note:** If you want the spreadsheet to load and work with Xlsx files then you need an aditional resource in the igLoader configuration: `resources: "igSpreadsheet,igExcel.LoadSaveXlsx"`.
+
 In case you are going to create a new excel file instead of loading your own file, you can load only `igSpreadsheet` but if you need to load an external file, please note that you will have to load additionally `igExcel.LoadSaveXlsx` resource. 
 In the following topic you can find more about the `igLoader` and how to work with it. 
 
