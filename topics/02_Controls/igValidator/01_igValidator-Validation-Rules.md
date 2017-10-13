@@ -15,6 +15,7 @@ The `igValidator` provides a number of built-in validation rules that define a c
 ### In this topic
  - [Introduction](#intro)
  - [Rules order of execution](#rules-order)
+    - [Execute all rules](#execute-all-rules)
     - [Required](#required)
     - [Infragistics' editor (optional)](#igcontrols)
     - [Number](#number)
@@ -60,6 +61,32 @@ By default, the validations priority is as follows:
 10. [Pattern (regular expression)](#pattern)
 11. [Custom function](#custom)
 
+### <a id="execute-all-rules"></a> Execute all rules
+The [`executeAllRules`](%%jQueryApiUrl%%/ui.igValidator#options:executeAllRules) option that allows multiple rules to run even if one has already failed and thus produce and display multiple error messages.
+
+```js
+$("#editor").igValidator({
+  onchange: true,
+  executeAllRules: true,
+  lengthRange: { min: 8, max: null },
+  pattern: { expression: /\d/, errorMessage: "Must contain at least one number" },
+  custom: { 
+    method: function (val, opts) {
+      var valid = true;
+      if (val === $("#name").val()) {
+        valid = false;
+      }
+      return valid;
+    },
+    errorMessage: "Value can't be the same as the name"
+  }
+});
+```
+
+![](images/igValidator-execute-all-rules.png)
+
+This will not force checks on an empty field for rules that don't normally execute without a value. The 
+The option can be set at the root level options and inherited by entries in the `fields` collection as well as set separately for each field.
 
 ### <a id="required"></a> Required
 
