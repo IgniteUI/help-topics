@@ -51,6 +51,15 @@ The `igGridExcelExporter` is dependent upon the Infragistics JavaScript Excel li
 <script src="igniteui/js/modules/infragistics.gridexcelexporter.js"></script>
 ```
 
+or using the bundled Infragistics JavaScript Excel file:
+
+```html
+<script src="igniteui/js/infragistics.core.js"></script>
+<script src="igniteui/js/infragistics.lob.js"></script>
+<script src="igniteui/js/infragistics.excel-bundled.js"></script>
+<script src="igniteui/js/modules/infragistics.gridexcelexporter.js" type="text/javascript"></script>
+```
+
 or just use the `igLoader` that will load all the needed resources for the `igGrid` and `igGridExcelExporter`:
 
 ```javascript
