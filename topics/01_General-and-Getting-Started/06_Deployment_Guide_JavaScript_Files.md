@@ -37,6 +37,9 @@ The names of the JavaScript files containing the combined scripts are:
 -   `infragistics.core.js`
 -   `infragistics.lob.js`
 -   `infragistics.dv.js`
+-	`infragistics.excel-bundled`
+-	`infragistics.spreadsheet-bundled`
+-	`infragistics.scheduler-bundled`
 
 The files are found in the js folder (the root folder for the JavaScript files in the %%ProductName%% program installation path).
 
@@ -1171,6 +1174,7 @@ To navigate to the required JavaScript files listing for the particular control,
 				<br>infragistics.xml.js
 				<br>infragistics.dv_core.js
 				<br>infragistics.dv_jquerydom.js
+				<br>infragistics.dv_interactivity.js
 				<br>infragistics.datasource.js
 				<br>infragistics.ui.popover.js
 				<br>infragistics.ui.validator.js
@@ -1249,6 +1253,7 @@ To navigate to the required JavaScript files listing for the particular control,
 			<br>infragistics.undo.js
 			<br>infragistics.dv_core.js
 			<br>infragistics.dv_jquerydom.js
+			<br>infragistics.dv_interactivity.js
 			<br>infragistics.util.jquery.js
 			<br>infragistics.datasource.js
 			<br>infragistics.templating.js

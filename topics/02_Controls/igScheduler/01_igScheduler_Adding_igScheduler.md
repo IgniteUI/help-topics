@@ -31,7 +31,7 @@ The topics listed below are required as a prerequisite to understanding this top
 - [igScheduler Overview](igScheduler-Overview.html): This topic provides an overview of the `igScheduler` and its features.
 
 - [Using Infragistics Loader](Using-Infragistics-Loader.html):
-Before we get started we need to make sure we have loaded all of the needed resources. We first need to load the jQuery resources and then we need to add the required Ignite UI resources. There are two ways to add the Ignite UI resources to your project. You can either use the `igLoader` or you can load the required modules separately. For the purpose of our guidance we will use the `igLoader`.
+Before we get started we need to make sure we have loaded all of the needed resources. We first need to load the jQuery resources and then we need to add the required Ignite UI resources. There are three ways to add the Ignite UI resources to your project. You can either use the `igLoader`, you can load the required modules separately or use the bundled files that combine all the required resources. You can find those approaches below:
 
 ```js
 $.ig.loader({
@@ -39,6 +39,13 @@ $.ig.loader({
     cssPath: "../../igniteui/css/",
     resources: "igScheduler"
 });
+```
+
+Load bundled modules
+```html
+<script src="igniteui/js/infragistics.core.js"></script>
+<script src="igniteui/js/infragistics.lob.js"></script>
+<script src="igniteui/js/infragistics.scheduler-bundled.js"></script>
 ```
 
 ## <a id="webpage"></a>Adding an igScheduler to Web Page
@@ -88,7 +95,7 @@ Use the loader in order to load the combined JavaScript and CSS files referenced
 
 Html div element with id `scheduler` will be wrapped by the `igScheduler widget` on initialization.
 
-    1.2. Without the igLoader
+    1.2. Load modules separately
 
 ```html
 <link type="text/css" href="ignite-ui/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
@@ -143,6 +150,14 @@ Html div element with id `scheduler` will be wrapped by the `igScheduler widget`
 <script src="ignite-ui/js/modules/infragistics.scheduler.core.js"></script>
 <script src="ignite-ui/js/modules/infragistics.ui.scheduler.core.js"></script>
 <script src="ignite-ui/js/modules/infragistics.ui.scheduler.js"></script>
+```
+
+    1.3. Load bundled modules
+    
+```html
+<script src="igniteui/js/infragistics.core.js"></script>
+<script src="igniteui/js/infragistics.lob.js"></script>
+<script src="igniteui/js/infragistics.scheduler-bundled.js"></script>
 ```
 
 2. Load the data that will be used by the `igScheduler`. In the example `igDataSource` is used to create a schedule list data source.
