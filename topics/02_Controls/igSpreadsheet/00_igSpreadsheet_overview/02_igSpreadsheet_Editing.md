@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# igSpreadsheet Editing API
+# Editing API (igSpreadsheet)
 
 ## Topic Overview
 ### Purpose
