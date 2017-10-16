@@ -17,6 +17,11 @@ This topic presents the controls and the new and enhanced features for the Ignit
 
 The following summarizes what’s new in 2017 Volume 2. Additional details follow.
 
+### General
+Feature | Description
+---|---
+[New bundled files](#bundledFiles)| New bundled files for excel, spreadsheet and scheduler.
+
 ### Editors
 
 Feature | Description
@@ -34,6 +39,35 @@ Feature | Description
 Feature | Description
 ---|---
 [Execute all rules](#execute-all-rules)| New option allows multiple rules to run and display multiple error messages.
+
+### General
+
+### <a id="bundledFiles"></a> New bundled files
+New bundled files for excel, spreadsheet and scheduler have been included in 17.2 release. You can use them instead of defining individual required resources, or instead of using the igLoader. In order to run excel, spreadsheet or scheduler, it is needed to define the following bundled resources:
+
+igGrid excel exporting using igExcel
+```
+<script type="text/javascript" src="igniteui/js/infragistics.core.js"></script>
+<script type="text/javascript" src="igniteui/js/infragistics.lob.js"></script>
+<script type="text/javascript" src="igniteui/js/infragistics.excel-bundled.js"></script>
+<script type="text/javascript" src="igniteui/js/modules/infragistics.gridexcelexporter.js"></script>
+```
+
+igSpreadsheet
+```
+<script src="igniteui/js/infragistics.core.js"></script>
+<script src="igniteui/js/infragistics.lob.js"></script>
+<script src="igniteui/js/infragistics.excel-bundled.js"></script>
+<script src="igniteui/js/infragistics.spreadsheet-bundled.js"></script>
+```
+
+igScheduler
+```
+<script src="igniteui/js/infragistics.core.js"></script>
+<script src="igniteui/js/infragistics.lob.js"></script>
+<script src="igniteui/js/infragistics.scheduler-bundled.js"></script>
+```
+
 
 ## Editors
 
