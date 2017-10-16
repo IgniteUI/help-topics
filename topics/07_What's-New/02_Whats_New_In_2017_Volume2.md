@@ -93,9 +93,9 @@ The `igValidator` now supports a new [`executeAllRules`](%%jQueryApiUrl%%/ui.igV
 
 ![](../02_Controls/igValidator/images/igValidator-execute-all-rules.png)
 
-Error related events like [`error`](%%jQueryApiUrl%%/ui.igValidator#events:error) and [`validated`](%%jQueryApiUrl%%/ui.igValidator#events:validated) now also provide `ui.rules` and `ui.messages` array arguments listing in order each rule that did not validate and its message.
+Error related events like [`error`](%%jQueryApiUrl%%/ui.igValidator#events:error) and [`validated`](%%jQueryApiUrl%%/ui.igValidator#events:validated) now also provide `ui.rules` and `ui.messages` array arguments, listing in order each rule that did not pass and its message.
 
-With the execution process change, rules now specify if they should run for empty values and the [`custom`](%%jQueryApiUrl%%/ui.igValidator#options:custom) rule is now allowed to run without one. This allows for scenarios where validation based on external factors can be applied on the empty value regardless of the `required` option.
+With this execution process change, rules also specify if they should run for empty values and the [`custom`](%%jQueryApiUrl%%/ui.igValidator#options:custom) rule is now allowed to run without one. This allows for scenarios where validation based on external factors can be applied on the empty value independently of the `required` option.
 
 #### Related Topics
 -   [Validation Rules](igValidator-Validation-Rules.html)
