@@ -29,12 +29,12 @@ This topic contains the following sections:
 
 
 ## <a id="introduction"></a>Introduction
-You can edit spreadsheet content like it is with a normal excel file. The control exposes API, which can be used to extract information about the cell, format data that is entered, cancel editing, etc. The following screenshot shows an excel, while one of its cell is in edit mode.
+You can edit spreadsheet content "in-place" using an editor positioned over cell which is being edited or in the formula editor. The control exposes API, which can be used to extract information about the cell, format data that is entered, cancel editing, etc. The following screenshot shows an excel workbook, while one of its cell is in edit mode.
 
-![](images/igSpreadsheet_editing.png)
+![](../images/igSpreadsheet_editing.png)
 
 ## <a id="events"></a>Events
-The following table presents the events related to the cell editing functionality. Below you can find some user scenarios that can take advantege of those events.
+The following table presents the events related to the cell editing functionality. Below you can find some user scenarios that can take advantage of those events.
 
 | Event			| Description     																	|
 | ------------- 	|:-------------:																	|
@@ -94,7 +94,7 @@ $("#spreadsheet1").igSpreadsheet({
 });
 ```
 
-![](images/igSpreadsheet_decimals.png)
+![](../images/igSpreadsheet_decimals.png)
 
 ## <a id="related_link"></a>Related Links
 

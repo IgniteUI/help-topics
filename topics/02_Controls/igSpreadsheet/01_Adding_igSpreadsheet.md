@@ -19,7 +19,11 @@ The `igSpreadsheet`™ is a jQuery widget that visualize excel documents in all 
 
 To understand this topic you need to be familiar with the concept and topics related to the [Infragistics JavaScript Excel Library](javascript-excel-library.html).
 
-Before we get started we need to make sure we have loaded all of the needed resources. We first need to load the jQuery resources and then we need to add the required Ignite UI resources. There are three ways to add the Ignite UI resources to your project. You can either use the `igLoader`, you can load the required modules separately or use the bundled files that combine all the required resources. You can find those approaches below:
+## JavaScript Resources
+Before we get started we need to make sure we have loaded all of the needed resources. We first need to load the jQuery resources and then we need to add the required Ignite UI resources. There are three ways to add the Ignite UI resources to your project. You can:
+- use the `igLoader` (below)
+- load the required modules [separately](#separate-files)
+- use the [bundled files](#bundled) that combine all the required resources
 
 ```js
 $.ig.loader({
@@ -35,7 +39,7 @@ In the following topic you can find more about the `igLoader` and how to work wi
 
 [Adding Required Resources Automatically with the Infragistics Loader](using-infragistics-loader.html)
 
-Load modules separately
+### <a id="separate-files"></a>Load modules separately
 ```html
 <!-- util -->
 <script src="js/modules/infragistics.util.js"></script>
@@ -88,7 +92,7 @@ Load modules separately
 ```
 
 
-Load bundled modules
+### <a id="bundled"></a> Load bundled files
 ```html
 <script src="js/infragistics.core.js"></script>
 <script src="js/infragistics.lob.js"></script>

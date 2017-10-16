@@ -72,7 +72,7 @@ igScheduler
 
 ### <a id="spreadsheetEditing"></a> Editing of the spreadsheet content
 
-In 17.2 version of the product, editing of the spreadsheet's cells is added, extending the inaugural features of the Spreadsheet control, coming with previous 17.1 version. There are several new API events, methods and options that can be used when manipulating spreadsheet content.
+Version 17.2 of the product adds support for editing of the spreadsheet's cells, extending the inaugural features of the Spreadsheet control. There are several new API events, methods and options that can be used when manipulating spreadsheet content.
 
 New events: 
 -   [`editModeEntering`](ui.igspreadsheet#events:editModeEntering) - Invoked when the Spreadsheet is about to start in-place editing of the [`activeCell`](ui.igspreadsheet#options:activeCell).
