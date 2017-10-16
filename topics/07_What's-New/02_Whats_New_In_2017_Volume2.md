@@ -34,6 +34,12 @@ Feature | Description
 ---|---
 [Spin Delta as Object](#spinDeltaObject)| Spin delta can be configured as an object, which defines specific values for each time period.
 
+### igValidator
+
+Feature | Description
+---|---
+[Execute all rules](#execute-all-rules)| New option allows multiple rules to run and display multiple error messages.
+
 ### General
 
 ### <a id="bundledFiles"></a> New bundled files
@@ -113,3 +119,19 @@ In MVC:
     })
 	.Render())
 ```
+
+## igValidator 
+
+### <a id="execute-all-rules"></a> Execute all rules
+The `igValidator` now supports a new [`executeAllRules`](%%jQueryApiUrl%%/ui.igValidator#options:executeAllRules) option that allows multiple rules to run even if one has already failed and thus produce and display multiple error messages.
+
+![](../02_Controls/igValidator/images/igValidator-execute-all-rules.png)
+
+Error related events like [`error`](%%jQueryApiUrl%%/ui.igValidator#events:error) and [`validated`](%%jQueryApiUrl%%/ui.igValidator#events:validated) now also provide `ui.rules` and `ui.messages` array arguments, listing in order each rule that did not pass and its message.
+
+With this execution process change, rules also specify if they should run for empty values and the [`custom`](%%jQueryApiUrl%%/ui.igValidator#options:custom) rule is now allowed to run without one. This allows for scenarios where validation based on external factors can be applied on the empty value independently of the `required` option.
+
+#### Related Topics
+-   [Validation Rules](igValidator-Validation-Rules.html)
+
+
