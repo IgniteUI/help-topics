@@ -35,6 +35,27 @@ The `igGridExcelExporter` is dependent upon the Infragistics JavaScript Excel li
 ```html
 <script src="igniteui/js/infragistics.core.js"></script>
 <script src="igniteui/js/infragistics.lob.js"></script>
+<script src="igniteui/js/modules/infragistics.ext_core.js"></script>
+<script src="igniteui/js/modules/infragistics.ext_collections.js"></script>
+<script src="igniteui/js/modules/infragistics.ext_text.js"></script>
+<script src="igniteui/js/modules/infragistics.ext_io.js"></script>
+<script src="igniteui/js/modules/infragistics.ext_ui.js"></script>
+<script src="igniteui/js/modules/infragistics.documents.core_core.js"></script>
+<script src="igniteui/js/modules/infragistics.ext_collectionsextended.js"></script>
+<script src="igniteui/js/modules/infragistics.excel_core.js"></script>
+<script src="igniteui/js/modules/infragistics.ext_threading.js"></script>
+<script src="igniteui/js/modules/infragistics.ext_web.js"></script>
+<script src="igniteui/js/modules/infragistics.xml.js"></script>
+<script src="igniteui/js/modules/infragistics.documents.core_openxml.js"></script>
+<script src="igniteui/js/modules/infragistics.excel_serialization_openxml.js"></script>
+<script src="igniteui/js/modules/infragistics.gridexcelexporter.js"></script>
+```
+
+or using the bundled Infragistics JavaScript Excel file:
+
+```html
+<script src="igniteui/js/infragistics.core.js"></script>
+<script src="igniteui/js/infragistics.lob.js"></script>
 <script src="igniteui/js/infragistics.excel-bundled.js"></script>
 <script src="igniteui/js/modules/infragistics.gridexcelexporter.js" type="text/javascript"></script>
 ```
