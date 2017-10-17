@@ -216,14 +216,49 @@ The Week View of the `igScheduler` is visualizing all seven week days based on t
 
 The following screenshot shown the Week View along with its visual elements:
 
+1. Navigation Header
+
+2. Time slots
+
+3. Day headers
+
+4. Activities in the time slots
+
 ![](images/weekView.PNG)
+
+The following properties could be used in order to configure different week view aspects and behaviors:
+
+-	`weekViewDisplayMode` - Display mode. The week view can be configured to show all 7 week days or only the days configured as working days.
+
+-	`timeSlotInterval` - Time slot duration. Configure the time slots' duration. Currently 5, 6, 10, 15, 30 and 60 minutes are supported.
+
+-	`workingHoursDisplayMode` - Working days and hours. You can configure this view to display only working hours or all 24 hours.
+
 #### <a id="day-view"></a>Day View
 
 Shows hour-based view of the selected day, the hours are listed vertically going from top to bottom. This view contains time-slot segments with same length and different height based on the time range of the appointment.
 
 The following screenshot shown the Day View along with its visual elements:
 
+The following screenshot shown the Day View along with its visual elements:
+
+1. Navigation Header
+
+2. Time slots
+
+3. Day headers
+
+4. Activities in the time slots
+
 ![](images/dayView.PNG)
+
+The following properties could be used in order to configure different day view aspects and behaviors:
+
+-	`dayViewDisplayMode` - Visible days. You can control how many days are visible at a time in the day view. Currently between 1 and 7 days are supported.
+
+-	`timeSlotInterval` - Time slot duration. Configure the time slots' duration. Currently 5, 6, 10, 15, 30 and 60 minutes are supported.
+
+-	`workingHoursDisplayMode` - Working days and hours. You can configure this view to display only working hours or all 24 hours.
 #### Topics
 
 -	[Adding igScheduler](igscheduler-adding-igscheduler.html)
