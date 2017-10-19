@@ -46,7 +46,20 @@ Feature | Description
 ---|---
 [Execute all rules](#execute-all-rules)| New option allows multiple rules to run and display multiple error messages.
 
-### General
+### igShapeChart
+
+Feature | Description
+---|---
+[New control igShapeChart](#igshapechart-control)| New lightweight and highly performant chart.
+
+### igDataChart
+
+Feature | Description
+---|---
+[New Axis TimeXAxis](#time-x-axis)| New axis type for igDataChart.
+[New Series Types](#new-series)| More series types are available in the igDataChart now.
+
+## General
 
 ### <a id="bundledFiles"></a> New bundled files
 New bundled files for excel, spreadsheet and scheduler have been included in 17.2 release. You can use them instead of defining individual required resources, or instead of using the igLoader. In order to run excel, spreadsheet or scheduler, it is needed to define the following bundled resources:
@@ -171,3 +184,32 @@ With this execution process change, rules also specify if they should run for em
 -   [Validation Rules](igValidator-Validation-Rules.html)
 
 
+## <a id="igshapechart-control"></a> igShapeChart
+
+The igShapeChart is a lightweight, highly performant chart. This chart can be easily configured to display scatter as well as providing support for two additional data visualizations (Polyline and Polygon). The chart can also plot data from shape files or any custom shape that you can define using an array of arrays of X/Y points.
+
+In addition, the Shape Chart can render break-even data as long as at least one data item has FixedCost, VariableCost, SalesRevenue, and SalesUnits data columns.
+
+![](../02_Controls/igShapeChart/images/shapechart-breakeven-01.png)
+
+#### Related Topics
+-   [igShapeChart Overview](shapechart-overview.html)
+-   [Getting Started with Shapechart](shapechart-getting-started-with-shapechart.html) 
+
+## igDataChart
+
+### <a id="time-x-axis"></a> TimeXAxis
+
+A new axis, TimeXAxis is added to the igDataChart this release. It allows you to accurately label data dynamically as either date, time or both.
+
+#### Related Topics
+-   [Configuring TimeXAxis (igDataChart)](igdatachart-configuring-timexaxis.html)
+
+### <a id="new-series"></a> New Series Types
+
+The following series types can be used with the igDataChart:
+
+* Scatter Area series
+* Scatter Contour series
+* Scatter Polyline series
+* Scatter Polygon series
