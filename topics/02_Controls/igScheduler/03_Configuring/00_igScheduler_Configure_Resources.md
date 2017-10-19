@@ -30,13 +30,13 @@ displayName | The display name identifies a resource in the application’s user
 colorScheme | The color scheme is used to highlight the activities associated with this resource. The color scheme is optional, and is auto generated from one when not set. Color scheme can be set by using the `$.ig.scheduler.ScheduleResourceColorScheme` enumeration.
 
 ## Resources color scheme
-There are 12 color predefined for the color scheme of the resources which can be used. `Stone` color is applied only when no resource is associated with appointment and cannot be set manually. 
+There are 12 color predefined for the color scheme of the resources which can be used. `Stone` color is applied only when no resource is associated with appointment and cannot be set manually.
 
 ![Resources color scheme](../images/preDefinedColors.png)
 
 ### Code example
 
-The resources are passed to the resourceItemsSource of the `ScheduleListDataSource` as array of objects. 
+The resources are passed to the resourceItemsSource of the `ScheduleListDataSource` as array of objects.
 
 ```javascript
 var resources = [
@@ -63,6 +63,11 @@ $("#scheduler").igScheduler({
 });
 
 ```
+*Note:*
+When `colorScheme` is used this will override the color associated with the `id`
+```
+{ id: 1, displayName: "Trina Friesen", colorScheme: $.ig.scheduler.ScheduleResourceColorScheme.fuchsia }
+``
 
 ## Related topics
 

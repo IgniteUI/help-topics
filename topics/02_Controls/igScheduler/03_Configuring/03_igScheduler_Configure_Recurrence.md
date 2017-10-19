@@ -44,6 +44,11 @@ The following code example demonstrates how to create a recurrent appointment wi
 
 
 ```javascript
+var recurrence = new $.ig.scheduler.DateRecurrence();
+	recurrence.frequency($.ig.scheduler.DateRecurrenceFrequency.weekly);
+	recurrence.count(5);
+
+
 var dentistAppointment = {
             "start": new Date(2017, 9, 18, 15, 30),
             "end": new Date(2017, 9, 19, 0, 0),
@@ -51,11 +56,13 @@ var dentistAppointment = {
             "location": "Sofia, Iztok, str. Tintyava 28",
             "description": "Bring all the papers",
             "resourceId": 8,
-            "recurrence": "FREQ=MONTHLY;INTERVAL=1;COUNT=2;WKST=MO"
+            "recurrence": recurrence
         };
 
 $("#scheduler").igScheduler("createAppointment", dentistAppointment);
 ```
+*Note:*
+`Recurrence` field can accept data in format `'FREQ=MONTHLY;INTERVAL=1;COUNT=2;WKST=MO'`, `start` and `end` fields can accept `'18/10/2018'` string.
 
 ## Related topics
 

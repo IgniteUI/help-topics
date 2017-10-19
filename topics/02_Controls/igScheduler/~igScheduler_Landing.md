@@ -21,13 +21,17 @@ The information you need about the Infragistics Scheduler is covered in the foll
 
 -   [igScheduler Overview](igScheduler-Overview.html)
 
+-	[Adding igScheduler](igscheduler-adding-igscheduler.html)
+
 -   [Configuring igScheduler](igscheduler-configuring.html)
 
 -   [Configuring Appointments](igscheduler-configure-appointments.html)
 
 -   [Configuring Resources](igscheduler-configure-resources.html)
 
--	[Adding igScheduler](igscheduler-adding-igscheduler.html)
+-   [Configuring Recurrence](igscheduler-configure-recurrence.html)
+
+-   [Configuring Views](igscheduler-configure-views.html)
 
 -	[Configuring igScheduler](igscheduler-Configuring.html)
 

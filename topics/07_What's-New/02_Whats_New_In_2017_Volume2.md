@@ -29,6 +29,15 @@ Feature | Description
 ---|---
 [Spin Delta as Object](#spinDeltaObject)| Spin delta can be configured as an object, which defines specific values for each time period.
 
+
+### igScheduler
+Feature | Description
+---|---
+[Week View](#weekView)| Visualizing the activities by rendering them in a vertical list with time slots.|
+[Day View](#dayView)| Visualizing the activities by rendering them in a vertical list with time slots. The time slots' duration can be configured.|
+[Recurrent Activity](#recurrentActivity)| Used when you need to have repetitions of an activity following a specific recurrence pattern (for example each day at a specific hour or each month at a specific date).
+
+
 ## Editors
 
 ### <a id="suppressKeyboard"></a> Suppress Keyboard
@@ -79,3 +88,19 @@ In MVC:
     })
 	.Render())
 ```
+
+
+## igScheduler
+
+### <a id="weekView"></a> Week View
+This view is visualizing the activities by rendering them in a vertical list with time slots. It is possible to show all seven week days or only the working days by using `weekViewDiplayMode` property.
+Configuration to show all 24 hours or only the working hours is also possible.
+
+
+### <a id="dayView"></a> Day View
+Visualizing the activities by rendering them in a vertical list with time slots. Each activity occupies only the time slots between its start and end time.
+This view has the ability to show up to 7 days. You can configure the day view to display all 24 hours or only the working hours.
+
+### <a id="recurrentActivity"></a> Recurrent Activity
+The activity recurrence is used when you need to have repetitions of an activity following a specific recurrence pattern (for example each day at a specific hour or each month at a specific date).
+
