@@ -1050,6 +1050,10 @@ The layout of the `igLayoutManager` is configured to Grid layout by setting the 
 
 You can specify the number of rows and columns for the grid and the items’ height and width. The latter is configured through the [`columnHeight`](%%jQueryApiUrl%%/ui.iglayoutmanager#options:columnHeight) and [`columnWidth`](%%jQueryApiUrl%%/ui.iglayoutmanager#options:columnWidth) properties which serve to set the size of the regular (non-spanning) items (that is, the size of the items that do not span over multiple rows and columns and each of them occupies only one cell in the grid).
 
+When setting [`columnWidth`](%%jQueryApiUrl%%/ui.iglayoutmanager#options:columnWidth)/[`columnHeight`](%%jQueryApiUrl%%/ui.iglayoutmanager#options:columnHeight) as `*`, the width/height will be equally distributed between all of the columns.
+
+When specifying the [`columnWidth`](%%jQueryApiUrl%%/ui.iglayoutmanager#options:columnWidth)/[`columnHeight`](%%jQueryApiUrl%%/ui.iglayoutmanager#options:columnHeight) as an array (e.g. `["100px", "20%", "*", "*"]`), if you have more than one column set as `*`, the remaining space will be equally distributed between these columns. If [`columnWidth`](%%jQueryApiUrl%%/ui.iglayoutmanager#options:columnWidth) is set as an array, its length will override the [`cols`](%%jQueryApiUrl%%/ui.iglayoutmanager#options:cols) property. And if [`columnHeight`](%%jQueryApiUrl%%/ui.iglayoutmanager#options:columnHeight) is set as an array, its length will override the [`rows`](%%jQueryApiUrl%%/ui.iglayoutmanager#options:rows) property.
+
 Custom arrangement of the items is supported through the [`items`](%%jQueryApiUrl%%/ui.iglayoutmanager#options:items) property which is set to an array of objects. You can disable the automatic re-arrangement of items upon resizing the container; this gives you some extra control of the user experience.
 
 ### <a id="grid-settings"></a>Property settings
@@ -1061,8 +1065,8 @@ In order to:|Use this property:|And set it to:|Required?|Default setting
 Set the layout as Grid layout|[layoutMode](%%jQueryApiUrl%%/ui.iglayoutmanager#options:layoutMode)|“grid”|![](../../images/images/positive.png)|“column”
 Number and arrangement of items|[items](%%jQueryApiUrl%%/ui.iglayoutmanager#options:items)|An array of objects|![](../../images/images/negative.png)|[ ]
 Set the number of columns in the grid|[cols](%%jQueryApiUrl%%/ui.iglayoutmanager#options:cols)|The desired number of columns|![](../../images/images/negative.png)|“nul”
-Set the height of the items|[columnHeight](%%jQueryApiUrl%%/ui.iglayoutmanager#options:columnHeight)|The desired height of the items in pixels or percentages. The value includes the width of the items' top margin.|![](../../images/images/negative.png)|“null”
-Set the width of the items|[columnWidth](%%jQueryApiUrl%%/ui.iglayoutmanager#options:columnWidth)|The desired width of the items in pixels or percentages. The value includes the width of the items' left margin.|![](../../images/images/negative.png)|“null”
+Set the height of the items|[columnHeight](%%jQueryApiUrl%%/ui.iglayoutmanager#options:columnHeight)|The desired height of the items in pixels, percentages or `*`, which will distribute the height equally between all the columns. Also, it accepts an array of heights, if you want to specify different height for each column. The value includes the width of the items' top margin.|![](../../images/images/negative.png)|“null”
+Set the width of the items|[columnWidth](%%jQueryApiUrl%%/ui.iglayoutmanager#options:columnWidth)|The desired width of the items in pixels, percentages or `*`, which will distribute the width equally between all the columns. Also, it accepts an array of widths, if you want to specify different width for each column. The value includes the width of the items' left margin.|![](../../images/images/negative.png)|“null”
 Set the number of rows|[rows](%%jQueryApiUrl%%/ui.iglayoutmanager#options:rows)|The desired number of rows in the grid|![](../../images/images/negative.png)|“null”
 Set the left margin of the items|[marginLeft](%%jQueryApiUrl%%/ui.iglayoutmanager#options:marginLeft)|The desired size in pixels|![](../../images/images/negative.png)|“0”
 Set the top margin of the items|[marginTop](%%jQueryApiUrl%%/ui.iglayoutmanager#options:marginTop)|The desired size in pixels|![](../../images/images/negative.png)|“0”
@@ -1319,6 +1323,8 @@ The following samples provide additional information related to this topic.
 -	[Responsive Flow Layout](%%SamplesUrl%%/layout-manager/flow-layout): This sample demonstrates the responsiveness of the `igLayoutManager` control’s Flow layout with various item sizes set either in pixels or percentages and setting the number of items in the `igLayoutManager`'s options without the need for any initial markup.
 
 -	[Grid Layout with colspan and rowspan Support](%%SamplesUrl%%/layout-manager/grid-layout): This sample demonstrates the ability of the `igLayoutManager` control’s Grid layout to allow items to have arbitrary position in a grid with a predefined size including for items with different rowspan and colspan settings.
+
+-	[Grid Layout with Custom Size](%%SamplesUrl%%/layout-manager/grid-layout-custom-size): This sample demonstrates the `igLayoutManager` control’s Grid layout having specific width and height for each column.
 
 -	[Responsive Vertical Layout](%%SamplesUrl%%/layout-manager/vertical-layout): This sample s demonstrates the responsiveness of the `igLayoutManager` control’s Vertical layout with various item sizes set either in pixels or percentages and setting the number of items in the `igLayoutManager`'s options without the need for any initial markup.
 
