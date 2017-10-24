@@ -74,6 +74,10 @@ Note that if this property is set it will take precedence over the globally set 
 
 >**Note:**  We have two redistributable packages, one is for English and one is for Japanese. In English, redistributable package `infragistics-en.js` is not available. Its localization strings are contained inside the controls code at the beginning of the file. In Japanese, redistributable package `infragistics-ja.js` is not available. Its localization strings are contained inside the controls code at the beginning of the file.
 
+>**Note:**  When English locale resources are loaded, they are used by default. If the English locale resources are not loaded on the page, then the first loaded resources are the default choice for locale resources. Also keep in mind that in the English redistributable package, English localization strings are part of the product files, therefore are always loaded for this package.
+
+>**Note:**  The default regional setting is "en-US", but if this one is not loaded on the page the last loaded regional settings are used as default regional settings.
+
 If you want to set a custom language you need to follow a different procedure:
 
 -   Localize the control
