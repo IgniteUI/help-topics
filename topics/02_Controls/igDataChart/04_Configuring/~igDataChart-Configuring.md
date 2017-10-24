@@ -38,12 +38,4 @@ This is a group of topics explaining how to configure the various aspects of the
 
 -	[Configuring Knockout Support (igDataChart)](igDataChart-KnockoutJS-Support.html): This topic explains how to configure the `igDataChart`™ control to bind to View-Model objects managed by the Knockout library.
 
-
-
-
-
- 
-
- 
-
-
+-	[Using Time X-Axis (igDataChart)](igDataChart-Configuring-TimeXAxis.html): This topic provides information on setting the Time X-Axis and enabling axis breaks.
