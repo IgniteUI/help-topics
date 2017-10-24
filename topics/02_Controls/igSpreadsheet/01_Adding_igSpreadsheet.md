@@ -19,7 +19,11 @@ The `igSpreadsheet`™ is a jQuery widget that visualize excel documents in all 
 
 To understand this topic you need to be familiar with the concept and topics related to the [Infragistics JavaScript Excel Library](javascript-excel-library.html).
 
-Before we get started we need to make sure we have loaded all of the needed resources. We first need to load the jQuery resources and then we need to add the required Ignite UI resources. There are two ways to add the Ignite UI resources to your project. You can either use the `igLoader` or you can load the required modules separately. You can find both approaches below:
+## JavaScript Resources
+Before we get started we need to make sure we have loaded all of the needed resources. We first need to load the jQuery resources and then we need to add the required Ignite UI resources. There are three ways to add the Ignite UI resources to your project. You can:
+- use the `igLoader` (below)
+- load the required modules [separately](#separate-files)
+- use the [bundled files](#bundled) that combine all the required resources
 
 ```js
 $.ig.loader({
@@ -28,11 +32,14 @@ $.ig.loader({
     resources: "igSpreadsheet"
 });
 ```
-In case you are going to create a new excel file instead of loading your own file, you can load only `igSpreadsheet` but if you need to load an external file, please note that you will have to load additionally `igExcel.LoadSaveXlsx` resource. 
-In the following topic you can find more about the `igLoader` and how to work with it. 
+
+> **Note:** In case you are going to create a new excel file instead of loading your own file, you can load only `igSpreadsheet` but if you need to load and work with Xlsx files, please note that you will have to load additionally `igExcel.LoadSaveXlsx` resource.
+
+In the following topic you can find more about the `igLoader` and how to work with it.
 
 [Adding Required Resources Automatically with the Infragistics Loader](using-infragistics-loader.html)
 
+### <a id="separate-files"></a>Load modules separately
 ```html
 <!-- util -->
 <script src="js/modules/infragistics.util.js"></script>
@@ -84,7 +91,16 @@ In the following topic you can find more about the `igLoader` and how to work wi
 <script src="js/modules/infragistics.ui.spreadsheet.js"></script>
 ```
 
-## Creating a basic igSpreadsheet implementation
+
+### <a id="bundled"></a> Load bundled files
+```html
+<script src="js/infragistics.core.js"></script>
+<script src="js/infragistics.lob.js"></script>
+<script src="js/infragistics.excel-bundled.js"></script>
+<script src="js/infragistics.spreadsheet-bundled.js"></script>
+```
+
+## Creating a basic igSpreadsheet implementation on client-side
 
 
 As we have our resources loaded, now we can step up to the initialization of the control. The following code demonstrates how to create a basic widget that will load an empty spreadsheet. 
@@ -123,6 +139,21 @@ xhr.onload = function (e) {
 
 xhr.send();
 ```
+
+## Creating a basic igSpreadsheet implementation using ASP.NET MVC/Core helpers
+If you want to define the control on server-side then you can use the MVC wrapper. The code below will achieve the same result as when the control is defined on the client-side.
+
+In MVC:
+```
+@(Html.Infragistics()
+    .Spreadsheet()
+    .Height("600")
+    .Width("100%")
+    .WorkbookURL("../../data-files/FormattingData.xlsx")
+)
+```
+> **Note:** When using the 'WorkbookURL' option, the Spreadsheet MVC helper automatically generates the required client-side code, that is needed to request an excel file and load it in the spreadsheet.
+
 
 ## Related Links
  -   [igSpreadsheet Overview](igSpreadsheet-Overview.html)
