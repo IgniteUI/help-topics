@@ -350,6 +350,21 @@ The English and Japanese versions of %%ProductName%% have their respective resou
 
 The loader can also detect the browser's language setting and automatically switch to this locale. This behavior is controlled by the `autoDetectLocale` option, which is set to `false` by default. If `autoDetectLocale` is set and `locale` is set, the `locale` option takes precedence.
 
+You can also load multiple languages by listing them in a coma separated list.
+
+**In JavaScript:**
+	
+```js
+    $.ig.loader({
+    scriptPath: 'http://localhost/igniteui/js/',
+    cssPath: 'http://localhost/igniteui/css/',
+    resources: 'igHierarchicalGrid.Updating',
+    locale: 'en, ja, bg, ru'
+    });
+```
+
+This is usefull in cases when you want to allow changing the language for some or all of the components on the page runtime and need the related language files to be loaded on the page.
+
 ## <a id="regional-settings"></a> Regional Settings
 Regional settings are relevant to some %%ProductName%% controls like editors where numeric and currency values are formatted differently depending on the region. The loader automatically loads regional settings by inferring it from the locale or from auto-detecting is from the browser.
 
@@ -363,7 +378,24 @@ All regional files can be found in folder:
 {%%ProductName%% resources root}/js/modules/i18n/regional/
 ```
 
+
+You can also load multiple regionals by listing them in a coma separated list.
+
+**In JavaScript:**
+	
+```js
+    $.ig.loader({
+    scriptPath: 'http://localhost/igniteui/js/',
+    cssPath: 'http://localhost/igniteui/css/',
+    resources: 'igHierarchicalGrid.Updating',
+    regional: 'en, ja, bg, ru'
+    });
+```
+This is usefull in cases when you want to allow changing the regional settings for some or all of the components on the page runtime and need the related regional setting files to be loaded on the page.
+
 The following code loads the hierarchical grid with the Updating feature enabled (which uses the %%ProductName%% editor controls) for the Bulgarian locale using Great Britain English.
+
+**In JavaScript:**
 
 ```javascript
 $.ig.loader({
