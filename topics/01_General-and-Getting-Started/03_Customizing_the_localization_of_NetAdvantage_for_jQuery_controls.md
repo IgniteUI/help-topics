@@ -59,9 +59,9 @@ Currently we ship jQuery controls in the following languages:
 -   French
 -   Spanish 
 
-In order to localize controls for one of these languages you need to load the related locale files either via the Infragistics loader or by referencing the localization file `infragistics-<locale>.js` where `<locale>` is one of the following: en, ja, ru, bg, de, fr, es.
-Once the desired locales are loaded you can specify which one should be applied globally or per control.
-To set globbally the prefered language you can set $.ig.util.language before initializing the controls:
+In order to localize controls for one of these languages you need to load the related locale files either via the Infragistics loader or by referencing the localization file `infragistics-<locale>.js` where `<locale>` is one of the following: en, ja, ru, bg, de, fr, es. Up until 17.2, we supported having only one locale file to be loaded at a time. If more than one was loaded, then the last loaded locale would override all the previous ones. As of 17.2, we support multiple locale files to be loaded together.  
+Once the desired locales are loaded you can specify which one should be applied globally or per control. If only one locale file is loaded, then the global default language is disregarded and the language strings of the loaded locale are displayed.
+To set globbally the prefered language, when multiple locale files are loaded, you can set $.ig.util.language before initializing the controls to the desired language to be displayed:
 
 **In JavaScript:**
 	
@@ -172,16 +172,16 @@ The controls `language`, `regional` and `locale` options can be set in both Java
 **In JavaScript:**
 ```js
 	$("#combo").igCombo({
-			language: "en",
-			regional:"en-GB",
-			locale: {
-				dropDownButtonTitle: 'New drop down title'
-			}
-    	    		dataSource: colors,
-                    	textKey: "Name",
-                    	valueKey: "Name",
-                    	width: "200px"
-        });
+		language: "en",
+		regional:"en-GB",
+		locale: {
+			dropDownButtonTitle: 'New drop down title'
+		}
+		dataSource: colors,
+		textKey: "Name",
+		valueKey: "Name",
+		width: "200px"
+	});
 ```
 When using IgniteUI MVC Wrappers `locale` option,which is of type object, for igGrid, igTreeGrid and igHierarachicalGrid can be set vie both lambda expression and string. For all other controls is set only via string.
 
@@ -243,7 +243,7 @@ igTreeGrid - `locale` option set with string
 ## <a id="change-locale"></a> Changing language
 
 The controls' language can be set via the `language` option and can be changed runtime in one of the following ways:
-- Globally for all Ignite UI widgets on the page via the util changeGlobalLanguage function.
+- Globally for all Ignite UI widgets on the page, that don't have `language` explicitly set, via the util changeGlobalLanguage function.
 
 	**In JavaScript:**
 	
@@ -258,7 +258,9 @@ The controls' language can be set via the `language` option and can be changed r
 		grid.igGrid("option", "language", "ru");
 	```
 
->**Note:** The related localization file for the language that you want to set will need to be loaded on the page beforehand.
+>**Note:** The related localization file for the language that you want to set will need to be loaded on the page beforehand.  
+
+>**Note:** The `language` option will not override strings that have been set using the `locale` option. The `locale` option has higher precedence.  
 
 ## <a id="change-regional"></a> Changing regional
 
@@ -287,7 +289,7 @@ grid.igGrid({
 	columns: [
 		{ headerText: "Price", key: "Price", dataType: "number", width: "200px", regional: "en" },
 		{ headerText: "Date", key: "Date", dataType: "date", width: "200px", regional: "ru" }
-		]
+	]
 });
 ```
 
@@ -519,12 +521,3 @@ The following topics provide additional information related to this topic.
 - [General and Getting Started](Getting-Started.html): This topic describes how to deploy %%ProductName%% controls.
 
 - [JavaScript Files in %%ProductName%%](Deployment-Guide-JavaScript-Files.html) : This topic lists all JavaScript files in %%ProductName%%.
-
-
-
-
- 
-
- 
-
-
