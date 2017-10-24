@@ -18,9 +18,9 @@ The following topic summarizes the breaking changes of the 2017 Volume 2 release
 
 The igGrid Cell Merging feature now supports physical cell merging.
 
-Now with physical cell merging being supported, cells can actually be merged the way cells would be merged inside HTML Table using 'rowspan'. That way the cells that should be actually merged are not visible and only one merged cell is rendered. The old behavior of cell mering is still supported and is reffered to visual cell merging. The difference compared to the physical cell merging is that here for displaying merged cells are used CSS styles, instead of rowspan. 
+Now with physical cell merging being supported, cells can actually be merged the way cells would be merged inside HTML Table using 'rowspan'. That way the cells that should be actually merged are not visible and only one merged cell is rendered. The old behavior of cell merging is still supported and is referred to visual cell merging. The difference compared to the physical cell merging is that here for displaying merged cells are used CSS styles, instead of rowspan. 
 
-The physical cell merging does not support the following features - Responsive, :
+The physical cell merging is not supported in combination with the Responsive vertical rendering and single column template:
 
 In response to that, the following options were removed/added:
 
