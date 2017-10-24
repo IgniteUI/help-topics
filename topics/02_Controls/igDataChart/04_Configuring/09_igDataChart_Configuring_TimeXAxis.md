@@ -1,7 +1,7 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "igdatachart-configuring-axis-intervals",
+    "fileName": "igdatachart-configuring-timexaxis",
     "controlName": "igDataChart",
     "tags": ["Charting","How Do I","Axis","TimeXAxis"]
 }
