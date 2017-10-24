@@ -187,6 +187,8 @@ The Grid layout gives a substantial visual and structural balance of web-sites y
 
 Unlike the [**Column layout**](#column-layout), the Grid layout allows you to set the number of columns that you would like the grid to have and also their width and height so that you can personalize the layout to the higher degree. Another advantage that the Grid layout gives you is the option to disable the rearrangement of items when the container is resized. You can also set the animation duration when the items are rearranged.
 
+You can set the width/height to be a number (treated as px), px, percent or an asterisk (`*`), which will distribute all the width/height between all the columns equally. Another advantage of the Grid Layout is you can set width/height for each column seperately - the two properties accept an array as a value too. When declaring an array, if more than one column has an asterisk value, the remaining space will be equally distributed between these columns.
+
 The following pictures demonstrate the effect of the fluid design of the Grid layout.
 
 Enlarged browser viewport|Diminished browser viewport
@@ -269,6 +271,8 @@ The following samples provide additional information related to this topic.
 -	[Responsive Flow Layout](%%SamplesUrl%%/layout-manager/flow-layout): This sample demonstrates the responsiveness of the `igLayoutManager` control’s Flow layout with various item sizes set either in pixels or percentages and setting the number of items in the `igLayoutManager`'s options without the need for any initial markup.
 
 -	[Grid Layout with colspan and rowspan Support](%%SamplesUrl%%/layout-manager/grid-layout): This sample demonstrates the ability of the `igLayoutManager` control’s Grid layout to allow items to have arbitrary position in a grid with a predefined size including for items with different rowspan and colspan settings.
+
+-	[Grid Layout with Custom Size](%%SamplesUrl%%/layout-manager/grid-layout-custom-size): This sample demonstrates the `igLayoutManager` control’s Grid layout having specific width and height for each column.
 
 -	[Responsive Vertical Layout](%%SamplesUrl%%/layout-manager/vertical-layout): This sample s demonstrates the responsiveness of the `igLayoutManager` control’s Vertical layout with various item sizes set either in pixels or percentages and setting the number of items in the `igLayoutManager`'s options without the need for any initial markup.
 

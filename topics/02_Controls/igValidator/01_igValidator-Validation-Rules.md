@@ -15,6 +15,7 @@ The `igValidator` provides a number of built-in validation rules that define a c
 ### In this topic
  - [Introduction](#intro)
  - [Rules order of execution](#rules-order)
+    - [Execute all rules](#execute-all-rules)
     - [Required](#required)
     - [Infragistics' editor (optional)](#igcontrols)
     - [Number](#number)
@@ -44,7 +45,7 @@ Rule checks are applied each time validation is performed on the target or field
 
 In some scenarios the `igValidator` control or field options needs to use multiple validation rules in order to validate upon different criteria or supplement (for example required and number). In those cases it is important to mention that those are performed in a particular order to prevent unnecessary checks and also present the user correct information about what requirement the value did not meet. The simplest, more general validations pass with priority and then the more sophisticated, specialized conditions are performed.
 
-> **Note:** If one of the rules in the chain fails then the value is considered invalid and no further rules will be checked. This way if a value is empty, the error message will state the value is required, even though it would also technically not pass as valid email as well.
+> **Note:** By default, if one of the rules in the chain fails then the value is considered invalid and no further rules will be checked. This way if a value is empty, the error message will state the value is required, even though it would also technically not pass as valid email as well.
 
 By default, the validations priority is as follows:
 
@@ -60,12 +61,40 @@ By default, the validations priority is as follows:
 10. [Pattern (regular expression)](#pattern)
 11. [Custom function](#custom)
 
+### <a id="execute-all-rules"></a> Execute all rules
+The [`executeAllRules`](%%jQueryApiUrl%%/ui.igValidator#options:executeAllRules) option allows multiple rules to run even if one has already failed, overriding the default behavior. This causes each validation to run all applicable rules, accumulate and display multiple error messages. Can be set at the root level options,  inherited by entries in the `fields` collection as well as set separately for each field.
+
+```js
+$("#editor").igValidator({
+  onchange: true,
+  executeAllRules: true,
+  lengthRange: { min: 8 },
+  pattern: { 
+    expression: /\d/,
+    errorMessage: "Must contain at least one number"
+  },
+  custom: { 
+    method: function (val, opts) {
+      var valid = true;
+      if (val === $("#name").val()) {
+        valid = false;
+      }
+      return valid;
+    },
+    errorMessage: "Value can't be the same as the name"
+  }
+});
+```
+
+![](images/igValidator-execute-all-rules.png)
+
+Normally, most rules won't execute without a value after [`required`](#required) and this option will not force those checks. It will however allow the validation process to continue regardless, reaching the [Custom function](#custom) that can run on an empty field. This allows the custom logic to determine the validity of an empty value independently of the `required` option.
 
 ### <a id="required"></a> Required
 
 The [`required`](%%jQueryApiUrl%%/ui.igValidator#options:required) rule validates that a value was entered. This applies to multiple scenarios - inputs and editors cannot have empty text as value, multiple choice targets (such as a checkbox group or an `igCombo`) are required to have at least one item selected. A single checkbox control will be required to be checked.
 
-> **Note:** As this rule is first in priority, no other rule should be concerned with or fail if the value is empty.
+> **Note:** As this rule is first in priority, no other rule should be concerned with or fail if the value is empty as validation stops after checking the required condition, unless [`executeAllRules`](#execute-all-rules) is enabled in which case all but the [Custom](#custom) rule ignore empty values.
 
 Can be configured as both a boolean value or an object with message:
 

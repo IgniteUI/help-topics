@@ -123,10 +123,10 @@ The IgHierarchicalGrid has a set of properties that allow you to modify the expa
 
 jQuery Property | MVC Property | Description
 ---|---|---
-[expandCollapseAnimation](%%jQueryApiUrl%%/ui.ighierarchicalgrid#options) | [ExpandCollapseAnimation](Infragistics.Web.Mvc~Infragistics.Web.Mvc.Grid`1~ExpandCollapseAnimations.html) | Enables/disables the expand/collapse animation.
-[animationDuration](%%jQueryApiUrl%%/ui.ighierarchicalgrid#options) | [AnimationDuration](Infragistics.Web.Mvc~Infragistics.Web.Mvc.Grid`1~AnimationDuration.html) | Sets the length of the animation in milliseconds.
-[expandTooltip](%%jQueryApiUrl%%/ui.ighierarchicalgrid#options) | [ExpandTooltip](Infragistics.Web.Mvc~Infragistics.Web.Mvc.Grid`1~ExpandTooltip.html) | Tooltip upon hovering over an expanded cell.
-[collapseTooltip](%%jQueryApiUrl%%/ui.ighierarchicalgrid#options) | [CollapseTooltip](Infragistics.Web.Mvc~Infragistics.Web.Mvc.Grid`1~CollapseTooltip.html) | Tooltip upon hovering over an colapsed cell.
+[expandCollapseAnimation](%%jQueryApiUrl%%/ui.ighierarchicalgrid#options:expandCollapseAnimations) | [ExpandCollapseAnimation](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridModel~ExpandCollapseAnimations.html) | Enables/disables the expand/collapse animation.
+[animationDuration](%%jQueryApiUrl%%/ui.ighierarchicalgrid#options:animationDuration) | [AnimationDuration](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridModel~AnimationDuration.html) | Sets the length of the animation in milliseconds.
+[expandTooltip](%%jQueryApiUrl%%/ui.ighierarchicalgrid#options:expandTooltip) | [ExpandTooltip](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridModel~ExpandTooltip.html) | Tooltip upon hovering over an expanded cell.
+[collapseTooltip](%%jQueryApiUrl%%/ui.ighierarchicalgrid#options:collapseTooltip) | [CollapseTooltip](Infragistics.Web.Mvc~Infragistics.Web.Mvc.GridModel~CollapseTooltip.html) | Tooltip upon hovering over an collapsed cell.
 
 
 
