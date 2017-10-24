@@ -21,6 +21,8 @@ The following summarizes what’s new in 2017 Volume 2. Additional details follo
 Feature | Description
 ---|---
 [New bundled files](#bundledFiles)| New bundled files for excel, spreadsheet and scheduler.
+[New Localization and Globalization settings](#localization) | Globalization and Localizations options can now be set for all localizable components, either globally (for all controls on the page) or per control both on initialization or runtime.
+.NET Core 2.0 support | IgniteUI MVC wrappers are now compatible with .NET Core 2.0 and Razor Pages.
 
 ### Spreadsheet
 Feature | Description
@@ -59,6 +61,12 @@ Feature | Description
 [New Axis TimeXAxis](#time-x-axis)| New axis type for igDataChart.
 [New Series Types](#new-series)| More series types are available in the igDataChart now.
 
+### igGrid
+
+Feature | Description
+---|---
+[Physical Cell Merging](#cell-merging) | The igGrid Cell Merging feature now supports physical cell merging.
+
 ## General
 
 ### <a id="bundledFiles"></a> New bundled files
@@ -86,6 +94,33 @@ igScheduler
 <script src="igniteui/js/infragistics.lob.js"></script>
 <script src="igniteui/js/infragistics.scheduler-bundled.js"></script>
 ```
+### <a id='localization'></a> New Localization and Globalization settings
+
+The following new options and methods have been introduced in order to allow setting and/or changing runtime the current language/regional for all localazable components on the page or per control.
+
+- Global settings and APIs.
+	- settings
+	
+	Option Name | Description| Default value 
+    ------------|----------- |--------------
+    $.ig.util.language | Gets/Sets global language used for all controls on initialization. | en
+    $.ig.util.regional | Gets/Sets global regional used for all controls on initialization. | en-US
+    
+	- APIs
+
+	Method Name | Description
+    ------------|-----------
+    $.ig.util.changeGlobalLanguage | Changes the language for all controls on the page.
+    $.ig.util.changeGlobalRegional  | Changes the regional for all controls on the page.
+
+
+- Control specific settings.
+
+|Option Name | Description| Default value 
+-------------|------------| -------------
+language | Sets/Gets the locale language setting for the widget.| en
+regional | Sets/Gets the regional setting for the widget. | en-US
+locale | Sest/Gets the locale setting for the widget. | null
 
 ## Spreadsheet
 
@@ -213,3 +248,33 @@ The following series types can be used with the igDataChart:
 * Scatter Contour series
 * Scatter Polyline series
 * Scatter Polygon series
+
+### <a id="cell-merging"></a> igGrid Physical Cell Merging
+
+The igGrid Cell Merging feature now supports physical cell merging. The merging mode is specified via the [*mergeType*](%%jQueryApiUrl%%/ui.iggridcellmerging#options:mergeType) option.
+
+**Enabling physical merging**
+
+```js
+$("#grid").igGrid({
+ features: [
+ 	{ 
+   	 	name: "Sorting"
+    },
+ 	{
+    	name: "CellMerging",
+        mergeType: "physical"
+    }
+ ]
+});
+
+```
+With this mode the cell DOM elements are physically merged into one cell with a corresponding rowSpan attribute as opposed to the "visual" merge mode where the DOM cells retain their DOM structure and are visually merged via css.
+
+The following additional options have been added in order to allow further customization of the merging behavior:
+
+ Option Name | Description | Default value 
+-------------|-------------|---------------
+[mergeOn](%%jQueryApiUrl%%/ui.iggridcellmerging#options:mergeOn) | Defines when merging should be applied. | "sorting"
+[mergeStrategy](%%jQueryApiUrl%%/ui.iggridcellmerging#options:mergeStrategy) | Defines the rules merging is based on. | "duplicate"
+[columnSettings](%%jQueryApiUrl%%/ui.iggridcellmerging#options:columnSettings) | A list of column settings that specifies hiding options on a per column basis. | [ ]
