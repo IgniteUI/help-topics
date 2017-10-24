@@ -104,9 +104,6 @@ Use the Infragistics® Loader (`igLoader`™). You only need to include a script
 Load the required resources manually. You need to use the dependencies listed in the table below.
 					</li>
 
-                    <li>
-Load the two combined files, containing the logic for all data visualization controls from the %%ProductName%% package -` infragistics.core.js`, `infragistics.dv.js` and `infragistics.encoding.js` (optional).
-					</li>
                 </ul>
 
                 The following table lists the %%ProductName%% library dependences related to the `igRadialMenu` control. These resources need to be referred to explicitly if you chose not to use igLoader or
@@ -130,27 +127,43 @@ Description
                         <tr>
                             <td>
 `infragistics.util.js`<br/>
-`infragistics.util.jquery.js`
+`infragistics.util.jquery.js`<br/>
+`infragistics.util.jquerydeferred.js`
 			</td>
 
                             <td>
 %%ProductName%% utilities
 			</td>
                         </tr>
-
+                        
                         <tr>
                             <td>
-`infragistics.dv.simple.core.js`
+`infragistics.ext_core.js`<br/>
+`infragistics.ext_collections.js`<br/>
+`infragistics.ext_collectionsextended.js`<br/>
+`infragistics.ext_ui.js`<br/>
+`infragistics.dv_core.js`<br/>
+`infragistics.dv_interactivity.js`<br/>
+`infragistics.dv_jquerydom.js`
 			</td>
 
                             <td>
-A shared library for data visualization components
+Data visualization core functionality
+			</td>
+                        </tr>
+                        <tr>
+                            <td>
+`infragistics.ui.widget.js`
+			</td>
+
+                            <td>
+A common widget functionality
 			</td>
                         </tr>
 
                         <tr>
                             <td>
-`infragistics.radialmenu_core.js`
+`infragistics.radialmenu.js`
 			</td>
 
                             <td>
@@ -237,16 +250,28 @@ Following is the full code for this procedure.
 <head>
     <!-- %%ProductName%% Required Combined CSS Files -->
     <link href="../../igniteui/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
-    <link href="../../igniteui/css/structure/infragistics.css" rel="stylesheet"/>
+    <link href="../../igniteui/css/structure/modules/infragistics.ui.radialmenu.css" rel="stylesheet"/>
+    
+    <!-- jQuery Files -->
     <script type="text/javascript" src="../../js/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    
     <!-- Infragistics Shared JavaScript Files -->
-    <script src="../../igniteui/js/modules/infragistics.util.js" type="text/javascript"></script>
+    <script src="../../igniteui/js/modules/infragistics.util.js"></script>
     <script src="../../igniteui/js/modules/infragistics.util.jquery.js"></script>
-    <script src="../../igniteui/js/modules/infragistics.dv.simple.core.js" type="text/javascript"></script>
+    <script src="../../igniteui/js/modules/infragistics.util.jquerydeferred.js"></script>
+    <script src="../../igniteui/js/modules/infragistics.ext_core.js"></script>
+    <script src="../../igniteui/js/modules/infragistics.ext_collections.js"></script>
+    <script src="../../igniteui/js/modules/infragistics.ext_collectionsextended.js"></script>
+    <script src="../../igniteui/js/modules/infragistics.ext_ui.js"></script>
+    <script src="../../igniteui/js/modules/infragistics.dv_core.js"></script>
+    <script src="../../igniteui/js/modules/infragistics.dv_interactivity.js"></script>
+    <script src="../../igniteui/js/modules/infragistics.dv_jquerydom.js"></script>
+    <script src="../../igniteui/js/modules/infragistics.ui.widget.js"></script>
+
     <!-- Radial Menu Required JavaScript Files -->
-    <script src="../../igniteui/js/modules/infragistics.radialmenu_core.js" type="text/javascript"></script>
-    <script src="../../igniteui/js/modules/infragistics.ui.radialmenu.js" type="text/javascript"></script>
+    <script src="../../igniteui/js/modules/infragistics.radialmenu.js"></script>
+    <script src="../../igniteui/js/modules/infragistics.ui.radialmenu.js"></script>
 </head>
 <body>
 </body>
@@ -392,18 +417,32 @@ Following is the full code for this procedure.
 <!DOCTYPE html>
 <html>
 <head>
+
     <!-- %%ProductName%% Required Combined CSS Files -->
     <link href="../../igniteui/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
-    <link href="../../igniteui/css/structure/infragistics.css" rel="stylesheet"/>
+    <link href="../../igniteui/css/structure/modules/infragistics.ui.radialmenu.css" rel="stylesheet"/>
+    
+    <!-- jQuery Files -->
     <script type="text/javascript" src="../../js/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    
     <!-- Infragistics Shared JavaScript Files -->
-    <script src="../../igniteui/js/modules/infragistics.util.js" type="text/javascript"></script>
+    <script src="../../igniteui/js/modules/infragistics.util.js"></script>
     <script src="../../igniteui/js/modules/infragistics.util.jquery.js"></script>
-    <script src="../../igniteui/js/modules/infragistics.dv.simple.core.js" type="text/javascript"></script>
+    <script src="../../igniteui/js/modules/infragistics.util.jquerydeferred.js"></script>
+    <script src="../../igniteui/js/modules/infragistics.ext_core.js"></script>
+    <script src="../../igniteui/js/modules/infragistics.ext_collections.js"></script>
+    <script src="../../igniteui/js/modules/infragistics.ext_collectionsextended.js"></script>
+    <script src="../../igniteui/js/modules/infragistics.ext_ui.js"></script>
+    <script src="../../igniteui/js/modules/infragistics.dv_core.js"></script>
+    <script src="../../igniteui/js/modules/infragistics.dv_interactivity.js"></script>
+    <script src="../../igniteui/js/modules/infragistics.dv_jquerydom.js"></script>
+    <script src="../../igniteui/js/modules/infragistics.ui.widget.js"></script>
+
     <!-- Radial Menu Required JavaScript Files -->
-    <script src="../../igniteui/js/modules/infragistics.radialmenu_core.js" type="text/javascript"></script>
-    <script src="../../igniteui/js/modules/infragistics.ui.radialmenu.js" type="text/javascript"></script>
+    <script src="../../igniteui/js/modules/infragistics.radialmenu.js"></script>
+    <script src="../../igniteui/js/modules/infragistics.ui.radialmenu.js"></script>
+
 <script type="text/jscript">
 $(function () {                        
     $("#radialMenu").igRadialMenu({
@@ -473,13 +512,3 @@ The following topics provide additional information related to this topic.
 - [Adding igRadialMenu to an ASP.NET MVC Application](igRadialMenu-Adding-MVC-App.html): This topic demonstrates, with code examples, how to add the `igRadialMenu` to an ASP.NET MVC application using the ASP.NET MVC helper.
 
 - [igRadialMenu Configuration Overview](igRadialMenu-Configuration-Overview.html): This topic explains how to configure the `igRadialMenu` control.
-
-
-
-
-
- 
-
- 
-
-
