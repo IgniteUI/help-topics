@@ -29,26 +29,26 @@ This topic contains the following sections:
 
 The ASP.NET MVC helpers for %%ProductName%% wrap the already client-only control in a server-side set of MVC Extensions that allows the control to be defined and used in the following way:
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
-<%= Html.Infragistics().CONTROL_NAME()  %>
+@(Html.Infragistics().CONTROL_NAME())
 ```
 
 OR
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
-<%= Html.Infragistics().CONTROL_NAME(Model)  %>
+@(Html.Infragistics().CONTROL_NAME(Model))
 ```
 
-All controls have helper methods available off of the `Infragistics()` or `InfragisticsMobile()` extension methods and can be seen using intellisense.
+All controls have helper methods available off of the `Infragistics()` extension methods and can be seen using intellisense.
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
-<%= Html.Infragistics().Grid("grid1", Model.GridFiltering)%>
+@(Html.Infragistics().Grid("grid1", Model.GridFiltering))
 ```
 
 ### Navigate to the installed resources
@@ -78,9 +78,9 @@ If you have chosen the typical installation of %%ProductName%% 20%%ProductVersio
 	</tbody>
 </table>
 
-## MVC 2, MVC 3, MVC 4, MVC 5 and MVC6
+## MVC 2, MVC 3, MVC 4, MVC 5 and ASP.NET Core
 
-All the code for the MVC helper is contained in the `Infragistics.Web.Mvc` assembly, which comes compiled against all MVC2, MVC3, MVC4, MVC5 and MVC6. For further details on the assembly location of the ASP.NET MVC helpers, please read [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
+All the code for the MVC helper is contained in the `Infragistics.Web.Mvc` assembly, which comes compiled against all MVC4, MVC5 and ASP.NET Core. For further details on the assembly location of the ASP.NET MVC helpers, please read [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 
 > **Note**: You should set `Copy Local` property of the reference of the dll to be `true`.
 
@@ -90,34 +90,34 @@ The Infragistics loader is used to load dependent scripts and styles files requi
 
 The following code listing demonstrates how to initialize the loader using the ASP.NET MVC helper:
 
-**In ASPX:**
+**In Razor:**
 
   ```csharp
   <script src="{IG Resources root}/js/infragistics.loader.js"></script>
-    <%= Html.Infragistics()
+    @(Html.Infragistics()
         .Loader()
         .ScriptPath("{IG Resources root}/js/")
         .CssPath("{IG Resources root}/css/")
         .Render()
-    %>
+    )
   ```
 
 
 The JavaScript files are also available in a hosted environment on the Infragistics CDN. The benefits of using a CDN are numerous so please refer to the [Infragistics Content Delivery Network (CDN)](Deployment-Guide-Infragistics-Content-Delivery-Network%28CDN%29.html) help topic for details.
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
 <script src="http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/infragistics.loader.js"></script>
 ```
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
-<%= Html.Infragistics().Loader()
+@(Html.Infragistics().Loader()
     .ScriptPath(“http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/js/”)
     .CssPath(“http://cdn-na.infragistics.com/igniteui/%%ProductVersion%%/latest/css/”)
-	.Render() %>
+	.Render())
 ```
 
 ### Calling Render() method
@@ -155,10 +155,10 @@ Initializing the control with the chaining syntax moves all creation and configu
 
 The following code listing demonstrates how to initialize the `igTree` control using the chanining syntax.
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
-<%= Html.
+@(Html.
         Infragistics().
         Tree().
         ID("MVCBoundTree").
@@ -179,12 +179,12 @@ The following code listing demonstrates how to initialize the `igTree` control u
         DataSource(Model).
         DataBind().
         Render()  
-    %>
+)
 ```
 
 For complex objects [lambda expressions](http://msdn.microsoft.com/en-us/library/bb397687.aspx) are used in order to achieve the syntax. The following code listing demonstrates how to configure `ColumnLayouts` using lambda expressions.
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
 .ColumnLayouts(layouts =>
@@ -280,25 +280,25 @@ The following steps demonstrate how to develop ASP.NET MVC application with `igT
 	
 	This step adds the Infragistics loader to the header of the page
 	
-	**In ASPX:**
+	**In Razor:**
 	
 	```csharp
-	<%= Html.Infragistics()
+	@(Html.Infragistics()
 	        .Loader()
 	        .ScriptPath("{IG Resources root}/js/")
 	        .CssPath("{IG Resources root}/css/")
 	        .Render()
-	    %>
+	)
 	```
 	
 	 - Add the igTree control
 	
 	This step adds the `igTree` control to the MVC application.
 	
-	**In ASPX:**
+	**In Razor:**
 	
 	```csharp
-	<%= Html.Infragistics()
+	@(Html.Infragistics()
 	        .Tree()
 	        .ID("XmlTree")
 	        .InitialExpandDepth(0)
@@ -306,7 +306,7 @@ The following steps demonstrate how to develop ASP.NET MVC application with `igT
 	        .CheckboxMode(CheckboxMode.TriState)
 	        .DataBind()
 	        .Render()  
-	    %>
+	)
 	```
 	
 	> **Note**: Notice the use of the Render method the code listing. All Infragistics ASP.NET MVC Helpers require the Render method to be called as the last method in order to initiate server-side rendering for the control.
@@ -387,7 +387,7 @@ The following steps demonstrate how to develop ASP.NET MVC application with `igT
 	            TextKey("Text").
 	            ImageUrlKey("ImageUrl").
 	            ChildDataProperty("Folder");
-	        }).
+	        })
 	```
 
 ## Next Steps
