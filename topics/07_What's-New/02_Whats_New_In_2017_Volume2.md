@@ -98,15 +98,15 @@ igScheduler
 
 The following new options and methods have been introduced in order to allow setting and/or changing at runtime the current language/regional for all localizable components on the page or per control.
 
-- Global settings and APIs.
-	- settings
+#### Global settings and APIs
+##### settings
 	
 Option Name | Description| Default value 
 ------------|----------- |--------------
 $.ig.util.language | Gets/Sets global language used for all controls on initialization. | en
 $.ig.util.regional | Gets/Sets global regional used for all controls on initialization. | en-US
 
-	- APIs
+##### APIs
 
 Method Name | Description
 ------------|-----------
@@ -114,7 +114,7 @@ $.ig.util.changeGlobalLanguage | Changes the language for all controls on the pa
 $.ig.util.changeGlobalRegional  | Changes the regional for all controls on the page.
 
 
-- Control specific settings.
+#### Control specific settings
 
 Option Name | Description| Default value
 -------------|------------| -------------
