@@ -9,7 +9,7 @@
 -->
 # Using %%ProductName%% npm packages
 
-npm is the most popular package manager and is also the default one for the runtime environment Node.js. It is highly adopted and is one of the fastest and easiest way to manage the packages that you depend on in your project. On more information on how npm works, read the official [npm documentation](https://docs.npmjs.com).
+npm is the most popular package manager and is also the default one for the runtime environment Node.js. It is highly adopted and is one of the fastest and easiest way to manage the packages that you depend on in your project. For more information on how npm works, read the official [npm documentation](https://docs.npmjs.com).
 
 Infragistics %%ProductName%% is available as a npm package and you can add it as a dependency to your project in few easy steps. There are two approaches to start using the %%ProductName%% npm package. We suggest you to use our private npm feed hosted on  [https://packages.infragistics.com/npm/js-licensed](https://packages.infragistics.com/npm/js-licensed). There you will find the latest available version of the %%ProductName%% package, which contains the latest features and improvements. If you have a valid %%ProductName%% license, you can use this private feed and you will have access to the full version of %%ProductName%%. 
 
