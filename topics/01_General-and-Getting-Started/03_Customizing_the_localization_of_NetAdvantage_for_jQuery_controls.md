@@ -30,7 +30,12 @@ This topic contains the following sections:
 -   [Control Localization Files Reference](#Localization)
    -   [Introduction](#subIntroduction)
     -   [Control localization reference summary](#LocalizationSummary)
+- [Setting language, locale and regional options](#set)
+- [Changing language and regional settings](#change)
+	- [Changing language](#change-locale)
+	- [Changing regional](#change-regional)
 -   [Walkthrough: Localizing igGridPaging](#Walkthrough)
+-   [Walkthrough: Changing language and locale runtime for all controls on the page](#Walkthrough2)
    -   [Introduction](#WalkthroughIntroduction)
     -   [Preview](#Preview)
     -   [Requirements](#Requirements)
@@ -54,14 +59,26 @@ Currently we ship jQuery controls in the following languages:
 -   French
 -   Spanish 
 
-This means that in order to get localized version of controls for one of these languages you need to set locale property of Infragistics loader or include the localization file `infragistics-<locale>.js` where `<locale>` is one of the following: en, ja, ru, bg, de, fr, es.
+In order to localize controls for one of these languages you need to load the related locale files either via the Infragistics loader or by referencing the localization file `infragistics-<locale>.js` where `<locale>` is one of the following: en, ja, ru, bg, de, fr, es. Up until 17.2, we supported having only one locale file to be loaded at a time. If more than one was loaded, then the last loaded locale would override all the previous ones. As of 17.2, we support multiple locale files to be loaded together.  
+Once the desired locales are loaded you can specify which one should be applied globally or per control. If only one locale file is loaded, then the global default language is disregarded and the language strings of the loaded locale are displayed.
+To set globbally the prefered language, when multiple locale files are loaded, you can set $.ig.util.language before initializing the controls to the desired language to be displayed:
 
->**Note:**  Infragistics loader cannot be used to load custom localization files.
+**In JavaScript:**
+	
+```js
+	$.ig.util.language = language;
+```
 
+Additionally each localizable control has a `language` property, which determines the language that it will use when loaded.
+Note that if this property is set it will take precedence over the globally set language for the particular control.
 
 >**Note:**  We have two redistributable packages, one is for English and one is for Japanese. In English, redistributable package `infragistics-en.js` is not available. Its localization strings are contained inside the controls code at the beginning of the file. In Japanese, redistributable package `infragistics-ja.js` is not available. Its localization strings are contained inside the controls code at the beginning of the file.
 
-If you want to set another language you need to follow a different procedure:
+>**Note:**  When English locale resources are loaded, they are used by default. If the English locale resources are not loaded on the page, then the first loaded resources are the default choice for locale resources. Also keep in mind that in the English redistributable package, English localization strings are part of the product files, therefore are always loaded for this package.
+
+>**Note:**  The default regional setting is "en-US", but if this one is not loaded on the page the last loaded regional settings are used as default regional settings.
+
+If you want to set a custom language you need to follow a different procedure:
 
 -   Localize the control
    -   Locate localization files. You can find localization files in `<IgniteUI_Install_Folder>\js\modules\i18n`, where <IgniteUI_Install_Folder> points by default to `%%InstallPath%%`
@@ -72,9 +89,7 @@ If you want to set another language you need to follow a different procedure:
 
 >**Note:**  This guide assumes that you have installed English redistributable package. In this case you will not have `infragistics-en.js`. That’s why we will use `infragistics-ru.js`. If you feel uncomfortable with that you can get the Japanese redistributable and get the `infragistics-en.js` file from there.
 
-
-
-##<a id="Localization"></a>Control Localization Files Reference
+## <a id="Localization"></a>Control Localization Files Reference
 
 
 ### <a id="subIntroduction"></a>Introduction
@@ -148,9 +163,137 @@ The following table summarizes localization files for %%ProductName%% controls.
 			<td>infragistics.ui.videoplayer-ru.js</td>
 		</tr>
 	</tbody>
-</table>   
+</table>
 
-##<a id="Walkthrough"></a>Walkthrough: Localizing igGridPaging
+# <a id="set"></a> Setting `language`, `locale` and `regional` options
+
+The controls `language`, `regional` and `locale` options can be set in both JavaScript and ASP.NET MVC. 
+
+**In JavaScript:**
+```js
+	$("#combo").igCombo({
+		language: "en",
+		regional:"en-GB",
+		locale: {
+			dropDownButtonTitle: 'New drop down title'
+		}
+		dataSource: colors,
+		textKey: "Name",
+		valueKey: "Name",
+		width: "200px"
+	});
+```
+When using IgniteUI MVC Wrappers `locale` option,which is of type object, for igGrid, igTreeGrid and igHierarachicalGrid can be set vie both lambda expression and string. For all other controls is set only via string.
+
+**In Razor:**
+
+igTreeGrid - `locale` option set with lambda expressions
+```csharp
+@(Html.Infragistics().TreeGrid(Model)
+        .ID("treegrid1")
+        .Width("100%")
+		.Language("en")
+		.Regional("en-GB")
+		.Locale(l =>l.ExpandTooltipText("New Expand Tooltip").CollapseTooltipText("New Collapse Tooltip"))
+        .AutoGenerateColumns(false)
+        .PrimaryKey("ID")
+        .ChildDataKey("Files")
+        .RenderExpansionIndicatorColumn(true)
+        .InitialExpandDepth(1)
+        .Columns(column =>
+            {
+                column.For(x => x.ID).Hidden(true);
+                column.For(x => x.Name).HeaderText("Name").Width("30%");
+                column.For(x => x.DateModified).HeaderText("Date Modified").Width("20%");
+                column.For(x => x.Type).HeaderText("Type").Width("20%");
+                column.For(x => x.Size).HeaderText("Size in KB").Width("20%");
+            })
+        .DataBind()
+        .Render()
+    )
+```
+igTreeGrid - `locale` option set with string
+```csharp
+@(Html.Infragistics().TreeGrid(Model)
+        .ID("treegrid1")
+        .Width("100%")
+		.Language("en")
+		.Regional("en-GB")
+		.Locale("{expandTooltipText: 'New Expand Tooltip', collapseTooltipText: 'New Collapse Tooltip' }")
+        .AutoGenerateColumns(false)
+        .PrimaryKey("ID")
+        .ChildDataKey("Files")
+        .RenderExpansionIndicatorColumn(true)
+        .InitialExpandDepth(1)
+        .Columns(column =>
+            {
+                column.For(x => x.ID).Hidden(true);
+                column.For(x => x.Name).HeaderText("Name").Width("30%");
+                column.For(x => x.DateModified).HeaderText("Date Modified").Width("20%");
+                column.For(x => x.Type).HeaderText("Type").Width("20%");
+                column.For(x => x.Size).HeaderText("Size in KB").Width("20%");
+            })
+        .DataBind()
+        .Render()
+    )
+```
+
+# <a id="change"></a> Changing language and regional settings
+
+## <a id="change-locale"></a> Changing language
+
+The controls' language can be set via the `language` option and can be changed runtime in one of the following ways:
+- Globally for all Ignite UI widgets on the page, that don't have `language` explicitly set, via the util changeGlobalLanguage function.
+
+	**In JavaScript:**
+	
+	```js
+		$.ig.util.changeGlobalLanguage("ru");
+	```
+- Per control via setting the control's `language` option.
+
+	**In JavaScript:**
+	
+	```js
+		grid.igGrid("option", "language", "ru");
+	```
+
+>**Note:** The related localization file for the language that you want to set will need to be loaded on the page beforehand.  
+
+>**Note:** The `language` option will not override strings that have been set using the `locale` option. The `locale` option has higher precedence.  
+
+## <a id="change-regional"></a> Changing regional
+
+The regional settings of the control can be set via the `regional` option and can be set in one of the following ways:
+
+- Globally for all Ignite UI widgets on the page via the util changeGlobalRegional function.
+
+	**In JavaScript:**
+	
+	```js
+		$.ig.util.changeGlobalRegional("ru");
+	```
+- Per control via setting the control's `language` option.
+
+	**In JavaScript:**
+	
+	```js
+		grid.igGrid("option", "regional", "ru");
+	```
+>**Note:** The igGrid control also allows setting regional settings per column. This allows different columns to have different regional formatting of the data.
+
+**In JavaScript:**
+		
+```js
+grid.igGrid({
+	columns: [
+		{ headerText: "Price", key: "Price", dataType: "number", width: "200px", regional: "en" },
+		{ headerText: "Date", key: "Date", dataType: "date", width: "200px", regional: "ru" }
+	]
+});
+```
+
+## <a id="Walkthrough"></a>Walkthrough: Localizing igGridPaging with custom locale
 
 ### <a id="WalkthroughIntroduction"></a>Introduction
 
@@ -199,28 +342,27 @@ The following steps demonstrate how to localize x control.
 	**In JavaScript:**
 	
 	```js
-	$.ig.GridPaging = $.ig.GridPaging || {};
-	          $.extend( $.ig.GridPaging , {
-	          locale : {
-	              pageSizeDropDownLabel: "Muestreme los registros",
-	              pageSizeDropDownTrailingLabel: "registros",
-	              nextPageLabelText: "siguienta",
-	              prevPageLabelText: "anterior",
-	              firstPageLabelText: "",
-	              lastPageLabelText: "",
-	              currentPageDropDownLeadingLabel: "Pg",
-	              currentPageDropDownTrailingLabel: "de ${count}",
-	              currentPageDropDownTooltip: "Elija índice de página",
-	              pageSizeDropDownTooltip: "Elija el número de registros por página",
-	              pagerRecordsLabelTooltip: "Rango de registros actual",
-	              prevPageTooltip: "Vaya a la página siguiente",
-	              nextPageTooltip: "Vaya a la página anterior",
-	              firstPageTooltip: "Vaya a la página primera",
-	              lastPageTooltip: "Vaya a la página última",
-	              pageTooltipFormat: "página ${index}",
-	              pagerRecordsLabelTemplate: "${startRecord} - ${endRecord} de ${recordCount} registros"
-	              }
-	          });
+	$.ig.locale.es.GridPaging = {
+			optionChangeNotSupported: "{optionName} no se puede editar tras la inicialización. Su valor debe establecerse durante la inicialización.",
+			pageSizeDropDownLabel: "Mostrar ",
+			pageSizeDropDownTrailingLabel: "registros",
+			nextPageLabelText: "siguiente",
+			prevPageLabelText: "anterior",
+			firstPageLabelText: "",
+			lastPageLabelText: "",
+			currentPageDropDownLeadingLabel: "Pág",
+			currentPageDropDownTrailingLabel: "de ${count}",
+			currentPageDropDownTooltip: "Elegir índice de páginas",
+			pageSizeDropDownTooltip: "Elegir número de registros por página",
+			pagerRecordsLabelTooltip: "Intervalo de registros actuales",
+			prevPageTooltip: "ir a la página anterior",
+			nextPageTooltip: "ir a la página siguiente",
+			firstPageTooltip: "ir a la primera página",
+			lastPageTooltip: "ir a la última página",
+			pageTooltipFormat: "página ${index}",
+			pagerRecordsLabelTemplate: "${startRecord} - ${endRecord} de ${recordCount} registros",
+			invalidPageIndex: "Índice de página no válido: debería ser igual o superior a 0 e inferior al número de página"
+	};
 	```              
 
 3. <a id="include_localized_file"></a> Including localized file along with the script references in your project
@@ -236,7 +378,140 @@ The following steps demonstrate how to localize x control.
 	<script src="../../js/modules/i18n/infragistics.ui.grid-es.js"></script>
 	<script src="../../js/infragistics.loader.js"></script>
 	```
-              
+## <a id="Walkthrough2"></a>Walkthrough: Changing language and locale runtime for all controls on the page
+
+The following procedure will guide you to the proccess of changing the language and regional settings globally for all controls on the page.
+
+### <a id="Steps"></a>Steps
+
+1. Load all locale and regional resources using the igLoader.
+
+**In JavaScript:**
+	
+```js
+	$.ig.loader({
+		scriptPath: 'http://localhost/igniteui/js/',
+		cssPath: 'http://localhost/igniteui/css/',
+		resources: 'igGrid.*, igEditors, igCombo',
+		locale: 'en, ja, bg, ru',
+		regional: 'en, ja, bg, ru'
+	});
+```
+
+2. Initialize localazable components - igGrid, igEditors, igCombo.
+
+**In JavaScript:**
+	
+```js
+	$.ig.loader(function () {
+		$("#grid1").igGrid({
+			dataSource: northwindEmployees,
+			primaryKey: "ID",
+			width: "100%",
+			height: "400px",
+			autoCommit: true,
+			autoGenerateColumns: false,
+			columns: [
+					{ headerText: "Employee ID", key: "ID", dataType: "number", hidden: true},					
+					{ headerText: "Name", key: "Name", dataType: "string" },
+					{ headerText: "Title", key: "Title", dataType: "string" },
+					{ headerText: "Phone", key: "Phone", dataType: "string" },
+					{ headerText: "HireDate", key: "HireDate", dataType: "date", format: "date" },
+					{ headerText: "Value", key: "Value", dataType: "number", format: "currency" }
+				],
+			features: [
+				{
+					name: "Updating"
+				},
+				{
+					name: "Filtering",
+					mode: "simple"
+				},
+				{
+					name: "Sorting"
+				},
+				{
+					name: "GroupBy"
+				},
+				{
+					name: "Summaries"
+				},
+				{
+					name: "Hiding"
+				},
+				{
+					name: "Paging"
+				},
+				{ 
+					name: "Selection"
+				}					
+				]
+			});
+			var colors = [{
+                    "Name": "Black"
+                  }, {
+                    "Name": "Blue"
+                  }, {
+                    "Name": "Brown"
+                  }, {
+                    "Name": "Red"
+                  }, {
+                    "Name": "White"
+                  }, {
+                    "Name": "Yellow"
+                  }];
+ 
+            $("#combo1").igCombo({
+                  dataSource: colors,
+                  textKey: "Name",
+                  valueKey: "Name",
+                  width: "200px"
+            });
+			
+			$("#currencyEditor").igCurrencyEditor({
+                         width: 200,
+						 buttonType: "spin"
+            });
+			
+			$("#numericEditor").igNumericEditor({
+                         width: 200
+            });
+
+	})
+```
+3. Create a drop-downs for selecting the different locale and regional settings. On change use the $.ig.util.changeGlobalRegional and $.ig.util.changeGlobalRegional methods to apply the selection for all components on the page.
+
+**In JavaScript:**
+	
+```js
+		$("#globalLanguageSelect").igCombo({
+				dataSource:[
+				{ Name: "English", Value:"en"},
+				{ Name: "Japanesse", Value: "ja"},
+				{ Name: "Bulgarian", Value: "bg"},
+				{ Name: "Rusian", Value: "ru"}],
+					textKey: "Name",
+					valueKey: "Value",
+					selectionChanged: function(e, ui){					
+						$.ig.util.changeGlobalLanguage( ui.items[0].value);
+					}
+			});
+
+			$("#globalRegionalSelect").igCombo({
+				dataSource:[
+				{ Name: "US", Value:"en-US"},
+				{ Name: "GB", Value: "en-GB"},
+				{ Name: "BG", Value: "bg"},
+				{ Name: "RU", Value: "ru"}],
+				textKey: "Name",
+				valueKey: "Value",
+				selectionChanged: function(e, ui){					
+					$.ig.util.changeGlobalRegional( ui.items[0].value);
+				}
+			});
+```
+
+
 ##<a id="RelatedContent"></a>Related Content
 
 ### Topics
@@ -246,12 +521,3 @@ The following topics provide additional information related to this topic.
 - [General and Getting Started](Getting-Started.html): This topic describes how to deploy %%ProductName%% controls.
 
 - [JavaScript Files in %%ProductName%%](Deployment-Guide-JavaScript-Files.html) : This topic lists all JavaScript files in %%ProductName%%.
-
-
-
-
- 
-
- 
-
-

@@ -60,8 +60,8 @@ To complete the procedure, you need the following:
 
 -   A project with any Web application
 -   %%ProductName%% installed
--   [jQuery](http://jquery.com/) core library 1.4.4 version or above
--   [jQuery UI](http://jqueryui.com/) library 1.8.11 or above
+-   [jQuery](http://jquery.com/) core library 1.9.1 version or above
+-   [jQuery UI](http://jqueryui.com/) library 1.9.0 or above
 -   [Modernizr](http://modernizr.com/) open-source JavaScript library 2.5.2 or above
 
 > **Note:** See a complete list describing which framework versions are supported with each release of %%ProductName%% at [http://www.infragistics.com/help/supported-environments](http://www.infragistics.com/help/supported-environments).

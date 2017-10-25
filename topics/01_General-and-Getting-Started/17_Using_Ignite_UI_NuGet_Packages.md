@@ -12,7 +12,7 @@
 NuGet is a powerful ecosystem of tools and services. It was introduced in 2010 as an open source package manager for the Microsoft development platform including .NET.  NuGet is the easiest way to improve and automate your development practices.
 
 When you install a package via NuGet, it copies the library files to your solution and automatically updates your project. That means adding references, changing config files, replacing old version script files, etc.
-NuGet is available since Visual Studio 2010 and since Visual Studio 2012, it is included by default. On more information on how to get going with it, read the official [NuGet documentation](http://docs.nuget.org/ndocs/guides/install-nuget).
+NuGet is available since Visual Studio 2010 and since Visual Studio 2012, it is included by default. For more information on how to get going with it, read the official [NuGet documentation](http://docs.nuget.org/ndocs/guides/install-nuget).
 
 Infragistics %%ProductName%% controls are available to explore as a NuGet package and this is the easiest and the fastest way to install the Infragistics files and assemblies required for your project.
 There are two approaches to start using the NuGet packages. We suggest you to set up and use our private NuGet feed hosted on  [https://packages.infragistics.com/nuget/licensed](https://packages.infragistics.com/nuget/licensed) which will keep you up to date with all the NuGet packages Infragistics provide. Using this approach you will be able to get the latest version of the packages each time you create a new project or restore the packages of an existing one.
@@ -20,7 +20,7 @@ The alternative approach to the %%ProductName%% NuGet packages is to install the
 
 ## Installing %%ProductName%% packages from the online private feed
 
-The first step is to add the Infragistics feed as a package source. To do that, the user needs to go to Tools/Options/Package Sources.
+The first step is to add the Infragistics feed as a package source. To do that, the user needs to go to Tools/Options/NuGet Package Manager/Package Sources.
 
 Add a new package source using Add new source button and name it Infragistics feed (in fact, you can name it however you want). Set the Source to [*https://packages.infragistics.com/nuget/licensed*](https://packages.infragistics.com/nuget/licensed) and click OK to save the source.
 
@@ -59,7 +59,7 @@ Now you should change the package source to **Infragistics (Local)**.
 
 Navigate to the Browse tab and you will see the list of available Infragistics %%ProductName%% NuGet packages. 
 
-When you select a package, you will see more information of it in the right panel. The most important information in this panel is the list of dependencies for the selected package. Those are assemblies that will be installed automatically to your project and you don`t have to worry about those. 
+When you select a package, you will see more information of it in the right panel. The most important information in this panel is the list of dependencies for the selected package. Those are assemblies that will be installed automatically to your project and you don't have to worry about those. 
 
 Click the Install button and the selected package will be added to your project. 
 ![](images/Install_Button_for_NuGet_Packages.png)
@@ -68,7 +68,7 @@ Click the Install button and the selected package will be added to your project.
 
 Here we will describe how you can add %%ProductName%% package using the Package Manager Console. Using the Console may be a bit faster as you do not need to search for the package that you want to install.
 
-To show the Console, navigate to **Tools** in the Visual Studio`s menu and after hovering **NuGet Package Manager**, select **Package Manager Console**.
+To show the Console, navigate to **Tools** in the Visual Studio's menu and after hovering **NuGet Package Manager**, select **Package Manager Console**.
 ![](images/NuGet_Manager_Console.png)
 
 The **Package Manager Console** will be shown at the bottom of the screen and you just need to enter “Install-Package *name_of_the_package*” to initiate the installation. For example, if you want to install “IgniteUI.MVC”, you must enter Install-Package IgniteUI.MVC and the manager will install this assembly and all the assemblies it depends on. Note that in the console you should select Infragistics(local) from the Package source drop down.
@@ -84,15 +84,15 @@ If you install the %%ProductName%% package a JavaScript and Content folder will 
 
 ## Uninstalling the %%ProductName%% NuGet packages
 
-You can uninstall any of the assemblies installed with the package. This can be done either using the GUI or the Package Manager Console. You can use any of the approaches no matter if you`ve installed the package via the GUI or via the Console. 
+You can uninstall any of the assemblies installed with the package. This can be done either using the GUI or the Package Manager Console. You can use any of the approaches no matter if you've installed the package via the GUI or via the Console. 
 
 To remove an assembly right-click the project again and select **Manage NuGet Packages**. The view is opened and is showing all the installed assemblies. Select the one you want to uninstall and click the **Uninstall** button.
 
 ![](images/Uninstall_NuGet_Package.png)
 
-Have in mind that this will uninstall only the assemblies you`ve selected and all other assemblies that were installed with the package as dependencies will be preserved. 
+Have in mind that this will uninstall only the assemblies you've selected and all other assemblies that were installed with the package as dependencies will be preserved. 
 
-In addition, you won`t be able to uninstall an assembly if another one depends on it. For example, if you have installed **IgniteUI.MVC** to your project and for some reason try to uninstall IgniteUI which was installed as a dependency, you will see an error saying you are not able to uninstall it because another assembly depends on it. If you want to uninstall it, you must first uninstall all the assemblies that depend on it. 
+In addition, you won't be able to uninstall an assembly if another one depends on it. For example, if you have installed **IgniteUI.MVC** to your project and for some reason try to uninstall IgniteUI which was installed as a dependency, you will see an error saying you are not able to uninstall it because another assembly depends on it. If you want to uninstall it, you must first uninstall all the assemblies that depend on it. 
 
 ![](images/Error_When_uninstaling_depending_packages.png)
 
