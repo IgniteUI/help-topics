@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# Using TimeXAxis with the (igDataChart)
+# Configuring the TimeXAxis (igDataChart)
 
 This topic demonstrates, with code examples, how to use TimeXAxis in the `igDataChart`™ control. The benefit of using TimeXAxis is to accurately label data, dynamically, as either date, time or both at any range necessary. 
 
