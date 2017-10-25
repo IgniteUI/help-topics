@@ -101,22 +101,22 @@ The following new options and methods have been introduced in order to allow set
 - Global settings and APIs.
 	- settings
 	
-	Option Name | Description| Default value 
-    ------------|----------- |--------------
-    $.ig.util.language | Gets/Sets global language used for all controls on initialization. | en
-    $.ig.util.regional | Gets/Sets global regional used for all controls on initialization. | en-US
-    
+Option Name | Description| Default value 
+------------|----------- |--------------
+$.ig.util.language | Gets/Sets global language used for all controls on initialization. | en
+$.ig.util.regional | Gets/Sets global regional used for all controls on initialization. | en-US
+
 	- APIs
 
-	Method Name | Description
-    ------------|-----------
-    $.ig.util.changeGlobalLanguage | Changes the language for all controls on the page.
-    $.ig.util.changeGlobalRegional  | Changes the regional for all controls on the page.
+Method Name | Description
+------------|-----------
+$.ig.util.changeGlobalLanguage | Changes the language for all controls on the page.
+$.ig.util.changeGlobalRegional  | Changes the regional for all controls on the page.
 
 
 - Control specific settings.
 
-|Option Name | Description| Default value 
+Option Name | Description| Default value
 -------------|------------| -------------
 language | Sets/Gets the locale language setting for the widget.| en
 regional | Sets/Gets the regional setting for the widget. | en-US

@@ -78,7 +78,7 @@ If you have chosen the typical installation of %%ProductName%% 20%%ProductVersio
 	</tbody>
 </table>
 
-## MVC 2, MVC 3, MVC 4, MVC 5 and MVC6
+## MVC 2, MVC 3, MVC 4, MVC 5 and ASP.NET Core
 
 All the code for the MVC helper is contained in the `Infragistics.Web.Mvc` assembly, which comes compiled against all MVC4, MVC5 and ASP.NET Core. For further details on the assembly location of the ASP.NET MVC helpers, please read [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
 
