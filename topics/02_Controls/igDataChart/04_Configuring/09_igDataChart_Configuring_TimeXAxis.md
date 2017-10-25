@@ -302,7 +302,7 @@ The following code snippets show how to skip labels on the TimeXAxis in the XamD
 ![](images/igDataChart_%28TimeXAxis_Break%29_1.png)
 Figure 4: TimeXAxis displaying data from Monday through Friday in 2010.
 
-### Related Topics
+### <a id="related-content"></a>Related Topics
 
 The following topic provides additional information related to this topic:
 
