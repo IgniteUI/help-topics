@@ -27,32 +27,41 @@ The following lists the topic required as a prerequisite to understanding this t
 This topic contains the following sections:
 
 -   [**Introduction**](#introduction)
+    -   [Visual Cell Merging](#intro-visual)
+    -   [Physical Cell Merging](#intro-physical)
 -   [**Enabling Cell Merging**](#enabling)
--   [**Enabling Cell Merging – Code Examples**](#enabling-examples)
--   [**Enabling Cell Merging in JavaScript (Code Example)**](#enabling-js)
-    -   [Code](#enabling-js-code)
--   [**Enabling Cell Merging in ASP.NET MVC (Code Example)**](#enabling-mvc)
-    -   [Code](#enabling-mvc-code)
--   [**Configuring the Initial Cell Merging State of the igGrid**](#initial)
-    -   [Property settings](#initial-property-settings)
-    -   [Example](#initial-example)
+    -   [Enabling Cell Merging in JavaScript](#enabling-js)
+    -   [Enabling Cell Merging in ASP.NET MVC](#enabling-mvc)
+-   [**Configuring when Cell Merging is applied**](#mergeOn)
+    -   [For all columns](#mergeOn-all)
+    -   [For specific columns](#mergeOn-column)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
 
 
 ## <a id="introduction"></a> Introduction
 
-The feature allows users to merge the cells in the column visually when they have the same value (display text). Simply enabling the feature will apply the cell merging on each sorted column. Alternatively, by setting the initialState property to merged the user can enable the feature to try and merge cells when the grid is initialized. This is useful when working with a presorted data source.
+The feature allows users to merge the cells in a column visually or physically when they have the same value (display text). Enabling the feature by default will apply visually the cell merging when a column is being sorted. This means that if single sorting is used, when you sort a different column, the previous column loses the cell merging applied.
 
-The merged cells render with a special styling as illustrated in the following screen shot.
+Since by default cell merging is applied only on sorting, by setting the [*mergeOn*](%%jQueryApiUrl%%/ui.iggridcellmerging#options:mergeOn) property to "always" the user can enable the feature to merge cells when the grid is initialized and throughout the interaction with it. This is useful when working with a presorted data source.
 
-![](images/igGrid_CellMerging_Overview.png)
+#### <a id="intro-visual"></a> Visual Cell Merging
 
-Enabling multiple sorting merges all of the sorted columns. If you use single sorting when you sort a different column, the previous column loses the styling that subsequently applies to the merged cells in the new column.
+By default when enabling Cell Merging the method by which cells in a column are merged is by a special styling as illustrated in the following screenshot.
 
-You may use the predefined CSS classes in order to customize the look of the merged cells. For more information regarding the styling, please refer to the [CSS Classes Reference](igGrid-CellMerging-CSS-Classes-Reference.html) topic.
+![](images/igGrid_CellMerging_Visual.jpg)
 
 
+You may use the predefined CSS classes in order to customize the look of the merged cells. For more information regarding the styling, please refer to the [CSS Classes Reference](%%jQueryApiUrl%%/ui.iggridcellmerging#theming) topic.
+
+
+#### <a id="intro-physical"></a> Physical Cell Merging
+
+If the user need to have only one cell in the place of the merged cells the physical cell merging can be used. This is useful for text that could span across multiple cells when merged. The way it works is the same way cell merging would work on an HTML Table by setting *rowspan* of a cell, that could span multiple rows. This method is illustrated in the following screenshot.
+
+![](images/igGrid_CellMerging_Physical.jpg)
+
+The resulting merged cells can be styled through custom css class called [*ui-iggrid-physicalmergedcell*](%%jQueryApiUrl%%/ui.iggridcellmerging#theming:ui-iggrid-physicalmergedcell). It is useful for example when the user want to position the text of the cells differently from the default vertical center position.
 
 ## <a id="enabling"></a> Enabling Cell Merging
 
@@ -63,49 +72,24 @@ To enable Cell Merging in… | Do this…
 JavaScript | Define the Cell Merging configuration in the grid’s `features` array.
 ASP.NET MVC | Instantiate the Cell Merging feature in the delegate passed to the grid’s `Features` method.
 
-
-
-## <a id="enabling-examples"></a> Enabling Cell Merging – Code Examples
-The following table lists the code examples included in this topic.
-
-- [Enabling Cell Merging in JavaScript](#enabling-js-code): This example demonstrates enabling the `igGrid`’s Cell Merging feature with default configuration (`initialState` is `regular`) in JavaScript.
-
-- [Enabling Cell Merging in ASP.NET MVC](#enabling-mvc): This example demonstrates enabling the `igGrid`’s Cell Merging feature with default configuration (`initialState` is `regular`) in ASP.NET MVC.
-
-
-### <a id="enabling-js"></a> Enabling Cell Merging in JavaScript (Code Example)
+### <a id="enabling-js"></a> Enabling Cell Merging in JavaScript
 
 The following code creates an `igGrid` instance bound to the Products table data from the AdventureWorks database. The columns are auto-generated. Cell Merging is enabled with its default configuration (`initialState` is `regular`).
 
-#### <a id="enabling-js-code"></a> Code
-
 **In JavaScript:**
 
-```js
-Code
-$("#grid1").igGrid({
-    dataSource: adventureWorks,
-    autoGenerateColumns: true,
-    features: [
-        {
-            name: "CellMerging"
-        }
-    ]
-});
-```
+<div class="embed-sample">
+   [Cell Merging](%%SamplesEmbedUrl%%/grid/cell-merging)
+</div>
 
 
-### <a id="enabling-mvc"></a> Enabling Cell Merging in ASP.NET MVC (Code Example)
+### <a id="enabling-mvc"></a> Enabling Cell Merging in ASP.NET MVC
 
 The following code creates `igGrid` instance bound to a custom `Product` object collection defined as a View model. The columns are auto-generated. Enable Cell Merging with its default configuration (`initialState` is `regular`).
 
-#### <a id="enabling-mvc-code"></a> Code
-
-**In C#:**
+**In Razor:**
 
 ```csharp
-Code
-@model IQueryable<Sample.Models.Product>
 @(Html.Infragistics()
     .Grid(Model)
     .AutoGenerateColumns(true)
@@ -114,50 +98,88 @@ Code
         feature.CellMerging();
     })
     .DataBind()
-    .Render())
+    .Render()
+)
 ```
 
 
 
-## <a id="initial"></a> Configuring the Initial Cell Merging State of the *igGrid*
+## <a id="mergeOn"></a> Configuring when Cell Merging is applied
 
-This section explains how you can enable cell merging in `merged` initial state.
+This section explains how you can configure the Cell Merging feature to be applied always for all columns or for specific columns only.
 
-### <a id="initial-property-settings"></a> Property settings
+### <a id="mergeOn-all"></a> For all columns
 
-The following table maps the desired configuration to property settings.
-
-In order to: | Use this property: | And set it to:
--------------|--------------------|--------------
-Enable merged initial state | initialState | "merged"
-
-
-### <a id="initial-example"></a> Example
-
-Property | Value
----------|------
-initialState | "merged"
-
-The following sample demonstrates how to set the cell merging’s initial state in code:
+The following sample demonstrates how to set the Cell Merging’s mergeOn rule so all columns would have their cells merged:
 
 **In JavaScript:**
 
-<div class="embed-sample">
-   [Cell Merging](%%SamplesEmbedUrl%%/grid/cell-merging)
-</div>
+```js
+$("#grid1").igGrid({
+    dataSource: adventureWorks,
+    autoGenerateColumns: true,
+    features: [
+        {
+            name: "CellMerging",
+            mergeOn: "always"
+        }
+    ]
+});
+```
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
 @(Html.Infragistics().Grid(Model)
-.AutoGenerateColumns(true)
-.ID("grid1")
-.Features(f => f.CellMerging().InitialState(CellMergingInitialState.Merged))
-.DataBind()
-.Render())
+    .AutoGenerateColumns(true)
+    .ID("grid1")
+    .Features(f => f.CellMerging().MergeOn(CellMergingMergeOn.Always))
+    .DataBind()
+    .Render()
+)
 ```
 
+### <a id="mergeOn-all"></a> For specific columns
 
+The following sample demonstrates how to set the Cell Merging’s mergeOn rule so that the cells for column with key "City" will be merged at all times. 
+
+If we have Sorting feature enabled and we sort a column, cell merging will be applied to it as well. This is due to the default behavior of Cell Merging and because we haven't set options for the other columns. That is why the "City" column cells will remain merged.
+
+**In JavaScript:**
+
+```js
+$("#grid1").igGrid({
+    dataSource: adventureWorks,
+    autoGenerateColumns: true,
+    features: [
+        {
+            name: "CellMerging",
+            columnSettings: [
+                {
+                    columnKey: "City",
+                    mergeOn: "always"
+                }
+            ]
+        }
+    ]
+});
+```
+
+**In Razor:**
+
+```csharp
+@(Html.Infragistics().Grid(Model)
+    .AutoGenerateColumns(true)
+    .ID("grid1")
+    .Features(features => 
+        features.CellMerging().ColumnSettings(settings =>
+            settings.ColumnSetting().ColumnKey("City").MergeOn(CellMergingMergeOn.Always)
+        );
+    )
+    .DataBind()
+    .Render()
+)
+```
 
 ## <a id="related-content"></a> Related Content
 
@@ -165,8 +187,5 @@ The following sample demonstrates how to set the cell merging’s initial state 
 
 The following topics provide additional information related to this topic.
 
-- [Property Reference (Cell Merging, igGrid)](igGrid-CellMerging-Property-Reference.html): This topic provides reference information on the `igGrid` control’s Cell Merging feature’s properties.
-
-- [Event Reference (Cell Merging, igGrid)](igGrid-CellMerging-Event-Reference.html): This topic provides reference information on the `igGrid` control’s Cell Merging feature’s events.
-
-- [CSS Classes Reference (Cell Merging, igGrid)](igGrid-CellMerging-CSS-Classes-Reference.html): This topic provides reference information on the `igGrid` control’s Cell Merging feature’s CSS classes.
+- [igGrid Overview](igGrid-Overview.html)
+- [igGrid Sorting](igGrid_Sorting_Overview.html)
