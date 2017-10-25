@@ -38,13 +38,13 @@ The following table presents the events related to the cell editing functionalit
 
 | Event			| Description     																	|
 | ------------- 	|:-------------:																	|
-| [`editModeEntering`](ui.igspreadsheet#events:editModeEntering)  | Invoked when the Spreadsheet is about to start in-place editing of the [`activeCell`](ui.igspreadsheet#options:activeCell).    |
-| [`editModeEntered`](ui.igspreadsheet#events:editModeEntered)    | Invoked when the Spreadsheet has started in-place editing of the [`activeCell`](ui.igspreadsheet#options:activeCell). 	|
-| [`editModeExiting`](ui.igspreadsheet#events:editModeExiting)    | Invoked when the Spreadsheet is about to end the in-place editing of the [`activeCell`](ui.igspreadsheet#options:activeCell). 	|
-| [`editModeExited`](ui.igspreadsheet#events:editModeExited)      | Invoked when the Spreadsheet has ended the in-place editing of the [`activeCell`](ui.igspreadsheet#options:activeCell). 	|
-| [`editModeValidationError`](ui.igspreadsheet#events:editModeValidationError)    |  Invoked when the Spreadsheet is exiting edit mode and the new value for the [`activeCell`](ui.igspreadsheet#options:activeCell) is not valid based on the criteria of that cell's [`ig.excel.DataValidationRule`](ig.excel.DataValidationRule).	|
+| [`editModeEntering`](%%jQueryApiUrl%%/ui.igspreadsheet#events:editModeEntering)  | Invoked when the Spreadsheet is about to start in-place editing of the [`activeCell`](%%jQueryApiUrl%%/ui.igspreadsheet#options:activeCell).    |
+| [`editModeEntered`](%%jQueryApiUrl%%/ui.igspreadsheet#events:editModeEntered)    | Invoked when the Spreadsheet has started in-place editing of the [`activeCell`](%%jQueryApiUrl%%/ui.igspreadsheet#options:activeCell). 	|
+| [`editModeExiting`](%%jQueryApiUrl%%/ui.igspreadsheet#events:editModeExiting)    | Invoked when the Spreadsheet is about to end the in-place editing of the [`activeCell`](%%jQueryApiUrl%%/ui.igspreadsheet#options:activeCell). 	|
+| [`editModeExited`](%%jQueryApiUrl%%/ui.igspreadsheet#events:editModeExited)      | Invoked when the Spreadsheet has ended the in-place editing of the [`activeCell`](%%jQueryApiUrl%%/ui.igspreadsheet#options:activeCell). 	|
+| [`editModeValidationError`](%%jQueryApiUrl%%/ui.igspreadsheet#events:editModeValidationError)    |  Invoked when the Spreadsheet is exiting edit mode and the new value for the [`activeCell`](%%jQueryApiUrl%%/ui.igspreadsheet#options:activeCell) is not valid based on the criteria of that cell's [`ig.excel.DataValidationRule`](ig.excel.DataValidationRule).	|
 
-If you want to cancel editing of all the cells, then you just need to cancel [`editModeEntering`](ui.igspreadsheet#events:editModeEntering) event:
+If you want to cancel editing of all the cells, then you just need to cancel [`editModeEntering`](%%jQueryApiUrl%%/ui.igspreadsheet#events:editModeEntering) event:
 ```
 $("#spreadsheet1").igSpreadsheet({
     height: "600",
@@ -55,7 +55,7 @@ $("#spreadsheet1").igSpreadsheet({
 });
 ```
 
-If you want to show notification, when editing of a cell has finished and spreadsheet is updated, then you can use the [`editModeExited`](ui.igspreadsheet#events:editModeExited) event:
+If you want to show notification, when editing of a cell has finished and spreadsheet is updated, then you can use the [`editModeExited`](%%jQueryApiUrl%%/ui.igspreadsheet#events:editModeExited) event:
 ```
 $("#spreadsheet1").igSpreadsheet({
     height: "600",
@@ -71,8 +71,8 @@ The following table shows the methods that the spreadsheet exposes, in order to 
 
 | Method			| Description     																	|
 | ------------- 	|:-------------:																	|
-| [`getIsInEditMode`](ui.igspreadsheet#methods:getIsInEditMode)  | Indicates if the control is currently editing the value of the [`activeCell`](ui.igspreadsheet#options:activeCell).    |
-| [`getCellEditMode`](ui.igspreadsheet#methods:getCellEditMode)    | Returns an enumeration used to indicate the current edit mode state. 	|
+| [`getIsInEditMode`](%%jQueryApiUrl%%/ui.igspreadsheet#methods:getIsInEditMode)  | Indicates if the control is currently editing the value of the [`activeCell`](%%jQueryApiUrl%%/ui.igspreadsheet#options:activeCell).    |
+| [`getCellEditMode`](%%jQueryApiUrl%%/ui.igspreadsheet#methods:getCellEditMode)    | Returns an enumeration used to indicate the current edit mode state. 	|
 
 
 ## <a id="options"></a>Options
@@ -80,8 +80,8 @@ Entering a lot of numbers, with decimal places, in the spreadsheet, can happen i
 
 | Option			| Description     																	|
 | ------------- 	|:-------------:																	|
-| [`isFixedDecimalEnabled`](ui.igspreadsheet#options:isFixedDecimalEnabled)  | Indicates whether a fixed decimal place is automatically added when a whole number is entered while in edit mode.   |
-| [`fixedDecimalPlaceCount`](ui.igspreadsheet#options:fixedDecimalPlaceCount)    | Number of decimal places by which a whole number typed in during edit mode should be adjusted. 	|
+| [`isFixedDecimalEnabled`](%%jQueryApiUrl%%/ui.igspreadsheet#options:isFixedDecimalEnabled)  | Indicates whether a fixed decimal place is automatically added when a whole number is entered while in edit mode.   |
+| [`fixedDecimalPlaceCount`](%%jQueryApiUrl%%/ui.igspreadsheet#options:fixedDecimalPlaceCount)    | Number of decimal places by which a whole number typed in during edit mode should be adjusted. 	|
 
 Enabling this feature, setting decimal places to 3 and entering the value of 123456 in a spreadshett cell, will result in 123.456, after the cell exits edit mode.
 
