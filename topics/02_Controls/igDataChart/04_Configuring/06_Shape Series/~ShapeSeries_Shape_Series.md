@@ -16,7 +16,13 @@
 
 The topics in this group explain both the Polygon and Polyline series. These series can be used to display custom shapes in the igDataChart.  All that is required is providing both series with a list of points made up of X and Y values.  These points are what define the shape.
 
-![](images/jQuery_mini_scatter_polygon_01.png)![](images/jQuery_mini_scatter_polyline_01.png)
+Figure 1. Scatter Polygon Series
+
+![](images/jQuery_mini_scatter_polygon_01.png)
+
+Figure 2. Scatter Polyline Series
+
+![](images/jQuery_mini_scatter_polyline_01.png)
 
 ### Topics
 
