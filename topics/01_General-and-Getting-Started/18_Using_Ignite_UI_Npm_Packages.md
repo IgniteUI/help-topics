@@ -13,7 +13,7 @@ npm is the most popular package manager and is also the default one for the runt
 
 Infragistics %%ProductName%% is available as a npm package and you can add it as a dependency to your project in few easy steps. There are two approaches to start using the %%ProductName%% npm package. We suggest you to use our private npm feed hosted on  [https://packages.infragistics.com/npm/js-licensed](https://packages.infragistics.com/npm/js-licensed). There you will find the latest available version of the %%ProductName%% package, which contains the latest features and improvements. If you have a valid %%ProductName%% license, you can use this private feed and you will have access to the full version of %%ProductName%%. 
 
-Another option is to use the official npm feed at [https://www.npmjs.com](https://www.npmjs.com/package/ignite-ui). Choosing this approach will not require configuring npm but there you will find the %%ProductName%% OSS version of the package. You can check which %%ProductName%% controls are included in the OSS version on the [package`s page](https://www.npmjs.com/package/ignite-ui).
+Another option is to use the official npm feed at [https://www.npmjs.com](https://www.npmjs.com/package/ignite-ui). Choosing this approach will not require configuring npm but there you will find the %%ProductName%% OSS version of the package. You can check which %%ProductName%% controls are included in the OSS version on the [package's page](https://www.npmjs.com/package/ignite-ui).
 
 ## Installing the %%ProductName%% npm package from npmjs.com
 

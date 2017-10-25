@@ -29,11 +29,17 @@ This procedure shows you how to add manually all required resources (CSS and Jav
 
 The names of the JavaScript files containing the combined scripts for all of %%ProductName%% are as follows:
 
--  ` infragistics.core.js`: shared dependencies (required)
+-   `infragistics.core.js`: shared dependencies (required)
 
 -   `infragistics.lob.js`: all line-of-business controls
 
 -   `infragistics.dv.js`: all data visualization controls
+
+-   `infragistics.excel-bundled.js`: all excel exporting related logic (required by `infragistics.spreadsheet-bundled.js`)
+
+-   `infragistics.spreadsheet-bundled.js`: only spreadsheet user interface implementation
+
+-   `infragistics.scheduler-bundled.js`: all scheduler related logic
 
 They can be found in the `js` folder (the root folder for the JavaScript files in the %%ProductName%% program installation).There is also a combined script version of the localization resources named, and it resides in the `i18n` folder.
 
@@ -54,8 +60,8 @@ To complete the procedure, you need the following:
 
 -   A project with any Web application
 -   %%ProductName%% installed
--   [jQuery](http://jquery.com/) core library 1.4.4 version or above
--   [jQuery UI](http://jqueryui.com/) library 1.8.11 or above
+-   [jQuery](http://jquery.com/) core library 1.9.1 version or above
+-   [jQuery UI](http://jqueryui.com/) library 1.9.0 or above
 -   [Modernizr](http://modernizr.com/) open-source JavaScript library 2.5.2 or above
 
 > **Note:** See a complete list describing which framework versions are supported with each release of %%ProductName%% at [http://www.infragistics.com/help/supported-environments](http://www.infragistics.com/help/supported-environments).

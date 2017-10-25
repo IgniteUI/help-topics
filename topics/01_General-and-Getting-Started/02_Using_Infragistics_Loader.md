@@ -17,7 +17,7 @@ The Infragistics Loader is a component that asynchronously loads JavaScript and 
 
 To use the loader on a page you need to add reference to the `infragistics.loader.js` file. For instance:
 
-```html
+```
 <script type="text/javascript" src="http://localhost/igniteui/infragistics.loader.js"></script>
 ```
 
@@ -36,7 +36,7 @@ Depending on the needs of your page you may want to initialize the loader in dif
 ### Immediate Load and Notification
 If you want to immediately load resources and handle the load notification all at once, then you can implement the `ready` function during the initialization step. The following code demonstrates how to load the resources for the igGrid:
 
-```javascript
+```
 $.ig.loader({
     scriptPath: 'http://localhost/igniteui/js/',
     cssPath: 'http://localhost/igniteui/css/',
@@ -52,7 +52,7 @@ Notice how the `scriptPath` and `cssPath` point to the root location on the serv
 ### Immediate Load and Separate Notification
 Sometimes you may want to immediately load files, but handle the load notification in a separate place in your code. This next code block demonstrates how to separate the load action from the notification.
 
-```javascript
+```
 $.ig.loader({
     scriptPath: 'http://localhost/igniteui/js/',
     cssPath: 'http://localhost/igniteui/css/',
@@ -68,7 +68,7 @@ Here, the resources for the igGrid are still immediately loaded, but you have a 
 
 Starting in version 2016.2 the loader is deferring notifications of the resources availability til jQuery's document ready. This allows for convenient event flow inline with jQuery standards. The following code snippet demonstrates this new capability:
 
-```javascript
+```
 $.ig.loader({
     scriptPath: 'http://localhost/igniteui/js/',
     cssPath: 'http://localhost/igniteui/css/',
@@ -89,7 +89,7 @@ $(function () {
 ### Load on Demand
 When you define resources up front as an option while initializing the loader, all files are immediately downloaded. An alternative to this approach, however, is to load scripts on demand. Loading on demand can help boost the performance of your pages by deferring the file loading until the moment they are needed on the page. The following code demonstrates how to initialize the loader without immediately loading any files.
 
-```javascript
+```
 $.ig.loader({
     scriptPath: 'http://localhost/igniteui/js/',
     cssPath: 'http://localhost/igniteui/css/',
@@ -98,7 +98,7 @@ $.ig.loader({
 
 With the loader initialized you can then load files on demand.
 
-```javascript
+```
 $.ig.loader('igGrid', function () {
     console.log('igGrid resources are loaded');
 });
@@ -106,7 +106,7 @@ $.ig.loader('igGrid', function () {
 
 One way you might want to use this approach is only load resources when a specific button is clicked on the page:
 
-```javascript
+```
 $('#show-grid-button').click(function (e) {
     $.ig.loader('igGrid', function () {
         console.log('Loaded igGrid resources');
@@ -117,7 +117,7 @@ $('#show-grid-button').click(function (e) {
 ### Chaining
 Another option available it to chain the calls to the load method by passing in different resource expressions.
 
-```javascript
+```
 $.ig.loader({
         scriptPath: 'http://localhost/igniteui/js/',
         cssPath: 'http://localhost/igniteui/css/',
@@ -142,19 +142,19 @@ This section reviews the different ways you can format your expression to produc
 ### Loading Features
 Certain controls like igGrid, igHierarchicalGrid, igTreeGrid or igDataChart are modular and support "features" which represent code that may need to be downloaded separately from the control's core files. The dot (`.`) in a resource expression tells the loader to include features associated to the root control. For instance, if you want to load the igGrid on to your page, but also include the grid's Sorting feature, then you would use a resource expression like this:
 
-```javascript
+```
 igGrid.Sorting
 ```
 
 This expression tells the loader to load the core igGrid files as well as the files required to support the Sorting feature. You can use the dot more than once express all the features you want load. If you want to load Sorting, Filtering and Paging then you would use a resource expression like this:
 
-```javascript
+```
 igGrid.Sorting.Filtering.Paging
 ```
 
 Here is the above resource expression in context:
 
-```javascript
+```
 $.ig.loader({
     scriptPath: 'http://localhost/igniteui/js/',
     cssPath: 'http://localhost/igniteui/css/',
@@ -170,7 +170,7 @@ For more information on features and the literals values available for modular c
 ### Loading Multiple Resources
 The comma (`,`) in an expression allows you to load resources for more than one control at a time. For instance if you wanted to load resources for the grid, tree and combo all at one time then your expression would look like this:
 
-```javascript
+```
 $.ig.loader({
     scriptPath: 'http://localhost/igniteui/js/',
     cssPath: 'http://localhost/igniteui/css/',
@@ -186,7 +186,7 @@ $.ig.loader({
 ### Loading All Resources/Features
 The star (`*`) in an expression introduces a wildcard that tells the loader to load all the files for a control. This means that every file used for any possible feature of the control is loaded. You would use a wildcard expression like this:
 
-```javascript
+```
 $.ig.loader({
     scriptPath: 'http://localhost/igniteui/js/',
     cssPath: 'http://localhost/igniteui/css/',
@@ -202,7 +202,7 @@ $.ig.loader({
 ### Explicitly Loading Resources
 In some instances you may want to use the loader to load custom or external files in conjunction with %%ProductName%% resources. To explicitly load resources you simply need to add the path to the resource into the resource expression. The example below loads a custom JavaScript file with the igGrid core resources.
 
-```javascript
+```
 $.ig.loader({
     scriptPath: 'http://localhost/igniteui/js/',
     cssPath: 'http://localhost/igniteui/css/',
@@ -232,7 +232,7 @@ Often when building a resource expression all you need to use is the name of the
 
 For instance:
 
-```javascript
+```
 $.ig.loader({
     scriptPath: 'http://localhost/igniteui/js/',
     cssPath: 'http://localhost/igniteui/css/',
@@ -261,7 +261,7 @@ $.ig.loader({
 
 For instance:
 
-```javascript
+```
 $.ig.loader({
     scriptPath: 'http://localhost/igniteui/js/',
     cssPath: 'http://localhost/igniteui/css/',
@@ -288,7 +288,7 @@ $.ig.loader({
 
 For instance:
 
-```javascript
+```
 $.ig.loader({
     scriptPath: 'http://localhost/igniteui/js/',
     cssPath: 'http://localhost/igniteui/css/',
@@ -312,7 +312,7 @@ $.ig.loader({
 
 For instance:
 
-```javascript
+```
 $.ig.loader({
     scriptPath: 'http://localhost/igniteui/js/',
     cssPath: 'http://localhost/igniteui/css/',
@@ -325,14 +325,17 @@ If you initialize a control through MVC helpers, all dependent resources are loa
 
 The following demonstrates how to use the loader with the ASP.NET MVC helpers:
 
-```html
+**In Razor:**
+
+```
 <script src="http://localhost/igniteui/js/infragistics.loader.js"></script>
 
-<%= Html.Infragistics()
+$(Html.Infragistics()
     .Loader()
     .ScriptPath("http://localhost/igniteui/js/")
     .CssPath("http://localhost/igniteui/css/")
-    .Render()    %>
+    .Render()
+)
 ```
 
 ## <a id="localization"></a> Localization
@@ -350,6 +353,21 @@ The English and Japanese versions of %%ProductName%% have their respective resou
 
 The loader can also detect the browser's language setting and automatically switch to this locale. This behavior is controlled by the `autoDetectLocale` option, which is set to `false` by default. If `autoDetectLocale` is set and `locale` is set, the `locale` option takes precedence.
 
+You can also load multiple languages by listing them in a coma separated list.
+
+**In JavaScript:**
+	
+```js
+    $.ig.loader({
+    scriptPath: 'http://localhost/igniteui/js/',
+    cssPath: 'http://localhost/igniteui/css/',
+    resources: 'igHierarchicalGrid.Updating',
+    locale: 'en, ja, bg, ru'
+    });
+```
+
+This is usefull in cases when you want to allow changing the language for some or all of the components on the page runtime and need the related language files to be loaded on the page.
+
 ## <a id="regional-settings"></a> Regional Settings
 Regional settings are relevant to some %%ProductName%% controls like editors where numeric and currency values are formatted differently depending on the region. The loader automatically loads regional settings by inferring it from the locale or from auto-detecting is from the browser.
 
@@ -363,7 +381,24 @@ All regional files can be found in folder:
 {%%ProductName%% resources root}/js/modules/i18n/regional/
 ```
 
+
+You can also load multiple regionals by listing them in a coma separated list.
+
+**In JavaScript:**
+	
+```js
+    $.ig.loader({
+    scriptPath: 'http://localhost/igniteui/js/',
+    cssPath: 'http://localhost/igniteui/css/',
+    resources: 'igHierarchicalGrid.Updating',
+    regional: 'en, ja, bg, ru'
+    });
+```
+This is usefull in cases when you want to allow changing the regional settings for some or all of the components on the page runtime and need the related regional setting files to be loaded on the page.
+
 The following code loads the hierarchical grid with the Updating feature enabled (which uses the %%ProductName%% editor controls) for the Bulgarian locale using Great Britain English.
+
+**In JavaScript:**
 
 ```javascript
 $.ig.loader({

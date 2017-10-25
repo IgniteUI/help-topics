@@ -27,7 +27,6 @@ This topic contains the following sections:
     -   Referencing Infragistics JavaScript from a custom download
     -   Referencing JavaScript resources using the Infragistics Loader
     -   Referencing the combined and minified JavaScript file
-    -   Referencing the Infragistics template engine JavaScript file
 -   [Referencing External JavaScript Resources](#referencing_external_libraries)
    -   Referencing external resources summary
     -   Referencing JavaScript libraries
@@ -45,14 +44,15 @@ This topic contains the following sections:
 
 ### Referencing Infragistics JavaScript resources summary
 
-To work with %%ProductName%%, you must reference the Infragistics resources in your Web application. You can reference these resources in three different ways.
+To work with %%ProductName%%, you must reference the Infragistics resources in your Web application. You can reference these resources in four different ways.
 
 -	**Including a custom JavaScript file**: This is the recommended approach to reference %%ProductName%% JavaScript files. You can [create a custom download](%%SamplesUrl%%/download) of selected %%ProductName%% controls and components.
 
--	**Using Infragistics Loader**: The *Infragistics Loader* can be used to resolve all the Infragistics resources (styles and scripts)
+-	**Using Infragistics Loader**: The *Infragistics Loader* can be used to resolve all the Infragistics resources (styles and scripts).
 
--	**Including individual JavaScript files** : You can manually reference all the required files
+-	**Using the combined and minified JavaScript files**: You can use the combined files that contain all components and their dependencies.
 
+-	**Including individual JavaScript files** : You can manually reference all the required files.
 
 ### Referencing Infragistics JavaScript from a custom download
 
@@ -64,15 +64,15 @@ To create an %%ProductName%% custom build, go to the [custom download page](%%Sa
 <script src="../scripts/infragistics.js" type="text/javascript"></script>
 ```
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
-<%@ Import Namespace="Infragistics.Web.Mvc" %>
+@using Infragistics.Web.Mvc;
 <!DOCTYPE html>
 <html>
 <head runat="server">
 ..    
-<script src="<%= Url.Content("~/scripts/infragistics.js") %>" type="text/javascript"></script>
+<script src="@(Url.Content("~/scripts/infragistics.js"))" type="text/javascript"></script>
 ```
 
 ### Referencing JavaScript resources using the Infragistics Loader
@@ -118,40 +118,18 @@ The combined scripts for all Infragistics JavaScript files is the following:
 <script src="../scripts/infragistics.dv.js" type="text/javascript"></script>
 ```
 
-**In ASPX:**
+**In Razor:**
 
 ```csharp
-<%@ Import Namespace="Infragistics.Web.Mvc" %>
+@using Infragistics.Web.Mvc;
 <!DOCTYPE html>
 <html>
 <head runat="server">
 ..    
-<script src="<%= Url.Content("~/scripts/infragistics.core.js") %>" type="text/javascript"></script>
-<script src="<%= Url.Content("~/scripts/infragistics.lob.js") %>" type="text/javascript"></script>
-<script src="<%= Url.Content("~/scripts/infragistics.dv.js") %>" type="text/javascript"></script>
+<script src="@(Url.Content("~/scripts/infragistics.core.js"))" type="text/javascript"></script>
+<script src="@(Url.Content("~/scripts/infragistics.lob.js"))" type="text/javascript"></script>
+<script src="@(Url.Content("~/scripts/infragistics.dv.js"))" type="text/javascript"></script>
 ```
-
-### Referencing the Infragistics template engine JavaScript file
-
-Currently jQuery controls use Infragistics template engine. The following code adds the minimal set of necessary JavaScript files needed to enable IG Template engine.
-
-**In HTML:**
-
-```html
-<script src="../scripts/ig.templating.js" type="text/javascript"></script>
-```
-
-**In ASPX:**
-
-```csharp
-<%@ Import Namespace="Infragistics.Web.Mvc" %>
-<!DOCTYPE html>
-<html>
-<head runat="server">
-..    
-<script src="<%= Url.Content("~/scripts/ig.templating.js") %>" type="text/javascript"></script>
-```
-
 
 
 ##<a id="referencing_external_libraries"></a>Referencing External JavaScript Resources
@@ -161,19 +139,9 @@ Currently jQuery controls use Infragistics template engine. The following code a
 
 The **Modernizr**, **JQuery**, and **JQuery UI** JavaScript libraries are always required in your projects including the %%ProductName%%. The Modernizr library detects the current browser features, allowing the controls to identify a touch or non-touch environment.
 
-Note: You need to include a JSON parser implementation for Internet Explorer 7, because it doesn't include a native JSON parser. Such parser is provided by [JSON-js](https://github.com/douglascrockford/JSON-js) library. Remember that you need to include JSON-js library before any other JavaScript Library.
-
 ### Referencing JavaScript libraries
 
 References needed to include the libraries mentioned above:
-
--   JSON-js library (only for Internet Explorer 7):
-
-**In HTML:**
-
-```html
-<script scr="../scripts/json.js" type="text/javascript"></script>
-```
 
 -   Modernizr library:
 
@@ -210,7 +178,7 @@ References needed to include the libraries mentioned above:
 
 %%ProductName%% ships with resources for English and Japanese languages.
 
-Starting with Volume 2012.2 we will provide Russian ([ru]), Bulgarian ([bg]), German ([de]), Spanish ([es]) and French ([fr]) localization as part of the product. Localization files must be placed in the localization folder `../js/i18n` (where *js* is the root folder for the JavaScript files in the %%ProductName%% program installation).
+Since Volume 2012.2 we provide Russian ([ru]), Bulgarian ([bg]), German ([de]), Spanish ([es]) and French ([fr]) localization as part of the product. Localization files must be placed in the localization folder `../js/i18n` (where *js* is the root folder for the JavaScript files in the %%ProductName%% program installation).
 
 After adding Infragistics resources, the *scripts* folder of your Web application will have a *modules* folder. Under the modules folder localization resources for modular widgets (igGrid) need to be combined into one file.
 
@@ -233,7 +201,9 @@ The examples below will demonstrate how to include Bulgarian localization resour
 
 ### Referencing English and Japanese localization
 
-If the resources are combined with the widget and all EN resources are combined with the widget JavaScript then there is no need to include **-en.js**. If it’s English locale and English product have been installed. In the same manner no need to include **-ja.js* resources if it’s Japanese locale and Japanese product was installed.
+We have two redistributable packages, one for English and one for Japanese. Each is installed respectively by the English and Japanese product installers.
+When using the English redistributable package there is no need to include references to the  **-en.js** locale scripts, since its localization strings are combined inside the controls code.
+Similarly when using the Japanese redistributable package there's no need to include the **-ja.js** locale scripts, since they're already combined in the files.
 
 ### Code example: referencing localization resources using the Infragistics Loader
 
