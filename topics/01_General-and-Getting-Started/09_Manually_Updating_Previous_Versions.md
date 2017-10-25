@@ -97,7 +97,7 @@ If you don’t have this version installed, you need to download the %%ProductNa
 
 -   The latest version of the jQuery UI themes.
 
-By default, the installer places the new themes in:`%%InstallPath%%\themes.`  If you don’t have this version installed, you need to download the %%ProductName%% installation .zip file available from [here](http://jqueryui.com/download).
+By default, the installer places the new themes in:`%%InstallPath%%\css\themes.`  If you don’t have this version installed, you need to download the %%ProductName%% installation .zip file available from [here](http://jqueryui.com/download).
 
 -   The latest version of the %%ProductName%% assemblies.
 
