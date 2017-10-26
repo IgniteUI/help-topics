@@ -92,5 +92,5 @@ For next releases it is planned to add a message that will be shown when minimum
 
 ### <a id="MVCWrappers"></a>Setting views option though MVC wrapper is not possible.
 
-Currently it is not possible to set `views` option through `igScheduler` ASP.NET MVC wrapper. By this option you set which view to be or no to be displayed (`Agenda`, `Week`, `Day`, `Month`). This is planned to be implemented for the next scheduler version.
+Using the `views` option exposed by the MVC wrapper to control which views(`Agenda`, `Week`, `Day`, `Month`) are initialized does not work. This will be implemented for the next scheduler version.
 
