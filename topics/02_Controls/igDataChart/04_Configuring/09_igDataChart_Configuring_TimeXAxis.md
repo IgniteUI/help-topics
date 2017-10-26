@@ -10,7 +10,7 @@
 
 # Configuring the TimeXAxis (igDataChart)
 
-This topic demonstrates, with code examples, how to use TimeXAxis in the `igDataChart`™ control. The benefit of using TimeXAxis is to accurately label data, dynamically, as either date, time or both at any range necessary. 
+This topic demonstrates, with code examples, how to use TimeXAxis in the `igDataChart`™ control. The benefit of using TimeXAxis is to dynamically change label formats as you zoom in or out of the data.  In addition, axis breaks can be created which omit dates within a range.  For example, weekends can be skipped.
 
 This topic is organized as follows:
 
