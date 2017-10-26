@@ -16,7 +16,13 @@
 
 The topics in this group explain both the Scatter Area and Scatter Contour series.  Both series take a list of points containing three values (X, Y and Z) and triangulate these points using the X and Y values in order to generate a two-dimensional surface that is rendered on screen.  The Z value is used for coloring the surface using a color scale.  This allows an easy visualization of value changes across a two-dimensional space.  An example might be displaying wifi strength across different locations in an office.
 
-![](images/jQuery_mini_scatter_area_01.png)![](images/jQuery_mini_scatter_contour_01.png)
+Figure 1. Scatter Area Series
+
+![some title](images/jQuery_mini_scatter_area_01.png)
+
+Figure 2. Scatter Contour Series
+
+![](images/jQuery_mini_scatter_contour_01.png)
 
 ### Topics
 
