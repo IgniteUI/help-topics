@@ -33,14 +33,14 @@ The following table lists the Recurrence properties and their purpose:
 
 Property |	Purpose
 ---|---
-recurrence | This string property is used to get and set a recurrence pattern for the recurrence root activity. Example `FREQ=DAILY;INTERVAL=1;COUNT=2;WKST=MO`
-isRecurrenceRoot | This read only boolean property is used to determine if the activity is a recurrence root activity.
-recurrenceRoot | Used to obtain the `root recurrence activity` or `null` if the activity is not associated with a recurrence.
-recurrenceId | This read only string property is used to obtain the `ID` of the `root recurrence activity` or `null` if the activity is not associated with a recurrence.
+recurrence | Gets/Sets a recurrence pattern for the recurrence root activity. Example `FREQ=DAILY;INTERVAL=1;COUNT=2;WKST=MO`
+isRecurrenceRoot | A boolean property indicating if the activity is a recurrence root activity..
+recurrenceRoot | Returns the `root recurrence activity` or `null` if the activity is not associated with a recurrence.
+recurrenceId | Returns the `ID` of the `root recurrence activity` or `null` if the activity is not associated with a recurrence.
 
 ### Code example
 
-The following code example demonstrates how to create a recurrent appointment with a monthly recurrence rule and 2 repetitions:
+The following code example demonstrates how to create a recurrent appointment with a monthly recurrence rule and 5 repetitions:
 
 
 ```javascript
@@ -62,7 +62,7 @@ var dentistAppointment = {
 $("#scheduler").igScheduler("createAppointment", dentistAppointment);
 ```
 *Note:*
-`Recurrence` field can accept data in format `'FREQ=MONTHLY;INTERVAL=1;COUNT=2;WKST=MO'`, `start` and `end` fields can accept `'18/10/2018'` string.
+`Recurrence` field can accept data in format `'FREQ=MONTHLY;INTERVAL=1;COUNT=2;WKST=MO'`, `start` and `end` fields accept a JavaScript date object or a string `'18/10/2018'`.
 
 ## Related topics
 

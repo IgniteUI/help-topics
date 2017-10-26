@@ -74,7 +74,7 @@ This topic explains how data is presented in the igScheduler's week view.
 
 ### Configuring
 
-The following table maps some configurable aspect/behavior of the week view to the property/method that is responsible for:
+The following table maps some configurable aspect/behavior of the week view to the corresponding property/method that is responsible for:
 
 Aspect | Description | Property
 ---|---|---

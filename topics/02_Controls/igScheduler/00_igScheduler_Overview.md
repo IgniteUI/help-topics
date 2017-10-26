@@ -214,7 +214,7 @@ The following screenshot shows the month view combined with agenda view with its
 The Week View of the `igScheduler` is visualizing all seven week days based on the currently selected day. This view contains time-slot segments with same length and different height based on the time range of the appointment.
 
 
-The following screenshot shown the Week View along with its visual elements:
+The following screenshot shows the Week View along with its visual elements:
 
 1. Navigation Header
 
@@ -238,9 +238,7 @@ The following properties could be used in order to configure different week view
 
 Shows hour-based view of the selected day, the hours are listed vertically going from top to bottom. This view contains time-slot segments with same length and different height based on the time range of the appointment.
 
-The following screenshot shown the Day View along with its visual elements:
-
-The following screenshot shown the Day View along with its visual elements:
+The following screenshot shows the Day View along with its visual elements:
 
 1. Navigation Header
 
