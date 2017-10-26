@@ -42,7 +42,7 @@ The following table presents the events related to the cell editing functionalit
 | [`editModeEntered`](%%jQueryApiUrl%%/ui.igspreadsheet#events:editModeEntered)    | Invoked when the Spreadsheet has started in-place editing of the [`activeCell`](%%jQueryApiUrl%%/ui.igspreadsheet#options:activeCell). 	|
 | [`editModeExiting`](%%jQueryApiUrl%%/ui.igspreadsheet#events:editModeExiting)    | Invoked when the Spreadsheet is about to end the in-place editing of the [`activeCell`](%%jQueryApiUrl%%/ui.igspreadsheet#options:activeCell). 	|
 | [`editModeExited`](%%jQueryApiUrl%%/ui.igspreadsheet#events:editModeExited)      | Invoked when the Spreadsheet has ended the in-place editing of the [`activeCell`](%%jQueryApiUrl%%/ui.igspreadsheet#options:activeCell). 	|
-| [`editModeValidationError`](%%jQueryApiUrl%%/ui.igspreadsheet#events:editModeValidationError)    |  Invoked when the Spreadsheet is exiting edit mode and the new value for the [`activeCell`](%%jQueryApiUrl%%/ui.igspreadsheet#options:activeCell) is not valid based on the criteria of that cell's [`ig.excel.DataValidationRule`](ig.excel.DataValidationRule).	|
+| [`editModeValidationError`](%%jQueryApiUrl%%/ui.igspreadsheet#events:editModeValidationError)    |  Invoked when the Spreadsheet is exiting edit mode and the new value for the [`activeCell`](%%jQueryApiUrl%%/ui.igspreadsheet#options:activeCell) is not valid based on the criteria of that cell's [`ig.excel.DataValidationRule`](%%jQueryApiUrl%%/ig.excel.DataValidationRule).	|
 
 If you want to cancel editing of all the cells, then you just need to cancel [`editModeEntering`](%%jQueryApiUrl%%/ui.igspreadsheet#events:editModeEntering) event:
 ```
