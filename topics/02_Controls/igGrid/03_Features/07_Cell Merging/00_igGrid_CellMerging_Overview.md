@@ -41,13 +41,13 @@ This topic contains the following sections:
 
 ## <a id="introduction"></a> Introduction
 
-The feature allows users to merge the cells in a column visually or physically when they have the same value (display text). Enabling the feature by default will apply visually the cell merging when a column is being sorted. This means that if single sorting is used, when you sort a different column, the previous column loses the cell merging applied.
+The feature allows users to merge the cells in a column visually or physically based on either pre-defined or custom criteria. Enabling the feature will, by default, apply visual cell merging for sorted columns. Columns that are not sorted lose their merged states.
 
-Since by default cell merging is applied only on sorting, by setting the [*mergeOn*](%%jQueryApiUrl%%/ui.iggridcellmerging#options:mergeOn) property to "always" the user can enable the feature to merge cells when the grid is initialized and throughout the interaction with it. This is useful when working with a presorted data source.
+Users can change the default behavior with the [*mergeOn*](%%jQueryApiUrl%%/ui.iggridcellmerging#options:mergeOn) property. Setting it to "always" enables the feature to merge cells when the grid is initialized and between operations causing it to re-render. This is particularly useful when working with i.e. grids bound to presorted data sources.
 
 #### <a id="intro-visual"></a> Visual Cell Merging
 
-By default when enabling Cell Merging the method by which cells in a column are merged is by a special styling as illustrated in the following screenshot.
+By default enabling Cell Merging will cause cells in sorted columns to be merged visually with styling rules as illustrated in the following screenshot.
 
 ![](images/igGrid_CellMerging_Visual.jpg)
 
@@ -57,15 +57,15 @@ You may use the predefined CSS classes in order to customize the look of the mer
 
 #### <a id="intro-physical"></a> Physical Cell Merging
 
-If the user need to have only one cell in the place of the merged cells the physical cell merging can be used. This is useful for text that could span across multiple cells when merged. The way it works is the same way cell merging would work on an HTML Table by setting *rowspan* of a cell, that could span multiple rows. This method is illustrated in the following screenshot.
+If the user needs to have only one cell in the place of the merged group of cells, physical merging is available. It is useful for text that could span across multiple cells when merged. The way it works is the same way cell merging would work on an HTML Table by setting *rowspan* of a cell that could span multiple rows. This method is illustrated in the following screenshot.
 
 ![](images/igGrid_CellMerging_Physical.jpg)
 
-The resulting merged cells can be styled through custom css class called [*ui-iggrid-physicalmergedcell*](%%jQueryApiUrl%%/ui.iggridcellmerging#theming:ui-iggrid-physicalmergedcell). It is useful for example when the user want to position the text of the cells differently from the default vertical center position.
+The resulting merged cells can be styled through a custom CSS class called [*ui-iggrid-physicalmergedcell*](%%jQueryApiUrl%%/ui.iggridcellmerging#theming:ui-iggrid-physicalmergedcell). It could be used to e.g. position the text of the cells differently.
 
 ## <a id="enabling"></a> Enabling Cell Merging
 
-The `igGrid`, by default, does not enable cell merging so you will need to enable it explicitly. This is done differently in JavaScript and ASP.NET MVC.
+`igGrid`, by default, does not enable cell merging so you will need to enable it explicitly. This is done differently in JavaScript and ASP.NET MVC.
 
 To enable Cell Merging in… | Do this…
 ---------------------------|---------
@@ -74,7 +74,7 @@ ASP.NET MVC | Instantiate the Cell Merging feature in the delegate passed to the
 
 ### <a id="enabling-js"></a> Enabling Cell Merging in JavaScript
 
-The following code creates an `igGrid` instance bound to the Products table data from the AdventureWorks database. The columns are auto-generated. Cell Merging is enabled with its default configuration (`initialState` is `regular`).
+The following code creates an `igGrid` instance bound to the Products table data from the AdventureWorks database. The columns are auto-generated. Cell Merging is enabled with its default configuration.
 
 **In JavaScript:**
 
@@ -85,7 +85,7 @@ The following code creates an `igGrid` instance bound to the Products table data
 
 ### <a id="enabling-mvc"></a> Enabling Cell Merging in ASP.NET MVC
 
-The following code creates `igGrid` instance bound to a custom `Product` object collection defined as a View model. The columns are auto-generated. Enable Cell Merging with its default configuration (`initialState` is `regular`).
+The following code creates an `igGrid` instance bound to a custom `Product` object collection defined as a View model. The columns are auto-generated. Enable Cell Merging with its default configuration.
 
 **In Razor:**
 
@@ -143,7 +143,7 @@ $("#grid1").igGrid({
 
 The following sample demonstrates how to set the Cell Merging’s mergeOn rule so that the cells for column with key "City" will be merged at all times. 
 
-If we have Sorting feature enabled and we sort a column, cell merging will be applied to it as well. This is due to the default behavior of Cell Merging and because we haven't set options for the other columns. That is why the "City" column cells will remain merged.
+If we have the Sorting feature enabled and we sort a column, cell merging will be applied to it as well. This is due to the default behavior of Cell Merging and because we haven't set options for the other columns. That is why the "City" column cells will remain merged.
 
 **In JavaScript:**
 
