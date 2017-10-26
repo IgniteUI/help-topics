@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# Using Legend with igShapeChart
+# Using Legend (igShapeChart)
 
 This topic explains, with a code example, how to add a legend to the igShapeChart control.
 
@@ -24,6 +24,7 @@ The following topics are prerequisites to understanding this topic:
 - [Preview](#Preview)
 - [Code Example](#CodeExample)
 - [Related Content](#Related)
+- [Samples](#Samples)
 
 <a id="Introduction" />
 ### Introduction
@@ -79,5 +80,12 @@ The following code example shows how to use a legend for multiple series plotted
 <a id="Related" />
 ### Related Content
 
-- [Binding to Shape File Data](shapechart-binding-to-shapefile-data.html)
-- [Binding to Break Even Data](shapechart-binding-to-break-even-data.html)
+- [Binding to Shape File Data](shapechart-binding-shapefile-data.html)
+- [Binding to Break Even Data](shapechart-binding-break-even-data.html)
+
+<a id="Samples" />
+### Samples
+
+The following sample provides additional information related to this topic.
+
+-	[Using Legend](%%SamplesUrl%%/shape-charts/using-legend):  This sample demonstrates usage of a legend with the `igShapeChart` control.

@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# Binding ShapeFile Data in igShapeChart
+# Binding ShapeFile Data (igShapeChart)
 
 This topic explains, with code examples, how to bind the igShapeChart control to shape file data.
 
@@ -25,6 +25,7 @@ The following topics are prerequisites to understanding this topic:
 - [Binding the igShapeChart to a Shape File](#CodeExampleSingle)
 - [Binding the igShapeChart to Multiple Shape Files](#CodeExampleMulti)
 - [Related Content](#Related)
+- [Samples](#Samples)
 
 <a id="Overview" />
 ### Overview
@@ -128,6 +129,13 @@ Following the steps above will result in an igShapeChart that looks like the fol
 <a id="Related" />
 ### Related Content
 
-- [Binding to Break-Even Data](shapechart-binding-to-break-even-data.html)
-- [Using Legend](shapechart-using-legend.html)
+- [Binding to Break-Even Data](shapechart-binding-break-even-data.html)
+- [Using Legend](shapechart-using-legend-with-shapechart.html)
 
+<a id="Samples" />
+### Samples
+
+The following samples provide additional information related to this topic.
+
+-	[Binding a Shapefile](%%SamplesUrl%%/shape-charts/binding-shapefile-single):  This sample demonstrates the `igShapeChart` control binding to a single shape file.
+-	[Binding Multiple Shapefiles](%%SamplesUrl%%/shape-charts/binding-shapefile-multi):  This sample demonstrates the `igShapeChart` control binding to multiple shape files.

@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# Configuring Axis Ranges in igShapeChart
+# Configuring Axis Ranges (igShapeChart)
 
 In the `igShapeChart` control, both the axes are numeric. The range on these numeric axes is the difference in numeric values from the beginning of the axis to the end, or from the smallest to largest values in the underlying data. The range minimum is the lowest value of the axis. The range maximum is the highest value of the axis.
 
@@ -61,5 +61,5 @@ Following the steps above will result in an igShapeChart control that looks like
 
 <a id="Related" />
 ## Related Content
-- [Configuring Axis Tickmarks](shapechart-configuring-axis-tickmarks.html)
-- [Configuring Axis Titles](shapechart-configuring-axis-titles.html)
+- [Configuring Axis Labels](shapechart-configuring-axis-labels.html)
+- [Configuring Axis Intervals](shapechart-configuring-axis-intervals.html)

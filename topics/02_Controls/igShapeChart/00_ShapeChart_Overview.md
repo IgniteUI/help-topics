@@ -36,10 +36,16 @@ In addition, the Shape Chart can render break-even data as long as at least one 
 ![](images/shapechart-breakeven-01.png)
 
 
-*Related topics:* 
+### Related topics:
 
 - [Getting Started](shapechart-getting-started-with-shapechart.html)
 
-- [Binding to Shape File Data](shapechart-binding-to-shapefile-data.html)
+- [Binding to Shape File Data](shapechart-binding-shapefile-data.html)
 
-- [Binding to Break Even Data](shapechart-binding-to-break-even-data.html)
+- [Binding to Break Even Data](shapechart-binding-break-even-data.html)
+
+### Samples
+
+The following sample provides additional information related to this topic.
+
+-	[Shape Chart Types](%%SamplesUrl%%/shape-charts/shape-chart-types):  This sample showcases the different chart types for use with the `igShapeChart` control.

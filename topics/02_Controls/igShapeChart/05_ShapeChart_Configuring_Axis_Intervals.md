@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# Axis Interval
+# Configuring Axis Intervals (igShapeChart)
 
 ### Purpose
 This topic demonstrates explains how to configure the major and minor intervals for chart axes of the igShapeChart control. 
@@ -59,16 +59,14 @@ $(function () {
 
 ## <a id="relatedtopics"/>Related Topics:
 
-- [Walkthrough](shapechart-adding.html)
+- [Configuring Axis Labels](shapechart-configuring-axis-labels.html)
 
-- [Binding to Data](shapechart-binding-to-data.html)
+- [Configuring Axis Range](shapechart-configuring-axis-ranges.html)
 
-- [Configuring Axis Gap and Overlap](shapechart-configuring-axis-gap-and-overlap.html)
 
-- [Configuring Axis Labels](shapechart-axis-labels.html)
+<a id="Samples" />
+### Samples
 
-- [Configuring Axis Range](shapechart-configuring-axis-range.html)
+The following sample provides additional information related to this topic.
 
-- [Configuring Axis Tickmarks](shapechart-axis-tickmarks.html)
-
-- [Configuring Axis Titles](shapechart-configuring-axis-titles.html)
+-	[Configuring Axis Intervals](%%SamplesUrl%%/shape-charts/axis-intervals):  This sample demonstrates how to configure the axis intervals for the `igShapeChart` control.
