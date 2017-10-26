@@ -37,7 +37,7 @@ Issue | Description | Status
 [Swipe-gestures support](#SwipeGesture) | No swipe-gestures support |![](../../images/images/negative.png)
 [Tab navigation to appointment popover](#NavigationToAppointmentPopover) | No tab navigation to appointment popover |![](../../images/images/negative.png)
 [Min width support – 320 px](#MinWidthSupport) | Minimum width resolution support on mobile devices is 320 px |![](../../images/images/negative.png)
-[MVC wrappers ](#MVCWrappers) | No MVC wrappers  |![](../../images/images/negative.png)
+[Setting views option though MVC wrapper is not possible.](#MVCWrappers) | You are not able to set views option, through ASP.NET MVC wrapper.  |![](../../images/images/plannedFix.png)
 
 
 ## Known Issues and Limitations Details
@@ -90,7 +90,7 @@ There is accessibility limitation with `tab navigation` and `selection` of appoi
 
 For next releases it is planned to add a message that will be shown when minimum resolution is reached.
 
-### <a id="MVCWrappers"></a>MVC Wrappers
+### <a id="MVCWrappers"></a>Setting views option though MVC wrapper is not possible.
 
-Currently it is not possible to instantiate Scheduler in a View, `igScheduler` ASP.NET MVC wrappers are planned to be implemented for the next scheduler version.
+Currently it is not possible to set `views` option through `igScheduler` ASP.NET MVC wrapper. By this option you set which view to be or no to be displayed (`Agenda`, `Week`, `Day`, `Month`). This is planned to be implemented for the next scheduler version.
 

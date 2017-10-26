@@ -72,6 +72,8 @@ Feature | Description
 [Week View](#weekView)| Visualizing the activities by rendering them in a vertical list with time slots.|
 [Day View](#dayView)| Visualizing the activities by rendering them in a vertical list with time slots. The time slots' duration can be configured.|
 [Recurrent Activity](#recurrentActivity)| Used when you need to have repetitions of an activity following a specific recurrence pattern (for example each day at a specific hour or each month at a specific date).
+[Scheduler MVC wrapper](igscheduler-asp-net-mvc-wrapper.html) | Build ASP.NET MVC wrapper for `igScheduler`.
+
 
 ## General
 
