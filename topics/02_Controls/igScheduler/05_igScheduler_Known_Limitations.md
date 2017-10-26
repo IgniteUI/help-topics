@@ -28,10 +28,8 @@ Below are listed all current limitations for the initial version of the `igSched
 
 Issue | Description | Status
 ---|---|---
-[Reoccurring events](#NoReccuringEvents) | Reoccurring appointments are currently not supported |![](../../images/images/negative.png)
 [Time-zone offsetting](#NoTimeZoneOffsetting) | Time-zone offset settings details|![](../../images/images/negative.png)
 [Custom color scheme](#NoCustomColorScheme) | Pre-defined custom color scheme is used |![](../../images/images/negative.png)
-[Day and week views](#NoDayAndWeekViews) | Day and Week views are missing for this version |![](../../images/images/negative.png)
 [Templating](#NoTemplating) | Templating and changing of appointment appearance is not supported |![](../../images/images/negative.png)
 [ARIA support for appointments in calendar (Canvas)](#ARIASupport) | No ARIA support for appointments in calendar (Canvas) |![](../../images/images/negative.png)
 [First day of the week setting](#FirstDayOfWeek) | First day of the week settings are set to `Sunday` by design |![](../../images/images/negative.png)
@@ -45,10 +43,6 @@ Issue | Description | Status
 ## Known Issues and Limitations Details
 
 
-### <a id="NoReccuringEvents"></a>No reccuring events
-
-The scheduler cannot create pre-defined events like weekly meetings, anniversaries and birthdays or other units of time that occurs more than once.
-
 ### <a id="NoTimeZoneOffsetting"></a>No time-zone offset settings
 
 Time in the `igScheduler` is always shown according to the current browser offset (hours). For now the scheduler doesn't support showing times in a zone different from the browser's time zone.
@@ -59,18 +53,6 @@ Pre-defined color scheme with twelve colors is provided by the scheduler, which 
 
 ![](images/preDefinedColors.png)
 
-### <a id="NoDayAndWeekViews"></a>No day and week views
-
-Currently only Month and Agenda views can be displayed by the scheduler. `isAgendaVisible` option from `monthViewSettings` settings could be used in order to use both Agenda and Month view at the same time.
-
-```js
-$("#scheduler").igScheduler({
-    views: ["month", "agenda"],
-    monthViewSettings: {
-        isAgendaVisible: true
-    },
-});
-```
 
 ### <a id="NoTemplating"></a>No templating
 

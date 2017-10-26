@@ -66,6 +66,12 @@ Feature | Description
 Feature | Description
 ---|---
 [Physical Cell Merging](#cell-merging) | The igGrid Cell Merging feature now supports physical cell merging.
+### igScheduler
+Feature | Description
+---|---
+[Week View](#weekView)| Visualizing the activities by rendering them in a vertical list with time slots.|
+[Day View](#dayView)| Visualizing the activities by rendering them in a vertical list with time slots. The time slots' duration can be configured.|
+[Recurrent Activity](#recurrentActivity)| Used when you need to have repetitions of an activity following a specific recurrence pattern (for example each day at a specific hour or each month at a specific date).
 
 ## General
 
@@ -100,8 +106,8 @@ The following new options and methods have been introduced in order to allow set
 
 #### Global settings and APIs
 ##### settings
-	
-Option Name | Description| Default value 
+
+Option Name | Description| Default value
 ------------|----------- |--------------
 $.ig.util.language | Gets/Sets global language used for all controls on initialization. | en
 $.ig.util.regional | Gets/Sets global regional used for all controls on initialization. | en-US
@@ -128,7 +134,7 @@ locale | Sets/Gets the locale setting for the widget. | null
 
 Version 17.2 of the product adds support for editing of the spreadsheet's cells, extending the inaugural features of the Spreadsheet control. There are several new API events, methods and options that can be used when manipulating spreadsheet content.
 
-New events: 
+New events:
 -   [`editModeEntering`](%%jQueryApiUrl%%/ui.igspreadsheet#events:editModeEntering) - Invoked when the Spreadsheet is about to start in-place editing of the [`activeCell`](%%jQueryApiUrl%%/ui.igspreadsheet#options:activeCell).
 -   [`editModeEntered`](%%jQueryApiUrl%%/ui.igspreadsheet#events:editModeEntered) - Invoked when the Spreadsheet has started in-place editing of the [`activeCell`](%%jQueryApiUrl%%/ui.igspreadsheet#options:activeCell).
 -   [`editModeExiting`](%%jQueryApiUrl%%/ui.igspreadsheet#events:editModeExiting) - Invoked when the Spreadsheet is about to end the in-place editing of the [`activeCell`](%%jQueryApiUrl%%/ui.igspreadsheet#options:activeCell).
@@ -146,7 +152,7 @@ New options:
 
 #### Related Topics
 -   [igSpreadsheet Overview](igspreadsheet-overview.html)
--   [Editing API (igSpreadsheet)](igspreadsheet-editing.html) 
+-   [Editing API (igSpreadsheet)](igspreadsheet-editing.html)
 
 #### Related Samples
 -   [Overview](%%SamplesUrl%%/spreadsheet/overview)
@@ -204,7 +210,7 @@ In MVC:
 	.Render())
 ```
 
-## igValidator 
+## igValidator
 
 ### <a id="execute-all-rules"></a> Execute all rules
 The `igValidator` now supports a new [`executeAllRules`](%%jQueryApiUrl%%/ui.igValidator#options:executeAllRules) option that allows multiple rules to run even if one has already failed and thus produce and display multiple error messages.
@@ -229,7 +235,7 @@ In addition, the Shape Chart can render break-even data as long as at least one 
 
 #### Related Topics
 -   [igShapeChart Overview](shapechart-overview.html)
--   [Getting Started with Shapechart](shapechart-getting-started-with-shapechart.html) 
+-   [Getting Started with Shapechart](shapechart-getting-started-with-shapechart.html)
 
 ## igDataChart
 
@@ -237,6 +243,19 @@ In addition, the Shape Chart can render break-even data as long as at least one 
 
 A new axis, TimeXAxis is added to the igDataChart this release. It allows you to accurately label data dynamically as either date, time or both.
 
+## igScheduler
+
+### <a id="weekView"></a> Week View
+This view is visualizing the activities by rendering them in a vertical list with time slots. It is possible to show all seven week days or only the working days by using `weekViewDiplayMode` property.
+Configuration to show all 24 hours or only the working hours is also possible.
+
+
+### <a id="dayView"></a> Day View
+Visualizing the activities by rendering them in a vertical list with time slots. Each activity occupies only the time slots between its start and end time.
+This view has the ability to show up to 7 days. You can configure the day view to display all 24 hours or only the working hours.
+
+### <a id="recurrentActivity"></a> Recurrent Activity
+The activity recurrence is used when you need to have repetitions of an activity following a specific recurrence pattern (for example each day at a specific hour or each month at a specific date).
 #### Related Topics
 -   [Configuring TimeXAxis (igDataChart)](igdatachart-configuring-timexaxis.html)
 
@@ -258,7 +277,7 @@ The igGrid Cell Merging feature now supports physical cell merging. The merging 
 ```js
 $("#grid").igGrid({
  features: [
- 	{ 
+ 	{
    	 	name: "Sorting"
     },
  	{
@@ -273,7 +292,7 @@ With this mode the cell DOM elements are physically merged into one cell with a 
 
 The following additional options have been added in order to allow further customization of the merging behavior:
 
- Option Name | Description | Default value 
+ Option Name | Description | Default value
 -------------|-------------|---------------
 [mergeOn](%%jQueryApiUrl%%/ui.iggridcellmerging#options:mergeOn) | Defines when merging should be applied. | "sorting"
 [mergeStrategy](%%jQueryApiUrl%%/ui.iggridcellmerging#options:mergeStrategy) | Defines the rules merging is based on. | "duplicate"

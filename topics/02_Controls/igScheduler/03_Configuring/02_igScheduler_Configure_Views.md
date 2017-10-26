@@ -68,6 +68,35 @@ Week number visibility | Controls the visibility of the week numbers in a MonthV
 Agenda - Month view split orientation | Controls the orientation, which determines whether the MonthView and AgendaView views are split vertically or horizontally. This option can be used when the AgendaView is displayed in the MonthView.
  | [viewSplitOrientation](%%jQueryApiUrl%%/ui.igscheduler#options:monthViewSettings.viewSplitOrientation)
 
+## Week View
+
+This topic explains how data is presented in the igScheduler's week view.
+
+### Configuring
+
+The following table maps some configurable aspect/behavior of the week view to the corresponding property/method:
+
+Aspect | Description | Property
+---|---|---
+Display mode | The week view can be configured to show all 7 week days or only the days configured as working days. | [weekViewDisplayMode](%%jQueryApiUrl%%/ui.igscheduler#options:weekViewSettings.weekViewDisplayMode)
+Time slot duration | Configure the time slots' duration. Currently 5, 6, 10, 15, 30 and 60 minutes are supported. | [timeSlotInterval](%%jQueryApiUrl%%/ui.igscheduler#options:weekViewSettings.timeSlotInterval)
+Working days and hours | You can configure this view to display only working hours or all 24 hours. | [workingHoursDisplayMode](%%jQueryApiUrl%%/ui.igscheduler#options:weekViewSettings.workingHoursDisplayMode)
+
+## Day View
+
+This topic explains how data is presented in the igScheduler's day view.
+
+### Configuring
+
+The following table maps some configurable aspect/behavior of the day view to the property/method that is responsible for:
+
+Aspect | Description | Property
+---|---|---
+Visible days | You can control how many days are visible at a time in the day view. Currently between 1 and 7 days are supported. | [dayViewNumberOfDays](%%jQueryApiUrl%%/ui.igscheduler#options:dayViewSettings.dayViewNumberOfDays)
+Time slot duration | Configure the time slots' duration. Currently 5, 6, 10, 15, 30 and 60 minutes are supported. | [timeSlotInterval](%%jQueryApiUrl%%/ui.igscheduler#options:dayViewSettings.timeSlotInterval)
+Working days and hours | You can configure this view to display only working hours or all 24 hours. | [workingHoursDisplayMode](%%jQueryApiUrl%%/ui.igscheduler#options:dayViewSettings.workingHoursDisplayMode)
+
+
 # Related topics
 
 Topic | Purpose
