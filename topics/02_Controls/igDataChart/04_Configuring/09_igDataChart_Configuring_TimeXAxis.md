@@ -15,9 +15,11 @@ This topic demonstrates, with code examples, how to use TimeXAxis in the `igData
 This topic is organized as follows:
 
 -   [Introduction](#introduction)
+-   [Axis Break Properties](#breaks)
+
+Note: The following sections are only required if the default labels (i.e. formatting & intervals) need to be changed.
 -   [Axis Label Format Properties](#labelformats)
 -   [Axis Interval Properties](#intervals)
--   [Axis Break Properties](#breaks)
 -   [Related Content](#related-content)
 
 ### <a id="introduction"></a>Introduction
@@ -35,6 +37,81 @@ For more information on what axis types are required by a specific series, refer
 
 Note:
 All category axes require data binding and data mapping in order to show labels on the axis lines. Refer to the Getting Started with Data Chart topic for code example how to bind data to the category.
+
+### <a id="breaks"></a>Axis Breaks Properties
+
+The TimeXAxis has the option to exclude intervals of data with Breaks. As a result, labels will not appear at the excluded interval. For example, working/non-working, holidays, and/or weekends.
+
+Several axis breaks can be added to the Breaks property and configured by using a unique Start, End and Interval.
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Property Name</th>
+			<th>Property Type</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>`Breaks`</td>
+			<td>array</td>
+			<td>A list of axis label intervals. The interval selected is according to the visible axis range.</td>
+		</tr>
+	</tbody>
+	<tbody>
+		<tr>
+			<td>`Start`</td>
+			<td>Date</td>
+			<td>The start time of the axis break.</td>
+		</tr>
+	</tbody>
+	<tbody>
+		<tr>
+			<td>`End`</td>
+			<td>Date</td>
+			<td>The end time of the axis break.</td>
+		</tr>
+	</tbody>
+	<tbody>
+		<tr>
+			<td>`Interval`</td>
+			<td>number</td>
+			<td>The interval at which to repeat this break, expressed as a Date.</td>
+		</tr>
+	</tbody>
+</table>
+
+The following code snippets show how to skip labels on the TimeXAxis in the XamDataChart for a range of years, causing uneven intervals. The result is shown in Figure 4 below.
+
+ **In Javascript:**
+
+	```js
+	<script type="text/javascript">
+        $(function () {
+            $("#chart").igDataChart({
+                dataSource: data,
+                axes: [{
+                    type: "time",
+                    name: "xAxis",
+                    dateTimeMemberPath: "Date"
+                    label: "DateString",
+                    breaks: [{
+				        start: new Date("2009-12-26T00:00:00"),
+						end: new Date("2009-12-27T23:59:59.99"),
+				        interval: 7 * 24 * 60 * 60 * 1000
+						}],
+                }, {
+                    type: "numericY",
+                    name: "yAxis",
+                }],
+            });
+        });
+    </script>
+	```
+![](images/igDataChart_%28TimeXAxis_Break%29_1.png)
+Figure 4: TimeXAxis displaying data from Monday through Friday in 2010.
 
 ### <a id="labelformats"></a>Axis Label Format Properties
 
@@ -226,81 +303,6 @@ The following code snippet demonstrates how to implement several Intervals for e
 	```
 ![](images/igDataChart_%28TimeXAxis_Interval%29_1.png)
 Figure 3: TimeXAxis displaying data every 48 hours.
-
-### <a id="breaks"></a>Axis Breaks Properties
-
-The TimeXAxis has the option to exclude intervals of data with Breaks. As a result, labels will not appear at the excluded interval. For example, working/non-working, holidays, and/or weekends.
-
-Several axis breaks can be added to the Breaks property and configured by using a unique Start, End and Interval.
-
-
-<table class="table">
-	<thead>
-		<tr>
-			<th>Property Name</th>
-			<th>Property Type</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>`Breaks`</td>
-			<td>array</td>
-			<td>A list of axis label intervals. The interval selected is according to the visible axis range.</td>
-		</tr>
-	</tbody>
-	<tbody>
-		<tr>
-			<td>`Start`</td>
-			<td>Date</td>
-			<td>The start time of the axis break.</td>
-		</tr>
-	</tbody>
-	<tbody>
-		<tr>
-			<td>`End`</td>
-			<td>Date</td>
-			<td>The end time of the axis break.</td>
-		</tr>
-	</tbody>
-	<tbody>
-		<tr>
-			<td>`Interval`</td>
-			<td>number</td>
-			<td>The interval at which to repeat this break, expressed as a Date.</td>
-		</tr>
-	</tbody>
-</table>
-
-The following code snippets show how to skip labels on the TimeXAxis in the XamDataChart for a range of years, causing uneven intervals. The result is shown in Figure 4 below.
-
- **In Javascript:**
-
-	```js
-	<script type="text/javascript">
-        $(function () {
-            $("#chart").igDataChart({
-                dataSource: data,
-                axes: [{
-                    type: "time",
-                    name: "xAxis",
-                    dateTimeMemberPath: "Date"
-                    label: "DateString",
-                    breaks: [{
-				        start: new Date("2009-12-26T00:00:00"),
-						end: new Date("2009-12-27T23:59:59.99"),
-				        interval: 7 * 24 * 60 * 60 * 1000
-						}],
-                }, {
-                    type: "numericY",
-                    name: "yAxis",
-                }],
-            });
-        });
-    </script>
-	```
-![](images/igDataChart_%28TimeXAxis_Break%29_1.png)
-Figure 4: TimeXAxis displaying data from Monday through Friday in 2010.
 
 ### <a id="related-content"></a>Related Topics
 

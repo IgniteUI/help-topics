@@ -241,21 +241,8 @@ In addition, the Shape Chart can render break-even data as long as at least one 
 
 ### <a id="time-x-axis"></a> TimeXAxis
 
-A new axis, TimeXAxis is added to the igDataChart this release. It allows you to accurately label data dynamically as either date, time or both.
+A new axis, time x-axis, is added to the igDataChart this release. By default, this axis will automatically apply label formats which dynamically change as the user zooms into data. In addition, axis breaks may be configured to omit dates within a range.  For example, weekends can be skipped, or any range of dates considered insignificant can be skipped. The axis can also be configured to override the default label-formatting scheme for custom configuration of labels at varying visible date ranges.
 
-## igScheduler
-
-### <a id="weekView"></a> Week View
-This view is visualizing the activities by rendering them in a vertical list with time slots. It is possible to show all seven week days or only the working days by using `weekViewDiplayMode` property.
-Configuration to show all 24 hours or only the working hours is also possible.
-
-
-### <a id="dayView"></a> Day View
-Visualizing the activities by rendering them in a vertical list with time slots. Each activity occupies only the time slots between its start and end time.
-This view has the ability to show up to 7 days. You can configure the day view to display all 24 hours or only the working hours.
-
-### <a id="recurrentActivity"></a> Recurrent Activity
-The activity recurrence is used when you need to have repetitions of an activity following a specific recurrence pattern (for example each day at a specific hour or each month at a specific date).
 #### Related Topics
 -   [Configuring TimeXAxis (igDataChart)](igdatachart-configuring-timexaxis.html)
 
@@ -267,6 +254,21 @@ The following series types can be used with the igDataChart:
 * Scatter Contour series
 * Scatter Polyline series
 * Scatter Polygon series
+
+## igScheduler
+
+### <a id="weekView"></a> Week View
+This view is visualizing the activities by rendering them in a vertical list with time slots. It is possible to show all seven week days or only the working days by using `weekViewDiplayMode` property.
+Configuration to show all 24 hours or only the working hours is also possible.
+
+### <a id="dayView"></a> Day View
+Visualizing the activities by rendering them in a vertical list with time slots. Each activity occupies only the time slots between its start and end time.
+This view has the ability to show up to 7 days. You can configure the day view to display all 24 hours or only the working hours.
+
+### <a id="recurrentActivity"></a> Recurrent Activity
+The activity recurrence is used when you need to have repetitions of an activity following a specific recurrence pattern (for example each day at a specific hour or each month at a specific date).
+
+## igGrid
 
 ### <a id="cell-merging"></a> igGrid Physical Cell Merging
 
