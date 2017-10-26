@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# Configuring Series Brushes in igShapeChart
+# Configuring Series Brushes (igShapeChart)
 
 This topic explains, with code examples, how to configure the different brush properties in the igShapeChart control.
 
@@ -139,4 +139,4 @@ Following the steps above will result in an igShapeChart control that looks like
 <a id="Related" />
 ### Related Content
 
-- [Using Legend](shapechart-using-legend.html)
+- [Using Legend](shapechart-using-legend-with-shapechart.html)

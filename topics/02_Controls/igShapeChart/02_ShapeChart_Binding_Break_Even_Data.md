@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# Binding Break-Even Data in igShapeChart 
+# Binding Break-Even Data (igShapeChart)
 
 This topic explains, with a code example, how to bind break-even data in the igShapeChart control.
 
@@ -24,6 +24,7 @@ The following topics are prerequisites to understanding this topic:
 - [Preview](#Preview)
 - [Code Example](#CodeExample)
 - [Related Content](#Related)
+- [Samples](#Samples)
 
 <a id="Overview" />
 ### Overview
@@ -84,5 +85,12 @@ The following code example shows how to bind break-even data to the igShapeChart
 <a id="Related" />
 ### Related Content
 
-- [Binding to Shape File Data](shapechart-binding-to-shapefile-data.html)
-- [Using Legend](shapechart-using-legend.html)
+- [Binding to Shape File Data](shapechart-binding-shapefile-data.html)
+- [Using Legend](shapechart-using-legend-with-shapechart.html)
+
+<a id="Samples" />
+### Samples
+
+The following sample provides additional information related to this topic.
+
+-	[Binding Break Even Data](%%SamplesUrl%%/shape-charts/binding-break-even-data):  This sample demonstrates the `igShapeChart` control binding to break-even data.

@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# Getting Started with igShapeChart
+# Getting Started (igShapeChart)
 
 ### Purpose
 
@@ -102,5 +102,5 @@ Build and run your project to verify the result. If you have implemented the abo
 
 ### Related Content
 
-- [Binding to Shape File Data](shapechart-binding-to-shapefile-data.html)
-- [Binding to Break Even Data](shapechart-binding-to-break-even-data.html)
+- [Binding to Shape File Data](shapechart-binding-shapefile-data.html)
+- [Binding to Break Even Data](shapechart-binding-break-even-data.html)

@@ -8,9 +8,9 @@
 |metadata|
 -->
 
-# Configuring Axis Labels
+# Configuring Axis Labels (igShapeChart)
 
-The link:{ShapeChartLink}.{ShapeChartName}.html[{ShapeChartName}] control allows you full control over configuring, formatting and styling the labels displayed on your chart. By default, you do not need to explicitly set the labels. The Shape Chart will use the first appropriate string property that it finds within the data you provided and will use that for the labels.
+The `igShapeChart` control allows you full control over configuring, formatting and styling the labels displayed on your chart. By default, you do not need to explicitly set the labels. The Shape Chart will use the first appropriate string property that it finds within the data you provided and will use that for the labels.
 
 ### In this topic
 
@@ -20,6 +20,7 @@ This topic contains the following sections:
 - [Label Settings](#ConfigureLabelSettings)
 * [Styling](#ConfigureStyling)
 * [Related Content](#RelatedContent)
+- [Samples](#Samples)
 
 <a id="ConfigureLabelSettings" />
 ### Label Settings
@@ -70,6 +71,14 @@ The following screenshot demonstrates the igShapeChart control with the x-axis l
 
 ## <a id="relatedtopics"/>Related Topics:
 
-- [Getting Started with ShapeChart](01_ShapeChart-Getting-Started-with-ShapeChart.html)
+- [Getting Started with ShapeChart](shapechart-getting-started-with-shapechart.html)
 
-- [Binding to Shapefile Data](04_ShapeChart_Binding_ShapeFile_Data.html)
+- [Binding to Shapefile Data](shapechart-binding-shapefile-data.html)
+
+
+<a id="Samples" />
+### Samples
+
+The following sample provides additional information related to this topic.
+
+-	[Configuring Axis Labels](%%SamplesUrl%%/shape-charts/axis-labels):  This sample demonstrates how to configure the axis labels for the `igShapeChart` control.

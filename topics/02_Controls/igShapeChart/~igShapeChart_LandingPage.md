@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# igShapeChartChart
+# igShapeChart
 
 ### Introduction
 
@@ -25,8 +25,8 @@ The topics in this section provide detailed information regarding the igShapeCha
 
 - [Getting Started](shapechart-getting-started-with-shapechart.html)
 
-- [Binding to Shape File Data](shapechart-binding-to-shapefile-data.html)
+- [Binding to Shape File Data](shapechart-binding-shapefile-data.html)
 
-- [Binding to Break Even Data](shapechart-binding-to-break-even-data.html)
+- [Binding to Break Even Data](shapechart-binding-break-even-data.html)
 
-- [Shape Chart API Overview](shapechart-api-overview.html)
+- [Shape Chart API Overview](shapechart-api-reference.html)
