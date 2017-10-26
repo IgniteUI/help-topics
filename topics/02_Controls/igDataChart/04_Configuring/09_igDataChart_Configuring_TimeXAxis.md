@@ -17,7 +17,7 @@ This topic is organized as follows:
 -   [Introduction](#introduction)
 -   [Axis Break Properties](#breaks)
 
-Note: The following sections are only required if the default labels (i.e. formatting & intervals) need to be changed.
+Note: The following sections are only required if the default labels (i.e. formatting and intervals) need to be changed.
 -   [Axis Label Format Properties](#labelformats)
 -   [Axis Interval Properties](#intervals)
 -   [Related Content](#related-content)
