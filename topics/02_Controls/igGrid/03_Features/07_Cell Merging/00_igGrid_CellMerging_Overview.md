@@ -3,7 +3,7 @@
 {
     "fileName": "iggrid-cellmerging-overview",
     "controlName": "igGrid",
-    "tags": ["Grids","Grouping","Styling"]
+    "tags": ["Grids","CellMerging","Styling"]
 }
 |metadata|
 -->
@@ -187,5 +187,6 @@ $("#grid1").igGrid({
 
 The following topics provide additional information related to this topic.
 
+- [igGrid Cell Merging - Advanced Cutomization](igGrid_CellMerging_Advanced.html)
 - [igGrid Overview](igGrid-Overview.html)
 - [igGrid Sorting](igGrid_Sorting_Overview.html)
