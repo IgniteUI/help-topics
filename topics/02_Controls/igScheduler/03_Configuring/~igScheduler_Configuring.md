@@ -17,7 +17,7 @@
 
 ### Introduction
 
-The topics in this group explain how to configure %%ProductName%%® combo control.
+The topics in this group explain how to configure %%ProductName%%® control.
 
 ### Topics
 
@@ -26,3 +26,5 @@ The topics in this group explain how to configure %%ProductName%%® combo contro
 -	[Configuring Appointments (igScheduler)](igScheduler-Configure-Appointments.html): This topic shows how to setup and configure Appointments DataSource for the `igScheduler`.
 
 -	[Configuring Views (igScheduler)](igScheduler-Configure-Views.html): The topics in this section provide information about the different views used by the  `igScheduler` control to present calendar data.
+
+-	[Configuring ASP.NET MVC (igScheduler)](igscheduler-asp-net-mvc-wrapper.html): This topic shows how to setup and configure ASP.NET MVC wrapper for the `igScheduler`.
