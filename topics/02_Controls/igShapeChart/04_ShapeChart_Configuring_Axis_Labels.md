@@ -25,17 +25,17 @@ This topic contains the following sections:
 <a id="ConfigureLabelSettings" />
 ### Label Settings
 
-In the {ShapeChartName} control, you can change the rotation angle, margin, horizontal/vertical alignment, opacity, padding and visibility, of the x-axis and y-axis labels using the following properties:
+In the igShapeChart control, you can change the rotation angle, margin, horizontal/vertical alignment, opacity, padding and visibility, of the x-axis and y-axis labels using the following properties:
 
 Property Name|Property Type| Description
 ---|---
-`xAxisLabelAngle`,`xAxisLabelAngle`|number|Determines angle rotation of x-axis or y-axis labels
-`xAxisLabelHorizontalAlignment`, `yAxisLabelHorizontalAlignment`|enumeration|Determines horizontal alignment of the x-axis or y-axis labels
-`xAxisLabelVerticalAlignment`, `yAxisLabelVerticalAlignment`|enumeration|Determines vertical alignment of the x-axis or y-axis labels
-`xAxisLabelLeftMargin`, `yAxisLabelLeftMargin`|number|Determines the left margin applied to each x-axis or y-axis labels
-`xAxisLabelTopMargin`, `yAxisLabelTopMargin`|number|Determines the top margin applied to each x-axis or y-axis labels
-`xAxisLabelRightMargin`, `yAxisLabelRightMargin`|number|Determines the bottom margin applied to each x-axis or y-axis labels
-`xAxisLabelBottomMargin`, `yAxisLabelBottomMargin`|number|Determines the bottom margin applied to each x-axis or y-axis labels
+`xAxisLabelAngle`, </br> `yAxisLabelAngle`|number|Determines angle rotation of x-axis or y-axis labels
+`xAxisLabelHorizontalAlignment`, </br> `yAxisLabelHorizontalAlignment`|enumeration|Determines horizontal alignment of the x-axis or y-axis labels
+`xAxisLabelVerticalAlignment`, </br> `yAxisLabelVerticalAlignment`|enumeration|Determines vertical alignment of the x-axis or y-axis labels
+`xAxisLabelLeftMargin`, </br> `yAxisLabelLeftMargin`|number|Determines the left margin applied to each x-axis or y-axis labels
+`xAxisLabelTopMargin`, </br> `yAxisLabelTopMargin`|number|Determines the top margin applied to each x-axis or y-axis labels
+`xAxisLabelRightMargin`, </br> `yAxisLabelRightMargin`|number|Determines the bottom margin applied to each x-axis or y-axis labels
+`xAxisLabelBottomMargin`, </br> `yAxisLabelBottomMargin`|number|Determines the bottom margin applied to each x-axis or y-axis labels
 
 <a id="ConfigureStyling" />
 ### Styling
@@ -44,15 +44,15 @@ The look and feel of the shape chart’s x-axis and y-axis labels can be styled 
 
 Property Name|Property Type| Description
 ---|---
-`xAxisLabelTextStyle`, `yAxisLabelTextStyle`|string|Determines angle rotation of x-axis or y-axis labels
-`xAxisLabelTextColor`, `yAxisLabelTextColor`|string|Determines text color of the x-axis or y-axis labels
-`xAxisFormatLabel`, `xAxisFormatLabel`|object|Gets or sets function which takes an context object and returns a formatted label for the x-axis or y-axis labels.
+`xAxisLabelTextStyle`, </br> `yAxisLabelTextStyle`|string|Determines angle rotation of x-axis or y-axis labels
+`xAxisLabelTextColor`, </br> `yAxisLabelTextColor`|string|Determines text color of the x-axis or y-axis labels
+`xAxisFormatLabel`, </br> `xAxisFormatLabel`|object|Gets or sets function which takes an context object and returns a formatted label for the x-axis or y-axis labels.
 
 
 ### <a id="codesnippet"/>Code Snippet
 The following code example shows how to style labels on the x-axis using style properties:
 
-*In HTML:*
+**In HTML:**
 
 ```html
 $(function () {
