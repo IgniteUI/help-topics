@@ -31,7 +31,7 @@ The following topics are prerequisites to understanding this topic:
 
 The igShapeChart control has support for showing legends, but does not currently display legends for any series in the chart by default. In order to show a common legend for your shape chart, you need to set the legend option on the chart.
 
-The legend element that will be created will pull the names of its items from the Title property of the series that are plotted in the chart, and it will show your series' names in the format of "Series Type (XMemberPath vs YMemberPath)" by default. You can format the name shown in the Legend by utilizing the SeriesAdded event. The event arguments of this event can net you the series that has been added, allowing you to modify the Title of that series accordingly.
+The legend element that will be created, will pull the names of its items from the Title property of the series that are plotted in the chart, and it will show your series' names in the format of "Series Type (XMemberPath vs YMemberPath)" by default. You can format the name shown in the Legend by utilizing the SeriesAdded event. The event arguments of this event can net you the series that has been added, allowing you to modify the Title of that series accordingly.
 
 <a id="Preview" />
 ### Preview
@@ -47,6 +47,9 @@ The following code example shows how to use a legend for multiple series plotted
 
 **In HTML:**
 ```html
+<div id="shapeChart"></div>
+<div id="legend"></div>
+
 <script>
     var list1 = [
     { "X": 20, "Y": 20 },
