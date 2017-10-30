@@ -129,7 +129,10 @@ To navigate to the required JavaScript files listing for the particular control,
 				infragistics.ext_ui.js<br>
 				infragistics.dv_jquerydom.js<br>
 				infragistics.dv_core.js<br>
-				infragistics.dv_geometry.js			
+				infragistics.dv_geometry.js<br>
+			    infragistics.dv_interactivity.js<br>
+				infragistics.ui.widget.js<br>
+				 
 			</td>
 		</tr>
 		<tr>
@@ -172,6 +175,11 @@ To navigate to the required JavaScript files listing for the particular control,
 				<br>infragistics.dvcommonwidget.js
 				<br>infragistics.ui.basechart.js
 				<br>infragistics.datachart_category.js
+				<br>infragistics.ui.widget.js
+
+				<h5>Features:</h5>
+				infragistics.dv_interactivity.js
+				<br>infragistics.datachart_interactivity.js
 			</td>
 		</tr>
 		<tr>
@@ -207,6 +215,7 @@ To navigate to the required JavaScript files listing for the particular control,
 				<br>infragistics.dv_geometry.js
 				<br>infragistics.datachart_core.js
 				<br>infragistics.dvcommonwidget.js
+				<br>infragistics.ui.widget.js
 			</td>
 		</tr>
 		<tr>
@@ -306,6 +315,7 @@ To navigate to the required JavaScript files listing for the particular control,
 				<br>infragistics.datachart_core.js
 				<br>infragistics.dvcommonwidget.js
 				<br>infragistics.ui.chart.js
+				<br>infragistics.ui.widget.js
 			
 				<h5>Features:</h5>
 				infragistics.datachart_categorycore.js
@@ -320,6 +330,15 @@ To navigate to the required JavaScript files listing for the particular control,
 				<br>infragistics.datachart_scatter.js
 				<br>infragistics.datachart_stacked.js
 				<br>infragistics.datachart_annotation.js
+				<br>infragistics.datachart_shape.js
+				<br>infragistics.dv_interactivity.js
+				<br>infragistics.datachart_interactivity.js
+				
+				<h5>_Additional dependencies for loading shape files:_</h5>
+				infragistics.ext_text.js
+				<br>infragistics.ext_io.js
+				<br>infragistics.ext_web.js
+				<br>infragistics.dv_geo.js
 			</td>
 		</tr>
 	</tbody>
@@ -412,7 +431,9 @@ To navigate to the required JavaScript files listing for the particular control,
 				infragistics.dvcommonwidget.js<br>
 				infragistics.ui.chart.js<br>
 				infragistics.piechart.js<br>
-				infragistics.ui.basechart.js
+				infragistics.ui.basechart.js<br>
+				infragistics.dv_interactivity.js<br>
+				infragistics.ui.widget.js
 			</td>
 		</tr>
 		<tr>
@@ -475,7 +496,9 @@ To navigate to the required JavaScript files listing for the particular control,
 				infragistics.dv_geometry.js<br>
 				infragistics.datachart_core.js<br>
 				infragistics.dvcommonwidget.js<br>
-				infragistics.ui.basechart.js
+				infragistics.ui.basechart.js<br>
+				infragistics.dv_interactivity.js<br>
+				infragistics.ui.widget.js
 			</td>
 		</tr>
 		<tr>
@@ -712,7 +735,12 @@ To navigate to the required JavaScript files listing for the particular control,
 				infragistics.ext_io.js<br>
 				infragistics.ext_threading.js<br>
 				infragistics.ext_web.js<br>
-				infragistics.dv_geo.js
+				infragistics.dv_geo.js<br>
+				infragistics.ui.widget.js
+				
+				<h5>Features:</h5>
+				infragistics.dv_interactivity.js<br>
+				infragistics.datachart_interactivity.js
 			</td>
 		</tr>
 		<tr>
@@ -826,7 +854,9 @@ To navigate to the required JavaScript files listing for the particular control,
 				infragistics.dv_core.js<br>
 				infragistics.dv_geometry.js<br>
 				infragistics.datachart_core.js<br>
-				infragistics.dvcommonwidget.js
+				infragistics.dvcommonwidget.js<br>
+				infragistics.dv_interactivity.js<br>
+				infragistics.ui.widget.js
 			</td>
 		</tr>
 		<tr>
@@ -994,15 +1024,25 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>Dependency Scripts</td>
 			<td>
 			    infragistics.util.js
-				<br>infragistics.util.jquery.js
-			    <br>infragistics.dv.simple.core.js
+			    <br>infragistics.util.jquery.js
+			    <br>infragistics.ui.widget.js
+			    <br>infragistics.ext_core.js
+			    <br>infragistics.ext_text.js
+			    <br>infragistics.ext_collections.js
+			    <br>infragistics.ext_ui.js
+			    <br>infragistics.dv_core.js
+			    <br>infragistics.ext_collectionsextended.js
+			    <br>infragistics.barcode_core.js
+			    <br>infragistics.dv_jquerydom.js
 			</td>
 		</tr>
 		<tr>
 			<td>Scripts</td>
-			<td>infragistics.barcode_qrcodebarcode.js
-    			<br>infragistics.encoding.js (optional)
-    			<br>infragistics.ui.barcode.js</td>
+			<td>
+			     infragistics.barcode_qrcodebarcode.js
+			     <br>infragistics.encoding.core.js
+			     <br>infragistics.ui.qrcodebarcode.js
+			</td>
 		</tr>
 	</tbody>
 </table>
@@ -1028,7 +1068,9 @@ To navigate to the required JavaScript files listing for the particular control,
 				infragistics.ext_ui.js<br>
 				infragistics.dv_jquerydom.js<br>
 				infragistics.dv_core.js<br>
-				infragistics.dv_geometry.js
+				infragistics.dv_geometry.js<br>
+				infragistics.dv_interactivity.js<br>
+				infragistics.ui.widget.js
 			</td>
 		</tr>
 		<tr>
@@ -1526,4 +1568,3 @@ To navigate to the required JavaScript files listing for the particular control,
 
 >**Note:** English localization files are merged into minified JS files and are not required to be referenced explicitly.
 For other languages corresponding localization need to be referenced before the actual JavaScript files on the page code.
-
