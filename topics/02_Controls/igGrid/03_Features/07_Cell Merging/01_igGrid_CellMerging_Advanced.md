@@ -14,7 +14,7 @@
 
 ### Purpose
 
-This topic explains the `igGrid`™ control’s Cells Merging feature and how to customize it even further. It contains code examples on how this can be achieved in the `igGrid`.
+This topic shows advanced customization for the `igGrid`™ control’s Cells Merging feature focusing on how users can implement various merging strategies, as well as explaining the predefined ones.
 
 ### Required background
 
@@ -39,19 +39,19 @@ This topic contains the following sections:
 
 ## <a id="introduction"></a> Introduction
 
-The Cell Merging feature by default provides two merging criteria that can be used. The first one is checking for duplicate cell values, the second one merges two cells if the second one has a *null* value. Aside from those pre-defined methods, the [*mergeStrategy*](%%jQueryApiUrl%%/ui.iggridcellmerging#options:mergeStrategy) option can be used to define a custom one as well.
+Cell Merging provides two predefined merging strategies. The first one checks for duplicate cell values. The second one merges subsequent *null* values. In addition to the predefined methods, the [*mergeStrategy*](%%jQueryApiUrl%%/ui.iggridcellmerging#options:mergeStrategy) option can be used to define a custom strategy.
 
-In the next sections we will go in detail showing both pre-defined methods of merging as well as give an example of how to define a custom one to be used in a more complex scenario. We will focus mainly on *"physical"* cell merging. *"visual"* cell merging is similar to it in terms of configuration, but it can have slight difference in the visible result.
+In the next sections we will go in detail showing both predefined methods of merging as well as give an example of how to define a custom one to be used in a more complex scenario. We will focus mainly on *"physical"* cell merging. *"visual"* cell merging is similar to it in terms of configuration, but it can have slight differences in the visible result.
 
 ## <a id="merge-predefined"></a> Pre-defined Merge Strategies
 
-In order to specify which pre-defined method to be used for merging cells, the [*mergeStrategy*](%%jQueryApiUrl%%/ui.iggridcellmerging#options:mergeStrategy) will need to be set either to "duplicate" or "null". By default the *mergeStrategy* option is set to "duplicate"
+In order to specify which predefined method is used for cell merging, the [*mergeStrategy*](%%jQueryApiUrl%%/ui.iggridcellmerging#options:mergeStrategy) property needs to be set to either `"duplicate"` or `"null"` (defaults to `"duplicate"`).
 
 ### <a id="merge-duplicate"></a> Duplicate strategy
 
-When the `mergeStrategy` option is set to *"duplicate"*, the way it determines if two cells need to be merged is by comparing their cell values. If they have one type and are the same, the two cells will be eligible for merging. After that depending on the [*mergeType*](%%jQueryApiUrl%%/ui.iggridcellmerging#options:mergeType) option cells  will be merged accordingly. 
+When the `mergeStrategy` option is set to *"duplicate"*, the way it determines if two cells should be merged is by comparing their values. If they pass a *`===`* check (which means they have both equal value and equal type), the two cells will be eligible for merging. After that depending on the [*mergeType*](%%jQueryApiUrl%%/ui.iggridcellmerging#options:mergeType) option cells will be merged accordingly. 
 
-Since we are merging cells on duplicate values, each row in the data for the grid would need to have these values as well. Let's take for example the following data structure:
+Let's take the following data structure as an example:
 
 ```json
 var productData1 = [
@@ -70,7 +70,7 @@ var productData1 = [
 ]
 ```
 
-In order to initialize physical Cell Merging with *"duplicate"* strategy we can use the default value of `mergeStrategy` to our advantage and do not set it:
+In order to initialize physical cell merging with *"duplicate"* strategy we can use the defaults to our advantage and not set the latter:
 
 **In JavaScript:**
 
@@ -120,11 +120,11 @@ If `mergeType` is *"physical"* only one cell is rendered when representing a mer
 
 ![](images/igGrid_CellMerging_Advaced_duplicate_physical.jpg)
 
-This is useful when using physical Cell Merging together with Cell Updating. Then only the first cell in the merge group will be updated. The rest of the cells will remain merged.
+When using cell updating to update the value of a merged cell, only the value of first cell of the group is modified. That cell will lose its merged state. The rest of the cells will remain merged.
 
 ### <a id="merge-null"></a> Null strategy
 
-Cell Merging provides also the ability to merge based on null cell values. This scenario differs from the "duplicate" method of merging, because in order the merge two cell, the second cell needs to have *null* value. The first cell can have any value, even *null* as well.
+Cell Merging also provides the ability to merge based on `null` cell values. This scenario differs from the "duplicate" method, because in order the merge two cell, the second cell needs to have a `null` value. The first cell can have any value, even `null` as well.
 
 Let's have the following data:
 
@@ -145,7 +145,7 @@ var productData2 = [
 ]
 ```
 
-Only one cell for the column needs to carry the "Project Name" information, the rest cells in order to be merged need to be null. When configuring additionally in order to be able to use these *null* values, the columns using this method would need to have `dataType` set to *"object"*:
+Only one cell for the column needs to carry the "Project Name" information while the rest of the cells may have a value of `null`. To ensure they remain `null` in the grid's data source, they should be of a "nullable" type, which for igDataSource is either `number`, `object` or `Date`. For this example the [*dataType*](%%jQueryApiUrl%%/ui.iggrid#options:columns.dataType) of the column is set to `"object"` so the `null` values are retained. You could also set [*localSchemaTransform*](%%jQueryApiUrl%%/ui.iggrid#options:localSchemaTransform) to false.
 
 **In JavaScript:**
 
@@ -195,25 +195,25 @@ $("#grid1").igGrid({
 )
 ```
 
-When `mergeType` is *"physical"* the results are almost the same as when using *"duplicate"* merging strategy. The difference is the structure of the data that is being used: 
+When `mergeType` is *"physical"* the results are almost the same as when using the *"duplicate"* merging strategy. The difference is the structure of the data that is being used: 
 
 ![](images/igGrid_CellMerging_Advaced_null_physical.jpg)
 
-This is useful when combining Cell Merging with Cell Updating. In this case updating the merged cell would update the whole merge group visually. Regarding the data, it will still update only the first cell value inside the group, the other cells remain *null*.
+This is useful when combining cell merging with cell updating. In this case updating the merged cell would update the whole merge group visually. Regarding the data, it will still update only the first cell value inside the group, the other cells remain *`null`*.
 
-**Note:** Only the first "Product Name" column receives cell merging, because only that column 
+**Note:** Only the "Project Name" column receives merging because it is the only one containing `null` values.
 
 ## <a id="merge-custom"></a> Custom Merge Strategies
 
-Cell Merging provides extensible way of using custom merge strategies to better suit different scenarios.
+Cell Merging provides an extensible way of using custom merge strategies to better suit different scenarios.
 
 ### <a id="merge-custom-example"></a> Example
 
-You may have noticed in our first example that despite Cell Merging performing as expected, we have something that in a real world application could be not desired. As you can see on the next screenshot, the Cell Merging merge cells with the same values between two projects. 
+You may have noticed in our first example that despite Cell Merging performing as expected, we have something that in a real world application could be not desired. As you can see on the next screenshot, Cell Merging merges cells with the same values between two projects. 
 
 ![](images/igGrid_CellMerging_Advaced_custom_problem.jpg)
 
-In this case Cell Merging cannot know initially what the data would be and how we would need to be displayed. This where custom `mergeStrategy` comes. The way it can be achieved is by a custom function that receive the previous record, the current record and column key that indicates on which column currently cell merging is being applied. This can be implemented the following way:
+In this case Cell Merging cannot know initially what the data would be and how it should be displayed. This is where a custom `mergeStrategy` comes. Users may assign a function that receives the previous record, the current record and the key of the column which is being merged. Using such a function, the aforementioned custom requirement may be implemented in the following way:
 
 **In JavaScript:**
 
@@ -282,11 +282,13 @@ $("#grid1").igGrid({
 )
 ```
 
-The result of this custom implementation of `mergeStrategy` would the screenshot bellow:
+The result of the custom implementation can be seen below:
 
 ![](images/igGrid_CellMerging_Advaced_custom_solution.jpg)
 
-With the custom strategy now there are not merged groups going from one project to another and this way it would be easier to distinguish project boundaries. This method can be used to implement other types of logic that will result in better user experience
+Merged groups are broken based on projects which makes it easier to distinguish project boundaries.
+
+Utilizing the `mergeStrategy` property in this way may improve the overall user experience greatly.
 
 ### <a id="merge-custom-sample"></a> Live Sample
 
