@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 |metadata|
 {
     "fileName": "known-issues-and-limitations-2017-volume-2",
@@ -65,6 +65,7 @@ This topic contains the following sections:
     -   [igPivotGrid](#pivot-grid)
     -   [igPopover](#popover)
     -   [igQRCodeBarcode](#qr-barcode)
+    -   [igShapeChart](#shape-chart)
     -   [igValidator](#validator)
     -   [igZoombar](#zoombar)
     -   [Infragistics Document Engine](#infragistics-documents)
@@ -1266,6 +1267,15 @@ Issue | Description | Status
 Platform-specific characters not supported | The current version of the `igQRCodeBarcode`™ control does not support encoding symbols with 4 bytes. | ![](../images/images/negative.png)
 Micro QR Code format not supported | The control currently does not support the Micro QR Code standard. | ![](../images/images/negative.png)
 Structured Append mode not supported | The `igQRCodeBarcode` control currently does not provide support for Structured Append mode. | ![](../images/images/negative.png)
+
+Go up to [Known Issues and Limitations Summary](#summary)
+
+### <a id="shape-chart"></a> igShapeChart
+
+Issue | Description | Status
+---|---|---
+igShapeChart and the Interactivity module in igLoader | Using the igLoader to load the resources for `igShapeChart.Interactivity` do not currently work.  Please also include `igDataChart.Interactivity` in your list of resources for ShapeChart interactivity.  e.g. `resources: "igShapeChart,igDataChart.Interactivity"` | ![](../images/images/positive.png)
+
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
