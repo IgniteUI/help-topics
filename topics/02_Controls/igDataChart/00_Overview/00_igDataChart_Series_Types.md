@@ -46,6 +46,7 @@ This topic contains the following sections:
     -   [Radial series](#radial-series)
     -   [Range Category series](#range-series)
     -   [Scatter series](#scatter-series)
+    -   [Shape series](#shape-series)
 -   [Composite Charts](#composite)
 -   [Related Content](#related-content)
   -   [Topics](#topics)
@@ -1036,6 +1037,126 @@ Visualize data with a spline displaying Bezier-curved transitions between data p
                 </ul>
             </td>
         </tr>
+        
+        <tr>
+            <td>
+
+			</td>
+
+            <td>
+Scatter Area
+			</td>
+
+            <td>
+Visualize data as a colored 2D surface based on a triangulation of X+Y+Value points in a Cartesian coordinate system.
+			</td>
+
+            <td>
+`scatterArea`
+			</td>
+
+            <td>
+                <ul>
+                    <li>
+[xMemberPath](%%jQueryApiUrl%%/ui.igDataChart#options:series.xMemberPath)
+					</li>
+
+                    <li>
+[yMemberPath](%%jQueryApiUrl%%/ui.igDataChart#options:series.yMemberPath)
+					</li>
+					
+					<li>
+[colorMemberPath](%%jQueryApiUrl%%/ui.igDataChart#options:series.colorMemberPath)
+					</li>
+                </ul>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+
+			</td>
+
+            <td>
+Scatter Contour
+			</td>
+
+            <td>
+Visualize data as isarithmic contours based on a triangulation of X+Y+Value points in a Cartesian coordinate system.
+			</td>
+
+            <td>
+`scatterContour`
+			</td>
+
+            <td>
+                <ul>
+                    <li>
+[xMemberPath](%%jQueryApiUrl%%/ui.igDataChart#options:series.xMemberPath)
+					</li>
+
+                    <li>
+[yMemberPath](%%jQueryApiUrl%%/ui.igDataChart#options:series.yMemberPath)
+					</li>
+					
+					<li>
+[valueMemberPath](%%jQueryApiUrl%%/ui.igDataChart#options:series.valueMemberPath)
+					</li>
+                </ul>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+[Shape](igDataChart-Series-Types.html#shape-series)
+			</td>
+
+            <td>
+Scatter Polygon
+			</td>
+
+            <td>
+Visualize data as a series of polygons in a Cartesian coordinate system.
+			</td>
+
+            <td>
+`scatterPolygon`
+			</td>
+
+            <td>
+                <ul>
+					<li>
+[shapeMemberPath](%%jQueryApiUrl%%/ui.igDataChart#options:series.shapeMemberPath)
+					</li>
+                </ul>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+
+			</td>
+
+            <td>
+Scatter Polyline
+			</td>
+
+            <td>
+Visualize data as a series of polylines in a Cartesian coordinate system.
+			</td>
+
+            <td>
+`scatterPolyline`
+			</td>
+
+            <td>
+                <ul>
+					<li>
+[shapeMemberPath](%%jQueryApiUrl%%/ui.igDataChart#options:series.shapeMemberPath)
+					</li>
+                </ul>
+            </td>
+        </tr>
     </tbody>
 </table>
 
@@ -1109,9 +1230,15 @@ Scatter charts depict individual points in orthogonal (Cartesian) coordinate sys
 
 Scatter charts are used to represent scientific measurement or other data collection for the relation of two variables and easily shows the density of samples in particular area of the measurement, and it is possible to spot trends in the distribution of data.
 
+### <a id="shape-series"></a>Shape Series
 
+Shape charts depict collections of points as two-dimensional shapes where each point makes up one corner, or vertex, of the shape.  For example, a rectangle is produced by having 4 points, one in each corner.  Like Scatter charts, Shape charts are also plotted in an orthogonal (Cartesian) coordinate system.
 
-##<a id="composite"></a>Composite Charts
+![](images/igDataChart_Types_10.png)
+
+Shape charts can be used for many things such as visualizing borders between countries or displaying an office floor plan.
+
+## <a id="composite"></a>Composite Charts
 
 
 ### Composite charts summary
@@ -1160,13 +1287,3 @@ The following samples provide additional information related to this topic.
 -	[Scatter Series](%%SamplesUrl%%/data-chart/scatter-series): This sample demonstrates creating scatter (or “XY series) charts.
 
 -	[Stacked Series](%%SamplesUrl%%/data-chart/stacked-series): This sample demonstrates creating Stacked series charts (XY charts).
-
-
-
-
-
- 
-
- 
-
-
