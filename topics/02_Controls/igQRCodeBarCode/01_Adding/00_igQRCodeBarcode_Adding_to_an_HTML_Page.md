@@ -112,7 +112,7 @@ Load the required resources manually. You need to use the dependencies listed in
 					</li>
 
                     <li>
-Load the two combined files, containing the logic for all data visualization controls from the %%ProductName%% package - `infragistics.core.js`, `infragistics.dv.js` and `infragistics.encoding.js` (optional).
+Load the two combined files, containing the logic for all data visualization controls from the %%ProductName%% package - `infragistics.core.js`, `infragistics.dv.js`.
 					</li>
                 </ul>
 
@@ -138,51 +138,76 @@ Description
                             <td>
 `infragistics.util.js`<br/>
 `infragistics.util.jquery.js`
-			</td>
+			                </td>
 
                             <td>
 %%ProductName%% utilities
-			</td>
+			                </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+`infragistics.ui.widget.js`
+                            </td>
+                            <td>
+Common widget
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+`infragistics.dv_core.js`<br/>
+`infragistics.dv_jquerydom.js`<br/>
+`infragistics.ext_core.js`<br/>
+`infragistics.ext_collection.js`<br/>
+`infragistics.ext_collectionsextended.js`<br/>
+`infragistics.ext_text.js`<br/>
+`infragistics.ext_ui.js`
+                            </td>
+                            <td>
+Data visualization core functionality
+                            </td>
                         </tr>
 
                         <tr>
                             <td>
 `infragistics.dv.simple.core.js`
-			</td>
+			                </td>
 
                             <td>
 A shared library for data visualization components
-			</td>
+			                </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+`infragistics.encoding.core.js`<br/>
+`infragistics.encoding_<encoding-name>.js`
+                            </td>
+                            <td>
+Character encodings.  The various supported encodings can be found under the %%ProductName%%™ package folder structure:<br/> /modules/encoding<br/><br/>Please see the [Configuring the Character Encoding](igQRCodeBarcode_Configuring_the_Character_Encoding.html) topic for more detail.
+                            </td>
                         </tr>
 
                         <tr>
                             <td>
+`infragistics.barcode_core.js`<br/>
 `infragistics.barcode_qrcodebarcode.js`
-			</td>
+			                </td>
 
                             <td>
 The `igQRCodeBarcode` control
-			</td>
+			                </td>
                         </tr>
 
                         <tr>
                             <td>
-`infragistics.encoding.js`
-			</td>
-
-                            <td>
-(Optional) A library for all supported encodings apart from UTF-8 and UTF-16
-			</td>
-                        </tr>
-
-                        <tr>
-                            <td>
-`infragistics.ui.barcode.js`
-			</td>
+`infragistics.ui.qrcodebarcode.js`
+			                </td>
 
                             <td>
 The `igQRCodeBarcode` widget
-			</td>
+			                </td>
                         </tr>
                     </tbody>
 </table>
@@ -372,13 +397,3 @@ The following topics provide additional information related to this topic.
 The following sample provides additional information related to this topic.
 
 - [Basic Configuration](%%SamplesUrl%%/barcode/basic-configuration): This sample demonstrates a basic configuration of the `igQRCodeBarcode` control.
-
-
-
-
-
- 
-
- 
-
-

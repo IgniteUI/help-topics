@@ -78,10 +78,7 @@ In order to ensure minimum size of the files carrying the encodings logic, the d
 
 ### <a id="encoding-requirements"></a>Requirements
 
-For the `igQRCodeBarcode` control to operate properly, the respective character encoding file(s) for the character sets in use are required and must be loaded to the application. This means loading either the file containing all encodings or just the files for the individual encodings to be used. The alternative is as follows:
-
--   The `infragistics.encoding.js` file. It contains the full sets of character encodings. This should be the preferred alternative if more than one encodings is going to be needed in the application, i.e. to generate barcodes using multiple changing sets.
--   The `infragistics.encoding.core.js` and the `infragistics.encoding_<encoding-name>.js` file. The latter contains only the `<encoding-name>` encoding. Several `infragistics.encoding_<encoding-name>.js` files can be included to support multiple languages. This alternative is recommended if no other encodings will be used because of the smaller file size.
+For the `igQRCodeBarcode` control to operate properly, the respective character encoding file(s) for the character sets in use are required and must be loaded to the application. This means loading the files for the individual encodings to be used. These files would be `infragistics.encoding.core.js` and `infragistics.encoding_<encoding-name>.js` file. In the latter file, `<encoding-name>` refers to the name of the encoding type such as ISO-8859. Several `infragistics.encoding_<encoding-name>.js` files can be included to support multiple languages.
 
 1.  The desired encoding files can be found at the following location under the %%ProductName%%™ package folder structure:
 
@@ -284,13 +281,3 @@ The following topics provide additional information related to this topic.
 The following samples provide additional information related to this topic.
 
 - [Configuring the QR-Code-Specific Settings](%%SamplesUrl%%/barcode/configuring-the-qr-code-specific-settings): This sample demonstrates configuring the QR-code-specific settings.
-
-
-
-
-
- 
-
- 
-
-
