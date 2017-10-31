@@ -44,7 +44,7 @@ The look and feel of the shape chart’s x-axis and y-axis labels can be styled 
 
 Property Name|Property Type| Description
 ---|---
-`xAxisLabelTextStyle`, </br> `yAxisLabelTextStyle`|string|Determines angle rotation of x-axis or y-axis labels
+`xAxisLabelTextStyle`, </br> `yAxisLabelTextStyle`|string|Determines the text style for the x-axis or y-axis labels
 `xAxisLabelTextColor`, </br> `yAxisLabelTextColor`|string|Determines text color of the x-axis or y-axis labels
 `xAxisFormatLabel`, </br> `xAxisFormatLabel`|object|Gets or sets function which takes an context object and returns a formatted label for the x-axis or y-axis labels.
 
