@@ -18,7 +18,6 @@ To assign chart type during initialization:
 **In Javascript:**
 
 	<script type="text/javascript">
-
         $(function () 
         {
             $("#shapeChart").igShapeChart(
@@ -31,181 +30,151 @@ To assign chart type during initialization:
     </script>
 
 
-<table class="table">
+<table class="table table-striped">
 	<thead>
 		<tr>
-			<th>Series Type</th>
-			<th>X</th>
-			<th>Y</th>
-			<th>Value</th>
-			<th>Radius</th>
-			<th>Points*</th>
+			<th>Chart Type</th>
+			<th>x</th>
+			<th>y</th>
+			<th>value</th>
+			<th>radius</th>
+			<th>points*</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>`Point`</td>
-			<td>X</td>
-			<td>X</td>
+			<td>&#9210;</td>
+			<td>&#9210;</td>
 		    <td></td>
 		    <td></td>
 		    <td></td>
-		</tr>
-	</tbody>
-		<tbody>
+		</tr> 
 		<tr>
 			<td>`Line`</td>
-			<td>X</td>
-			<td>X</td>
+			<td>&#9210;</td>
+			<td>&#9210;</td>
 			 <td></td>
 		    <td></td>
 		    <td></td>
-		</tr>
-	</tbody>
-	<tbody>
+		</tr> 
 		<tr>
 			<td>`Spline`</td>
-			<td>X</td>
-			<td>X</td>
+			<td>&#9210;</td>
+			<td>&#9210;</td>
 			 <td></td>
 		    <td></td>
 		    <td></td>
-		</tr>
-	</tbody>
-	<tbody>
+		</tr> 
 		<tr>
 			<td>`HighDensity`</td>
-			<td>X</td>
-			<td>X</td>
+			<td>&#9210;</td>
+			<td>&#9210;</td>
 			 <td></td>
 		    <td></td>
 		    <td></td>
-		</tr>
-	</tbody>
-	<tbody>
+		</tr> 
 		<tr>
 			<td>`Bubble`</td>
-			<td>X</td>
-			<td>X</td>
+			<td>&#9210;</td>
+			<td>&#9210;</td>
 			<td></td>
-			<td>X</td>
+			<td>&#9210;</td>
 			<td></td>
-		</tr>
-	</tbody>
-	<tbody>
+		</tr> 
 		<tr>
 			<td>`Area`</td>
-			<td>X</td>
-			<td>X</td>
-			<td>X</td>
+			<td>&#9210;</td>
+			<td>&#9210;</td>
+			<td>&#9210;</td>
 			<td></td>
 			<td></td>
-		</tr>
-	</tbody>
-	<tbody>
+		</tr> 
 		<tr>
 			<td>`Contour`</td>
-			<td>X</td>
-			<td>X</td>
-			<td>X</td>
+			<td>&#9210;</td>
+			<td>&#9210;</td>
+			<td>&#9210;</td>
 			<td></td>
 			<td></td>
-		</tr>
-	</tbody>
-	<tbody>
+		</tr> 
 		<tr>
 			<td>`Polyline`</td>
 			<td></td>
 			<td></td>
 			<td></td>
 			<td></td>
-			<td>X</td>
-		</tr>
-	</tbody>
-	<tbody>
+			<td>&#9210;</td>
+		</tr> 
 		<tr>
 			<td>`Polygon`</td>
 			<td></td>
 			<td></td>
 			<td></td>
 			<td></td>
-			<td>X</td>
+			<td>&#9210;</td>
 		</tr>
 	</tbody>
 </table>
 
 ## Creating Data Items
 
-The following example exercises the minimum requirements for each chart type. Each data class below includes properties that are responsible for rending the visual data on the chart.
+This section provides examples that show the minimum requirements for each chart type. Each data class below includes properties that are responsible for rending the visual data on the chart.
 
-#### Point, Line, Spline, High Density:
+When setting `ChartType` property to `Point`, `Line`, `Spline`, or `HighDensity` value, use:
 
 **In Javascript:**
 
     <script>
-        function ScatterPoint(x, y) 
+        function ScatterPoints() 
         { 
-            x = x || 0;
-    		y = y || 0;
-    		
-    		var xy = 
-    		[
-    		    //add data;
-    		    { "x": 10, "y": 10, },
+    		var dataItems = 
+    		[ 
+    			{ "x": 10, "y": 10 },  
+    			{ "x": 20, "y": 20 }, 
 		    ];
-            return xy;
+            return dataItems;
         }
     </script>
 
-#### Bubble:
+When setting `ChartType` property to `Bubble` value, use:
+
+**In Javascript:**
 
     <script>
-        function ScatterBubble(x, y, r) 
+        function ScatterBubbles() 
         { 
-    		x = x || 0;
-    		y = y || 0;
-    		radius = r || 0;
-    		
-    		var bubble = 
-    		[
-    			//add records
-    			{ "x": 10, "y": 10, "radius": 10 },
-    			
+    		var dataItems = 
+    		[ 
+    			{ "x": 10, "y": 10, "radius": 10 },  
+    			{ "x": 20, "y": 20, "radius": 10 }, 
     		];
-    		return bubble;
-		}
-    </script>
-    
-#### Area, Contour:
-
-    <script>
-        function Scatter(x, y, v) 
-        { 
-    		x = x || 0;
-    		y = y || 0;
-    		value = v || 0;
-    		
-    		var series = 
-    		[
-    			//add records
-    			{ "x": 10, "y": 10, "value": 10 },
-    			
-    		];
-    		return bubble;
+    		return dataItems;
 		}
     </script>
 
-#### Polyline, Polygon:
+When setting `ChartType` property to `Area` or `Contour` value, use:
+
+**In Javascript:**
+
+    <script>
+        function ScatterValues() 
+        { 
+    		var dataItems = 
+    		[ 
+    			{ "x": 10, "y": 10, "value": 10 }, 
+    			{ "x": 20, "y": 20, "value": 10 }, 
+    		];
+    		return dataItems;
+		}
+    </script>
+
+When setting `ChartType` property to `Polyline` or `Polygon` value, use:
  
     <script>
-        function getRectPoints(x, y, w, h) 
+        function ScatterShapes(x, y, w, h) 
         {
-    		x = x || 0;
-    		y = y || 0;
-    		w = w || 0;	
-    		h = h || 0;
-		
-    	    function dimensions(x, y, w, h) 
+    	    function createShape(x, y, w, h) 
 	        {
     		    return [
     				{ "x": x, "y": y },
@@ -216,13 +185,14 @@ The following example exercises the minimum requirements for each chart type. Ea
     		}
 			var data = 
 			[ 
-			    //add records
-			   { "points": [dimensions(10, 10, 10, 10)]},
+			   { "points": [createShape(10, 10, 10, 10)]},
+			   { "points": [createShape(20, 20, 10, 10)]},
 			];	
 			
 			return data;
 		}
     </script>
+    
 *Related topics:* 
 
 - [Getting Started](shapechart-getting-started-with-shapechart.html)
