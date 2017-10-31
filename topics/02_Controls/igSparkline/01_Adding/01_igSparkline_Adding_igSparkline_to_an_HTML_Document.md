@@ -258,11 +258,20 @@ Description
                             <td>
 `js/modules/infragistics.util.js`
 `js/modules/infragistics.util.jquery.js`
-			</td>
+			                </td>
 
                             <td>
 %%ProductName%% utilities
-			</td>
+			                </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+`js/modules/infragistics.ui.widget.js`
+                            </td>
+                            <td>
+Common widget
+                            </td>
                         </tr>
 
                         <tr>
@@ -292,13 +301,21 @@ Data source framework
 `js/modules/infragistics.ext_ui.js`<br>
 `js/modules/infragistics.dv_jquerydom.js`<br>
 `js/modules/infragistics.dv_core.js`<br>
-`js/modules/infragistics.dv_geometry.js`<br>
-`js/modules/infragistics.dv.simple.core.js`
+`js/modules/infragistics.dv_geometry.js`
 			</td>
 
                             <td>
 A shared library for all data visualization components
 			</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+`js/modules/infragistics.dv_interactivity.js`
+                            </td>
+                            <td>
+Optional. Required for user interaction such as tooltips.
+                            </td>
                         </tr>
 
                         <tr>
@@ -313,7 +330,7 @@ The base widget for all %%ProductName%% chart components
 
                         <tr>
                             <td>
-`js/modules/infragistics.chart_sparkline.js`
+`js/modules/infragistics.sparkline.js`
 			</td>
 
                             <td>
