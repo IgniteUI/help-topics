@@ -481,8 +481,19 @@ The following table specifies resource names to be used with `igLoader`™ for d
 			<td>igDataChart.Radial</td>
 		</tr>
 		<tr>
-			<td>scatter, scatterLine</td>
+			<td>scatter, scatterLine, scatterArea, scatterContour</td>
 			<td>igDataChart.Scatter</td>
+		</tr>
+		<tr>
+		<td>
+		scatterPolyline, scatterPolygon</td>
+		<td>igDataChart.Shape</td>
+		</tr>
+		<tr>
+		<td>
+		Shape Files
+		</td>
+		<td>igDataChart.igShapeDataSource</td>
 		</tr>
 		<tr>
 			<td>stackedBar, stacked100Bar, stackedArea, stacked100Area, stackedColumn, stacked100Column, stackedLine, stacked100Line, stackedSpline, stacked100Spline, stackedSplineArea, stacked100SplineArea</td>
@@ -495,6 +506,10 @@ The following table specifies resource names to be used with `igLoader`™ for d
 		<tr>
 			<td>Date-time axis</td>
 			<td>igDateTimeAxis</td>
+		</tr>
+		<tr>
+			<td>TimeXAxis</td>
+			<td>igTimeXAxis</td>
 		</tr>
 		<tr>
 			<td>Chart legend</td>
