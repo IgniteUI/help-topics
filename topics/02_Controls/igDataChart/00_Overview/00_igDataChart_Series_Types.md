@@ -46,7 +46,6 @@ This topic contains the following sections:
     -   [Radial series](#radial-series)
     -   [Range Category series](#range-series)
     -   [Scatter series](#scatter-series)
-    -   [Shape series](#shape-series)
 -   [Composite Charts](#composite)
 -   [Related Content](#related-content)
   -   [Topics](#topics)
@@ -1108,7 +1107,7 @@ Visualize data as isarithmic contours based on a triangulation of X+Y+Value poin
         
         <tr>
             <td>
-[Shape](igDataChart-Series-Types.html#shape-series)
+
 			</td>
 
             <td>
@@ -1230,13 +1229,9 @@ Scatter charts depict individual points in orthogonal (Cartesian) coordinate sys
 
 Scatter charts are used to represent scientific measurement or other data collection for the relation of two variables and easily shows the density of samples in particular area of the measurement, and it is possible to spot trends in the distribution of data.
 
-### <a id="shape-series"></a>Shape Series
-
-Shape charts depict collections of points as two-dimensional shapes where each point makes up one corner, or vertex, of the shape.  For example, a rectangle is produced by having 4 points, one in each corner.  Like Scatter charts, Shape charts are also plotted in an orthogonal (Cartesian) coordinate system.
+Two of the scatter types, `scatterPolygon` and `scatterPolyline`, depict data differently than the other types. They depict collections of points as two-dimensional shapes where each point makes up one corner, or vertex, of the shape.  For example, a rectangle is produced by having 4 points, one in each corner. The `scatterPolygon` type depicts a filled shape while the `scatterPolyline` type depicts the point collection as line segments connecting each point.
 
 ![](images/igDataChart_Types_10.png)
-
-Shape charts can be used for many things such as visualizing borders between countries or displaying an office floor plan.
 
 ## <a id="composite"></a>Composite Charts
 
