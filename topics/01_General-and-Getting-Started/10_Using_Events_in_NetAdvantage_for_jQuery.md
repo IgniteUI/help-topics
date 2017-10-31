@@ -136,7 +136,7 @@ $('#editorContainer').igTextEditor({
 
 
 ### Overview
-There are a number of different approaches are supported by jQuery for handling events. Depending on your situation, you may choose to use the [bind()](http://api.jquery.com/bind/), [live()](http://api.jquery.com/live/), [delegate()](http://api.jquery.com/delegate/) or [on()](http://api.jquery.com/on/) functions to wire event handlers to a widget's events.
+There are a number of different approaches which are provided by jQuery for handling events. Depending on your situation, you may choose to use the [bind()](http://api.jquery.com/bind/), [live()](http://api.jquery.com/live/), [delegate()](http://api.jquery.com/delegate/) or [on()](http://api.jquery.com/on/) functions to wire event handlers to a widget's events.
 
 The following table discusses the details of each function:
 
@@ -154,7 +154,7 @@ The following table discusses the details of each function:
 
 When using `bind()`, keep in mind that it attaches the specified handler only on the currently available elements, which means dynamically added items (after the DOM is loaded) aren't included in the event handler assignments. The `delegate()` function is a newer version of `live()` and it has improved performance over `live()`.
 
->**Note**: As of jQuery version 1.7 `on()` and `one()` functions are available as preferred replacements for `delegate()`.
+>**Note**: As of jQuery 1.7, the `live()` method is deprecated and as of jQuery 3.0 the `delegate()` and `bind()` methods are also deprecated. These methods were superseded by the `on()` and `one()` functions as preferred replacements.
 
 When using any of the prescribed jQuery event wiring functions make sure to adhere to the jQuery UI event naming conventions. For instance the jQuery UI widget factory adds the name of the widget as a prefix of the event name. Therefore if want to attach to the “*columnhiding*” event of the *“iggridhiding”* widget, the event name becomes, “*iggridhidingcolumnhiding*”.
 
@@ -178,13 +178,13 @@ In the following examples there are separate sections each for the bind and unbi
  **In HTML:**
 
 	```html
-	<%= Html.Infragistics().Grid(Model). ID("grid1")
+	@(Html.Infragistics().Grid(Model). ID("grid1")
         .AutoGenerateColumns(true)
         .Features(feature =>{
             feature.Hiding());
             }).DataBind()
         .Render()
-    %>
+    )
 	```
 
  Next, the existing grid instance is updated to include an event handler for the `columnHiding` event which points to a separate function that implements the handler.
@@ -236,7 +236,7 @@ In the following examples there are separate sections each for the bind and unbi
  **In HTML:**
 
 	```html
-	<%= Html.
+	@(Html.
         Infragistics().
         Combo().
         ID("comboProducts").
@@ -246,7 +246,7 @@ In the following examples there are separate sections each for the bind and unbi
         SelectedIndexes(new int[] { 0 }).
         DataBind().
         Render()
-    %>
+    )
 	```
 
  **JavaScript:**
@@ -286,11 +286,11 @@ In the following examples there are separate sections each for the bind and unbi
  **In HTML:**
 
 	```html
-	<%= Html.Infragistics().TextEditor()
+	@(Html.Infragistics().TextEditor()
           .ID("textEditor")
           .Width(150)
           .Render()
-    %>
+    )
 	```
 
  Bind to `selectionChanged` event
