@@ -13,11 +13,10 @@
 This topic presents the controls and the new and enhanced features for the Ignite UI™ 2017 Volume 1 release.
 
 
-## What’s New Summary
+### Overview
 
-The following summarizes what’s new in 2017 Volume 2. Additional details follow.
+The following table summarizes what’s new in 2017 Volume 2 and additional details follow.
 
-### General
 Feature | Description
 ---|---
 [New bundled files](#bundledFiles)| New bundled files for excel, spreadsheet and scheduler.
@@ -52,7 +51,8 @@ Feature | Description
 
 Feature | Description
 ---|---
-[New control igShapeChart](#igshapechart-control)| New lightweight and highly performant chart.
+[New control igShapeChart](#igshapechart-control)| New lightweight, highly performant chart. 
+
 
 ### igDataChart
 
@@ -229,9 +229,11 @@ With this execution process change, rules also specify if they should run for em
 
 ## <a id="igshapechart-control"></a> igShapeChart
 
-The igShapeChart is a lightweight, highly performant chart. This chart can be easily configured to display scatter as well as providing support for two additional data visualizations (Polyline and Polygon). The chart can also plot data from shape files or any custom shape that you can define using an array of arrays of X/Y points.
+The `igShapeChart` is a lightweight, highly performant chart. This chart can be easily configured to display scatter X/Y points, shape files or any custom shape that you can define using an array of arrays of X/Y points. The `igShapeChart` control is using a smart data adapter in order to analyze bound data and select an appropriate visualization to render. However, it is possible to specify which chart type the `igShapeChart` will use by setting the `chartType` property to one of the following values: `Area`,`Bubble`,`Contour`,`HighDensity`,`Point`,`Line`, `Spline`, `Polygon`, or `Polyline`. 
 
-In addition, the Shape Chart can render break-even data as long as at least one data item has FixedCost, VariableCost, SalesRevenue, and SalesUnits data columns.
+![](../02_Controls/igShapeChart/images/shapechart_overview.png)
+
+In addition, this chart can render break-even data as long as at least one data item has `FixedCost`, `VariableCost`, `SalesRevenue`, and `SalesUnits` data columns.
 
 ![](../02_Controls/igShapeChart/images/shapechart-breakeven-01.png)
 
@@ -250,12 +252,14 @@ A new axis, time x-axis, is added to the igDataChart this release. By default, t
 
 ### <a id="new-series"></a> New Series Types
 
-The following series types can be used with the igDataChart:
+The following series types can be used with the igDataChart control:
 
-* Scatter Area series
-* Scatter Contour series
-* Scatter Polyline series
-* Scatter Polygon series
+* [Scatter Area Series](TriangulationSeries-Area-Series.html)
+* [scatter Contour Series](TriangulationSeries-Contour-Series.html)
+* [scatter Polyline Series](ShapeSeries-Polyline-Series.html)
+* [scatter Polygon Series ](ShapeSeries-Polygon-Series.html)
+ 
+![](/images/chart_scatter_series.png)
 
 ## igScheduler
 
