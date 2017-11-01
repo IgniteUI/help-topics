@@ -177,6 +177,15 @@ Description
 The igDataSource control
 			</td>
 						</tr>
+
+						<tr>
+							<td>
+								infragistics.ui.widget.js
+                            </td>
+							<td>
+								Base igWidget for all Ignite UI widgets.
+							</td>
+						</tr>
 						
 						<tr>
 						    <td>
@@ -200,6 +209,15 @@ The igDataSource control
 							<td>
 Chart and map common widget
 			</td>
+						</tr>
+
+						<tr>
+							<td>
+								infragistics.dv_interactivity.js
+                            </td>
+							<td>
+								Provides support for user interaction such as panning, zooming, dragging, etc.
+							</td>
 						</tr>
 
 						<tr>
