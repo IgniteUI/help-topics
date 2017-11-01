@@ -45,7 +45,7 @@ The table below shows what axis types can be used with Category Series in the `i
                 <th>numericY</th>
                 <th>categoryX</th>
                 <th>categoryY</th>
-                <th>categoryDateTimeX</th>
+                <th>time</th>
                 <th>valueMemberPath</th> 
             </tr>
             <tr>
@@ -159,7 +159,7 @@ The table below shows what axis types can be used with Range Series in the `igDa
                 <th>Series Type</th>
                 <th>numericY</th>
                 <th>categoryX</th>
-                <th>categoryDateTimeX</th> 
+                <th>time</th> 
                 <th>high</th>
                 <th>low</th>
             </tr>
@@ -202,7 +202,7 @@ The table below shows what axis types can be used with Stacked Series in the `ig
                 <th>numericY</th>
                 <th>categoryX</th>
                 <th>categoryY</th>
-                <th>categoryDateTimeX</th>
+                <th>time</th>
                 <th>value</th>
             </tr>
             <tr>
@@ -566,7 +566,7 @@ The table below shows what axis types can be used with Financial Price Series an
                 <th>Series Type</th>
                 <th>numericY</th> 
                 <th>categoryX</th>
-                <th>categoryDateTimeX</th>
+                <th>time</th>
                 <th>high</th>
                 <th>low</th>
                 <th>open</th>
