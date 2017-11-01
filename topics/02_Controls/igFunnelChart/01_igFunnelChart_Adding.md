@@ -198,7 +198,7 @@ Adding the `igFunnelChart` control to an HTML page requires referencing the reso
 							</td>
 
 							<td>
-								Core visuzlization logic for all chart widgets
+								Core visualization logic for all chart widgets
 							</td>
 						</tr>
 
