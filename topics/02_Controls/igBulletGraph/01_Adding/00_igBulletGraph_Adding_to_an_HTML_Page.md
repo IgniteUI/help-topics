@@ -138,6 +138,14 @@ A shared library for data visualization components
 						</tr>
 						<tr>
 							<td>
+*infragistics.ui.widget.js*
+                            </td>
+							<td>
+Base igWidget for all Ignite UI widgets.
+							</td>
+						</tr>
+						<tr>
+							<td>
 *infragistics.bulletgraph.js*
                             </td>
 							<td>
@@ -223,6 +231,7 @@ To complete the procedure, you need the required JavaScript and CSS files refere
 	<script src="../../igniteui/js/modules/infragistics.dv_jquerydom.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.dv_core.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.dv_geometry.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.ui.widget.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.bulletgraph.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.ui.bulletgraph.js" type="text/javascript"></script>
 </head>
@@ -388,6 +397,7 @@ Following is the full code for this procedure.
 	<script src="../../igniteui/js/modules/infragistics.dv_jquerydom.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.dv_core.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.dv_geometry.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.ui.widget.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.bulletgraph.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.ui.bulletgraph.js" type="text/javascript"></script>
         <script type="text/jscript">
