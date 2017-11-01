@@ -137,6 +137,15 @@ The following table summarizes the requirements for using the `igLinearGauge` co
                         </tr>
 
                         <tr>
+							<td>
+								`infragistics.ui.widget.js`
+                            </td>
+							<td>
+								Base igWidget for all Ignite UI widgets.
+							</td>
+						</tr>
+
+                        <tr>
                             <td>
                                 `infragistics.ext_core.js`
                                 `infragistics.ext_collections.js`
@@ -149,6 +158,15 @@ The following table summarizes the requirements for using the `igLinearGauge` co
                                 Data visualization core functionality
                             </td>
                         </tr>
+
+                        <tr>
+							<td>
+								`infragistics.dv_interactivity.js`
+                            </td>
+							<td>
+								Provides support for user interaction such as panning, zooming, dragging, etc.
+							</td>
+						</tr>
 
                         <tr>
                             <td>
@@ -239,12 +257,14 @@ To complete the procedure, you need the required JavaScript and CSS files refere
     <!-- Linear Gauge Required JavaScript Files -->
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.util.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.util.jquery.js"></script>
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.ui.widget.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.ext_core.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.ext_collections.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.ext_ui.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_jquerydom.js" ></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_core.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_geometry.js"></script>
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_interactivity.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.lineargauge.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.ui.lineargauge.js"></script>
 </head>
