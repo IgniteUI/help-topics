@@ -131,7 +131,7 @@ The table below briefly explains the main features of the `igScheduler`.
         </tr>
         <tr>
             <td>Views</td>
-            <td>Тhe igScheduler can be configured to use agenda and month view, together and separately.</td>
+            <td>Тhe igScheduler can be configured to use agenda, month, week or day view, together and separately.</td>
         </tr>
         <tr>
             <td>Activities</td>
@@ -148,7 +148,7 @@ The `igScheduler` control can be configured to present calendar information in d
 $("#scheduler").igScheduler({
     height: "100%",
     width: "100%",
-    views: ["month", "agenda"],
+    views: ["month", "agenda", "week", "day"],
     viewMode: "monthView"
 });
 ```
@@ -293,7 +293,7 @@ The following table lists the Appointment's key properties and their purpose:
 		</tr>
         <tr>
 			<td>Location</td>
-			<td>Used to store the location where the activity should take place.
+			<td>Used to store the location where the activity takes place.
 			</td>
 		</tr>
         <tr>
@@ -310,7 +310,7 @@ The following table lists the Appointment's key properties and their purpose:
         <tr>
 			<td>Resource</td>
 			<td>
-            Used to obtain the resource associate with the current activity. Color scheme is used to highlight the activities associated with this resource.
+            Used to obtain the resource associated with the current activity. Color scheme is used to highlight the activities associated with this resource.
 			</td>
 		</tr>
         <tr>
@@ -334,7 +334,8 @@ The following table lists the Appointment's key properties and their purpose:
 
 ### Binding to data sources overview
 
-In most cases, you will use the `dataSource` option of the `igScheduler` to bind to data. `ScheduleListDataSource` should be initialized, where the [appointments](igscheduler-configure-appointments.html) and [resources](igscheduler-configure-resources.html) collections should be configured.
+The `dataSource` and `resources` options of the `igScheduler` are required for the data binding. Each option need to be assigned an array that is holding the corresponding appointments or resources collection.
+Please refer to the [Configure appointments](igscheduler-configure-appointments.html) and [Configure resources](igscheduler-configure-resources.html) topics for a more detailed overview.
 
 ## <a id="related-topics"></a>Related Topics
 

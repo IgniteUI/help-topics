@@ -52,7 +52,7 @@ Load bundled modules
 
 ### Introduction
 
-This procedure takes you step-by-step toward adding an `igScheduler` to a web page. This sample demonstrates how to instantiate the igScheduler with a Month View and appointments subjects. You can navigate between time periods and create, edit and delete scheduled activities.
+This procedure takes you step-by-step toward adding an `igScheduler` to a web page. This sample demonstrates how to instantiate the igScheduler with a Month View and appointments objects. You can navigate between time periods and create, edit and delete scheduled activities.
 
 
 ### Requirements
@@ -64,12 +64,13 @@ To complete the procedure, you need the following:
 -   References to the required JavaScript files and CSS files on your web page
 
 ## <a id="basic-implementation"></a>Creating a basic igScheduler implementation
-The steps below will guide you on how to quickly setup a `igScheduler` component in your page showing more than one appointments.
+The steps below will guide you on how to quickly setup a `igScheduler` component in your page showing more than one appointment.
 
 1. Adding the required JS and CSS files
 
     1.1. By using igLoader
-Use the loader in order to load the combined JavaScript and CSS files referenced locally in the application.
+
+The igLoader will fetch all required JavaScript and CSS files for the listed controls.
 
 ```html
 <head>
@@ -160,31 +161,38 @@ Html div element with id `scheduler` will be wrapped by the `igScheduler widget`
 <script src="igniteui/js/infragistics.scheduler-bundled.js"></script>
 ```
 
-2. Load the data that will be used by the `igScheduler`. In the example `igDataSource` is used to create a schedule list data source.
+2. Assign the appointments and resources collections to the corresponding `dataSource` and `resources` options.
 
 ```javascript
 ...
-$.ig.loader(function () {
-    var scheduleListDataSource = new $.ig.scheduler.ScheduleListDataSource(),
-        appointmentsDS = new $.ig.DataSource({
-            primaryKey: "id",
-            dataSource: appointments
-        });
-
-    appointmentsDS.dataBind();
-
-    scheduleListDataSource.resourceItemsSource(resources);
-    scheduleListDataSource.appointmentItemsSource(appointmentsDS);
+    appointments = [{
+            "resourceId": 1,
+            "id": "11",
+            "start": new Date(2017, 10, 2, 6, 45),
+            "end": new Date(2017, 10, 3, 6, 45),
+            "subject": "Marketing conference"
+        },
+        {
+            "resourceId": 2,
+            "id": "5",
+            "end": new Date(2017, 10, 3, 12, 45),
+            "start": new Date(2017, 10, 3, 13, 45),
+            "subject": "Dentist appointment"
+        }],
+    resources = [
+        { id: 1, displayName: "Trina Friesen"},
+        { id: 2, displayName: "Mack Koch"}]
 ...
 ```
-3. Assign the data source.
+3. Assign the above to the `dataSource` and `resources` options.
 
 ```javascript
 $("#scheduler").igScheduler({
     height: "650px",
     width: "100%",
     selectedDate: today,
-    dataSource: scheduleListDataSource
+    dataSource: appointments,
+    resources: resources
 });
 ```
 

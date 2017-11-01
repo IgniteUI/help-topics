@@ -13,28 +13,53 @@
 
 ## Purpose
 
-This topic explains how to bind, create, update and delete appointments in the `igScheduler` control.
+This topic explains the concept of the appointments in the `igScheduler` control and provides examples on how to bind and perform CRUD operations  with those appointments.
 
 ## Overview
 
-The appointments are used to represent an event which starts at a specific time and ends at a specific time. The appointment can be associated with resource
+The appointments are used to represent an event which starts at a specific time and ends at a specific time. The appointment can be associated with a resource, which means that the resource (a kind of entity, for example a person) is the owner of the activity represented by that appointment.
 
-## Appointment object properties
+It is important to note that the scheduling control is built by the `igSchedulerCore` and the `igScheduler` controls. The `igSchedulerCore` is the engine that contains and performs the business logic, while the `igScheduler` runs the scheduling control user interface.
+
+The `igScheduler` works with appointments that are simple JSON objects, containing only the properties listed in the [Appointment object properties section](#appointment-properties). The collection of appointments, assigned to the `dataSource` option by the developer, needs to contain this type of appointments.
+
+At the same time the `igSchedulerCore` maps these objects to another type of appointment objects. In comparison to the other type of appointments, the appointments of the `igSchedulerCore` do not contain the properties listed in the [Appointment object properties section](#appointment-properties), but expose getter and setter methods with the same name and more. Please refer to [Appointment object methods section](#appointment-properties) below for more information.
+
+##<a id="appointment-properties"></a> Appointment object properties
 
 The following table lists the Appointment's key properties and their purpose:
 
 Property |	Purpose 
 ---|---
 id | This property is used to distinguish this activity amongst all other appointments. It must be unique. | 
-subject | This `string` property is used as short description of the activity it is the main information shown in the control’s views and therefor used to distinguish a specific appointment amongst the other appointments.
-location| This `string` property is used to store the location where the appointment should take place.
+subject | This `string` property is used as short description of the activity. It is the main information shown in the control’s views and therefore used to distinguish a specific appointment amongst the other appointments.
+location| This `string` property is used to store the location where the appointment takes place.
 start | This `Date` property contains the start date and time of the appointment.
 end | This `Date` property contains the end date and time of the appointment.
 resourceId | This property is used to associate the current appointment with a resource.
+recurrence | This property holds the recurrence pattern for the appointment.
+
+##<a id="appointment-properties"></a> Appointment object methods
+
+The following table lists the Appointment's key methods and their purpose:
+
+Property |	Purpose 
+---|---
+id | Gets the `id` property value that is used to distinguish this activity amongst all other appointments. | 
+subject | Gets/sets the `subject` property value that is used as short description of the activity.
+location| Gets/sets the `location` property value that stores where the activity takes place.
+start | Gets/sets the `start` property value that contains the start date and time of the appointment.
+end | Gets/sets the `end` property value that contains the end date and time of the appointment.
+resourceId | Gets/sets the `resourceId` property value that is used to associate the current appointment with a resource.
+resource | Gets the resource object that is associated with the current appointment with.
+recurrence | Gets/sets the `recurrence` property value that holds the recurrence pattern.
+recurrenceId | Returns the `ID` of the root recurrence activity or null if the activity is not associated with a recurrence.
+isRecurrenceRoot | Returns a boolean indicating whether this appointment is a recurrence root activity.
+recurenceRoot | Returns the recurrence root activity or null if the appointment is not associated with a reccurence.
 
 ### Code example
 
-The appointments are instance of [$.ig.DataSource](%%jQueryApiUrl%%/ig.datasource) passed to the appointmentItemsSource of the `ScheduleListDataSource`.
+The appointments are a collection of JSON objects, containing all or some of the appointment`s properties:
 
 ```javascript
 var appointments = [{
@@ -60,21 +85,18 @@ var appointments = [{
 		"resourceId": 11
     }
 ],
-scheduleListDataSource = new $.ig.scheduler.ScheduleListDataSource();
-
-scheduleListDataSource.appointmentItemsSource(resources);
 
 $("#scheduler").igScheduler({
     height: "650px",
     width: "100%",
-    dataSource: scheduleListDataSource
+    dataSource: appointments
 });
 
 ```
 
-## Finding appointment by ID
+## Getting all appointments in time range
 
-Appointments can be accessed by id using the [getAppointmentById method](%%jQueryApiUrl%%/ui.igscheduler#methods:getAppointmentById)
+A collection of all appointments for the given time range can be retrieved by the [getAppointmentsInRange method](%%jQueryApiUrl%%/ui.igscheduler#methods:getAppointmentsInRange)
 
 ### Code example
 
@@ -84,7 +106,7 @@ var appointment = $("#scheduler").igScheduler("getAppointmentById", 4);
 
 ## Adding appointment through the API
 
-Appointments can be added through [createAppointment method](%%jQueryApiUrl%%/ui.igscheduler#methods:createAppointment) by passing as the argument appointment object.
+Appointments can be added by using the [createAppointment method](%%jQueryApiUrl%%/ui.igscheduler#methods:createAppointment) by passing the appointment object as an argument .
 
 ### Code example
 
@@ -102,7 +124,7 @@ var appointment = $("#scheduler").igScheduler("createAppointment", {
 
 ## Editing appointment through the API
 
-Appointments can be edited through [editAppointment method](%%jQueryApiUrl%%/ui.igscheduler#methods:editAppointment) by passing as argument the appointment object and object containing tha properties that will be changed.
+Appointments can be edited by using the [editAppointment method](%%jQueryApiUrl%%/ui.igscheduler#methods:editAppointment) that is taking as parameters the appointment object and an object containing the properties that will be changed.
 
 ### Code example
 
@@ -121,12 +143,11 @@ $("#scheduler").igScheduler("editAppointment", appointment, {
 
 ## Deleting appointment through the API
 
-Appointments can be deleted through [deleteAppointment method](%%jQueryApiUrl%%/ui.igscheduler#methods:deleteAppointment) by passing as argument the appointment object.
+Appointments can be deleted by using the [deleteAppointment method](%%jQueryApiUrl%%/ui.igscheduler#methods:deleteAppointment) which needs to be passed the appointment object as an argument.
 
 ### Code example
 
 ```javascript
-var appointment = var appointment = $("#scheduler").igScheduler("getAppointmentById", 4);
 
 $("#scheduler").igScheduler("deleteAppointment", appointment);
 ```
