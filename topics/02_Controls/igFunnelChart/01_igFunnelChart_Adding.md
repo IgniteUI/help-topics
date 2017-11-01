@@ -167,6 +167,16 @@ Adding the `igFunnelChart` control to an HTML page requires referencing the reso
 							</td>
 						</tr>
 
+						
+						<tr>
+							<td>
+								infragistics.ui.widget.js
+                            </td>
+							<td>
+								Base igWidget for all Ignite UI widgets.
+							</td>
+						</tr>
+
 						<tr>
 							<td>
 								infragistics.ext_core.js,<br>
@@ -188,7 +198,7 @@ Adding the `igFunnelChart` control to an HTML page requires referencing the reso
 							</td>
 
 							<td>
-								Core visuzlization logic for all chart widgets
+								Core visualization logic for all chart widgets
 							</td>
 						</tr>
 
@@ -199,6 +209,16 @@ Adding the `igFunnelChart` control to an HTML page requires referencing the reso
 
 							<td>
 								Common UI code for data visualization widgets
+							</td>
+						</tr>
+
+						
+						<tr>
+							<td>
+								infragistics.dv_interactivity.js
+                            </td>
+							<td>
+								Provides support for user interaction such as panning, zooming, dragging, etc.
 							</td>
 						</tr>
 
