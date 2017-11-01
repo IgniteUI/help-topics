@@ -734,6 +734,16 @@ infragistics.dv_opd.js
 Chart Overview Plus Detail Pane functionality
 			</td>
 						</tr>
+
+						<tr>
+							<td>
+infragistics.ui.widget.js
+			</td>
+
+							<td>
+Base igWidget for all Ignite UI widgets.
+			</td>
+						</tr>
 					</tbody>
 </table>
 			</td>
@@ -852,7 +862,7 @@ Chart-type-specific JavaScript resources
 	
 		<tr>
 			<td>
-				DateTime Axis
+				DateTimeAxis / TimeAxis
 			</td>
 			<td>
 				infragistics.datachart_extendedaxes.js
