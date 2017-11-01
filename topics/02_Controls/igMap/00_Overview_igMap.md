@@ -377,7 +377,7 @@ The functionality of the igMap control is based on the HTML5 Canvas tag and its 
 
 						<tr>
 							<td>
-								infragistics.ui.widget.js
+								`infragistics.ui.widget.js`
                             </td>
 							<td>
 								Base igWidget for all Ignite UI widgets.
@@ -415,8 +415,8 @@ The functionality of the igMap control is based on the HTML5 Canvas tag and its 
 
 						<tr>
 							<td>
-								infragistics.dv_interactivity.js<br/>
-								infragistics.datachart_interactivity.js
+								`infragistics.dv_interactivity.js`<br/>
+								`infragistics.datachart_interactivity.js`
                             </td>
 							<td>
 								Provides support for user interaction such as panning, zooming, dragging, etc.
