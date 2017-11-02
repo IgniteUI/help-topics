@@ -488,6 +488,7 @@ Follow these steps to add an `igDoughnutChart` to an HTML page.
 	<!-- %%ProductName%% Required JavaScript Files -->
 	<script src="../../igniteui/js/modules/infragistics.util.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.util.jquery.js" type="text/javascript"></script>
+	<script src="../../igniteui/js/modules/infragistics.ui.widget.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.datasource.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.templating.js" type="text/javascript"></script>
 	<script src="../../igniteui/js/modules/infragistics.ext_core.js" type="text/javascript"></script>
@@ -551,13 +552,3 @@ The following topics provide additional information related to this topic.
 The following sample provides additional information related to this topic.
 
 - [Bind to JSON](%%SamplesUrl%%/doughnut-chart/bind-json): This is a basic example of the doughnut chart bound to JSON data.
-
-
-
-
-
- 
-
- 
-
-
