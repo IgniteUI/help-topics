@@ -126,13 +126,22 @@ Following is the code that implements this example.
       <script type="text/javascript" src="../../js/jquery.min.js"></script>
       <script type="text/javascript" src="../../js/jquery-ui.js"></script>
       
-      <!-- QR Code Barcode Specific JavaScript Files -->
+      <!-- %%ProductName%% Required Common JavaScript Files -->
       <script src="../../igniteui/js/modules/infragistics.util.js"></script>
       <script src="../../igniteui/js/modules/infragistics.util.jquery.js"></script>
-      <script src="../../igniteui/js/modules/infragistics.dv.simple.core.js"></script>
+      <script src="../../igniteui/js/modules/infragistics.dv_core.js"></script>
+      <script src="../../igniteui/js/modules/infragistics.dv_jquerydom.js"></script>
+      <script src="../../igniteui/js/modules/infragistics.ext_core.js"></script>
+      <script src="../../igniteui/js/modules/infragistics.ext_collection.js"></script>
+      <script src="../../igniteui/js/modules/infragistics.ext_collectionsextended.js"></script>
+      <script src="../../igniteui/js/modules/infragistics.ext_text.js"></script>
+      <script src="../../igniteui/js/modules/infragistics.ext_ui.js"></script>
+      
+      <!-- QR Code Barcode Specific JavaScript Files -->
       <script src="../../igniteui/js/modules/encoding/infragistics.encoding.core.js"></script>
       <script src="../../igniteui/js/modules/encoding/infragistics.encoding_shift_jis.js"></script>
       <script src="../../igniteui/js/modules/infragistics.barcode_qrcodebarcode.js"></script>
+      <script src="../../igniteui/js/modules/infragistics.ui.widget.js"></script>
       <script src="../../igniteui/js/modules/infragistics.ui.barcode.js"></script>
       
       <script type="text/jscript">
@@ -235,13 +244,22 @@ Following is the code that implements this example.
       <script type="text/javascript" src="../../js/jquery.min.js"></script>
       <script type="text/javascript" src="../../js/jquery-ui.js"></script>
       
-      <!-- QR Code Barcode Specific JavaScript Files -->
+      <!-- %%ProductName%% Required Common JavaScript Files -->
       <script src="../../igniteui/js/modules/infragistics.util.js"></script>
       <script src="../../igniteui/js/modules/infragistics.util.jquery.js"></script>
-      <script src="../../igniteui/js/modules/infragistics.dv.simple.core.js"></script>
+      <script src="../../igniteui/js/modules/infragistics.dv_core.js"></script>
+      <script src="../../igniteui/js/modules/infragistics.dv_jquerydom.js"></script>
+      <script src="../../igniteui/js/modules/infragistics.ext_core.js"></script>
+      <script src="../../igniteui/js/modules/infragistics.ext_collection.js"></script>
+      <script src="../../igniteui/js/modules/infragistics.ext_collectionsextended.js"></script>
+      <script src="../../igniteui/js/modules/infragistics.ext_text.js"></script>
+      <script src="../../igniteui/js/modules/infragistics.ext_ui.js"></script>
+      
+      <!-- QR Code Barcode Specific JavaScript Files -->
       <script src="../../igniteui/js/modules/encoding/infragistics.encoding.core.js"></script>
       <script src="../../igniteui/js/modules/encoding/infragistics.encoding_iso-8859-7.js"></script>
       <script src="../../igniteui/js/modules/infragistics.barcode_qrcodebarcode.js"></script>
+      <script src="../../igniteui/js/modules/infragistics.ui.widget.js"></script>
       <script src="../../igniteui/js/modules/infragistics.ui.barcode.js"></script>
       
       <script type="text/jscript">
