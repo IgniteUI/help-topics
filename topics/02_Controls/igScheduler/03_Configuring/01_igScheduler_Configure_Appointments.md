@@ -19,11 +19,28 @@ This topic explains the concept of the appointments in the `igScheduler` control
 
 The appointments are used to represent an event which starts at a specific time and ends at a specific time. The appointment can be associated with a resource, which means that the resource (a kind of entity, for example a person) is the owner of the activity represented by that appointment.
 
-It is important to note that the scheduling control is built by the `igSchedulerCore` and the `igScheduler` controls. The `igSchedulerCore` is the engine that contains and performs the business logic, while the `igScheduler` runs the scheduling control user interface.
+It is important to note that the scheduling control is built by the `igSchedulerCore` and the `igScheduler` controls. The `igSchedulerCore` is the engine and the `igScheduler` runs the user interface.
 
 The `igScheduler` works with appointments that are simple JSON objects, containing only the properties listed in the [Appointment object properties section](#appointment-properties). The collection of appointments, assigned to the `dataSource` option by the developer, needs to contain this type of appointments.
 
 At the same time the `igSchedulerCore` maps these objects to another type of appointment objects. In comparison to the other type of appointments, the appointments of the `igSchedulerCore` do not contain the properties listed in the [Appointment object properties section](#appointment-properties), but expose getter and setter methods with the same name and more. Please refer to [Appointment object methods section](#appointment-properties) below for more information.
+
+The crossing point between those type are the events triggered on user interactions with the `igScheduler`. Attaching to a certain event, the developer may access the appointment that is being created, edited, etc. However, the developer may need to call .dataObject() in order to retrieve a simple JSON object representing the activity, and this JSON object then may be passed to other methods to work with it.
+
+### Code example
+
+The developer access the appointment that is created and then programatically creates the same event for a different location:
+
+```javascript
+$("#scheduler").igScheduler({
+	dataSource: appointments,
+	resources: resources,
+	appointmentCreated: function (evt, ui) {
+		console.log(ui.appointment.dataObject());
+        ui.appointment.dataObject().location = "London";
+        ui.owner.createAppointment(ui.appointment.dataObject());
+	},
+```
 
 ##<a id="appointment-properties"></a> Appointment object properties
 
@@ -56,6 +73,7 @@ recurrence | Gets/sets the `recurrence` property value that holds the recurrence
 recurrenceId | Returns the `ID` of the root recurrence activity or null if the activity is not associated with a recurrence.
 isRecurrenceRoot | Returns a boolean indicating whether this appointment is a recurrence root activity.
 recurenceRoot | Returns the recurrence root activity or null if the appointment is not associated with a reccurence.
+dataObject | Returns a simple JSON object with the properties listed in the [Appointment object properties section](#appointment-properties)
 
 ### Code example
 
