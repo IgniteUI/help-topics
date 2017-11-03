@@ -37,7 +37,7 @@ Issue | Description | Status
 [Swipe-gestures support](#SwipeGesture) | No swipe-gestures support |![](../../images/images/negative.png)
 [Tab navigation to appointment popover](#NavigationToAppointmentPopover) | No tab navigation to appointment popover |![](../../images/images/negative.png)
 [Min width support – 320 px](#MinWidthSupport) | Minimum width resolution support on mobile devices is 320 px |![](../../images/images/negative.png)
-[Setting views option though MVC wrapper is not possible.](#MVCWrappers) | You are not able to set views option, through ASP.NET MVC wrapper.  |![](../../images/images/plannedFix.png)
+[Setting the views option through MVC wrapper.](#MVCWrappers) | Configuring the views option through the ASP.NET MVC wrapper does not take effect.  |![](../../images/images/plannedFix.png)
 
 
 ## Known Issues and Limitations Details
@@ -45,11 +45,11 @@ Issue | Description | Status
 
 ### <a id="NoTimeZoneOffsetting"></a>No time-zone offset settings
 
-Time in the `igScheduler` is always shown according to the current browser offset (hours). For now the scheduler doesn't support showing times in a zone different from the browser's time zone.
+Time in the `igScheduler` is always shown according to the current browser offset (hours). Currently the scheduler does not support showing times in a different zone than the browser's time zone.
 
 ### <a id="NoCustomColorScheme"></a>No custom color scheme
 
-Pre-defined color scheme with twelve colors is provided by the scheduler, which cannot be changed by the end user.
+A pre-defined color scheme with twelve colors is provided by the scheduler, which cannot be changed by the end user.
 
 ![](images/preDefinedColors.png)
 
@@ -67,14 +67,12 @@ The list below provides links to more details related to how WAI-ARIA support ha
 - [igDateEditor](igdateeditor-accessibility-compliance.html#wai-aria)
 - [igTextEditor](igtexteditor-accessibility-compliance.html#wai-aria)
 
-Currently the appointments in the calendar doesn't have ARIA support, only the widgets that are listed above.
-
 ### <a id="FirstDayOfWeek"></a>No first day of the week setting
 
 Sunday is used as the first day of the week by default and currently we do not expose an option that could be used to set a different day of the week (e.g. Monday).
 
-### <a id="remoteDS"></a>Using of remote datasource is not supported
-Currently igScheduler can handle only local datasource, using of remote datasource is not supported for version one.
+### <a id="remoteDS"></a>Binding to a remote datasource is not supported
+Currently igScheduler can handle only local datasource.
 
 ### <a id="SwipeGesture"></a>No swipe-gestures support
 
