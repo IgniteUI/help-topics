@@ -36,6 +36,7 @@ This topic contains the following sections:
 -   [Example](#example)
 -   [Related Content](#related-content)
     -   [Topics](#topics)
+    -   [Samples](#samples)
 
 
 ## <a id="overview"></a> Overview
