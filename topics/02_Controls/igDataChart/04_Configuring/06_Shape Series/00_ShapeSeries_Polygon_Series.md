@@ -36,6 +36,7 @@ This topic contains the following sections:
 -   [Example](#example)
 -   [Related Content](#related-content)
     -   [Topics](#topics)
+    -   [Samples](#samples)
 
 ## <a id="overview"></a> Overview
 
@@ -101,3 +102,7 @@ With the above data and chart, the following result is generated:
 - [Configuring Shape Series](shapeseries-shape-series.html): This topic provides an overview of the scatter polygon and polyline series for the `igDataChart` control.
 
 - [Configuring the Scatter Polyline Series](shapeseries-polyline-series.html): This topic explains how to configure the scatter polyline series for the `igDataChart` control.
+
+### <a id="samples"></a>Samples
+
+- [Scatter Polygon Series](%%SamplesUrl%%/data-chart/polygon): This sample demonstrates how you can display polygonal data in the `igDataChart` control.
