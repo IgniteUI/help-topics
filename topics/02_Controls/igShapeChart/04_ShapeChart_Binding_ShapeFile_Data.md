@@ -1,7 +1,7 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "shapechart-binding-to-shapefile-data",
+    "fileName": "shapechart-binding-shapefile-data",
     "controlName": "igShapeChart",
     "tags": ["API", "ShapeChart", "ShapeFiles"]
 }

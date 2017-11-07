@@ -1,4 +1,13 @@
-﻿# Series Requirements
+﻿<!--
+|metadata|
+{
+    "fileName": "shapechart-series-requirements",
+    "controlName": "igShapeChart",
+    "tags": ["API", "ShapeChart", "requirements"]
+}
+|metadata|
+-->
+# Series Requirements
 
 ### In this topic
 
@@ -199,4 +208,4 @@ When setting `ChartType` property to `Polyline` or `Polygon` value, use:
 
 - [Chart Types](shapechart-chart-types.html)
 
-- [Binding to Shape File Data](shapechart-binding-to-shapefile-data.html)
+- [Binding to Shape File Data](shapechart-binding-shapefile-data.html)
