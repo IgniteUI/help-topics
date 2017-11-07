@@ -1,9 +1,9 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "shapechart-overview",
+    "fileName": "shapechart-chart-types",
     "controlName": "igShapeChart",
-    "tags": ["API", "ShapeChart", "Overview"]
+    "tags": ["API", "ShapeChart", "charttypes"]
 }
 |metadata|
 -->
@@ -124,10 +124,14 @@ The default value of that property is determined by the size of the underlying I
 
 
 
-*Related topics:* 
+**Related topics:**
 
 - [Getting Started](shapechart-getting-started-with-shapechart.html)
 
-- [Configuring Chart Types](shapechart-configuring-chart-types.html)
+- [Series Requirements](shapechart-series-requirements.html)
 
-- [Binding to Shape File Data](shapechart-binding-to-shapefile-data.html)
+- [Binding to Shape File Data](shapechart-binding-shapefile-data.html)
+
+**Samples:**
+
+- [Shape Chart Types](%%SamplesUrl%%/shape-charts/shape-chart-types):  This sample showcases the different `igShapeChart` control chart types.
