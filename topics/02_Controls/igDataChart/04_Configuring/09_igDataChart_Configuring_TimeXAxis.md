@@ -309,3 +309,5 @@ Figure 3: TimeXAxis displaying data every 48 hours.
 The following topic provides additional information related to this topic:
 
 -	[Adding igDataChart](igDataChart-Adding.html):  This topic demonstrates how to add the `igDataChart` control to a page and bind it to data.
+
+-	[Data Chart - Time X-Axis with Axis Breaks](igdatachart-configuring-timexaxis.html):  This sample demonstrates the Time X-Axis with axis breaks in the `igDataChart` control.
