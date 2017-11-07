@@ -93,4 +93,4 @@ The following code example shows how to bind break-even data to the igShapeChart
 
 The following sample provides additional information related to this topic.
 
--	[Binding Break Even Data](%%SamplesUrl%%/shape-charts/binding-break-even-data):  This sample demonstrates the `igShapeChart` control binding to break-even data.
+-	[Binding Break Even Data](%%SamplesUrl%%/shapechart/binding-break-even-data):  This sample demonstrates the `igShapeChart` control binding to break-even data.
