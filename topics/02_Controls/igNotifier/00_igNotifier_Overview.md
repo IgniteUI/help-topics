@@ -51,14 +51,14 @@ $('#success').igNotifier({
 
 ### <a id="info"></a>Info
 
-The gray color is accompanying the info message notifications so they would appear neutral in most themes. This type of notification is the second in the hierarchy level. Since the message in intended to provide information about the specific state of the system or the action expected from the user, there is no default and it can be set via the [`messages`](%%jQueryApiUrl%%/ui.igNotifier#options:messages) option. The input border remains unchanged for this state.
+The gray color is accompanying the info message notifications so they would appear neutral in most themes. This type of notification is the second in the hierarchy level. Since the message in intended to provide information about the specific state of the system or the action expected from the user, there is no default and it can be set via the [`locale`](%%jQueryApiUrl%%/ui.igNotifier#options:locale) option. The input border remains unchanged for this state.
 
 ```js
 $('#info').igNotifier({
     direction: "right",
 	showIcon: "true",
-    messages: {
-      info: "Heads up! This alert needs your attention, but it's not super important."
+    locale: {
+      infoMsg: "Heads up! This alert needs your attention, but it's not super important."
     }
 }).igNotifier("notify", "info");  
 ```
@@ -74,8 +74,8 @@ At the third level is the warning message. The borders of the input container as
 $('#warning').igNotifier({
     direction: "right",
 	showIcon: "true",
-    messages: {
-      warning: "Warning! Better check yourself, you're not looking too good."
+    locale: {
+      warningMsg: "Warning! Better check yourself, you're not looking too good."
     }
 }).igNotifier("notify", "warning");
 ```
@@ -90,8 +90,8 @@ Last but not least is the error messages. As expected the representative color i
 $('#error').igNotifier({
     mode: "popover",
 	showIcon: "true",
-    messages: {
-      error: "Oh snap! Change a few things up and try submitting again."
+    locale: {
+      errorMsg: "Oh snap! Change a few things up and try submitting again."
     }
 }).igNotifier("notify", "error");
 ```
@@ -113,8 +113,8 @@ $('#notifier').igTextEditor({
 
 $('#notifier').igNotifier({
     direction: "right",
-    messages: {
-      success: "Well done!"
+    locale: {
+      successMsg: "Well done!"
     }
 }).igNotifier("notify", "success");
 
@@ -126,7 +126,7 @@ As every other control, the `igNotifier` has its own properties that allow the u
 
 Another worth mentioning option is the [`mode`](%%jQueryApiUrl%%/ui.igNotifier#options:mode). You can choose between `popover` and `inline` display modes. The default value is auto. This means that the notifier sets popover mode for info and warning messages and inline for the success and the error messages.
 
-You can use the [`messages`](%%jQueryApiUrl%%/ui.ignotifier#options:messages) property to customize the default text that is going to be displayed for a specific state or provide it as a last parameter of the [`notify`](%%jQueryApiUrl%%/ui.ignotifier#methods:notify) method.
+You can use the [`locale`](%%jQueryApiUrl%%/ui.ignotifier#options:locale) property to customize the default text that is going to be displayed for a specific state or provide it as a last parameter of the [`notify`](%%jQueryApiUrl%%/ui.ignotifier#methods:notify) method.
 
 The whole list of available options and detailed description can be found in the [igNotifier jQuery API](%%jQueryApiUrl%%/ui.igNotifier) API documentation.
 
