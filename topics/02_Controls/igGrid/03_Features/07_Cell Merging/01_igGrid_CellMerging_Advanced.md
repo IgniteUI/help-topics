@@ -70,7 +70,7 @@ var productData1 = [
 ]
 ```
 
-In order to initialize physical cell merging with *"duplicate"* strategy we can use the defaults to our advantage and not set the latter:
+In order to initialize physical Cell Merging with *"duplicate"* strategy we can use the defaults to our advantage and not set the latter:
 
 **In JavaScript:**
 
@@ -199,7 +199,7 @@ When `mergeType` is *"physical"* the results are almost the same as when using t
 
 ![](images/igGrid_CellMerging_Advaced_null_physical.jpg)
 
-This is useful when combining cell merging with cell updating. In this case updating the merged cell would update the whole merge group visually. Regarding the data, it will still update only the first cell value inside the group, the other cells remain *`null`*.
+This is useful when combining Cell Merging with Cell Updating. In this case updating the merged cell would update the whole merge group visually. Regarding the data, it will still update only the first cell value inside the group, the other cells remain *`null`*.
 
 **Note:** Only the "Project Name" column receives merging because it is the only one containing `null` values.
 

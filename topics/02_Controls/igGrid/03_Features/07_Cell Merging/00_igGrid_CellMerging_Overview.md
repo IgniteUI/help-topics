@@ -14,7 +14,7 @@
 
 ### Purpose
 
-This topic explains the `igGrid`™ control’s Cells Merging feature and its functionality. It contains code examples demonstrating how to enable and configure cell merging in the `igGrid`.
+This topic explains the `igGrid`™ control’s Cells Merging feature and its functionality. It contains code examples demonstrating how to enable and configure Cell Merging in the `igGrid`.
 
 ### Required background
 
@@ -57,7 +57,7 @@ You may use the predefined CSS classes in order to customize the look of the mer
 
 #### <a id="intro-physical"></a> Physical Cell Merging
 
-If the user needs to have only one cell in the place of the merged group of cells, physical merging is available. It is useful for text that could span across multiple cells when merged. The way it works is the same way cell merging would work on an HTML Table by setting *rowspan* of a cell that could span multiple rows. This method is illustrated in the following screenshot.
+If the user needs to have only one cell in the place of the merged group of cells, physical merging is available. It is useful for text that could span across multiple cells when merged. The way it works is the same way Cell Merging would work on an HTML Table by setting *rowspan* of a cell that could span multiple rows. This method is illustrated in the following screenshot.
 
 ![](images/igGrid_CellMerging_Physical.jpg)
 
@@ -65,7 +65,7 @@ The resulting merged cells can be styled through a custom CSS class called [*ui-
 
 ## <a id="enabling"></a> Enabling Cell Merging
 
-`igGrid`, by default, does not enable cell merging so you will need to enable it explicitly. This is done differently in JavaScript and ASP.NET MVC.
+`igGrid`, by default, does not enable Cell Merging so you will need to enable it explicitly. This is done differently in JavaScript and ASP.NET MVC.
 
 To enable Cell Merging in… | Do this…
 ---------------------------|---------
@@ -143,7 +143,7 @@ $("#grid1").igGrid({
 
 The following sample demonstrates how to set the Cell Merging’s mergeOn rule so that the cells for column with key "City" will be merged at all times. 
 
-If we have the Sorting feature enabled and we sort a column, cell merging will be applied to it as well. This is due to the default behavior of Cell Merging and because we haven't set options for the other columns. That is why the "City" column cells will remain merged.
+If we have the Sorting feature enabled and we sort a column, Cell Merging will be applied to it as well. This is due to the default behavior of Cell Merging and because we haven't set options for the other columns. That is why the "City" column cells will remain merged.
 
 **In JavaScript:**
 
