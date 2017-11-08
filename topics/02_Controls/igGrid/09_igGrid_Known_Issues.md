@@ -60,6 +60,7 @@ The scrollable container height is not properly updated if the grid's records ar
 On touch only environments if the height/width of the container is changed, the custom scrollbars don't get updated. | This applies to changes triggered by different features of the grid as well, for example when hiding/unhiding summaries/filtering. | ![](../../images/images/plannedFix.png)
 If the grid is in a scrollable container but has no scrollbar on touch you cannot scroll the scrollable container while swiping on the grid. | If the grid has no scroll bars swiping on it should trigger scrolling for its container, however it currently does not. | ![](../../images/images/plannedFix.png)
 Page cannot be scrolled in IE11 on touch environment when scrolling over igGrid with Selection enabled | Selection applies "-ms-touch-action: none" to disable the default behavior of the pointer events in IE so that users are able to e.g. touch and drag selected cells instead of executing page scroll | ![](../../images/images/negative.png)
+[Scrolling with a horizontal scrollbar until the end of a non-virtualized grid and then trying to scroll vertically with a vertical scrollbar does not work on Edge browser](#edge-vertical-scrollbar) | The interaction with the vertical scrollbar is not working when the horizontal scrollbar is at its most right position. This is a ThirdParty issue from Microsoft due to the igGrid scrolling areas that have hidden overflow. | ![](../../images/images/positive.png)
 
 ## [igGrid – Data Binding](#data-binding)
 
@@ -627,6 +628,14 @@ The column keys are used in internal jQuery selectors for many of the grid's fea
 		};
 })($.prototype.find);
 ```
+
+### <a id="edge-vertical-scrollbar"></a> Scrolling with a horizontal scrollbar until the end of a non-virtualized grid and then trying to scroll vertically with a vertical scrollbar does not work on Edge browser
+
+The interaction with the default browser vertical scrollbar is not functioning correctly when the horizontal scrollbar is at its most right position. This is a ThirdParty issue from Microsoft due to the igGrid scrolling areas that have hidden overflow.
+
+> **Workaround** 
+> 
+> Since the igGrid continuous virtualization uses completely custom scrolling behaviour when interacting with the grid's scrollbars, it can be enabled to workaround this issue.
 
 ## <a id="data-binding"></a> igGrid – Data Binding
 
