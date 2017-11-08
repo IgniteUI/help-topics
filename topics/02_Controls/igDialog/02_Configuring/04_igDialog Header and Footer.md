@@ -78,17 +78,17 @@ The following table lists the configurable aspects of the `igDialog` *header and
 
 					<li><a href="%%jQueryApiUrl%%/ui.igDialog#options:headerText" target="_blank">headerText</a></li>
 
-					<li><a href="%%jQueryApiUrl%%/ui.igDialog#options:closeButtonTitle" target="_blank">closeButtonTitle</a></li>
+					<li><a href="%%jQueryApiUrl%%/ui.igDialog#options:locale.closeButtonTitle" target="_blank">locale.closeButtonTitle</a></li>
 
-					<li><a href="%%jQueryApiUrl%%/ui.igDialog#options:minimizeButtonTitle" target="_blank">minimizeButtonTitle</a></li>
+					<li><a href="%%jQueryApiUrl%%/ui.igDialog#options:locale.minimizeButtonTitle" target="_blank">locale.minimizeButtonTitle</a></li>
 
-					<li><a href="%%jQueryApiUrl%%/ui.igDialog#options:maximizeButtonTitle" target="_blank">maximizeButtonTitle</a></li>
+					<li><a href="%%jQueryApiUrl%%/ui.igDialog#options:locale.maximizeButtonTitle" target="_blank">locale.maximizeButtonTitle</a></li>
 
-					<li><a href="%%jQueryApiUrl%%/ui.igDialog#options:pinButtonTitle" target="_blank">pinButtonTitle</a></li>
+					<li><a href="%%jQueryApiUrl%%/ui.igDialog#options:locale.pinButtonTitle" target="_blank">locale.pinButtonTitle</a></li>
 
-					<li><a href="%%jQueryApiUrl%%/ui.igDialog#options:unpinButtonTitle" target="_blank">unpinButtonTitle</a></li>
+					<li><a href="%%jQueryApiUrl%%/ui.igDialog#options:locale.unpinButtonTitle" target="_blank">locale.unpinButtonTitle</a></li>
 
-					<li><a href="%%jQueryApiUrl%%/ui.igDialog#options:restoreButtonTitle" target="_blank">restoreButtonTitle</a></li>
+					<li><a href="%%jQueryApiUrl%%/ui.igDialog#options:locale.restoreButtonTitle" target="_blank">locale.restoreButtonTitle</a></li>
 
 					<li><a href="%%jQueryApiUrl%%/ui.igDialog#options:imageClass" target="_blank">imageClass</a></li>
 				</ul>
@@ -132,12 +132,12 @@ In order to: | Use this property: | And set it to:
 Show the igDialog header | [showHeader](%%jQueryApiUrl%%/ui.igDialog#options:showHeader) | true
 Set the igDialog header title | [headerText](%%jQueryApiUrl%%/ui.igDialog#options:headerText) | “HEADER”
 Set the igDialog header image | [imageClass](%%jQueryApiUrl%%/ui.igDialog#options:imageClass) | “clsImage”
-Set the igDialog close button title | [closeButtonTitle](%%jQueryApiUrl%%/ui.igDialog#options:closeButtonTitle) | “X”
-Set the igDialog minimize button title | [minimizeButtonTitle](%%jQueryApiUrl%%/ui.igDialog#options:minimizeButtonTitle) | “MIN”
-Set the igDialog maximize button title | [maximizeButtonTitle](%%jQueryApiUrl%%/ui.igDialog#options:maximizeButtonTitle) | “MAX”
-Set the igDialog pin button title | [pinButtonTitle](%%jQueryApiUrl%%/ui.igDialog#options:pinButtonTitle) | “PIN”
-Set the igDialog unpin button title | [unpinButtonTitle](%%jQueryApiUrl%%/ui.igDialog#options:unpinButtonTitle) | “UNPIN”
-Set the igDialog restore button title | [restoreButtonTitle](%%jQueryApiUrl%%/ui.igDialog#options:restoreButtonTitle) | “RESTORE”
+Set the igDialog close button title | [closeButtonTitle](%%jQueryApiUrl%%/ui.igDialog#options:locale.closeButtonTitle) | “X”
+Set the igDialog minimize button title | [minimizeButtonTitle](%%jQueryApiUrl%%/ui.igDialog#options:locale.minimizeButtonTitle) | “MIN”
+Set the igDialog maximize button title | [maximizeButtonTitle](%%jQueryApiUrl%%/ui.igDialog#options:locale.maximizeButtonTitle) | “MAX”
+Set the igDialog pin button title | [pinButtonTitle](%%jQueryApiUrl%%/ui.igDialog#options:locale.pinButtonTitle) | “PIN”
+Set the igDialog unpin button title | [unpinButtonTitle](%%jQueryApiUrl%%/ui.igDialog#options:locale.unpinButtonTitle) | “UNPIN”
+Set the igDialog restore button title | [restoreButtonTitle](%%jQueryApiUrl%%/ui.igDialog#options:locale.restoreButtonTitle) | “RESTORE”
 
 
 ### <a id="header-example"></a> Example
