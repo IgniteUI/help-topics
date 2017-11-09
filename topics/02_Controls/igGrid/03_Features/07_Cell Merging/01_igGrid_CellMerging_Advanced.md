@@ -20,7 +20,7 @@ This topic shows advanced customization for the `igGrid`™ control’s Cells Me
 
 The following lists the topic required as a prerequisite to understanding this topic.
 
-- [igGrid Cell Merging Overview](igGrid-CellMerging_Overview.html): This topic shows you how to enable the Cell Merging feature to be used inside `igGrid`.
+- [igGrid Cell Merging Overview](igGrid-CellMerging-Overview.html): This topic shows you how to enable the Cell Merging feature to be used inside `igGrid`.
 
 ### In this topic
 
@@ -306,6 +306,6 @@ The following sample implements the custom strategy that was demonstrated in the
 
 The following topics provide additional information related to this topic.
 
-- [igGrid Cell Merging - Overview](igGrid_CellMerging_Overview.html)
+- [igGrid Cell Merging - Overview](igGrid-CellMerging-Overview.html)
 - [igGrid Overview](igGrid-Overview.html)
-- [igGrid Sorting](igGrid_Sorting_Overview.html)
+- [igGrid Sorting](igGrid-Sorting-Overview.html)
