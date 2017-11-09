@@ -34,7 +34,7 @@ This topic contains the following sections:
     -   [Enabling Cell Merging in ASP.NET MVC](#enabling-mvc)
 -   [**Configuring when Cell Merging is applied**](#mergeOn)
     -   [For all columns](#mergeOn-all)
-    -   [For specific columns](#mergeOn-column)
+    -   [For specific columns](#mergeOn-all)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
 
@@ -187,6 +187,6 @@ $("#grid1").igGrid({
 
 The following topics provide additional information related to this topic.
 
-- [igGrid Cell Merging - Advanced Cutomization](igGrid_CellMerging_Advanced.html)
+- [igGrid Cell Merging - Advanced Cutomization](igGrid-CellMerging-Advanced.html)
 - [igGrid Overview](igGrid-Overview.html)
-- [igGrid Sorting](igGrid_Sorting_Overview.html)
+- [igGrid Sorting](igGrid-Sorting-Overview.html)
