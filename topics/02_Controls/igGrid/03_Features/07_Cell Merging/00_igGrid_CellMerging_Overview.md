@@ -34,7 +34,7 @@ This topic contains the following sections:
     -   [Enabling Cell Merging in ASP.NET MVC](#enabling-mvc)
 -   [**Configuring when Cell Merging is applied**](#mergeOn)
     -   [For all columns](#mergeOn-all)
-    -   [For specific columns](#mergeOn-all)
+    -   [For specific columns](#mergeOn-column)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
 
@@ -139,7 +139,7 @@ $("#grid1").igGrid({
 )
 ```
 
-### <a id="mergeOn-all"></a> For specific columns
+### <a id="mergeOn-column"></a> For specific columns
 
 The following sample demonstrates how to set the Cell Merging’s mergeOn rule so that the cells for column with key "City" will be merged at all times. 
 
