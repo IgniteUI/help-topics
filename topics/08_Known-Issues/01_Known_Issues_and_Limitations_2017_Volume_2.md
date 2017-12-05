@@ -284,7 +284,7 @@ Specific referencing requirements for the date picker
 			</td>
 
             <td>
-`igDatePicker`™ is dependent on jquery-datepicker and requires reference to either `jquery.ui.datepicker.js` or to combined library such as `jqueryui/1.9.1/jquery-ui.js`.
+`igDatePicker`™ is dependent on jquery-datepicker and requires reference to either `jquery.ui.datepicker.js` or to combined library such as `jqueryui/1.12.1/jquery-ui.js`.
 			</td>
 
             <td>
