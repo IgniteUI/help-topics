@@ -27,4 +27,4 @@ The topics in this group explain how to configure %%ProductName%%® control.
 
 -	[Configuring Views (igScheduler)](igScheduler-Configure-Views.html): The topics in this section provide information about the different views used by the  `igScheduler` control to present calendar data.
 
--	[Configuring ASP.NET MVC (igScheduler)](igscheduler-asp-net-mvc-wrapper.html): This topic shows how to setup and configure ASP.NET MVC wrapper for the `igScheduler`.
+-	[Configuring ASP.NET MVC (igScheduler)](04.igscheduler-configure-asp-net-mvc.html): This topic shows how to setup and configure ASP.NET MVC wrapper for the `igScheduler`.
