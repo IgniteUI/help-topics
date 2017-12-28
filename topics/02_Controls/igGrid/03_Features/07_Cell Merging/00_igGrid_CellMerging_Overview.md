@@ -43,7 +43,7 @@ This topic contains the following sections:
 
 The feature allows users to merge the cells in a column visually or physically based on either pre-defined or custom criteria. Enabling the feature will, by default, apply visual cell merging for sorted columns. Columns that are not sorted lose their merged states.
 
-Users can change the default behavior with the [*mergeOn*](%%jQueryApiUrl%%/ui.iggridcellmerging#options:mergeOn) property. Setting it to "always" enables the feature to merge cells when the grid is initialized and between operations causing it to re-render. This is particularly useful when working with i.e. grids bound to presorted data sources.
+Users can change the default behavior with the [*mergeOn*](%%jQueryApiUrl%%/ui.iggridcellmerging#options:mergeOn) property. Setting it to "always" enables the feature to merge cells when the grid is initialized and between operations causing it to re-render. This is particularly useful when working with grids bound to presorted data sources.
 
 #### <a id="intro-visual"></a> Visual Cell Merging
 
@@ -61,7 +61,7 @@ If the user needs to have only one cell in the place of the merged group of cell
 
 ![](images/igGrid_CellMerging_Physical.jpg)
 
-The resulting merged cells can be styled through a custom CSS class called [*ui-iggrid-physicalmergedcell*](%%jQueryApiUrl%%/ui.iggridcellmerging#theming:ui-iggrid-physicalmergedcell). It could be used to e.g. position the text of the cells differently.
+The resulting merged cells can be styled through a custom CSS class called [*ui-iggrid-physicalmergedcell*](%%jQueryApiUrl%%/ui.iggridcellmerging#theming:ui-iggrid-physicalmergedcell). It could be used to position the text of the cells differently.
 
 ## <a id="enabling"></a> Enabling Cell Merging
 
