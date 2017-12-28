@@ -41,7 +41,7 @@ This topic contains the following sections:
 
 Cell Merging provides two predefined merging strategies. The first one checks for duplicate cell values. The second one merges subsequent *null* values. In addition to the predefined methods, the [*mergeStrategy*](%%jQueryApiUrl%%/ui.iggridcellmerging#options:mergeStrategy) option can be used to define a custom strategy.
 
-In the next sections we will go in detail showing both predefined methods of merging as well as give an example of how to define a custom one to be used in a more complex scenario. We will focus mainly on *"physical"* cell merging. *"visual"* cell merging is similar to it in terms of configuration, but it can have slight differences in the visible result.
+In the next sections we will go in detail showing both predefined methods of merging as well as give an example of how to define a custom one to be used in a more complex scenario. We will focus mainly on *"physical"* cell merging. *"Visual"* cell merging is similar to it in terms of configuration, but it can have slight differences in the visible result.
 
 ## <a id="merge-predefined"></a> Pre-defined Merge Strategies
 
@@ -70,7 +70,7 @@ var productData1 = [
 ]
 ```
 
-In order to initialize physical Cell Merging with *"duplicate"* strategy we can use the defaults to our advantage and not set the latter:
+In order to initialize physical Cell Merging with *"duplicate"* strategy we can use the defaults to our advantage and not set the mergeStrategy option:
 
 **In JavaScript:**
 
@@ -213,7 +213,7 @@ You may have noticed in our first example that despite Cell Merging performing a
 
 ![](images/igGrid_CellMerging_Advaced_custom_problem.jpg)
 
-In this case Cell Merging cannot know initially what the data would be and how it should be displayed. This is where a custom `mergeStrategy` comes. Users may assign a function that receives the previous record, the current record and the key of the column which is being merged. Using such a function, the aforementioned custom requirement may be implemented in the following way:
+In this case Cell Merging cannot know initially what the data would be and how it should be displayed. In order to customize the conditions under which cell values are merged for the specific application scenario a custom mergeStrategy can be set. Users may assign a function that receives the previous record, the current record and the key of the column which is being merged. Using such a function, the aforementioned custom requirement may be implemented in the following way:
 
 **In JavaScript:**
 
@@ -286,7 +286,7 @@ The result of the custom implementation can be seen below:
 
 ![](images/igGrid_CellMerging_Advaced_custom_solution.jpg)
 
-Merged groups are broken based on projects which makes it easier to distinguish project boundaries.
+Merged groups are split based on projects which makes it easier to distinguish project boundaries.
 
 Utilizing the `mergeStrategy` property in this way may improve the overall user experience greatly.
 
