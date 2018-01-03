@@ -20,6 +20,7 @@ var calculatedValue = theWorksheet.rows(1).cells(4).value();
 ```
 ## Related Topics
 - [Read an Excel File into a Workbook](JavaScript-Excel-Library-Read-an-Excel-2007-XLSX-File-Into-a-Workbook.html "Explains how to read and excel file into a workbook.")
+- [List of Supported Built-in Functions](JavaScript-Excel-Library-List-of-Supported-Built-in-Functions.html "List of supported and unsupported Excel functions.")
 
  
 

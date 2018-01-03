@@ -24,7 +24,7 @@ lblValue.Text = theWorksheet.Rows[1].Cells[4].Value;
 ```
 ## Related Topics
 - [Read an Excel File into a Workbook](ExcelEngine-Read-an-Excel-File-Into-a-Workbook.html "Explains how to read and excel file into a workbook.")
-
+- [List of Supported Built-in Functions](ExcelEngine-List-of-Supported-Built-in-Functions.html "List of supported and unsupported Excel functions.")
  
 
  
