@@ -644,7 +644,7 @@ When resizing is disabled, users cannot move the splitter bar within `igSplitter
 
 When expanding/collapsing is disabled, users cannot expand/collapse `igSplitter`’s panels and the collapse/expand buttons are not available on the splitter bar.
 
-You enable/disable users to resize and/or expand/collapse panels, respectively, with the **resizable** and **collabsible** panel properties. You need to set the property for only one of the panels. If the properties for both panels are set, the setting for the left/top panel override the setting for the right/bottom panel.
+You enable/disable users to resize and/or expand/collapse panels, respectively, with the **resizable** and **collapsible** panel properties. You need to set the property for only one of the panels. If the properties for both panels are set, the setting for the left/top panel override the setting for the right/bottom panel.
 
 ### <a id="user-interaction-settings"></a>Property settings
 
@@ -752,11 +752,11 @@ true
 
         <tr>
             <td rowspan="3">
-Disable expanding/collapsing of panels.
+Enable expanding/collapsing of panels.
 			</td>
 
             <td>
-**collabsible**
+**collapsible**
 			</td>
 
             <td>
@@ -777,7 +777,7 @@ or
         <tr>
 
             <td>
-**collabsible**
+**collapsible**
 			</td>
 
             <td>
@@ -795,7 +795,7 @@ Disable expanding/collapsing of panels.
 			</td>
 
             <td>
-**collabsible**
+**collapsible**
 			</td>
 
             <td>
@@ -815,7 +815,7 @@ or
 
         <tr>
             <td>
-**collabsible**
+**collapsible**
 			</td>
 
             <td>
