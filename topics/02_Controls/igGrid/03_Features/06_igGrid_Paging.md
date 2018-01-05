@@ -27,6 +27,7 @@ This topic contains the following sections:
 -   [Paging CSS Classes](#css)
 -   [Keyboard Interactions](#keyboard-interaction)
 -   [Related Content](#related-content)
+-   [Sample](#sample)
 
 ## <a id="overview"></a> Overview
 
@@ -145,7 +146,7 @@ In order to enable Paging, you first need to include the necessary JavaScript an
 	}
 	```
 
-- **Running sample** 
+## <a id="sample"></a> **Running sample** 
 
 <div class="embed-sample">
    [igGrid Paging](%%SamplesEmbedUrl%%/grid/paging)
