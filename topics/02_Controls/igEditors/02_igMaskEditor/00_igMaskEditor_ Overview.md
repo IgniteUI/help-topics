@@ -32,6 +32,16 @@ The `igMaskEditor` includes the following characteristics:
 
 >**Note:** One of the major changed in the new Mask editor is that it no longer supports Lists and DropDown. Note that if you try to use methods connected to dropdown and list, you will receive a notification pointing out that they are no longer available.
 
+## Adding igMaskEditor using the Ignite UI CLI
+
+The easiest way to add a new igMaskEditor to your application is via the Ignite UI CLI. After you have created a new application, you just need to execute the following command and a mask editor will be added to the project:
+```
+   ig add mask-editor newMaskEditor
+```
+
+This command will add a new mask editor no matter if your application is created in Angular, React or jQuery.
+For more information and the list of all available commands read [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
+
 ##Adding igMaskEditor to a Web Page
 
 1.  To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) help topic.

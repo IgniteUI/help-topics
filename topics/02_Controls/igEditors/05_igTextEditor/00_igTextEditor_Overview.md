@@ -34,6 +34,16 @@ The `igTextEditor` includes the following characteristics:
 -   ASP.NET MVC wrapper
 -   Overall theme support
 
+## Adding igTextEditor using the Ignite UI CLI
+
+The easiest way to add a new igTextEditor to your application is via the Ignite UI CLI. After you have created a new application, you just need to execute the following command and a text editor will be added to the project:
+```
+   ig add text-editor newTextEditor
+```
+
+This command will add a new text editor no matter if your application is created in Angular, React or jQuery.
+For more information and the list of all available commands read [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
+
 ## Adding igTextEditor to a Web Page
 
 1.  To get started, include the required and localized resources for your application. Details on which resources to include can be found in the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) help topic.
