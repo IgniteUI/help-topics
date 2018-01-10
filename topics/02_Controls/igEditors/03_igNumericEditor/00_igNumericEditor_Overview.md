@@ -45,7 +45,7 @@ The easiest way to add a new igNumericEditor to your application is via the Igni
 ```
 
 This command will add a new numeric editor no matter if your application is created in Angular, React or jQuery.
-For more information and the list of all available commands read [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
+For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
 
 ##Adding igNumericEditor to a Web Page
 

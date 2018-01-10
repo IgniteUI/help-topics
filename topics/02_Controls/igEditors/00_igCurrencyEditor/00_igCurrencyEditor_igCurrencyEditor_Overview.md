@@ -56,7 +56,7 @@ The easiest way to add a new igCurrencyEditor to your application is via the Ign
 ```
 
 This command will add a new currency editor no matter if your application is created in Angular, React or jQuery.
-For more information and the list of all available commands read [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
+For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
 
 ## Adding igCurrencyEditor to a Web Page
 

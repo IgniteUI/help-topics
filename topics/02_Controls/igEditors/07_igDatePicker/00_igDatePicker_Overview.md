@@ -48,7 +48,7 @@ The easiest way to add a new igDatePicker to your application is via the Ignite 
 ```
 
 This command will add a new date picker no matter if your application is created in Angular, React or jQuery.
-For more information and the list of all available commands read [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
+For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
 
 ## Adding igDatePicker to a Web Page
 

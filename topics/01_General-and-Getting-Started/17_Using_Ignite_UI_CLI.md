@@ -28,7 +28,6 @@ If you prefer to provide the commands for generating an Ignite UI project, addin
 ```
 ig new <project name> --framework=<framework>
 ig add <component/template> <component_name>
-ig build
 ig start
 ```
 Navigate to http://localhost:3000/. The app will automatically reload if you change any of the source files.
@@ -51,7 +50,7 @@ Using the `new` command, you can create a new jQuery, Angular and React applicat
 The new application is created in a directory of the same name.
 Keep in mind that creating a new application inside an exisitng application is not supported.
 
-Following are examples of how to use the `new` command to create an Ignite UI for JavaScript applications in all supported frameworks:<br/>
+Following are examples of how to use the `new` command to create an Ignite UI for JavaScript applications for all supported frameworks:<br/>
 **In jQuery:** `ig new newIgniteUIjQuery` (jQuery is the default choice so you do not need to provide the "framework" argument)<br/>
 **In React:** `ig new newIgniteUIReact --framework=react`<br/>
 **In Angular:** `ig new newIgniteUIAngular --framework=angular --type=ig-ts`
@@ -77,7 +76,7 @@ To build the application into an output directory, execute the following command
     ig build
 ```
 
-The `build` command will install the npm packages that the project depends on. By default, it will install the [OSS version of Ignite UI](https://github.com/IgniteUI/ignite-ui) but it checks if a full version is required (if a grid component is added, for example) and will swap the OSS package for the full version, after asking you for your Infragistics credentials. You can find more information on how to install the full package in [this topic](https://www.igniteui.com/help/using-ignite-ui-npm-packages).<br/>
+The `build` command will install the npm packages that the project depends on. By default, it will install the [OSS version of Ignite UI](https://github.com/IgniteUI/ignite-ui) but it checks if a full version is required (if a grid component is added, for example) and will swap the OSS package for the full version, after asking you for your Infragistics account credentials. You can find more information on how to install the full package in [this topic](https://www.igniteui.com/help/using-ignite-ui-npm-packages).<br/>
 The build artifacts, such as CSS resources, will be stored in the `output/` directory.
 
 ### start
