@@ -35,6 +35,7 @@ This topic contains the following sections:
     -   [Preview](#preview)
     -   [Prerequisites](#prerequisites)
     -   [Steps](#steps)
+- [Creating igGrid with basic conditional template using the IgniteUI CLI](##adding-using-CLI)
 -   [Related Content](#related-content)
 
 
@@ -99,6 +100,16 @@ The following steps demonstrate how to create basic conditional template.
 2.  (Optional) Verify the result
 
 	Save the file and double click to preview the result. According to the applied check into the template only two rows should be rendered, as the third row has value into the age property lower than 21
+
+## <a id="adding-using-CLI"></a> Creating igGrid with basic conditional template using the IgniteUI CLI
+The easiest way to create an igGrid, with basic conditional template configured, is via the Ignite UI CLI. After you have created a new application, you just need to execute the following comand:
+ ```
+    ig add grid-templating newGridTemplating
+ ```
+ This command will add a new igGrid with templating avaliable, same as the one demonstrated in our [Conditional Templates](%%SamplesUrl%%/templating-engine/conditional-templates) sample.
+ 
+ For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
+
 
 
 ## <a id="related-content"></a>Related Content

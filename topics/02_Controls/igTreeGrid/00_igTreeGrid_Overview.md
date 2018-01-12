@@ -29,10 +29,12 @@ In order to maintain flexibility the tree grid features a configurable expansion
 - [**Performance**](#performance)
 - [**Getting Started**](#getting-started)
   - [Initializing igTreeGrid in JavaScript](#jq-treegrid)
+  - [Initializing igTreeGrid using the Ignite UI CLI](#adding-using-CLI)
 	  - [Full Page Sample](#full-page-sample)
   - [Initializing a MVC igTreeGrid](#mvc-treegrid)
   - [Customize the expand and collapse icons](#customize-icon)
 -  [**Keyboard navigation**](#keyboard-navigation)
+- [**Exporting igTreeGrid using the Ignite UI CLI**](#exporting-with-CLI)
 -   [**Related Content**](#related-content)
     -   [Topics](#topics)
     -   [Samples](#samples)
@@ -329,6 +331,14 @@ The Filtering and Paging features are shown to include commented out option valu
 </body>
 </html>
 ```
+### <a id='adding-using-CLI'></a> Initializing igTreeGrid using the Ignite UI CLI
+The easiest way to add a new igTreeGrid to your application is via the Ignite UI CLI. After you have created a new application, you just need to execute the following command and a tree grid grid will be added to the project:
+ ```
+    ig add tree-grid newTreeGrid
+ ```
+ 
+ This command will add a new igTreeGrid no matter if your application is created in Angular, React or jQuery.
+ For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
 
 ### <a id='mvc-treegrid'></a> Initializing a MVC igTreeGrid
 
@@ -548,6 +558,14 @@ Press|While| To
 <kbd>End</kbd>| A cell is selected.|Move to rightmost cell in the row.
 <kbd>Ctrl+Home</kbd>| A cell is selected.|Move to top left cell in the grid.
 <kbd>Ctrl+End</kbd>| A cell is selected.|Move to bottom right cell in the grid.
+
+## <a id="exporting-with-CLI"></a> Exporting igTreeGrid using the Ignite UI CLI
+The easiest way to add a new igTreeGrid with exporting configured is via the Ignite UI CLI. After you have created a new application, you just need to execute the following command and an igTreeGrid ready to be exported will be added to the project:
+ ```
+  ig add tree-grid-export newTreeGridExport
+ ``` 
+  For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
+
 
 ## <a id="related-content"></a> Related Content
 

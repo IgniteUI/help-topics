@@ -24,6 +24,7 @@ This topic contains the following sections:
 -   [**Enabling Updating**](#enable)
     -   [Adding Required CSS and JavaScript references using igLoader in JavaScript](#required)
     -   [Loading CSS and JavaScript references statically – needed only for updating](#minimal-required)
+    -   [Adding igGrid with Updating feature enabled using the Ignite UI CLI](#adding-using-CLI)
 -   [**Disabling row adding, row updating and row deleting**](#disable-row-add-delete)
 -   [**Column Settings and Editors**](#column-settings-editors)
     -   [Retrieving the columnSettings object](#retrieving-columnsettings)
@@ -383,7 +384,12 @@ $("#grid1").igGrid({
 	}).Height("500").DataSourceUrl(Url.Action("UpdatingGetData"))
 	.DataBind().Render()%>
 ```
-
+## <a id="adding-using-CLI"></a> Adding igGrid with Updating feature enabled using the Ignite UI CLI
+In order create an igGrid with Updating feature enabled using the Ignite UI CLI you just need to execute the following command:
+ ```
+   ig add grid-editing newGridEditing
+ ```
+ For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
 ## <a id="adding-primarykey"></a> Adding a PrimaryKey for the AddNewRow 
 When you initialize a new row on the grid for a data source that includes a primary key, the `generatePrimaryKeyValue` event of `igGrid` Updating feature is raised to provide a primary key value to the new row. The second parameter of the event handler includes the value member which is used to return the new primary key value back up to the grid. By default, the value is initialized with a value that is equal to the number of rows in the data source. The following code listing is an example of how to implement generating a new primary key value to a new row of the grid.
 
