@@ -40,12 +40,15 @@ Further, the grid also includes support for:
 -   Keyboard Navigation
 -   Rich client-side API
 -   ASP.NET MVC wrapper
+
 ## Adding igGrid using the Ignite UI CLI
 The easiest way to add a new igGrid to your application is via the Ignite UI CLI. After you have created a new application, you just need to execute the following command and a grid will be added to the project:
- ```
-    ig add grid newGrid
- ```
- This command will add a new igGrid no matter if your application is created in Angular, React or jQuery.
+
+```
+ig add grid newGrid
+```
+
+This command will add a new igGrid no matter if your application is created in Angular, React or jQuery.
   
  For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
 
@@ -168,11 +171,3 @@ To get started, include the required and localized resources for your applicatio
 -   [igGrid/igDataSource Architecture Overview](igGrid-igDataSource-Architecture-Overview.html)
 -   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html) 
 -   [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
-
-
-
-
-
-
-
-
