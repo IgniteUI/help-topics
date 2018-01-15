@@ -172,7 +172,7 @@ http://cdn-na.infragistics.com/igniteui
 
 
 ```
-https://secure-cdn-na.infragistics.com/igniteui
+https://cdn-na.infragistics.com/igniteui
 ```
 
 
