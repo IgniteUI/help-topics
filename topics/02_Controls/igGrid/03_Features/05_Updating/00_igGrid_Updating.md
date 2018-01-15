@@ -384,6 +384,7 @@ $("#grid1").igGrid({
 	}).Height("500").DataSourceUrl(Url.Action("UpdatingGetData"))
 	.DataBind().Render()%>
 ```
+
 ## <a id="adding-using-CLI"></a> Adding igGrid with Updating feature enabled using the Ignite UI CLI
 In order create an igGrid with Updating feature enabled using the Ignite UI CLI you just need to execute the following command:
  ```
@@ -744,8 +745,3 @@ Following are some other topics you may find useful.
 Following are some samples you may find useful.
 -   [Editing](%%SamplesUrl%%/grid/basic-editing)
 -   [Live Updates](%%SamplesUrl%%/grid/binding-real-time-data)
- 
-
- 
-
-

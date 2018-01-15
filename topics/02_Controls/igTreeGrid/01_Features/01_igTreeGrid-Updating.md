@@ -64,12 +64,13 @@ On done, the new row is appended as a last child of the target parent row.
 In touch environment hover interaction is not available which requires the user to swipe or tap over the respective row in order to show the "Add child row" button. 
 
 ![](images/addChildTouch.png "Tree Grid Add child touch")
+
 ## <a id="adding-using-CLI"></a> Adding igTreeGrid with Updating feature configured using the Ignite UI CLI
 In order create an igTreeGrid with Updating feature configured using the Ignite UI CLI you just need to execute the following command:
  ```
   ig add tree-grid-editing newTreeGridEditing
  ```
- For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
+For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
 ## <a id="working-with-updating"></a> Working with Updating
 
 By enabling the Updating feature, you enable adding, removing and updating the data in the grid.

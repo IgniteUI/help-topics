@@ -28,7 +28,7 @@ This topic contains the following sections:
     -   [Events API](#events-api)
     -   [Styling and Theming](#styling-theming)
 -   [Adding igHierarchicalgrid using the Ignite UI CLI](#adding-using-CLI)
--	[Adding igHierarachicalGrid configured for exporting using the Ignite UI CLI](#exporting-with-CLI)
+-	[Adding igHierarachicalGrid configured for Excel exporting using the Ignite UI CLI](#exporting-with-CLI)
 -   [ASP.NET MVC helper](#aspnet-mvc-helper)
 -   [Binding Requirements](#binding-requirements)
 
@@ -114,6 +114,7 @@ The igHierarchicalGrid has plenty of properties that allow you to change the ani
 ### Related Topics
 - [igHierarchicalGrid Styling and Theming](igHierarchicalGrid-Styling-and-Theming.html)
 
+
 ## <a id="adding-using-CLI"></a> Adding igHierarchicalGrid using the Ignite UI CLI
 The easiest way to add a new igHierarchicalGrid to your application is via the Ignite UI CLI. After you have created a new application, you just need to execute the following command and a hierarchical grid will be added to the project:
  ```
@@ -146,5 +147,3 @@ The igHierarchicalGrid is a jQuery UI Widget and therefore has a requirement for
 Data structures can be any of the following:
 - Well-formed JSON or XML supplied locally or from a web server, including servers that supports oData protocol.
 - IQueryable in ASP.NET MVC
-
-
