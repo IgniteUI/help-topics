@@ -52,7 +52,7 @@ This topic contains the following sections:
 ## <a id="introduction"></a>Introduction
 
 
-The [%%ProductName%%® directives for AngularJS](https://github.com/IgniteUI/igniteui-angular) allow you to take advantage of data binding and declarative programming when using %%ProductName%%® controls in AngularJS apps.
+The [%%ProductName%%® directives for AngularJS](https://github.com/IgniteUI/igniteui-angularjs) allow you to take advantage of data binding and declarative programming when using %%ProductName%%® controls in AngularJS apps.
 
 The directives are available as a separate module called `'igniteui-directives'` in the *igniteui-angular.js* file. They extend Angular with HTML markers that enable initialization and binding of %%ProductName%% controls in the context (scope) provided by AngularJS.
 
@@ -331,7 +331,7 @@ app.controller('gridController',
 
 The templating engine uses double curly braces for **conditional templates** (e.g. `{{if condition}}` ), which are also used by Angular for expression evaluation. Therefore, using such templates in declarative initialization **can cause conflicts**. For more information on how you can provide conditional templates declaratively or customize the templating process refer to the [Conditional and Advanced Templating with AngularJS](Conditional-and-Advanced-Templating-with-AngularJS.html) topic.
 
-**Related:** [igGrid sample](http://igniteui.github.io/igniteui-angular/samples/igGrid.html)
+**Related:** [igGrid sample](http://igniteui.github.io/igniteui-angularjs/samples/igGrid.html)
 
 ## <a id="controls-with-html-content"></a>Controls with HTML content
 
@@ -352,7 +352,7 @@ In order to provide HTML content to a control (and prevent it from being parsed 
 
 This approach to providing additional markup applies to controls such as the `igDialog`, `igLayoutManager` and the `igTileManager`.
 
-**Related:** [igDialog Angular sample](http://igniteui.github.io/igniteui-angular/samples/igDialog.html)
+**Related:** [igDialog Angular sample](http://igniteui.github.io/igniteui-angularjs/samples/igDialog.html)
 
 ## <a id="related-content"></a>Related Content
 
@@ -366,7 +366,7 @@ The following topics provide additional information related to this topic.
 
 The following samples provide additional information related to this topic.
 
--   [%%ProductName%% directives for AngularJS samples](http://igniteui.github.io/igniteui-angular/)
+-   [%%ProductName%% directives for AngularJS samples](http://igniteui.github.io/igniteui-angularjs/)
 -   [All %%ProductName%% control samples](%%SamplesUrl%%)
 
                     

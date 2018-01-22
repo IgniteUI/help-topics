@@ -159,7 +159,7 @@ script>
 
 Such templates can be again assigned to the options using the `getHtml()` function as described above.
 
-**Related Sample:** [igGrid Sample](http://igniteui.github.io/igniteui-angular/samples/igGrid.html)
+**Related Sample:** [igGrid Sample](http://igniteui.github.io/igniteui-angularjs/samples/igGrid.html)
 
 ## <a id="different-templating-engines"></a>Using Different Templating Engines
 
@@ -217,6 +217,6 @@ The following topics provide additional information related to this topic.
 
 The following samples provide additional information related to this topic.
 
--   [igGrid Sample](http://igniteui.github.io/igniteui-angular/samples/igGrid.html)
+-   [igGrid Sample](http://igniteui.github.io/igniteui-angularjs/samples/igGrid.html)
 
                     
