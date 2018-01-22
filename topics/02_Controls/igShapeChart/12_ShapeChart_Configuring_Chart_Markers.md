@@ -92,7 +92,8 @@ The code snippets below demonstrate how to change the markerBrushes and markerOu
 $(function () {
      $(“chart1”).igShapeChart({
 	    markerBrushes: [“White”],
-	    markerOutlines: [“Red”, “Orange”, “Green”]
+	    markerOutlines: [“Red”, “Orange”, “Green”], 
+	    markerTypes: [“diamond", "circle”, "square"]
      });
 });
 ```
