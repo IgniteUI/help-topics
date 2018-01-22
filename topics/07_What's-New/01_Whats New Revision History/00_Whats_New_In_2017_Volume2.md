@@ -10,7 +10,7 @@
 
 # What's New in 2017 Volume 2
 
-This topic presents the controls and the new and enhanced features for the Ignite UI™ 2017 Volume 1 release.
+This topic presents the controls and the new and enhanced features for the Ignite UI™ 2017 Volume 2 release.
 
 
 ### Overview

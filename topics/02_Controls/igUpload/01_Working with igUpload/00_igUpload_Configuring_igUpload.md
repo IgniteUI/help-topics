@@ -57,6 +57,10 @@ This topic contains the following sections:
     -   [Overview](#simultaneously-uploaded-files-overview)
     -   [Property settings](#simultaneously-uploaded-files-settings)
     -   [Example](#simultaneously-uploaded-files-example)
+-   [Configuring the Usage of a Single Request When Uploading Multiple Files](#singleRequest)
+    -   [Overview](#singleRequest-overview)
+    -   [Property settings](#singleRequest-settings)
+    -   [Example](#singleRequest-example)
 -   [Configuring the File Display Mode](#file-display-mode)
     -   [Overview](#display-mode-overview)
     -   [Property settings](#display-mode-settings)
@@ -190,6 +194,22 @@ This setting configures the threshold on the number of simultaneous file uploads
         </tr>
 
         <tr>
+            <td>[Using a single request when uploading multiple files](#singleRequest)</td>
+            
+            <td>
+This setting configures the control to upload multiple files using one single HTTP request.
+            </td>
+            
+            <td>
+                <ul>
+                    <li>
+[useSingleRequest](%%jQueryApiUrl%%/ui.igupload#options:useSingleRequest)
+                    </li>
+                </ul>
+            </td>
+        </tr>
+
+        <tr>
             <td>
 [File display mode](#file-display-mode)
 			</td>
@@ -297,95 +317,6 @@ You can configure whether users, when selecting the files to upload, will be abl
             </td>
         </tr>
 
-        <tr>
-            <td>
-[Upload trigger (Manual/Auto)](#config-upload-trigger)
-			</td>
-
-            <td>
-You can configure whether the upload will start automatically once the user has added the file(s) to the `igUpload` panel or manually (on user’s pressing the Upload button).
-			</td>
-
-            <td>
-                <ul>
-                    <li>
-[autostartupload](%%jQueryApiUrl%%/ui.igupload#options:autostartupload)
-					</li>
-                </ul>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-[The Allowed File Types](#config-allowed-files)
-			</td>
-
-            <td>
-You can configure which types of files will be allowed for users to upload.
-			</td>
-
-            <td>
-                <ul>
-                    <li>
-[allowedExtensions](%%jQueryApiUrl%%/ui.igupload#options:allowedExtensions)
-					</li>
-                </ul>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-[Maximum number of files to upload](#max-number-files)
-			</td>
-
-            <td>
-You can configure the maximum number of files that can be uploaded per page refresh.
-			</td>
-
-            <td>
-                <ul>
-                    <li>
-[maxUploadedFiles](%%jQueryApiUrl%%/ui.igupload#options:maxUploadedFiles)
-					</li>
-                </ul>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-[Maximum number of simultaneously uploading files](#simultaneously-uploaded-files)
-			</td>
-
-            <td>
-This setting configures the threshold on the number of simultaneous file uploads.
-			</td>
-
-            <td>
-                <ul>
-                    <li>
-[maxSimultaneousFilesUploads](%%jQueryApiUrl%%/ui.igupload#options:maxSimultaneousFilesUploads)
-					</li>
-                </ul>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-[File display mode](#file-display-mode)
-			</td>
-
-            <td>
-You can configure how many files to be displayed in the panel of the `igUpload` control.
-			</td>
-
-            <td>
-                <ul>
-                    <li>
-[mode](%%jQueryApiUrl%%/ui.igupload#options:mode)
-					</li>
-                </ul>
-            </td>
-        </tr>
     </tbody>
 </table>
 
@@ -628,6 +559,53 @@ $('#upload1').igUpload({
 ```
 
 
+
+## <a id="singleRequest"></a>Configuring the Usage of a Single Request When Uploading Multiple Files
+### <a id="singleRequest-overview"></a>Overview
+
+You can configure whether the multiple files upload process of should use a request for each file or send all files using one single request.
+
+
+### <a id="singleRequest-settings"></a>Property settings
+
+The following table maps the desired configuration to its respective
+property settings.
+
+In order to:| Use this property:| And set it to:
+---|---|---
+Upload multiple files each in a separate request| [useSingleRequest](%%jQueryApiUrl%%/ui.igupload#options:useSingleRequest)| false (default)
+Upload multiple files each in one single request| [useSingleRequest](%%jQueryApiUrl%%/ui.igupload#options:useSingleRequest)| true
+
+
+### <a id="singleRequest-example"></a>Example
+
+The code sample below demonstrates how to set the file upload of multiple files to use a single request:
+
+Property| Value
+---|---
+[useSingleRequest](%%jQueryApiUrl%%/ui.igupload#options:useSingleRequest)| true
+
+Following is the code that implements this example.
+
+**In JavaScript:**
+
+```js
+$('#upload1').igUpload({ 
+    useSingleRequest: true
+});
+```
+
+**In ASPX:**
+
+```csharp
+@(Html.Infragistics().Upload()
+    .useSingleRequest(true)
+    .Render()
+)
+```
+
+
+
 ## <a id="file-display-mode"></a>Configuring the File Display Mode
 ### <a id="display-mode-overview"></a>Overview
 
@@ -711,11 +689,3 @@ The following samples provide additional information related to this topic.
 - [Multiple Upload](%%SamplesUrl%%/file-upload/multiple-upload): This sample demonstrates configuring `igUpload` to upload multiple files.
 
 - [Progress Information](%%SamplesUrl%%/file-upload/progress-information): This sample demonstrates setting up the maximum number of uploaded files and the maximum simultaneous file uploads for the `igUpload` control.
-
-
-
- 
-
- 
-
-
