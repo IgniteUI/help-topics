@@ -22,7 +22,7 @@ The following summarizes what’s new in 2016 Volume 1. Additional details follo
 Feature | Description
 ---|---
 New Bootstrap 4 theme | A new Bootstrap 4 compatible theme is now shipped with %%ProductName%% - [view sample](%%SamplesUrl%%/themes/bootstrap4-default).
-Angular 2 Components (CTP) | %%ProductName%% widgets have component wrappers for Angular 2. For detailed information visit [%%ProductName%% Angular 2 GitHub](https://github.com/IgniteUI/igniteui-angular2) page.|
+Angular 2 Components (CTP) | %%ProductName%% widgets have component wrappers for Angular 2. For detailed information visit [%%ProductName%% Angular 2 GitHub](https://github.com/IgniteUI/igniteui-angular-wrappers) page.|
 New scalable font icons | The default Infragistics theme now uses [jQuery UI font icons](https://github.com/mkkeck/jquery-ui-iconfont) instead of image icons. |
 Modernizr 3.x support | %%ProductName%% uses Modernizr library to detect touch environments (see [Touch Support for %%ProductName%% Controls](Touch-Support-for-NetAdvantage-for-jQuery-Controls.html)). [Mordernizr 3.x](https://modernizr.com/) is now supported along with older Modernizr versions. |
 
