@@ -23,15 +23,13 @@ The following table summarizes what’s new in 2018 Volume 1 and additional deta
 
 Feature | Description
 ---|---
-[Use Single Request](#useSingleRequest)| Allows the control to upload multiple files using a single HTTP request.
+[Use Single Request to Upload Multiple Files](#useSingleRequest)| Allows the control to upload multiple files using a single HTTP request.
 
 
 
-### <a id="useSingleRequest"></a> Use Single Request
+### <a id="useSingleRequest"></a> Use Single Request to Upload Multiple Files
 
 The [`useSingleRequest`](%%jQueryApiUrl%%/ui.igupload#options:useSingleRequest) option is used to configure the multiple files upload process.
 
 #### Related Topics
 -   [Configuring igUpload](igupload-configuring-igupload.html)
-
-
