@@ -209,9 +209,9 @@ Following are the %%ProductName%% Trial links. For more details checkout [Infrag
 
 %%ProductName%% AngularJS extenstions provide two-way data binding and declarative initialization for controls used in AngularJS applications. For more information check [Using %%ProductName%% with AngularJS](Using-Ignite-UI-with-AngularJS.html) topic.
 
-## <a id="angular"></a>Angular 2 Extensions
+## <a id="angular"></a>Angular Extensions
 
-%%ProductName%% Angular 2 Extensions provide two-way data binding, declarative initialization and native API for controls used in Angular 2 applications. For more information  check [%%ProductName%% extensions for Angular 2](https://github.com/IgniteUI/igniteui-angular2) on GitHub.
+%%ProductName%% Angular Extensions provide two-way data binding, declarative initialization and native API for controls used in Angular applications. For more information  check [%%ProductName%% extensions for Angular](https://github.com/IgniteUI/igniteui-angular-wrappers) on GitHub.
 
 ## <a id="reactjs"></a>ReactJS Extensions
 
