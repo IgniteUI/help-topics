@@ -563,7 +563,7 @@ $('#upload1').igUpload({
 ## <a id="singleRequest"></a>Configuring the Usage of a Single Request When Uploading Multiple Files
 ### <a id="singleRequest-overview"></a>Overview
 
-You can configure whether the multiple files upload process of should use a request for each file or send all files using one single request.
+You can configure whether the multiple files upload process should use a request for each file or send all files using one single request.
 
 
 ### <a id="singleRequest-settings"></a>Property settings
