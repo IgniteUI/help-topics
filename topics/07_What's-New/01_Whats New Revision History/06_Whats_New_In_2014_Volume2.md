@@ -99,11 +99,11 @@ All of the %%ProductName%% controls can be instantiated declaratively with custo
 
 [AngularJS Directives](AngularJS-Directives.html)
 
-[%%ProductName%% directives for AngularJS on GitHub](https://github.com/IgniteUI/igniteui-angular)
+[%%ProductName%% directives for AngularJS on GitHub](https://github.com/IgniteUI/igniteui-angularjs)
 
 #### Related Samples
 
-[%%ProductName%% directives for AngularJS samples](http://igniteui.github.io/igniteui-angular/)
+[%%ProductName%% directives for AngularJS samples](http://igniteui.github.io/igniteui-angularjs/)
 
 
 

@@ -13,7 +13,7 @@
 
 ### Introduction
 
-The %%ProductName%%® directives for AngularJS allow you to take advantage of the data binding and declarative view programming when using %%ProductName%%® controls in Angular apps. In the [%%ProductName%% GitHub repository](https://github.com/IgniteUI/igniteui-angular) you can always find the latest source and samples.
+The %%ProductName%%® directives for AngularJS allow you to take advantage of the data binding and declarative view programming when using %%ProductName%%® controls in Angular apps. In the [%%ProductName%% GitHub repository](https://github.com/IgniteUI/igniteui-angularjs) you can always find the latest source and samples.
 
 ### Topics
 

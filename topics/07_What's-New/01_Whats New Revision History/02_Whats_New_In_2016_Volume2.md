@@ -22,7 +22,7 @@ The following summarizes what’s new in 2016 Volume 2. Additional details follo
 Feature | Description
 ---|---
 %%ProductName%% OSS | A big part of the %%ProductName%% toolset is now open source. Checkout the repository on [GitHub](https://github.com/IgniteUI/ignite-ui)|
-%%ProductName%% directives for Angular 2 (RTM) | %%ProductName%% widgets have component wrappers for Angular 2. For detailed information visit [%%ProductName%% Angular 2 GitHub](https://github.com/IgniteUI/igniteui-angular2) page.|
+%%ProductName%% directives for Angular 2 (RTM) | %%ProductName%% widgets have component wrappers for Angular 2. For detailed information visit [%%ProductName%% Angular 2 GitHub](https://github.com/IgniteUI/igniteui-angular-wrappers) page.|
 %%ProductName%% Components for React (CTP) | %%ProductName%% widgets have component wrappers for [React](https://facebook.github.io/react/). For detailed information visit [%%ProductName%% Components for React](https://github.com/IgniteUI/igniteui-react) page.|
 ASP.NET Core 1.0 MVC Helpers | %%ProductName%% MVC Helpers now support ASP.NET Core 1.0. Checkout the [Using %%ProductName%% controls in ASP.NET Core 1.0](Using-IgniteUI-Controls-in-ASP.NET-Core-1.0-project.html) topic.|
 ASP.NET Core 1.0 MVC Tag Helpers | %%ProductName%% now provides Tag Helpers for ASP.NET Core 1.0. Checkout the [Using %%ProductName%% Tag Helpers](Using-Ignite-UI-Tag-Helpers.html) topic.|
