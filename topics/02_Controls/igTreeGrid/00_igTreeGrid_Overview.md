@@ -333,10 +333,18 @@ The Filtering and Paging features are shown to include commented out option valu
 ```
 
 ### <a id='adding-using-CLI'></a> Initializing igTreeGrid using the Ignite UI CLI
-The easiest way to add a new igTreeGrid to your application is via the Ignite UI CLI. After you have created a new application, you just need to execute the following command and a tree grid grid will be added to the project:
- ```
-    ig add tree-grid newTreeGrid
- ```
+The easiest way to add a new igTreeGrid to your application is via the Ignite UI CLI. 
+
+To install the Ignite UI CLI:
+```
+npm install -g igniteui-cli
+```
+Once the Ignite UI CLI is installed the commands for generating an Ignite UI project, adding a new igTreeGrid component, building and serving the project by yourself are as following:
+```
+ig new <project name>
+ig add tree-grid newTreeGrid
+ig start
+```
  
 For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
 

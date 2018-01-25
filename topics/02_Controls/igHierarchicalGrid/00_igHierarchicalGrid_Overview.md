@@ -27,8 +27,8 @@ This topic contains the following sections:
     -   [Inheritance](#inheritance)
     -   [Events API](#events-api)
     -   [Styling and Theming](#styling-theming)
--   [Adding igHierarchicalgrid using the Ignite UI CLI](#adding-using-CLI)
--	[Adding igHierarachicalGrid configured for Excel exporting using the Ignite UI CLI](#exporting-with-CLI)
+-   [Adding igHierarchicalGrid using the Ignite UI CLI](#adding-using-CLI)
+-	[Adding igHierarachicalGrid configured for Excel Exporting using the Ignite UI CLI](#exporting-with-CLI)
 -   [ASP.NET MVC helper](#aspnet-mvc-helper)
 -   [Binding Requirements](#binding-requirements)
 
@@ -116,22 +116,38 @@ The igHierarchicalGrid has plenty of properties that allow you to change the ani
 
 
 ## <a id="adding-using-CLI"></a> Adding igHierarchicalGrid using the Ignite UI CLI
-The easiest way to add a new igHierarchicalGrid to your application is via the Ignite UI CLI. After you have created a new application, you just need to execute the following command and a hierarchical grid will be added to the project:
- ```
-    ig add hierarchical-grid newHierarchicalGrid
- ```
+The easiest way to add a new igHierarchicalGrid to your application is via the Ignite UI CLI. 
+
+To install the Ignite UI CLI:
+```
+npm install -g igniteui-cli
+```
+Once the Ignite UI CLI is installed the commands for generating an Ignite UI project, adding a new igHierarchicalGrid component, building and serving the project by yourself are as following:
+```
+ig new <project name>
+ig add hierarchical-grid newHierarchicalGrid
+ig start
+```
+
 Additionally, you can add an igHierarchicalGrid with Updating feature configured using the following command:
 ```
-    ig add hierarchical-grid-editing newHierarchicalGridEditing
+ig add hierarchical-grid-editing newHierarchicalGridEditing
  ```
  For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
 
- ## <a id="exporting-with-CLI"></a> Adding igHierarachicalGrid configured for exporting using the Ignite UI CLI
-The easiest way to add a new igHierarachicalgrid with exporting configured is via the Ignite UI CLI. After you have created a new application, you just need to execute the following command and an igHierarachicalgrid ready to be exported will be added to the project:
+## <a id="exporting-with-CLI"></a> Adding igHierarachicalGrid configured for Excel Exporting using the Ignite UI CLI
+
+The easiest way to add a new igHierarachicalgrid with exporting configured is via the Ignite UI CLI. 
+To install the Ignite UI CLI:
+```
+npm install -g igniteui-cli
+```
+Once the Ignite UI CLI is installed the commands for generating an Ignite UI project, adding a new igHierarachicalGrid configured for Excel Exporting, building and serving the project by yourself are as following:
+
  ```
   ig add hierarchical-grid-export newHierarchicalGridExport
  ``` 
- For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
+For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
 
 ## <a id="aspnet-mvc-helper"></a> ASP.NET MVC helper
 

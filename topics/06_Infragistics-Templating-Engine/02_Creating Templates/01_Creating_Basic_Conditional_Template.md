@@ -102,11 +102,19 @@ The following steps demonstrate how to create basic conditional template.
 	Save the file and double click to preview the result. According to the applied check into the template only two rows should be rendered, as the third row has value into the age property lower than 21
 
 ## <a id="adding-using-CLI"></a> Creating igGrid with basic conditional template using the IgniteUI CLI
-The easiest way to create an igGrid with basic conditional template configured is via the Ignite UI CLI. After you have created a new application, you just need to execute the following comand:
- ```
-    ig add grid-templating newGridTemplating
- ```
- This command will add a new igGrid with templating configured, same as the one demonstrated in our [Conditional Templates](%%SamplesUrl%%/templating-engine/conditional-templates) sample.
+The easiest way to create an igGrid with basic conditional template configured is via the Ignite UI CLI. 
+To install the Ignite UI CLI:
+```
+npm install -g igniteui-cli
+```
+Once the Ignite UI CLI is installed the commands for generating an Ignite UI project, adding a new igGrid component with basic conditional template, building and serving the project by yourself are as following:
+```
+ig new <project name>
+ig add grid-templating newGridTemplating
+ig start
+```
+   
+This command will add a new igGrid with templating configured, same as the one demonstrated in our [Conditional Templates](%%SamplesUrl%%/templating-engine/conditional-templates) sample.
  
  For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
 
@@ -136,15 +144,3 @@ The following topics provide additional information related to this topic.
 The following samples provide additional information related to this topic.
 
 - [Conditional Templates](%%SamplesUrl%%/templating-engine/conditional-templates): This sample demonstrates how conditional cell templates are used in a grid using the Infragistics Template Engine. In the following scenario, cells under the Unit Price column have an image arrow up/down. For the purpose of this sample, the ‘Delta Price’ column is created dynamically and is hidden from the user. The up/down images are applied according to the values in hidden column when compared to the values in the Unit Price column. The Infragistics Templating Engine is comparing the values in the Delta Price and Unit Price columns. If the value Delta Price column is greater than the Unit Price value then a green up arrow is rendered, otherwise a red down arrow is rendered in the grid.
-
-
-
-
-
-
-
- 
-
- 
-
-
