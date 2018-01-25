@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 |metadata|
 {
     "fileName": "iggridexcelexporter-configuring",
@@ -26,6 +26,7 @@ This topic contains the following sections:
 -   [Configure styling](#configure_styling)
 -   [Attach to callbacks (events)](#callbacks)
 -   [Display an overlay while exporting](#exporting_overlay)
+-   [Create igGrid with Excel Exporting configured using the Ignite UI CLI](#adding-using-CLI)
 
 ### Required background
 - [igGridExcelExporter Overview](iggridexcelexporter-overview.html "igGridExcelExporter Overview") - General information on the `igGridExcelExporter` control.
@@ -166,6 +167,22 @@ $.ig.GridExcelExporter.exportGrid($("#grid1"), {},
     },
 });
  ```
+ 
+### <a id="adding-using-CLI"></a> Create igGrid with Excel Exporting configured using the Ignite UI CLI
+The easiest way to add a new igGrid, with Excel Exporting configured, to your application is via the Ignite UI CLI. 
+
+To install the Ignite UI CLI:
+```
+npm install -g igniteui-cli
+```
+Once the Ignite UI CLI is installed the commands for generating an Ignite UI project, adding a new igGrid component, with Excel Exporting configured, building and serving the project by yourself are as following:
+```
+ig new <project name>
+cd <project name>
+ig add grid-export newGridExport
+ig start
+```
+ For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
 
 ### <a id="Preview"></a>Preview
 The following is a preview of the final result.
