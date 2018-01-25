@@ -178,6 +178,7 @@ npm install -g igniteui-cli
 Once the Ignite UI CLI is installed the commands for generating an Ignite UI project, adding a new igGrid component, with Excel Exporting configured, building and serving the project by yourself are as following:
 ```
 ig new <project name>
+cd <project name>
 ig add grid-export newGridExport
 ig start
 ```

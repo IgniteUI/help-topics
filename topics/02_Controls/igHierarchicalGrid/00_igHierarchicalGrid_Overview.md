@@ -125,6 +125,7 @@ npm install -g igniteui-cli
 Once the Ignite UI CLI is installed the commands for generating an Ignite UI project, adding a new igHierarchicalGrid component, building and serving the project by yourself are as following:
 ```
 ig new <project name>
+cd <project name>
 ig add hierarchical-grid newHierarchicalGrid
 ig start
 ```
@@ -145,7 +146,10 @@ npm install -g igniteui-cli
 Once the Ignite UI CLI is installed the commands for generating an Ignite UI project, adding a new igHierarachicalGrid configured for Excel Exporting, building and serving the project by yourself are as following:
 
  ```
-  ig add hierarchical-grid-export newHierarchicalGridExport
+ig new <project name>
+cd <project name>
+ig add hierarchical-grid-export newHierarchicalGridExport
+ig start
  ``` 
 For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
 

@@ -342,6 +342,7 @@ npm install -g igniteui-cli
 Once the Ignite UI CLI is installed the commands for generating an Ignite UI project, adding a new igTreeGrid component, building and serving the project by yourself are as following:
 ```
 ig new <project name>
+cd <project name>
 ig add tree-grid newTreeGrid
 ig start
 ```
@@ -568,12 +569,19 @@ Press|While| To
 <kbd>Ctrl+End</kbd>| A cell is selected.|Move to bottom right cell in the grid.
 
 ## <a id="exporting-with-CLI"></a> Exporting igTreeGrid to Excel using the Ignite UI CLI
-The easiest way to add a new igTreeGrid with exporting configured is via the Ignite UI CLI. After you have created a new application, you just need to execute the following command and an igTreeGrid ready to be exported will be added to the project:
+The easiest way to add a new igTreeGrid with Excel Exporting configured is via the Ignite UI CLI. 
+To install the Ignite UI CLI:
+```
+npm install -g igniteui-cli
+```
+Once the Ignite UI CLI is installed the commands for generating an Ignite UI project, adding a new igTreeGrid component configured for Excel Exporting, building and serving the project by yourself are as following:
  ```
-  ig add tree-grid-export newTreeGridExport
+ ig new <project name>
+ cd <project name>
+ ig add tree-grid-export newTreeGridExport
+ ig start
  ``` 
   For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
-
 
 ## <a id="related-content"></a> Related Content
 

@@ -393,6 +393,7 @@ npm install -g igniteui-cli
 Once the Ignite UI CLI is installed the commands for generating an Ignite UI project, adding a new igGrid component with Updating feature configured, building and serving the project by yourself are as following:
 ```
 ig new <project name>
+cd <project name>
 ig add grid-editing newGridEditing
 ig start
 ```
