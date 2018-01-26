@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# What's New Revision History
+# Revision History
 
 ### Introduction
 
