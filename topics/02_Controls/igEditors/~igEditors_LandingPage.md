@@ -19,6 +19,7 @@
 -   [igDateEditor](igDateEditor-igDateEditor.html)
 -   [igDatePicker](igDatePicker-igDatePicker.html)
 -   [igCheckboxEditor](igCheckboxEditor-igCheckboxEditor.html)
+-   [igTimePicker](igTimePicker-igTimePicker.html)
 -   [Configuring Editors](Editors-Configure-Editors.html)
 
  
