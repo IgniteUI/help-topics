@@ -10,7 +10,6 @@
 
 # igTimePicker
 
-
 Click on the links below to find information on how to get `igTimePicker` quickly up and running.
 
 -   [igTimePicker Overview](igTimePicker-Overview.html)

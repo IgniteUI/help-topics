@@ -10,7 +10,6 @@
 
 # igTimePicker Known Issues
 
-
 **Known Issues**
 
 Currently there are no known issues or limitations specific to the `igTimePicker`.

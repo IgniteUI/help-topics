@@ -66,7 +66,7 @@ The list below provides details about the `igTimePicker` control support of WAI-
 
 - The `igTimePicker` is decorated with a <b>combobox</b> role. 
 
-- The `igTimePicker` is decorated with a <b>aria-label</b> attribute with the corresponding value depending on the locale. The default value is 'Time Picker'.
+- The `igTimePicker` is decorated with an <b>aria-label</b> attribute with the corresponding value depending on the locale. The default value is 'Time Picker'.
 
 - In case button is rendered
     - Every rendered button is decorated with <b>button</b> role
