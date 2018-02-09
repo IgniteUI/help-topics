@@ -13,7 +13,7 @@
 
 The %%ProductName%%™ `igTimePicker` allows you to have an editor with time-only input and a drop-down with listed hours:minutes values. By default, the listed time values are with 30 minutes delta. 
 
-The igTimePicker's input and display format are configurable. By default, the control uses a 12-hour format.
+The `igTimePicker` input and display format are configurable. By default, the control uses a 12-hour format.
 
 Depending on the specified time format (12-hour or 24-hour format), the drop-down list begins with 12:00 AM or 00:00 AM and ends with 11:30 PM or 23:30 PM.
 
@@ -36,6 +36,7 @@ The `igTimePicker` includes the following characteristics:
 
 -   Overall theme support
 -   Validation
+-   [Different modes](#button-types)
 -   [Defining custom input format](#time-formats)
 -   [Defining custom display format](#time-formats)
 -   [Min/Max values](#min-max-values)
@@ -45,7 +46,7 @@ The `igTimePicker` includes the following characteristics:
 
 ## Adding igTimePicker to a Web Page
 
-1.  To get started, include the required and localized resources in your application. Details on which resources to include can be found in the [Using JavaScript Resources in  %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) help topic.
+1.  To get started, include the required and localized resources in your application. Details on which resources to include can be found in the [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html) help topic.
 2.  On your HTML page or ASP.NET MVC View, reference the required JavaScript files, CSS files, and ASP.NET MVC assemblies.
 
     **In HTML:**
@@ -110,8 +111,13 @@ If specific format is not set, the `timeInputFormat` is used with its default va
 Supported formats follow the general patterns for [Formatting Dates and Time](Formatting-Dates-Numbers-and-Strings.html). The time format can also be defined using a common set of time specifiers - for example, a format of "HH:mm" would display time similar to "16:35" where "HH" displays the hour number in 24-hour format and "mm" - the minute numbers, excluding the AM/PM part.
 
 
-### Button Types
-The `buttonType` option defines the type of button applied to the time picker control. These types can be dropdown button to open a dropdown list, spin buttons to increment/decrement time parts and a clear button.
+### <a id="button-types"></a>Button Types
+The `buttonType` option defines the type of buttons applied to the time picker control. This option defines as well provided interactions. Available button types are:
+
+- **clear** - a clear button is added to the editor
+- **dropdown** - a dropdown button is added to open a dropdown list with time items
+- **none** -  an editor without any buttons is displayed
+- **spin**  - spin buttons are added to enable incrementing/decrementing of time parts 
 
  >**Note:** This option can not be set run-time and a combination like "dropdown, spin" is not allowed.
 
@@ -125,7 +131,7 @@ If you use the `limitSpinToCurrentField` option and set it to true, you can limi
 
 ### <a id="min-max-values"></a>Min/Max Values
 
-The `minValue` and `maxValue` options specify the minimum\maximum value, which can be displayed/entered in the time picker by the end user.
+The `minValue` and `maxValue` options specify the minimum\maximum value, which can be displayed/entered in the time picker by the end user. These two options also define the range of items in the control dropdown list. 
 
 
 
