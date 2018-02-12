@@ -33,17 +33,25 @@ Press| To| When
 <kbd>Alt</kbd> + <kbd>Up arrow</kbd>|Close drop down| Drop down is opened
 <kbd>Ctrl</kbd> + <kbd>Home</kbd>|Move to very first item in drop down| Drop down is opened
 <kbd>Ctrl</kbd> + <kbd>End</kbd>|Move to very last item| Drop down is opened
+<kbd>Page Up</kbd>|Move to and selects the first visible item| Drop down is opened and multiselection is enabled
+<kbd>Page Down</kbd>|Move to and selects the last visible item| Drop down is opened and multiselection is enabled
+<kbd>Up arrow</kbd>|Move to and selects the prev item; Close drop down if opened | Drop down is opened or closed
+<kbd>Down arrow</kbd>|Move to and selects next item; Open drop down if closed| Drop down is opened or closed
+<kbd>Esc key</kbd>|Clear content when there isn’t selected item | There is content in the input
+<kbd>Esc key</kbd>|Close the drop down| The drop down is opened
+<kbd>Enter key</kbd>|Close the drop down| There is selected item
+
+##<a id="multiselection"></a>Multiselection
+
+Press| To| When
+---|---|---
 <kbd>Page Up</kbd>|Move to first visible item| Drop down is opened
 <kbd>Page Down</kbd>|Move to last visible item| Drop down is opened
 <kbd>Up arrow</kbd>|Move to prev item; Close drop down if opened | Drop down is opened or closed
-<kbd>Down arrow</kbd>|Move to next item; Open drop down if closed| Drop down is opened or closed
-<kbd>Esc key</kbd>|Clear content when there isn’t selected item | There is content in the input
-<kbd>Esc key</kbd>|Close the drop down| The drop down is opened
+<kbd>Down arrow</kbd>|Move next item; Open drop down if closed| Drop down is opened or closed
 <kbd>Enter key</kbd>|Select the active item| There is active item
 
-##<a id="multiselection"></a>Multiselection
 ###<a id="shiftInteraction"></a>Shift interactions
-
 When press|Then
 ---|---
 <kbd>Shift</kbd>|The item is highlighted to active state
