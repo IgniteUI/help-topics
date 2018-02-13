@@ -17,7 +17,7 @@ This topic explains how to use keyboard navigation so that end-users can easily 
 
 This topic contains the following sections:
 
--   [Keyboard interactions](#standard_interactions)
+-   [Standard Keyboard interactions](#standard_interactions)
 -   [Selecting the editor](#selection)
 -   [igTimePicker specific navigation](#specific_interactions)
 
@@ -71,3 +71,7 @@ Press| To
 <kbd>Ctrl</kbd> + <kbd>Left Arrow</kbd> | Move to the previous time part
 <kbd>Enter</kbd> | Confirm focused item as selected
 <kbd>Enter</kbd> or <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> | Reject the focused item and keep the old selection
+
+## Related Topics
+
+-   [igTimePicker Overview](igtimepicker-overview.html)
