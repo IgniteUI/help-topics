@@ -36,4 +36,4 @@ Your CSS may include style overrides for the elements of the time picker. For th
 
 ## Related Topics
 
--   [igTimePicker Overview](igTimePicker_Overview.html)
+-   [igTimePicker Overview](igtimepicker-overview.html)

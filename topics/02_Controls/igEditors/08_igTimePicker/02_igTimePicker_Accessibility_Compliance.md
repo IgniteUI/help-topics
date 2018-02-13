@@ -60,8 +60,7 @@ In 2014 the W3C finalized their [WAI-ARIA specification](http://www.w3.org/TR/wa
 
 The list below provides details about the `igTimePicker` control support of WAI-ARIA. Please note that no special settings are  needed to leverage these changes, as they are all enabled by default.
 
-- The input element of the `
-- ` will render a <b>tabindex</b> attribute with a corresponding value from the <b>tabindex</b> option of the `igTimePicker`, which allows access to the elements through the use of <kbd>Tab</kbd> and <kbd>Shift</kbd>+<kbd>Tab</kbd> keys.
+- The input element of the `igTimePicker` will render a <b>tabindex</b> attribute with a corresponding value from the <b>tabindex</b> option of the `igTimePicker`, which allows access to the elements through the use of <kbd>Tab</kbd> and <kbd>Shift</kbd>+<kbd>Tab</kbd> keys.
 
 >**Note:** If the tabindex option is not specified - tabindex equal to -1 is rendered as an attribute to the input element.
 
@@ -73,4 +72,8 @@ The list below provides details about the `igTimePicker` control support of WAI-
     - Every rendered button is decorated with <b>button</b> role
     - Every rendered button has id (generated from the id of the widget) 
     - Every rendered button has <b>aria-label</b> attribute rendered with value extracted from the loaded locale. 
+	
+## Related Topics
+
+-   [igTimePicker Overview](igtimepicker-overview.html)
 

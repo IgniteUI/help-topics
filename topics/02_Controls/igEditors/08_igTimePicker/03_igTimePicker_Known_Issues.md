@@ -17,4 +17,4 @@ Since the control inherits from the `igDateEditor`, common issues and limitation
 
 ## Related Topics
 
--   [igTimePicker Overview](igTimePicker_Overview.html)
+-   [igTimePicker Overview](igtimepicker-overview.html)
