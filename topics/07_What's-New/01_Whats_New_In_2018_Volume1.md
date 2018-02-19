@@ -26,7 +26,7 @@ Feature | Description
 ### Spreadsheet
 Feature | Description
 ---|---
-[Sorting](#spreadsheetEditing)| WorkSheet Level Sorting.
+[Sorting](#SpreadSheetSorting)| WorkSheet Level Sorting.
 
 ### Excel Engine
 Feature | Description
