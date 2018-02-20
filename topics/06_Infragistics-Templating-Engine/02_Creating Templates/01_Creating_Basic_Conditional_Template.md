@@ -35,7 +35,7 @@ This topic contains the following sections:
     -   [Preview](#preview)
     -   [Prerequisites](#prerequisites)
     -   [Steps](#steps)
-- [Creating igGrid with basic conditional template using the IgniteUI CLI](##adding-using-CLI)
+- [Creating igGrid with basic conditional template using the IgniteUI CLI](#adding-using-CLI)
 -   [Related Content](#related-content)
 
 
