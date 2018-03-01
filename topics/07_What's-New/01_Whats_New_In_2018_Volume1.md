@@ -54,7 +54,7 @@ Support for more Excel functions have been added to our Excel libraries.  You ca
 In this release, for the igSpreadsheet control, we added sorting to the Worksheet object. 
 
 You can sort columns or rows in ascending or descending order.
-* For igSpreadsheet you can find more information here [{SpreadsheetName} Sorting](igSpreadSheetSorting.html).
+* For igSpreadsheet you can find more information here [{SpreadsheetName} Sorting](igExcelEngineSorting.html).
 
 
 ### <a id="ExcelEngineSorting"></a> ExcelEngine Worksheet Level Sorting
