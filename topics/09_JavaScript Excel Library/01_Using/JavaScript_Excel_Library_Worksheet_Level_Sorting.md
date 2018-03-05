@@ -10,11 +10,11 @@
 
 # Worksheet level Sorting
 
-Before you can take advantage of the features in the Excel assembly, you will need to create a Workbook object. You can do this by either reading an existing Microsoft® Excel® file, as explained in the How Do I... topic: Read an Excel File into a Workbook or you can create a blank workbook. When you create a blank workbook, before writing it to a file, you must add at least one worksheet.
+Before you can take advantage of the features in the JavaScript Excel Library, you will need to create a [Workbook](%%jQueryApiUrl%%/ig.excel.Workbook "Link to the Web API Reference Guide to the Workbook member.") object. You can do this by either reading an existing Microsoft® Excel® file, as explained in the How Do I... topic: [Read an Excel File into a Workbook](JavaScript-Excel-Library-Read-an-Excel-2007-XLSX-File-Into-a-Workbook.html "Explains how to read and excel file into a workbook.") or you can create a blank workbook. When you create a blank workbook, before writing it to a file, you must add at least one worksheet.
 
-For worksheet level object we we added sorting. Sorting is done by setting a sorting condition on a worksheet level object on either column or row. You can sort columns or rows in ascending or descending order.
+For the worksheet level object we added sorting. Sorting is done by setting a sorting condition on a worksheet level object on either column or row. You can sort columns or rows in ascending or descending order.
 
-The sort conditions in a sheet are only reapplied when sort conditions are added, removed, modified, or when the [reapplySortConditions](%%jQueryApiUrl%%/ig.excel.WorksheetSortSettings#methods: reapplySortConditions "Link to the Web API Reference Guide to the reapplySortConditions member.") method is called on the sheet.Columns or rows will be sorted within the region. 'Rows' is the default sort type.
+The sort conditions in a sheet are only reapplied when sort conditions are added, removed, modified, or when the [reapplySortConditions](%%jQueryApiUrl%%/ig.excel.WorksheetSortSettings#methods: reapplySortConditions "Link to the Web API Reference Guide to the reapplySortConditions member.") method is called on the sheet. Columns or rows will be sorted within the region. 'Rows' is the default sort type.
 
 ## Property settings
 
