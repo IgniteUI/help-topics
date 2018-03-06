@@ -22,22 +22,22 @@ The following table maps the desired Method to the property sort settings that m
 
 | Method			| Description     																	|
 | ------------- 	|:-------------:																	|
-| [SortType](%%jQueryApiUrl%%/ig.excel.WorksheetSortSettings#methods:sortType "Link to the Web API Reference Guide to the SortType member.") | The control supports editing and provides several events and methods. |
-|[CaseSensitive](%%jQueryApiUrl%%/ ig.excel.SortSettings%601#methods:caseSensitive  "Link to the Web API Reference Guide to the caseSensitive member.") |True to sort with case sensitivity|
-|[SetRegion](%%jQueryApiUrl%%/ig.excel.WorksheetSortSettings#methods:setRegion "Link to the Web API Reference Guide to the SetRegion member.")|To apply the sort setting
-|[SortCondition](%%jQueryApiUrl%%/ ig.excel.SortSettings%601#methods:sortCondition "Link to the Web API Reference Guide to the SortCondition member.") |To use when sorting the region of data.
-
+|[CaseSensitive](%%jQueryApiUrl%%/ ig.excel.SortSettings%601#methods:caseSensitive  "Link to the Web API Reference Guide to the caseSensitive member.") |True or false depends whether strings should be compared case-sensitively when they are sorted.|
+|[SetRegion](%%jQueryApiUrl%%/ig.excel.WorksheetSortSettings#methods:setRegion "Link to the Web API Reference Guide to the SetRegion member.")|This is used to specify the region which will be sorted.
+|[SortConditions](%%jQueryApiUrl%%/ ig.excel.SortSettings%601#methods:sortConditions "Link to the Web API Reference Guide to the SortConditions member.") |This is the collection of criteria used to sort the region.
+| [SortType](%%jQueryApiUrl%%/ig.excel.WorksheetSortSettings#methods:sortType "Link to the Web API Reference Guide to the SortType member.") |This is used determines whether columns or rows will be sorted within the region. 'Rows' is the default.
 
 ## The following sort condition types are available to set on columns:
 
 | Method			| Description     																	|
 | ------------- 	|:-------------:																	|
-| [OrderedSortCondition](%%jQueryApiUrl%%/ig.excel.OrderedSortCondition#methods:ig.excel.OrderedSortCondition "Link to the Web API Reference Guide to the OrderedSortCondition member.") | The control supports editing and provides several events and methods. |
-|[CustomListSortCondition](%%jQueryApiUrl%%/ ig.excel.CustomListSortCondition#methods:ig.excel.CustomListSortCondition "Link to the Web API Reference Guide to the CustomListSortCondition member.") |True to sort with case sensitivity|
-|[FillSortCondition](%%jQueryApiUrl%%/ig.excel.FillSortCondition#methods:ig.excel.FillSortCondition "Link to the Web API Reference Guide to the FillSortCondition member.")|To apply the sort setting
-|[FontColorSortCondition](%%jQueryApiUrl%%/ ig.excel.FontColorSortCondition#methods:ig.excel.FontColorSortCondition "Link to the Web API Reference Guide to the FontColorSortCondition member.") |To use when sorting the region of data.
+|[OrderedSortCondition](%%jQueryApiUrl%%/ig.excel.OrderedSortCondition#methods:ig.excel.OrderedSortCondition "Link to the Web API Reference Guide to the OrderedSortCondition member.") | Sort cells in an ascending or descending order based on their value. |
+|[CustomListSortCondition](%%jQueryApiUrl%%/ ig.excel.CustomListSortCondition#methods:ig.excel.CustomListSortCondition "Link to the Web API Reference Guide to the CustomListSortCondition member.") |Sort cells in a defined order based on their text or display value. This might be useful for sorting as they appear on the calendar or as they appear in a custom list defined by you, rather than alphabetically.|
+|[FillSortCondition](%%jQueryApiUrl%%/ig.excel.FillSortCondition#methods:ig.excel.FillSortCondition "Link to the Web API Reference Guide to the FillSortCondition member.")|Sort cells based on whether their fill is a specific pattern / gradient.
+|[FontColorSortCondition](%%jQueryApiUrl%%/ ig.excel.FontColorSortCondition#methods:ig.excel.FontColorSortCondition "Link to the Web API Reference Guide to the FontColorSortCondition member.") |Sort cells based on whether their font is a specific color.
+|[IconSortCondition](%%jQueryApiUrl%%/ ig.excel.FontColorSortCondition#methods:ig.excel.IconSetConditionalFormat "Link to the Web API Reference Guide to the FontColorSortCondition member.") |Sort cells based on icon (thresholds) value.
 
-The following code snippet shows how to perform Worksheet level sorting on the {ExcelEngineName}.Set the region to apply sorting from column B2 to column B8.
+The following code snippet shows how to perform Worksheet level sorting on the {ExcelEngineName}. In the following example the data in region A2:B8 will be sorted ascending by the data in B2:B8.
 
 Following is the code that implements this example.
 
@@ -71,11 +71,9 @@ sheet.getCell('B6').value('Shiela Donahue');
 
 sheet.sortSettings().sortType($.ig.excel.WorksheetSortType.rows);		
 sheet.sortSettings().caseSensitive(true);			
-sheet.sortSettings().setRegion("B2:B8");
-sheet.sortSettings().sortConditions().add(new $.ig.excel.RelativeIndex(0), new $.ig.excel.OrderedSortCondition($.ig.excel.SortDirection.ascending));        
+sheet.sortSettings().setRegion("A2:B8");
+sheet.sortSettings().sortConditions().add(new $.ig.excel.RelativeIndex(1), new $.ig.excel.OrderedSortCondition($.ig.excel.SortDirection.ascending));        
 
-// Save the workbook
-saveWorkbook(workbook, "Table.xlsx");
 
 ```
-![Displays the results of using the code listed above.](../../05_ASP-NET-MVC/00_Excel-Engine/01_Using/images/ExcelEngine_Workseet_Sorting.png)
+![Displays the results of using the code listed above.](../../09_JavaScript Excel Library/01_Using/images/ExcelEngine_Workseet_Sorting.png)
