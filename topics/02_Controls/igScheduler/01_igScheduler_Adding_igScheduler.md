@@ -7,7 +7,7 @@
 }
 |metadata|
 -->
-## Topic Overview and Purpose
+## Adding IgScheduler
 
 The `igScheduler` can be configured to run using jQuery. This help topic demonstrates how to setup a basic `igScheduler` control.
 

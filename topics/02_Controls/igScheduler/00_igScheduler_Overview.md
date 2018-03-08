@@ -10,8 +10,6 @@
 
 # igScheduler Overview
 
-## Topic Overview
-
 ### Purpose
 
 This topic provides conceptual information for the `igScheduler`™ control including information regarding: features, configuration, requirements and theming.
