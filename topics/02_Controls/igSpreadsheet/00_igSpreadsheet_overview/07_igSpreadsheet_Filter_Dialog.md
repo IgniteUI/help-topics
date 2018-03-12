@@ -12,7 +12,7 @@
 
 ## Topic Overview
 ### Purpose
-This topic explains what operations can be performed by the user with the control’s filter dialog to create complex filters in a column.
+This topic explains what operations can be performed by the user with the control’s filter dialog to create or modify complex filters in a column.
 
 ### Required background
 To understand this topic you need to be familiar with the concept and topics related to the [Infragistics JavaScript Excel Library](javascript-excel-library.html) and [igSpreadsheet](igSpreadsheet_Feature_Overview.html).
@@ -36,7 +36,7 @@ The {SpreadsheetName} control provides a filter dialog which is opened by clicki
 ## <a id="worksheet_dialog"></a>Filter Dialog for Worksheet
 
 ### Code Example
-The following example code demonstrates how to show the filter dialog for the first column in a worksheet region at index of zero. Alternatively, the index specified needs to exist within region.
+The following example code demonstrates how to show the filter dialog for the first relative column in a worksheet region's filter settings. A region can be assigned with the SetRegion method exposed from the Worksheet.FilterSettings. 
 
 ```js
 var executed = $(".selector").igSpreadsheet("showFilterDialogForWorksheet", 0);
