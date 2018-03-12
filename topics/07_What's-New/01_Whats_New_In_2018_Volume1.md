@@ -26,13 +26,14 @@ Feature | Description
 ### Spreadsheet
 Feature | Description
 ---|---
-[Sorting](#SpreadSheetSorting)| WorkSheet Level Sorting.
+[Sorting](#SpreadSheetSorting)| Worksheet Level Sorting.
+[Conditional Formatting](#ConditionalFormattingSpreadsheet)| Support for displaying Worksheet conditional formats.
 
 ### Excel Engine
 Feature | Description
 ---|---
-[Sorting](#ExcelEngineSorting)| WorkSheet Level Sorting.
-
+[Sorting](#ExcelEngineSorting)| Worksheet Level Sorting.
+[Conditional Formatting](#ConditionalFormattingExcel)| Support for creating, saving, and loading conditional formats.
 
 ### igUpload
 
@@ -54,10 +55,20 @@ Support for more Excel functions have been added to our Excel libraries.  You ca
 In this release, for the igSpreadsheet control, we added sorting to the Worksheet object. 
 
 You can sort columns or rows in ascending or descending order.
-* For igSpreadsheet you can find more information here [{SpreadsheetName} Sorting](igExcelEngineSorting.html).
+* For igSpreadsheet you can find more information here [igSpreadsheet Sorting](igExcelEngineSorting.html).
+
+### <a id="ConditionalFormattingSpreadsheet"></a> Spreadsheet Conditional Formatting
+
+The igSpreadsheet control can now display conditional formats applied to your Worksheet that are created using the Excel Engine or loaded from Excel.
+- For more on conditional formatting with the igSpreadsheet control, see [this topic](igspreadsheet-conditional-formatting.html).
+
+### <a id="ConditionalFormattingExcel"></a> Excel Engine Conditional Formatting
+
+You can now create new conditional formats for your worksheets and load in pre-existing ones from Excel.
+- For more about information about conditional formatting in the Infragistics Excel Engine, see [this topic](javascript-excel-library-conditional-formatting.html).
 
 
-### <a id="ExcelEngineSorting"></a> ExcelEngine Worksheet Level Sorting
+### <a id="ExcelEngineSorting"></a> Excel Engine Worksheet Level Sorting
 
 In this release, for the Excel Engine, we added sorting to the Worksheet object. 
 
