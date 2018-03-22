@@ -461,6 +461,9 @@ To navigate to the required JavaScript files listing for the particular control,
 				infragistics.util.js
 				<br>infragistics.util.jquery.js
 				<br>infragistics.ui.widget.js
+				<br>infragistics.ui.popover.js
+				<br>infragistics.ui.notifier.js
+				<br>infragistics.ui.validator.js
 			</td>
 		</tr>
 		<tr>
