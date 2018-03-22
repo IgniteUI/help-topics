@@ -127,8 +127,7 @@ Description
                         <tr>
                             <td>
 `infragistics.util.js`<br/>
-`infragistics.util.jquery.js`<br/>
-`infragistics.util.jquerydeferred.js`
+`infragistics.util.jquery.js`
 			</td>
 
                             <td>
@@ -259,7 +258,6 @@ Following is the full code for this procedure.
     <!-- Infragistics Shared JavaScript Files -->
     <script src="../../igniteui/js/modules/infragistics.util.js"></script>
     <script src="../../igniteui/js/modules/infragistics.util.jquery.js"></script>
-    <script src="../../igniteui/js/modules/infragistics.util.jquerydeferred.js"></script>
     <script src="../../igniteui/js/modules/infragistics.ext_core.js"></script>
     <script src="../../igniteui/js/modules/infragistics.ext_collections.js"></script>
     <script src="../../igniteui/js/modules/infragistics.ext_collectionsextended.js"></script>
@@ -429,7 +427,6 @@ Following is the full code for this procedure.
     <!-- Infragistics Shared JavaScript Files -->
     <script src="../../igniteui/js/modules/infragistics.util.js"></script>
     <script src="../../igniteui/js/modules/infragistics.util.jquery.js"></script>
-    <script src="../../igniteui/js/modules/infragistics.util.jquerydeferred.js"></script>
     <script src="../../igniteui/js/modules/infragistics.ext_core.js"></script>
     <script src="../../igniteui/js/modules/infragistics.ext_collections.js"></script>
     <script src="../../igniteui/js/modules/infragistics.ext_collectionsextended.js"></script>
