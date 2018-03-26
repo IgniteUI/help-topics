@@ -12,17 +12,15 @@
 
 ## Introduction
 
-Before you can take advantage of the features in the JavaScript Excel Library, you will need to create a [Workbook](%%jQueryApiUrl%%/ig.excel.Workbook "Link to the Web API Reference Guide to the Workbook member.") object. You can do this by either reading an existing Microsoft® Excel® file, as explained in the How Do I... topic: [Read an Excel File into a Workbook](JavaScript-Excel-Library-Read-an-Excel-2007-XLSX-File-Into-a-Workbook.html "Explains how to read and excel file into a workbook.") or you can create a blank workbook. When you create a blank workbook, before writing it to a file, you must add at least one worksheet.
+Before you can take advantage of the filter settings in the JavaScript Excel Library, you will need to create a [Workbook](%%jQueryApiUrl%%/ig.excel.Workbook "Link to the Web API Reference Guide to the Workbook member.") object. You can do this by either reading an existing Microsoft® Excel® file, as explained in the How Do I... topic: [Read an Excel File into a Workbook](JavaScript-Excel-Library-Read-an-Excel-2007-XLSX-File-Into-a-Workbook.html "Explains how to read and excel file into a workbook.") or you can create a blank workbook. When you create a blank workbook, before writing it to a file, you must add at least one worksheet. After a worksheet is created you will be able to add filtering conditions and other related settings to the excel file, as explained by this topic.
 
-For the worksheet level object we added filtering. Filtering is done by setting a filter condition on a worksheet level object on a worksheet region column. 
-
-The filter conditions in a sheet are only reapplied when filter conditions are added, removed, modified, or when the [reapplyFilters](%%jQueryApiUrl%%/ig.excel.WorksheetFilterSettings#methods: reapplyFilters "Link to the Web API Reference Guide to the reapplyFilters member.") method is called on the sheet. Filters are not constantly evaluated as data within the region changes. Filters are applied to the region only when they are added or removed or when the ReapplyFilters method is called.
+Filtering is done by setting a filter condition on a worksheet's [WorksheetFilterSettings](%%jQueryApiUrl%%/ig.excel.WorksheetFilterSettings "Link to the Web API Reference Guide to the WorksheetFilterSettings member."). Filter conditions are only reapplied when they're are added, removed, modified, or when the [reapplyFilters](%%jQueryApiUrl%%/ig.excel.WorksheetFilterSettings#methods: reapplyFilters "Link to the Web API Reference Guide to the reapplyFilters member.") method is called on the sheet. Filters are not constantly evaluated as data within the region changes. Filters are applied to the region only when they are added or removed or when the ReapplyFilters method is called.
 
 If no filters are applied this method will not do anything to the data.
 
 ### Property settings
 
-The following table maps the desired Method to the property [WorksheetFilterSettings](%%jQueryApiUrl%%/ig.excel.WorksheetFilterSettings "Link to the Web API Reference Guide to the WorksheetFilterSettings member.") that manage it.
+The following table maps the desired Methods managed by the  [WorksheetFilterSettings](%%jQueryApiUrl%%/ig.excel.WorksheetFilterSettings "Link to the Web API Reference Guide to the WorksheetFilterSettings member.").
 
 | Method			| Description     																	|
 | ------------- 	|:-------------:																	
