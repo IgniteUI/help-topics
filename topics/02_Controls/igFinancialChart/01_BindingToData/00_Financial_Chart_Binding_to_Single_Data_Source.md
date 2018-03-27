@@ -1,1 +1,0 @@
-﻿# Binding to Singe Data Source
