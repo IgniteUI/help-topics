@@ -84,3 +84,6 @@ The following screenshot depicts the igDataChart using the PercentChangeYAxis wi
 
 <a id="related"></a>
 ### Related Content
+
+-	[Adding igDataChart](igDataChart-Adding.html):  This topic demonstrates how to add the `igDataChart` control to a page and bind it to data.
+- [Configuring Ordinal Time X-Axis](igdatachart-configuring-ordinaltimexaxis.html): This topic demonstrates how to use OrdinalTimeXAxis in the `igDataChart` control.
