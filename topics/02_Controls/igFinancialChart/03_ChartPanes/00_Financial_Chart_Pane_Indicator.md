@@ -1,1 +1,0 @@
-﻿# Indicator Pane
