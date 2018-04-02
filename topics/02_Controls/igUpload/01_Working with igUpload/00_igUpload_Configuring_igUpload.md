@@ -27,7 +27,7 @@ The following topics are prerequisites to understanding this topic:
 
 **External Resources**
 
--   [HTML: The Markup Language (an HTML language reference)](http://www.w3.org/TR/html-markup/input.file.html#input.file)
+-   [W3C: HTML Input Type File](https://www.w3.org/wiki/HTML/Elements/input/file)
 
 ### In this topic
 
