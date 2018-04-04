@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 |metadata|
 {
     "fileName": "known-issues-and-limitations-2018-volume-1",
@@ -26,6 +26,7 @@ This topic contains the following sections:
     -   [Editors Common Known Issues](#editors)
     -   [igBulletGraph](#bullet-graph)
     -   [igCombo](#combo)
+    -   [igFinancialChart](#financial-chart)
     -   [igDataChart](#data-chart)
     -   [igDialog](#dialog)
 	-   [igUpload](#upload)
@@ -421,6 +422,12 @@ When virtualization is enabled, all ItemTemplate elements should have equal heig
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
+### <a id="financial-chart"></a> [igFinancialChart](igFinancialChart-Known-Limitations.html)
+
+Issue | Description | Status
+---|---|---
+When binding the financial chart to data without all price properties (High,Low,Open.Close) in order to include a series visual in the zoom pane you must set the zoomSliderType | $("#chart").igFinancialChart( {dataSource: data, "zoomSliderType": "line"} ) | ![](../../images/images/positive.png)
+Go up to [Known Issues and Limitations Summary](#summary)
 
 ### <a id="data-chart"></a> [igDataChart](igDataChart-Known-Issues.html)
 
@@ -517,7 +524,19 @@ If you need to apply blur to the shadow, use the Compound type of shadow (`useSi
 		    <p><img alt="" src="../images/images/negative.png"></p>
 		</td>
 	</tr>
-    </tbody>
+	<tr>
+		<td>
+		    <p>The DataChart does not align items of multiple data sources when plotting series with CategoryDateTimeXAxis or TimeXAxis.</p>
+		</td>
+		
+		<td>
+		    <p>Developers should align data items by inserting null items where one data source that does not have corresponding items with another data source.</p>
+		</td>
+		
+		<td>
+		    <p></p>
+		</td>
+	</tr>    </tbody>
 </table>
 
 
