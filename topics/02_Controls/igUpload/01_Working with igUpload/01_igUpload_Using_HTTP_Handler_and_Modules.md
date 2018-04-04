@@ -25,7 +25,7 @@ The examples below demonstrate how to configure an HttpModule for IIS6 (or devel
 	<httpModules>
         <add name="IGUploadModule type="Infragistics.Web.Mvc.UploadModule" />
     </httpModules>
-    <!--OPTIONAL: Set the maximum request length. By default the request lenght is 4 MB. More info: http://msdn.microsoft.com/en-us/library/e1f13641(v=vs.85).aspx-->
+    <!--OPTIONAL: Set the maximum request length. By default the request length is 4 MB. More info: http://msdn.microsoft.com/en-us/library/e1f13641(v=vs.85).aspx-->
     <httpRuntime executionTimeout="3600" maxRequestLength="2097151000"/>
 </system.web>
 ```
@@ -41,7 +41,7 @@ The examples below demonstrate how to configure an HttpModule for IIS6 (or devel
     </modules>    
 	<security>      
 		<requestFiltering>    
-			<!--OPTIONAL: Set the maximum request length. By default the request lenght is ~30 MB. More info: http://www.iis.net/configreference/system.webserver/security/requestfiltering/requestlimits-->        
+			<!--OPTIONAL: Set the maximum request length. By default the request length is ~30 MB. More info: http://www.iis.net/configreference/system.webserver/security/requestfiltering/requestlimits-->        
 			<requestLimits maxAllowedContentLength="2097151000"/>      
 		</requestFiltering>    
 	</security>

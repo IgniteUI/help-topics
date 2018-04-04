@@ -311,7 +311,7 @@ Value| Description
 Value |Description
 ---|---
 1 |Max allowed uploading files exceeded
-2 |Client side extenstion validation
+2 |Client side extension validation
 3 |Error thrown when trying to start upload file with not existing id
 4 |Ajax error when trying to get file status
 5 |Ajax error when trying to call cancel command in httpHandler

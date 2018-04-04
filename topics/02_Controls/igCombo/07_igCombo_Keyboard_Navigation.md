@@ -52,7 +52,6 @@ Press| To| When
 <kbd>Enter key</kbd>|Select the active item| There is active item
 
 ###<a id="shiftInteraction"></a>Shift interactions
-
 When press|Then
 ---|---
 <kbd>Shift</kbd>|The item is highlighted to active state
