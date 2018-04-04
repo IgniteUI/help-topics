@@ -16,7 +16,7 @@
 ![Getting Started](images/images/landing-start.png "Getting Started")
 
 <h2>Getting Started</h2>
-<p>Get started by exploring the product documentation via the tree on this page or [run the samples](%%SamplesUrl%%/grid/overview), work directly with the controls inside the [%%ProductName%% Page Designer](%%DesignerUrl%%).</p>
+<p>Get started by exploring the product documentation via the tree on this page or [run the samples](%%SamplesUrl%%/grid/overview), quickly create a new Angular, React or jQuery application using the [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli) or work directly with the controls inside the [%%ProductName%% Page Designer](%%DesignerUrl%%).</p>
 <a href="Getting-Started.html" class="landing-btn landing-btn-primary" target="_blank">Start Here</a>
 
 </div>

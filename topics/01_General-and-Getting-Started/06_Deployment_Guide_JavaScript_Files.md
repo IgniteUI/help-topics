@@ -66,6 +66,23 @@ The regional settings - igRegional JavaScript files - provide localized formats 
 >**Note:** English localization files are merged into minified JS files and are not required to be referenced explicitly.
 For other languages corresponding localization need to be referenced before the actual JavaScript files on the page code.
 
+### JavaScript Extensions Files Reference
+
+The following summarizes the JavaScript [Knockout.js](http://knockoutjs.com) extensions files included in %%ProductName%%.
+
+The names of the JavaScript files containing the extensions scripts are:
+
+-   `infragistics.datasource.knockoutjs.js`
+-   `infragistics.ui.combo.knockout-extensions.js`
+-   `infragistics.ui.datachart.knockout-extensions.js`
+-	`infragistics.ui.editors.knockout-extensions.js`
+-	`infragistics.ui.grid.knockout-extensions.js`
+-	`infragistics.ui.tree.knockout-extensions.js`
+
+The files are found in the extensions folder which is under the js folder.
+
+>**Note:** The extensions scripts are not included in the combined scripts files. You must always reference them separately when using the extensions.
+
 ##JavaScript Files Reference by Control
 
 ### %%ProductName%% controls listing

@@ -24,6 +24,7 @@ This topic contains the following sections:
 -   [**Enabling Updating**](#enable)
     -   [Adding Required CSS and JavaScript references using igLoader in JavaScript](#required)
     -   [Loading CSS and JavaScript references statically – needed only for updating](#minimal-required)
+-   [**Adding igGrid with Updating feature enabled using the Ignite UI CLI**](#adding-using-CLI)
 -   [**Disabling row adding, row updating and row deleting**](#disable-row-add-delete)
 -   [**Column Settings and Editors**](#column-settings-editors)
     -   [Retrieving the columnSettings object](#retrieving-columnsettings)
@@ -384,6 +385,19 @@ $("#grid1").igGrid({
 	.DataBind().Render()%>
 ```
 
+## <a id="adding-using-CLI"></a> Adding igGrid with Updating feature enabled using the Ignite UI CLI
+To install the Ignite UI CLI:
+```
+npm install -g igniteui-cli
+```
+Once the Ignite UI CLI is installed the commands for generating an Ignite UI project, adding a new igGrid component with Updating feature configured, building and serving the project are as following:
+```
+ig new <project name>
+cd <project name>
+ig add grid-editing newGridEditing
+ig start
+```
+ For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
 ## <a id="adding-primarykey"></a> Adding a PrimaryKey for the AddNewRow 
 When you initialize a new row on the grid for a data source that includes a primary key, the `generatePrimaryKeyValue` event of `igGrid` Updating feature is raised to provide a primary key value to the new row. The second parameter of the event handler includes the value member which is used to return the new primary key value back up to the grid. By default, the value is initialized with a value that is equal to the number of rows in the data source. The following code listing is an example of how to implement generating a new primary key value to a new row of the grid.
 
@@ -738,8 +752,3 @@ Following are some other topics you may find useful.
 Following are some samples you may find useful.
 -   [Editing](%%SamplesUrl%%/grid/basic-editing)
 -   [Live Updates](%%SamplesUrl%%/grid/binding-real-time-data)
- 
-
- 
-
-

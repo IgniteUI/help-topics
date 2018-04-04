@@ -37,6 +37,15 @@ The `igNumericEditor` includes the following characteristics:
 -   ASP.NET MVC wrapper
 -   Min/Max Value
 
+## Adding igNumericEditor using the Ignite UI CLI
+
+The easiest way to add a new igNumericEditor to your application is via the Ignite UI CLI. After you have created a new application, you just need to execute the following command and a numeric editor will be added to the project:
+```
+   ig add numeric-editor newNumericEditor
+```
+
+This command will add a new numeric editor no matter if your application is created in Angular, React or jQuery.
+For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
 
 ##Adding igNumericEditor to a Web Page
 

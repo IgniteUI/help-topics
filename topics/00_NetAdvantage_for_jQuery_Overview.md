@@ -118,6 +118,13 @@ ThemeRoller is a tool provided by jQuery UI and jQuery Mobile which facilitates 
 
 ## Samples and Installation
 
+### Ignite UI CLI
+
+The easiest way to get started with using Ignite UI for JavaScript is via the Ignite UI CLI. 
+It is a tool to initialize, develop, scaffold  and maintain applications in a wide variety of frameworks. The CLI provides you with [predefined templates](https://github.com/IgniteUI/igniteui-cli/wiki/add) for Ignite UI for JavaScript controls.<br/>
+You can create projects and add Ignite UI for JavaScript controls in [jQuery](https://jquery.com), [Angular](https://angular.io) or [React](https://reactjs.org), executing the very same commands.<br/>
+While creating your application, Ignite UI for JavaScript will be automatically installed as an npm module to your project. This means that you will not need to install manually and manage the required resources - executing a few simple commands and the CLI will do the work for you!
+
 ### Microsoft Windows
 
 Available for download from the Infragistics web site is an automated installer for Windows that will install the following items:

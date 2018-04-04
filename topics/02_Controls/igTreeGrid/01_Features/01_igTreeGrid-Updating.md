@@ -22,6 +22,7 @@ This topic contains the following sections:
 -   [**Updating UI**](#ui)
     -   [Mouse UI](#mouse)
     -   [Touch UI](#touch)
+-  [**Adding igTreeGrid with Updating feature configured using the Ignite UI CLI**](#adding-using-CLI)
 -   [**Working with Updating**](#working-with-updating)
      -   [Enabling Updating](#enable)
      -   [Configuring Updating](#configuring)
@@ -64,6 +65,22 @@ In touch environment hover interaction is not available which requires the user 
 
 ![](images/addChildTouch.png "Tree Grid Add child touch")
 
+## <a id="adding-using-CLI"></a> Adding igTreeGrid with Updating feature configured using the Ignite UI CLI
+
+The easiest way to add a new  igTreeGrid with Updating feature configured to your application is via the Ignite UI CLI. 
+
+To install the Ignite UI CLI:
+```
+npm install -g igniteui-cli
+```
+Once the Ignite UI CLI is installed the commands for generating an Ignite UI project, adding a new  igTreeGrid with Updating feature configured, building and serving the project are as following:
+```
+ig new <project name>
+cd <project name>
+ig add tree-grid-editing newTreeGridEditing
+ig start
+```
+For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
 ## <a id="working-with-updating"></a> Working with Updating
 
 By enabling the Updating feature, you enable adding, removing and updating the data in the grid.

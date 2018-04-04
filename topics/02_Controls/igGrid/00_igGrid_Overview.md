@@ -41,6 +41,22 @@ Further, the grid also includes support for:
 -   Rich client-side API
 -   ASP.NET MVC wrapper
 
+## Adding igGrid using the Ignite UI CLI
+The easiest way to add a new igGrid to your application is via the Ignite UI CLI. 
+
+To install the Ignite UI CLI:
+```
+npm install -g igniteui-cli
+```
+Once the Ignite UI CLI is installed the commands for generating an Ignite UI project, adding a new igGrid component, building and serving the project are as following:
+```
+ig new <project name>
+cd <project name>
+ig add grid newGrid
+ig start
+```
+For more information and the list of all available commands read the [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
+
 ## Adding igGrid to a Web Page
 
 The following steps demonstrate how to create a basic implementation of the jQuery Grid on a web page using either jQuery client code. To read about which implementation to choose, see [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html).
@@ -160,11 +176,3 @@ To get started, include the required and localized resources for your applicatio
 -   [igGrid/igDataSource Architecture Overview](igGrid-igDataSource-Architecture-Overview.html)
 -   [%%ProductName%% Overview](NetAdvantage-for-jQuery-Overview.html) 
 -   [Using JavaScript Resources in %%ProductName%%](Deployment-Guide-JavaScript-Resources.html)
-
-
-
-
-
-
-
-

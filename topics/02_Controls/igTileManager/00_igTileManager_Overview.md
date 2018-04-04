@@ -89,7 +89,7 @@ The operational mode is managed with the [maximizedTileIndex](%%jQueryApiUrl%%/u
 ## <a id="user-interaction"></a>User Interactions and Usability
 ### <a id="user-interaction-summary"></a>User interactions summary
 
-The user clicks/taps a minimized tile to maximize it and display its whole content. The maximized tile is send to the Maximized Tile panel. The previously selected tile is minimized and send to the Minimized Tiles panel. Users can resize the panels relatively to each other with the splitter bar to enlarge the maximized tile or to show more of the minimized tiles. They can also navigate through the minimized tiles using the scrollbar.
+The user clicks/taps a minimized tile to maximize it and display its whole content. The maximized tile is sent to the Maximized Tile panel. The previously selected tile is minimized and sent to the Minimized Tiles panel. Users can resize the panels relatively to each other with the splitter bar to enlarge the maximized tile or to show more of the minimized tiles. They can also navigate through the minimized tiles using the scrollbar.
 
 ### <a id="user-interaction-summary-chart"></a>User interactions summary chart
 

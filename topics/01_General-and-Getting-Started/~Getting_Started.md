@@ -17,6 +17,7 @@ This topic contains the following sections:
 -   [Introduction](#introduction)
 -   [Download and Install](#download)
 -   [Host %%ProductName%% in your project](#hosting)
+    -   [Using Ignite UI CLI](#igniteui-cli)
     -   [Using NPM, JSPM, NuGet](#package_managers)
     -   [Add CSS and JavaScript references](#add_references)
     -   [Sample %%ProductName%% Boilerplate HTML page (using trial CDN links)](#boilerplate)
@@ -61,9 +62,21 @@ A Windows only offline MSI installer containing the product and samples.
 
 You have several options to host %%ProductName%% in your project:
 
+- Use Ignite UI CLI
 - Use Package Manager like NPM, JSPM, NuGet
 - Copy the [JavaScript and CSS files](Adding-the-Required-Resources-for-NetAdvantage-for-jQuery.html) from the %%ProductName%% installation directory into your project
 - Use [Infragistics Content Delivery Network (CDN)](#cdn)
+
+## <a id="igniteui-cli"></a>Using Ignite UI CLI
+
+The Ignite UI CLI is a tool to initialize, develop, scaffold  and maintain applications in Angular, React and jQuery.
+To start using it, you need to install the npm package as a global module:
+
+```
+    npm install -g igniteui-cli
+```
+
+For more information read [Using Ignite UI CLI](Using-Ignite-UI-CLI.html) topic.
 
 ## <a id="package_managers"></a>Using NPM, JSPM, NuGet
 
@@ -212,5 +225,6 @@ Following are the %%ProductName%% Trial links. For more details checkout [Infrag
 
 ### Topics
 
+- [%%ProductName%% CLI](Using-Ignite-UI-CLI.html)
 - [Deployment Guide](Deployment-Guide.html)
 - [%%ProductName%% Page Designer](http://designer.igniteui.com/)
