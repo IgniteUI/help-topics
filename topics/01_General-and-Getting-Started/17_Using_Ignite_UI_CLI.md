@@ -62,8 +62,7 @@ To add a new Ignite UI for JavaScript control to an already created application,
     ig add [template] [name]
 ```
 
-The `add` command is supported only on existing project created with the Ignite UI CLI. You cannot use the `add` command before creating a project uisng the `new` command or using the step by step guide which is invoked by the `ig` command. 
-The quickstart projects do not support the `add` command, meaning that you cannot add more components than the predefined ones for the given quickstart project.
+The `add` command is supported only on existing project created with the Ignite UI CLI. You cannot use the `add` command before creating a project uisng the `new` command or using the step by step guide which is invoked by the `ig` command.
 
 #### Ignite UI for JavaScript templates
 Inside the [Ignite UI CLI Wiki](https://github.com/IgniteUI/igniteui-cli/wiki/Add#ignite-ui-for-javascript-templates) you can find the up to date table that demonstrates what Ignite UI for JavaScript templates are available in the supported frameworks.
@@ -87,19 +86,52 @@ To build the application and start a web server, execute the following command:
 ```
 jQuery applications are using port 3000, Angular applications are using port 3001 and React applications are using port 3002.
 
-### quickstart
-You can create a quickstart application with predefined Ignite UI controls executing the following command:
+### generate
+To generates a new custom template for supported frameworks and project types, execute the following command:
 
 ```
-    ig quickstart [framework]
+    ig generate template [name]
 ```
 
-| Argument   | Alias | Default value | Description                                    |
-| ---------  | ----- |---------------| ---------------------------------------------- |
-| --framework| -f    | jQuery        |The supported frameworks are jQuery and Angular.<br/><p>Example: <code>ig quickstart --framework=angular</code></p>|
+By default the command registers the generated template path in the `customTemplates` in the global config of the Ignite UI CLI. That makes the generated template automatically visible under the Add View menu, or directly when using `add` command.
 
-Executing the `quickstart` command will install all required packages and will starts a web server.
-The generated quickstart application will be stored in the `output/` directory.
+### config
+
+To perform read and write operation on the Ignite UI CLI configuration settings, execute the following command:
+
+```
+    ig config <get|set|add> <property> [value]
+```
+
+Ignite UI CLI stores configuration in an `ignite-ui-cli.json` file. Project structures created with Ignite UI CLI include such a file as local configuration. A per-user file can provide global defaults in case `ig config` is called with a --global flag . The global `ignite-ui-cli.json` file is stored under the current user home directory - usually `/home/<user>` for Unix and `C:\Users\<user>` for Windows.
+
+### test
+
+To run the tests for the current project, execute the following command:
+
+```
+    ig test
+```
+
+The command can be used for jQuery, Angular and React projects and it will run the corresponding testing setup. Each framework has a different test environment configured, based on the technology and the community preferences.
+
+### list
+
+To list all templates for the specified framework and type, execute the following command within a project folder:
+
+```
+    ig list
+```
+
+### doc
+
+To search the Infragistics knowledge base for information about a given search term, execute the following command:
+
+```
+    ig doc
+```
+
+The command takes in a single search term and opens the Infragistics search in the default browser.
 
 ### help
 To list all the Ignite UI CLI available commands, execute the following command:
