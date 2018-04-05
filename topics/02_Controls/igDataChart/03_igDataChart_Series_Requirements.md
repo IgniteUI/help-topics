@@ -36,7 +36,7 @@ The table below shows what axis types can be used with Category Series in the `i
         <tbody>
             <tr>
                 <th> </th>
-                <th colspan="5" align="center">Axis Types</th> 
+                <th colspan="7" align="center">Axis Types</th> 
                 <th colspan="1" align="center">Series Property</th> 
             </tr>
             <tr>
@@ -46,6 +46,8 @@ The table below shows what axis types can be used with Category Series in the `i
                 <th>categoryX</th>
                 <th>categoryY</th>
                 <th>time</th>
+                <th>ordinalTimeX</th>
+                <th>percentChangeY</th>
                 <th>valueMemberPath</th> 
             </tr>
             <tr>
@@ -54,6 +56,8 @@ The table below shows what axis types can be used with Category Series in the `i
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td></td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td> 
             </tr>
@@ -64,6 +68,8 @@ The table below shows what axis types can be used with Category Series in the `i
                 <td></td>
                 <td>&#9210;</td>
                 <td></td>
+                <td></td>
+                <td></td>
                 <td>&#9210;</td> 
             </tr>
             <tr>
@@ -73,6 +79,8 @@ The table below shows what axis types can be used with Category Series in the `i
                 <td>&#9210;</td>
                 <td></td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td> 
             </tr>
             <tr>
@@ -81,6 +89,8 @@ The table below shows what axis types can be used with Category Series in the `i
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td></td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td> 
             </tr>
@@ -92,6 +102,8 @@ The table below shows what axis types can be used with Category Series in the `i
                 <td></td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
             </tr>
             <tr>
                 <td>Spline </td>
@@ -99,6 +111,8 @@ The table below shows what axis types can be used with Category Series in the `i
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td></td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td> 
             </tr>
@@ -109,6 +123,8 @@ The table below shows what axis types can be used with Category Series in the `i
                 <td>&#9210;</td>
                 <td></td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td> 
             </tr>
             <tr>
@@ -117,6 +133,8 @@ The table below shows what axis types can be used with Category Series in the `i
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td></td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td> 
             </tr>
@@ -127,6 +145,8 @@ The table below shows what axis types can be used with Category Series in the `i
                 <td>&#9210;</td>
                 <td></td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td> 
             </tr>
             <tr>
@@ -135,6 +155,8 @@ The table below shows what axis types can be used with Category Series in the `i
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td></td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td> 
             </tr>
@@ -152,7 +174,7 @@ The table below shows what axis types can be used with Range Series in the `igDa
         <tbody>
             <tr>
                 <th> </th>
-                <th colspan="3" align="center">Axis Types</th> 
+                <th colspan="5" align="center">Axis Types</th> 
                 <th colspan="2" align="center">MemberPath Properties</th> 
             </tr>
             <tr>
@@ -160,6 +182,8 @@ The table below shows what axis types can be used with Range Series in the `igDa
                 <th>numericY</th>
                 <th>categoryX</th>
                 <th>time</th> 
+                <th>ordinalTimeX</th>
+                <th>percentChangeY</th>
                 <th>high</th>
                 <th>low</th>
             </tr>
@@ -170,12 +194,16 @@ The table below shows what axis types can be used with Range Series in the `igDa
                 <td>&#9210;</td> 
                 <td>&#9210;</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
             </tr>
             <tr>
                 <td>rangeColumn </td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td> 
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
             </tr>
@@ -326,13 +354,14 @@ The table below shows what axis types can be used with Scatter Series in the `ig
         <tbody>
             <tr>
                 <th> </th>
-                <th colspan="2" align="center">Axis Types</th> 
+                <th colspan="3" align="center">Axis Types</th> 
                 <th colspan="6" align="center">MemberPath Properties</th> 
             </tr>
             <tr>
                 <th>Series Type</th>
                 <th>numericY</th>
                 <th>numericX</th> 
+                <th>percentChangeY</th>
                 <th>x</th>
                 <th>y</th>
                 <th>radius</th>
@@ -344,6 +373,7 @@ The table below shows what axis types can be used with Scatter Series in the `ig
                 <td>scatterPoint</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td> 
+                <td>&#9210;</td> 
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td></td>
@@ -354,6 +384,7 @@ The table below shows what axis types can be used with Scatter Series in the `ig
             <tr>
                 <td>scatterLine</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td> 
                 <td>&#9210;</td> 
                 <td>&#9210;</td>
                 <td>&#9210;</td>
@@ -367,6 +398,7 @@ The table below shows what axis types can be used with Scatter Series in the `ig
                 <td>scatterSpline</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td> 
+                <td>&#9210;</td> 
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td></td>
@@ -377,6 +409,7 @@ The table below shows what axis types can be used with Scatter Series in the `ig
             <tr>
                 <td>scatterBubble</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td> 
                 <td>&#9210;</td> 
                 <td>&#9210;</td>
                 <td>&#9210;</td>
@@ -389,6 +422,7 @@ The table below shows what axis types can be used with Scatter Series in the `ig
                 <td>scatterHD</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td> 
+                <td>&#9210;</td> 
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td></td>
@@ -399,6 +433,7 @@ The table below shows what axis types can be used with Scatter Series in the `ig
             <tr>
                 <td>scatterArea</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td> 
                 <td>&#9210;</td> 
                 <td>&#9210;</td>
                 <td>&#9210;</td>
@@ -411,6 +446,7 @@ The table below shows what axis types can be used with Scatter Series in the `ig
                 <td>scatterContour</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td> 
+                <td>&#9210;</td> 
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td></td>
@@ -422,6 +458,7 @@ The table below shows what axis types can be used with Scatter Series in the `ig
                 <td>scatterPolygon</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td> 
+                <td>&#9210;</td> 
                 <td></td>
                 <td></td>
                 <td></td>
@@ -432,6 +469,7 @@ The table below shows what axis types can be used with Scatter Series in the `ig
             <tr>
                 <td>scatterPolyline</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td> 
                 <td>&#9210;</td> 
                 <td></td>
                 <td></td>
@@ -559,7 +597,7 @@ The table below shows what axis types can be used with Financial Price Series an
         <tbody>
             <tr>
                 <th> </th>
-                <th colspan="4" align="center">Axis Types</th> 
+                <th colspan="6" align="center">Axis Types</th> 
                 <th colspan="5" align="center"> MemberPath Properties</th> 
             </tr>
             <tr>
@@ -567,6 +605,8 @@ The table below shows what axis types can be used with Financial Price Series an
                 <th>numericY</th> 
                 <th>categoryX</th>
                 <th>time</th>
+                <th>ordinalTimeX</th>
+                <th>percentChangeY</th>
                 <th>high</th>
                 <th>low</th>
                 <th>open</th>
@@ -582,10 +622,14 @@ The table below shows what axis types can be used with Financial Price Series an
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td></td>
             </tr>
             <tr>
                 <td>AbsoluteVolumeOscillatorIndicator</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
@@ -597,6 +641,8 @@ The table below shows what axis types can be used with Financial Price Series an
             </tr>
             <tr>
                 <td>AccumulationDistributionIndicator</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
@@ -616,9 +662,13 @@ The table below shows what axis types can be used with Financial Price Series an
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
             </tr>
             <tr>
                 <td>AverageTrueRangeIndicator</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
@@ -635,12 +685,16 @@ The table below shows what axis types can be used with Financial Price Series an
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td></td>
                 <td>&#9210;</td>
                 <td></td>
             </tr>
             <tr>
                 <td>BollingerBandWidthIndicator</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
@@ -657,12 +711,16 @@ The table below shows what axis types can be used with Financial Price Series an
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td></td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
             </tr>
             <tr>
                 <td>ChaikinVolatilityIndicator</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
@@ -679,12 +737,16 @@ The table below shows what axis types can be used with Financial Price Series an
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td></td>
                 <td>&#9210;</td>
                 <td></td>
             </tr>
             <tr>
                 <td>DetrendedPriceOscillatorIndicator</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
@@ -701,6 +763,8 @@ The table below shows what axis types can be used with Financial Price Series an
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td></td>
                 <td></td>
                 <td>&#9210;</td>
@@ -712,12 +776,16 @@ The table below shows what axis types can be used with Financial Price Series an
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td></td>
                 <td>&#9210;</td>
                 <td></td>
             </tr>
             <tr>
                 <td>ForceIndexIndicator</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
@@ -734,12 +802,16 @@ The table below shows what axis types can be used with Financial Price Series an
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td></td>
                 <td>&#9210;</td>
                 <td></td>
             </tr>
             <tr>
                 <td>MarkerFacilitationIndexIndicator</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
@@ -756,12 +828,16 @@ The table below shows what axis types can be used with Financial Price Series an
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>MedianPriceIndicator</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
@@ -778,12 +854,16 @@ The table below shows what axis types can be used with Financial Price Series an
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td></td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
             </tr>
             <tr>
                 <td>MovingAverageConvergenceDivergenceIndicator</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
@@ -800,12 +880,16 @@ The table below shows what axis types can be used with Financial Price Series an
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td></td>
                 <td>&#9210;</td>
                 <td></td>
             </tr>
             <tr>
                 <td>OnBalanceVolumeIndicator</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
@@ -822,12 +906,16 @@ The table below shows what axis types can be used with Financial Price Series an
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td></td>
                 <td></td>
                 <td>&#9210;</td>
             </tr>
             <tr>
                 <td>PercentageVolumeOscillatorIndicator</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
@@ -842,6 +930,8 @@ The table below shows what axis types can be used with Financial Price Series an
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -850,6 +940,8 @@ The table below shows what axis types can be used with Financial Price Series an
             </tr>
             <tr>
                 <td>PriceVolumeTrendIndicator</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
@@ -866,12 +958,16 @@ The table below shows what axis types can be used with Financial Price Series an
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>RateOfChangeAndMomentumIndicator</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
@@ -883,6 +979,8 @@ The table below shows what axis types can be used with Financial Price Series an
             </tr>
             <tr>
                 <td>RelativeStrengthIndexIndicator</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
@@ -899,12 +997,16 @@ The table below shows what axis types can be used with Financial Price Series an
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td></td>
                 <td>&#9210;</td>
                 <td></td>
             </tr>
             <tr>
                 <td>StandardDeviationIndicator</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
@@ -919,6 +1021,8 @@ The table below shows what axis types can be used with Financial Price Series an
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -927,6 +1031,8 @@ The table below shows what axis types can be used with Financial Price Series an
             </tr>
             <tr>
                 <td>TRIXIndicator</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
@@ -943,12 +1049,16 @@ The table below shows what axis types can be used with Financial Price Series an
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td></td>
                 <td>&#9210;</td>
                 <td></td>
             </tr>
             <tr>
                 <td>UltimateOscillatorIndicator</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
@@ -965,12 +1075,16 @@ The table below shows what axis types can be used with Financial Price Series an
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td></td>
                 <td>&#9210;</td>
                 <td></td>
             </tr>
             <tr>
                 <td>WilliamsPercentRIndicator</td>
+                <td>&#9210;</td>
+                <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td>
