@@ -380,7 +380,7 @@ The following topics provide additional information related to this topic.
 
 - [Using Gradient Colors in Data Visualizations](Using-Gradient-Colors-in-Data-Visualizations.html): This topic explains how to apply gradient colors to the data visuals in %%ProductName%%™ controls.
 
-- [Applying the New Style (*igDataChart*)](igDataChart-New-Default-Style.html): This topic explains how to apply the new chart style and provides an overview of the changes it makes to the chart look.
+- [Applying the New Style (*igDataChart*)](igdatachart-styling-themes.html): This topic demonstrates how to apply styles and themes to the chart.
 
 - [Using %%ProductName%% with Bootstrap](Using-Ignite-UI-with-Bootstrap.html) : This topic explains how %%ProductName%% and Bootstrap work together
 
