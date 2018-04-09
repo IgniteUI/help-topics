@@ -422,7 +422,7 @@ The table below shows what axis types can be used with Scatter Series in the `ig
                 <td>scatterHD</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td> 
-                <td>&#9210;</td> 
+                <td></td> 
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td></td>
@@ -434,7 +434,7 @@ The table below shows what axis types can be used with Scatter Series in the `ig
                 <td>scatterArea</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td> 
-                <td>&#9210;</td> 
+                <td></td> 
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td></td>
@@ -446,7 +446,7 @@ The table below shows what axis types can be used with Scatter Series in the `ig
                 <td>scatterContour</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td> 
-                <td>&#9210;</td> 
+                <td></td> 
                 <td>&#9210;</td>
                 <td>&#9210;</td>
                 <td></td>
@@ -458,7 +458,7 @@ The table below shows what axis types can be used with Scatter Series in the `ig
                 <td>scatterPolygon</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td> 
-                <td>&#9210;</td> 
+                <td></td> 
                 <td></td>
                 <td></td>
                 <td></td>
@@ -470,7 +470,7 @@ The table below shows what axis types can be used with Scatter Series in the `ig
                 <td>scatterPolyline</td>
                 <td>&#9210;</td>
                 <td>&#9210;</td> 
-                <td>&#9210;</td> 
+                <td></td> 
                 <td></td>
                 <td></td>
                 <td></td>
