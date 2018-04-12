@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 |metadata|
 {
     "fileName": "whats-new-in-2018-volume1",
@@ -37,6 +37,12 @@ Feature | Description
 Feature | Description
 ---|---
 [Financial Chart](#financialChart)| A new financial chart is added this release.
+
+### igTimePicker
+
+Feature | Description
+---|---
+[Time Picker](#timepicker)| The igTimePicker control is an editor with time-only input and a drop-down with listed hours:minutes values.
 
 ### igUpload
 
@@ -132,6 +138,12 @@ The igFinancialChart is a lightweight, high-performance chart. This chart can be
 
 #### Related Topic
 - [Financial Chart](financial-chart-overview.html).
+
+## <a id="timepicker"></a>igTimePicker
+The igTimePicker control allows you to have an editor with time-only input and a drop-down with listed hours:minutes values. By default, the listed time values are with 30 minutes delta. The igTimePicker input and display format are configurable. By default, the control uses a 12-hour format.
+
+#### Related Topic
+- [igTimePicker Overview](igtimepicker-overview.html)
 
 ## igUpload
 
