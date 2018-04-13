@@ -41,7 +41,7 @@ This topic contains the following sections:
 
 %%ProductName%%® provides type definitions for TypeScript allowing you to take advantage of strong typing, compile time checking and intellisense features.
 
-The definitions for the controls are located in *typings\igniteui.d.ts* file under %%ProductName%% install directory. They extend the jQuery and jQuery UI definitions for TypeScript and thus it depends on them.
+The definitions for the controls can be installed via NPM with the following command `npm install @types/ignite-ui`. They extend the jQuery and jQuery UI definitions for TypeScript and thus it depends on them.
 
 ## <a id="syntax"></a> Syntax
 
