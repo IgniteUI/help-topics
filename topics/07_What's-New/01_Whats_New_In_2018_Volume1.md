@@ -65,7 +65,7 @@ We already had support in our engine for sorting and filtering within a Workshee
 -   [Excel Engine Worksheet Filtering](javascript-excel-library-worksheet-level-filtering.html)
 -   [Excel Engine Worksheet Sorting](javascript-excel-library-worksheet-level-sorting.html)
 
-### <a id="excelFunctions"></a> More Excel function support
+### <a id="ExcelFunctions"></a> More Excel function support
 
 We added over 100 new functions for Excel.
 
@@ -82,7 +82,7 @@ In this release, for the igSpreadsheet control, we added sorting to the Workshee
 You can sort columns or rows in ascending or descending order.
 
 #### Related Topics
-[igSpreadsheet Sorting](javascript-excel-library-worksheet-level-sorting.html).
+[igSpreadsheet Sorting](javascript-excel-library-worksheet-level-sorting.html)
 
 ### <a id="ConditionalFormattingSpreadsheet"></a> Spreadsheet Conditional Formatting
 
@@ -92,15 +92,15 @@ With the addition of the conditional formatting feature in the Excel Engine, we 
 - Icon Sets add a specific icon to each cell based on its value
 
 #### Related Topic
-- [Conditional Formatting](igspreadsheet-conditional-formatting.html).
+- [Conditional Formatting](igspreadsheet-conditional-formatting.html)
 
-### <a id="WorksheetFiltering"></a> Worksheet Level Filtering.
+### <a id="WorksheetFiltering"></a> Worksheet Level Filtering
 
 By filtering information in a worksheet, you can find values quickly. You can filter on one or more columns of data. With filtering, you can control not only what you want to see, but what you want to exclude. You can filter based on choices you make from a list, or you can create specific filters to focus on exactly the data that you want to see. When you filter data, entire rows are hidden if values in one or more columns don’t meet the filtering criteria. You can filter on numeric or text values, or filter by color for cells that have color formatting applied to their background or text.
 Filtering options are available on the context menu of cells in the igSpreadsheet. After applying a filter, users can select the Custom Filter…​ option in the filter dropdown to open a dialog that has even more filtering options. 
 
 #### Related Topic
-- [Conditional Formatting](igspreadsheet-conditional-formatting.html).
+- [Conditional Formatting](igspreadsheet-conditional-formatting.html)
 
 ### <a id="AutoFilter"></a> AutoFilter
 
@@ -133,11 +133,11 @@ In Excel you can define a special type of data validation called a list data val
 #### Cell Dropdown
 There are 2 ways to show the Cell Dropdown. One is via the context menu for a cell using the Pick From Drop-down List… item and the other is by pressing Alt+Down. This displays a dropdown of the text/string values immediately above and below the active cell. So you’re not explicitly defining the contents of the list like you do with a list data validation – it’s implicitly populated based on the cells above/below in the same manner as Excel. Note igSpreadsheet differs from Excel in that this dropdown will not be shown while in edit mode. As with Excel it ignores numerical values, stops at blanks and table boundaries, etc.
 
-## igFinancialChart
+## <a id="financialChart"></a>igFinancialChart
 The igFinancialChart is a lightweight, high-performance chart. This chart can be easily configured to display financial data using an extremely simple and intuitive API. All you need to do is bind your data (a collection or a collection of collections) and the chart takes care of everything else. The chart offers multiple ways for the user to visualize and interpret the data, including several display modes for price and volume, and many financial indicators. The chart also makes use of label formatting to give the data context.
 
 #### Related Topic
-- [Financial Chart](financial-chart-overview.html).
+- [Financial Chart](financial-chart-overview.html)
 
 ## <a id="timepicker"></a>igTimePicker
 The igTimePicker control allows you to have an editor with time-only input and a drop-down with listed hours:minutes values. By default, the listed time values are with 30 minutes delta. The igTimePicker input and display format are configurable. By default, the control uses a 12-hour format.
