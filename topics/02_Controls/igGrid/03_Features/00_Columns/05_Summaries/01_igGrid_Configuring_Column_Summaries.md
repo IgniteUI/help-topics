@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 |metadata|
 {
     "fileName": "iggrid-configuring-column-summaries",
@@ -72,7 +72,7 @@ Configurable events | For detailed information about these events, refer to thei
 
 
 
-> **Note:** The predefined summary functions by default are enabled depending on the `dataType` of the column. For example if you have defined your column’s `dataType` to be “number” or “numeric” than the default summary functions will be: “Count”, “Min”, “Max”, “Sum”, “Avg”(average). If the dataType is “date”, the default summary function will be: “Count”, “Min” and “Max”. Otherwise (if dataType is “string”, “bool” or “object”) the default summary function will be only “Count”.
+> **Note:** The predefined summary functions by default are enabled depending on the `dataType` of the column. For example if you have defined your column’s `dataType` to be “number” or “numeric” than the default summary functions will be: “Count”, “Min”, “Max”, “Sum”, “Avg”(average). If the dataType is “date” or "time", the default summary function will be: “Count”, “Min” and “Max”. Otherwise (if dataType is “string”, “bool” or “object”) the default summary function will be only “Count”.
 
 
 ## <a id="type"></a> Configuring the Summary Type 

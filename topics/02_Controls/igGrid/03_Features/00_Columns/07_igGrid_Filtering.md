@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 |metadata|
 {
     "fileName": "iggrid-filtering",
@@ -640,6 +640,13 @@ The following conditions (grouped by data type) are available to perform filteri
   -   notNull
   -   empty
   -   notEmpty
+- Time
+  -   at
+  -   not at
+  -   before
+  -   after
+  -   at or before
+  -   at or after
 - Object
   -   null
   -   notNull
