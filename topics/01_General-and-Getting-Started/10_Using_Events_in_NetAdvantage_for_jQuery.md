@@ -82,12 +82,12 @@ In the following example, the `igGrid` control is instantiated with the Hiding f
 ```js
 <script type="text/javascript">
 $("#grid1").igGrid({
-    features: [
-    {
-        name: 'Hiding',
-              columnHiding: function (e, args) {
-              // Handle event  
-       }]
+		features: [{
+			name: 'Hiding',
+				  columnHiding: function (e, args) {
+					// Handle event  
+                }
+        }]
 });
 </script>
 ```
