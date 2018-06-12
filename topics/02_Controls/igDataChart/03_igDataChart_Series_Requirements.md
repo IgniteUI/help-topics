@@ -884,7 +884,7 @@ The table below shows what axis types can be used with Financial Price Series an
                 <td>&#9210;</td>
                 <td></td>
                 <td>&#9210;</td>
-                <td></td>
+                <td>&#9210;</td>
             </tr>
             <tr>
                 <td>OnBalanceVolumeIndicator</td>
