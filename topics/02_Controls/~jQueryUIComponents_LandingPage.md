@@ -42,6 +42,7 @@
 -   [igScheduler](igscheduler-landing.html)
 -   [igSparkline](igSparkline-Landing.html)
 -   [igSplitter](igSplitter.html)
+-   [igSpreadsheet](igSpreadsheet.html)
 -   [igTree](igTree-igTree.html)
 -   [igTreeGrid](igTreeGrid-Landing-Page.html)
 -   [igTileManager](igTileManager-Landing-Page.html)
