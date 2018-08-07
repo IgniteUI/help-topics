@@ -1401,7 +1401,6 @@ To navigate to the required JavaScript files listing for the particular control,
 			<br>infragistics.ext_collections.js
 			<br>infragistics.ext_io.js
 			<br>infragistics.ext_ui.js
-			<br>infragistics.dv_jquerydom.js
 			<br>infragistics.ext_collectionsExtended.js
 			<br>infragistics.ext_threading.js
 			<br>infragistics.ext_web.js
