@@ -26,7 +26,7 @@ Feature | Description
 
 ### <a id="FormatCellsDialog"></a> Spreadsheet FormatCellsDialog
 
-The XamSpreadsheet lets you change many of the ways it displays data in a cell. For example, you can specify the number of digits to the right of a decimal point, or you can add a pattern and border to the cell. You can access and modify the majority of these settings in the Format Cells dialog box (right-click the cell and select Format Cells).
+The igSpreadsheet lets you change many of the ways it displays data in a cell. For example, you can specify the number of digits to the right of a decimal point, or you can add a pattern and border to the cell. You can access and modify the majority of these settings in the Format Cells dialog box (right-click the cell and select Format Cells).
 
 - Number Tab
 
