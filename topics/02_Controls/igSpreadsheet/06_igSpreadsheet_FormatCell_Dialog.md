@@ -17,7 +17,7 @@ This topic explains various settings of FormatCellsDialog and how they will affe
 
 ### Required Background
 
-To understand this topic you need to be familiar with the concept and topics related to the [Infragistics JavaScript Excel Library](javascript-excel-library.html) and [igSpreadsheet](igSpreadsheet_Feature_Overview.html).
+To understand this topic you need to be familiar with the concept and topics related to the [Infragistics JavaScript Excel Library](javascript-excel-library.html) and [igSpreadsheet](igSpreadsheet-Feature-Overview.html). 
 
 ### In this Topic
 
