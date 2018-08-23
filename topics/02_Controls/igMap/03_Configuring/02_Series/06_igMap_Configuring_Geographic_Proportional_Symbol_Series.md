@@ -1,7 +1,7 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "igmap-configuring-geographic-proportional-symbol-series"
+    "fileName": "igmap-configuring-geographic-proportional-symbol-series",
     "controlName": "igMap",
     "tags": ["Charting","Data Presentation","How Do I"]
 }
