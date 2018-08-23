@@ -642,11 +642,11 @@ The following conditions (grouped by data type) are available to perform filteri
   -   notEmpty
 - Time
   -   at
-  -   not at
+  -   notAt
   -   before
   -   after
-  -   at or before
-  -   at or after
+  -   atBefore
+  -   atAfter
 - Object
   -   null
   -   notNull

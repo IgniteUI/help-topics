@@ -100,7 +100,6 @@ The `autoCommit` option value also affects `aggregateTransactions` option functi
 > When combo editor is configured in the Updating feature the `igCombo` script file (infragistics.ui.combo.js) should also be referenced on the page.
 > 
 > When date picker editor is configured in the Updating feature the jQuery UI Datepicker control (and its localization file) should also be referenced on the page.
-> When time picker editor is configured in the Updating feature the jQuery UI Timepicker control (and its localization file) should also be referenced on the page.
 
 
 ## <a id="enable"></a> Enabling Updating 
