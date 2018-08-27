@@ -28,7 +28,7 @@ This topic contains the following sections:
 -   [Using CDN Links](#cdn)
 -   [TypeScript Definitions](#typescript)
 -   [AngularJS Extensions](#angularjs)
--   [Angular 2 Extensions](#angular)
+-   [Angular Extensions](#angular)
 -   [ReactJS Extensions](#reactjs)
 -   [ASP.NET MVC Wrappers](#aspnet_wrappers)
 -   [Related Content](#related_content)
