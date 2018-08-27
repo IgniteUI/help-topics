@@ -75,7 +75,7 @@ When attaching a handler in MVC, you need to use the jQuery UI pattern which is 
 **In Javascript:**
 
 ```js
-$("#grid").on("iggridrowselectorsrowselectorclicked", function (evt, ui) {
+$("#grid1").on("iggridrowselectorsrowselectorclicked", function (evt, ui) {
       // Handle event  
    }
 );
