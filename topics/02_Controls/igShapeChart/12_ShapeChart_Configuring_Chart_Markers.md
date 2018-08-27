@@ -42,27 +42,27 @@ The following table lists all marker properties.
 
 Property Name|Property Type|Description
 ---|---|---
-`markerTypes`| MarkerType |Determines type of markers displayed by the all series in the chart
-`markerBrushes` |Brush |Determines fill color of markers
-`markerOutlines`|Brush|Determines outline color of markers
-`MarkerMaxCount`|int|Determines outline color of markers
+`markerTypes`| enumeration |Determines type of markers displayed by the all series in the chart
+`markerBrushes` |object |Determines fill color of markers
+`markerOutlines`|object|Determines outline color of markers
+`markerMaxCount`|number|Determines the maximum number of markers displyed in the plot area of the chart
 
 
 #### <a id="markertypes"/> Marker Types
 Property Name|Property Type|Description
 ---|---|---
-`circleMarker`|MarkerType|Displays the Circle marker type.
-`diamondMarker`|MarkerType|Displays the Diamond marker type.
-`hexagonMarker`|MarkerType|Displays the Hexagon marker type.
-`hexagramMarker`|MarkerType|Displays the Hexagram marker type.
-`pentagramMarker`|MarkerType|Displays the Pentagram marker type.
-`pentagonMarker`|MarkerType|Displays the Pentagon marker type.
-`pyramidMarker`|MarkerType|Displays the Pyramid marker type.
-`squareMarker`|MarkerType|Displays the Square marker type.
-`tetragramMarker`|MarkerType|Displays the Tetragram marker type.
-`triangleMarker`|MarkerType|Displays the Triangle marker type.
-`autoMarker`|MarkerType|Displays one marker type from above list for each series rendered in the chart.
-`noneMarker`|MarkerType|Hides markers for a given series.
+`circleMarker`|enumeration|Displays the Circle marker type.
+`diamondMarker`|enumeration|Displays the Diamond marker type.
+`hexagonMarker`|enumeration|Displays the Hexagon marker type.
+`hexagramMarker`|enumeration|Displays the Hexagram marker type.
+`pentagramMarker`|enumeration|Displays the Pentagram marker type.
+`pentagonMarker`|enumeration|Displays the Pentagon marker type.
+`pyramidMarker`|enumeration|Displays the Pyramid marker type.
+`squareMarker`|enumeration|Displays the Square marker type.
+`tetragramMarker`|enumeration|Displays the Tetragram marker type.
+`triangleMarker`|enumeration|Displays the Triangle marker type.
+`autoMarker`|enumeration|Displays one marker type from above list for each series rendered in the chart.
+`noneMarker`|enumeration|Hides markers for a given series.
 
 
 The code snippets below demonstrate how to change the marker type for the igShapeChart.
