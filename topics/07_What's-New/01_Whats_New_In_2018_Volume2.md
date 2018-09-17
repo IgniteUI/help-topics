@@ -10,17 +10,43 @@
 
 # What's New in 2018 Volume 2
 
-This topic presents the controls and the new and enhanced features for the Ignite UI™ 2018 Volume 1 release.
-
+This topic presents the controls and the new and enhanced features for the Ignite UI™ 2018 Volume 2 release.
 
 ### Overview
 
-The following table summarizes what’s new in 2018 Volume 1 and additional details follow.
+The following table summarizes what’s new in 2018 Volume 2 and additional details follow.
+
+### igGrid
+Feature | Description
+---|---
+[Time Column](#TimeColumn) | New Time Column in igGrid
+[Custom Editor Provider for Filter Cell](#FilteringCustomProvider) | Custom editor provider can be implemented for the filter cell in igGrid
+
 
 ### igSpreadsheet
 Feature | Description
 ---|---
 [FormatCells Dialog](#FormatCellsDialog)| Spreadsheet FormatCells Dialog
+
+## Time Column in igGrid
+### <a id="TimeColumn"></a> Time Column
+
+A new column type is added to the igGrid control - time column. In order to use it, it is necessary to set the column `dataType` to `time`. In this way, you can filter and update time data using the build-in time picker editor.
+
+![](images/time_column.png)
+
+## Related Content
+### Sample
+[Filtering](%%SamplesUrl%%/grid/simple-filtering)
+
+## Custom Editor Provider for the Filter Cell in igGrid
+### <a id="FilteringCustomProvider"></a> Custom Editor Provider for the Filter Cell
+
+Now, it is possible to create custom editor provider for the filter cell. This means that you can extend the igEditorProvider class and set your own editor to filter the igGrid content. For more information, check the sample below.
+
+## Related Content
+### Sample
+[Excel-style Filtering](%%SamplesUrl%%/grid/filtering-combo-editor-provider)
 
 ## FormatCellsDialog
 
