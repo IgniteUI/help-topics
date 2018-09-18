@@ -24,3 +24,4 @@ The topics in this group provide you with an overview of the features, visual el
 | [Activation and Navigation Interactions (igSpreadsheet)](igspreadsheet-activation-and-navigation-interactions.html) | This topic explains what actions can be performed by the user when navigating through the worksheet cells. |
 | [Selection (igSpreadsheet)](igspreadsheet-selection.html)															  | This topic explains what actions can be performed by the user when selecting worksheet cells. |
 | [Context Menu (igSpreadsheet)](igspreadsheet-context-menu)														  | This topic explains what actions can be performed by the user when using the context menu.			|
+| [FormatCell Dialog (igSpreadsheet)](igspreadsheet-FormatCell-Dialog)												  | This topic explains various settings of FormatCellsDialog and how they will affect the way cell data is presented.			|
