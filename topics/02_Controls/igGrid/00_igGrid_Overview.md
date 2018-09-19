@@ -86,7 +86,9 @@ To get started, include the required and localized resources for your applicatio
     **In HTML:**
 
     ```html
-    <table id="grid"></table>
+    <div style="height:300px;">
+        <table id="grid"></table>
+    </div>
     ```
 
 4. Once the above setup is complete, begin to **set options** including *ID*, *columns* and *dataSource*.
