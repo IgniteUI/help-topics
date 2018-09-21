@@ -23,7 +23,7 @@ To understand this topic you need to be familiar with the concept and topics rel
 
 This topic explain that Format Cells dialog has six individual tabs which provide different settings to modify the cell data:
 
-![](images/igSpreadSheet_Format_Cells_Dialog.png)
+![](../images/Format_Cells_Dialog_Number.png)
 
 -   [Number](#number)
 - 	[Alignment](#alignment)
@@ -47,6 +47,8 @@ Time| Select the style of the time from the Type list box.
 Percentage| Multiplies the existing cell value by 100 and displays the result with a percent symbol
 Text| Cells formatted as text will treat anything typed into the cell as text, including numbers.
 
+![](../images/Format_Cells_Dialog_Number.png)
+
 
 ## <a id="alignment"></a>Alignment Tab
 
@@ -55,15 +57,23 @@ You can position text and numbers by using the Alignment tab in the Format Cells
 - Text Alignment : Using this setting you can control the horizontal, vertical alignment and indention of the text.
 - Text Control : There are some additional miscellaneous text alignment controls in the Text Control section of the Alignment tab. These controls are Wrap Text, Shrink to Fit and Merge Cells.
 
+![](../images/Format_Cells_Dialog_Alignment.png)
+
 ## <a id="font"></a>Font Tab
 You can use the Font tab in the Format Cells dialog box to set a font and control its attributes like point size, font style, underlining, color, and effects.
+
+![](../images/Format_Cells_Dialog_Font.png)
 
 ## <a id="border"></a>Border Tab
 You can use this tab to customize the cells' borders from their default settings by changing the line style, line thickness or line color.
 
+![](../images/Format_Cells_Dialog_Border.png)
+
 ## <a id="fill"></a>Fill Tab
 
 Use this tab to set the background color of the selected cells. You can also use the Pattern Color or Pattern Style to apply color patterns or different styles of patterns to the background of the cell.
+
+![](../images/Format_Cells_Dialog_Fill.png)
 
 ## <a id="protection"></a>Protection Tab
 The Protection tab offers you an option for protecting your worksheet data and formulas:
@@ -71,6 +81,8 @@ The Protection tab offers you an option for protecting your worksheet data and f
 - Locked
 
 However, this option takes effect only when you protect your worksheet.
+
+![](../images/Format_Cells_Dialog_Protection.png)
 
 ## <a id="related_links"></a>Related Links
 -   [igSpreadsheet Overview](igSpreadsheet-Overview.html)
