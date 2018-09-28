@@ -86,13 +86,15 @@ To get started, include the required and localized resources for your applicatio
     **In HTML:**
 
     ```html
-    <table id="grid"></table>
+    <div style="height:300px;">
+        <table id="grid"></table>
+    </div>
     ```
 
 4. Once the above setup is complete, begin to **set options** including *ID*, *columns* and *dataSource*.
 
     1.  [columns](%%jQueryApiUrl%%/ui.iggrid#options:columns) – the column object definition for `igGrid`
-        -   `headerText` – the text in the header of a column
+        -   `headerText` – the text in the header of a column. HTML tags should be avoided, as they might cause misbehavior in some features.
         -   `key` – the name of the key field in the data source
         -   `dataType` – the data type of a column. Could be “string”, “number” or “date”
 
