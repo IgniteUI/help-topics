@@ -26,3 +26,4 @@ The topics in this group provide you with an overview of the features, visual el
 | [Context Menu (igSpreadsheet)](igspreadsheet-context-menu)														  | This topic explains what actions can be performed by the user when using the context menu.	
 | [Filter Dialog (igSpreadsheet)](igspreadsheet-filter-dialog)														  | This topic explains what actions can be performed by the user when using the filter dialog.			|		|
 | [Sort Dialog (igSpreadsheet)](igspreadsheet-sort-dialog)														  	  | This topic explains what actions can be performed by the user when using the sort dialog.			|
+ [FormatCell Dialog (igSpreadsheet)](igspreadsheet-FormatCell-Dialog)												  | This topic explains various settings of FormatCellsDialog and how they will affect the way cell data is presented.			|
