@@ -15,7 +15,9 @@
 This topic explains what operations can be performed by the user with the control’s custom sort dialog to create multiple sort conditions for columns or rows present in a table, worksheet, or filter region.
 
 ### Required background
-To understand this topic you need to be familiar with the concept and topics related to the [Infragistics JavaScript Excel Library](javascript-excel-library.html) and [igSpreadsheet](igSpreadsheet_Feature_Overview.html).
+To understand this topic you need to be familiar with the concept and topics related to the following: 
+-  [Infragistics JavaScript Excel Library](javascript-excel-library.html)  
+- [igSpreadsheet Overview](igSpreadsheet_Feature_Overview.html).
 
 ### In this topic
 This topic contains the following sections:
@@ -42,12 +44,6 @@ To start an initial sort condition, you must fullfill three categories. *Note, t
 The following image is an example of all four *Sort On* options:
 
 ![](../images/igSpreadsheet_custom_sort_dialog.png)
-
-### <a id="dialog"></a>Additional Notes:
-
-When more than one sort condition is applied you may reorder the conditions via the up and down buttons at the top of the dialog.
-
-The delete button will delete only the selected sort condition. You may press (Shift + Left Click) to select multiple sort conditions to delete multiple sort conditions.
 
 ## <a id="related_links"></a>Related Links
 -   [igSpreadsheet Overview](igSpreadsheet-Overview.html)
