@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 |metadata|
 {
     "fileName": "hoverinteractions-final-value-layer",
@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# Configuring the Item Tooltip Layer (igDataChart)
+# Configuring the Final Value Layer (igDataChart)
 
 
 ## Topic Overview
@@ -16,7 +16,7 @@
 ### Purpose
 
 
-This topic provides information about the item tooltip layer which is used for hover interactions. It describes the properties of the item tooltip layer and also provides an example of its implementation.
+This topic provides information about the final value layer annotations. It describes the properties of the final value layer and also provides an example of its implementation.
 
 ### Required background
 
@@ -47,41 +47,32 @@ This topic contains the following sections:
 
 #### Item tooltip layer overview
 
-The `itemToolTipLayer` displays tooltips for all the series on the `igDataChart` control individually when the mouse hovers over that particular series.
-
-The tooltip style is inherited from the chart; however you can override this default behavior by setting the `toolTipStyle` property. For more information on this property see the [Properties](#properties) section below.
+The `finalValueLayer` displays annotations based on the final value of data in the chart.
 
 ### <a id="preview"></a> Preview
 
-The following image is a preview of the `igDataChart` control renders with the `itemToolTipLayer` added.
+The following image is a preview of how the `igDataChart` control renders with the `finalValueLayer` added.
 
-![](images/jQuery_Item_Tooltip_Layer_01.png)
+![](images/jQuery_Final_Value_Layer_01.png)
 
 
 ## <a id="properties"></a> Properties
 
 #### Item tooltip layer summary
 
-The following table summarizes the properties of the `itemToolTipLayer` layer.
+The following table summarizes the properties of the `finalValueLayer` layer.
 
 Property Name | Property Type | Description
 ---|---|---
-| labelMemberPath | `String` | Gets or sets the label mapping property for the callouts.
-| xMemberPath | `String` | Gets or sets the x-value mapping property for the callouts.
-| yMemberPath | `String` | Gets or sets the y-value mapping property for the callouts.
-| contentMemberPath | `String` | Gets or sets the content mapping property for the callouts.
-| keyMemberPath | `String` | Gets or sets the key mapping property for the callouts.
-| isCalloutOffsettingEnabled | `Boolean` | Gets or sets if callouts will be offset from collision resolution.
-
+finalValueSelectionMode | `enumeration` | Specifies method for how the final value is identified.
 
 ## <a id="example"></a> Example
 
-This sample demonstrates the Item Tooltip Layer that displays tooltips for all target series individually.
-The sample options pane allows you to edit the properties of the layer, such as changing the transition duration.
+This sample demonstrates the Final Value Layer that displays axis annotations for the final value.
 
 <div class="embed-sample">
-   [Item Tooltip Layer](%%SamplesEmbedUrl%%/data-chart/item-tooltip-layer)
-   ![](images/jQuery_Item_Tooltip_Layer_01.png)
+   [Final Value Layer](%%SamplesEmbedUrl%%/data-chart/final-value-layer)
+   ![](images/jQuery_Final_Value_Layer_01.png)
 </div>
 
 
@@ -96,6 +87,4 @@ The sample options pane allows you to edit the properties of the layer, such as 
 
 The following samples provide additional information related to this topic.
 
-- [Hover Interactions – Category Highlight Layer](HoverInteractions-Category-Highlight-Layer.html#example): This sample demonstrates the Category Highlight Layer that targets a category axis, or all category axes in the `igDataChart`™ control. The sample options pane allows you to edit the properties of the Category Highlight Layer, such as changing the color of the highlight, outline, thickness and more.
-
-- [Hover Interactions – Multiple Layers](%%SamplesUrl%%/data-chart/multiple-layers): This sample demonstrates how multiple layers interact within the `igDataChart` control. This sample displays the Item Tooltip Layer, the Crosshair layer and the Category Highlight Layer.
+- [Hover Interactions – Multiple Layers](%%SamplesUrl%%/data-chart/final-value-layer): This sample demonstrates using the Final Value annotation layer in the `igDataChart`.
