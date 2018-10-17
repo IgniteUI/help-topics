@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 |metadata|
 {
     "fileName": "hoverinteractions-callout-layer",
@@ -16,7 +16,7 @@
 ### Purpose
 
 
-This topic provides information about the callout layer annotation. It describes the properties of the callout layer and also provides an example of its implementation.
+This topic provides information about the callout layer annotations. It describes the properties of the callout layer and also provides an example of its implementation.
 
 ### Required background
 
@@ -51,7 +51,7 @@ The `calloutLayer` displays annotations from existing or new data on the chart.
 
 ### <a id="preview"></a> Preview
 
-The following image is a preview of the `igDataChart` control renders with the `calloutLayer` added.
+The following image is a preview of how the `igDataChart` control renders with the `calloutLayer` added.
 
 ![](images/jQuery_Callout_Layer_01.png)
 
@@ -64,18 +64,16 @@ The following table summarizes the properties of the `calloutLayer` layer.
 
 Property Name | Property Type | Description
 ---|---|---
-| labelMemberPath | `String` | Gets or sets the label mapping property for the callouts.
-| xMemberPath | `String` | Gets or sets the x-value mapping property for the callouts.
-| yMemberPath | `String` | Gets or sets the y-value mapping property for the callouts.
-| contentMemberPath | `String` | Gets or sets the content mapping property for the callouts.
-| keyMemberPath | `String` | Gets or sets the key mapping property for the callouts.
-| isCalloutOffsettingEnabled | `Boolean` | Gets or sets if callouts will be offset from collision resolution.
+dataSource | `Array` | The data to be used for callout information.
+labelMemberPath | `String` | The path for your data that will be used as the annotation label.
+xMemberPath | `String` | The path for your data that will be used as the annotation's x position.
+yMemberPath | `String` | The path for your data that will be used as the annotation's y position.
+isCalloutOffsettingEnabled | `Boolean` | True if callout positions will be adjusted from collision resolution.
 
 
 ## <a id="example"></a> Example
 
 This sample demonstrates the Callout Layer that displays tooltips for all target series individually.
-The sample options pane allows you to edit the properties of the layer, such as changing the transition duration.
 
 <div class="embed-sample">
    [Callout Layer](%%SamplesEmbedUrl%%/data-chart/callout-layer)
@@ -94,6 +92,4 @@ The sample options pane allows you to edit the properties of the layer, such as 
 
 The following samples provide additional information related to this topic.
 
-- [Hover Interactions – Category Highlight Layer](HoverInteractions-Category-Highlight-Layer.html#example): This sample demonstrates the Category Highlight Layer that targets a category axis, or all category axes in the `igDataChart`™ control. The sample options pane allows you to edit the properties of the Category Highlight Layer, such as changing the color of the highlight, outline, thickness and more.
-
-- [Hover Interactions – Multiple Layers](%%SamplesUrl%%/data-chart/multiple-layers): This sample demonstrates how multiple layers interact within the `igDataChart` control. This sample displays the Item Tooltip Layer, the Crosshair layer and the Category Highlight Layer.
+- [Hover Interactions – Multiple Layers](%%SamplesUrl%%/data-chart/callout-layer): This sample demonstrates using the Callout annotation layer in the `igDataChart`
