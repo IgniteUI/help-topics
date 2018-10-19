@@ -36,12 +36,6 @@ In order to implement all hover, highlight and tooltip interactions, layers are 
 
 - [Configuring the Item Tooltip Layer (igDataChart)](HoverInteractions-Item-Tooltip-Layer.html): This topic provides information about the item tooltip layer which is used for hover interactions. It describes the properties of the item tooltip layer and also provides an example of its implementation.
 
+- [Configuring the Final Value Layer (igDataChart)](HoverInteractions-Final-Value-Layer.html): This topic provides information about the final value layer which is used for axis annotations. It describes the properties of the final value layer and also provides an example of its implementation.
 
-
-
-
- 
-
- 
-
-
+- [Configuring the Callout Layer (igDataChart)](HoverInteractions-Callout-Layer.html): This topic provides information about the callout layer which is used for annotations. It describes the properties of the callout layer and also provides an example of its implementation.
