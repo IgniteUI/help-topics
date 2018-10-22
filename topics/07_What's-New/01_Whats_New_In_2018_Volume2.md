@@ -114,7 +114,10 @@ Now, it is possible to create custom editor provider for the filter cell. This m
 
 Since sorting is so important in any Excel document, we added the very useful Custom Sort Dialog to give you full control over how you want to sort your Excel data.  For example, if you have a Department column and an Employee column, you can first sort by Department (to group all the employefes in the same department together), and then sort by name (to put the names in alphabetical order within each department). 
 
-For more information about the Sort Dialog in the igSpreadsheet, please see the link:spreadsheet-uiu-custom-sort-dialog.html[Sorting Dialog Interactions igSpreadsheet] topic.
+For more information about the Sort Dialog in the igSpreadsheet, please see the following topic: 
+
+#### Related Topic
+-   [Custom Sort Dialog](igspreadsheet-sort-dialog)
 
 ### <a id="Top10Dialog"></a> Top 10 Filter Dialog
 
@@ -208,7 +211,7 @@ You can find more information on the Callouts Layer in the link:financial-chart-
 
 You can configure crosshairs to display as a horizontal line, vertical line or both lines at the location of the mouse cursor. In addition, the Crosshairs Annotation can show values of data points at location of mouse cursor and render these values in colored boxes over the X-Axis and Y-Axis labels. 
 
-You can find more information on the Crosshair Layer in the link:financial-chart-annotation-and-interaction-layers.html#CalloutLayer[Annotations and Interaction Layers topic].
+You can find more information on the Crosshairs Layer in the following topic: 
 
 #### Related Topic
 -   [Annotation and Interaction Layers](financial-chart-annotation-and-interaction-layers.html#CrosshairLayer)
@@ -219,7 +222,7 @@ You can find more information on the Crosshair Layer in the link:financial-chart
 
 In Financial Chart, you can use the Final Values annotation to show values of the last data point in your data source(s). This annotation is rendered as a colored box for each data source over the Y-Axis label. 
 
-You can find more information on the Final Value Layer in the link:financial-chart-annotation-and-interaction-layers.html#CalloutLayer[Annotations and Interaction Layers topic].
+You can find more information on the Final Value Layer in the following topic: 
 
 #### Related Topic
 -   [Annotation and Interaction Layers](financial-chart-annotation-and-interaction-layers.html#FinalValueLayer)
@@ -234,7 +237,7 @@ The Financial Chart has a new ToolTipType property that adds two new types of to
 
 *  Item Tooltip which renders an individual tooltip for each series at a given date       
 
-You can find more information on the Tooltip Layer in the link:financial-chart-annotation-and-interaction-layers.html#CategoryTooltipLayer[Annotations and Interaction Layers topic].
+You can find more information on the Tooltip Layer in the following topic: 
 
 #### Related Topic
 -   [Annotation and Interaction Layers](financial-chart-annotation-and-interaction-layers.html#CategoryTooltipLayer) 
@@ -245,12 +248,12 @@ You can find more information on the Tooltip Layer in the link:financial-chart-a
 
 In Financial Chart, you can define scale breaks on X-Axis to exclude custom ranges in your data source or any day of week. For example, exclude all data items that fall on weekends. 
 
-You can find more information on the Scale Breaks in the link:financial-chart-annotation-and-interaction-layers.html#CategoryTooltipLayer[Annotations and Interaction Layers topic].
+You can find more information on the Scale Breaks in the following topic: 
 
 #### Related Topic
 -   [Annotation and Interaction Layers](financial-chart-annotation-and-interaction-layers.html#CategoryTooltipLayer) 
 
-## XamCategoryChart
+## igCategoryChart
 
 ### <a id="HighlightLayer"></a> Highlight Layer
 
@@ -263,7 +266,7 @@ The Category Chart can display two new highlight layers when a user hovers over 
 
 *  Item Highlight Layer renders a vertical rectangle for each data item in a category that is closest to the mouse cursor. This rectangle is filled with semi-transparent color that matches color of the series by default.
 
-You can find more information on the Scale Breaks in the link:category-chart-annotation-and-interaction-layers.html#CategoryHighlightLayer[Annotations and Interaction Layers topic].
+You can find more information on the Scale Breaks in the following topic:
 
 #### Related Topic
 -   [Annotation and Interaction Layers](category-chart-annotation-and-interaction-layers.html#CategoryTooltipLayer) 
@@ -275,7 +278,7 @@ You can find more information on the Scale Breaks in the link:category-chart-ann
 
 With the Callouts Annotation, you can annotate important data points in Category Chart or even customize values in callout boxes based on your logic. For example, calculate maximum values in your data source. 
 
-You can find more information on the Callouts Annotation in the link:category-chart-annotation-and-interaction-layers.html#CalloutLayer[Annotations and Interaction Layers topic].
+You can find more information on the Callouts Annotation in the following topic:
 
 #### Related Topic
 -   [Annotation and Interaction Layers](category-chart-annotation-and-interaction-layers.html#CategoryTooltipLayer) 
@@ -287,7 +290,7 @@ You can find more information on the Callouts Annotation in the link:category-ch
 
 You can configure crosshairs to display as horizontal line, vertical line or both lines at the location of the mouse cursor. In addition, the Crosshairs Annotation can show values of data points at the location of the mouse cursor and render these values in colored boxes over the X-Axis and Y-Axis labels. 
 
-You can find more information on the Crosshair Annotation in the link:category-chart-annotation-and-interaction-layers.html#CrosshairLayer[Annotations and Interaction Layers topic].
+You can find more information on the Crosshair Layer in the following topic:
 
 #### Related Topic
 -   [Annotation and Interaction Layers](category-chart-annotation-and-interaction-layers.html#CrosshairLayer) 
@@ -298,7 +301,7 @@ You can find more information on the Crosshair Annotation in the link:category-c
 
 In Category Chart, you can use the Final Values annotation to show values of the last data point in your data source(s). This annotation is rendered as a colored box for each data source over the Y-Axis labels. 
 
-You can find more information on the Final Value Annotation in the link:category-chart-annotation-and-interaction-layers.html#FinalValueLayer[Annotations and Interaction Layers topic].
+You can find more information on the Final Value Annotation in the following topic:
 
 #### Related Topic
 -   [Annotation and Interaction Layers](category-chart-annotation-and-interaction-layers.html#CategoryTooltipLayer) 
@@ -313,12 +316,12 @@ The Category Chart has a new ToolTipType property that adds two new types of too
 
 *  Item Tooltip which renders individual tooltip for each series in data category   
 
-You can find more information on the Final Value Annotation in the link:datachart-chart-annotation-and-interaction-layers.html#FinalValueLayer[Annotations and Interaction Layers topic].
+You can find more information on the Final Value Annotation in the following topic:
 
 #### Related Topic
 -   [Annotation and Interaction Layers](categorychart-annotation-and-overlays#CategoryChartTooltipLayer.html) 
 
-## XamDataChart
+## igDataChart
 
 ### <a id="3CalloutsAnnotation"></a>  Callouts Annotation  
 
@@ -326,7 +329,7 @@ You can find more information on the Final Value Annotation in the link:datachar
 
 Callouts Layer is a new feature of Data Chart that you can use to annotate important data points or display their values. Callouts Layer can target multiple data series or individual data series. Also, you can customize appearance of these callout layers and bind callout labels to data items or calculate changes between consecutive data points. 
 
-You can find more information on the Final Value Annotation in the link:datachart-chart-annotation-and-interaction-layers.html#FinalValueLayer[Annotations and Interaction Layers topic].
+You can find more information on the Callouts Annotation in the following topic:
 
 #### Related Topic
 -   [Callouts Layer](datachart-calloutlayer.html) 
@@ -337,7 +340,7 @@ You can find more information on the Final Value Annotation in the link:datachar
 
 In Crosshair Layer has a new annotation feature can now show values of data points at the location of the mouse cursor and render these values in colored boxes over the X-Axis and Y-Axis labels. 
 
-You can find more information on the Final Value Annotation in the link:datachart-chart-annotation-and-interaction-layers.html#FinalValueLayer[Annotations and Interaction Layers topic].
+You can find more information on the Crosshairs Layer in the following topic:
 
 #### Related Topic
 -   [Crosshair Layer](datachart-crosshairlayer.html) 
