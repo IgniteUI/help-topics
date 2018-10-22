@@ -49,7 +49,7 @@ The [addChart](%%jQueryApiUrl%%/ig.excel.WorksheetShapeCollection#methods:addCha
 <a id="chart_types"/>
 ### Supported Chart Types
 
-There are over 70 supported chart types including, Line, Area, Column, and Pie, just to name a few. To see the full list, see the [Worksheet ChartType API topic](%%jQueryApiUrl%%/ig.excel.ChartType.html#options).
+There are over 70 supported chart types including, Line, Area, Column, and Pie. To see the full list, see the [Worksheet ChartType API topic](%%jQueryApiUrl%%/ig.excel.ChartType.html#options).
 
 <a id="preview"/>
 ### Preview
@@ -65,26 +65,34 @@ The following is a preview of the final result of a worksheet with a Line, Colum
 
 ```html
 $(function () {
-
+    
+    //Create workbook with a worksheet to place the charts in. Data is assumed to already exist in the screenshot above.
     var workbook = new $.ig.excel.Workbook($.ig.excel.WorkbookFormat.excel2007);
     var sheet = workbook.worksheets().add("Sheet1");
+    
+    //Set column widths and height of first row to show the charts more clearly.
     sheet.defaultColumnWidth(10000);    
     sheet.rows(0).height(5000);
 
+    //Get the four cells that will be used to place the four charts below.
     var cell1 = sheet.getCell("A1");
     var cell2 = sheet.getCell("B1");
     var cell3 = sheet.getCell("C1");
     var cell4 = sheet.getCell("D1");
 
+    //Create Line chart.
     var chart1 = sheet.shapes().addChart($ig.excel.ChartType.line, cell1, { x: 0, y: 0 }, cell1, { x: 100, y: 100 });
     chart1.setSourceData('Sheet1!A2:D4', true);
 
+    //Create Column chart.
     var chart2 = sheet.shapes().addChart($ig.excel.ChartType.columnClustered, cell2, { x: 0, y: 0 }, cell2, { x: 100, y: 100 });
     chart2.setSourceData('Sheet1!A2:D4', true);
 
+    //Create Area chart.
     var chart3 = sheet.shapes().addChart($ig.excel.ChartType.area, cell3, { x: 0, y: 0 }, cell3, { x: 100, y: 100 });
     chart3.setSourceData('Sheet1!A2:D4', true);
 
+    //Create Pie chart.
     var chart4 = sheet.shapes().addChart($ig.excel.ChartType.pie, cell4, { x: 0, y: 0 }, cell4, { x: 100, y: 100 });
     chart4.setSourceData('Sheet1!A2:D4', false);
 });
