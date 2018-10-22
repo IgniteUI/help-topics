@@ -187,7 +187,7 @@ The Protection tab allows you to lock your worksheet to protect your data and fo
 ![](images/Format_Cells_Dialog_Protection.png)
 
 
-## XamFinancialChart
+## igFinancialChart
 
 ### <a id="NewLegend"></a>  New Legend  
 
