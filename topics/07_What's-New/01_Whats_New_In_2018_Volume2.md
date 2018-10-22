@@ -75,6 +75,9 @@ Time to bring out your inner executive with the addition of charting support in 
 
 Adding a chart to an Excel document is easy. Using the Infragistics Excel Library, create or get an instance of the Worksheet object, and then simply call the AddChart method on the Shapes collection. Supply the type of chart you wish to create (choose from 70), provide the size and location of the chart, and then provide the data and any other formatting settings you want to apply to the chart.
 
+#### Related Topic
+-   [Adding a Chart to a Worksheet](javascript-excel-library-worksheet-charts.html)
+
 ### <a id="SparklineSupport"></a> Sparkline Support
 
 ![](images/whats_new_excel_sparklines.png)
