@@ -68,7 +68,7 @@ finalValueSelectionMode | `enumeration` | Specifies method for how the final val
 
 ## <a id="example"></a> Example
 
-The code snippet below demonstrates how to configure a couple callout layers.
+The code snippet below demonstrates how to enable the final value layer.
 
 *In HTML:*
 
