@@ -73,12 +73,36 @@ isCalloutOffsettingEnabled | `Boolean` | True if callout positions will be adjus
 
 ## <a id="example"></a> Example
 
-This sample demonstrates the Callout Layer that displays tooltips for all target series individually.
+The code snippet below demonstrates how to configure a couple callout layers.
 
-<div class="embed-sample">
-   [Callout Layer](%%SamplesEmbedUrl%%/data-chart/callout-layer)
-   ![](images/jQuery_Callout_Layer_01.png)
-</div>
+*In HTML:*
+
+```html
+$(function () {
+	$("#chart1").igDataChart({
+		series: [
+			{
+				name: "calloutSeriesUsa",
+				type: "calloutLayer",
+				dataSource: usaCallouts,
+				xMemberPath: "Index",
+				yMemberPath: "Value",
+				labelMemberPath: "Label",
+				contentMemberPath: "Content"
+			},
+			{
+				name: "calloutSeriesRus",
+				type: "calloutLayer",
+				dataSource: rusCallouts,
+				xMemberPath: "Index",
+				yMemberPath: "Value",
+				labelMemberPath: "Label",
+				contentMemberPath: "Content"
+			}
+		]
+	});
+});
+```
 
 
 ## <a id="related-content"></a>Related Content
