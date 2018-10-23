@@ -79,28 +79,28 @@ The code snippet below demonstrates how to configure a couple callout layers.
 
 ```html
 $(function () {
-	$("#chart1").igDataChart({
-		series: [
-			{
-				name: "calloutSeriesUsa",
-				type: "calloutLayer",
-				dataSource: usaCallouts,
-				xMemberPath: "Index",
-				yMemberPath: "Value",
-				labelMemberPath: "Label",
-				contentMemberPath: "Content"
-			},
-			{
-				name: "calloutSeriesRus",
-				type: "calloutLayer",
-				dataSource: rusCallouts,
-				xMemberPath: "Index",
-				yMemberPath: "Value",
-				labelMemberPath: "Label",
-				contentMemberPath: "Content"
-			}
-		]
-	});
+    $("#chart1").igDataChart({
+        series: [
+            {
+                name: "calloutSeriesUsa",
+                type: "calloutLayer",
+                dataSource: usaCallouts,
+                xMemberPath: "Index",
+                yMemberPath: "Value",
+                labelMemberPath: "Label",
+                contentMemberPath: "Content"
+            },
+            {
+                name: "calloutSeriesRus",
+                type: "calloutLayer",
+                dataSource: rusCallouts,
+                xMemberPath: "Index",
+                yMemberPath: "Value",
+                labelMemberPath: "Label",
+                contentMemberPath: "Content"
+            }
+        ]
+    });
 });
 ```
 
