@@ -33,7 +33,7 @@ Before adding a sparkline to a worksheet, you must add a new SparklineGroup to t
 
 Following is a preview of the final result of Sheet1: "Sparklines" displayed in Microsoft Excel 2016. The data is kept in Sheet2: "Data", with A1 through A10 made up of (4, 5, 2, 7, -1, 3, -2, 5, 2, and 6).
 
-![Stacked](./images/ExcelChart_Sparklines.png)
+![Sparklines](./images/ExcelChart_Sparklines.png)
 
 Following is the code that implements the example above.
 
