@@ -1,14 +1,14 @@
 ﻿<!--
 |metadata|
 {
-    "fileName": "images/igspreadsheet-filter-dialog",
+    "fileName": "images/igspreadsheet-sort-dialog",
     "controlName": "igSpreadsheet",
     "tags": []
 }
 |metadata|
 -->
 
-# igSpreadsheet Sort Dialog
+# igSpreadsheet Custom Sort Dialog
 
 ## Topic Overview
 ### Purpose
@@ -18,15 +18,6 @@ This topic explains what operations can be performed by the user with the contro
 To understand this topic you need to be familiar with the concept and topics related to the following: 
 -  [Infragistics JavaScript Excel Library](javascript-excel-library.html)  
 - [igSpreadsheet Overview](igSpreadsheet_Feature_Overview.html).
-
-### In this topic
-This topic contains the following sections:
-
-- 	[Custom Sort Dialog](#dialog)
-- 	[Related Links](#related_links)
-
-## Custom Sort Dialog
-![](../images/igSpreadsheet_sort_dialog.png)
 
 ### <a id="dialog"></a>Sort Dialog summary
 The {SpreadsheetName} control provides a custom sort dialog, aimed at sorting multiple columns in a defined order.
