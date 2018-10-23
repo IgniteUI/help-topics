@@ -68,12 +68,22 @@ finalValueSelectionMode | `enumeration` | Specifies method for how the final val
 
 ## <a id="example"></a> Example
 
-This sample demonstrates the Final Value Layer that displays axis annotations for the final value.
+The code snippet below demonstrates how to enable the final value layer.
 
-<div class="embed-sample">
-   [Final Value Layer](%%SamplesEmbedUrl%%/data-chart/final-value-layer)
-   ![](images/jQuery_Final_Value_Layer_01.png)
-</div>
+*In HTML:*
+
+```html
+$(function () {
+    $("#chart1").igDataChart({
+        series: [
+            {
+                name: "finalValueSeries",
+                type: "finalValueLayer"
+            }
+        ]
+    });
+});
+```
 
 
 ## <a id="related-content"></a>Related Content

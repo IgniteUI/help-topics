@@ -44,7 +44,7 @@ $(function () {
 
 Setting the `crosshairsSnapToData` option to true will snap the crosshairs to your data points in the `igCategoryChart`.  If set to false, the crosshair will interpolate between data points while hovering your pointer.
 
-The code snippet below demonstrates how enable to crosshairs to snap to data points.
+The code snippet below demonstrates how to enable crosshairs to snap to data points.
 
 *In HTML:*
 
