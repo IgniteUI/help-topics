@@ -53,4 +53,4 @@ The following screenshot displays the igCategoryChart control using the Callouts
 
 - [Final Value Layer](igcategorychart-final-value-layer.html)
 
-- [Item ToolTips Layer](igcategorychart-item-tooltips-layer.html)
+- [Item ToolTips Layer](igcategorychart-item-tooltip-layer.html)
