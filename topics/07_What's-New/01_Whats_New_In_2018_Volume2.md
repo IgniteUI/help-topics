@@ -112,7 +112,7 @@ Now, it is possible to create custom editor provider for the filter cell. This m
 
 ![](images/spreadsheet_sort_dialog_whats_new.png)
 
-Since sorting is so important in any Excel document, we added the very useful Custom Sort Dialog to give you full control over how you want to sort your Excel data.  For example, if you have a Department column and an Employee column, you can first sort by Department (to group all the employefes in the same department together), and then sort by name (to put the names in alphabetical order within each department). 
+Since sorting is so important in any Excel document, we added the very useful Custom Sort Dialog to give you full control over how you want to sort your Excel data.  For example, if you have a Department column and an Employee column, you can first sort by Department (to group all the employees in the same department together), and then sort by name (to put the names in alphabetical order within each department). 
 
 For more information about the Sort Dialog in the igSpreadsheet, please see the following topic: 
 
