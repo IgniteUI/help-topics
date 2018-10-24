@@ -88,8 +88,6 @@ Once you have an instance of the Infragistics Worksheet, simply call the Add met
 
 After you have created your sparkline, the Infragistics Excel Library gives you an intuitive API that you can use to style various aspects of the sparkline to meet your visualization requirements. The API allows you to enable and control the colors of high and low points, negative points, the first point, the last point, and all markers to name a few.
 
-A new column type is added to the igGrid control - time column. In order to use it, it is necessary to set the column `dataType` to `time`. In this way, you can filter and update time data using the build-in time picker editor.
-
 #### Related Topic
 -   [Working with Sparklines](javascript-excel-library-adding-a-sparkline-to-an-excel-worksheet.html)
 
@@ -98,6 +96,8 @@ A new column type is added to the igGrid control - time column. In order to use 
 ### <a id="TimeColumn"></a> Time Column
 
 ![](images/time_column.png)
+
+A new column type is added to the igGrid control - time column. In order to use it, it is necessary to set the column `dataType` to `time`. In this way, you can filter and update time data using the build-in time picker editor.
 
 ### <a id="FilteringCustomProvider"></a> Custom Editor Provider for the Filter Cell
 
