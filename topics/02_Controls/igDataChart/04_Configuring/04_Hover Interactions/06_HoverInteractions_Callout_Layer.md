@@ -116,4 +116,4 @@ $(function () {
 
 The following samples provide additional information related to this topic.
 
-- [Hover Interactions – Multiple Layers](%%SamplesUrl%%/data-chart/callout-layer): This sample demonstrates using the Callout annotation layer in the `igDataChart`
+- [Callouts Layers](%%SamplesUrl%%/data-chart/callout-layer): This sample demonstrates using the Callout annotation layer in the `igDataChart`
