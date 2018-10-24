@@ -45,8 +45,6 @@ This topic contains the following sections:
 
 ## <a id="overview"></a> Overview
 
-#### Item tooltip layer overview
-
 The `finalValueLayer` displays annotations based on the final value of data in the chart.
 
 ### <a id="preview"></a> Preview
