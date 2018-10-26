@@ -153,63 +153,63 @@ For the sake of this example, a simple folder and file structure is created in J
 
 2. Add the script references using Infragistics loader.
 
-	The references are required for initializing the igTree control.
-	
-	Create an HTML file (e.g. tree.html) with the following references to in it.
-	
-	**In HTML:**
-	
-	```html
-	<script src="../scripts/jquery.min.js"></script>
-	<script src="../scripts/jquery-ui.min.js"></script>
-	<script src="../js/infragistics.loader.js"></script>
-	 $.ig.loader({
-	            scriptPath: "../js/",
-	            cssPath: "../css/",
-	            resources: "igTree"
-	});
-	```
+    The references are required for initializing the igTree control.
+    
+    Create an HTML file (e.g. tree.html) with the following references to in it.
+    
+    **In HTML:**
+    
+    ```html
+    <script src="../scripts/jquery.min.js"></script>
+    <script src="../scripts/jquery-ui.min.js"></script>
+    <script src="../js/infragistics.loader.js"></script>
+     $.ig.loader({
+                scriptPath: "../js/",
+                cssPath: "../css/",
+                resources: "igTree"
+    });
+    ```
 
 3. Configure the Drag-and-Drop mode to Copy.
 
-	1. Define the DOM (Document Object Model) Html element placeholder in the `tree.html` file.
-	
-		**In HTML:**
-		
-		```html
-		<!--igTree target element-->
-		<div id="tree">
-		</div>
-		```
-	
-	2. Instantiate an `igTree` with the Drag-and-Drop feature enabled in Copy mode in JavaScript.
-	
-		**In JavaScript:**
-		
-		```js
-		<script>
-		        $.ig.loader(function () {
-		            $("#tree").igTree({
-		                checkboxMode: 'triState',
-		                singleBranchExpand: true,
-		                dataSource: data,
-		                dataSourceType: 'json',
-		                initialExpandDepth: 0,
-		                pathSeparator: '.',
-		                bindings: {
-		                    textKey: 'Text',
-		                    valueKey: 'Value',
-		                    imageUrlKey: 'ImageUrl',
-		                    childDataProperty: 'Folder'
-		                },
-		             dragAndDrop: true,             
-		                dragAndDropSettings: {
-		                   dragAndDropMode: 'copy'
-		               }
-		            });
-		        });        
-		</script>
-		```
+    1. Define the DOM (Document Object Model) Html element placeholder in the `tree.html` file.
+    
+        **In HTML:**
+        
+        ```html
+        <!--igTree target element-->
+        <div id="tree">
+        </div>
+        ```
+    
+    2. Instantiate an `igTree` with the Drag-and-Drop feature enabled in Copy mode in JavaScript.
+    
+        **In JavaScript:**
+        
+        ```js
+        <script>
+                $.ig.loader(function () {
+                    $("#tree").igTree({
+                        checkboxMode: 'triState',
+                        singleBranchExpand: true,
+                        dataSource: data,
+                        dataSourceType: 'json',
+                        initialExpandDepth: 0,
+                        pathSeparator: '.',
+                        bindings: {
+                            textKey: 'Text',
+                            valueKey: 'Value',
+                            imageUrlKey: 'ImageUrl',
+                            childDataProperty: 'Folder'
+                        },
+                        dragAndDrop: true,             
+                            dragAndDropSettings: {
+                            dragAndDropMode: 'copy'
+                        }
+                    });
+                });        
+        </script>
+        ```
 
 
 ## <a id="drag-drop-mode-mvc"></a>Code Example: Configuring Drag-and-Drop Mode in MVC
@@ -250,115 +250,117 @@ The following steps demonstrate how to define View and Controller for configurin
 
 1. Create an XML data source file.
 
-	Create an XML file for the data with Text, ImageUrl, and Value attributes following this structure:
-	
-	**In XML:**
-	
-	```xml
-	…
-	<Folder Text="Network" ImageUrl="../content/images/igTree/Common/door.png" Value="Folder">     
-	          <Folder Text="Archive" ImageUrl="../content/images/igTree/Common/door_in.png" Value="Folder"></Folder>
-	          <Folder Text="Back Up" ImageUrl="../content/images/igTree/Common/door_in.png" Value="Folder"></Folder>
-	          <Folder Text="FTP" ImageUrl="../content/images/igTree/Common/door_in.png" Value="Folder"></Folder>
-	</Folder>
-	…
-	```
+    Create an XML file for the data with Text, ImageUrl, and Value attributes following this structure:
+    
+    **In XML:**
+    
+    ```xml
+    …
+    <Folder Text="Network" ImageUrl="../content/images/igTree/Common/door.png" Value="Folder">     
+              <Folder Text="Archive" ImageUrl="../content/images/igTree/Common/door_in.png" Value="Folder"></Folder>
+              <Folder Text="Back Up" ImageUrl="../content/images/igTree/Common/door_in.png" Value="Folder"></Folder>
+              <Folder Text="FTP" ImageUrl="../content/images/igTree/Common/door_in.png" Value="Folder"></Folder>
+    </Folder>
+    …
+    ```
 
 2. Define the View.
 
-	1. Add a new View to the Views folder. For this example, name it `SampleDataXML.cshtml`.
-	
-	2. Add the code to initialize the `igTree` and enable Copy mode in the view.
-	
-		**In C#:**
-		
-		```csharp
-		<script src="http://localhost/ig_ui/js/infragistics.loader.js" type="text/javascript"></script>
-		    @(Html.Infragistics()
-		        .Loader()
-		        .ScriptPath("http://localhost/ig_ui/js/")
-		        .CssPath("http://localhost/ig_ui/css/")
-		        .Render()
-		    )
-		@(Html.
-		                        Infragistics().
-		                        Tree().
-		                        ID("XMLTree").
-		                        Bindings( bindings => {
-		                            bindings.
-		                            ValueKey("Value").
-		                            TextKey("Text").
-		                            ImageUrlKey("ImageUrl").
-		                            ChildDataProperty("Folder");
-		                        }).
-		                        InitialExpandDepth(0).
-		                        DataSource(Model).
-		                        CheckboxMode(CheckboxMode.TriState).
-		                        SingleBranchExpand(true).
-		                        DragAndDrop(true).
-		                        DragAndDropSettings(settings =>
-		                        {
-		                            // Configuring Drag-and-drop copy mode
-		                            settings.DragAndDropMode(DragAndDropMode.Copy);
-		                        }).
-		                        DataBind().
-		                        Render()  
-		 )
-		```
+    1. Add a new View to the Views folder. For this example, name it `SampleDataXML.cshtml`.
+    
+    2. Add the code to initialize the `igTree` and enable Copy mode in the view.
+    
+        **In C#:**
+        
+        ```csharp
+        <script src="http://localhost/ig_ui/js/infragistics.loader.js" type="text/javascript"></script>
+            @(Html
+                .Infragistics()
+                .Loader()
+                .ScriptPath("http://localhost/ig_ui/js/")
+                .CssPath("http://localhost/ig_ui/css/")
+                .Render()
+            )
+            @(Html
+                .Infragistics()
+                .Tree()
+                .ID("XMLTree")
+                .Bindings(bindings => {
+                    bindings
+                    .ValueKey("Value")
+                    .TextKey("Text")
+                    .ImageUrlKey("ImageUrl")
+                    .ChildDataProperty("Folder");
+                })
+                .InitialExpandDepth(0)
+                .DataSource(Model)
+                .CheckboxMode(CheckboxMode.TriState)
+                .SingleBranchExpand(true)
+                .DragAndDrop(true)
+                .DragAndDropSettings(settings =>
+                {
+                    // Configuring Drag-and-drop copy mode
+                    settings.DragAndDropMode(DragAndDropMode.Copy);
+                })
+                .DataBind()
+                .Render()  
+            )
+        ```
 
 3. Define the controller.
 
-	**In C#:**
-	
-	```csharp
-	public class SampleDataXMLController : Controller
-	    {
-	        public ActionResult DataBindingUsingMVC()
-	        {
-	            return View("SampleDataXML", this.GetData());
-	        }
-	        private IEnumerable<Folders> GetData()
-	        {
-	            string phisicalFilePath = System.Web.HttpContext.Current.Server.MapPath("~/ThreeData.xml");
-	            var ctx = XDocument.Load(phisicalFilePath);
-	            IEnumerable<Folders> data = from item in ctx.Root.Elements("Folder")
-	                                        select new Folders
-	                                        {
-	                                            Text = item.Attribute("Text").Value,
-	                                            Value = item.Attribute("Value").Value,
-	                                            ImageUrl = Url.Content(item.Attribute("ImageUrl").Value),
-	                                            Folder = from i1 in item.Elements("Folder")
-	                                                     select new Folders
-	                                                     {
-	                                                         Text = i1.Attribute("Text").Value,
-	                                                         Value = i1.Attribute("Value").Value,
-	                                                         ImageUrl = Url.Content(i1.Attribute("ImageUrl").Value),
-	                                                         Folder = from i2 in i1.Elements("Folder")
-	                                                                  select new Folders
-	                                                                  {
-	                                                                      Text = i2.Attribute("Text").Value,
-	                                                                      Value = i2.Attribute("Value").Value,
-	                                                                      ImageUrl = Url.Content(i2.Attribute("ImageUrl").Value),
-	                                                                      Folder = from i3 in i2.Elements("Folder")
-	                                                                               select new Folders
-	                                                                               {
-	                                                                                   Text = i3.Attribute("Text").Value,
-	                                                                                   Value = i3.Attribute("Value").Value,
-	                                                                                   ImageUrl = Url.Content(i3.Attribute("ImageUrl").Value)
-	                                                                               }
-	                                                                  }
-	                                                     }
-	                                        };
-	            return data;
-	        }
-	    } public class Folders
-	{
-	        public string Text { get; set; }
-	        public string Value { get; set; }
-	        public string ImageUrl { get; set; }
-	        public IEnumerable<Folders> Folder { get; set; }
-	}
-	```
+    **In C#:**
+    
+    ```csharp
+    public class SampleDataXMLController : Controller
+        {
+            public ActionResult DataBindingUsingMVC()
+            {
+                return View("SampleDataXML", this.GetData());
+            }
+            private IEnumerable<Folders> GetData()
+            {
+                string phisicalFilePath = System.Web.HttpContext.Current.Server.MapPath("~/ThreeData.xml");
+                var ctx = XDocument.Load(phisicalFilePath);
+                IEnumerable<Folders> data = from item in ctx.Root.Elements("Folder")
+                                            select new Folders
+                                            {
+                                                Text = item.Attribute("Text").Value,
+                                                Value = item.Attribute("Value").Value,
+                                                ImageUrl = Url.Content(item.Attribute("ImageUrl").Value),
+                                                Folder = from i1 in item.Elements("Folder")
+                                                         select new Folders
+                                                         {
+                                                             Text = i1.Attribute("Text").Value,
+                                                             Value = i1.Attribute("Value").Value,
+                                                             ImageUrl = Url.Content(i1.Attribute("ImageUrl").Value),
+                                                             Folder = from i2 in i1.Elements("Folder")
+                                                                      select new Folders
+                                                                      {
+                                                                          Text = i2.Attribute("Text").Value,
+                                                                          Value = i2.Attribute("Value").Value,
+                                                                          ImageUrl = Url.Content(i2.Attribute("ImageUrl").Value),
+                                                                          Folder = from i3 in i2.Elements("Folder")
+                                                                                   select new Folders
+                                                                                   {
+                                                                                       Text = i3.Attribute("Text").Value,
+                                                                                       Value = i3.Attribute("Value").Value,
+                                                                                       ImageUrl = Url.Content(i3.Attribute("ImageUrl").Value)
+                                                                                   }
+                                                                      }
+                                                         }
+                                            };
+                return data;
+            }
+        } 
+    public class Folders
+    {
+            public string Text { get; set; }
+            public string Value { get; set; }
+            public string ImageUrl { get; set; }
+            public IEnumerable<Folders> Folder { get; set; }
+    }
+    ```
 
 
 
