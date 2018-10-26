@@ -209,7 +209,7 @@ The following steps demonstrate how to configure `igTree` with Drag-and-drop cus
 				childDataProperty: 'Folder' 
 			},
 			dragAndDrop: true,
-			dragAndDropSettings : {
+			dragAndDropSettings: {
 				customDropValidation: function (element) {
 					// Validates the drop target
 					var valid = true,
@@ -285,36 +285,37 @@ The following steps demonstrate how to define View and Controller for configurin
 		
 		```csharp
 		<script src="http://localhost/ig_ui/js/infragistics.loader.js" type="text/javascript"></script>
-		@(Html.Infragistics()
-		.Loader()
-		.ScriptPath("http://localhost/ig_ui/js/")
-		.CssPath("http://localhost/ig_ui/css/")
-		.Render()
-		)
-		@(Html.
-		Infragistics().
-		Tree().
-		ID("XMLTree").
-		Bindings( bindings => {
-		bindings.
-		ValueKey("Value").
-		TextKey("Text").
-		ImageUrlKey("ImageUrl").
-		ChildDataProperty("Folder");
-		}).
-		InitialExpandDepth(0).
-		DataSource(Model).
-		CheckboxMode(CheckboxMode.TriState).
-		SingleBranchExpand(true).
-		DragAndDrop(true).
-		DragAndDropSettings(settings =>
-		{
-		// Configuring Drag-and-drop with custom drop validation
-		settings.CustomDropValidation ("customDropValidation");
-		}).
-		DataBind().
-		Render()
-		)
+			@(Html
+				.Infragistics()
+				.Loader()
+				.ScriptPath("http://localhost/ig_ui/js/")
+				.CssPath("http://localhost/ig_ui/css/")
+				.Render()
+			)
+			@(Html
+				.Infragistics()
+				.Tree()
+				.ID("XMLTree")
+				.Bindings( bindings => {
+				.bindings
+				.ValueKey("Value")
+				.TextKey("Text")
+				.ImageUrlKey("ImageUrl")
+				.ChildDataProperty("Folder");
+				})
+				.InitialExpandDepth(0)
+				.DataSource(Model)
+				.CheckboxMode(CheckboxMode.TriState)
+				.SingleBranchExpand(true)
+				.DragAndDrop(true)
+				.DragAndDropSettings(settings =>
+				{
+				// Configuring Drag-and-drop with custom drop validation
+				settings.CustomDropValidation ("customDropValidation");
+				})
+				.DataBind()
+				.Render()
+			)
 		```
 	
 	3. Define the `customDropValidation` function in JavaScript. The function validates that the target drop location is not a file.
@@ -327,9 +328,9 @@ The following steps demonstrate how to define View and Controller for configurin
 		var valid = true, 
 		droppableNode = $(this); 
 		if (droppableNode.is('a') && droppableNode.closest('li[data-role=node]').attr('data-value') === 'File') { 
-		valid = false; 
+			valid = false; 
 		} 
-		return valid; 
+			return valid; 
 		}
 		```
 
@@ -387,7 +388,7 @@ The following steps demonstrate how to define View and Controller for configurin
 	            return data;
 	        }
 	    }
-	    public class Folders{
+	    public class Folders {
 	        public string Text { get; set; }
 	        public string Value { get; set; }
 	        public string ImageUrl { get; set; }
