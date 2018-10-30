@@ -87,8 +87,7 @@ $(function () {
                 dataSource: usaCallouts,
                 xMemberPath: "Index",
                 yMemberPath: "Value",
-                labelMemberPath: "Label",
-                contentMemberPath: "Content"
+                labelMemberPath: "Label"
             },
             {
                 name: "calloutSeriesRus",
@@ -96,8 +95,7 @@ $(function () {
                 dataSource: rusCallouts,
                 xMemberPath: "Index",
                 yMemberPath: "Value",
-                labelMemberPath: "Label",
-                contentMemberPath: "Content"
+                labelMemberPath: "Label"
             }
         ]
     });

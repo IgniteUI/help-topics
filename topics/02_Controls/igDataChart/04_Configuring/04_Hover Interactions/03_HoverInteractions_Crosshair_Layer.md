@@ -37,6 +37,7 @@ This topic contains the following sections:
 -   [Overview](#overview)
 	-   [Preview](#preview)
 -   [Properties](#properties)
+-   [Axis Annotations](#annotations)
 -   [Example](#example)
 -   [Related Content](#related-content)
     -   [Topics](#topics)
@@ -73,6 +74,22 @@ horizontalLineVisibility | visibility | This property specifies if the horizonta
 verticalLineVisibilty | visibility | This property specifies if the vertical line of the crosshair layer should be visible. If this is set to `collapsed`, only the horizontal line will display.
 targetSeries | series | This property specifies which series should have an enabled crosshair layer. It is possible to create a separate crosshair layer for each series and configure them individually.
 useInterpolation | bool | This property specifies if the vertical crosshair should cross the series at an interpolated position between data points. Usually the crosshair layer finds the closest point in a series and ensures that the crosshairs meet at that point, however if the points are sparse then you should enable this property.
+isAxisAnnotationEnabled | bool | This property specifies if the crosshair value will render in an annotation label in the axes.
+
+## <a id="annotations"></a>Axis Annotations
+
+The Crosshair Layer can display the value of the crosshair on the related axis.  That is, the horizontal crosshair value shows on Y-axis and the vertical crosshair value shows on X-axis.  This can be enabled by setting the `isAxisAnnotationEnabled` property to true.
+
+#### Styling Annotations
+
+The axis annotations can be styled with the following properties:
+
+Property Name | Property Type | Description
+---|---|---
+xAxisAnnotationBackground<br/>yAxisAnnotationBackground | string | The background color of the annotation.
+xAxisAnnotationTextColor<br/>yAxisAnnotationTextColor | string | The color of the text in the annotation.
+xAxisAnnotationOutline<br/>yAxisAnnotationOutline | string | The color of the annotation's outline.
+xAxisAnnotationStrokeThickness<br/>yAxisAnnotationStrokeThickness | number | The thickness of the annotation's outline.
 
 ## <a id="example"></a> Example
 
