@@ -20,9 +20,9 @@ To understand this topic you need to be familiar with the concept and topics rel
 - [igSpreadsheet Overview](igSpreadsheet_Feature_Overview.html).
 
 ### <a id="dialog"></a>Sort Dialog summary
-The {SpreadsheetName} control provides a custom sort dialog, aimed at sorting multiple columns in a defined order.
+The igSpreadsheet control provides a custom sort dialog, aimed at sorting multiple columns in a defined order.
 
-The dialog can be opened by first displaying up the {SpreadsheetName}'s context menu. This can be achieved by either right-clicking or pressing (Alt + Shift + F10) on a cell that pertains to a worksheet, filter region or table. Next, select the Sort option followed by Custom Sort option (as shown in the image below) and the dialog will appear.
+The dialog can be opened by first displaying up the igSpreadsheet's context menu. This can be achieved by either right-clicking or pressing (Alt + Shift + F10) on a cell that pertains to a worksheet, filter region or table. Next, select the Sort option followed by Custom Sort option (as shown in the image below) and the dialog will appear.
 
 ![](../images/igSpreadsheet_context_sort.png)
 
