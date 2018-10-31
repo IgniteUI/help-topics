@@ -26,6 +26,7 @@ This topic contains the following sections:
     -   [Editors Common Known Issues](#editors)
     -   [igBulletGraph](#bullet-graph)
     -   [igCombo](#combo)
+	-   [igCategoryChart](#category-chart)
     -   [igFinancialChart](#financial-chart)
     -   [igDataChart](#data-chart)
     -   [igDialog](#dialog)
@@ -422,11 +423,92 @@ When virtualization is enabled, all ItemTemplate elements should have equal heig
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
+### <a id="category-chart"></a> [igCategoryChart](igCategoryChart-Known-Limitations.html)
+
+Issue | Description | Status
+---|---|---
+<table class="table table-striped">
+	<thead>
+		<tr>
+            <th>
+Issue
+			</th>
+
+            <th>
+Description
+			</th>
+
+            <th>
+Status
+			</th>
+        </tr>
+	</thead>
+	<tbody>
+<tr>
+            <td>
+igDataChart and the Annotation module in igLoader
+			</td>
+
+            <td>
+When using the igLoader to load the resources for Annotations, you must also include igDataChart.Annotation in your list of resources. e.g. resources: "igCategoryChart,igDataChart.Annotation"
+			</td>
+            <td>
+![](../images/images/positive.png)
+			</td>
+        </tr>
+		</tbody>
+</table>
+
+Go up to [Known Issues and Limitations Summary](#summary)
+
 ### <a id="financial-chart"></a> [igFinancialChart](igFinancialChart-Known-Limitations.html)
 
 Issue | Description | Status
 ---|---|---
-When binding the financial chart to data without all price properties (High,Low,Open.Close) in order to include a series visual in the zoom pane you must set the zoomSliderType | $("#chart").igFinancialChart( {dataSource: data, "zoomSliderType": "line"} ) | ![](../../images/images/positive.png)
+<table class="table table-striped">
+	<thead>
+		<tr>
+            <th>
+Issue
+			</th>
+
+            <th>
+Description
+			</th>
+
+            <th>
+Status
+			</th>
+        </tr>
+	</thead>
+	<tbody>
+	<tr>
+            <td>
+When binding the financial chart to data without all price properties (High,Low,Open.Close) in order to include a series visual in the zoom pane you must set the zoomSliderType 
+			</td>
+
+            <td>
+$("#chart").igFinancialChart( {dataSource: data, "zoomSliderType": "line"} )
+			</td>
+            <td>
+![](../images/images/positive.png)
+			</td>
+        </tr>
+<tr>
+            <td>
+igDataChart and the Annotation module in igLoader
+			</td>
+
+            <td>
+When using the igLoader to load the resources for Annotations, you must also include igDataChart.Annotation in your list of resources. e.g. resources: "igFinancialChart,igDataChart.Annotation"
+			</td>
+            <td>
+![](../images/images/positive.png)
+			</td>
+        </tr>
+		</tbody>
+</table>
+
 Go up to [Known Issues and Limitations Summary](#summary)
 
 ### <a id="data-chart"></a> [igDataChart](igDataChart-Known-Issues.html)
@@ -448,8 +530,6 @@ Status
         </tr>
 	</thead>
 	<tbody>
-        
-
         <tr>
             <td>
 First and last items appear half cut in financial series charts
@@ -1297,8 +1377,49 @@ Go up to [Known Issues and Limitations Summary](#summary)
 
 Issue | Description | Status
 ---|---|---
-igShapeChart and the Interactivity module in igLoader | Using the igLoader to load the resources for `igShapeChart.Interactivity` do not currently work.  Please also include `igDataChart.Interactivity` in your list of resources for ShapeChart interactivity.  e.g. `resources: "igShapeChart,igDataChart.Interactivity"` | ![](../images/images/positive.png)
+<table class="table table-striped">
+	<thead>
+		<tr>
+            <th>
+Issue
+			</th>
 
+            <th>
+Description
+			</th>
+
+            <th>
+Status
+			</th>
+        </tr>
+	</thead>
+	<tbody>
+	<tr>
+            <td>
+igShapeChart and the Interactivity module in igLoader
+			</td>
+
+            <td>
+Using the igLoader to load the resources for `igShapeChart.Interactivity` do not currently work.  Please also include `igDataChart.Interactivity` in your list of resources for ShapeChart interactivity.  e.g. `resources: "igShapeChart,igDataChart.Interactivity"`
+			</td>
+            <td>
+![](../images/images/positive.png)
+			</td>
+        </tr>
+<tr>
+            <td>
+igDataChart and the Annotation module in igLoader
+			</td>
+
+            <td>
+When using the igLoader to load the resources for Annotations, you must also include igDataChart.Annotation in your list of resources. e.g. resources: "igCategoryChart,igDataChart.Annotation"
+			</td>
+            <td>
+![](../images/images/positive.png)
+			</td>
+        </tr>
+		</tbody>
+</table>
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
