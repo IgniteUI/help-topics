@@ -450,7 +450,7 @@ igDataChart and the Annotation module in igLoader
 			</td>
 
             <td>
-When using the igLoader to load the resources for Annotations, you must also include igDataChart.Annotation in your list of resources. e.g. resources: "igCategoryChart,igDataChart.Annotation"
+When using the igLoader to load the resources for Annotations, you must also include igDataChart.Annotation in your list of resources. e.g. resources: "igCategoryChart.*,igDataChart.Annotation"
 			</td>
             <td>
 ![](../images/images/positive.png)
@@ -500,7 +500,7 @@ igDataChart and the Annotation module in igLoader
 			</td>
 
             <td>
-When using the igLoader to load the resources for Annotations, you must also include igDataChart.Annotation in your list of resources. e.g. resources: "igFinancialChart,igDataChart.Annotation"
+When using the igLoader to load the resources for Annotations, you must also include igDataChart.Annotation in your list of resources. e.g. resources: "igFinancialChart.*,igDataChart.Annotation"
 			</td>
             <td>
 ![](../images/images/positive.png)
@@ -1412,7 +1412,7 @@ igDataChart and the Annotation module in igLoader
 			</td>
 
             <td>
-When using the igLoader to load the resources for Annotations, you must also include igDataChart.Annotation in your list of resources. e.g. resources: "igCategoryChart,igDataChart.Annotation"
+When using the igLoader to load the resources for Annotations, you must also include igDataChart.Annotation in your list of resources. e.g. resources: "igShapeChart.*,igDataChart.Annotation"
 			</td>
             <td>
 ![](../images/images/positive.png)
