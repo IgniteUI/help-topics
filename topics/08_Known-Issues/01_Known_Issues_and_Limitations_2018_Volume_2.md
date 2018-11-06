@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 |metadata|
 {
     "fileName": "known-issues-and-limitations-2018-volume-2",
@@ -1377,49 +1377,7 @@ Go up to [Known Issues and Limitations Summary](#summary)
 
 Issue | Description | Status
 ---|---|---
-<table class="table table-striped">
-	<thead>
-		<tr>
-            <th>
-Issue
-			</th>
-
-            <th>
-Description
-			</th>
-
-            <th>
-Status
-			</th>
-        </tr>
-	</thead>
-	<tbody>
-	<tr>
-            <td>
-igShapeChart and the Interactivity module in igLoader
-			</td>
-
-            <td>
-Using the igLoader to load the resources for `igShapeChart.Interactivity` do not currently work.  Please also include `igDataChart.Interactivity` in your list of resources for ShapeChart interactivity.  e.g. `resources: "igShapeChart,igDataChart.Interactivity"`
-			</td>
-            <td>
-![](../images/images/positive.png)
-			</td>
-        </tr>
-<tr>
-            <td>
-igDataChart and the Annotation module in igLoader
-			</td>
-
-            <td>
-When using the igLoader to load the resources for Annotations, you must also include igDataChart.Annotation in your list of resources. e.g. resources: "igShapeChart.*,igDataChart.Annotation"
-			</td>
-            <td>
-![](../images/images/positive.png)
-			</td>
-        </tr>
-		</tbody>
-</table>
+igDataChart and the Annotation module in igLoader | When using the igLoader to load the resources for Annotations, you must also include igDataChart.Annotation in your list of resources. e.g. resources: "igShapeChart.*,igDataChart.Annotation" | ![](../images/images/positive.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
