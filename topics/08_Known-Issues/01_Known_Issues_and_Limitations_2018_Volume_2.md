@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 |metadata|
 {
     "fileName": "known-issues-and-limitations-2018-volume-2",
@@ -427,37 +427,7 @@ Go up to [Known Issues and Limitations Summary](#summary)
 
 Issue | Description | Status
 ---|---|---
-<table class="table table-striped">
-	<thead>
-		<tr>
-            <th>
-Issue
-			</th>
-
-            <th>
-Description
-			</th>
-
-            <th>
-Status
-			</th>
-        </tr>
-	</thead>
-	<tbody>
-<tr>
-            <td>
-igDataChart and the Annotation module in igLoader
-			</td>
-
-            <td>
-When using the igLoader to load the resources for Annotations, you must also include igDataChart.Annotation in your list of resources. e.g. resources: "igCategoryChart.*,igDataChart.Annotation"
-			</td>
-            <td>
-![](../images/images/positive.png)
-			</td>
-        </tr>
-		</tbody>
-</table>
+igDataChart and the Annotation module in igLoader | When using the igLoader to load the resources for Annotations, you must also include igDataChart.Annotation in your list of resources. e.g. resources: "igCategoryChart.*,igDataChart.Annotation" | ![](../images/images/positive.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
@@ -465,160 +435,21 @@ Go up to [Known Issues and Limitations Summary](#summary)
 
 Issue | Description | Status
 ---|---|---
-<table class="table table-striped">
-	<thead>
-		<tr>
-            <th>
-Issue
-			</th>
-
-            <th>
-Description
-			</th>
-
-            <th>
-Status
-			</th>
-        </tr>
-	</thead>
-	<tbody>
-	<tr>
-            <td>
-When binding the financial chart to data without all price properties (High,Low,Open.Close) in order to include a series visual in the zoom pane you must set the zoomSliderType 
-			</td>
-
-            <td>
-$("#chart").igFinancialChart( {dataSource: data, "zoomSliderType": "line"} )
-			</td>
-            <td>
-![](../images/images/positive.png)
-			</td>
-        </tr>
-<tr>
-            <td>
-igDataChart and the Annotation module in igLoader
-			</td>
-
-            <td>
-When using the igLoader to load the resources for Annotations, you must also include igDataChart.Annotation in your list of resources. e.g. resources: "igFinancialChart.*,igDataChart.Annotation"
-			</td>
-            <td>
-![](../images/images/positive.png)
-			</td>
-        </tr>
-		</tbody>
-</table>
+When binding the financial chart to data without all price properties (High,Low,Open.Close) in order to include a series visual in the zoom pane you must set the zoomSliderType | $("#chart").igFinancialChart( {dataSource: data, "zoomSliderType": "line"} ) | ![](../images/images/positive.png)
+igDataChart and the Annotation module in igLoader | When using the igLoader to load the resources for Annotations, you must also include igDataChart.Annotation in your list of resources. e.g. resources: "igFinancialChart.*,igDataChart.Annotation" | ![](../images/images/positive.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
 ### <a id="data-chart"></a> [igDataChart](igDataChart-Known-Issues.html)
 
-<table class="table table-striped">
-	<thead>
-		<tr>
-            <th>
-Issue
-			</th>
-
-            <th>
-Description
-			</th>
-
-            <th>
-Status
-			</th>
-        </tr>
-	</thead>
-	<tbody>
-        <tr>
-            <td>
-First and last items appear half cut in financial series charts
-			</td>
-
-            <td>
-In a financial series, the first and the last data items do not appear entirely on the chart view but are plotted as if they are cut in half.
-			</td>
-
-            <td>
-![](../images/images/negative.png)
-                
-![](../images/images/plannedFix.png)
-			</td>
-        </tr>
-
-        <tr>
-            <td>
-Chart animations are disabled when the axis range changes
-			</td>
-
-            <td>
-If you use the Motion Framework for charts and updated data causes the y-axis range to change, then all chart animation is disabled and new data appears immediately without any motion effect.
-			</td>
-
-            <td>
-![](../images/images/positive.png)
-			</td>
-        </tr>
-
-        <tr>
-            <td>
-Monolith shadows do not allow for the blur effect to be applied to them
-			</td>
-
-            <td>
-When the [`useSingleShadow`](%%jQueryApiUrl%%/ui.igDataChart#options:useSingleShadow) property of the series is set to “true”, the [`shadowBlur`](%%jQueryApiUrl%%/ui.igDataChart#options:shadowBlur) setting is disregarded and no blur is applied to the shadow. This is a deliberate limitation due to a [Google® Chrome™ bug](https://code.google.com/p/chromium/issues/detail?id=100703) and extended to all major browsers thus ensuring consistent behavior across all of them. This behavior is subject to change once the aforementioned Chrome issue is resolved.
-                
-
->**Workaround:**
-If you need to apply blur to the shadow, use the Compound type of shadow (`useSingleShadow = “false”`).
-                
-            </td>
-
-            <td>
-![](../images/images/positive.png)
-			</td>
-        </tr>
-	<tr>
-		<td>
-		    <p>Line series sometimes appear as filled shapes in Chromium browsers</p>
-		</td>
-		
-		<td>
-		    <p>This is caused by a <a href="https://code.google.com/p/chromium/issues/detail?id=412640" target="_blank">canvas rendering issue in Chromium</a> (affecting browsers such as Google® Chrome™ and Opera).</p>
-		</td>
-		
-		<td>
-		    <p><img alt="" src="../images/images/negative.png"></p>
-		</td>
-	</tr>
-	<tr>
-		<td>
-		    <p>AddClientEvent method is not avaialable in the DataChart's ASP.NET MVC helper.</p>
-		</td>
-		
-		<td>
-		    <p>AddClientEvent method is not avaialable in the DataChart's ASP.NET MVC helper.</p>
-		</td>
-		
-		<td>
-		    <p><img alt="" src="../images/images/negative.png"></p>
-		</td>
-	</tr>
-	<tr>
-		<td>
-		    <p>The DataChart does not align items of multiple data sources when plotting series with CategoryDateTimeXAxis or TimeXAxis.</p>
-		</td>
-		
-		<td>
-		    <p>Developers should align data items by inserting null items where one data source that does not have corresponding items with another data source.</p>
-		</td>
-		
-		<td>
-		    <p></p>
-		</td>
-	</tr>    </tbody>
-</table>
-
+Issue | Description | Status
+---|---|---
+First and last items appear half cut in financial series charts | In a financial series, the first and the last data items do not appear entirely on the chart view but are plotted as if they are cut in half. | ![](../images/images/negative.png)![](../images/images/plannedFix.png)
+Chart animations are disabled when the axis range changes | If you use the Motion Framework for charts and updated data causes the y-axis range to change, then all chart animation is disabled and new data appears immediately without any motion effect. | ![](../images/images/positive.png)
+Monolith shadows do not allow for the blur effect to be applied to them | When the [`useSingleShadow`](%%jQueryApiUrl%%/ui.igDataChart#options:useSingleShadow) property of the series is set to “true”, the [`shadowBlur`](%%jQueryApiUrl%%/ui.igDataChart#options:shadowBlur) setting is disregarded and no blur is applied to the shadow. This is a deliberate limitation due to a [Google® Chrome™ bug](https://code.google.com/p/chromium/issues/detail?id=100703) and extended to all major browsers thus ensuring consistent behavior across all of them. This behavior is subject to change once the aforementioned Chrome issue is resolved. <blockquote> **Workaround** <br/> If you need to apply blur to the shadow, use the Compound type of shadow (`useSingleShadow = “false”`). </blockquote> | ![](../images/images/positive.png)
+Line series sometimes appear as filled shapes in Chromium browsers | This is caused by a <a href="https://code.google.com/p/chromium/issues/detail?id=412640" target="_blank">canvas rendering issue in Chromium</a> (affecting browsers such as Google® Chrome™ and Opera).| ![](../images/images/negative.png)
+AddClientEvent method is not avaialable in the DataChart's ASP.NET MVC helper. | AddClientEvent method is not avaialable in the DataChart's ASP.NET MVC helper. | ![](../images/images/negative.png)
+The DataChart does not align items of multiple data sources when plotting series with CategoryDateTimeXAxis or TimeXAxis. | Developers should align data items by inserting null items where one data source that does not have corresponding items with another data source. | ![](../images/images/negative.png)
 
  Go up to [Known Issues and Limitations Summary](#summary)
 
@@ -1377,49 +1208,7 @@ Go up to [Known Issues and Limitations Summary](#summary)
 
 Issue | Description | Status
 ---|---|---
-<table class="table table-striped">
-	<thead>
-		<tr>
-            <th>
-Issue
-			</th>
-
-            <th>
-Description
-			</th>
-
-            <th>
-Status
-			</th>
-        </tr>
-	</thead>
-	<tbody>
-	<tr>
-            <td>
-igShapeChart and the Interactivity module in igLoader
-			</td>
-
-            <td>
-Using the igLoader to load the resources for `igShapeChart.Interactivity` do not currently work.  Please also include `igDataChart.Interactivity` in your list of resources for ShapeChart interactivity.  e.g. `resources: "igShapeChart,igDataChart.Interactivity"`
-			</td>
-            <td>
-![](../images/images/positive.png)
-			</td>
-        </tr>
-<tr>
-            <td>
-igDataChart and the Annotation module in igLoader
-			</td>
-
-            <td>
-When using the igLoader to load the resources for Annotations, you must also include igDataChart.Annotation in your list of resources. e.g. resources: "igShapeChart.*,igDataChart.Annotation"
-			</td>
-            <td>
-![](../images/images/positive.png)
-			</td>
-        </tr>
-		</tbody>
-</table>
+igDataChart and the Annotation module in igLoader | When using the igLoader to load the resources for Annotations, you must also include igDataChart.Annotation in your list of resources. e.g. resources: "igShapeChart.*,igDataChart.Annotation" | ![](../images/images/positive.png)
 
 Go up to [Known Issues and Limitations Summary](#summary)
 
