@@ -167,8 +167,8 @@ The following steps demonstrate how to bind JavaScript data array to an `igPieCh
 		            width: "450px",
 		            height: "450px",
 		            dataSource: data,
-		            dataValue: "Budget",
-		            dataLabel: "Department",
+		            valueMemberPath: "Budget",
+		            labelMemberPath: "Department",
 		            radiusFactor: 0.8,
 		            explodedSlices: "[0,1,2]",
 		            legend: { element: "legend", type: "item" }
@@ -282,8 +282,8 @@ The following steps demonstrate how to bind an XML string to an `igPieChart` con
 					width: "435px",
 					height: "435px",
 					dataSource: ds, //$.ig.DataSource defined above
-					dataValue: "Population",
-					dataLabel: "Name",
+					valueMemberPath: "Population",
+					labelMemberPath: "Name",
 					labelsPosition: "bestFit",
 					explodedSlices: [0,2,3,4]
 		        });
@@ -359,7 +359,7 @@ The following steps demonstrate how to instantiate and bind an `igPieChart` cont
 
 3. Instantiate chart control and set data source.
 
-	Add the following code into your ASP.NET MVC view in order to instantiate an `igPieChart` and assign the list. Note how the data model of the strongly-typed view is mapped to the chart with the `PieChart(Model)` call. Further, the `DataValue()` method maps the item.Budget property to the slices’ size and the `DataLabel()` method maps the item.Department property for each data item to slices’ names. The `DataBind()` method does the actual data binding and at the end the `Render()` method emits the final JavaScript code to be executed on the client-side.
+	Add the following code into your ASP.NET MVC view in order to instantiate an `igPieChart` and assign the list. Note how the data model of the strongly-typed view is mapped to the chart with the `PieChart(Model)` call. Further, the `ValueMemberPath()` method maps the item.Budget property to the slices’ size and the `LabelMemberPath()` method maps the item.Department property for each data item to slices’ names. The `DataBind()` method does the actual data binding and at the end the `Render()` method emits the final JavaScript code to be executed on the client-side.
 
 	**In ASPX:**
 
@@ -369,8 +369,8 @@ The following steps demonstrate how to instantiate and bind an `igPieChart` cont
 	...
 	<%= Html.Infragistics().PieChart(Model)
 	        .ID("chart")
-	        .DataValue(item => item.Budget)
-	        .DataLabel(item => item.Department)
+	        .ValueMemberPath(item => item.Budget)
+	        .LabelMemberPath(item => item.Department)
 	        .DataBind()
 	        .Render()
 	%>
@@ -431,7 +431,7 @@ The following steps demonstrate how to bind an `igPieChart` control to a WCF ser
 
 	Add the following code into the head part of your HTML5 page in order to instantiate an `igPieChart`. The WCF service address is set as data source by assigning the address to the `dataSourceUrl` option.
 
-	The option `dataValue` is set to point to the Budget property of the data provided by the server and the `dataLabel` is set to point to the Department property.
+	The option `valueMemberPath` is set to point to the Budget property of the data provided by the server and the `labelMemberPath` is set to point to the Department property.
 
 	In this example it is assumed that the WCF service is installed and running on the address [http://www.example.com](http://www.example.com)/Services/BudgetData.svc/GetCompanyBudget.
 
@@ -441,8 +441,8 @@ The following steps demonstrate how to bind an `igPieChart` control to a WCF ser
 	$(function () {
 	    $("#chart").igPieChart({
 	        dataSourceUrl: "http://www.example.com/Services/BudgetData.svc/GetCompanyBudget",
-	        dataValue: "Budget",
-	        dataLabel: "Department"
+	        valueMemberPath: "Budget",
+	        labelMemberPath: "Department"
 	    });
 	});
 	```
@@ -459,8 +459,8 @@ The following steps demonstrate how to bind an `igPieChart` control to a WCF ser
 	...
 	<%= Html.Infragistics().PieChart()
 	        .ID("chart")
-	        .DataValue("Budget")
-	        .DataLabel("Department")
+	        .ValueMemberPath("Budget")
+	        .LabelMemberPath("Department")
 	        .DataSourceUrl("http://www.example.com/Services/BudgetData.svc/GetCompanyBudget")
 	        .DataBind()
 	        .Render()
