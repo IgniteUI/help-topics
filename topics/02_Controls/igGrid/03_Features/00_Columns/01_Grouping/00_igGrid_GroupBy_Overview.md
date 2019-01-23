@@ -184,7 +184,10 @@ the grouping action ends. **This event is fired also when group/ungroup from Gro
     </tbody>
 </table>
 
-The following sample demonstrates how to use the [compareFunc](%%jQueryApiUrl%%/ui.iggridgroupby#options:columnSettings.compareFunc) to customize the grouping: 
+The following sample demonstrates how to use the [compareFunc](%%jQueryApiUrl%%/ui.iggridgroupby#options:columnSettings.compareFunc) to customize the grouping:
+
+> **Note:** 
+You can also customize grouping of the `time` column using the `compareFunc`. See the example code for more details.
  
 <div class="embed-sample">    
     [Grouping Customization](%%SamplesEmbedUrl%%/grid/grouping-customization)

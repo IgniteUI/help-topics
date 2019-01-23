@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 |metadata|
 {
     "fileName": "implementing-custom-editor-provider",
@@ -35,7 +35,7 @@ Updating comes with a set of editor providers that wrap the [%%ProductName%% Edi
 
 ## <a id="editors"></a> Built-in editor types
 
-The following types of the editor providers are supported out of the box: text, numeric, date/time, date picker, mask-editor, boolean, percentage, currency, combo and rating.
+The following types of the editor providers are supported out of the box: text, numeric, date/time, date picker, time picker, mask-editor, boolean, percentage, currency, combo and rating.
 
 > **Note**: All editor providers are defined in the infragistics.ui.grid.shared.js file.
 
@@ -87,7 +87,8 @@ Currency editor provider | $.ig.EditorProviderCurrency | $.ig.EditorProviderBase
 Percent editor provider | $.ig.EditorProviderPercent | $.ig.EditorProviderBase
 Mask editor provider | $.ig.EditorProviderMask | $.ig.EditorProviderBase
 Date editor provider | $.ig.EditorProviderDate | $.ig.EditorProviderBase
-Datepicker editor provider | $.ig.EditorProviderDatePicker | $.ig.EditorProviderBase
+Date picker editor provider | $.ig.EditorProviderDatePicker | $.ig.EditorProviderBase
+Time picker editor provider | $.ig.EditorProviderTimePicker | $.ig.EditorProviderBase
 Boolean editor provider |  $.ig.EditorProviderBoolean |  $.ig.EditorProviderBase
 Combo editor provider | $.ig.EditorProviderCombo | $.ig.EditorProvider
 Rating editor provider | $.ig.EditorProviderRating | $.ig.EditorProvider

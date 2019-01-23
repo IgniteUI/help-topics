@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 |metadata|
 {
     "fileName": "iggrid-updating",
@@ -80,6 +80,7 @@ The `autoCommit` option value also affects `aggregateTransactions` option functi
     -   numeric editor
     -   date/time editor
     -   date picker
+    -   time picker
     -   mask-editor
     -   boolean
     -   percentage

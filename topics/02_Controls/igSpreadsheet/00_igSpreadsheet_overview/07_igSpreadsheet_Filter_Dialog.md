@@ -8,7 +8,7 @@
 |metadata|
 -->
 
-# igSpreadsheet Selection Interactions
+# igSpreadsheet Filter Dialog
 
 ## Topic Overview
 ### Purpose

@@ -116,9 +116,9 @@ To navigate to the required JavaScript files listing for the particular control,
 -   [igRating](#igRating)
 -   [igReportViewer](#igReportViewer)
 -   [igScheduler](#igScheduler)
+-   [igShapeChart](#igShapeChart)
 -   [igSplitter](#igSplitter)
 -   [igSpreadsheet](#igSpreadsheet)
--   [igShapeChart](#igShapeChart)
 -   [igTemplating](#igTemplating)
 -   [igTileManager](#igTileManager)
 -   [igTree](#igTree)
@@ -209,6 +209,7 @@ To navigate to the required JavaScript files listing for the particular control,
 				
                 infragistics.dv_interactivity.js
                 <br>infragistics.datachart_interactivity.js
+				<br>infragistics.datachart_annotation.js
 			</td>
 		</tr>
 		<tr>
@@ -520,9 +521,6 @@ To navigate to the required JavaScript files listing for the particular control,
 		<tr>
 			<td>Dependency Scripts</td>
 			<td>
-                    jquery-1.4.4.js<br>
-                    jquery.ui.core.js<br>
-                    jquery.ui.widget.js<br>
                     infragistics.ui.chartlegend.js<br> 
                     infragistics.ui.basechart.js<br>
                     infragistics.ui.chart.js<br>
@@ -541,13 +539,12 @@ To navigate to the required JavaScript files listing for the particular control,
                     infragistics.datasource.js<br>
                     infragistics.datachart_categorycore.js<br>
                     infragistics.datachart_core.js<br>
-                    infragistics.datachart_interactivity.js<br> 
                     infragistics.datachart_extendedaxes.js<br>
                     infragistics.datachart_category.js<br>
                     infragistics.datachart_financial.js<br>
                     infragistics.datachart_extendedfinancial.js<br>
-                    infragistics.datachart_annotation.js<br>
                     infragistics.datachart_domainChart.js<br>
+                    infragistics.financialchart.js<br>
                     infragistics.dvcommonwidget.js<br>
                     infragistics.dv_core.js<br>
                     infragistics.dv_geo.js<br>
@@ -555,10 +552,15 @@ To navigate to the required JavaScript files listing for the particular control,
                     infragistics.dv_jquerydom.js<br>
                     infragistics.dv_datasource.js<br>
                     infragistics.dv_dataseriesadapter.js<br>
-                    infragistics.dv_interactivity.js<br>
                     infragistics.ext_ui.js<br>
                     infragistics.legend.js<br>
                     infragistics.zoomslider_core.js<br>
+
+                    <h5>Features:</h5>
+
+                    infragistics.dv_interactivity.js
+                    <br>infragistics.datachart_interactivity.js
+                    <br>infragistics.datachart_annotation.js
                    
             </td>
 		</tr>
@@ -1356,6 +1358,66 @@ To navigate to the required JavaScript files listing for the particular control,
 	</tbody>
 </table>
 
+#### <a id="igShapeChart"></a>igShapeChart
+<table class="table">
+	<thead>
+		<tr>
+			<th>Script Type</th>
+			<th>Script File Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Dependency Scripts</td>
+			<td>
+                infragistics.util.js<br>
+                infragistics.util.jquery.js<br>
+                infragistics.ui.shared.js<br>
+                infragistics.ui.widget.js<br>
+                infragistics.ui.basechart.js<br>
+                infragistics.ui.chart.js<br>
+                infragistics.ui.chartlegend.js<br> 
+                infragistics.ext_core.js<br>
+                infragistics.ext_collections.js<br>
+                infragistics.ext_ui.js<br>
+                infragistics.ext_web.js<br>
+                infragistics.ext_text.js<br>
+                infragistics.ext_io.js<br>
+                infragistics.dvcommonwidget.js<br>
+                infragistics.dv_core.js<br>
+                infragistics.dv_geo.js<br>
+                infragistics.dv_geometry.js<br>
+                infragistics.dv_jquerydom.js<br>
+                infragistics.dv_datasource.js<br>
+                infragistics.dv_dataseriesadapter.js<br>
+                infragistics.templating.js<br>
+                infragistics.datasource.js<br>
+                infragistics.datachart_core.js<br>
+                infragistics.datachart_extendedaxes.js<br>
+                infragistics.datachart_scatter.js<br>
+                infragistics.datachart_shape.js<br>
+                infragistics.datachart_domainChart.js<br> 
+                infragistics.legend.js<br>
+
+                <h5>Features:</h5>
+
+                infragistics.dv_interactivity.js
+                <br>infragistics.datachart_interactivity.js
+                <br>infragistics.datachart_visualdata.js
+                <br>infragistics.datachart_annotation.js
+               
+            </td>
+		</tr>
+		<tr>
+			<td>Scripts</td>
+			<td>
+                infragistics.ui.shapechart.js<br>
+                infragistics.shapechart.js<br>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
 #### <a id="igSplitter"></a>igSplitter 
 <table class="table">
 	<thead>
@@ -1428,65 +1490,6 @@ To navigate to the required JavaScript files listing for the particular control,
 			<td>
 				infragistics.spreadsheet.js
 				<br>infragistics.ui.spreadsheet.js
-			</td>
-		</tr>
-	</tbody>
-</table>
-
-#### <a id="igShapeChart"></a>igShapeChart
-<table class="table">
-	<thead>
-		<tr>
-			<th>Script Type</th>
-			<th>Script File Name</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Dependency Scripts</td>
-			<td>
-                jquery-1.4.4.js<br>
-                jquery.ui.core.js<br>
-                jquery.ui.widget.js<br>
-                infragistics.util.js<br>
-                infragistics.util.jquery.js<br>
-                infragistics.ui.shared.js<br>
-                infragistics.ui.widget.js<br>
-                infragistics.ui.basechart.js<br>
-                infragistics.ui.chart.js<br>
-                infragistics.ui.chartlegend.js<br> 
-                infragistics.ext_core.js<br>
-                infragistics.ext_collections.js<br>
-                infragistics.ext_ui.js<br>
-                infragistics.ext_web.js<br>
-                infragistics.ext_text.js<br>
-                infragistics.ext_io.js<br>
-                infragistics.dvcommonwidget.js<br>
-                infragistics.dv_core.js<br>
-                infragistics.dv_geo.js<br>
-                infragistics.dv_geometry.js<br>
-                infragistics.dv_jquerydom.js<br>
-                infragistics.dv_datasource.js<br>
-                infragistics.dv_dataseriesadapter.js<br>
-                infragistics.dv_interactivity.js<br>
-                infragistics.templating.js<br>
-                infragistics.datasource.js<br>
-                infragistics.datachart_core.js<br>
-                infragistics.datachart_interactivity.js<br> 
-                infragistics.datachart_extendedaxes.js<br>
-                infragistics.datachart_scatter.js<br>
-                infragistics.datachart_shape.js<br>
-                infragistics.datachart_domainChart.js<br> 
-                infragistics.datachart_visualdata.js<br>
-                infragistics.legend.js<br>
-               
-            </td>
-		</tr>
-		<tr>
-			<td>Scripts</td>
-			<td>
-                infragistics.ui.shapechart.js<br>
-                infragistics.shapechart.js<br>
 			</td>
 		</tr>
 	</tbody>

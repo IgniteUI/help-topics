@@ -10,13 +10,15 @@
 
 # Supported Versions of Microsoft Excel
 
-The Infragistics Excel Engine™ is capable of saving and reading Microsoft® Excel® .xls files. These .xls files are saved in a BIFF8 format, and are therefore compatible only with specific versions of Excel. The following table lists the supported versions of Excel and any restrictions or limitations associated with that version.
+The Infragistics Excel Engine™ is capable of saving and reading Microsoft® Excel® files using the below formats.
 
-Excel version | Description
----|---
-Microsoft Excel 97 | Uses the BIFF8 format.
-Microsoft Excel 2000 | Uses the BIFF8 format.
-Microsoft Excel 2002 | A member of the Microsoft Office® XP family of products. Uses the BIFF8 format.
-Microsoft Excel 2003 | Uses the BIFF8 format.
-Microsoft Excel 2007 | When using the [Save](Infragistics.Web.Mvc.Documents.Excel~Infragistics.Documents.Excel.Workbook~Save.html) method off the [Workbook](Infragistics.Web.Mvc.Documents.Excel~Infragistics.Documents.Excel.Workbook.html) object, the .xlsx file is written in XML file format. <br/> **Note:** The Excel Engine does not support the Excel Binary Workbook (.xlsb) format at this time.
 
+|File Formats                          | Enumeration                                                               | Notes
+|--------------------------------------|---------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Excel 97-2003 Workbook (*.xls)        | Infragistics.Documents.Excel.WorkbookFormat.Excel97To2003                 | Uses BIFF8 format.                                                                                                                                                                          |
+|Excel 97-2003 Template (*.xlt)        | Infragistics.Documents.Excel.WorkbookFormat.Excel97To2003Template         | Uses BIFF8 format.                                                                                                                                                                          |
+|Excel Workbook (*.xlsx)               | Infragistics.Documents.Excel.WorkbookFormat.Excel2007                     |                                                                                                                                                                                             |
+|Excel Macro-Enabled Workbook (*.xlsm) | Infragistics.Documents.Excel.WorkbookFormat.Excel2007MacroEnabled         | The Infragistics Excel engine does not support creating, parsing nor executing macros. If there are modules in a file that is loaded those will be included in the output when it is saved. |
+|Excel Template (*.xltx)               | Infragistics.Documents.Excel.WorkbookFormat.Excel2007Template             |                                                                                                                                                                                             |
+|Excel Macro-Enabled Template (*.xltm) | Infragistics.Documents.Excel.WorkbookFormat.Excel2007MacroEnabledTemplate | The Infragistics Excel engine does not support creating, parsing nor executing macros. If there are modules in a file that is loaded those will be included in the output when it is saved. |
+|Strict Open XML Spreadsheet (*.xlsx)  | Infragistics.Documents.Excel.WorkbookFormat.StrictOpenXml                 | The Strict Open XML file format (ISO/IEC 29500 Strict).                                                                                                                                     |

@@ -35,6 +35,8 @@ This topic contains the following sections:
     -   [Category Item Highlight Layer](#category-item-highlight-layer)
     -   [Category Tooltip Layer](#category-tooltip-layer)
     -   [Item Tooltip Layer](#item-tooltip-layer)
+    -   [Final Value Layer](#final-value-layer)
+    -   [Callout Layer](#callout-layer)
 -   [Related Content](#related-content)
     -   [Topics](#topics)
     -   [Samples](#samples)
@@ -112,6 +114,22 @@ The `itemTooltipLayer` displays tooltips for all target series individually.
 ![](../04_Configuring/04_Hover Interactions/images/jQuery_Item_Tooltip_Layer_01.png)
 
 For more information, see the [Configuring the Item Tooltip Layer (igDataChart)](HoverInteractions-Item-Tooltip-Layer.html) topic.
+
+### <a id="final-value-layer"></a> Final Value Layer
+
+The `finalValueLayer` displays annotations that represent the current (final) value of a series on the chart.
+
+![](../04_Configuring/04_Hover Interactions/images/jQuery_Final_Value_Layer_01.png)
+
+For more information, see the [Configuring the Final Value Layer (igDataChart)](HoverInteractions-Final-Value-Layer.html) topic.
+
+### <a id="callout-layer"></a> Callout Layer
+
+The `calloutLayer` displays annotations from existing or new data on the chart.
+
+![](../04_Configuring/04_Hover Interactions/images/jQuery_Callout_Layer_01.png)
+
+For more information, see the [Configuring the Callout Layer (igDataChart)](HoverInteractions-Callout-Layer.html) topic.
 
 
 ## <a id="related-content"></a>Related Content
