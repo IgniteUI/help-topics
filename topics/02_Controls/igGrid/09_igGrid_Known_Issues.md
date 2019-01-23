@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 |metadata|
 {
     "fileName": "iggrid-known-issues",
@@ -1105,7 +1105,6 @@ jQuery 3.2.1 reports incorrect height for the new row editors under IE11 which c
 > 
 > Using any other version of jQuery resolves the issue.
 
-
 ## Related Content
 
 ### Topics
@@ -1113,4 +1112,3 @@ jQuery 3.2.1 reports incorrect height for the new row editors under IE11 which c
 The following topics provide additional information related to this topic.
 
 - [igGrid](igGrid.html) - This is a group of topics containing the help content about the `igGrid` control.
-
