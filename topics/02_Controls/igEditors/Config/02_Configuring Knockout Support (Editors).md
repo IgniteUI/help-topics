@@ -33,6 +33,18 @@ The following table lists the topics and external resources required as a prereq
 
 -	[igDateEditor Overview](igDateEditor-Overview.html): This topic introduces the `igDateEditor`™ control and provides some basic instantiation examples.
 
+-	[igCurrencyEditor Overview](igCurrencyEditor-Overview.html): This topic introduces the `igCurrencyEditor`™ control and provides some basic instantiation examples.
+
+-	[igPercentEditor Overview](igPercentEditor-Overview.html): This topic introduces the `igPercentEditor`™ control and provides some basic instantiation examples.
+
+-	[igMaskEditor Overview](igMaskEditor-Overview.html): This topic introduces the `igMaskEditor`™ control and provides some basic instantiation examples.
+
+-	[igCheckboxEditor Overview](igCheckboxEditor-Overview.html): This topic introduces the `igCheckboxEditor`™ control and provides some basic instantiation examples.
+
+-	[igDatePicker Overview](igDatePicker-Overview.html): This topic introduces the `igDatePicker`™ control and provides some basic instantiation examples.
+
+-	[igTimePicker Overview](igTimePicker-Overview.html): This topic introduces the `igTimePicker`™ control and provides some basic instantiation examples.
+
 
 **External Resources**
 
@@ -89,7 +101,7 @@ The following table lists the code examples included in this topic.
 
 ## <a id="_Configuring_Value_Binding_for_Editor_Controls"></a>Code Example: Configuring Value Binding for Editor Controls
 
-This example shows how to bind the value option of %%ProductName%% editor controls to a View-Model managed by Knockout. It is shown in the context of `igTextEditor`, `igNumericEditor`, `igCurrencyEditor`™ and `igDateEditor` controls. Using the declarative syntax of Knockout, the controls are instantiated from data-bind attribute of input elements and bound to View-Model observable properties.
+This example shows how to bind the value option of %%ProductName%% editor controls to a View-Model managed by Knockout. It is shown in the context of `igTextEditor`, `igNumericEditor`, `igCurrencyEditor` and `igDateEditor` controls. Using the declarative syntax of Knockout, the controls are instantiated from data-bind attribute of input elements and bound to View-Model observable properties.
 
 #### Code
 
@@ -138,7 +150,7 @@ The following code snippet shows how to declare binding options for editor contr
 <input data-bind="igCurrencyEditor: { value: advancePayment }"/>
 ```
 
-### <a id="_Configuring_an_Input_Mask"></a> Configuring an Input Mask (igMaskEditor)
+### <a id="_Configuring_an_Input_Mask"></a> Configuring an Input Mask (`igMaskEditor`)
 
 This example shows how to bind an `igMaskEditor` control to a View-Model object managed by Knockout. Using the declarative syntax of Knockout an `igMaskEditor` is instantiated from a data-bind attribute of an input element and bound to an observable property of a View-Model. The `inputMask` option of the editor is configured also in order to limit user input according to a certain pattern.
 
@@ -158,7 +170,7 @@ The code snippet below instantiates an `igMaskEditor` control. The control is bo
 
 
 
-### <a id="_Configuring_a_Scaling_Factor"></a> Configuring a Scaling Factor (igPercentEditor)
+### <a id="_Configuring_a_Scaling_Factor"></a> Configuring a Scaling Factor (`igPercentEditor`)
 
 This example shows how to bind an `igPercentEditor` to a View-Model object managed by Knockout. Using the declarative syntax of Knockout the `igPercentEditor` is instantiated from a data-bind attribute of an input element and bound to a View-Model observable property. The `displayFactor` option of the editor is configured also in order to scale the underlying View-Model value to a proper percentage input.
 
@@ -185,9 +197,9 @@ This sample demonstrates binding %%ProductName%% Editor controls to data managed
 </div>
 
 
-##<a id="_Configuring_Immediate_Update_Mode"></a>Code Example: Configuring Immediate Update Mode (igTextEditor)
+##<a id="_Configuring_Immediate_Update_Mode"></a>Code Example: Configuring Immediate Update Mode (`igTextEditor`)
 
-This example shows how to bind the value option of %%ProductName%% editor control to a View-Model managed by Knockout and configure the control to update the View-Model on every keystroke. By default, any edits in an %%ProductName%% editor control are sent to the View-Model when the control loses focus, i.e. when `onBlur` event occurs. The following code configures the update mode of the `igTextEditor` control to Immediate by setting the `updateMode` option to ‘immediate’.
+This example shows how to bind the value option of %%ProductName%% editor control to a View-Model managed by Knockout and configure the control to update the View-Model on every keystroke. By default, any edits in an %%ProductName%% editor control are sent to the View-Model when the control loses focus, i.e. when `onBlur` event occurs. The following code snippet demonstrates how to sets the `updateMode` of the `igTextEditor` Knockout extension to `immediate`. This allows the editor to update the View-Model on each keystroke or when input text change occurs.
 
 ### Code
 
