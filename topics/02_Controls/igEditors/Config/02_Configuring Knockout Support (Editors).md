@@ -199,7 +199,7 @@ This sample demonstrates binding %%ProductName%% Editor controls to data managed
 
 ##<a id="_Configuring_Immediate_Update_Mode"></a>Code Example: Configuring Immediate Update Mode (`igTextEditor`)
 
-This example shows how to bind the value option of %%ProductName%% editor control to a View-Model managed by Knockout and configure the control to update the View-Model on every keystroke. By default, any edits in an %%ProductName%% editor control are sent to the View-Model when the control loses focus, i.e. when `onBlur` event occurs. The following code snippet demonstrates how to sets the `updateMode` of the `igTextEditor` Knockout extension to `immediate`. This allows the editor to update the View-Model on each keystroke or when input text change occurs.
+This example shows how to bind the value option of %%ProductName%% editor control to a View-Model, managed by Knockout and configure the control to update the View-Model on every keystroke. By default, any edits in an %%ProductName%% editor control are sent to the View-Model when the control loses focus i.e. when `onBlur` event occurs. The following code snippet demonstrates how to set the `updateMode` of the `igTextEditor` Knockout extension to `immediate`. This allows the editor to update the View-Model on each keystroke or when an input text change occurs.
 
 ### Code
 
