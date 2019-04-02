@@ -81,7 +81,7 @@ This topic contains the following sections:
 
 ## <a id="summary"></a> Known Issues and Limitations Summary
 
-The following table summarizes the known issues and limitations of the %%ProductName%% 2018 Volume 1 release. Detailed explanations of known issues and the possible workarounds are provided in the known issues topics for each control.
+The following table summarizes the known issues and limitations of the %%ProductName%% 2018 Volume 2 release. Detailed explanations of known issues and the possible workarounds are provided in the known issues topics for each control.
 <a id="legend"></a>
 
 Legend | 
