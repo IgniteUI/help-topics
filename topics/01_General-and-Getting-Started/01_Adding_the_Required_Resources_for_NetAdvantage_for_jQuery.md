@@ -64,7 +64,7 @@ To complete the procedure, you need the following:
 -   [jQuery UI](http://jqueryui.com/) library 1.9.0 or above
 -   [Modernizr](http://modernizr.com/) open-source JavaScript library 2.5.2 or above
 
-> **Note:** See a complete list describing which framework versions are supported with each release of %%ProductName%% at [http://www.infragistics.com/help/supported-environments](http://www.infragistics.com/help/supported-environments).
+> **Note:** See a complete list describing which framework versions are supported with each release of %%ProductName%% at [https://www.infragistics.com/support/supported-environments](https://www.infragistics.com/support/supported-environments).
 
 ## <a id="steps"></a> Steps
 
