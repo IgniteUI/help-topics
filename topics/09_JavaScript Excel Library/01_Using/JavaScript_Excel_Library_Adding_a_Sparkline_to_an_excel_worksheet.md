@@ -3,7 +3,7 @@
 {
     "fileName": "javaScript-excel-library-adding-a-sparkline-to-an-excel-worksheet",
     "controlName": ["igExcel"],
-    "tags": ["Sparklines"],
+    "tags": ["Sparklines"]
 }
 |metadata|
 -->
