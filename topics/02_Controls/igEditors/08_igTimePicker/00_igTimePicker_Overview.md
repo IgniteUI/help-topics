@@ -134,7 +134,7 @@ If you use the `limitSpinToCurrentField` option and set it to true, you can limi
 The `minValue` and `maxValue` options specify the minimum\maximum value, which can be displayed/entered in the time picker by the end user. These two options also define the range of items in the control dropdown list. 
 
 ### Support for ISO Date Format
-In order to support ISO dates, the time picker value should be set to a date rather than to a string. 
+In order to support ISO formatted dates, the time picker's value should be set to a date rather than to a string. 
 
 ```js
 $("#timePicker").igTimePicker("option","value", new Date("2019-02-21T00:00:00.000Z"));
