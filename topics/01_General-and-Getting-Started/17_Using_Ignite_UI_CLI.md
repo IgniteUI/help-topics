@@ -137,5 +137,5 @@ The command takes in a single search term and opens the Infragistics search in t
 To list all the Ignite UI CLI available commands, execute the following command:
 
 ```
-    ng help
+    ig help
 ```
