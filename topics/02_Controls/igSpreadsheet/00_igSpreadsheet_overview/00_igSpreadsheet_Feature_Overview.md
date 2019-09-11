@@ -39,7 +39,7 @@ The following table summarizes the main features of the `igSpreadsheet` control.
 | Feature			| Description     																	|
 | ------------- 	|:-------------:																	|
 | Editing           | The control supports editing and provides several events and methods. For more information follow the [Editing API (igSpreadsheet)](igspreadsheet-editing.html) topic.	|
-| Cell Alignment    | The control supports many horizontal and vertical cell content alignments. Indentation, text wrap and cell merging are also supported. <br>**Note:** Rotation, Horizontal Distributed, Vertical Distributed, Vertical Justify are not supported. 	|
+| Cell Alignment    | The control supports many horizontal and vertical cell content alignments. Indentation, text wrap and cell merging are also supported. <br>**Note:** Rotation, Horizontal Distributed, Vertical Distributed, Vertical Justify are not supported. |
 | Cell Borders		| The control supports cell borders but it does not scale them when zooming. |
 | Actions			| The control provides a lot of actions for activating different features.   |
 | Context Menu 		| The control provides contextual menus allowing the user to perform different operations depending on the selected visual element. <br>**Related Topic:** [igSpreadsheet Context Menu](igspreadsheet-Context-Menu.html) |
