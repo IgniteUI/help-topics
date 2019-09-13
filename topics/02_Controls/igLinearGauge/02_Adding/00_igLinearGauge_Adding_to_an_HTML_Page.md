@@ -153,6 +153,7 @@ The following table summarizes the requirements for using the `igLinearGauge` co
                                 `infragistics.dv_jquerydom.js`
                                 `infragistics.dv_core.js`
                                 `infragistics.dv_geometry.js`
+                                `infragistics.dv_visualdata.js`
                             </td>
                             <td>
                                 Data visualization core functionality
@@ -265,6 +266,7 @@ To complete the procedure, you need the required JavaScript and CSS files refere
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_core.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_geometry.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_interactivity.js"></script>
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_visualdata.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.lineargauge.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.ui.lineargauge.js"></script>
 </head>
@@ -417,6 +419,7 @@ Following is the full code for this procedure.
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_jquerydom.js" ></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_core.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_geometry.js"></script>
+    <script type="text/javascript" src="../../igniteui/js/modules/infragistics.dv_visualdata.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.lineargauge.js"></script>
     <script type="text/javascript" src="../../igniteui/js/modules/infragistics.ui.lineargauge.js"></script>
     <script type="text/javascript">
