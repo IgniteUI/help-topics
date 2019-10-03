@@ -49,8 +49,8 @@ You can further customize it, add or remove properties and methods, as you would
 
 In order to use the ASP.NET Scaffolding feature, you must have:
 
-1. Microsoft Visual Studio 2013 Update 2 or higher
-2. Web Developer Tools (part of the default Visual Studio 2013 installation)
-3. ASP.NET Web Frameworks and Tools 2013 (part of default Visual Studio 2013 installation)
+1. Microsoft Visual Studio 2017 or higher
+2. Web Developer Tools (part of the default Visual Studio 2017 installation)
+3. ASP.NET Web Frameworks and Tools 2017 (part of default Visual Studio 2017 installation)
 
 
