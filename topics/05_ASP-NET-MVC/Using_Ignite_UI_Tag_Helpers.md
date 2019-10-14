@@ -29,18 +29,18 @@ To add all %%ProductName%% Tag Helpers to the current view scope, the @addTagHel
 ```csharp
 @using Infragistics.Web.Mvc
 
-@addTagHelper "Infragistics.Web.Mvc.TagHelpers.*, Infragistics.Web.Mvc"
+@addTagHelper *, Infragistics.Web.AspNetCore
 ```
 
 The namespace using is not required if no enumeration options are used. 
 In order to register only a specific control to the view, the namespace of the control Tag Helper should be specified by ending with wildcard (*).
 
-For example if the igGrid should be only registered:
+For example if the igGrids should be only registered:
 
 ```csharp
 @using Infragistics.Web.Mvc
 
-@addTagHelper "Infragistics.Web.Mvc.TagHelpers.Grids.Grid.*, Infragistics.Web.Mvc"
+@addTagHelper Infragistics.Web.Mvc.TagHelpers.Grids.*, Infragistics.Web.AspNetCore
 ```
 
 ## <a id="control-configuration"></a> Configuring data bound control
