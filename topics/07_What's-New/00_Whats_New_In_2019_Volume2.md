@@ -18,3 +18,7 @@ Infragistics ASP.NET MVC Helpers now support ASP.NET Core 3 projects. For more i
 
 ### Infragistics Tag Helpers
 Infragistics ASP.NET Tag Helpers now support ASP.NET Core 3 projects. For more information see the [Using Ignite UI Tag Helpers](using-ignite-ui-tag-helpers.html) topic.
+
+
+### Infragistics Documents
+Infragistics Documents assemblies are now available for ASP.NET Core 3 projects.

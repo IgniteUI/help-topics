@@ -160,13 +160,13 @@ information for changes read [Styling and Theming
 If your application uses the ASP.NET MVC helpers or the Document assemblies, the assemblies for the new versions must be included in your application. Following is the list of the assemblies you need to include:
 
 -   `Infragistics.Web.Mvc.dll`
--   `Infragistics.WebUI.Documents.Core.dll` **or** `Infragistics.Web.Mvc.Documents.Core.dll`
--   `Infragistics.WebUI.Documents.IO.dll` **or** `Infragistics.Web.Mvc.Documents.IO.dll`
--   `Infragistics.WebUI.Documents.Reports.dll` **or** `Infragistics.Web.Mvc.Documents.Reports.dll`
--   `Infragistics.WebUI.Documents.Excel.dll` **or** `Infragistics.Web.Mvc.Documents.Excel.dll`
--   `Infragistics.WebUI.Documents.Word.dll` **or** `Infragistics.Web.Mvc.Documents.Word.dll`
+-   `Infragistics.WebUI.Documents.Core.dll` **or** `Infragistics.Web.Mvc.Documents.Core.dll` **or** `Infragistics.Web.Documents.Core.dll`
+-   `Infragistics.WebUI.Documents.IO.dll` **or** `Infragistics.Web.Mvc.Documents.IO.dll` **or** `Infragistics.Web.Documents.IO.dll`
+-   `Infragistics.WebUI.Documents.Reports.dll` **or** `Infragistics.Web.Mvc.Documents.Reports.dll` **or** `Infragistics.Web.Documents.Reports.dll`
+-   `Infragistics.WebUI.Documents.Excel.dll` **or** `Infragistics.Web.Mvc.Documents.Excel.dll` **or** `Infragistics.Web.Documents.Excel.dll`
+-   `Infragistics.WebUI.Documents.Word.dll` **or** `Infragistics.Web.Mvc.Documents.Word.dll` **or** `Infragistics.Web.Documents.Word.dll`
 
->**Note:** The new versions of the document assemblies use the Infragistics.Web.Mvc.Documents naming convention.
+>**Note:** The new versions of the document assemblies use the Infragistics.Web.Documents naming convention.
 
 To upgrade the assemblies:
 
