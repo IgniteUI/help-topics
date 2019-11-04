@@ -20,7 +20,6 @@
 -   [Infragistics.Web.Documents.IO Assembly](Infragistics.Web.Documents.IO.html)
 -   [Infragistics.Web.Documents.Reports Assembly](Infragistics.Web.Documents.Reports.html)
 -   [Infragistics.Web.Documents.Word Assembly](Infragistics.Web.Documents.Word.html)
--   [Infragistics.Web.Mvc.Mobile Assembly](Infragistics.Web.Mvc.Mobile.html)
 
  
 
